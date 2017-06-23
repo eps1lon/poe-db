@@ -10,6 +10,7 @@
   "author": "eps1lon",
   "license": "MIT",
   "scripts": {
+    "build:db": "node scripts/definitionsToDb",
     "precommit": "lint-staged",
     "update-dat": "node scripts/definitionsXmlToJson"
   },

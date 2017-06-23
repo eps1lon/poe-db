@@ -1,0 +1,6 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "editor.formatOnSave": true
+}

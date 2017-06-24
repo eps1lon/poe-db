@@ -54,7 +54,7 @@ class Record {
   }
 
   static tableName(file) {
-    return S(file).camelize().s;
+    return S(file).underscore().s;
   }
 
   constructor(props, records) {
@@ -72,6 +72,14 @@ class Record {
 
   createQueryWithRelations() {
     throw new Error('not implemented');
+  }
+
+  get fields() {
+    return this.props['field'];
+  }
+
+  get table_name() {
+    return Record.tableName(this.props['$']['file']);
   }
 }
 

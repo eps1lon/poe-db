@@ -16,9 +16,9 @@ describe('Record', () => {
     });
 
     it('should use snake case for tables', () => {
-      expect(Record.colName('AnotherCamelCase')).toBe('another_camel_case');
-      expect(Record.colName('Another Title')).toBe('another_title');
-      expect(Record.colName('another-slug')).toBe('another_slug');
+      expect(Record.tableName('AnotherCamelCase')).toBe('another_camel_case');
+      expect(Record.tableName('Another Title')).toBe('another_title');
+      expect(Record.tableName('another-slug')).toBe('another_slug');
     });
   });
 

@@ -4,7 +4,7 @@ const path = require('path');
 const xmlToJs = require('xml2js');
 
 const DAT_FILE = path.join(__dirname, '../data/DatDefinitions.xml');
-const OUT_FILE = path.join(__dirname, '../data/definitions.json');
+const OUT_FILE = path.join(__dirname, '../data/records.json');
 
 const definitions_file = fs.readFileSync(DAT_FILE);
 
@@ -15,5 +15,8 @@ parser.parseString(definitions_file, (e, root) => {
     throw e;
   }
 
-  fs.writeFileSync(OUT_FILE, JSON.stringify(root.definitions.records, null, 2));
+  fs.writeFileSync(
+    OUT_FILE,
+    JSON.stringify(root.definitions.records[0].record, null, 2),
+  );
 });

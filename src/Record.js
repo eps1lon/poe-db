@@ -1,6 +1,10 @@
 const S = require('string');
 
 class Record {
+  static isKeyCandidate(name) {
+    return name === 'Id' || Record.isHasOne(name);
+  }
+
   static isHasOne(type) {
     return type.endsWith('Key');
   }
@@ -42,7 +46,7 @@ class Record {
     if (!Record.isHasMany(type)) {
       let col_name;
       if (Record.isHasOne(type)) {
-        col_name = S(Record.relationalTable(type));
+        col_name = S(Record.relationalTable(type)) + 'ID';
       } else {
         col_name = type;
       }
@@ -74,12 +78,12 @@ class Record {
     throw new Error('not implemented');
   }
 
-  get fields() {
-    return this.props['field'];
+  tableName() {
+    return Record.tableName(this.props['$']['file']);
   }
 
-  get table_name() {
-    return Record.tableName(this.props['$']['file']);
+  get fields() {
+    return this.props['field'].map(field => field.$);
   }
 }
 

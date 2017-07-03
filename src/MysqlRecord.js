@@ -43,7 +43,29 @@ class MysqlRecord extends Record {
 
   tableProps() {}
 
-  relationalTablesProps() {}
+  relationalTablesProps() {
+    const tables = {};
+
+    for (const field of this.fields) {
+      if (MysqlRecord.isHasMany(field)) {
+        const table = MysqlRecord.relationalTable(field, this.records);
+
+        const name = MysqlRecord.tableName(this.tableName() + table);
+        const cols = [
+          { name: MysqlRecord.colName(this.file + 'ID') },
+          { name: MysqlRecord.colName(field + 'ID') },
+        ];
+        const primary = cols.map(col => col.name);
+        const keys = [];
+
+        if (MysqlRecord.isExtendedHasMany(field)) {
+          cols.push(this.extendedProps(field));
+        }
+
+        tables[table] = { name, cols, primary, keys };
+      }
+    }
+  }
 
   cols() {
     return this.fields

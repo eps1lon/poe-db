@@ -5604,13 +5604,13 @@
       },
       {
         "$": {
-          "id": "SpawnWeightTagsKeys",
+          "id": "SpawnWeight_TagsKeys",
           "type": "ref|list|ulong"
         }
       },
       {
         "$": {
-          "id": "SpawnWeightValues",
+          "id": "SpawnWeight_Values",
           "type": "ref|list|uint"
         }
       },

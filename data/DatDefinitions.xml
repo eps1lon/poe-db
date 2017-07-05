@@ -992,8 +992,8 @@
 			<field id="Stat3Max" type="int"/>
 			<field id="Stat4Min" type="int"/>
 			<field id="Stat4Max" type="int"/>
-			<field id="SpawnWeightTagsKeys" type="ref|list|ulong"/>
-			<field id="SpawnWeightValues" type="ref|list|uint"/>
+			<field id="SpawnWeight_TagsKeys" type="ref|list|ulong"/>
+			<field id="SpawnWeight_Values" type="ref|list|uint"/>
 			<field id="BuffDefinitionsKey" type="long"/>
 			<field id="BuffValue" type="int"/>
 			<field id="TagsKeys" type="ref|list|ulong"/>

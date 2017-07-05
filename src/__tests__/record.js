@@ -15,6 +15,17 @@ describe('Record', () => {
       expect(Record.colName('some-slug')).toBe('some_slug');
     });
 
+    it('should use `ID` as key identifiers', () => {
+      expect(Record.colName('SomeForeignKey')).toBe('some_foreign_id');
+      expect(Record.colName('SomeForeignKeys')).toBe('some_foreign_id');
+      expect(Record.colName('SomePluralsKey')).toBe('some_plurals_id');
+    });
+
+    it('should ignore the prefix for extended props', () => {
+      expect(Record.colName('ExtendedProp_TagsKey')).toBe('tags_id');
+      expect(Record.colName('EventMore_ExtendedProp_TagsKey')).toBe('tags_id');
+    });
+
     it('should use snake case for tables', () => {
       expect(Record.tableName('AnotherCamelCase')).toBe('another_camel_case');
       expect(Record.tableName('Another Title')).toBe('another_title');

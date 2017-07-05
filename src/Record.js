@@ -42,19 +42,32 @@ class Record {
     }
   }
 
-  static colName(type) {
-    if (!Record.isHasMany(type)) {
-      let col_name;
-      if (Record.isHasOne(type)) {
-        col_name = S(Record.relationalTable(type)) + 'ID';
-      } else {
-        col_name = type;
-      }
-
-      return S(col_name).underscore().s;
+  static colName(field) {
+    if (Record.isExtendedHasMany(field)) {
+      return Record.colNameForExtendedHasMany(field);
+    } else if (Record.isHasMany(field)) {
+      return Record.colNameForHasMany(field);
+    } else if (Record.isHasOne(field)) {
+      return Record.colNameForHasOne(field);
     } else {
-      return undefined;
+      return Record.colNameCasing(field);
     }
+  }
+
+  static colNameForExtendedHasMany(field) {
+    return Record.colName(field.substr(field.indexOf('_') + 1));
+  }
+
+  static colNameForHasMany(field) {
+    return Record.colNameCasing(field.replace(/Keys$/, 'ID'));
+  }
+
+  static colNameForHasOne(field) {
+    return Record.colNameCasing(field.replace(/Key$/, 'ID'));
+  }
+
+  static colNameCasing(name) {
+    return S(name).underscore().s;
   }
 
   static tableName(file) {

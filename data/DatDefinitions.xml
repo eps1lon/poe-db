@@ -1006,7 +1006,7 @@
 			<field id="Unknown43" type="long"/>
 			<field id="Stat5Min" type="int"/>
 			<field id="Stat5Max" type="int"/>
-			<field id="StatsKey5" type="long"/>
+			<field id="Stat5 (Stats.dat Row)" type="long"/>
 			<field id="Keys0" type="ref|list|ulong"/>
 			<field id="AchievementItemsKey" type="long"/>
 			<field id="GenerationWeight_TagsKeys" type="ref|list|ulong"/>

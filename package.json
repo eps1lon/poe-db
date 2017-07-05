@@ -13,13 +13,11 @@
     "build:db": "node scripts/definitionsToDb",
     "precommit": "lint-staged",
     "test": "jest",
-    "update-dat": "node scripts/definitionsXmlToJson"
+    "preparse-spec": "nearleyc data/dat.specification.ne -o data/dat.specification.js",
+    "parse-spec": "node scripts/definitionsConfigObjToJson"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --single-quote --trailing-comma all --write",
-      "git add"
-    ]
+    "*.js": ["prettier --single-quote --trailing-comma all --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"
@@ -34,7 +32,7 @@
     "prettier": "^1.4.4"
   },
   "dependencies": {
-    "string": "^3.3.3",
-    "xml2js": "^0.4.17"
+    "nearley": "^2.10.1",
+    "string": "^3.3.3"
   }
 }

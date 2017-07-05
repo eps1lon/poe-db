@@ -13,6 +13,10 @@ class Record {
     return type.endsWith('Keys');
   }
 
+  static isAtomic(field) {
+    return !(Record.isHasMany(field) || Record.isExtendedHasMany(field));
+  }
+
   static isExtendedHasMany(type) {
     // sometimes we have additional values for the relation so
     // the cols are prefixed with a common keyword followed by an

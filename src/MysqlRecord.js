@@ -70,11 +70,9 @@ class MysqlRecord extends Record {
   cols() {
     return this.fields
       .map(field => {
-        const col_name = MysqlRecord.colName(field.id);
-
-        if (col_name !== undefined) {
+        if (MysqlRecord.isAtomic(field.id)) {
           return {
-            name: col_name,
+            name: MysqlRecord.colName(field.id),
             type: MysqlRecord.typeToDbType(field),
           };
         } else {

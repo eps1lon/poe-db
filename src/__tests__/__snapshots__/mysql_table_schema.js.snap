@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MysqlTableSchema should generate correct create queries 1`] = `
+"CREATE TABLE \`mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown0 INT NULL,
+mod_type_row BIGINT UNSIGNED NULL KEY,
+level INT NULL,
+stats1_row BIGINT UNSIGNED NULL KEY,
+stats2_row BIGINT UNSIGNED NULL KEY,
+stats3_row BIGINT UNSIGNED NULL KEY,
+stats4_row BIGINT UNSIGNED NULL KEY,
+domain INT NULL,
+name TEXT NULL,
+generation_type INT NULL,
+correct_group TEXT NULL,
+stat1_min INT NULL,
+stat1_max INT NULL,
+stat2_min INT NULL,
+stat2_max INT NULL,
+stat3_min INT NULL,
+stat3_max INT NULL,
+stat4_min INT NULL,
+stat4_max INT NULL,
+buff_definitions_row BIGINT UNSIGNED NULL KEY,
+buff_value INT NULL,
+granted_effects_per_level_row BIGINT UNSIGNED NULL KEY,
+data1 TEXT NULL,
+data2 TEXT NULL,
+monster_metadata TEXT NULL,
+data3 TEXT NULL,
+data4 TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+stat5_min INT NULL,
+stat5_max INT NULL,
+stats5_row BIGINT UNSIGNED NULL KEY,
+achievement_items_row BIGINT UNSIGNED NULL KEY,
+data5 TEXT NULL,
+is_essence_only_modifier BOOLEAN NULL);"
+`;
+
+exports[`MysqlTableSchema should generate correct create queries 2`] = `
+"CREATE TABLE \`monster_varieties\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_types_row BIGINT UNSIGNED NULL KEY,
+unknown0 INT NULL,
+object_size INT NULL,
+minimum_attack_distance INT NULL,
+maximum_attack_distance INT NULL,
+act_file TEXT NULL,
+ao_file TEXT NULL,
+base_monster_type_index TEXT NULL,
+unknown1 INT NULL,
+unknown_index0 TEXT NULL,
+unknown_index1 TEXT NULL,
+model_size_multiplier INT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL,
+unknown6 INT NULL,
+experience_multiplier INT NULL,
+unknown7 TEXT NULL,
+unknown8 INT NULL,
+unknown9 INT NULL,
+unknown10 INT NULL,
+critical_strike_chance INT NULL,
+unknown11 INT NULL,
+ais_file TEXT NULL,
+stance TEXT NULL,
+2_row BIGINT UNSIGNED NULL KEY,
+name TEXT NULL,
+damage_multiplier INT NULL,
+life_multiplier INT NULL,
+attack_speed INT NULL,
+back_item_visual_identity_row BIGINT UNSIGNED NULL KEY,
+main_hand_item_classes_row BIGINT UNSIGNED NULL KEY,
+off_hand_item_classes_row BIGINT UNSIGNED NULL KEY,
+1_row BIGINT UNSIGNED NULL KEY,
+helmet_item_visual_identity_row BIGINT UNSIGNED NULL KEY,
+unknown13 INT NULL,
+unknown14 BOOLEAN NULL,
+unknown15 INT NULL,
+unknown16 INT NULL,
+unknown17 INT NULL,
+unknown18 INT NULL,
+unknown19 INT NULL,
+unknown20 INT NULL,
+unknown21 INT NULL,
+unknown22 BIT(8) NULL,
+unknown23 TEXT NULL,
+flashback_achievement_items_row BIGINT UNSIGNED NULL KEY,
+monster_segments_row BIGINT UNSIGNED NULL KEY,
+monster_armours_row BIGINT UNSIGNED NULL KEY,
+achievement_items_row BIGINT UNSIGNED NULL KEY,
+achievement_items4_row BIGINT UNSIGNED NULL KEY,
+3_row BIGINT UNSIGNED NULL KEY);"
+`;
+
+exports[`MysqlTableSchema should generate correct create queries for all relations 1`] = `
+"CREATE TABLE \`mods_spawn_weight_tags\` (mods_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED,
+values INT UNSIGNED);
+
+CREATE TABLE \`mods_tags\` (mods_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`mods0\` (mods_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`mods_generation_weight_tags\` (mods_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED,
+values INT);"
+`;
+
+exports[`MysqlTableSchema should generate correct create queries for all relations 2`] = `
+"CREATE TABLE \`monster_varieties_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_tags\` (monster_varieties_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_granted_effects\` (monster_varieties_row BIGINT UNSIGNED,
+granted_effects_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_mods2\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_weapon1_item_visual_identity\` (monster_varieties_row BIGINT UNSIGNED,
+item_visual_identity_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_weapon2_item_visual_identity\` (monster_varieties_row BIGINT UNSIGNED,
+item_visual_identity_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_special_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_achievement_items2\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_normal_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_merciless_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_cruel_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_normal_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_cruel_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_merciless_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_kill_rare_in_normal_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_kill_rare_in_cruel_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_kill_rare_in_merciless_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_count_kills_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);"
+`;

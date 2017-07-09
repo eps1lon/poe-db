@@ -17668,7 +17668,7 @@
           "display": "",
           "display_type": "{0}",
           "description": "",
-          "type": "ref|string#"
+          "type": "ref|string"
         },
         "StatsKeys": {
           "key": "Stats.dat",
@@ -45160,7 +45160,7 @@
           "display": "",
           "display_type": "{0}",
           "description": "",
-          "type": "ref|string#"
+          "type": "ref|string"
         },
         "StatsKeys": {
           "key": "Stats.dat",

@@ -50,7 +50,7 @@ describe('MysqlTableSchema', () => {
       'BIGINT UNSIGNED NOT NULL PRIMARY KEY',
     );
     expect(mods.columnDefinition('BuffDefinitionsKey')).toBe(
-      'BIGINT UNSIGNED NOT NULL KEY',
+      'BIGINT UNSIGNED NOT NULL',
     );
     expect(mods.columnDefinition('Id')).toBe('TEXT NOT NULL');
     expect(mods.columnDefinition('Stat1Min')).toBe('INT NOT NULL');

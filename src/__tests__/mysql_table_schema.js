@@ -5,6 +5,15 @@ const spec = require('./spec.json')[0];
 describe('MysqlTableSchema', () => {
   const mods = new MysqlTableSchema('Mods.dat', spec['Mods.dat']);
 
+  it('should handle null fields', () => {
+    expect(
+      new MysqlTableSchema(
+        'OldMapStashTabLayout.dat',
+        spec['OldMapStashTabLayout.dat'],
+      ).fields,
+    ).toEqual([]);
+  });
+
   it('should recognized extended props', () => {
     expect(mods.isExtendedProp('SpawnWeight_TagsKeys')).toBe(true);
     expect(mods.isExtendedProp('SpawnWeight_Values')).toBe(true);

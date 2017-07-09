@@ -264,7 +264,7 @@ class MysqlTableSchema {
   }
 
   get fields() {
-    return this.props.fields;
+    return this.props.fields === null ? [] : this.props.fields;
   }
 
   get virtual_fields() {

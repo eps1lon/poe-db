@@ -10,17 +10,14 @@
   "author": "eps1lon",
   "license": "MIT",
   "scripts": {
-    "build:db": "node scripts/definitionsToDb",
+    "db:create": "node scripts/definitionsToDb",
     "precommit": "lint-staged",
     "test": "jest",
     "preparse-spec": "nearleyc data/dat.specification.ne -o data/dat.specification.js",
     "parse-spec": "node scripts/definitionsConfigObjToJson"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --single-quote --trailing-comma all --write",
-      "git add"
-    ]
+    "*.js": ["prettier --single-quote --trailing-comma all --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"

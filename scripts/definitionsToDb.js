@@ -1,14 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const factory = require('../src/MysqlFactory');
+const MysqlSchema = require('../src/MysqlSchema');
 
-const definitions_file = fs.readFileSync(
-  path.join(__dirname, '../data/definitions.json'),
+const specification_file = fs.readFileSync(
+  path.join(__dirname, '../data/dat.specification.json'),
 );
 
-const definitions = JSON.parse(definitions_file);
+const specification = JSON.parse(specification_file);
+const schema = new MysqlSchema(specification.dats);
 
-for (const definition of definitions) {
-  // pass
-}
+process.stdout.write(schema.createAllQuery());

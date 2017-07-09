@@ -1,0 +1,2989 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MysqlTableSchema should match the db schema 1`] = `
+"CREATE TABLE \`achievement_items\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 INT NULL,
+unknown2 INT NULL,
+name TEXT NULL,
+completions_required INT NULL,
+achievements_row BIGINT UNSIGNED NULL KEY,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`achievement_set_rewards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+achievement_sets_display_id BIGINT UNSIGNED NULL KEY,
+unknown1 INT NULL,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL);
+
+CREATE TABLE \`achievement_sets\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`achievement_sets_display\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id INT NULL,
+title TEXT NULL);
+
+CREATE TABLE \`achievements\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+description TEXT NULL,
+achievement_sets_display_id BIGINT UNSIGNED NULL KEY,
+objective TEXT NULL,
+unknown_unique INT NULL,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL,
+flag2 BOOLEAN NULL,
+flag3 BOOLEAN NULL,
+unknown3 INT NULL,
+flag4 BOOLEAN NULL);
+
+CREATE TABLE \`active_skills\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+displayed_name TEXT NULL,
+description TEXT NULL,
+index3 TEXT NULL,
+icon_dds_file TEXT NULL,
+active_skill_target_types TEXT NULL,
+active_skill_types TEXT NULL,
+website_description TEXT NULL,
+website_image TEXT NULL,
+flag0 BOOLEAN NULL,
+unknown13 TEXT NULL,
+flag1 BOOLEAN NULL,
+skill_totem_id INT NULL,
+is_manually_casted BOOLEAN NULL,
+unknown19 TEXT NULL);
+
+CREATE TABLE \`active_skills_weapon_restriction_item_classes\` (active_skills_row BIGINT UNSIGNED,
+item_classes_row BIGINT UNSIGNED);
+
+CREATE TABLE \`active_skills_input_stat\` (active_skills_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`active_skills_output_stat\` (active_skills_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`active_skill_target_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`active_skill_type\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`armour_classes\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`armour_surface_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`armour_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`ascendancy\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+class_no INT NULL,
+characters_row BIGINT UNSIGNED NULL KEY,
+coordinate_rect TEXT NULL,
+rgb_flavour_text_colour TEXT NULL,
+name TEXT NULL,
+flavour_text TEXT NULL,
+ogg_file TEXT NULL);
+
+CREATE TABLE \`atlas_node\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+x FLOAT NULL,
+y FLOAT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL,
+unknown6 INT NULL,
+default_item_visual_identity_row BIGINT UNSIGNED NULL KEY,
+shaped_item_visual_identity_row BIGINT UNSIGNED NULL KEY,
+flavour_text TEXT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`atlas_node_atlas_node\` (atlas_node_row BIGINT UNSIGNED,
+atlas_node_row BIGINT UNSIGNED);
+
+CREATE TABLE \`atlas_quest_items\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+quest_flags INT NULL,
+league_quest_flags INT NULL,
+map_tier INT NULL);
+
+CREATE TABLE \`attributes\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`backend_errors\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+text TEXT NULL);
+
+CREATE TABLE \`base_item_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+item_classes_row BIGINT UNSIGNED NULL KEY,
+width INT NULL,
+height INT NULL,
+name TEXT NULL,
+inherits_from TEXT NULL,
+drop_level INT NULL,
+flavour_text_row BIGINT UNSIGNED NULL KEY,
+unknown1 INT NULL,
+sound_effects_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL,
+flag0 BOOLEAN NULL,
+item_visual_identity_row BIGINT UNSIGNED NULL KEY,
+unknown_unique INT UNSIGNED NULL,
+unknown20 TEXT NULL,
+equip_achievement_items_row BIGINT UNSIGNED NULL KEY,
+is_picked_up_by_monsters BOOLEAN NULL,
+data11 TEXT NULL);
+
+CREATE TABLE \`base_item_types_implicit_mods\` (base_item_types_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`base_item_types_normal_purchase_base_item_types\` (base_item_types_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`base_item_types_magic_purchase_base_item_types\` (base_item_types_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`base_item_types_tags\` (base_item_types_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`base_item_types_vendor_recipe_achievement_items\` (base_item_types_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`base_item_types_rare_purchase_base_item_types\` (base_item_types_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`base_item_types_unique_purchase_base_item_types\` (base_item_types_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`beyond_demons\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL);
+
+CREATE TABLE \`bindable_virtual_keys\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+key_code INT NULL,
+name TEXT NULL,
+id TEXT NULL);
+
+CREATE TABLE \`blood_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+pet_file1 TEXT NULL,
+pet_file2 TEXT NULL,
+pet_file3 TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+pet_file4 TEXT NULL,
+pet_file5 TEXT NULL,
+pet_file6 TEXT NULL,
+1_row BIGINT UNSIGNED NULL KEY,
+2_row BIGINT UNSIGNED NULL KEY,
+pet_file7 TEXT NULL,
+pet_file8 TEXT NULL,
+pet_file9 TEXT NULL);
+
+CREATE TABLE \`blood_types0\` (blood_types_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`bloodlines\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+min_zone_level INT NULL,
+max_zone_level INT NULL,
+unknown8 INT NULL,
+buff_definitions_row BIGINT UNSIGNED NULL KEY,
+unknown11 TEXT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown20 INT NULL,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL);
+
+CREATE TABLE \`bloodlines_mods\` (bloodlines_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`bloodlines_spawn_weight_tags\` (bloodlines_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`bloodlines_item_weight_tags\` (bloodlines_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`bloodlines2\` (bloodlines_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`buff_categories\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`buff_definitions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+description TEXT NULL,
+invisible BOOLEAN NULL,
+removable BOOLEAN NULL,
+name TEXT NULL,
+flag0 BOOLEAN NULL,
+unknown2 INT NULL,
+flag1 BOOLEAN NULL,
+maximum_stats_row BIGINT UNSIGNED NULL KEY,
+current_stats_row BIGINT UNSIGNED NULL KEY,
+flag2 BOOLEAN NULL,
+unknown5 INT NULL,
+buff_visuals_row BIGINT UNSIGNED NULL KEY,
+flag3 BOOLEAN NULL,
+flag4 BOOLEAN NULL,
+unknown7 INT NULL,
+flag5 BOOLEAN NULL,
+flag6 BOOLEAN NULL,
+flag7 BOOLEAN NULL,
+flag8 BOOLEAN NULL,
+flag9 BOOLEAN NULL,
+buff_limit INT NULL,
+flag10 BOOLEAN NULL,
+unknown0 TEXT NULL,
+is_recovery BOOLEAN NULL);
+
+CREATE TABLE \`buff_definitions_stats\` (buff_definitions_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`buff_groups\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`buff_merge_modes\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`buff_visual_orb_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`buff_visuals\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+buff_dds_file TEXT NULL,
+epk_file1 TEXT NULL,
+epk_file2 TEXT NULL,
+misc_animated_row BIGINT UNSIGNED NULL KEY,
+misc_animated2_row BIGINT UNSIGNED NULL KEY,
+unknown6 INT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`buff_visuals_preload_groups\` (buff_visuals_row BIGINT UNSIGNED,
+preload_groups_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+quest_state INT NULL,
+unknown1 INT NULL,
+unknown2 INT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`character_audio_events_marauder_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events_ranger_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events_witch_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events_duelist_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events_shadow_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events_templar_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events_scion_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events_goddess_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_audio_events_jack_the_axe_character_text_audio\` (character_audio_events_row BIGINT UNSIGNED,
+character_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_panel_description_modes\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 TEXT NULL,
+format_string_positive TEXT NULL,
+format_string_negative TEXT NULL);
+
+CREATE TABLE \`character_panel_stat_contexts\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`character_panel_stats\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+text TEXT NULL,
+character_panel_description_modes_row BIGINT UNSIGNED NULL KEY,
+character_panel_tabs_row BIGINT UNSIGNED NULL KEY,
+flag0 BOOLEAN NULL,
+data4 TEXT NULL);
+
+CREATE TABLE \`character_panel_stats_stats1\` (character_panel_stats_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_panel_stats_stats2\` (character_panel_stats_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_panel_stats_stats3\` (character_panel_stats_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_panel_tabs\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown2 INT NULL,
+text TEXT NULL);
+
+CREATE TABLE \`character_start_items\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+character_start_states_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+sockets TEXT NULL,
+inventory_index TEXT NULL,
+slot_x INT NULL,
+slot_y INT NULL,
+stack_size INT NULL,
+links TEXT NULL,
+skill_gem_levels TEXT NULL,
+flag0 BOOLEAN NULL,
+0_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`character_start_items_socketed_skill_gems\` (character_start_items_row BIGINT UNSIGNED,
+skill_gems_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_start_items_mods\` (character_start_items_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_start_quest_state\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+quest_states TEXT NULL,
+unknown9 TEXT NULL);
+
+CREATE TABLE \`character_start_quest_state_quest\` (character_start_quest_state_row BIGINT UNSIGNED,
+quest_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_start_quest_state1\` (character_start_quest_state_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_start_quest_state_map_pins\` (character_start_quest_state_row BIGINT UNSIGNED,
+map_pins_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_start_state_set\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL);
+
+CREATE TABLE \`character_start_states\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+description TEXT NULL,
+characters_row BIGINT UNSIGNED NULL KEY,
+level INT NULL,
+is_pvp BOOLEAN NULL,
+character_start_state_set_row BIGINT UNSIGNED NULL KEY,
+1_row BIGINT UNSIGNED NULL KEY,
+unknown BIT(8) NULL);
+
+CREATE TABLE \`character_start_states_passive_skills\` (character_start_states_row BIGINT UNSIGNED,
+passive_skills_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_start_states_normal_character_start_quest_state\` (character_start_states_row BIGINT UNSIGNED,
+character_start_quest_state_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_start_states_cruel_character_start_quest_state\` (character_start_states_row BIGINT UNSIGNED,
+character_start_quest_state_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_start_states_merciless_character_start_quest_state\` (character_start_states_row BIGINT UNSIGNED,
+character_start_quest_state_row BIGINT UNSIGNED);
+
+CREATE TABLE \`character_text_audio\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+text TEXT NULL,
+sound_file TEXT NULL);
+
+CREATE TABLE \`characters\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+name TEXT NULL,
+ao_file TEXT NULL,
+act_file TEXT NULL,
+base_max_life INT NULL,
+base_max_mana INT NULL,
+weapon_speed INT NULL,
+min_damage INT NULL,
+max_damage INT NULL,
+max_attack_distance INT NULL,
+icon TEXT NULL,
+integer_id INT NULL,
+base_strength INT NULL,
+base_dexterity INT NULL,
+base_intelligence INT NULL,
+description TEXT NULL,
+start_skill_gem_base_item_types_row BIGINT UNSIGNED NULL KEY,
+unknown13 INT NULL,
+unknown14 INT NULL,
+unknown15 INT NULL,
+unknown16 INT NULL,
+character_size INT NULL,
+intro_sound_file TEXT NULL,
+start_weapon_base_item_types_row BIGINT UNSIGNED NULL KEY,
+unknown28 INT NULL,
+trait_description TEXT NULL);
+
+CREATE TABLE \`characters0\` (characters_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`chest_clusters\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+data1 TEXT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL);
+
+CREATE TABLE \`chest_clusters_chests\` (chest_clusters_row BIGINT UNSIGNED,
+chests_row BIGINT UNSIGNED);
+
+CREATE TABLE \`chest_effects\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+normal_epk_file TEXT NULL,
+normal_closed_ao_file TEXT NULL,
+normal_open_ao_file TEXT NULL,
+magic_epk_file TEXT NULL,
+unique_epk_file TEXT NULL,
+rare_epk_file TEXT NULL,
+magic_closed_ao_file TEXT NULL,
+unique_closed_ao_file TEXT NULL,
+rare_closed_ao_file TEXT NULL,
+magic_open_ao_file TEXT NULL,
+unique_open_ao_file TEXT NULL,
+rare_open_ao_file TEXT NULL);
+
+CREATE TABLE \`chests\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+flag0 BOOLEAN NULL,
+unknown0 INT NULL,
+name TEXT NULL,
+ao_file TEXT NULL,
+flag1 BOOLEAN NULL,
+flag2 BOOLEAN NULL,
+unknown4 INT NULL,
+flag3 BOOLEAN NULL,
+flag4 BOOLEAN NULL,
+unknown5 INT NULL,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+flag5 BOOLEAN NULL,
+chest_effects_row BIGINT UNSIGNED NULL KEY,
+min_level INT NULL,
+unknown19 TEXT NULL,
+max_level INT NULL,
+corrupt_achievement_items_row BIGINT UNSIGNED NULL KEY,
+currency_use_achievement_items_row BIGINT UNSIGNED NULL KEY,
+encounter_achievement_items_row BIGINT UNSIGNED NULL KEY,
+4_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`chests_unknown_\` (chests_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`chests_mods\` (chests_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`chests_tags\` (chests_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`client_strings\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+text TEXT NULL);
+
+CREATE TABLE \`clone_shot_variations\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`commands\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+command TEXT NULL,
+flag0 BOOLEAN NULL,
+command2 TEXT NULL);
+
+CREATE TABLE \`component_armour\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_id BIGINT UNSIGNED NULL KEY,
+armour INT NULL,
+evasion INT NULL,
+energy_shield INT NULL);
+
+CREATE TABLE \`component_attribute_requirements\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_id BIGINT UNSIGNED NULL KEY,
+req_str INT NULL,
+req_dex INT NULL,
+req_int INT NULL);
+
+CREATE TABLE \`component_charges\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_id BIGINT UNSIGNED NULL KEY,
+max_charges INT NULL,
+per_charge INT NULL);
+
+CREATE TABLE \`cooldown_bypass_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`cooldown_groups\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`crafting_bench_custom_actions\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`crafting_bench_options\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+npc_master_row BIGINT UNSIGNED NULL KEY,
+order INT NULL,
+mods_row BIGINT UNSIGNED NULL KEY,
+master_level INT NULL,
+name TEXT NULL,
+crafting_bench_custom_action INT NULL,
+sockets INT NULL,
+socket_colours TEXT NULL,
+links INT NULL,
+item_quantity INT NULL,
+unknown1 TEXT NULL,
+description TEXT NULL,
+is_disabled BOOLEAN NULL);
+
+CREATE TABLE \`crafting_bench_options_cost_base_item_types\` (crafting_bench_options_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`crafting_bench_options_item_classes\` (crafting_bench_options_row BIGINT UNSIGNED,
+item_classes_row BIGINT UNSIGNED);
+
+CREATE TABLE \`currency_items\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+stacks INT NULL,
+currency_use_type INT NULL,
+action TEXT NULL,
+directions TEXT NULL,
+full_stack_base_item_types_row BIGINT UNSIGNED NULL KEY,
+description TEXT NULL,
+flag1 BOOLEAN NULL,
+cosmetic_type_name TEXT NULL,
+possession_achievement_items_row BIGINT UNSIGNED NULL KEY,
+unknown17 TEXT NULL,
+currency_tab_stack_size INT NULL,
+abbreviation TEXT NULL);
+
+CREATE TABLE \`currency_items_usage_achievement_items\` (currency_items_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`currency_items0\` (currency_items_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`currency_stash_tab_layout\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+unknown1 INT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL);
+
+CREATE TABLE \`currency_use_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`daily_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown0 INT NULL,
+unknown1 INT NULL,
+unknown2 INT NULL,
+spawn_weight INT NULL,
+description TEXT NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY,
+unknown8 INT NULL,
+pvp_types_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`daily_missions_characters\` (daily_missions_row BIGINT UNSIGNED,
+characters_row BIGINT UNSIGNED);
+
+CREATE TABLE \`daily_overrides\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unknown0 INT NULL);
+
+CREATE TABLE \`daily_overrides_daily_missions\` (daily_overrides_row BIGINT UNSIGNED,
+daily_missions_row BIGINT UNSIGNED);
+
+CREATE TABLE \`damage_particle_effects\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+pet_file TEXT NULL);
+
+CREATE TABLE \`dances\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+characters_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`daresso_pit_fights\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+unknown1 INT NULL,
+unknown2 TEXT NULL,
+flag_unknown0 BOOLEAN NULL,
+flag_unknown2 BOOLEAN NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown6 INT NULL,
+flag_unknown3 BOOLEAN NULL);
+
+CREATE TABLE \`default\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`default_monster_stats\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+display_level TEXT NULL,
+damage FLOAT NULL,
+evasion INT NULL,
+accuracy INT NULL,
+life INT NULL,
+experience INT NULL,
+ally_life INT NULL,
+difficulty_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`descent_exiles\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+characters_row BIGINT UNSIGNED NULL KEY,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown7 INT NULL);
+
+CREATE TABLE \`descent_reward_chests\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+world_areas_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`descent_reward_chests_base_item_types1\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types2\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types3\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types4\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types5\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types6\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types7\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types8\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types9\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types10\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types11\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types12\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types13\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_reward_chests_base_item_types14\` (descent_reward_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`descent_starter_chest\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+characters_row BIGINT UNSIGNED NULL KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+socket_colours TEXT NULL,
+world_areas_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`dex_int_mission_guard_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+flag0 BOOLEAN NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`dex_int_mission_guards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_packs_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`dex_int_mission_targets\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`dex_int_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+kill_target BOOLEAN NULL,
+fail_if_target_killed BOOLEAN NULL,
+kill_guards BOOLEAN NULL,
+fail_if_guards_killed BOOLEAN NULL,
+time_limit INT NULL,
+hostage_monster_varieties_row BIGINT UNSIGNED NULL KEY,
+min_level INT NULL,
+max_level INT NULL,
+chest_flag0 BOOLEAN NULL,
+chest_flag1 BOOLEAN NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY,
+fail_if_no_guards_left BOOLEAN NULL,
+timer INT NULL,
+flag7 BOOLEAN NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+1_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`dex_int_missions_achievement_items\` (dex_int_missions_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`dex_mission_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+mods_row BIGINT UNSIGNED NULL KEY,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL,
+min_level INT NULL,
+max_level INT NULL,
+flag2 BOOLEAN NULL);
+
+CREATE TABLE \`dex_mission_monsters\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+boss_monster_varieties_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`dex_mission_monsters_monster_packs\` (dex_mission_monsters_row BIGINT UNSIGNED,
+monster_packs_row BIGINT UNSIGNED);
+
+CREATE TABLE \`dex_mission_monsters_monster_varieties\` (dex_mission_monsters_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`dex_mission_tracking\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+flag0 BOOLEAN NULL,
+unknown4 INT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+unknown5 INT NULL,
+unknown6 INT NULL,
+unknown7 INT NULL,
+flag1 BOOLEAN NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`dex_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+magic_chance INT NULL,
+rare_chance INT NULL,
+unique_monster_count INT NULL,
+rare_monster_count INT NULL,
+magic_monster_pack_count INT NULL);
+
+CREATE TABLE \`difficulties\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+resistances INT NULL,
+minimum_level INT NULL,
+text TEXT NULL,
+prefix TEXT NULL);
+
+CREATE TABLE \`display_minion_monster_type\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id INT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`divination_card_art\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+virtual_file TEXT NULL);
+
+CREATE TABLE \`divination_card_stash_tab_layout\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+is_enabled BOOLEAN NULL);
+
+CREATE TABLE \`drop_pool\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+group TEXT NULL,
+weight INT NULL);
+
+CREATE TABLE \`eclipse_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+row BIGINT UNSIGNED NULL KEY,
+mods_row BIGINT UNSIGNED NULL KEY,
+min_level INT NULL,
+max_level INT NULL,
+is_prefix BOOLEAN NULL);
+
+CREATE TABLE \`eclipse_mods_spawn_weight_tags\` (eclipse_mods_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`effectiveness\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`effectiveness_cost_constants\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`endless_ledge_chests\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+socket_colour TEXT NULL);
+
+CREATE TABLE \`endless_ledge_chests_base_item_types\` (endless_ledge_chests_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`environments\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+base_ambient_sound_file TEXT NULL,
+base_env_file TEXT NULL,
+corrupted_env_file TEXT NULL,
+corrupted_ambient_sound_file TEXT NULL,
+ambient_sound_file TEXT NULL);
+
+CREATE TABLE \`environments0\` (environments_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`environments1\` (environments_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`essence_stash_tab_layout\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+x INT NULL,
+y INT NULL,
+int_id INT NULL,
+slot_width INT NULL,
+slot_height INT NULL,
+is_upgradable_essence_slot BOOLEAN NULL);
+
+CREATE TABLE \`essence_type\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+essence_type INT NULL,
+is_corrupted_essence BOOLEAN NULL,
+words_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`essences\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+unknown1 BIGINT UNSIGNED NULL,
+unknown2 BIGINT UNSIGNED NULL,
+unknown3 BIGINT UNSIGNED NULL,
+unknown4 BIGINT UNSIGNED NULL,
+unknown5 BIGINT UNSIGNED NULL,
+unknown6 BIGINT UNSIGNED NULL,
+unknown7 BIGINT UNSIGNED NULL,
+unknown8 BIGINT UNSIGNED NULL,
+unknown9 BIGINT UNSIGNED NULL,
+unknown10 BIGINT UNSIGNED NULL,
+unknown11 BIGINT UNSIGNED NULL,
+mods1_row BIGINT UNSIGNED NULL KEY,
+mods2_row BIGINT UNSIGNED NULL KEY,
+quiver_mods_row BIGINT UNSIGNED NULL KEY,
+amulet1_mods_row BIGINT UNSIGNED NULL KEY,
+belt1_mods_row BIGINT UNSIGNED NULL KEY,
+belt3_mods_row BIGINT UNSIGNED NULL KEY,
+gloves1_mods_row BIGINT UNSIGNED NULL KEY,
+boots1_mods_row BIGINT UNSIGNED NULL KEY,
+body_armour1_mods_row BIGINT UNSIGNED NULL KEY,
+helmet1_mods_row BIGINT UNSIGNED NULL KEY,
+shield1_mods_row BIGINT UNSIGNED NULL KEY,
+unknown23 INT NULL,
+drop_level_minimum INT NULL,
+drop_level_maximum INT NULL,
+essence_type_row BIGINT UNSIGNED NULL KEY,
+tier INT NULL,
+unknown31 INT NULL,
+1_hand_mods1_row BIGINT UNSIGNED NULL KEY,
+mods13_row BIGINT UNSIGNED NULL KEY,
+mods14_row BIGINT UNSIGNED NULL KEY,
+mods15_row BIGINT UNSIGNED NULL KEY,
+2_hand_mods1_row BIGINT UNSIGNED NULL KEY,
+boots3_mods_row BIGINT UNSIGNED NULL KEY,
+ranged_mods_row BIGINT UNSIGNED NULL KEY,
+helmet2_mods_row BIGINT UNSIGNED NULL KEY,
+body_armour2_mods_row BIGINT UNSIGNED NULL KEY,
+boots2_mods_row BIGINT UNSIGNED NULL KEY,
+gloves2_mods_row BIGINT UNSIGNED NULL KEY,
+bow_mods_row BIGINT UNSIGNED NULL KEY,
+wand_mods_row BIGINT UNSIGNED NULL KEY,
+2_hand_mods2_row BIGINT UNSIGNED NULL KEY,
+2_hand_mods3_row BIGINT UNSIGNED NULL KEY,
+2_hand_mods4_row BIGINT UNSIGNED NULL KEY,
+2_hand_mods5_row BIGINT UNSIGNED NULL KEY,
+1_hand_mods2_row BIGINT UNSIGNED NULL KEY,
+1_hand_mods3_row BIGINT UNSIGNED NULL KEY,
+1_hand_mods4_row BIGINT UNSIGNED NULL KEY,
+1_hand_mods5_row BIGINT UNSIGNED NULL KEY,
+1_hand_mods6_row BIGINT UNSIGNED NULL KEY,
+1_hand_mods7_row BIGINT UNSIGNED NULL KEY,
+1_hand_mods8_row BIGINT UNSIGNED NULL KEY,
+1_hand_mods9_row BIGINT UNSIGNED NULL KEY,
+item_level_restriction INT NULL,
+belt2_mods_row BIGINT UNSIGNED NULL KEY,
+amulet2_mods_row BIGINT UNSIGNED NULL KEY,
+ring_mods_row BIGINT UNSIGNED NULL KEY,
+mods41_row BIGINT UNSIGNED NULL KEY,
+shield2_mods_row BIGINT UNSIGNED NULL KEY,
+mods43_row BIGINT UNSIGNED NULL KEY,
+is_screaming_essence BOOLEAN NULL);
+
+CREATE TABLE \`essences_monster_mods\` (essences_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`event_season\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 INT NULL,
+reward_command TEXT NULL);
+
+CREATE TABLE \`event_season_rewards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+event_season_row BIGINT UNSIGNED NULL KEY,
+point INT NULL,
+reward_command TEXT NULL);
+
+CREATE TABLE \`experience_levels\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+index0 TEXT NULL,
+level INT NULL,
+experience INT UNSIGNED NULL);
+
+CREATE TABLE \`exploding_storm_buffs\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+buff_definitions1_row BIGINT UNSIGNED NULL KEY,
+0_row BIGINT UNSIGNED NULL KEY,
+stat_values TEXT NULL,
+unknown7 INT NULL,
+data1 TEXT NULL,
+unknown10 INT NULL,
+unknown11 INT NULL,
+unknown12 INT NULL,
+friendly_monster_varieties_row BIGINT UNSIGNED NULL KEY,
+misc_objects_row BIGINT UNSIGNED NULL KEY,
+misc_animated_row BIGINT UNSIGNED NULL KEY,
+buff_visuals_row BIGINT UNSIGNED NULL KEY,
+enemy_monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown23 INT NULL,
+unknown24 INT NULL,
+unknown25 INT NULL,
+buff_definitions2_row BIGINT UNSIGNED NULL KEY,
+is_only_spawning_near_player BOOLEAN NULL);
+
+CREATE TABLE \`extra_terrain_feature_family\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`extra_terrain_features\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 TEXT NULL,
+unknown2 TEXT NULL,
+unknown3 INT NULL,
+unknown4 TEXT NULL,
+unknown5 TEXT NULL,
+unknown6 INT NULL,
+unknown7 INT NULL);
+
+CREATE TABLE \`flasks\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+name TEXT NULL,
+group INT NULL,
+life_per_use INT NULL,
+mana_per_use INT NULL,
+recovery_time INT NULL,
+buff_definitions_row BIGINT UNSIGNED NULL KEY,
+buff_stat_values TEXT NULL);
+
+CREATE TABLE \`flask_type\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`flavour_text\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown0 INT NULL,
+text TEXT NULL);
+
+CREATE TABLE \`footprints\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+active_ao_files TEXT NULL,
+idle_ao_files TEXT NULL);
+
+CREATE TABLE \`game_constants\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+value INT NULL);
+
+CREATE TABLE \`gem_tags\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+tag TEXT NULL);
+
+CREATE TABLE \`gem_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`global_audio_config\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+value INT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`global_quest_flags\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`grandmasters\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+gm_file TEXT NULL,
+ais_file TEXT NULL,
+character_level INT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`grandmasters_mods\` (grandmasters_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`granted_effect_groups\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`granted_effects\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+is_support BOOLEAN NULL,
+data0 TEXT NULL,
+support_gem_letter TEXT NULL,
+unknown0 INT NULL,
+data1 TEXT NULL,
+data2 TEXT NULL,
+flag0 BOOLEAN NULL,
+unknown1 INT UNSIGNED NULL,
+unknown2 TEXT NULL,
+flag1 BOOLEAN NULL,
+unknown3 INT NULL,
+cast_time INT NULL,
+active_skills_row BIGINT UNSIGNED NULL KEY,
+flag2 BOOLEAN NULL,
+flag3 BOOLEAN NULL);
+
+CREATE TABLE \`granted_effects_per_level\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+granted_effects_row BIGINT UNSIGNED NULL KEY,
+level INT NULL,
+stat1_value INT NULL,
+stat2_value INT NULL,
+stat3_value INT NULL,
+stat4_value INT NULL,
+stat5_value INT NULL,
+stat6_value INT NULL,
+stat7_value INT NULL,
+stat8_value INT NULL,
+level_requirement INT NULL,
+mana_multiplier INT NULL,
+level_requirement2 INT NULL,
+level_requirement3 INT NULL,
+critical_strike_chance INT NULL,
+mana_cost INT NULL,
+damage_effectiveness INT NULL,
+stored_uses INT NULL,
+cooldown INT NULL,
+cooldown_bypass_type INT NULL,
+unknown30a BOOLEAN NULL,
+vaal_souls INT NULL,
+vaal_stored_uses INT NULL,
+cooldown_group INT NULL,
+mana_reservation_override INT NULL,
+unknown34 INT NULL,
+damage_multiplier INT NULL,
+unknown36 INT NULL,
+unknown37 INT NULL);
+
+CREATE TABLE \`granted_effects_per_level_stats\` (granted_effects_per_level_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`granted_effects_per_level_quality_stats\` (granted_effects_per_level_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED,
+values INT);
+
+CREATE TABLE \`granted_effects_per_level_stats2\` (granted_effects_per_level_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`hideout_doodads\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+variation_ao_files TEXT NULL,
+favour_cost INT NULL,
+master_level INT NULL,
+npc_master_row BIGINT UNSIGNED NULL KEY,
+is_non_master_doodad BOOLEAN NULL,
+unknown1 INT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL);
+
+CREATE TABLE \`hideout_interactable\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+object TEXT NULL);
+
+CREATE TABLE \`hideouts\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+small_world_areas_row BIGINT UNSIGNED NULL KEY,
+npc_master_row BIGINT UNSIGNED NULL KEY,
+medium_world_areas_row BIGINT UNSIGNED NULL KEY,
+large_world_areas_row BIGINT UNSIGNED NULL KEY,
+unknown9 INT NULL);
+
+CREATE TABLE \`impact_sound_data\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+sound TEXT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL);
+
+CREATE TABLE \`int_mission_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+data2 TEXT NULL);
+
+CREATE TABLE \`int_mission_mods_mods\` (int_mission_mods_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`int_mission_mods0\` (int_mission_mods_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`int_mission_monsters\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`int_mission_monsters_objective_monster_varieties\` (int_mission_monsters_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`int_mission_monsters_achievement_items\` (int_mission_monsters_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`int_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY,
+flag0 BOOLEAN NULL,
+unknown6 INT NULL,
+flag1 BOOLEAN NULL,
+flag2 BOOLEAN NULL,
+flag3 BOOLEAN NULL,
+unknown8 INT NULL,
+monster_per_spawn_count INT NULL,
+objective_count INT NULL,
+flag4 BOOLEAN NULL,
+flag5 BOOLEAN NULL,
+flag6 BOOLEAN NULL,
+flag7 BOOLEAN NULL,
+flag8 BOOLEAN NULL,
+flag9 BOOLEAN NULL,
+flag10 BOOLEAN NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown13 INT NULL);
+
+CREATE TABLE \`invasion_monster_groups\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`invasion_monster_restrictions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+data0 TEXT NULL);
+
+CREATE TABLE \`invasion_monster_restrictions_monster_varieties\` (invasion_monster_restrictions_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`invasion_monster_roles\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`invasion_monsters_per_area\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+unknown0 INT NULL,
+unknown1 INT NULL,
+data0 TEXT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL);
+
+CREATE TABLE \`invasion_monsters_per_area_monster_varieties1\` (invasion_monsters_per_area_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`invasion_monsters_per_area_monster_varieties2\` (invasion_monsters_per_area_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`item_classes\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+name TEXT NULL,
+category TEXT NULL);
+
+CREATE TABLE \`item_experience_per_level\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+item_current_level INT NULL,
+experience INT NULL);
+
+CREATE TABLE \`item_visual_effect\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+dagger_epk_file TEXT NULL,
+bow_epk_file TEXT NULL,
+one_handed_mace_epk_file TEXT NULL,
+one_handed_sword_epk_file TEXT NULL,
+index5 TEXT NULL,
+two_handed_sword_epk_file TEXT NULL,
+two_handed_staff_epk_file TEXT NULL,
+unknown0 INT NULL,
+two_handed_mace_epk_file TEXT NULL,
+one_handed_axe_epk_file TEXT NULL,
+two_handed_axe_epk_file TEXT NULL,
+claw_epk_file TEXT NULL,
+pet_file TEXT NULL,
+flag1 BOOLEAN NULL);
+
+CREATE TABLE \`item_visual_identity\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+dds_file TEXT NULL,
+ao_file TEXT NULL,
+sound_effects_row BIGINT UNSIGNED NULL KEY,
+unknown_unique_int INT NULL,
+ao_file2 TEXT NULL,
+marauder_sm_files TEXT NULL,
+ranger_sm_files TEXT NULL,
+witch_sm_files TEXT NULL,
+duelist_dex_sm_files TEXT NULL,
+templar_sm_files TEXT NULL,
+shadow_sm_files TEXT NULL,
+scion_sm_files TEXT NULL,
+marauder_shape TEXT NULL,
+ranger_shape TEXT NULL,
+witch_shape TEXT NULL,
+duelist_shape TEXT NULL,
+templar_shape TEXT NULL,
+shadow_shape TEXT NULL,
+scion_shape TEXT NULL,
+unknown28 INT NULL,
+unknown29 INT NULL,
+sm_files TEXT NULL,
+epk_file TEXT NULL,
+is_alternate_art BOOLEAN NULL,
+flag2 BOOLEAN NULL,
+create_corrupted_jewel_achievement_items_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`item_visual_identity_pickup_achievement_items\` (item_visual_identity_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`item_visual_identity_identify_achievement_items\` (item_visual_identity_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`item_visual_identity_corrupt_achievement_items\` (item_visual_identity_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`itemised_visual_effect\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+item_visual_effect_row BIGINT UNSIGNED NULL KEY,
+item_visual_identity1_row BIGINT UNSIGNED NULL KEY,
+item_visual_identity2_row BIGINT UNSIGNED NULL KEY,
+data1 TEXT NULL,
+flag0 BOOLEAN NULL,
+data3 TEXT NULL);
+
+CREATE TABLE \`itemised_visual_effect0\` (itemised_visual_effect_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`itemised_visual_effect2\` (itemised_visual_effect_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`killstreak_thresholds\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+kills INT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+achievement_items_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`labyrinth_areas\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL);
+
+CREATE TABLE \`labyrinth_areas_normal_world_areas\` (labyrinth_areas_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_areas_cruel_world_areas\` (labyrinth_areas_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_areas_merciless_world_areas\` (labyrinth_areas_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_areas_endgame_world_areas\` (labyrinth_areas_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_exclusion_groups\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unknown1 INT NULL);
+
+CREATE TABLE \`labyrinth_izaro_chests\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+chests_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+min_labyrinth_tier INT NULL,
+max_labyrinth_tier INT NULL);
+
+CREATE TABLE \`labyrinth_ladder_rewards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unknown0 INT NULL,
+0_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`labyrinth_node_overrides\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id1 TEXT NULL,
+id2 TEXT NULL,
+data1 TEXT NULL,
+data2 TEXT NULL);
+
+CREATE TABLE \`labyrinth_rewards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 INT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+unknown4 INT NULL,
+1_row BIGINT UNSIGNED NULL KEY,
+unknown7 INT NULL,
+unknown8 INT NULL);
+
+CREATE TABLE \`labyrinth_secret_effects\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+buff_buff_definitions_row BIGINT UNSIGNED NULL KEY,
+buff_values TEXT NULL,
+ot_file TEXT NULL);
+
+CREATE TABLE \`labyrinth_secret_locations\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`labyrinth_secrets\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+id2 TEXT NULL,
+data0 TEXT NULL,
+unknown5 INT NULL,
+unknown6 INT NULL,
+unknown13 INT NULL,
+flag0 BIT(8) NULL,
+flag1 BIT(8) NULL,
+unknown0 INT NULL,
+flag2 BIT(8) NULL,
+flag3 BIT(8) NULL,
+flag4 BIT(8) NULL,
+name TEXT NULL,
+achievement_items_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`labyrinth_secrets_labyrinth_secret_effects0\` (labyrinth_secrets_row BIGINT UNSIGNED,
+labyrinth_secret_effects_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_secrets_labyrinth_secret_effects1\` (labyrinth_secrets_row BIGINT UNSIGNED,
+labyrinth_secret_effects_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_secrets_labyrinth_secret_effects2\` (labyrinth_secrets_row BIGINT UNSIGNED,
+labyrinth_secret_effects_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_secrets_labyrinth_secret_effects3\` (labyrinth_secrets_row BIGINT UNSIGNED,
+labyrinth_secret_effects_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_section\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL,
+flag2 BOOLEAN NULL,
+0_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`labyrinth_section_layout\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+labyrinth_section_row BIGINT UNSIGNED NULL KEY,
+unknown3 INT NULL,
+labyrinth_secrets0_row BIGINT UNSIGNED NULL KEY,
+labyrinth_secrets1_row BIGINT UNSIGNED NULL KEY,
+labyrinth_areas_row BIGINT UNSIGNED NULL KEY,
+flags1 INT NULL,
+flags2 INT NULL,
+labyrinth_node_overrides_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`labyrinth_section_layout_labyrinth_section_layout\` (labyrinth_section_layout_row BIGINT UNSIGNED,
+labyrinth_section_layout_row BIGINT UNSIGNED);
+
+CREATE TABLE \`labyrinth_trinkets\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+labyrinth_secrets_row BIGINT UNSIGNED NULL KEY,
+buff_buff_definitions_row BIGINT UNSIGNED NULL KEY,
+buff_values TEXT NULL);
+
+CREATE TABLE \`league_category\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`league_flag\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+image TEXT NULL);
+
+CREATE TABLE \`league_quest_flags\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`league_trophy\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`map_connections\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+map_pins0_row BIGINT UNSIGNED NULL KEY,
+map_pins1_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL,
+restricted_area_text TEXT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL);
+
+CREATE TABLE \`map_device_recipes\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown5 BIGINT UNSIGNED NULL,
+unknown7 INT NULL);
+
+CREATE TABLE \`map_device_recipes_base_item_types\` (map_device_recipes_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`map_device_recipes_world_areas\` (map_device_recipes_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`map_inhabitants\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+stats_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`map_pins\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+position_x INT NULL,
+position_y INT NULL,
+normal_waypoint_world_areas_row BIGINT UNSIGNED NULL KEY,
+name TEXT NULL,
+notes TEXT NULL,
+data1 TEXT NULL,
+act INT NULL,
+cruel_waypoint_world_areas_row BIGINT UNSIGNED NULL KEY,
+merciless_waypoint_world_areas_row BIGINT UNSIGNED NULL KEY,
+index3 TEXT NULL,
+unknown1 INT NULL,
+unknown3 TEXT NULL);
+
+CREATE TABLE \`map_pins_normal_world_areas\` (map_pins_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`map_pins_merciless_world_areas\` (map_pins_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`map_pins_cruel_world_areas\` (map_pins_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`map_pins_world_areas\` (map_pins_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`map_stash_tab_layout\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`maps\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+regular_world_areas_row BIGINT UNSIGNED NULL KEY,
+unique_world_areas_row BIGINT UNSIGNED NULL KEY,
+map_upgrade_base_item_types_row BIGINT UNSIGNED NULL KEY,
+2_row BIGINT UNSIGNED NULL KEY,
+regular_guild_character TEXT NULL,
+unique_guild_character TEXT NULL,
+tier INT NULL,
+shaped_base_maps_row BIGINT UNSIGNED NULL KEY,
+shaped_area_level INT NULL,
+maps1_row BIGINT UNSIGNED NULL KEY,
+maps2_row BIGINT UNSIGNED NULL KEY,
+maps3_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`maps_monster_packs\` (maps_row BIGINT UNSIGNED,
+monster_packs_row BIGINT UNSIGNED);
+
+CREATE TABLE \`maps_higher_tier_maps_base_item_types\` (maps_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`microtransaction_character_portrait_variations\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`microtransaction_fireworks_variations\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+ao_file TEXT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`microtransaction_portal_variations\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+ao_file TEXT NULL,
+map_ao_file TEXT NULL);
+
+CREATE TABLE \`microtransaction_social_frame_variations\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`minimap_icons\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL,
+flag2 BOOLEAN NULL);
+
+CREATE TABLE \`misc_animated\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+ao_file TEXT NULL,
+unknown1 INT NULL);
+
+CREATE TABLE \`misc_animated_preload_groups\` (misc_animated_row BIGINT UNSIGNED,
+preload_groups_row BIGINT UNSIGNED);
+
+CREATE TABLE \`misc_beams\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+unknown3 INT NULL,
+unknown1 INT NULL);
+
+CREATE TABLE \`misc_beams_preload_groups\` (misc_beams_row BIGINT UNSIGNED,
+preload_groups_row BIGINT UNSIGNED);
+
+CREATE TABLE \`misc_objects\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+effect_virtual_path TEXT NULL,
+unknown_unique INT NULL,
+unknown1 INT NULL);
+
+CREATE TABLE \`misc_objects_preload_groups\` (misc_objects_row BIGINT UNSIGNED,
+preload_groups_row BIGINT UNSIGNED);
+
+CREATE TABLE \`mission_tile_map\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+npc_master_row BIGINT UNSIGNED NULL KEY,
+mission_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`mission_tile_map_world_areas\` (mission_tile_map_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`mission_transition_tiles\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+tdt_file TEXT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL);
+
+CREATE TABLE \`mod_aura_flags\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`mod_domains\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`mod_family\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`mod_generation_type\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`mod_sell_price_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL);
+
+CREATE TABLE \`mod_sell_prices\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+mod_sell_price_types_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`mod_sell_prices_base_item_types\` (mod_sell_prices_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`mod_type\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+name TEXT NULL);
+
+CREATE TABLE \`mod_type_mod_sell_prices\` (mod_type_row BIGINT UNSIGNED,
+mod_sell_prices_row BIGINT UNSIGNED);
+
+CREATE TABLE \`mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown0 INT NULL,
+mod_type_row BIGINT UNSIGNED NULL KEY,
+level INT NULL,
+stats1_row BIGINT UNSIGNED NULL KEY,
+stats2_row BIGINT UNSIGNED NULL KEY,
+stats3_row BIGINT UNSIGNED NULL KEY,
+stats4_row BIGINT UNSIGNED NULL KEY,
+domain INT NULL,
+name TEXT NULL,
+generation_type INT NULL,
+correct_group TEXT NULL,
+stat1_min INT NULL,
+stat1_max INT NULL,
+stat2_min INT NULL,
+stat2_max INT NULL,
+stat3_min INT NULL,
+stat3_max INT NULL,
+stat4_min INT NULL,
+stat4_max INT NULL,
+buff_definitions_row BIGINT UNSIGNED NULL KEY,
+buff_value INT NULL,
+granted_effects_per_level_row BIGINT UNSIGNED NULL KEY,
+data1 TEXT NULL,
+data2 TEXT NULL,
+monster_metadata TEXT NULL,
+data3 TEXT NULL,
+data4 TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+stat5_min INT NULL,
+stat5_max INT NULL,
+stats5_row BIGINT UNSIGNED NULL KEY,
+achievement_items_row BIGINT UNSIGNED NULL KEY,
+data5 TEXT NULL,
+is_essence_only_modifier BOOLEAN NULL);
+
+CREATE TABLE \`mods_spawn_weight_tags\` (mods_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED,
+values INT UNSIGNED);
+
+CREATE TABLE \`mods_tags\` (mods_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`mods0\` (mods_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`mods_generation_weight_tags\` (mods_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED,
+values INT);
+
+CREATE TABLE \`monster_additional_monster_drops\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+monster_varieties_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`monster_additional_monster_drops0\` (monster_additional_monster_drops_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_armours\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+art_string_sm_file TEXT NULL);
+
+CREATE TABLE \`monster_behavior\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`monster_flee_conditions\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`monster_group_entries\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+monster_group_names_id INT NULL);
+
+CREATE TABLE \`monster_group_names\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`monster_map_boss_difficulty\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+map_level INT NULL,
+stat1_value INT NULL,
+stat2_value INT NULL,
+stats1_row BIGINT UNSIGNED NULL KEY,
+stats2_row BIGINT UNSIGNED NULL KEY,
+stats3_row BIGINT UNSIGNED NULL KEY,
+stat3_value INT NULL,
+stats4_row BIGINT UNSIGNED NULL KEY,
+stat4_value INT NULL);
+
+CREATE TABLE \`monster_map_difficulty\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+map_level INT NULL,
+stat1_value INT NULL,
+stat2_value INT NULL,
+stats1_row BIGINT UNSIGNED NULL KEY,
+stats2_row BIGINT UNSIGNED NULL KEY,
+stats3_row BIGINT UNSIGNED NULL KEY,
+stat3_value INT NULL,
+stats4_row BIGINT UNSIGNED NULL KEY,
+stat4_value INT NULL);
+
+CREATE TABLE \`monster_pack_entries\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_packs_row BIGINT UNSIGNED NULL KEY,
+flag0 BOOLEAN NULL,
+unknown1 INT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`monster_packs\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL,
+boss_monster_spawn_chance INT NULL,
+boss_monster_count INT NULL,
+flag0 BOOLEAN NULL,
+unknown11 INT NULL,
+data1 TEXT NULL);
+
+CREATE TABLE \`monster_packs_world_areas\` (monster_packs_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_packs_boss_monster_monster_varieties\` (monster_packs_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_packs_tags\` (monster_packs_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_resistances\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+fire_normal INT NULL,
+cold_normal INT NULL,
+lightning_normal INT NULL,
+chaos_normal INT NULL,
+fire_cruel INT NULL,
+cold_cruel INT NULL,
+lightning_cruel INT NULL,
+chaos_cruel INT NULL,
+fire_merciless INT NULL,
+cold_merciless INT NULL,
+lightning_merciless INT NULL,
+chaos_merciless INT NULL);
+
+CREATE TABLE \`monster_scaling_by_level\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`monster_segments\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+shapes TEXT NULL);
+
+CREATE TABLE \`monster_size\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`monster_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 INT NULL,
+is_summoned BOOLEAN NULL,
+armour INT NULL,
+evasion INT NULL,
+energy_shield_from_life INT NULL,
+damage_spread INT NULL,
+monster_resistances_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`monster_types_tags\` (monster_types_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_types_row BIGINT UNSIGNED NULL KEY,
+unknown0 INT NULL,
+object_size INT NULL,
+minimum_attack_distance INT NULL,
+maximum_attack_distance INT NULL,
+act_file TEXT NULL,
+ao_file TEXT NULL,
+base_monster_type_index TEXT NULL,
+unknown1 INT NULL,
+unknown_index0 TEXT NULL,
+unknown_index1 TEXT NULL,
+model_size_multiplier INT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL,
+unknown6 INT NULL,
+experience_multiplier INT NULL,
+unknown7 TEXT NULL,
+unknown8 INT NULL,
+unknown9 INT NULL,
+unknown10 INT NULL,
+critical_strike_chance INT NULL,
+unknown11 INT NULL,
+ais_file TEXT NULL,
+stance TEXT NULL,
+2_row BIGINT UNSIGNED NULL KEY,
+name TEXT NULL,
+damage_multiplier INT NULL,
+life_multiplier INT NULL,
+attack_speed INT NULL,
+back_item_visual_identity_row BIGINT UNSIGNED NULL KEY,
+main_hand_item_classes_row BIGINT UNSIGNED NULL KEY,
+off_hand_item_classes_row BIGINT UNSIGNED NULL KEY,
+1_row BIGINT UNSIGNED NULL KEY,
+helmet_item_visual_identity_row BIGINT UNSIGNED NULL KEY,
+unknown13 INT NULL,
+unknown14 BOOLEAN NULL,
+unknown15 INT NULL,
+unknown16 INT NULL,
+unknown17 INT NULL,
+unknown18 INT NULL,
+unknown19 INT NULL,
+unknown20 INT NULL,
+unknown21 INT NULL,
+unknown22 BIT(8) NULL,
+unknown23 TEXT NULL,
+flashback_achievement_items_row BIGINT UNSIGNED NULL KEY,
+monster_segments_row BIGINT UNSIGNED NULL KEY,
+monster_armours_row BIGINT UNSIGNED NULL KEY,
+achievement_items_row BIGINT UNSIGNED NULL KEY,
+achievement_items4_row BIGINT UNSIGNED NULL KEY,
+3_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`monster_varieties_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_tags\` (monster_varieties_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_granted_effects\` (monster_varieties_row BIGINT UNSIGNED,
+granted_effects_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_mods2\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_weapon1_item_visual_identity\` (monster_varieties_row BIGINT UNSIGNED,
+item_visual_identity_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_weapon2_item_visual_identity\` (monster_varieties_row BIGINT UNSIGNED,
+item_visual_identity_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_special_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_achievement_items2\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_normal_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_merciless_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_cruel_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_normal_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_cruel_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_merciless_mods\` (monster_varieties_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_kill_rare_in_normal_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_kill_rare_in_cruel_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_kill_rare_in_merciless_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`monster_varieties_count_kills_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`music\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+sound_file TEXT NULL);
+
+CREATE TABLE \`mystery_pack\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`mystery_pack_items\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`npc_audio\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 TEXT NULL,
+unknown2 TEXT NULL);
+
+CREATE TABLE \`npc_master\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+np_cs_id BIGINT UNSIGNED NULL KEY,
+is_str_master BOOLEAN NULL,
+is_dex_master BOOLEAN NULL,
+is_int_master BOOLEAN NULL,
+hideout TEXT NULL,
+unknown7 INT NULL,
+achievement_items_row BIGINT UNSIGNED NULL KEY,
+2_row BIGINT UNSIGNED NULL KEY,
+talisman_achievement_items_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`npc_master0\` (npc_master_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`npc_master_signature_mod_spawn_weight_tags\` (npc_master_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`npc_master_unknown_weight_tags\` (npc_master_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`npc_master_master_level5_achievement_items\` (npc_master_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`npc_master_experience_per_level\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+npc_master_row BIGINT UNSIGNED NULL KEY,
+master_level INT NULL,
+experience INT NULL,
+item_level INT NULL,
+unknown5 INT NULL,
+unknown6 INT NULL);
+
+CREATE TABLE \`npc_shop\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 INT NULL,
+unknown10 INT NULL,
+unknown11 TEXT NULL);
+
+CREATE TABLE \`npc_shop_sold_item_tags\` (npc_shop_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`npc_shop_data0_0\` (npc_shop_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`npc_talk\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+npc_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL,
+dialogue_option TEXT NULL,
+data0 TEXT NULL,
+data1 TEXT NULL,
+data2 TEXT NULL,
+script TEXT NULL,
+unknown11 INT NULL,
+unknown12 INT NULL,
+quest_row BIGINT UNSIGNED NULL KEY,
+unknown15 INT NULL,
+script2 TEXT NULL,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL,
+data5 TEXT NULL,
+data6 TEXT NULL,
+unknown25 BIT(8) NULL,
+flag2 BOOLEAN NULL,
+unknown25c INT NULL,
+unknown26 INT NULL,
+unknown27 SMALLINT NULL,
+data7 TEXT NULL,
+unknown30 INT NULL,
+flag3 BOOLEAN NULL,
+2_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`npc_talk0\` (npc_talk_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`npc_talk_npc_text_audio\` (npc_talk_row BIGINT UNSIGNED,
+npc_text_audio_row BIGINT UNSIGNED);
+
+CREATE TABLE \`npc_talk_category\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`npc_text_audio\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+characters_row BIGINT UNSIGNED NULL KEY,
+text TEXT NULL,
+mono_audio_file TEXT NULL,
+stereo_audio_file TEXT NULL,
+has_stereo BOOLEAN NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`np_cs\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+name TEXT NULL,
+metadata TEXT NULL,
+unknown5 INT NULL,
+npc_master_row BIGINT UNSIGNED NULL KEY,
+short_name TEXT NULL,
+unknown7 INT NULL,
+unknown8 INT NULL,
+npc_shop_row BIGINT UNSIGNED NULL KEY,
+npc_audio1_row BIGINT UNSIGNED NULL KEY,
+npc_audio2_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`normal_difficulty_master_weights\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+master_id INT NULL,
+unknown1 INT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL);
+
+CREATE TABLE \`notifications\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown0 BOOLEAN NULL,
+unknown1 BOOLEAN NULL,
+message TEXT NULL,
+unknown2 TEXT NULL,
+unknown3 BOOLEAN NULL,
+unknown4 INT NULL);
+
+CREATE TABLE \`passive_jewel_slots\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+passive_skills_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`passive_skills\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+icon_dds_file TEXT NULL,
+stat1_value INT NULL,
+stat2_value INT NULL,
+stat3_value INT NULL,
+stat4_value INT NULL,
+passive_skill_graph_id INT NULL,
+name TEXT NULL,
+is_keystone BOOLEAN NULL,
+is_notable BOOLEAN NULL,
+flavour_text TEXT NULL,
+is_just_icon BOOLEAN NULL,
+achievement_items_row BIGINT UNSIGNED NULL KEY,
+is_jewel_socket BOOLEAN NULL,
+granted_buff_buff_definitions_row BIGINT UNSIGNED NULL KEY,
+2_row BIGINT UNSIGNED NULL KEY,
+buff_related_unknown0 INT NULL,
+buff_related_unknown1 TEXT NULL,
+ascendancy_row BIGINT UNSIGNED NULL KEY,
+is_ascendancy_starting_node BOOLEAN NULL,
+skill_points_granted INT NULL,
+is_multiple_choice BOOLEAN NULL,
+is_multiple_choice_option BOOLEAN NULL);
+
+CREATE TABLE \`passive_skills_stats\` (passive_skills_row BIGINT UNSIGNED,
+stats_row BIGINT UNSIGNED);
+
+CREATE TABLE \`passive_skills_characters\` (passive_skills_row BIGINT UNSIGNED,
+characters_row BIGINT UNSIGNED);
+
+CREATE TABLE \`passive_skills_reminder_client_strings\` (passive_skills_row BIGINT UNSIGNED,
+client_strings_row BIGINT UNSIGNED);
+
+CREATE TABLE \`path_of_endurance\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unknown0 INT NULL,
+unknown1 INT NULL,
+unknown2 INT NULL,
+unknown5 INT NULL,
+unknown6 INT NULL,
+data0 TEXT NULL);
+
+CREATE TABLE \`path_of_endurance_mods\` (path_of_endurance_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`path_of_endurance0\` (path_of_endurance_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`per_level_values\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`perandus_bosses\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+min_level INT NULL,
+max_level INT NULL,
+spawn_weight INT NULL);
+
+CREATE TABLE \`perandus_chests\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+chests_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL,
+unknown4 INT NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`perandus_daemons\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown1 INT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 TEXT NULL,
+flag0 BOOLEAN NULL,
+unknown7 TEXT NULL);
+
+CREATE TABLE \`perandus_guards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+unknown2 INT NULL,
+unknown3 TEXT NULL,
+unknown5 INT NULL);
+
+CREATE TABLE \`perandus_guards_monster_packs\` (perandus_guards_row BIGINT UNSIGNED,
+monster_packs_row BIGINT UNSIGNED);
+
+CREATE TABLE \`pet\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown1 INT NULL);
+
+CREATE TABLE \`preload_groups\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL);
+
+CREATE TABLE \`preload_priorities\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`projectile_variations\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+projectile_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`projectiles\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+ao_file TEXT NULL,
+loop_animation_id TEXT NULL,
+impact_animation_id TEXT NULL,
+projectile_speed INT NULL,
+index4 TEXT NULL,
+flag0 BOOLEAN NULL,
+unknown6 INT NULL,
+flag1 BOOLEAN NULL,
+flag2 BOOLEAN NULL);
+
+CREATE TABLE \`prophecies\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+prediction_text TEXT NULL,
+unknown_unique INT NULL,
+name TEXT NULL,
+flavour_text TEXT NULL,
+ogg_file TEXT NULL,
+prophecy_chain_row BIGINT UNSIGNED NULL KEY,
+prophecy_chain_position INT NULL,
+is_enabled BOOLEAN NULL,
+seal_cost_normal INT NULL,
+seal_cost_cruel INT NULL,
+seal_cost_merciless INT NULL,
+flag1 BOOLEAN NULL);
+
+CREATE TABLE \`prophecies_quest_tracker_client_strings\` (prophecies_row BIGINT UNSIGNED,
+client_strings_row BIGINT UNSIGNED);
+
+CREATE TABLE \`prophecy_chain\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 INT NULL,
+unknown3 TEXT NULL,
+unknown2 INT NULL,
+unknown4 TEXT NULL);
+
+CREATE TABLE \`prophecy_type\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown_unique INT NULL);
+
+CREATE TABLE \`old_map_stash_tab_layout\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`orientations\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`pvp_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`quest\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+act INT NULL,
+name TEXT NULL,
+quest_state INT NULL,
+icon_dds_file TEXT NULL,
+quest_id INT NULL,
+flag0 BOOLEAN NULL,
+unknown6 BIT(16) NULL,
+is_quest BOOLEAN NULL,
+unknown8 BIT(8) NULL,
+unknown9 BIT(8) NULL,
+flag1 BOOLEAN NULL,
+unknown11 INT NULL,
+flag2 BOOLEAN NULL,
+flag3 BOOLEAN NULL);
+
+CREATE TABLE \`quest_achievements\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+achievement_items_row BIGINT UNSIGNED NULL KEY,
+quest_state INT NULL,
+is_hardcore_achievement BOOLEAN NULL,
+is_standard_achievement BOOLEAN NULL,
+difficulties_row BIGINT UNSIGNED NULL KEY,
+unknown1 INT NULL);
+
+CREATE TABLE \`quest_flags\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`quest_rewards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+quest_row BIGINT UNSIGNED NULL KEY,
+difficulty INT NULL,
+unknown3 INT NULL,
+characters_row BIGINT UNSIGNED NULL KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+item_level INT NULL,
+rarity INT NULL,
+unknown9 INT NULL,
+socket_gems TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+1_row BIGINT UNSIGNED NULL KEY,
+unknown1 INT NULL,
+unknown2 BOOLEAN NULL);
+
+CREATE TABLE \`quest_states\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+quest_row BIGINT UNSIGNED NULL KEY,
+unknown0 INT NULL,
+quest_states TEXT NULL,
+data1 TEXT NULL,
+text TEXT NULL,
+flag0 BOOLEAN NULL,
+message TEXT NULL,
+unknown1 INT NULL,
+map_pins_texts TEXT NULL,
+quest_finished_ogg_file TEXT NULL,
+unknown2 BOOLEAN NULL,
+unknown3 TEXT NULL);
+
+CREATE TABLE \`quest_states_map_pins1\` (quest_states_row BIGINT UNSIGNED,
+map_pins_row BIGINT UNSIGNED);
+
+CREATE TABLE \`quest_states_map_pins2\` (quest_states_row BIGINT UNSIGNED,
+map_pins_row BIGINT UNSIGNED);
+
+CREATE TABLE \`quest_states2\` (quest_states_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`quest_static_rewards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unknown0 INT NULL,
+unknown1 INT NULL,
+stats_row BIGINT UNSIGNED NULL KEY,
+stat_value INT NULL,
+difficulty_row BIGINT UNSIGNED NULL KEY,
+quest_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL);
+
+CREATE TABLE \`quest_vendor_rewards\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id INT NULL,
+npc_row BIGINT UNSIGNED NULL KEY,
+quest_state INT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`quest_vendor_rewards_characters\` (quest_vendor_rewards_row BIGINT UNSIGNED,
+characters_row BIGINT UNSIGNED);
+
+CREATE TABLE \`quest_vendor_rewards_base_item_types\` (quest_vendor_rewards_row BIGINT UNSIGNED,
+base_item_types_row BIGINT UNSIGNED);
+
+CREATE TABLE \`race_areas\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+races_row BIGINT UNSIGNED NULL KEY,
+world_areas_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`race_areas_mods\` (race_areas_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`race_areas0\` (race_areas_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`race_areas1\` (race_areas_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`race_times\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+races_row BIGINT UNSIGNED NULL KEY,
+index INT NULL,
+start_unix_time INT NULL,
+end_unix_time INT NULL);
+
+CREATE TABLE \`races\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+data0 TEXT NULL,
+data1 TEXT NULL,
+unknown1 INT NULL,
+flag0 BOOLEAN NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL);
+
+CREATE TABLE \`random_unique_monsters\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unknown0 BIGINT NULL,
+data0 TEXT NULL);
+
+CREATE TABLE \`rarity\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`realms\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+name TEXT NULL,
+server TEXT NULL,
+is_enabled BOOLEAN NULL,
+server2 TEXT NULL,
+short_name TEXT NULL,
+data0 TEXT NULL,
+unknown0 INT NULL,
+unknown1 INT NULL);
+
+CREATE TABLE \`relative_importance_constants\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`rogue_exiles\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`runic_circles\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unknown1 INT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL);
+
+CREATE TABLE \`shield_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+block INT NULL);
+
+CREATE TABLE \`shop_category\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+client_text TEXT NULL,
+client_jpg_file TEXT NULL,
+website_text TEXT NULL,
+website_jpg_file TEXT NULL,
+unknown5 INT NULL);
+
+CREATE TABLE \`shop_country\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+country_two_letter_code TEXT NULL,
+country TEXT NULL,
+shop_currency_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`shop_currency\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+currency_code TEXT NULL,
+currency_sign TEXT NULL);
+
+CREATE TABLE \`shop_item\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+name TEXT NULL,
+description TEXT NULL,
+small_art_jpg_file TEXT NULL,
+youtube_video TEXT NULL,
+unknown11 TEXT NULL,
+large_art_jpg_file TEXT NULL,
+description2 TEXT NULL,
+daily_deal_art_jpg_file TEXT NULL,
+unknown15 INT NULL,
+flag0 BOOLEAN NULL,
+is_tencent_item BOOLEAN NULL,
+is_tradeable BOOLEAN NULL);
+
+CREATE TABLE \`shop_item_package_shop_item\` (shop_item_row BIGINT UNSIGNED,
+shop_item_row BIGINT UNSIGNED);
+
+CREATE TABLE \`shop_item_shop_category\` (shop_item_row BIGINT UNSIGNED,
+shop_category_row BIGINT UNSIGNED);
+
+CREATE TABLE \`shop_item_price\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+shop_item_row BIGINT UNSIGNED NULL KEY,
+shop_region_row BIGINT UNSIGNED NULL KEY,
+price INT NULL);
+
+CREATE TABLE \`shop_payment_package\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+text TEXT NULL,
+coins INT NULL,
+available_flag BOOLEAN NULL,
+unknown0 INT NULL,
+unknown1 INT NULL,
+flag0 BOOLEAN NULL,
+contains_beta_row BIGINT UNSIGNED NULL KEY,
+data0 TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+background_image TEXT NULL,
+unknown5 TEXT NULL,
+flag1 BOOLEAN NULL,
+upgrade_shop_payment_package_row BIGINT UNSIGNED NULL KEY,
+physical_item_points INT NULL);
+
+CREATE TABLE \`shop_payment_package_items\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id INT NULL,
+shop_payment_package_row BIGINT UNSIGNED NULL KEY,
+shop_item_row BIGINT UNSIGNED NULL KEY,
+unknown0 TEXT NULL,
+shop_token_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`shop_payment_package_price\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+shop_payment_package_row BIGINT UNSIGNED NULL KEY,
+shop_country_row BIGINT UNSIGNED NULL KEY,
+price INT NULL);
+
+CREATE TABLE \`shop_region\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL);
+
+CREATE TABLE \`shop_token\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+type_id TEXT NULL,
+description TEXT NULL);
+
+CREATE TABLE \`shrine_buffs\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+buff_stat_values TEXT NULL,
+buff_definitions_row BIGINT UNSIGNED NULL KEY,
+0_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`shrine_sounds\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+stereo_sound_file TEXT NULL,
+mono_sound_file TEXT NULL);
+
+CREATE TABLE \`shrines\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown0 INT NULL,
+name TEXT NULL,
+charges_shared BOOLEAN NULL,
+player_shrine_buffs_row BIGINT UNSIGNED NULL KEY,
+unknown4 INT NULL,
+unknown5 INT NULL,
+description TEXT NULL,
+monster_shrine_buffs_row BIGINT UNSIGNED NULL KEY,
+summon_monster_monster_varieties_row BIGINT UNSIGNED NULL KEY,
+summon_player_monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown10 INT NULL,
+unknown11 INT NULL,
+shrine_sounds_row BIGINT UNSIGNED NULL KEY,
+unknown14 BOOLEAN NULL,
+is_pvp_only BOOLEAN NULL,
+unknown17 BOOLEAN NULL,
+is_lesser_shrine BOOLEAN NULL);
+
+CREATE TABLE \`shrines_achievement_items\` (shrines_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`skill_gems\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+granted_effects_row BIGINT UNSIGNED NULL KEY,
+str INT NULL,
+dex INT NULL,
+int INT NULL,
+vaal_variant_base_item_types_row BIGINT UNSIGNED NULL KEY,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`skill_gems_gem_tags\` (skill_gems_row BIGINT UNSIGNED,
+gem_tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`skill_totem_variations\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+skill_totems_row BIGINT UNSIGNED NULL KEY,
+totem_skin_id INT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`skill_totems\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`sound_effects\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+sound_file TEXT NULL,
+sound_file_2_d TEXT NULL,
+unknown3 BOOLEAN NULL);
+
+CREATE TABLE \`stat_description_functions\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`stats\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+flag0 BOOLEAN NULL,
+is_local BOOLEAN NULL,
+is_weapon_local BOOLEAN NULL,
+unknown2 INT NULL,
+flag3 BOOLEAN NULL,
+text TEXT NULL,
+flag5 BOOLEAN NULL,
+flag6 BOOLEAN NULL,
+main_hand_alias_stats_row BIGINT UNSIGNED NULL KEY,
+off_hand_alias_stats_row BIGINT UNSIGNED NULL KEY,
+flag7 BOOLEAN NULL,
+unknown3 INT NULL,
+unknown0 TEXT NULL);
+
+CREATE TABLE \`stat_semantics\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`str_dex_int_mission_extra_requirement\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+time_limit INT NULL,
+has_time_bonus_per_kill BOOLEAN NULL,
+has_time_bonus_per_object_tagged BOOLEAN NULL,
+has_limited_portals BOOLEAN NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY,
+time_limit_bonus_from_objective INT NULL,
+object_count INT NULL);
+
+CREATE TABLE \`str_dex_int_mission_maps\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`str_dex_int_mission_maps_map_boss_monster_varieties\` (str_dex_int_mission_maps_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_int_mission_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+is_unique_map BOOLEAN NULL);
+
+CREATE TABLE \`str_dex_int_mission_mods_mods\` (str_dex_int_mission_mods_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_int_mission_unique_maps\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+0_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+world_areas_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`str_dex_int_mission_unique_maps_mods\` (str_dex_int_mission_unique_maps_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_int_mission_unique_maps_map_boss_monster_varieties\` (str_dex_int_mission_unique_maps_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_int_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+has_objective_boss_kill BOOLEAN NULL,
+has_objective_full_clear BOOLEAN NULL,
+unknown4 INT NULL,
+unknown5 INT NULL,
+has_objective_kill_exiles BOOLEAN NULL,
+has_objective_find_unique BOOLEAN NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+has_objective_complete_master_mission BOOLEAN NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY,
+monster_packs_row BIGINT UNSIGNED NULL KEY,
+object_count_required INT NULL,
+object_count_total INT NULL);
+
+CREATE TABLE \`str_dex_int_missions_extra_mods\` (str_dex_int_missions_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_int_missions_achievement_items\` (str_dex_int_missions_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_mission_archetypes\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`str_dex_mission_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`str_dex_mission_mods_mods\` (str_dex_mission_mods_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_mission_special_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+0_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`str_dex_mission_special_mods_mods\` (str_dex_mission_special_mods_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+time_limit INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+dummy_monster_varieties_row BIGINT UNSIGNED NULL KEY,
+dummy_count INT NULL,
+dummy_spawn_timer INT NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY,
+unknown12 INT NULL);
+
+CREATE TABLE \`str_dex_missions_allies_monster_varieties\` (str_dex_missions_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_missions_mods\` (str_dex_missions_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_dex_missions_traps_monster_varieties\` (str_dex_missions_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_int_mission_monster_waves\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_packs_row BIGINT UNSIGNED NULL KEY,
+wave_count INT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+pack_timer INT NULL,
+time_limit INT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+unknown13 TEXT NULL,
+unique_count INT NULL);
+
+CREATE TABLE \`str_int_mission_monster_waves_unique_monster_varieties\` (str_int_mission_monster_waves_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_int_mission_relic_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL);
+
+CREATE TABLE \`str_int_mission_relic_mods_mods\` (str_int_mission_relic_mods_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_int_mission_relic_patterns\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+ally_relic_count INT NULL,
+unknown INT NULL,
+is_enemy_relic BOOLEAN NULL,
+is_ally_relic BOOLEAN NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+enemy_relic_count INT NULL);
+
+CREATE TABLE \`str_int_mission_relic_patterns_relic_mods\` (str_int_mission_relic_patterns_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_int_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY,
+f9 INT NULL,
+has_time_limit BOOLEAN NULL,
+time_limit INT NULL,
+is_destroy_relic1 BOOLEAN NULL,
+is_destroy_relic2 BOOLEAN NULL,
+feed_required INT NULL,
+f12 INT NULL);
+
+CREATE TABLE \`str_int_missions_relic_mods\` (str_int_missions_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_int_missions_achievement_items\` (str_int_missions_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_map_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+mods_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`str_mission_bosses\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`str_mission_map_mod_numbers\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+unknown0 INT NULL,
+unknown1 INT NULL);
+
+CREATE TABLE \`str_mission_spirit_effects\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+data1 TEXT NULL,
+ground_effect_unknown0 INT NULL,
+ground_effect_unknown1 INT NULL,
+3_row BIGINT UNSIGNED NULL KEY,
+b1 BOOLEAN NULL,
+b2 BOOLEAN NULL);
+
+CREATE TABLE \`str_mission_spirit_effects_summon_monster_varieties\` (str_mission_spirit_effects_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_mission_spirit_effects_ground_effect_monster_varieties\` (str_mission_spirit_effects_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`str_mission_spirit_secondary_effects\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+f7 INT NULL,
+f8 INT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+2_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`str_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_weight INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+npc_talk_row BIGINT UNSIGNED NULL KEY,
+f7 INT NULL,
+f10 INT NULL,
+f11 INT NULL,
+f12 INT NULL,
+f13 INT NULL,
+b1 BOOLEAN NULL,
+b2 BOOLEAN NULL);
+
+CREATE TABLE \`str_missions_mods\` (str_missions_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`strongboxes\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+chests_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+unknown1 INT NULL,
+is_cartographer_box BOOLEAN NULL);
+
+CREATE TABLE \`summoned_specific_barrels\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+chests_row BIGINT UNSIGNED NULL KEY,
+1_row BIGINT UNSIGNED NULL KEY,
+unknown3 INT NULL,
+2_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`summoned_specific_monsters\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown3 INT NULL,
+0_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`summoned_specific_monsters_on_death\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL,
+1_row BIGINT UNSIGNED NULL KEY,
+unknown4 INT NULL,
+unknown7 BIT(8) NULL);
+
+CREATE TABLE \`supporter_pack_sets\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+format_title TEXT NULL,
+background TEXT NULL,
+time0 TEXT NULL,
+time1 TEXT NULL);
+
+CREATE TABLE \`tags\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown0 INT UNSIGNED NULL);
+
+CREATE TABLE \`talisman_monster_mods\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unknown1 INT NULL,
+unknown2 INT NULL,
+0_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`talisman_packs\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown8 INT NULL,
+unknown9 INT NULL,
+unknown10 INT NULL,
+unknown11 INT NULL,
+monster_packs_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`talisman_packs_monster_packs\` (talisman_packs_row BIGINT UNSIGNED,
+monster_packs_row BIGINT UNSIGNED);
+
+CREATE TABLE \`talismans\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+spawn_weight INT NULL,
+mods_row BIGINT UNSIGNED NULL KEY,
+tier INT NULL,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+1_row BIGINT UNSIGNED NULL KEY,
+unknown11 INT NULL);
+
+CREATE TABLE \`terrain_plugins\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown_unique INT NULL);
+
+CREATE TABLE \`tips\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+text TEXT NULL);
+
+CREATE TABLE \`topologies\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+dgr_file TEXT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+environments_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`torment_spirits\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+monster_varieties_row BIGINT UNSIGNED NULL KEY,
+min_zone_level INT NULL,
+max_zone_level INT NULL,
+spawn_weight INT NULL,
+summoned_monster_monster_varieties_row BIGINT UNSIGNED NULL KEY,
+unknown13 INT NULL);
+
+CREATE TABLE \`torment_spirits_spirit_mods\` (torment_spirits_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`torment_spirits_touched_mods\` (torment_spirits_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`torment_spirits_possessed_mods\` (torment_spirits_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`torment_spirits_mods0\` (torment_spirits_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`torment_spirits_mods1\` (torment_spirits_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`trigger_spawners\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+data0 TEXT NULL,
+unknown0 INT NULL,
+data1 TEXT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`unique_chests\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+chests_row BIGINT UNSIGNED NULL KEY,
+words_row BIGINT UNSIGNED NULL KEY,
+min_level INT NULL,
+spawn_weight INT NULL,
+data1 TEXT NULL,
+ao_file TEXT NULL,
+flag0 BOOLEAN NULL,
+data2 TEXT NULL,
+0_row BIGINT UNSIGNED NULL KEY,
+1_row BIGINT UNSIGNED NULL KEY);
+
+CREATE TABLE \`unique_chests_mods\` (unique_chests_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`unique_jewel_limits\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+unique_items_row BIGINT UNSIGNED NULL KEY,
+limit INT NULL);
+
+CREATE TABLE \`unique_set_names\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`unique_sets\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown0 INT NULL,
+words_row BIGINT UNSIGNED NULL KEY,
+unknown2 INT NULL,
+flag0 BOOLEAN NULL);
+
+CREATE TABLE \`vote_state\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+text TEXT NULL);
+
+CREATE TABLE \`vote_type\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+text TEXT NULL,
+accept_text TEXT NULL,
+reject_text TEXT NULL,
+unknown0 INT NULL);
+
+CREATE TABLE \`warbands_graph\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+connections TEXT NULL);
+
+CREATE TABLE \`warbands_map_graph\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+world_areas_row BIGINT UNSIGNED NULL KEY,
+connections TEXT NULL);
+
+CREATE TABLE \`warbands_pack_monsters\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 BIGINT NULL,
+unknown3 INT NULL,
+tier1_name TEXT NULL,
+tier2_name TEXT NULL,
+tier3_name TEXT NULL,
+tier4_name TEXT NULL,
+tier1_art TEXT NULL,
+tier2_art TEXT NULL,
+tier3_art TEXT NULL,
+tier4_art TEXT NULL);
+
+CREATE TABLE \`warbands_pack_monsters_tier4_monster_varieties\` (warbands_pack_monsters_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`warbands_pack_monsters_tier3_monster_varieties\` (warbands_pack_monsters_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`warbands_pack_monsters_tier2_monster_varieties\` (warbands_pack_monsters_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`warbands_pack_monsters_tier1_monster_varieties\` (warbands_pack_monsters_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`warbands_pack_numbers\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+spawn_chance INT NULL,
+min_level INT NULL,
+max_level INT NULL,
+tier4_number INT NULL,
+unknown5 INT NULL,
+tier3_number INT NULL,
+unknown7 INT NULL,
+tier2_number INT NULL,
+unknown9 INT NULL,
+tier1_number INT NULL);
+
+CREATE TABLE \`weapon_armour_common\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`weapon_classes\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`weapon_damage_scaling\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`weapon_impact_sound_data\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+unknown1 INT NULL,
+unknown2 INT NULL,
+unknown3 INT NULL,
+unknown4 INT NULL,
+unknown5 INT NULL);
+
+CREATE TABLE \`weapon_sound_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`weapon_types\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+base_item_types_row BIGINT UNSIGNED NULL KEY,
+critical INT NULL,
+speed INT NULL,
+damage_min INT NULL,
+damage_max INT NULL,
+range_max INT NULL,
+null6 INT NULL);
+
+CREATE TABLE \`wordlists\` (row BIGINT UNSIGNED NULL PRIMARY KEY);
+
+CREATE TABLE \`words\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+type INT NULL,
+text TEXT NULL,
+unknown6 INT NULL,
+text2 TEXT NULL,
+unknown8 TEXT NULL);
+
+CREATE TABLE \`words_spawn_weight_tags\` (words_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+id TEXT NULL,
+name TEXT NULL,
+act INT NULL,
+is_town BOOLEAN NULL,
+has_waypoint BOOLEAN NULL,
+area_level INT NULL,
+has_doodads BOOLEAN NULL,
+unknown6 INT NULL,
+unknown7 INT NULL,
+unknown8 INT NULL,
+unknown9 INT NULL,
+loading_screen_dds_file TEXT NULL,
+unknown11 INT NULL,
+data1 TEXT NULL,
+unknown15 INT NULL,
+parent_town_world_areas_row BIGINT UNSIGNED NULL KEY,
+difficulties_row BIGINT UNSIGNED NULL KEY,
+unknown21 INT NULL,
+unknown22 INT NULL,
+unknown23 INT NULL,
+is_map BOOLEAN NULL,
+unknown32 INT NULL,
+unknown33 INT NULL,
+achievement_items_row BIGINT UNSIGNED NULL KEY,
+unknown39 INT NULL,
+unknown40 INT NULL,
+strongbox_spawn_chance INT NULL,
+strongbox_max_count INT NULL,
+strongbox_rarity_weight TEXT NULL,
+is_town_area BOOLEAN NULL,
+unknown49 INT NULL,
+max_level INT NULL,
+unknown50 INT NULL,
+is_merciless_vaal_area BOOLEAN NULL,
+unknown52 INT NULL,
+is_hideout BOOLEAN NULL,
+unknown53 INT NULL,
+unknown54 INT NULL,
+unknown55 INT NULL,
+unknown56 INT NULL,
+unknown_index TEXT NULL,
+unknown59 INT NULL,
+unknown60 INT NULL,
+unknown61 INT NULL,
+is_vaal_area BOOLEAN NULL,
+unknown64 INT NULL,
+unknown65 INT NULL,
+unknown66 INT NULL,
+is_labyrinth_airlock BOOLEAN NULL,
+is_labyrinth_area BOOLEAN NULL,
+twinned_full_clear_achievement_items_row BIGINT UNSIGNED NULL KEY,
+enter_achievement_items_row BIGINT UNSIGNED NULL KEY,
+unknown73 INT NULL,
+unknown74 INT NULL,
+unknown75 INT NULL,
+unknown76 TEXT NULL,
+8_mods_full_clear_achievement_items_row BIGINT UNSIGNED NULL KEY,
+unknown77 INT NULL,
+unknown78 INT NULL,
+unknown79 INT NULL,
+flag0 BOOLEAN NULL,
+flag1 BOOLEAN NULL,
+unknown82 INT NULL,
+unknown83 INT NULL,
+key0a BIGINT UNSIGNED NULL,
+key0b BIGINT UNSIGNED NULL,
+unknown88 TEXT NULL,
+unknown89 INT NULL,
+unknown90 INT NULL,
+unknown91 INT NULL,
+unknown92 INT NULL,
+unknown93 INT NULL);
+
+CREATE TABLE \`world_areas_connections_world_areas\` (world_areas_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_topologies\` (world_areas_row BIGINT UNSIGNED,
+topologies_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_bosses_monster_varieties\` (world_areas_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_monsters_monster_varieties\` (world_areas_row BIGINT UNSIGNED,
+monster_varieties_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_spawn_weight_tags\` (world_areas_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_full_clear_achievement_items\` (world_areas_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_mods\` (world_areas_row BIGINT UNSIGNED,
+mods_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_vaal_area_world_areas\` (world_areas_row BIGINT UNSIGNED,
+world_areas_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_area_type_tags\` (world_areas_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas_tags\` (world_areas_row BIGINT UNSIGNED,
+tags_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas1\` (world_areas_row BIGINT UNSIGNED,
+achievement_items_row BIGINT UNSIGNED);
+
+CREATE TABLE \`world_areas2\` (world_areas_row BIGINT UNSIGNED,
+row BIGINT UNSIGNED);
+
+CREATE TABLE \`xp_per_level_for_missions\` (row BIGINT UNSIGNED NULL PRIMARY KEY,
+zone_level INT NULL,
+experience INT NULL);"
+`;

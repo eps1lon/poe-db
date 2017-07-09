@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2.6,
   "dats": {
     "AchievementItems.dat": {
       "fields": {
@@ -17669,7 +17669,7 @@
           "display": "",
           "display_type": "{0}",
           "description": "",
-          "type": "ref|string#"
+          "type": "ref|string"
         },
         "StatsKeys": {
           "key": "Stats.dat",

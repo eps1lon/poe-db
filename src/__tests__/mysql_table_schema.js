@@ -44,16 +44,16 @@ describe('MysqlTableSchema', () => {
 
   it('should output correct col definitions', () => {
     expect(mods.columnDefinition('Row')).toBe(
-      'BIGINT UNSIGNED NULL PRIMARY KEY',
+      'BIGINT UNSIGNED NOT NULL PRIMARY KEY',
     );
     expect(mods.columnDefinition('SpawnWeight_TagsKeys')).toBe(
-      'BIGINT UNSIGNED NULL PRIMARY KEY',
+      'BIGINT UNSIGNED NOT NULL PRIMARY KEY',
     );
     expect(mods.columnDefinition('BuffDefinitionsKey')).toBe(
-      'BIGINT UNSIGNED NULL KEY',
+      'BIGINT UNSIGNED NOT NULL KEY',
     );
-    expect(mods.columnDefinition('Id')).toBe('TEXT NULL');
-    expect(mods.columnDefinition('Stat1Min')).toBe('INT NULL');
+    expect(mods.columnDefinition('Id')).toBe('TEXT NOT NULL');
+    expect(mods.columnDefinition('Stat1Min')).toBe('INT NOT NULL');
   });
 
   it('should generate correct col names', () => {

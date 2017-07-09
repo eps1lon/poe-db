@@ -142,7 +142,7 @@ class MysqlTableSchema {
   }
 
   columnDefinition(col) {
-    let definition = this.dataType(col) + ' NULL';
+    let definition = this.dataType(col) + ' NOT NULL';
 
     if (col === PRIMARY || this.isHasMany(col)) {
       definition += ' PRIMARY KEY';

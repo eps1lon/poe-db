@@ -1,6 +1,6 @@
 class DbSchema {
   constructor(spec) {
-    this.spe = spec;
+    this.spec = spec;
   }
 
   createAllQuery() {

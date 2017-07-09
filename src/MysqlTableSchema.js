@@ -120,7 +120,13 @@ class MysqlTableSchema {
   }
 
   createDefinition(col) {
-    return this.colName(col) + ' ' + this.columnDefinition(col);
+    const col_name = this.colName(col);
+    let definition = col_name + ' ' + this.columnDefinition(col);
+
+    if (this.isForeignKey(col)) {
+      definition += ',\nINDEX (' + col_name + ')';
+    }
+    return definition;
   }
 
   colName(field) {
@@ -146,8 +152,6 @@ class MysqlTableSchema {
 
     if (col === PRIMARY || this.isHasMany(col)) {
       definition += ' PRIMARY KEY';
-    } else if (this.isForeignKey(col)) {
-      definition += ' KEY';
     }
 
     return definition;

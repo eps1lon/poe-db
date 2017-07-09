@@ -10,7 +10,8 @@
   "author": "eps1lon",
   "license": "MIT",
   "scripts": {
-    "db:create": "node scripts/definitionsToDb",
+    "db:drop": "node scripts/db/drop",
+    "db:create": "node scripts/db/create",
     "precommit": "lint-staged",
     "test": "jest",
     "preparse-spec": "nearleyc data/dat.specification.ne -o data/dat.specification.js",
@@ -32,6 +33,7 @@
     "prettier": "^1.4.4"
   },
   "dependencies": {
+    "mysql": "^2.13.0",
     "nearley": "^2.10.1",
     "string": "^3.3.3",
     "yargs": "^8.0.2"

@@ -4,7 +4,7 @@ const specification = require('../../data/dat.specification.json');
 
 const schema = new MysqlSchema(specification.dats);
 
-const db = connection({ multipleStatements: true, database: undefined });
+const db = connection({ database: undefined });
 
 db.connect();
 
@@ -12,6 +12,13 @@ db.query('CREATE DATABASE IF NOT EXISTS ??', [name]);
 
 db.query('USE ??', [name]);
 
-db.query(schema.createAllQuery());
+schema.createQueries().forEach(query => {
+  db.query(query, error => {
+    if (error) {
+      console.warn(error, query);
+      throw error;
+    }
+  });
+});
 
 db.end();

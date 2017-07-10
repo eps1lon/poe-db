@@ -4,14 +4,15 @@ const DbSchema = require('./DbSchema');
 const MysqlTableSchema = require('./MysqlTableSchema');
 
 class MysqlSchema extends DbSchema {
-  createAllQuery() {
+  createQueries() {
     return Object.entries(this.spec)
-      .map(([dat_file, dat]) => {
+      .reduce((queries, [dat_file, dat]) => {
         const schema = new MysqlTableSchema(dat_file, dat);
         try {
-          return [schema.createQuery(), schema.createQueryRelations()]
-            .filter(Boolean)
-            .join('\n\n');
+          return queries.concat([
+            schema.createQuery(),
+            ...schema.createQueriesRelations(),
+          ]);
         } catch (error) {
           error.message = [
             'could not build schema for `' + dat_file + '` because of',
@@ -20,8 +21,12 @@ class MysqlSchema extends DbSchema {
 
           throw error;
         }
-      })
-      .join('\n\n');
+      }, [])
+      .filter(Boolean);
+  }
+
+  createAllQuery() {
+    return this.createQueries.join('\n\n');
   }
 }
 

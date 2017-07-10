@@ -1,6 +1,5 @@
 const mysql = require('mysql');
 
-const { POEDB_HOST } = process.env;
 const { connection, name } = require('../../src/db');
 
 const db = connection({ database: undefined, multipleStatements: true });

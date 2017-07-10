@@ -57,11 +57,11 @@ describe('MysqlTableSchema', () => {
   });
 
   it('should generate correct col names', () => {
-    expect(mods.colName('Row')).toBe('row');
-    expect(mods.colName('SpawnWeight_TagsKeys')).toBe('tags_row');
-    expect(mods.colName('BuffDefinitionsKey')).toBe('buff_definitions_row');
-    expect(mods.colName('Id')).toBe('id');
-    expect(mods.colName('Stat1Min')).toBe('stat1_min');
+    expect(mods.colName('Row')).toBe('`row`');
+    expect(mods.colName('SpawnWeight_TagsKeys')).toBe('`tags_row`');
+    expect(mods.colName('BuffDefinitionsKey')).toBe('`buff_definitions_row`');
+    expect(mods.colName('Id')).toBe('`id`');
+    expect(mods.colName('Stat1Min')).toBe('`stat1_min`');
   });
 
   it('should generate correct create queries', () => {

@@ -23,12 +23,23 @@ class MysqlTableSchema {
     return words.join('_');
   }
 
+  /**
+   * escapes table and col names
+   * DOES NOT PREVENT INJECTIONS! use connection.escape()
+   * @param {string} name 
+   */
+  static escapeName(name) {
+    return '`' + name + '`';
+  }
+
   static name(dat_file) {
     return dat_file.replace(/\.dat$/, '');
   }
 
   static tableName(dat_file) {
-    return S(MysqlTableSchema.name(dat_file)).underscore().s;
+    return MysqlTableSchema.escapeName(
+      S(MysqlTableSchema.name(dat_file)).underscore().s,
+    );
   }
 
   static colCasing(col) {
@@ -42,11 +53,7 @@ class MysqlTableSchema {
 
   createQuery() {
     return (
-      'CREATE TABLE `' +
-      this.tableName() +
-      '` ' +
-      this.createDefinitions() +
-      ';'
+      'CREATE TABLE ' + this.tableName() + ' ' + this.createDefinitions() + ';'
     );
   }
 
@@ -168,11 +175,13 @@ class MysqlTableSchema {
 
       const key_id = this.hasField(field) ? this.fields[field].key_id : null;
 
-      return MysqlTableSchema.colCasing(
-        cleaned_name.replace(/Key(s)?([0-9]*)$/, '$2') + (key_id || PRIMARY),
+      return MysqlTableSchema.escapeName(
+        MysqlTableSchema.colCasing(
+          cleaned_name.replace(/Key(s)?([0-9]*)$/, '$2') + (key_id || PRIMARY),
+        ),
       );
     } else {
-      return MysqlTableSchema.colCasing(field);
+      return MysqlTableSchema.escapeName(MysqlTableSchema.colCasing(field));
     }
   }
 

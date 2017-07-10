@@ -57,10 +57,12 @@ class MysqlTableSchema {
     );
   }
 
+  createQueriesRelations() {
+    return this.relations().map(field => this.createQueryRelation(field));
+  }
+
   createQueryRelations() {
-    return this.relations()
-      .map(field => this.createQueryRelation(field))
-      .join('\n\n');
+    return this.createQueriesRelations().join('\n\n');
   }
 
   createQueryRelation(field) {

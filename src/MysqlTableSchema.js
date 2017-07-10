@@ -65,9 +65,9 @@ class MysqlTableSchema {
 
   createQueryRelation(field) {
     return (
-      'CREATE TABLE `' +
+      'CREATE TABLE ' +
       MysqlTableSchema.tableName(this.relationName(field)) +
-      '` ' +
+      ' ' +
       this.createDefinitionsRelation(field) +
       ';'
     );
@@ -92,7 +92,7 @@ class MysqlTableSchema {
       };
     });
 
-    let col_name_left = this.colName(this.tableName() + PRIMARY);
+    let col_name_left = this.colName(this.name() + PRIMARY);
     let col_name_right = this.colName(
       MysqlTableSchema.name(this.fields[field].key) +
         (this.fields[field].key_id || PRIMARY),

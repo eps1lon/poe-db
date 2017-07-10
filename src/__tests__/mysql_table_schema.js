@@ -84,5 +84,12 @@ describe('MysqlTableSchema', () => {
         spec['MonsterVarieties.dat'],
       ).createQueryRelations(),
     ).toMatchSnapshot();
+
+    expect(
+      new MysqlTableSchema(
+        'AtlasNode.dat',
+        spec['AtlasNode.dat'],
+      ).createQueryRelations(),
+    ).toMatchSnapshot();
   });
 });

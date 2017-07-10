@@ -3,6 +3,26 @@ const S = require('string');
 const PRIMARY = 'Row';
 
 class MysqlTableSchema {
+  /**
+   * puts an infix right before the last word which is supposed to suffix duplicate
+   * key col names
+   * 
+   * i.e. atlas_node_row => atlas_node_left_row
+   * 
+   * @param {*} col 
+   * @param {*} suffix 
+   */
+  static infixCol(col, infix) {
+    // see casing
+    const delim = '_';
+
+    const words = col.split(delim);
+
+    words.splice(-1, -1, infix);
+
+    return words.join('_');
+  }
+
   static name(dat_file) {
     return dat_file.replace(/\.dat$/, '');
   }
@@ -65,18 +85,27 @@ class MysqlTableSchema {
       };
     });
 
+    let col_name_left = this.colName(this.tableName() + PRIMARY);
+    let col_name_right = this.colName(
+      MysqlTableSchema.name(this.fields[field].key) +
+        (this.fields[field].key_id || PRIMARY),
+    );
+
+    // duplicate col names
+    if (col_name_left === col_name_right) {
+      col_name_left = MysqlTableSchema.infixCol(col_name_left, 'left');
+      col_name_right = MysqlTableSchema.infixCol(col_name_right, 'right');
+    }
+
     return (
       '(' +
       [
         {
-          name: this.colName(this.tableName() + PRIMARY),
+          name: col_name_left,
           type: this.dataType(PRIMARY),
         },
         {
-          name: this.colName(
-            MysqlTableSchema.name(this.fields[field].key) +
-              (this.fields[field].key_id || PRIMARY),
-          ),
+          name: col_name_right,
           type: this.dataType(PRIMARY),
         },
         ...extended_props,

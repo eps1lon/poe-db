@@ -194,3 +194,8 @@ achievement_items_row BIGINT UNSIGNED);
 CREATE TABLE \`monster_varieties_count_kills_achievement_items\` (monster_varieties_row BIGINT UNSIGNED,
 achievement_items_row BIGINT UNSIGNED);"
 `;
+
+exports[`MysqlTableSchema should generate correct create queries for all relations 3`] = `
+"CREATE TABLE \`atlas_node_atlas_node\` (atlas_node_left_row BIGINT UNSIGNED,
+atlas_node_right_row BIGINT UNSIGNED);"
+`;

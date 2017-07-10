@@ -1,3 +1,4 @@
+const MysqlSchema = require('../../src/MysqlSchema');
 const { connection } = require('../../src/db');
 
 const db = connection({ multipleStatements: true });
@@ -7,7 +8,7 @@ const schema = new MysqlSchema(specification.dats);
 
 db.connect();
 
-for (const [dat_file, dat] of schema.spec) {
+for (const [dat_file, dat] in schema.spec) {
   // get csv
   // and import
 }

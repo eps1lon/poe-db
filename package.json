@@ -12,7 +12,8 @@
   "scripts": {
     "db:drop": "node scripts/db/drop",
     "db:create": "node scripts/db/create",
-    "db:build": "node scripts/db/create && node scripts/db/insert",
+    "db:insert": "node scripts/db/insert",
+    "db:build": "yarn run db:create && yarn run db:insert",
     "db:rebuild": "yarn run db:drop && yarn run db:build",
     "precommit": "lint-staged",
     "test": "jest",

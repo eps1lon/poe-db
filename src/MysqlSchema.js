@@ -26,7 +26,7 @@ class MysqlSchema extends DbSchema {
   }
 
   createAllQuery() {
-    return this.createQueries.join('\n\n');
+    return this.createQueries().join('\n\n');
   }
 }
 

@@ -1,4 +1,5 @@
 const S = require('string');
+const mysql = require('mysql');
 
 const PRIMARY = 'Row';
 
@@ -337,7 +338,7 @@ class MysqlTableSchema {
   }
 
   get fields() {
-    return this.props.fields || [];
+    return this.props.fields || {};
   }
 
   get virtual_fields() {
@@ -345,7 +346,7 @@ class MysqlTableSchema {
   }
 
   assertFieldExists(field) {
-    if (!this.hasField(field)) {
+    if (!this.hasField(field) && field !== PRIMARY) {
       throw new Error(`field '${field}' does not exist`);
     }
   }

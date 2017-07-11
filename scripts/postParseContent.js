@@ -9,6 +9,15 @@ const records_out = path.join(__dirname, '../data/records.json');
 
 const content = require(pypoe_content);
 
+const entriesToObjWithNameAsKey = entries =>
+  entriesToObj(
+    entries.map(entry => [
+      entry.name,
+      // copy entry and remove name prop
+      Object.assign({}, entry, { name: undefined }),
+    ]),
+  );
+
 fs.writeFile(
   spec_out,
   JSON.stringify(
@@ -16,7 +25,7 @@ fs.writeFile(
       content.map(row => [
         row.filename,
         {
-          fields: row.header,
+          fields: entriesToObjWithNameAsKey(row.header),
           virtual_fields: row.virtual_header,
         },
       ]),

@@ -15,6 +15,7 @@
     "db:insert": "node scripts/db/insert",
     "db:build": "yarn run db:create && yarn run db:insert",
     "db:rebuild": "yarn run db:drop && yarn run db:build",
+    "install": "cd pypoe && pip install -e .[cli]",
     "precommit": "lint-staged",
     "test": "jest",
     "parse-content": "pypoe_exporter dat json data/content.json",

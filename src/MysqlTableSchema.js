@@ -53,7 +53,13 @@ class MysqlTableSchema {
 
   createQuery() {
     return (
-      'CREATE TABLE ' + this.tableName() + ' ' + this.createDefinitions() + ';'
+      'CREATE TABLE ' +
+      this.tableName() +
+      ' ' +
+      this.createDefinitions() +
+      '\n' +
+      this.tableOptions(this.file) +
+      ';'
     );
   }
 
@@ -71,6 +77,8 @@ class MysqlTableSchema {
       MysqlTableSchema.tableName(this.relationName(field)) +
       ' ' +
       this.createDefinitionsRelation(field) +
+      '\n' +
+      this.tableOptions(`${this.file}: ${field}`) +
       ';'
     );
   }
@@ -260,6 +268,17 @@ class MysqlTableSchema {
         field => !this.isHasMany(field) && !this.isExtendedProp(field),
       ),
     ];
+  }
+
+  tableOptions(comment) {
+    // mysql's utf8 is no actual utf8
+    // see https://mathiasbynens.be/notes/mysql-utf8mb4
+    return [
+      'ENGINE = MyISAM',
+      'CHARACTER SET = utf8mb4',
+      'COLLATE = utf8mb4_unicode_ci',
+      "COMMENT = '" + comment + "'",
+    ].join(', ');
   }
 
   relations() {

@@ -46,7 +46,8 @@ INDEX (\`stats5_row\`),
 \`achievement_items_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`achievement_items_row\`),
 \`data5\` TEXT NOT NULL,
-\`is_essence_only_modifier\` BOOLEAN NOT NULL);"
+\`is_essence_only_modifier\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat';"
 `;
 
 exports[`MysqlTableSchema should generate correct create queries 2`] = `
@@ -117,85 +118,110 @@ INDEX (\`achievement_items_row\`),
 \`achievement_items4_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`achievement_items4_row\`),
 \`3_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`3_row\`));"
+INDEX (\`3_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat';"
 `;
 
 exports[`MysqlTableSchema should generate correct create queries for all relations 1`] = `
 "CREATE TABLE \`mods_spawn_weight_tags\` (\`mods_row\` BIGINT UNSIGNED,
 \`tags_row\` BIGINT UNSIGNED,
-\`values\` INT UNSIGNED);
+\`values\` INT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat: SpawnWeight_TagsKeys';
 
 CREATE TABLE \`mods_tags\` (\`mods_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat: TagsKeys';
 
 CREATE TABLE \`mods0\` (\`mods_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat: Keys0';
 
 CREATE TABLE \`mods_generation_weight_tags\` (\`mods_row\` BIGINT UNSIGNED,
 \`tags_row\` BIGINT UNSIGNED,
-\`values\` INT);"
+\`values\` INT)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat: GenerationWeight_TagsKeys';"
 `;
 
 exports[`MysqlTableSchema should generate correct create queries for all relations 2`] = `
 "CREATE TABLE \`monster_varieties_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: ModsKeys';
 
 CREATE TABLE \`monster_varieties_tags\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: TagsKeys';
 
 CREATE TABLE \`monster_varieties_granted_effects\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`granted_effects_row\` BIGINT UNSIGNED);
+\`granted_effects_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: GrantedEffectsKeys';
 
 CREATE TABLE \`monster_varieties_mods2\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: ModsKeys2';
 
 CREATE TABLE \`monster_varieties_weapon1_item_visual_identity\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`item_visual_identity_row\` BIGINT UNSIGNED);
+\`item_visual_identity_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Weapon1_ItemVisualIdentityKeys';
 
 CREATE TABLE \`monster_varieties_weapon2_item_visual_identity\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`item_visual_identity_row\` BIGINT UNSIGNED);
+\`item_visual_identity_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Weapon2_ItemVisualIdentityKeys';
 
 CREATE TABLE \`monster_varieties_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_special_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Special_ModsKeys';
 
 CREATE TABLE \`monster_varieties_achievement_items2\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: AchievementItemsKeys2';
 
 CREATE TABLE \`monster_varieties_normal_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Normal_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_merciless_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Merciless_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_cruel_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Cruel_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_normal_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Normal_ModsKeys';
 
 CREATE TABLE \`monster_varieties_cruel_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Cruel_ModsKeys';
 
 CREATE TABLE \`monster_varieties_merciless_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Merciless_ModsKeys';
 
 CREATE TABLE \`monster_varieties_kill_rare_in_normal_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: KillRareInNormal_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_kill_rare_in_cruel_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: KillRareInCruel_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_kill_rare_in_merciless_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: KillRareInMerciless_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_count_kills_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);"
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: CountKills_AchievementItemsKeys';"
 `;
 
 exports[`MysqlTableSchema should generate correct create queries for all relations 3`] = `
 "CREATE TABLE \`atlas_node_atlas_node\` (\`atlas_node_left_row\` BIGINT UNSIGNED,
-\`atlas_node_right_row\` BIGINT UNSIGNED);"
+\`atlas_node_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AtlasNode.dat: AtlasNodeKeys';"
 `;

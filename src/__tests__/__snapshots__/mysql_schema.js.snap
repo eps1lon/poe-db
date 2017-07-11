@@ -9,7 +9,8 @@ exports[`MysqlTableSchema should match the db schema 1`] = `
 \`completions_required\` INT NOT NULL,
 \`achievements_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`achievements_row\`),
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AchievementItems.dat';
 
 CREATE TABLE \`achievement_set_rewards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`achievement_sets_display_id\` BIGINT UNSIGNED NOT NULL,
@@ -17,13 +18,16 @@ INDEX (\`achievement_sets_display_id\`),
 \`unknown1\` INT NOT NULL,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
-\`unknown2\` INT NOT NULL);
+\`unknown2\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AchievementSetRewards.dat';
 
-CREATE TABLE \`achievement_sets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`achievement_sets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AchievementSets.dat';
 
 CREATE TABLE \`achievement_sets_display\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` INT NOT NULL,
-\`title\` TEXT NOT NULL);
+\`title\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AchievementSetsDisplay.dat';
 
 CREATE TABLE \`achievements\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -37,7 +41,8 @@ INDEX (\`achievement_sets_display_id\`),
 \`flag2\` BOOLEAN NOT NULL,
 \`flag3\` BOOLEAN NOT NULL,
 \`unknown3\` INT NOT NULL,
-\`flag4\` BOOLEAN NOT NULL);
+\`flag4\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Achievements.dat';
 
 CREATE TABLE \`active_skills\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -54,28 +59,37 @@ CREATE TABLE \`active_skills\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`flag1\` BOOLEAN NOT NULL,
 \`skill_totem_id\` INT NOT NULL,
 \`is_manually_casted\` BOOLEAN NOT NULL,
-\`unknown19\` TEXT NOT NULL);
+\`unknown19\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ActiveSkills.dat';
 
 CREATE TABLE \`active_skills_weapon_restriction_item_classes\` (\`active_skills_row\` BIGINT UNSIGNED,
-\`item_classes_row\` BIGINT UNSIGNED);
+\`item_classes_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ActiveSkills.dat: WeaponRestriction_ItemClassesKeys';
 
 CREATE TABLE \`active_skills_input_stat\` (\`active_skills_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ActiveSkills.dat: Input_StatKeys';
 
 CREATE TABLE \`active_skills_output_stat\` (\`active_skills_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ActiveSkills.dat: Output_StatKeys';
 
-CREATE TABLE \`active_skill_target_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`active_skill_target_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ActiveSkillTargetTypes.dat';
 
-CREATE TABLE \`active_skill_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`active_skill_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ActiveSkillType.dat';
 
-CREATE TABLE \`armour_classes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`armour_classes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ArmourClasses.dat';
 
-CREATE TABLE \`armour_surface_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`armour_surface_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ArmourSurfaceTypes.dat';
 
 CREATE TABLE \`armour_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`base_item_types_row\`));
+INDEX (\`base_item_types_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ArmourTypes.dat';
 
 CREATE TABLE \`ascendancy\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -86,7 +100,8 @@ INDEX (\`characters_row\`),
 \`rgb_flavour_text_colour\` TEXT NOT NULL,
 \`name\` TEXT NOT NULL,
 \`flavour_text\` TEXT NOT NULL,
-\`ogg_file\` TEXT NOT NULL);
+\`ogg_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Ascendancy.dat';
 
 CREATE TABLE \`atlas_node\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
@@ -101,10 +116,12 @@ INDEX (\`default_item_visual_identity_row\`),
 \`shaped_item_visual_identity_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`shaped_item_visual_identity_row\`),
 \`flavour_text\` TEXT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AtlasNode.dat';
 
 CREATE TABLE \`atlas_node_atlas_node\` (\`atlas_node_left_row\` BIGINT UNSIGNED,
-\`atlas_node_right_row\` BIGINT UNSIGNED);
+\`atlas_node_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AtlasNode.dat: AtlasNodeKeys';
 
 CREATE TABLE \`atlas_quest_items\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -113,13 +130,16 @@ INDEX (\`base_item_types_row\`),
 INDEX (\`world_areas_row\`),
 \`quest_flags\` INT NOT NULL,
 \`league_quest_flags\` INT NOT NULL,
-\`map_tier\` INT NOT NULL);
+\`map_tier\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AtlasQuestItems.dat';
 
-CREATE TABLE \`attributes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`attributes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Attributes.dat';
 
 CREATE TABLE \`backend_errors\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`text\` TEXT NOT NULL);
+\`text\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BackendErrors.dat';
 
 CREATE TABLE \`base_item_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -144,39 +164,49 @@ INDEX (\`item_visual_identity_row\`),
 \`equip_achievement_items_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`equip_achievement_items_row\`),
 \`is_picked_up_by_monsters\` BOOLEAN NOT NULL,
-\`data11\` TEXT NOT NULL);
+\`data11\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BaseItemTypes.dat';
 
 CREATE TABLE \`base_item_types_implicit_mods\` (\`base_item_types_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BaseItemTypes.dat: Implicit_ModsKeys';
 
 CREATE TABLE \`base_item_types_normal_purchase_base_item_types\` (\`base_item_types_left_row\` BIGINT UNSIGNED,
-\`base_item_types_right_row\` BIGINT UNSIGNED);
+\`base_item_types_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BaseItemTypes.dat: NormalPurchase_BaseItemTypesKeys';
 
 CREATE TABLE \`base_item_types_magic_purchase_base_item_types\` (\`base_item_types_left_row\` BIGINT UNSIGNED,
-\`base_item_types_right_row\` BIGINT UNSIGNED);
+\`base_item_types_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BaseItemTypes.dat: MagicPurchase_BaseItemTypesKeys';
 
 CREATE TABLE \`base_item_types_tags\` (\`base_item_types_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BaseItemTypes.dat: TagsKeys';
 
 CREATE TABLE \`base_item_types_vendor_recipe_achievement_items\` (\`base_item_types_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BaseItemTypes.dat: VendorRecipe_AchievementItemsKeys';
 
 CREATE TABLE \`base_item_types_rare_purchase_base_item_types\` (\`base_item_types_left_row\` BIGINT UNSIGNED,
-\`base_item_types_right_row\` BIGINT UNSIGNED);
+\`base_item_types_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BaseItemTypes.dat: RarePurchase_BaseItemTypesKeys';
 
 CREATE TABLE \`base_item_types_unique_purchase_base_item_types\` (\`base_item_types_left_row\` BIGINT UNSIGNED,
-\`base_item_types_right_row\` BIGINT UNSIGNED);
+\`base_item_types_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BaseItemTypes.dat: UniquePurchase_BaseItemTypesKeys';
 
 CREATE TABLE \`beyond_demons\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
 \`flag0\` BOOLEAN NOT NULL,
-\`flag1\` BOOLEAN NOT NULL);
+\`flag1\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BeyondDemons.dat';
 
 CREATE TABLE \`bindable_virtual_keys\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`key_code\` INT NOT NULL,
 \`name\` TEXT NOT NULL,
-\`id\` TEXT NOT NULL);
+\`id\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BindableVirtualKeys.dat';
 
 CREATE TABLE \`blood_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -194,10 +224,12 @@ INDEX (\`1_row\`),
 INDEX (\`2_row\`),
 \`pet_file7\` TEXT NOT NULL,
 \`pet_file8\` TEXT NOT NULL,
-\`pet_file9\` TEXT NOT NULL);
+\`pet_file9\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BloodTypes.dat';
 
 CREATE TABLE \`blood_types0\` (\`blood_types_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BloodTypes.dat: Keys0';
 
 CREATE TABLE \`bloodlines\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -211,21 +243,27 @@ INDEX (\`buff_definitions_row\`),
 INDEX (\`monster_varieties_row\`),
 \`unknown20\` INT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
-\`flag1\` BOOLEAN NOT NULL);
+\`flag1\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Bloodlines.dat';
 
 CREATE TABLE \`bloodlines_mods\` (\`bloodlines_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Bloodlines.dat: ModsKeys';
 
 CREATE TABLE \`bloodlines_spawn_weight_tags\` (\`bloodlines_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Bloodlines.dat: SpawnWeight_TagsKeys';
 
 CREATE TABLE \`bloodlines_item_weight_tags\` (\`bloodlines_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Bloodlines.dat: ItemWeight_TagsKeys';
 
 CREATE TABLE \`bloodlines2\` (\`bloodlines_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Bloodlines.dat: Keys2';
 
-CREATE TABLE \`buff_categories\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`buff_categories\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BuffCategories.dat';
 
 CREATE TABLE \`buff_definitions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -255,16 +293,21 @@ INDEX (\`buff_visuals_row\`),
 \`buff_limit\` INT NOT NULL,
 \`flag10\` BOOLEAN NOT NULL,
 \`unknown0\` TEXT NOT NULL,
-\`is_recovery\` BOOLEAN NOT NULL);
+\`is_recovery\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BuffDefinitions.dat';
 
 CREATE TABLE \`buff_definitions_stats\` (\`buff_definitions_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BuffDefinitions.dat: StatsKeys';
 
-CREATE TABLE \`buff_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`buff_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BuffGroups.dat';
 
-CREATE TABLE \`buff_merge_modes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`buff_merge_modes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BuffMergeModes.dat';
 
-CREATE TABLE \`buff_visual_orb_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`buff_visual_orb_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BuffVisualOrbTypes.dat';
 
 CREATE TABLE \`buff_visuals\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -276,52 +319,66 @@ INDEX (\`misc_animated_row\`),
 \`misc_animated2_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`misc_animated2_row\`),
 \`unknown6\` INT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BuffVisuals.dat';
 
 CREATE TABLE \`buff_visuals_preload_groups\` (\`buff_visuals_row\` BIGINT UNSIGNED,
-\`preload_groups_row\` BIGINT UNSIGNED);
+\`preload_groups_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'BuffVisuals.dat: PreloadGroupsKeys';
 
 CREATE TABLE \`character_audio_events\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`quest_state\` INT NOT NULL,
 \`unknown1\` INT NOT NULL,
 \`unknown2\` INT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat';
 
 CREATE TABLE \`character_audio_events_marauder_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: Marauder_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_audio_events_ranger_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: Ranger_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_audio_events_witch_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: Witch_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_audio_events_duelist_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: Duelist_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_audio_events_shadow_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: Shadow_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_audio_events_templar_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: Templar_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_audio_events_scion_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: Scion_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_audio_events_goddess_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: Goddess_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_audio_events_jack_the_axe_character_text_audio\` (\`character_audio_events_row\` BIGINT UNSIGNED,
-\`character_text_audio_row\` BIGINT UNSIGNED);
+\`character_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterAudioEvents.dat: JackTheAxe_CharacterTextAudioKeys';
 
 CREATE TABLE \`character_panel_description_modes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`unknown1\` TEXT NOT NULL,
 \`format_string_positive\` TEXT NOT NULL,
-\`format_string_negative\` TEXT NOT NULL);
+\`format_string_negative\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterPanelDescriptionModes.dat';
 
-CREATE TABLE \`character_panel_stat_contexts\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`character_panel_stat_contexts\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterPanelStatContexts.dat';
 
 CREATE TABLE \`character_panel_stats\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -331,21 +388,26 @@ INDEX (\`character_panel_description_modes_row\`),
 \`character_panel_tabs_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`character_panel_tabs_row\`),
 \`flag0\` BOOLEAN NOT NULL,
-\`data4\` TEXT NOT NULL);
+\`data4\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterPanelStats.dat';
 
 CREATE TABLE \`character_panel_stats_stats1\` (\`character_panel_stats_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterPanelStats.dat: StatsKeys1';
 
 CREATE TABLE \`character_panel_stats_stats2\` (\`character_panel_stats_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterPanelStats.dat: StatsKeys2';
 
 CREATE TABLE \`character_panel_stats_stats3\` (\`character_panel_stats_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterPanelStats.dat: StatsKeys3';
 
 CREATE TABLE \`character_panel_tabs\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`unknown2\` INT NOT NULL,
-\`text\` TEXT NOT NULL);
+\`text\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterPanelTabs.dat';
 
 CREATE TABLE \`character_start_items\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`character_start_states_row\` BIGINT UNSIGNED NOT NULL,
@@ -362,30 +424,38 @@ INDEX (\`base_item_types_row\`),
 \`skill_gem_levels\` TEXT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
 \`0_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`0_row\`));
+INDEX (\`0_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartItems.dat';
 
 CREATE TABLE \`character_start_items_socketed_skill_gems\` (\`character_start_items_row\` BIGINT UNSIGNED,
-\`skill_gems_row\` BIGINT UNSIGNED);
+\`skill_gems_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartItems.dat: Socketed_SkillGemsKeys';
 
 CREATE TABLE \`character_start_items_mods\` (\`character_start_items_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartItems.dat: ModsKeys';
 
 CREATE TABLE \`character_start_quest_state\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`quest_states\` TEXT NOT NULL,
-\`unknown9\` TEXT NOT NULL);
+\`unknown9\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartQuestState.dat';
 
 CREATE TABLE \`character_start_quest_state_quest\` (\`character_start_quest_state_row\` BIGINT UNSIGNED,
-\`quest_row\` BIGINT UNSIGNED);
+\`quest_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartQuestState.dat: QuestKeys';
 
 CREATE TABLE \`character_start_quest_state1\` (\`character_start_quest_state_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartQuestState.dat: Keys1';
 
 CREATE TABLE \`character_start_quest_state_map_pins\` (\`character_start_quest_state_row\` BIGINT UNSIGNED,
-\`map_pins_row\` BIGINT UNSIGNED);
+\`map_pins_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartQuestState.dat: MapPinsKeys';
 
 CREATE TABLE \`character_start_state_set\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
-\`id\` TEXT NOT NULL);
+\`id\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartStateSet.dat';
 
 CREATE TABLE \`character_start_states\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -398,24 +468,30 @@ INDEX (\`characters_row\`),
 INDEX (\`character_start_state_set_row\`),
 \`1_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`1_row\`),
-\`unknown\` BIT(8) NOT NULL);
+\`unknown\` BIT(8) NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartStates.dat';
 
 CREATE TABLE \`character_start_states_passive_skills\` (\`character_start_states_row\` BIGINT UNSIGNED,
-\`passive_skills_row\` BIGINT UNSIGNED);
+\`passive_skills_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartStates.dat: PassiveSkillsKeys';
 
 CREATE TABLE \`character_start_states_normal_character_start_quest_state\` (\`character_start_states_row\` BIGINT UNSIGNED,
-\`character_start_quest_state_row\` BIGINT UNSIGNED);
+\`character_start_quest_state_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartStates.dat: Normal_CharacterStartQuestStateKeys';
 
 CREATE TABLE \`character_start_states_cruel_character_start_quest_state\` (\`character_start_states_row\` BIGINT UNSIGNED,
-\`character_start_quest_state_row\` BIGINT UNSIGNED);
+\`character_start_quest_state_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartStates.dat: Cruel_CharacterStartQuestStateKeys';
 
 CREATE TABLE \`character_start_states_merciless_character_start_quest_state\` (\`character_start_states_row\` BIGINT UNSIGNED,
-\`character_start_quest_state_row\` BIGINT UNSIGNED);
+\`character_start_quest_state_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterStartStates.dat: Merciless_CharacterStartQuestStateKeys';
 
 CREATE TABLE \`character_text_audio\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`text\` TEXT NOT NULL,
-\`sound_file\` TEXT NOT NULL);
+\`sound_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CharacterTextAudio.dat';
 
 CREATE TABLE \`characters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -445,20 +521,24 @@ INDEX (\`start_skill_gem_base_item_types_row\`),
 \`start_weapon_base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`start_weapon_base_item_types_row\`),
 \`unknown28\` INT NOT NULL,
-\`trait_description\` TEXT NOT NULL);
+\`trait_description\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Characters.dat';
 
 CREATE TABLE \`characters0\` (\`characters_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Characters.dat: Keys0';
 
 CREATE TABLE \`chest_clusters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`data1\` TEXT NOT NULL,
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
-\`unknown5\` INT NOT NULL);
+\`unknown5\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ChestClusters.dat';
 
 CREATE TABLE \`chest_clusters_chests\` (\`chest_clusters_row\` BIGINT UNSIGNED,
-\`chests_row\` BIGINT UNSIGNED);
+\`chests_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ChestClusters.dat: ChestsKeys';
 
 CREATE TABLE \`chest_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -473,7 +553,8 @@ CREATE TABLE \`chest_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`rare_closed_ao_file\` TEXT NOT NULL,
 \`magic_open_ao_file\` TEXT NOT NULL,
 \`unique_open_ao_file\` TEXT NOT NULL,
-\`rare_open_ao_file\` TEXT NOT NULL);
+\`rare_open_ao_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ChestEffects.dat';
 
 CREATE TABLE \`chests\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -502,57 +583,70 @@ INDEX (\`currency_use_achievement_items_row\`),
 \`encounter_achievement_items_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`encounter_achievement_items_row\`),
 \`4_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`4_row\`));
+INDEX (\`4_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Chests.dat';
 
 CREATE TABLE \`chests_unknown_\` (\`chests_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Chests.dat: Unknown_Keys';
 
 CREATE TABLE \`chests_mods\` (\`chests_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Chests.dat: ModsKeys';
 
 CREATE TABLE \`chests_tags\` (\`chests_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Chests.dat: TagsKeys';
 
 CREATE TABLE \`client_strings\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`text\` TEXT NOT NULL);
+\`text\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ClientStrings.dat';
 
 CREATE TABLE \`clone_shot_variations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`monster_varieties_row\`));
+INDEX (\`monster_varieties_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CloneShotVariations.dat';
 
 CREATE TABLE \`commands\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`command\` TEXT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
-\`command2\` TEXT NOT NULL);
+\`command2\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Commands.dat';
 
 CREATE TABLE \`component_armour\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_id\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_id\`),
 \`armour\` INT NOT NULL,
 \`evasion\` INT NOT NULL,
-\`energy_shield\` INT NOT NULL);
+\`energy_shield\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ComponentArmour.dat';
 
 CREATE TABLE \`component_attribute_requirements\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_id\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_id\`),
 \`req_str\` INT NOT NULL,
 \`req_dex\` INT NOT NULL,
-\`req_int\` INT NOT NULL);
+\`req_int\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ComponentAttributeRequirements.dat';
 
 CREATE TABLE \`component_charges\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_id\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_id\`),
 \`max_charges\` INT NOT NULL,
-\`per_charge\` INT NOT NULL);
+\`per_charge\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ComponentCharges.dat';
 
-CREATE TABLE \`cooldown_bypass_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`cooldown_bypass_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CooldownBypassTypes.dat';
 
-CREATE TABLE \`cooldown_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`cooldown_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CooldownGroups.dat';
 
-CREATE TABLE \`crafting_bench_custom_actions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`crafting_bench_custom_actions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CraftingBenchCustomActions.dat';
 
 CREATE TABLE \`crafting_bench_options\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`npc_master_row\` BIGINT UNSIGNED NOT NULL,
@@ -569,13 +663,16 @@ INDEX (\`mods_row\`),
 \`item_quantity\` INT NOT NULL,
 \`unknown1\` TEXT NOT NULL,
 \`description\` TEXT NOT NULL,
-\`is_disabled\` BOOLEAN NOT NULL);
+\`is_disabled\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CraftingBenchOptions.dat';
 
 CREATE TABLE \`crafting_bench_options_cost_base_item_types\` (\`crafting_bench_options_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CraftingBenchOptions.dat: Cost_BaseItemTypesKeys';
 
 CREATE TABLE \`crafting_bench_options_item_classes\` (\`crafting_bench_options_row\` BIGINT UNSIGNED,
-\`item_classes_row\` BIGINT UNSIGNED);
+\`item_classes_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CraftingBenchOptions.dat: ItemClassesKeys';
 
 CREATE TABLE \`currency_items\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -593,13 +690,16 @@ INDEX (\`full_stack_base_item_types_row\`),
 INDEX (\`possession_achievement_items_row\`),
 \`unknown17\` TEXT NOT NULL,
 \`currency_tab_stack_size\` INT NOT NULL,
-\`abbreviation\` TEXT NOT NULL);
+\`abbreviation\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CurrencyItems.dat';
 
 CREATE TABLE \`currency_items_usage_achievement_items\` (\`currency_items_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CurrencyItems.dat: Usage_AchievementItemsKeys';
 
 CREATE TABLE \`currency_items0\` (\`currency_items_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CurrencyItems.dat: Keys0';
 
 CREATE TABLE \`currency_stash_tab_layout\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -609,9 +709,11 @@ INDEX (\`base_item_types_row\`),
 \`unknown2\` INT NOT NULL,
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
-\`unknown5\` INT NOT NULL);
+\`unknown5\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CurrencyStashTabLayout.dat';
 
-CREATE TABLE \`currency_use_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`currency_use_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'CurrencyUseTypes.dat';
 
 CREATE TABLE \`daily_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -624,26 +726,32 @@ CREATE TABLE \`daily_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 INDEX (\`npc_talk_row\`),
 \`unknown8\` INT NOT NULL,
 \`pvp_types_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`pvp_types_row\`));
+INDEX (\`pvp_types_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DailyMissions.dat';
 
 CREATE TABLE \`daily_missions_characters\` (\`daily_missions_row\` BIGINT UNSIGNED,
-\`characters_row\` BIGINT UNSIGNED);
+\`characters_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DailyMissions.dat: CharactersKeys';
 
 CREATE TABLE \`daily_overrides\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
-\`unknown0\` INT NOT NULL);
+\`unknown0\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DailyOverrides.dat';
 
 CREATE TABLE \`daily_overrides_daily_missions\` (\`daily_overrides_row\` BIGINT UNSIGNED,
-\`daily_missions_row\` BIGINT UNSIGNED);
+\`daily_missions_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DailyOverrides.dat: DailyMissionsKeys';
 
 CREATE TABLE \`damage_particle_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`pet_file\` TEXT NOT NULL);
+\`pet_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DamageParticleEffects.dat';
 
 CREATE TABLE \`dances\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
 \`characters_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`characters_row\`));
+INDEX (\`characters_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Dances.dat';
 
 CREATE TABLE \`daresso_pit_fights\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -656,9 +764,11 @@ INDEX (\`0_row\`),
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
 \`unknown6\` INT NOT NULL,
-\`flag_unknown3\` BOOLEAN NOT NULL);
+\`flag_unknown3\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DaressoPitFights.dat';
 
-CREATE TABLE \`default\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`default\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Default.dat';
 
 CREATE TABLE \`default_monster_stats\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`display_level\` TEXT NOT NULL,
@@ -669,7 +779,8 @@ CREATE TABLE \`default_monster_stats\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY
 \`experience\` INT NOT NULL,
 \`ally_life\` INT NOT NULL,
 \`difficulty_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`difficulty_row\`));
+INDEX (\`difficulty_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DefaultMonsterStats.dat';
 
 CREATE TABLE \`descent_exiles\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -679,54 +790,70 @@ INDEX (\`world_areas_row\`),
 INDEX (\`characters_row\`),
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
-\`unknown7\` INT NOT NULL);
+\`unknown7\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentExiles.dat';
 
 CREATE TABLE \`descent_reward_chests\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`world_areas_row\`));
+INDEX (\`world_areas_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat';
 
 CREATE TABLE \`descent_reward_chests_base_item_types1\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys1';
 
 CREATE TABLE \`descent_reward_chests_base_item_types2\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys2';
 
 CREATE TABLE \`descent_reward_chests_base_item_types3\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys3';
 
 CREATE TABLE \`descent_reward_chests_base_item_types4\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys4';
 
 CREATE TABLE \`descent_reward_chests_base_item_types5\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys5';
 
 CREATE TABLE \`descent_reward_chests_base_item_types6\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys6';
 
 CREATE TABLE \`descent_reward_chests_base_item_types7\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys7';
 
 CREATE TABLE \`descent_reward_chests_base_item_types8\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys8';
 
 CREATE TABLE \`descent_reward_chests_base_item_types9\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys9';
 
 CREATE TABLE \`descent_reward_chests_base_item_types10\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys10';
 
 CREATE TABLE \`descent_reward_chests_base_item_types11\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys11';
 
 CREATE TABLE \`descent_reward_chests_base_item_types12\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys12';
 
 CREATE TABLE \`descent_reward_chests_base_item_types13\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys13';
 
 CREATE TABLE \`descent_reward_chests_base_item_types14\` (\`descent_reward_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentRewardChests.dat: BaseItemTypesKeys14';
 
 CREATE TABLE \`descent_starter_chest\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -736,7 +863,8 @@ INDEX (\`characters_row\`),
 INDEX (\`base_item_types_row\`),
 \`socket_colours\` TEXT NOT NULL,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`world_areas_row\`));
+INDEX (\`world_areas_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DescentStarterChest.dat';
 
 CREATE TABLE \`dex_int_mission_guard_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -745,7 +873,8 @@ INDEX (\`0_row\`),
 \`spawn_weight\` INT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexIntMissionGuardMods.dat';
 
 CREATE TABLE \`dex_int_mission_guards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -753,14 +882,16 @@ CREATE TABLE \`dex_int_mission_guards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMAR
 INDEX (\`monster_packs_row\`),
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexIntMissionGuards.dat';
 
 CREATE TABLE \`dex_int_mission_targets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexIntMissionTargets.dat';
 
 CREATE TABLE \`dex_int_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -784,10 +915,12 @@ INDEX (\`npc_talk_row\`),
 \`0_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`0_row\`),
 \`1_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`1_row\`));
+INDEX (\`1_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexIntMissions.dat';
 
 CREATE TABLE \`dex_int_missions_achievement_items\` (\`dex_int_missions_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexIntMissions.dat: AchievementItemsKeys';
 
 CREATE TABLE \`dex_mission_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -798,7 +931,8 @@ INDEX (\`mods_row\`),
 \`flag1\` BOOLEAN NOT NULL,
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
-\`flag2\` BOOLEAN NOT NULL);
+\`flag2\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexMissionMods.dat';
 
 CREATE TABLE \`dex_mission_monsters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -806,13 +940,16 @@ CREATE TABLE \`dex_mission_monsters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY 
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
 \`boss_monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`boss_monster_varieties_row\`));
+INDEX (\`boss_monster_varieties_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexMissionMonsters.dat';
 
 CREATE TABLE \`dex_mission_monsters_monster_packs\` (\`dex_mission_monsters_row\` BIGINT UNSIGNED,
-\`monster_packs_row\` BIGINT UNSIGNED);
+\`monster_packs_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexMissionMonsters.dat: MonsterPacksKeys';
 
 CREATE TABLE \`dex_mission_monsters_monster_varieties\` (\`dex_mission_monsters_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexMissionMonsters.dat: MonsterVarietiesKeys';
 
 CREATE TABLE \`dex_mission_tracking\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -826,7 +963,8 @@ CREATE TABLE \`dex_mission_tracking\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY 
 \`unknown7\` INT NOT NULL,
 \`flag1\` BOOLEAN NOT NULL,
 \`npc_talk_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`npc_talk_row\`));
+INDEX (\`npc_talk_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexMissionTracking.dat';
 
 CREATE TABLE \`dex_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -837,33 +975,39 @@ CREATE TABLE \`dex_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`rare_chance\` INT NOT NULL,
 \`unique_monster_count\` INT NOT NULL,
 \`rare_monster_count\` INT NOT NULL,
-\`magic_monster_pack_count\` INT NOT NULL);
+\`magic_monster_pack_count\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DexMissions.dat';
 
 CREATE TABLE \`difficulties\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`resistances\` INT NOT NULL,
 \`minimum_level\` INT NOT NULL,
 \`text\` TEXT NOT NULL,
-\`prefix\` TEXT NOT NULL);
+\`prefix\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Difficulties.dat';
 
 CREATE TABLE \`display_minion_monster_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` INT NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`monster_varieties_row\`));
+INDEX (\`monster_varieties_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DisplayMinionMonsterType.dat';
 
 CREATE TABLE \`divination_card_art\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
-\`virtual_file\` TEXT NOT NULL);
+\`virtual_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DivinationCardArt.dat';
 
 CREATE TABLE \`divination_card_stash_tab_layout\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
-\`is_enabled\` BOOLEAN NOT NULL);
+\`is_enabled\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DivinationCardStashTabLayout.dat';
 
 CREATE TABLE \`drop_pool\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`group\` TEXT NOT NULL,
-\`weight\` INT NOT NULL);
+\`weight\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'DropPool.dat';
 
 CREATE TABLE \`eclipse_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`row\` BIGINT UNSIGNED NOT NULL,
@@ -872,23 +1016,29 @@ INDEX (\`row\`),
 INDEX (\`mods_row\`),
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
-\`is_prefix\` BOOLEAN NOT NULL);
+\`is_prefix\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EclipseMods.dat';
 
 CREATE TABLE \`eclipse_mods_spawn_weight_tags\` (\`eclipse_mods_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EclipseMods.dat: SpawnWeight_TagsKeys';
 
-CREATE TABLE \`effectiveness\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`effectiveness\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Effectiveness.dat';
 
-CREATE TABLE \`effectiveness_cost_constants\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`effectiveness_cost_constants\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EffectivenessCostConstants.dat';
 
 CREATE TABLE \`endless_ledge_chests\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`world_areas_row\`),
-\`socket_colour\` TEXT NOT NULL);
+\`socket_colour\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EndlessLedgeChests.dat';
 
 CREATE TABLE \`endless_ledge_chests_base_item_types\` (\`endless_ledge_chests_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EndlessLedgeChests.dat: BaseItemTypesKeys';
 
 CREATE TABLE \`environments\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -896,13 +1046,16 @@ CREATE TABLE \`environments\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_env_file\` TEXT NOT NULL,
 \`corrupted_env_file\` TEXT NOT NULL,
 \`corrupted_ambient_sound_file\` TEXT NOT NULL,
-\`ambient_sound_file\` TEXT NOT NULL);
+\`ambient_sound_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Environments.dat';
 
 CREATE TABLE \`environments0\` (\`environments_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Environments.dat: Keys0';
 
 CREATE TABLE \`environments1\` (\`environments_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Environments.dat: Keys1';
 
 CREATE TABLE \`essence_stash_tab_layout\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -913,14 +1066,16 @@ INDEX (\`base_item_types_row\`),
 \`int_id\` INT NOT NULL,
 \`slot_width\` INT NOT NULL,
 \`slot_height\` INT NOT NULL,
-\`is_upgradable_essence_slot\` BOOLEAN NOT NULL);
+\`is_upgradable_essence_slot\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EssenceStashTabLayout.dat';
 
 CREATE TABLE \`essence_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`essence_type\` INT NOT NULL,
 \`is_corrupted_essence\` BOOLEAN NOT NULL,
 \`words_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`words_row\`));
+INDEX (\`words_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EssenceType.dat';
 
 CREATE TABLE \`essences\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -1028,26 +1183,31 @@ INDEX (\`mods41_row\`),
 INDEX (\`shield2_mods_row\`),
 \`mods43_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`mods43_row\`),
-\`is_screaming_essence\` BOOLEAN NOT NULL);
+\`is_screaming_essence\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Essences.dat';
 
 CREATE TABLE \`essences_monster_mods\` (\`essences_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Essences.dat: Monster_ModsKeys';
 
 CREATE TABLE \`event_season\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`unknown1\` INT NOT NULL,
-\`reward_command\` TEXT NOT NULL);
+\`reward_command\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EventSeason.dat';
 
 CREATE TABLE \`event_season_rewards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`event_season_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`event_season_row\`),
 \`point\` INT NOT NULL,
-\`reward_command\` TEXT NOT NULL);
+\`reward_command\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'EventSeasonRewards.dat';
 
 CREATE TABLE \`experience_levels\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`index0\` TEXT NOT NULL,
 \`level\` INT NOT NULL,
-\`experience\` INT UNSIGNED NOT NULL);
+\`experience\` INT UNSIGNED NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ExperienceLevels.dat';
 
 CREATE TABLE \`exploding_storm_buffs\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1076,9 +1236,11 @@ INDEX (\`enemy_monster_varieties_row\`),
 \`unknown25\` INT NOT NULL,
 \`buff_definitions2_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`buff_definitions2_row\`),
-\`is_only_spawning_near_player\` BOOLEAN NOT NULL);
+\`is_only_spawning_near_player\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ExplodingStormBuffs.dat';
 
-CREATE TABLE \`extra_terrain_feature_family\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`extra_terrain_feature_family\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ExtraTerrainFeatureFamily.dat';
 
 CREATE TABLE \`extra_terrain_features\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1088,7 +1250,8 @@ CREATE TABLE \`extra_terrain_features\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMAR
 \`unknown4\` TEXT NOT NULL,
 \`unknown5\` TEXT NOT NULL,
 \`unknown6\` INT NOT NULL,
-\`unknown7\` INT NOT NULL);
+\`unknown7\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ExtraTerrainFeatures.dat';
 
 CREATE TABLE \`flasks\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -1100,48 +1263,60 @@ INDEX (\`base_item_types_row\`),
 \`recovery_time\` INT NOT NULL,
 \`buff_definitions_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`buff_definitions_row\`),
-\`buff_stat_values\` TEXT NOT NULL);
+\`buff_stat_values\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Flasks.dat';
 
-CREATE TABLE \`flask_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`flask_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'FlaskType.dat';
 
 CREATE TABLE \`flavour_text\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`unknown0\` INT NOT NULL,
-\`text\` TEXT NOT NULL);
+\`text\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'FlavourText.dat';
 
 CREATE TABLE \`footprints\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`active_ao_files\` TEXT NOT NULL,
-\`idle_ao_files\` TEXT NOT NULL);
+\`idle_ao_files\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Footprints.dat';
 
 CREATE TABLE \`game_constants\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`value\` INT NOT NULL);
+\`value\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GameConstants.dat';
 
 CREATE TABLE \`gem_tags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`tag\` TEXT NOT NULL);
+\`tag\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GemTags.dat';
 
-CREATE TABLE \`gem_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`gem_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GemTypes.dat';
 
 CREATE TABLE \`global_audio_config\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`value\` INT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GlobalAudioConfig.dat';
 
-CREATE TABLE \`global_quest_flags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`global_quest_flags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GlobalQuestFlags.dat';
 
 CREATE TABLE \`grandmasters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`gm_file\` TEXT NOT NULL,
 \`ais_file\` TEXT NOT NULL,
 \`character_level\` INT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Grandmasters.dat';
 
 CREATE TABLE \`grandmasters_mods\` (\`grandmasters_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Grandmasters.dat: ModsKeys';
 
-CREATE TABLE \`granted_effect_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`granted_effect_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GrantedEffectGroups.dat';
 
 CREATE TABLE \`granted_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1160,7 +1335,8 @@ CREATE TABLE \`granted_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`active_skills_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`active_skills_row\`),
 \`flag2\` BOOLEAN NOT NULL,
-\`flag3\` BOOLEAN NOT NULL);
+\`flag3\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GrantedEffects.dat';
 
 CREATE TABLE \`granted_effects_per_level\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`granted_effects_row\` BIGINT UNSIGNED NOT NULL,
@@ -1192,17 +1368,21 @@ INDEX (\`granted_effects_row\`),
 \`unknown34\` INT NOT NULL,
 \`damage_multiplier\` INT NOT NULL,
 \`unknown36\` INT NOT NULL,
-\`unknown37\` INT NOT NULL);
+\`unknown37\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GrantedEffectsPerLevel.dat';
 
 CREATE TABLE \`granted_effects_per_level_stats\` (\`granted_effects_per_level_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GrantedEffectsPerLevel.dat: StatsKeys';
 
 CREATE TABLE \`granted_effects_per_level_quality_stats\` (\`granted_effects_per_level_row\` BIGINT UNSIGNED,
 \`stats_row\` BIGINT UNSIGNED,
-\`values\` INT);
+\`values\` INT)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GrantedEffectsPerLevel.dat: Quality_StatsKeys';
 
 CREATE TABLE \`granted_effects_per_level_stats2\` (\`granted_effects_per_level_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'GrantedEffectsPerLevel.dat: StatsKeys2';
 
 CREATE TABLE \`hideout_doodads\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -1215,12 +1395,14 @@ INDEX (\`npc_master_row\`),
 \`is_non_master_doodad\` BOOLEAN NOT NULL,
 \`unknown1\` INT NOT NULL,
 \`unknown2\` INT NOT NULL,
-\`unknown3\` INT NOT NULL);
+\`unknown3\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'HideoutDoodads.dat';
 
 CREATE TABLE \`hideout_interactable\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
-\`object\` TEXT NOT NULL);
+\`object\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'HideoutInteractable.dat';
 
 CREATE TABLE \`hideouts\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1232,7 +1414,8 @@ INDEX (\`npc_master_row\`),
 INDEX (\`medium_world_areas_row\`),
 \`large_world_areas_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`large_world_areas_row\`),
-\`unknown9\` INT NOT NULL);
+\`unknown9\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Hideouts.dat';
 
 CREATE TABLE \`impact_sound_data\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1240,7 +1423,8 @@ CREATE TABLE \`impact_sound_data\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY
 \`unknown2\` INT NOT NULL,
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
-\`unknown5\` INT NOT NULL);
+\`unknown5\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ImpactSoundData.dat';
 
 CREATE TABLE \`int_mission_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1249,25 +1433,31 @@ CREATE TABLE \`int_mission_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`max_level\` INT NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
-\`data2\` TEXT NOT NULL);
+\`data2\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'IntMissionMods.dat';
 
 CREATE TABLE \`int_mission_mods_mods\` (\`int_mission_mods_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'IntMissionMods.dat: ModsKeys';
 
 CREATE TABLE \`int_mission_mods0\` (\`int_mission_mods_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'IntMissionMods.dat: Keys0';
 
 CREATE TABLE \`int_mission_monsters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'IntMissionMonsters.dat';
 
 CREATE TABLE \`int_mission_monsters_objective_monster_varieties\` (\`int_mission_monsters_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'IntMissionMonsters.dat: Objective_MonsterVarietiesKeys';
 
 CREATE TABLE \`int_mission_monsters_achievement_items\` (\`int_mission_monsters_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'IntMissionMonsters.dat: AchievementItemsKeys';
 
 CREATE TABLE \`int_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1293,20 +1483,25 @@ INDEX (\`npc_talk_row\`),
 \`flag10\` BOOLEAN NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
-\`unknown13\` INT NOT NULL);
+\`unknown13\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'IntMissions.dat';
 
-CREATE TABLE \`invasion_monster_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`invasion_monster_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'InvasionMonsterGroups.dat';
 
 CREATE TABLE \`invasion_monster_restrictions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`world_areas_row\`),
-\`data0\` TEXT NOT NULL);
+\`data0\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'InvasionMonsterRestrictions.dat';
 
 CREATE TABLE \`invasion_monster_restrictions_monster_varieties\` (\`invasion_monster_restrictions_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'InvasionMonsterRestrictions.dat: MonsterVarietiesKeys';
 
-CREATE TABLE \`invasion_monster_roles\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`invasion_monster_roles\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'InvasionMonsterRoles.dat';
 
 CREATE TABLE \`invasion_monsters_per_area\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
@@ -1316,24 +1511,29 @@ INDEX (\`world_areas_row\`),
 \`data0\` TEXT NOT NULL,
 \`unknown2\` INT NOT NULL,
 \`unknown3\` INT NOT NULL,
-\`unknown4\` INT NOT NULL);
+\`unknown4\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'InvasionMonstersPerArea.dat';
 
 CREATE TABLE \`invasion_monsters_per_area_monster_varieties1\` (\`invasion_monsters_per_area_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'InvasionMonstersPerArea.dat: MonsterVarietiesKeys1';
 
 CREATE TABLE \`invasion_monsters_per_area_monster_varieties2\` (\`invasion_monsters_per_area_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'InvasionMonstersPerArea.dat: MonsterVarietiesKeys2';
 
 CREATE TABLE \`item_classes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`name\` TEXT NOT NULL,
-\`category\` TEXT NOT NULL);
+\`category\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemClasses.dat';
 
 CREATE TABLE \`item_experience_per_level\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
 \`item_current_level\` INT NOT NULL,
-\`experience\` INT NOT NULL);
+\`experience\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemExperiencePerLevel.dat';
 
 CREATE TABLE \`item_visual_effect\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1350,7 +1550,8 @@ CREATE TABLE \`item_visual_effect\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KE
 \`two_handed_axe_epk_file\` TEXT NOT NULL,
 \`claw_epk_file\` TEXT NOT NULL,
 \`pet_file\` TEXT NOT NULL,
-\`flag1\` BOOLEAN NOT NULL);
+\`flag1\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemVisualEffect.dat';
 
 CREATE TABLE \`item_visual_identity\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1381,16 +1582,20 @@ INDEX (\`sound_effects_row\`),
 \`is_alternate_art\` BOOLEAN NOT NULL,
 \`flag2\` BOOLEAN NOT NULL,
 \`create_corrupted_jewel_achievement_items_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`create_corrupted_jewel_achievement_items_row\`));
+INDEX (\`create_corrupted_jewel_achievement_items_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemVisualIdentity.dat';
 
 CREATE TABLE \`item_visual_identity_pickup_achievement_items\` (\`item_visual_identity_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemVisualIdentity.dat: Pickup_AchievementItemsKeys';
 
 CREATE TABLE \`item_visual_identity_identify_achievement_items\` (\`item_visual_identity_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemVisualIdentity.dat: Identify_AchievementItemsKeys';
 
 CREATE TABLE \`item_visual_identity_corrupt_achievement_items\` (\`item_visual_identity_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemVisualIdentity.dat: Corrupt_AchievementItemsKeys';
 
 CREATE TABLE \`itemised_visual_effect\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -1403,38 +1608,48 @@ INDEX (\`item_visual_identity1_row\`),
 INDEX (\`item_visual_identity2_row\`),
 \`data1\` TEXT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
-\`data3\` TEXT NOT NULL);
+\`data3\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemisedVisualEffect.dat';
 
 CREATE TABLE \`itemised_visual_effect0\` (\`itemised_visual_effect_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemisedVisualEffect.dat: Keys0';
 
 CREATE TABLE \`itemised_visual_effect2\` (\`itemised_visual_effect_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ItemisedVisualEffect.dat: Keys2';
 
 CREATE TABLE \`killstreak_thresholds\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`kills\` INT NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
 \`achievement_items_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`achievement_items_row\`));
+INDEX (\`achievement_items_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'KillstreakThresholds.dat';
 
 CREATE TABLE \`labyrinth_areas\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
-\`id\` TEXT NOT NULL);
+\`id\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthAreas.dat';
 
 CREATE TABLE \`labyrinth_areas_normal_world_areas\` (\`labyrinth_areas_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthAreas.dat: Normal_WorldAreasKeys';
 
 CREATE TABLE \`labyrinth_areas_cruel_world_areas\` (\`labyrinth_areas_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthAreas.dat: Cruel_WorldAreasKeys';
 
 CREATE TABLE \`labyrinth_areas_merciless_world_areas\` (\`labyrinth_areas_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthAreas.dat: Merciless_WorldAreasKeys';
 
 CREATE TABLE \`labyrinth_areas_endgame_world_areas\` (\`labyrinth_areas_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthAreas.dat: Endgame_WorldAreasKeys';
 
 CREATE TABLE \`labyrinth_exclusion_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
-\`unknown1\` INT NOT NULL);
+\`unknown1\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthExclusionGroups.dat';
 
 CREATE TABLE \`labyrinth_izaro_chests\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1442,18 +1657,21 @@ CREATE TABLE \`labyrinth_izaro_chests\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMAR
 INDEX (\`chests_row\`),
 \`spawn_weight\` INT NOT NULL,
 \`min_labyrinth_tier\` INT NOT NULL,
-\`max_labyrinth_tier\` INT NOT NULL);
+\`max_labyrinth_tier\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthIzaroChests.dat';
 
 CREATE TABLE \`labyrinth_ladder_rewards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown0\` INT NOT NULL,
 \`0_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`0_row\`));
+INDEX (\`0_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthLadderRewards.dat';
 
 CREATE TABLE \`labyrinth_node_overrides\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id1\` TEXT NOT NULL,
 \`id2\` TEXT NOT NULL,
 \`data1\` TEXT NOT NULL,
-\`data2\` TEXT NOT NULL);
+\`data2\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthNodeOverrides.dat';
 
 CREATE TABLE \`labyrinth_rewards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1464,7 +1682,8 @@ INDEX (\`0_row\`),
 \`1_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`1_row\`),
 \`unknown7\` INT NOT NULL,
-\`unknown8\` INT NOT NULL);
+\`unknown8\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthRewards.dat';
 
 CREATE TABLE \`labyrinth_secret_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1473,9 +1692,11 @@ INDEX (\`monster_varieties_row\`),
 \`buff_buff_definitions_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`buff_buff_definitions_row\`),
 \`buff_values\` TEXT NOT NULL,
-\`ot_file\` TEXT NOT NULL);
+\`ot_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSecretEffects.dat';
 
-CREATE TABLE \`labyrinth_secret_locations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`labyrinth_secret_locations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSecretLocations.dat';
 
 CREATE TABLE \`labyrinth_secrets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1492,19 +1713,24 @@ CREATE TABLE \`labyrinth_secrets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY
 \`flag4\` BIT(8) NOT NULL,
 \`name\` TEXT NOT NULL,
 \`achievement_items_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`achievement_items_row\`));
+INDEX (\`achievement_items_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSecrets.dat';
 
 CREATE TABLE \`labyrinth_secrets_labyrinth_secret_effects0\` (\`labyrinth_secrets_row\` BIGINT UNSIGNED,
-\`labyrinth_secret_effects_row\` BIGINT UNSIGNED);
+\`labyrinth_secret_effects_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSecrets.dat: LabyrinthSecretEffectsKeys0';
 
 CREATE TABLE \`labyrinth_secrets_labyrinth_secret_effects1\` (\`labyrinth_secrets_row\` BIGINT UNSIGNED,
-\`labyrinth_secret_effects_row\` BIGINT UNSIGNED);
+\`labyrinth_secret_effects_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSecrets.dat: LabyrinthSecretEffectsKeys1';
 
 CREATE TABLE \`labyrinth_secrets_labyrinth_secret_effects2\` (\`labyrinth_secrets_row\` BIGINT UNSIGNED,
-\`labyrinth_secret_effects_row\` BIGINT UNSIGNED);
+\`labyrinth_secret_effects_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSecrets.dat: LabyrinthSecretEffectsKeys2';
 
 CREATE TABLE \`labyrinth_secrets_labyrinth_secret_effects3\` (\`labyrinth_secrets_row\` BIGINT UNSIGNED,
-\`labyrinth_secret_effects_row\` BIGINT UNSIGNED);
+\`labyrinth_secret_effects_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSecrets.dat: LabyrinthSecretEffectsKeys3';
 
 CREATE TABLE \`labyrinth_section\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1512,7 +1738,8 @@ CREATE TABLE \`labyrinth_section\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY
 \`flag1\` BOOLEAN NOT NULL,
 \`flag2\` BOOLEAN NOT NULL,
 \`0_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`0_row\`));
+INDEX (\`0_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSection.dat';
 
 CREATE TABLE \`labyrinth_section_layout\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`labyrinth_section_row\` BIGINT UNSIGNED NOT NULL,
@@ -1527,10 +1754,12 @@ INDEX (\`labyrinth_areas_row\`),
 \`flags1\` INT NOT NULL,
 \`flags2\` INT NOT NULL,
 \`labyrinth_node_overrides_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`labyrinth_node_overrides_row\`));
+INDEX (\`labyrinth_node_overrides_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSectionLayout.dat';
 
 CREATE TABLE \`labyrinth_section_layout_labyrinth_section_layout\` (\`labyrinth_section_layout_left_row\` BIGINT UNSIGNED,
-\`labyrinth_section_layout_right_row\` BIGINT UNSIGNED);
+\`labyrinth_section_layout_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthSectionLayout.dat: LabyrinthSectionLayoutKeys';
 
 CREATE TABLE \`labyrinth_trinkets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -1539,17 +1768,22 @@ INDEX (\`base_item_types_row\`),
 INDEX (\`labyrinth_secrets_row\`),
 \`buff_buff_definitions_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`buff_buff_definitions_row\`),
-\`buff_values\` TEXT NOT NULL);
+\`buff_values\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LabyrinthTrinkets.dat';
 
-CREATE TABLE \`league_category\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`league_category\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LeagueCategory.dat';
 
 CREATE TABLE \`league_flag\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`image\` TEXT NOT NULL);
+\`image\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LeagueFlag.dat';
 
-CREATE TABLE \`league_quest_flags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`league_quest_flags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LeagueQuestFlags.dat';
 
-CREATE TABLE \`league_trophy\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`league_trophy\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'LeagueTrophy.dat';
 
 CREATE TABLE \`map_connections\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`map_pins0_row\` BIGINT UNSIGNED NOT NULL,
@@ -1560,23 +1794,28 @@ INDEX (\`map_pins1_row\`),
 \`restricted_area_text\` TEXT NOT NULL,
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
-\`unknown5\` INT NOT NULL);
+\`unknown5\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapConnections.dat';
 
 CREATE TABLE \`map_device_recipes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`unknown5\` BIGINT UNSIGNED NOT NULL,
-\`unknown7\` INT NOT NULL);
+\`unknown7\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapDeviceRecipes.dat';
 
 CREATE TABLE \`map_device_recipes_base_item_types\` (\`map_device_recipes_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapDeviceRecipes.dat: BaseItemTypesKeys';
 
 CREATE TABLE \`map_device_recipes_world_areas\` (\`map_device_recipes_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapDeviceRecipes.dat: WorldAreasKeys';
 
 CREATE TABLE \`map_inhabitants\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`stats_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`stats_row\`));
+INDEX (\`stats_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapInhabitants.dat';
 
 CREATE TABLE \`map_pins\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1594,21 +1833,27 @@ INDEX (\`cruel_waypoint_world_areas_row\`),
 INDEX (\`merciless_waypoint_world_areas_row\`),
 \`index3\` TEXT NOT NULL,
 \`unknown1\` INT NOT NULL,
-\`unknown3\` TEXT NOT NULL);
+\`unknown3\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapPins.dat';
 
 CREATE TABLE \`map_pins_normal_world_areas\` (\`map_pins_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapPins.dat: Normal_WorldAreasKeys';
 
 CREATE TABLE \`map_pins_merciless_world_areas\` (\`map_pins_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapPins.dat: Merciless_WorldAreasKeys';
 
 CREATE TABLE \`map_pins_cruel_world_areas\` (\`map_pins_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapPins.dat: Cruel_WorldAreasKeys';
 
 CREATE TABLE \`map_pins_world_areas\` (\`map_pins_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapPins.dat: WorldAreasKeys';
 
-CREATE TABLE \`map_stash_tab_layout\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`map_stash_tab_layout\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MapStashTabLayout.dat';
 
 CREATE TABLE \`maps\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -1632,31 +1877,38 @@ INDEX (\`maps1_row\`),
 \`maps2_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`maps2_row\`),
 \`maps3_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`maps3_row\`));
+INDEX (\`maps3_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Maps.dat';
 
 CREATE TABLE \`maps_monster_packs\` (\`maps_row\` BIGINT UNSIGNED,
-\`monster_packs_row\` BIGINT UNSIGNED);
+\`monster_packs_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Maps.dat: MonsterPacksKeys';
 
 CREATE TABLE \`maps_higher_tier_maps_base_item_types\` (\`maps_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Maps.dat: HigherTierMaps_BaseItemTypesKeys';
 
-CREATE TABLE \`microtransaction_character_portrait_variations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`microtransaction_character_portrait_variations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MicrotransactionCharacterPortraitVariations.dat';
 
 CREATE TABLE \`microtransaction_fireworks_variations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
 \`ao_file\` TEXT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MicrotransactionFireworksVariations.dat';
 
 CREATE TABLE \`microtransaction_portal_variations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
 \`ao_file\` TEXT NOT NULL,
-\`map_ao_file\` TEXT NOT NULL);
+\`map_ao_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MicrotransactionPortalVariations.dat';
 
 CREATE TABLE \`microtransaction_social_frame_variations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`base_item_types_row\`));
+INDEX (\`base_item_types_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MicrotransactionSocialFrameVariations.dat';
 
 CREATE TABLE \`minimap_icons\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1664,74 +1916,93 @@ CREATE TABLE \`minimap_icons\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown3\` INT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
 \`flag1\` BOOLEAN NOT NULL,
-\`flag2\` BOOLEAN NOT NULL);
+\`flag2\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MinimapIcons.dat';
 
 CREATE TABLE \`misc_animated\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`ao_file\` TEXT NOT NULL,
-\`unknown1\` INT NOT NULL);
+\`unknown1\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MiscAnimated.dat';
 
 CREATE TABLE \`misc_animated_preload_groups\` (\`misc_animated_row\` BIGINT UNSIGNED,
-\`preload_groups_row\` BIGINT UNSIGNED);
+\`preload_groups_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MiscAnimated.dat: PreloadGroupsKeys';
 
 CREATE TABLE \`misc_beams\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`0_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`0_row\`),
 \`unknown3\` INT NOT NULL,
-\`unknown1\` INT NOT NULL);
+\`unknown1\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MiscBeams.dat';
 
 CREATE TABLE \`misc_beams_preload_groups\` (\`misc_beams_row\` BIGINT UNSIGNED,
-\`preload_groups_row\` BIGINT UNSIGNED);
+\`preload_groups_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MiscBeams.dat: PreloadGroupsKeys';
 
 CREATE TABLE \`misc_objects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`effect_virtual_path\` TEXT NOT NULL,
 \`unknown_unique\` INT NOT NULL,
-\`unknown1\` INT NOT NULL);
+\`unknown1\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MiscObjects.dat';
 
 CREATE TABLE \`misc_objects_preload_groups\` (\`misc_objects_row\` BIGINT UNSIGNED,
-\`preload_groups_row\` BIGINT UNSIGNED);
+\`preload_groups_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MiscObjects.dat: PreloadGroupsKeys';
 
 CREATE TABLE \`mission_tile_map\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`npc_master_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`npc_master_row\`),
 \`mission_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`mission_row\`));
+INDEX (\`mission_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MissionTileMap.dat';
 
 CREATE TABLE \`mission_tile_map_world_areas\` (\`mission_tile_map_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MissionTileMap.dat: WorldAreasKeys';
 
 CREATE TABLE \`mission_transition_tiles\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`tdt_file\` TEXT NOT NULL,
 \`unknown2\` INT NOT NULL,
 \`unknown3\` INT NOT NULL,
-\`unknown4\` INT NOT NULL);
+\`unknown4\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MissionTransitionTiles.dat';
 
-CREATE TABLE \`mod_aura_flags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`mod_aura_flags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModAuraFlags.dat';
 
-CREATE TABLE \`mod_domains\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`mod_domains\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModDomains.dat';
 
-CREATE TABLE \`mod_family\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`mod_family\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModFamily.dat';
 
-CREATE TABLE \`mod_generation_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`mod_generation_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModGenerationType.dat';
 
 CREATE TABLE \`mod_sell_price_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
-\`id\` TEXT NOT NULL);
+\`id\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModSellPriceTypes.dat';
 
 CREATE TABLE \`mod_sell_prices\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`mod_sell_price_types_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`mod_sell_price_types_row\`));
+INDEX (\`mod_sell_price_types_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModSellPrices.dat';
 
 CREATE TABLE \`mod_sell_prices_base_item_types\` (\`mod_sell_prices_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModSellPrices.dat: BaseItemTypesKeys';
 
 CREATE TABLE \`mod_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
-\`name\` TEXT NOT NULL);
+\`name\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModType.dat';
 
 CREATE TABLE \`mod_type_mod_sell_prices\` (\`mod_type_row\` BIGINT UNSIGNED,
-\`mod_sell_prices_row\` BIGINT UNSIGNED);
+\`mod_sell_prices_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ModType.dat: ModSellPricesKeys';
 
 CREATE TABLE \`mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1778,44 +2049,56 @@ INDEX (\`stats5_row\`),
 \`achievement_items_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`achievement_items_row\`),
 \`data5\` TEXT NOT NULL,
-\`is_essence_only_modifier\` BOOLEAN NOT NULL);
+\`is_essence_only_modifier\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat';
 
 CREATE TABLE \`mods_spawn_weight_tags\` (\`mods_row\` BIGINT UNSIGNED,
 \`tags_row\` BIGINT UNSIGNED,
-\`values\` INT UNSIGNED);
+\`values\` INT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat: SpawnWeight_TagsKeys';
 
 CREATE TABLE \`mods_tags\` (\`mods_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat: TagsKeys';
 
 CREATE TABLE \`mods0\` (\`mods_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat: Keys0';
 
 CREATE TABLE \`mods_generation_weight_tags\` (\`mods_row\` BIGINT UNSIGNED,
 \`tags_row\` BIGINT UNSIGNED,
-\`values\` INT);
+\`values\` INT)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Mods.dat: GenerationWeight_TagsKeys';
 
 CREATE TABLE \`monster_additional_monster_drops\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`monster_varieties_row\`));
+INDEX (\`monster_varieties_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterAdditionalMonsterDrops.dat';
 
 CREATE TABLE \`monster_additional_monster_drops0\` (\`monster_additional_monster_drops_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterAdditionalMonsterDrops.dat: Keys0';
 
 CREATE TABLE \`monster_armours\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`art_string_sm_file\` TEXT NOT NULL);
+\`art_string_sm_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterArmours.dat';
 
-CREATE TABLE \`monster_behavior\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`monster_behavior\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterBehavior.dat';
 
-CREATE TABLE \`monster_flee_conditions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`monster_flee_conditions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterFleeConditions.dat';
 
 CREATE TABLE \`monster_group_entries\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
-\`monster_group_names_id\` INT NOT NULL);
+\`monster_group_names_id\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterGroupEntries.dat';
 
-CREATE TABLE \`monster_group_names\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`monster_group_names\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterGroupNames.dat';
 
 CREATE TABLE \`monster_map_boss_difficulty\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`map_level\` INT NOT NULL,
@@ -1830,7 +2113,8 @@ INDEX (\`stats3_row\`),
 \`stat3_value\` INT NOT NULL,
 \`stats4_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`stats4_row\`),
-\`stat4_value\` INT NOT NULL);
+\`stat4_value\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterMapBossDifficulty.dat';
 
 CREATE TABLE \`monster_map_difficulty\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`map_level\` INT NOT NULL,
@@ -1845,7 +2129,8 @@ INDEX (\`stats3_row\`),
 \`stat3_value\` INT NOT NULL,
 \`stats4_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`stats4_row\`),
-\`stat4_value\` INT NOT NULL);
+\`stat4_value\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterMapDifficulty.dat';
 
 CREATE TABLE \`monster_pack_entries\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1854,7 +2139,8 @@ INDEX (\`monster_packs_row\`),
 \`flag0\` BOOLEAN NOT NULL,
 \`unknown1\` INT NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`monster_varieties_row\`));
+INDEX (\`monster_varieties_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterPackEntries.dat';
 
 CREATE TABLE \`monster_packs\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1865,16 +2151,20 @@ CREATE TABLE \`monster_packs\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`boss_monster_count\` INT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
 \`unknown11\` INT NOT NULL,
-\`data1\` TEXT NOT NULL);
+\`data1\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterPacks.dat';
 
 CREATE TABLE \`monster_packs_world_areas\` (\`monster_packs_row\` BIGINT UNSIGNED,
-\`world_areas_row\` BIGINT UNSIGNED);
+\`world_areas_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterPacks.dat: WorldAreasKeys';
 
 CREATE TABLE \`monster_packs_boss_monster_monster_varieties\` (\`monster_packs_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterPacks.dat: BossMonster_MonsterVarietiesKeys';
 
 CREATE TABLE \`monster_packs_tags\` (\`monster_packs_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterPacks.dat: TagsKeys';
 
 CREATE TABLE \`monster_resistances\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1889,15 +2179,19 @@ CREATE TABLE \`monster_resistances\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY K
 \`fire_merciless\` INT NOT NULL,
 \`cold_merciless\` INT NOT NULL,
 \`lightning_merciless\` INT NOT NULL,
-\`chaos_merciless\` INT NOT NULL);
+\`chaos_merciless\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterResistances.dat';
 
-CREATE TABLE \`monster_scaling_by_level\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`monster_scaling_by_level\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterScalingByLevel.dat';
 
 CREATE TABLE \`monster_segments\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`shapes\` TEXT NOT NULL);
+\`shapes\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterSegments.dat';
 
-CREATE TABLE \`monster_size\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`monster_size\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterSize.dat';
 
 CREATE TABLE \`monster_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1908,10 +2202,12 @@ CREATE TABLE \`monster_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`energy_shield_from_life\` INT NOT NULL,
 \`damage_spread\` INT NOT NULL,
 \`monster_resistances_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`monster_resistances_row\`));
+INDEX (\`monster_resistances_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterTypes.dat';
 
 CREATE TABLE \`monster_types_tags\` (\`monster_types_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterTypes.dat: TagsKeys';
 
 CREATE TABLE \`monster_varieties\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -1980,77 +2276,101 @@ INDEX (\`achievement_items_row\`),
 \`achievement_items4_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`achievement_items4_row\`),
 \`3_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`3_row\`));
+INDEX (\`3_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat';
 
 CREATE TABLE \`monster_varieties_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: ModsKeys';
 
 CREATE TABLE \`monster_varieties_tags\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: TagsKeys';
 
 CREATE TABLE \`monster_varieties_granted_effects\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`granted_effects_row\` BIGINT UNSIGNED);
+\`granted_effects_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: GrantedEffectsKeys';
 
 CREATE TABLE \`monster_varieties_mods2\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: ModsKeys2';
 
 CREATE TABLE \`monster_varieties_weapon1_item_visual_identity\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`item_visual_identity_row\` BIGINT UNSIGNED);
+\`item_visual_identity_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Weapon1_ItemVisualIdentityKeys';
 
 CREATE TABLE \`monster_varieties_weapon2_item_visual_identity\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`item_visual_identity_row\` BIGINT UNSIGNED);
+\`item_visual_identity_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Weapon2_ItemVisualIdentityKeys';
 
 CREATE TABLE \`monster_varieties_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_special_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Special_ModsKeys';
 
 CREATE TABLE \`monster_varieties_achievement_items2\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: AchievementItemsKeys2';
 
 CREATE TABLE \`monster_varieties_normal_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Normal_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_merciless_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Merciless_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_cruel_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Cruel_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_normal_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Normal_ModsKeys';
 
 CREATE TABLE \`monster_varieties_cruel_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Cruel_ModsKeys';
 
 CREATE TABLE \`monster_varieties_merciless_mods\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: Merciless_ModsKeys';
 
 CREATE TABLE \`monster_varieties_kill_rare_in_normal_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: KillRareInNormal_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_kill_rare_in_cruel_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: KillRareInCruel_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_kill_rare_in_merciless_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: KillRareInMerciless_AchievementItemsKeys';
 
 CREATE TABLE \`monster_varieties_count_kills_achievement_items\` (\`monster_varieties_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MonsterVarieties.dat: CountKills_AchievementItemsKeys';
 
 CREATE TABLE \`music\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`sound_file\` TEXT NOT NULL);
+\`sound_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Music.dat';
 
-CREATE TABLE \`mystery_pack\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`mystery_pack\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MysteryPack.dat';
 
-CREATE TABLE \`mystery_pack_items\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`mystery_pack_items\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'MysteryPackItems.dat';
 
 CREATE TABLE \`npc_audio\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`unknown1\` TEXT NOT NULL,
-\`unknown2\` TEXT NOT NULL);
+\`unknown2\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCAudio.dat';
 
 CREATE TABLE \`npc_master\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2066,19 +2386,24 @@ INDEX (\`achievement_items_row\`),
 \`2_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`2_row\`),
 \`talisman_achievement_items_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`talisman_achievement_items_row\`));
+INDEX (\`talisman_achievement_items_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCMaster.dat';
 
 CREATE TABLE \`npc_master0\` (\`npc_master_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCMaster.dat: Keys0';
 
 CREATE TABLE \`npc_master_signature_mod_spawn_weight_tags\` (\`npc_master_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCMaster.dat: SignatureModSpawnWeight_TagsKeys';
 
 CREATE TABLE \`npc_master_unknown_weight_tags\` (\`npc_master_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCMaster.dat: UnknownWeight_TagsKeys';
 
 CREATE TABLE \`npc_master_master_level5_achievement_items\` (\`npc_master_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCMaster.dat: MasterLevel5_AchievementItemsKeys';
 
 CREATE TABLE \`npc_master_experience_per_level\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`npc_master_row\` BIGINT UNSIGNED NOT NULL,
@@ -2087,19 +2412,23 @@ INDEX (\`npc_master_row\`),
 \`experience\` INT NOT NULL,
 \`item_level\` INT NOT NULL,
 \`unknown5\` INT NOT NULL,
-\`unknown6\` INT NOT NULL);
+\`unknown6\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCMasterExperiencePerLevel.dat';
 
 CREATE TABLE \`npc_shop\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`unknown1\` INT NOT NULL,
 \`unknown10\` INT NOT NULL,
-\`unknown11\` TEXT NOT NULL);
+\`unknown11\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCShop.dat';
 
 CREATE TABLE \`npc_shop_sold_item_tags\` (\`npc_shop_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCShop.dat: SoldItem_TagsKeys';
 
 CREATE TABLE \`npc_shop_data0_0\` (\`npc_shop_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCShop.dat: Data0_Keys0';
 
 CREATE TABLE \`npc_talk\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`npc_row\` BIGINT UNSIGNED NOT NULL,
@@ -2129,15 +2458,19 @@ INDEX (\`quest_row\`),
 \`unknown30\` INT NOT NULL,
 \`flag3\` BOOLEAN NOT NULL,
 \`2_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`2_row\`));
+INDEX (\`2_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCTalk.dat';
 
 CREATE TABLE \`npc_talk0\` (\`npc_talk_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCTalk.dat: Keys0';
 
 CREATE TABLE \`npc_talk_npc_text_audio\` (\`npc_talk_row\` BIGINT UNSIGNED,
-\`npc_text_audio_row\` BIGINT UNSIGNED);
+\`npc_text_audio_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCTalk.dat: NPCTextAudioKeys';
 
-CREATE TABLE \`npc_talk_category\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`npc_talk_category\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCTalkCategory.dat';
 
 CREATE TABLE \`npc_text_audio\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2147,7 +2480,8 @@ INDEX (\`characters_row\`),
 \`mono_audio_file\` TEXT NOT NULL,
 \`stereo_audio_file\` TEXT NOT NULL,
 \`has_stereo\` BOOLEAN NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCTextAudio.dat';
 
 CREATE TABLE \`np_cs\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2164,14 +2498,16 @@ INDEX (\`npc_shop_row\`),
 \`npc_audio1_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`npc_audio1_row\`),
 \`npc_audio2_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`npc_audio2_row\`));
+INDEX (\`npc_audio2_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NPCs.dat';
 
 CREATE TABLE \`normal_difficulty_master_weights\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`master_id\` INT NOT NULL,
 \`unknown1\` INT NOT NULL,
 \`unknown2\` INT NOT NULL,
 \`unknown3\` INT NOT NULL,
-\`unknown4\` INT NOT NULL);
+\`unknown4\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'NormalDifficultyMasterWeights.dat';
 
 CREATE TABLE \`notifications\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2180,11 +2516,13 @@ CREATE TABLE \`notifications\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`message\` TEXT NOT NULL,
 \`unknown2\` TEXT NOT NULL,
 \`unknown3\` BOOLEAN NOT NULL,
-\`unknown4\` INT NOT NULL);
+\`unknown4\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Notifications.dat';
 
 CREATE TABLE \`passive_jewel_slots\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`passive_skills_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`passive_skills_row\`));
+INDEX (\`passive_skills_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PassiveJewelSlots.dat';
 
 CREATE TABLE \`passive_skills\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2213,16 +2551,20 @@ INDEX (\`ascendancy_row\`),
 \`is_ascendancy_starting_node\` BOOLEAN NOT NULL,
 \`skill_points_granted\` INT NOT NULL,
 \`is_multiple_choice\` BOOLEAN NOT NULL,
-\`is_multiple_choice_option\` BOOLEAN NOT NULL);
+\`is_multiple_choice_option\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PassiveSkills.dat';
 
 CREATE TABLE \`passive_skills_stats\` (\`passive_skills_row\` BIGINT UNSIGNED,
-\`stats_row\` BIGINT UNSIGNED);
+\`stats_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PassiveSkills.dat: StatsKeys';
 
 CREATE TABLE \`passive_skills_characters\` (\`passive_skills_row\` BIGINT UNSIGNED,
-\`characters_row\` BIGINT UNSIGNED);
+\`characters_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PassiveSkills.dat: CharactersKeys';
 
 CREATE TABLE \`passive_skills_reminder_client_strings\` (\`passive_skills_row\` BIGINT UNSIGNED,
-\`client_strings_row\` BIGINT UNSIGNED);
+\`client_strings_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PassiveSkills.dat: Reminder_ClientStringsKeys';
 
 CREATE TABLE \`path_of_endurance\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown0\` INT NOT NULL,
@@ -2230,22 +2572,27 @@ CREATE TABLE \`path_of_endurance\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY
 \`unknown2\` INT NOT NULL,
 \`unknown5\` INT NOT NULL,
 \`unknown6\` INT NOT NULL,
-\`data0\` TEXT NOT NULL);
+\`data0\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PathOfEndurance.dat';
 
 CREATE TABLE \`path_of_endurance_mods\` (\`path_of_endurance_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PathOfEndurance.dat: ModsKeys';
 
 CREATE TABLE \`path_of_endurance0\` (\`path_of_endurance_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PathOfEndurance.dat: Keys0';
 
-CREATE TABLE \`per_level_values\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`per_level_values\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PerLevelValues.dat';
 
 CREATE TABLE \`perandus_bosses\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
-\`spawn_weight\` INT NOT NULL);
+\`spawn_weight\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PerandusBosses.dat';
 
 CREATE TABLE \`perandus_chests\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`chests_row\` BIGINT UNSIGNED NOT NULL,
@@ -2253,7 +2600,8 @@ INDEX (\`chests_row\`),
 \`unknown2\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PerandusChests.dat';
 
 CREATE TABLE \`perandus_daemons\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
@@ -2264,7 +2612,8 @@ INDEX (\`monster_varieties_row\`),
 \`unknown4\` INT NOT NULL,
 \`unknown5\` TEXT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
-\`unknown7\` TEXT NOT NULL);
+\`unknown7\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PerandusDaemons.dat';
 
 CREATE TABLE \`perandus_guards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2273,10 +2622,12 @@ CREATE TABLE \`perandus_guards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`max_level\` INT NOT NULL,
 \`unknown2\` INT NOT NULL,
 \`unknown3\` TEXT NOT NULL,
-\`unknown5\` INT NOT NULL);
+\`unknown5\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PerandusGuards.dat';
 
 CREATE TABLE \`perandus_guards_monster_packs\` (\`perandus_guards_row\` BIGINT UNSIGNED,
-\`monster_packs_row\` BIGINT UNSIGNED);
+\`monster_packs_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PerandusGuards.dat: MonsterPacksKeys';
 
 CREATE TABLE \`pet\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2284,17 +2635,21 @@ CREATE TABLE \`pet\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 INDEX (\`base_item_types_row\`),
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
-\`unknown1\` INT NOT NULL);
+\`unknown1\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Pet.dat';
 
 CREATE TABLE \`preload_groups\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
-\`id\` TEXT NOT NULL);
+\`id\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PreloadGroups.dat';
 
-CREATE TABLE \`preload_priorities\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`preload_priorities\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PreloadPriorities.dat';
 
 CREATE TABLE \`projectile_variations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`projectile_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`projectile_row\`));
+INDEX (\`projectile_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ProjectileVariations.dat';
 
 CREATE TABLE \`projectiles\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2306,7 +2661,8 @@ CREATE TABLE \`projectiles\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`flag0\` BOOLEAN NOT NULL,
 \`unknown6\` INT NOT NULL,
 \`flag1\` BOOLEAN NOT NULL,
-\`flag2\` BOOLEAN NOT NULL);
+\`flag2\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Projectiles.dat';
 
 CREATE TABLE \`prophecies\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2322,27 +2678,34 @@ INDEX (\`prophecy_chain_row\`),
 \`seal_cost_normal\` INT NOT NULL,
 \`seal_cost_cruel\` INT NOT NULL,
 \`seal_cost_merciless\` INT NOT NULL,
-\`flag1\` BOOLEAN NOT NULL);
+\`flag1\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Prophecies.dat';
 
 CREATE TABLE \`prophecies_quest_tracker_client_strings\` (\`prophecies_row\` BIGINT UNSIGNED,
-\`client_strings_row\` BIGINT UNSIGNED);
+\`client_strings_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Prophecies.dat: QuestTracker_ClientStringsKeys';
 
 CREATE TABLE \`prophecy_chain\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`unknown1\` INT NOT NULL,
 \`unknown3\` TEXT NOT NULL,
 \`unknown2\` INT NOT NULL,
-\`unknown4\` TEXT NOT NULL);
+\`unknown4\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ProphecyChain.dat';
 
 CREATE TABLE \`prophecy_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`unknown_unique\` INT NOT NULL);
+\`unknown_unique\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ProphecyType.dat';
 
-CREATE TABLE \`old_map_stash_tab_layout\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`old_map_stash_tab_layout\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'OldMapStashTabLayout.dat';
 
-CREATE TABLE \`orientations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`orientations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Orientations.dat';
 
-CREATE TABLE \`pvp_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`pvp_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'PVPTypes.dat';
 
 CREATE TABLE \`quest\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2359,7 +2722,8 @@ CREATE TABLE \`quest\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`flag1\` BOOLEAN NOT NULL,
 \`unknown11\` INT NOT NULL,
 \`flag2\` BOOLEAN NOT NULL,
-\`flag3\` BOOLEAN NOT NULL);
+\`flag3\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Quest.dat';
 
 CREATE TABLE \`quest_achievements\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`achievement_items_row\` BIGINT UNSIGNED NOT NULL,
@@ -2369,9 +2733,11 @@ INDEX (\`achievement_items_row\`),
 \`is_standard_achievement\` BOOLEAN NOT NULL,
 \`difficulties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`difficulties_row\`),
-\`unknown1\` INT NOT NULL);
+\`unknown1\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestAchievements.dat';
 
-CREATE TABLE \`quest_flags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`quest_flags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestFlags.dat';
 
 CREATE TABLE \`quest_rewards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`quest_row\` BIGINT UNSIGNED NOT NULL,
@@ -2391,7 +2757,8 @@ INDEX (\`0_row\`),
 \`1_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`1_row\`),
 \`unknown1\` INT NOT NULL,
-\`unknown2\` BOOLEAN NOT NULL);
+\`unknown2\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestRewards.dat';
 
 CREATE TABLE \`quest_states\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`quest_row\` BIGINT UNSIGNED NOT NULL,
@@ -2406,16 +2773,20 @@ INDEX (\`quest_row\`),
 \`map_pins_texts\` TEXT NOT NULL,
 \`quest_finished_ogg_file\` TEXT NOT NULL,
 \`unknown2\` BOOLEAN NOT NULL,
-\`unknown3\` TEXT NOT NULL);
+\`unknown3\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestStates.dat';
 
 CREATE TABLE \`quest_states_map_pins1\` (\`quest_states_row\` BIGINT UNSIGNED,
-\`map_pins_row\` BIGINT UNSIGNED);
+\`map_pins_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestStates.dat: MapPinsKeys1';
 
 CREATE TABLE \`quest_states_map_pins2\` (\`quest_states_row\` BIGINT UNSIGNED,
-\`map_pins_row\` BIGINT UNSIGNED);
+\`map_pins_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestStates.dat: MapPinsKeys2';
 
 CREATE TABLE \`quest_states2\` (\`quest_states_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestStates.dat: Keys2';
 
 CREATE TABLE \`quest_static_rewards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown0\` INT NOT NULL,
@@ -2427,42 +2798,51 @@ INDEX (\`stats_row\`),
 INDEX (\`difficulty_row\`),
 \`quest_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`quest_row\`),
-\`unknown2\` INT NOT NULL);
+\`unknown2\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestStaticRewards.dat';
 
 CREATE TABLE \`quest_vendor_rewards\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` INT NOT NULL,
 \`npc_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`npc_row\`),
 \`quest_state\` INT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestVendorRewards.dat';
 
 CREATE TABLE \`quest_vendor_rewards_characters\` (\`quest_vendor_rewards_row\` BIGINT UNSIGNED,
-\`characters_row\` BIGINT UNSIGNED);
+\`characters_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestVendorRewards.dat: CharactersKeys';
 
 CREATE TABLE \`quest_vendor_rewards_base_item_types\` (\`quest_vendor_rewards_row\` BIGINT UNSIGNED,
-\`base_item_types_row\` BIGINT UNSIGNED);
+\`base_item_types_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'QuestVendorRewards.dat: BaseItemTypesKeys';
 
 CREATE TABLE \`race_areas\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`races_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`races_row\`),
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`world_areas_row\`));
+INDEX (\`world_areas_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RaceAreas.dat';
 
 CREATE TABLE \`race_areas_mods\` (\`race_areas_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RaceAreas.dat: ModsKeys';
 
 CREATE TABLE \`race_areas0\` (\`race_areas_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RaceAreas.dat: Keys0';
 
 CREATE TABLE \`race_areas1\` (\`race_areas_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RaceAreas.dat: Keys1';
 
 CREATE TABLE \`race_times\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`races_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`races_row\`),
 \`index\` INT NOT NULL,
 \`start_unix_time\` INT NOT NULL,
-\`end_unix_time\` INT NOT NULL);
+\`end_unix_time\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RaceTimes.dat';
 
 CREATE TABLE \`races\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2472,13 +2852,16 @@ CREATE TABLE \`races\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`flag0\` BOOLEAN NOT NULL,
 \`unknown2\` INT NOT NULL,
 \`unknown3\` INT NOT NULL,
-\`unknown4\` INT NOT NULL);
+\`unknown4\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Races.dat';
 
 CREATE TABLE \`random_unique_monsters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown0\` BIGINT NOT NULL,
-\`data0\` TEXT NOT NULL);
+\`data0\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RandomUniqueMonsters.dat';
 
-CREATE TABLE \`rarity\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`rarity\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Rarity.dat';
 
 CREATE TABLE \`realms\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2489,26 +2872,31 @@ CREATE TABLE \`realms\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`short_name\` TEXT NOT NULL,
 \`data0\` TEXT NOT NULL,
 \`unknown0\` INT NOT NULL,
-\`unknown1\` INT NOT NULL);
+\`unknown1\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Realms.dat';
 
-CREATE TABLE \`relative_importance_constants\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`relative_importance_constants\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RelativeImportanceConstants.dat';
 
 CREATE TABLE \`rogue_exiles\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RogueExiles.dat';
 
 CREATE TABLE \`runic_circles\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown1\` INT NOT NULL,
 \`unknown2\` INT NOT NULL,
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
-\`unknown5\` INT NOT NULL);
+\`unknown5\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'RunicCircles.dat';
 
 CREATE TABLE \`shield_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`base_item_types_row\`),
-\`block\` INT NOT NULL);
+\`block\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShieldTypes.dat';
 
 CREATE TABLE \`shop_category\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2516,17 +2904,20 @@ CREATE TABLE \`shop_category\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`client_jpg_file\` TEXT NOT NULL,
 \`website_text\` TEXT NOT NULL,
 \`website_jpg_file\` TEXT NOT NULL,
-\`unknown5\` INT NOT NULL);
+\`unknown5\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopCategory.dat';
 
 CREATE TABLE \`shop_country\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`country_two_letter_code\` TEXT NOT NULL,
 \`country\` TEXT NOT NULL,
 \`shop_currency_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`shop_currency_row\`));
+INDEX (\`shop_currency_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopCountry.dat';
 
 CREATE TABLE \`shop_currency\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`currency_code\` TEXT NOT NULL,
-\`currency_sign\` TEXT NOT NULL);
+\`currency_sign\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopCurrency.dat';
 
 CREATE TABLE \`shop_item\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2541,20 +2932,24 @@ CREATE TABLE \`shop_item\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown15\` INT NOT NULL,
 \`flag0\` BOOLEAN NOT NULL,
 \`is_tencent_item\` BOOLEAN NOT NULL,
-\`is_tradeable\` BOOLEAN NOT NULL);
+\`is_tradeable\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopItem.dat';
 
 CREATE TABLE \`shop_item_package_shop_item\` (\`shop_item_left_row\` BIGINT UNSIGNED,
-\`shop_item_right_row\` BIGINT UNSIGNED);
+\`shop_item_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopItem.dat: Package_ShopItemKeys';
 
 CREATE TABLE \`shop_item_shop_category\` (\`shop_item_row\` BIGINT UNSIGNED,
-\`shop_category_row\` BIGINT UNSIGNED);
+\`shop_category_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopItem.dat: ShopCategoryKeys';
 
 CREATE TABLE \`shop_item_price\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`shop_item_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`shop_item_row\`),
 \`shop_region_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`shop_region_row\`),
-\`price\` INT NOT NULL);
+\`price\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopItemPrice.dat';
 
 CREATE TABLE \`shop_payment_package\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2574,7 +2969,8 @@ INDEX (\`0_row\`),
 \`flag1\` BOOLEAN NOT NULL,
 \`upgrade_shop_payment_package_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`upgrade_shop_payment_package_row\`),
-\`physical_item_points\` INT NOT NULL);
+\`physical_item_points\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopPaymentPackage.dat';
 
 CREATE TABLE \`shop_payment_package_items\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` INT NOT NULL,
@@ -2584,22 +2980,26 @@ INDEX (\`shop_payment_package_row\`),
 INDEX (\`shop_item_row\`),
 \`unknown0\` TEXT NOT NULL,
 \`shop_token_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`shop_token_row\`));
+INDEX (\`shop_token_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopPaymentPackageItems.dat';
 
 CREATE TABLE \`shop_payment_package_price\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`shop_payment_package_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`shop_payment_package_row\`),
 \`shop_country_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`shop_country_row\`),
-\`price\` INT NOT NULL);
+\`price\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopPaymentPackagePrice.dat';
 
 CREATE TABLE \`shop_region\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
-\`id\` TEXT NOT NULL);
+\`id\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopRegion.dat';
 
 CREATE TABLE \`shop_token\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`type_id\` TEXT NOT NULL,
-\`description\` TEXT NOT NULL);
+\`description\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShopToken.dat';
 
 CREATE TABLE \`shrine_buffs\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2607,12 +3007,14 @@ CREATE TABLE \`shrine_buffs\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`buff_definitions_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`buff_definitions_row\`),
 \`0_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`0_row\`));
+INDEX (\`0_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShrineBuffs.dat';
 
 CREATE TABLE \`shrine_sounds\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`stereo_sound_file\` TEXT NOT NULL,
-\`mono_sound_file\` TEXT NOT NULL);
+\`mono_sound_file\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'ShrineSounds.dat';
 
 CREATE TABLE \`shrines\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2637,10 +3039,12 @@ INDEX (\`shrine_sounds_row\`),
 \`unknown14\` BOOLEAN NOT NULL,
 \`is_pvp_only\` BOOLEAN NOT NULL,
 \`unknown17\` BOOLEAN NOT NULL,
-\`is_lesser_shrine\` BOOLEAN NOT NULL);
+\`is_lesser_shrine\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Shrines.dat';
 
 CREATE TABLE \`shrines_achievement_items\` (\`shrines_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Shrines.dat: AchievementItemsKeys';
 
 CREATE TABLE \`skill_gems\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -2652,27 +3056,33 @@ INDEX (\`granted_effects_row\`),
 \`int\` INT NOT NULL,
 \`vaal_variant_base_item_types_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`vaal_variant_base_item_types_row\`),
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SkillGems.dat';
 
 CREATE TABLE \`skill_gems_gem_tags\` (\`skill_gems_row\` BIGINT UNSIGNED,
-\`gem_tags_row\` BIGINT UNSIGNED);
+\`gem_tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SkillGems.dat: GemTagsKeys';
 
 CREATE TABLE \`skill_totem_variations\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`skill_totems_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`skill_totems_row\`),
 \`totem_skin_id\` INT NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`monster_varieties_row\`));
+INDEX (\`monster_varieties_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SkillTotemVariations.dat';
 
-CREATE TABLE \`skill_totems\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`skill_totems\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SkillTotems.dat';
 
 CREATE TABLE \`sound_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`sound_file\` TEXT NOT NULL,
 \`sound_file_2_d\` TEXT NOT NULL,
-\`unknown3\` BOOLEAN NOT NULL);
+\`unknown3\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SoundEffects.dat';
 
-CREATE TABLE \`stat_description_functions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`stat_description_functions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StatDescriptionFunctions.dat';
 
 CREATE TABLE \`stats\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2690,9 +3100,11 @@ INDEX (\`main_hand_alias_stats_row\`),
 INDEX (\`off_hand_alias_stats_row\`),
 \`flag7\` BOOLEAN NOT NULL,
 \`unknown3\` INT NOT NULL,
-\`unknown0\` TEXT NOT NULL);
+\`unknown0\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Stats.dat';
 
-CREATE TABLE \`stat_semantics\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`stat_semantics\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StatSemantics.dat';
 
 CREATE TABLE \`str_dex_int_mission_extra_requirement\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2706,27 +3118,32 @@ CREATE TABLE \`str_dex_int_mission_extra_requirement\` (\`row\` BIGINT UNSIGNED 
 \`npc_talk_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`npc_talk_row\`),
 \`time_limit_bonus_from_objective\` INT NOT NULL,
-\`object_count\` INT NOT NULL);
+\`object_count\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissionExtraRequirement.dat';
 
 CREATE TABLE \`str_dex_int_mission_maps\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`world_areas_row\`),
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissionMaps.dat';
 
 CREATE TABLE \`str_dex_int_mission_maps_map_boss_monster_varieties\` (\`str_dex_int_mission_maps_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissionMaps.dat: MapBoss_MonsterVarietiesKeys';
 
 CREATE TABLE \`str_dex_int_mission_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
-\`is_unique_map\` BOOLEAN NOT NULL);
+\`is_unique_map\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissionMods.dat';
 
 CREATE TABLE \`str_dex_int_mission_mods_mods\` (\`str_dex_int_mission_mods_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissionMods.dat: ModsKeys';
 
 CREATE TABLE \`str_dex_int_mission_unique_maps\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`0_row\` BIGINT UNSIGNED NOT NULL,
@@ -2735,13 +3152,16 @@ INDEX (\`0_row\`),
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`world_areas_row\`));
+INDEX (\`world_areas_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissionUniqueMaps.dat';
 
 CREATE TABLE \`str_dex_int_mission_unique_maps_mods\` (\`str_dex_int_mission_unique_maps_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissionUniqueMaps.dat: ModsKeys';
 
 CREATE TABLE \`str_dex_int_mission_unique_maps_map_boss_monster_varieties\` (\`str_dex_int_mission_unique_maps_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissionUniqueMaps.dat: MapBoss_MonsterVarietiesKeys';
 
 CREATE TABLE \`str_dex_int_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2760,13 +3180,16 @@ INDEX (\`npc_talk_row\`),
 \`monster_packs_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_packs_row\`),
 \`object_count_required\` INT NOT NULL,
-\`object_count_total\` INT NOT NULL);
+\`object_count_total\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissions.dat';
 
 CREATE TABLE \`str_dex_int_missions_extra_mods\` (\`str_dex_int_missions_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissions.dat: Extra_ModsKeys';
 
 CREATE TABLE \`str_dex_int_missions_achievement_items\` (\`str_dex_int_missions_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexIntMissions.dat: AchievementItemsKeys';
 
 CREATE TABLE \`str_dex_mission_archetypes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2774,16 +3197,19 @@ CREATE TABLE \`str_dex_mission_archetypes\` (\`row\` BIGINT UNSIGNED NOT NULL PR
 INDEX (\`monster_varieties_row\`),
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissionArchetypes.dat';
 
 CREATE TABLE \`str_dex_mission_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissionMods.dat';
 
 CREATE TABLE \`str_dex_mission_mods_mods\` (\`str_dex_mission_mods_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissionMods.dat: ModsKeys';
 
 CREATE TABLE \`str_dex_mission_special_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2791,10 +3217,12 @@ CREATE TABLE \`str_dex_mission_special_mods\` (\`row\` BIGINT UNSIGNED NOT NULL 
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
 \`0_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`0_row\`));
+INDEX (\`0_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissionSpecialMods.dat';
 
 CREATE TABLE \`str_dex_mission_special_mods_mods\` (\`str_dex_mission_special_mods_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissionSpecialMods.dat: ModsKeys';
 
 CREATE TABLE \`str_dex_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2808,16 +3236,20 @@ INDEX (\`dummy_monster_varieties_row\`),
 \`dummy_spawn_timer\` INT NOT NULL,
 \`npc_talk_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`npc_talk_row\`),
-\`unknown12\` INT NOT NULL);
+\`unknown12\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissions.dat';
 
 CREATE TABLE \`str_dex_missions_allies_monster_varieties\` (\`str_dex_missions_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissions.dat: Allies_MonsterVarietiesKeys';
 
 CREATE TABLE \`str_dex_missions_mods\` (\`str_dex_missions_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissions.dat: ModsKeys';
 
 CREATE TABLE \`str_dex_missions_traps_monster_varieties\` (\`str_dex_missions_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrDexMissions.dat: Traps_MonsterVarietiesKeys';
 
 CREATE TABLE \`str_int_mission_monster_waves\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2832,10 +3264,12 @@ INDEX (\`monster_packs_row\`),
 \`0_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`0_row\`),
 \`unknown13\` TEXT NOT NULL,
-\`unique_count\` INT NOT NULL);
+\`unique_count\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissionMonsterWaves.dat';
 
 CREATE TABLE \`str_int_mission_monster_waves_unique_monster_varieties\` (\`str_int_mission_monster_waves_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissionMonsterWaves.dat: Unique_MonsterVarietiesKeys';
 
 CREATE TABLE \`str_int_mission_relic_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2843,10 +3277,12 @@ CREATE TABLE \`str_int_mission_relic_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PR
 \`flag1\` BOOLEAN NOT NULL,
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
-\`max_level\` INT NOT NULL);
+\`max_level\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissionRelicMods.dat';
 
 CREATE TABLE \`str_int_mission_relic_mods_mods\` (\`str_int_mission_relic_mods_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissionRelicMods.dat: ModsKeys';
 
 CREATE TABLE \`str_int_mission_relic_patterns\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2857,10 +3293,12 @@ CREATE TABLE \`str_int_mission_relic_patterns\` (\`row\` BIGINT UNSIGNED NOT NUL
 \`spawn_weight\` INT NOT NULL,
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
-\`enemy_relic_count\` INT NOT NULL);
+\`enemy_relic_count\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissionRelicPatterns.dat';
 
 CREATE TABLE \`str_int_mission_relic_patterns_relic_mods\` (\`str_int_mission_relic_patterns_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissionRelicPatterns.dat: Relic_ModsKeys';
 
 CREATE TABLE \`str_int_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2875,13 +3313,16 @@ INDEX (\`npc_talk_row\`),
 \`is_destroy_relic1\` BOOLEAN NOT NULL,
 \`is_destroy_relic2\` BOOLEAN NOT NULL,
 \`feed_required\` INT NOT NULL,
-\`f12\` INT NOT NULL);
+\`f12\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissions.dat';
 
 CREATE TABLE \`str_int_missions_relic_mods\` (\`str_int_missions_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissions.dat: RelicModsKeys';
 
 CREATE TABLE \`str_int_missions_achievement_items\` (\`str_int_missions_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrIntMissions.dat: AchievementItemsKeys';
 
 CREATE TABLE \`str_map_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2889,7 +3330,8 @@ CREATE TABLE \`str_map_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
 \`mods_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`mods_row\`));
+INDEX (\`mods_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMapMods.dat';
 
 CREATE TABLE \`str_mission_bosses\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2897,7 +3339,8 @@ CREATE TABLE \`str_mission_bosses\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KE
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`monster_varieties_row\`));
+INDEX (\`monster_varieties_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMissionBosses.dat';
 
 CREATE TABLE \`str_mission_map_mod_numbers\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2905,7 +3348,8 @@ CREATE TABLE \`str_mission_map_mod_numbers\` (\`row\` BIGINT UNSIGNED NOT NULL P
 \`min_level\` INT NOT NULL,
 \`max_level\` INT NOT NULL,
 \`unknown0\` INT NOT NULL,
-\`unknown1\` INT NOT NULL);
+\`unknown1\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMissionMapModNumbers.dat';
 
 CREATE TABLE \`str_mission_spirit_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2920,13 +3364,16 @@ INDEX (\`0_row\`),
 \`3_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`3_row\`),
 \`b1\` BOOLEAN NOT NULL,
-\`b2\` BOOLEAN NOT NULL);
+\`b2\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMissionSpiritEffects.dat';
 
 CREATE TABLE \`str_mission_spirit_effects_summon_monster_varieties\` (\`str_mission_spirit_effects_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMissionSpiritEffects.dat: Summon_MonsterVarietiesKeys';
 
 CREATE TABLE \`str_mission_spirit_effects_ground_effect_monster_varieties\` (\`str_mission_spirit_effects_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMissionSpiritEffects.dat: GroundEffect_MonsterVarietiesKeys';
 
 CREATE TABLE \`str_mission_spirit_secondary_effects\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2940,7 +3387,8 @@ INDEX (\`0_row\`),
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`monster_varieties_row\`),
 \`2_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`2_row\`));
+INDEX (\`2_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMissionSpiritSecondaryEffects.dat';
 
 CREATE TABLE \`str_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2955,17 +3403,20 @@ INDEX (\`npc_talk_row\`),
 \`f12\` INT NOT NULL,
 \`f13\` INT NOT NULL,
 \`b1\` BOOLEAN NOT NULL,
-\`b2\` BOOLEAN NOT NULL);
+\`b2\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMissions.dat';
 
 CREATE TABLE \`str_missions_mods\` (\`str_missions_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'StrMissions.dat: ModsKeys';
 
 CREATE TABLE \`strongboxes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`chests_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`chests_row\`),
 \`spawn_weight\` INT NOT NULL,
 \`unknown1\` INT NOT NULL,
-\`is_cartographer_box\` BOOLEAN NOT NULL);
+\`is_cartographer_box\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Strongboxes.dat';
 
 CREATE TABLE \`summoned_specific_barrels\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2975,7 +3426,8 @@ INDEX (\`chests_row\`),
 INDEX (\`1_row\`),
 \`unknown3\` INT NOT NULL,
 \`2_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`2_row\`));
+INDEX (\`2_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SummonedSpecificBarrels.dat';
 
 CREATE TABLE \`summoned_specific_monsters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2983,7 +3435,8 @@ CREATE TABLE \`summoned_specific_monsters\` (\`row\` BIGINT UNSIGNED NOT NULL PR
 INDEX (\`monster_varieties_row\`),
 \`unknown3\` INT NOT NULL,
 \`0_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`0_row\`));
+INDEX (\`0_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SummonedSpecificMonsters.dat';
 
 CREATE TABLE \`summoned_specific_monsters_on_death\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -2993,24 +3446,28 @@ INDEX (\`monster_varieties_row\`),
 \`1_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`1_row\`),
 \`unknown4\` INT NOT NULL,
-\`unknown7\` BIT(8) NOT NULL);
+\`unknown7\` BIT(8) NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SummonedSpecificMonstersOnDeath.dat';
 
 CREATE TABLE \`supporter_pack_sets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`format_title\` TEXT NOT NULL,
 \`background\` TEXT NOT NULL,
 \`time0\` TEXT NOT NULL,
-\`time1\` TEXT NOT NULL);
+\`time1\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'SupporterPackSets.dat';
 
 CREATE TABLE \`tags\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`unknown0\` INT UNSIGNED NOT NULL);
+\`unknown0\` INT UNSIGNED NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Tags.dat';
 
 CREATE TABLE \`talisman_monster_mods\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown1\` INT NOT NULL,
 \`unknown2\` INT NOT NULL,
 \`0_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`0_row\`));
+INDEX (\`0_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TalismanMonsterMods.dat';
 
 CREATE TABLE \`talisman_packs\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -3023,10 +3480,12 @@ INDEX (\`monster_varieties_row\`),
 \`unknown10\` INT NOT NULL,
 \`unknown11\` INT NOT NULL,
 \`monster_packs_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`monster_packs_row\`));
+INDEX (\`monster_packs_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TalismanPacks.dat';
 
 CREATE TABLE \`talisman_packs_monster_packs\` (\`talisman_packs_row\` BIGINT UNSIGNED,
-\`monster_packs_row\` BIGINT UNSIGNED);
+\`monster_packs_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TalismanPacks.dat: MonsterPacksKeys';
 
 CREATE TABLE \`talismans\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -3041,15 +3500,18 @@ INDEX (\`mods_row\`),
 INDEX (\`0_row\`),
 \`1_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`1_row\`),
-\`unknown11\` INT NOT NULL);
+\`unknown11\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Talismans.dat';
 
 CREATE TABLE \`terrain_plugins\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`unknown_unique\` INT NOT NULL);
+\`unknown_unique\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TerrainPlugins.dat';
 
 CREATE TABLE \`tips\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`text\` TEXT NOT NULL);
+\`text\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Tips.dat';
 
 CREATE TABLE \`topologies\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -3058,7 +3520,8 @@ CREATE TABLE \`topologies\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
 \`environments_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`environments_row\`));
+INDEX (\`environments_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Topologies.dat';
 
 CREATE TABLE \`torment_spirits\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
@@ -3068,29 +3531,36 @@ INDEX (\`monster_varieties_row\`),
 \`spawn_weight\` INT NOT NULL,
 \`summoned_monster_monster_varieties_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`summoned_monster_monster_varieties_row\`),
-\`unknown13\` INT NOT NULL);
+\`unknown13\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TormentSpirits.dat';
 
 CREATE TABLE \`torment_spirits_spirit_mods\` (\`torment_spirits_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TormentSpirits.dat: Spirit_ModsKeys';
 
 CREATE TABLE \`torment_spirits_touched_mods\` (\`torment_spirits_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TormentSpirits.dat: Touched_ModsKeys';
 
 CREATE TABLE \`torment_spirits_possessed_mods\` (\`torment_spirits_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TormentSpirits.dat: Possessed_ModsKeys';
 
 CREATE TABLE \`torment_spirits_mods0\` (\`torment_spirits_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TormentSpirits.dat: ModsKeys0';
 
 CREATE TABLE \`torment_spirits_mods1\` (\`torment_spirits_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TormentSpirits.dat: ModsKeys1';
 
 CREATE TABLE \`trigger_spawners\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`data0\` TEXT NOT NULL,
 \`unknown0\` INT NOT NULL,
 \`data1\` TEXT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'TriggerSpawners.dat';
 
 CREATE TABLE \`unique_chests\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -3107,17 +3577,21 @@ INDEX (\`words_row\`),
 \`0_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`0_row\`),
 \`1_row\` BIGINT UNSIGNED NOT NULL,
-INDEX (\`1_row\`));
+INDEX (\`1_row\`))
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'UniqueChests.dat';
 
 CREATE TABLE \`unique_chests_mods\` (\`unique_chests_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'UniqueChests.dat: ModsKeys';
 
 CREATE TABLE \`unique_jewel_limits\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`unique_items_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`unique_items_row\`),
-\`limit\` INT NOT NULL);
+\`limit\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'UniqueJewelLimits.dat';
 
-CREATE TABLE \`unique_set_names\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`unique_set_names\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'UniqueSetNames.dat';
 
 CREATE TABLE \`unique_sets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -3125,28 +3599,33 @@ CREATE TABLE \`unique_sets\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`words_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`words_row\`),
 \`unknown2\` INT NOT NULL,
-\`flag0\` BOOLEAN NOT NULL);
+\`flag0\` BOOLEAN NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'UniqueSets.dat';
 
 CREATE TABLE \`vote_state\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
-\`text\` TEXT NOT NULL);
+\`text\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'VoteState.dat';
 
 CREATE TABLE \`vote_type\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
 \`text\` TEXT NOT NULL,
 \`accept_text\` TEXT NOT NULL,
 \`reject_text\` TEXT NOT NULL,
-\`unknown0\` INT NOT NULL);
+\`unknown0\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'VoteType.dat';
 
 CREATE TABLE \`warbands_graph\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`world_areas_row\`),
-\`connections\` TEXT NOT NULL);
+\`connections\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WarbandsGraph.dat';
 
 CREATE TABLE \`warbands_map_graph\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`world_areas_row\` BIGINT UNSIGNED NOT NULL,
 INDEX (\`world_areas_row\`),
-\`connections\` TEXT NOT NULL);
+\`connections\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WarbandsMapGraph.dat';
 
 CREATE TABLE \`warbands_pack_monsters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -3159,19 +3638,24 @@ CREATE TABLE \`warbands_pack_monsters\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMAR
 \`tier1_art\` TEXT NOT NULL,
 \`tier2_art\` TEXT NOT NULL,
 \`tier3_art\` TEXT NOT NULL,
-\`tier4_art\` TEXT NOT NULL);
+\`tier4_art\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WarbandsPackMonsters.dat';
 
 CREATE TABLE \`warbands_pack_monsters_tier4_monster_varieties\` (\`warbands_pack_monsters_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WarbandsPackMonsters.dat: Tier4_MonsterVarietiesKeys';
 
 CREATE TABLE \`warbands_pack_monsters_tier3_monster_varieties\` (\`warbands_pack_monsters_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WarbandsPackMonsters.dat: Tier3_MonsterVarietiesKeys';
 
 CREATE TABLE \`warbands_pack_monsters_tier2_monster_varieties\` (\`warbands_pack_monsters_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WarbandsPackMonsters.dat: Tier2_MonsterVarietiesKeys';
 
 CREATE TABLE \`warbands_pack_monsters_tier1_monster_varieties\` (\`warbands_pack_monsters_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WarbandsPackMonsters.dat: Tier1_MonsterVarietiesKeys';
 
 CREATE TABLE \`warbands_pack_numbers\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -3184,13 +3668,17 @@ CREATE TABLE \`warbands_pack_numbers\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY
 \`unknown7\` INT NOT NULL,
 \`tier2_number\` INT NOT NULL,
 \`unknown9\` INT NOT NULL,
-\`tier1_number\` INT NOT NULL);
+\`tier1_number\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WarbandsPackNumbers.dat';
 
-CREATE TABLE \`weapon_armour_common\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`weapon_armour_common\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WeaponArmourCommon.dat';
 
-CREATE TABLE \`weapon_classes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`weapon_classes\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WeaponClasses.dat';
 
-CREATE TABLE \`weapon_damage_scaling\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`weapon_damage_scaling\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WeaponDamageScaling.dat';
 
 CREATE TABLE \`weapon_impact_sound_data\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -3198,9 +3686,11 @@ CREATE TABLE \`weapon_impact_sound_data\` (\`row\` BIGINT UNSIGNED NOT NULL PRIM
 \`unknown2\` INT NOT NULL,
 \`unknown3\` INT NOT NULL,
 \`unknown4\` INT NOT NULL,
-\`unknown5\` INT NOT NULL);
+\`unknown5\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WeaponImpactSoundData.dat';
 
-CREATE TABLE \`weapon_sound_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`weapon_sound_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WeaponSoundTypes.dat';
 
 CREATE TABLE \`weapon_types\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`base_item_types_row\` BIGINT UNSIGNED NOT NULL,
@@ -3210,19 +3700,23 @@ INDEX (\`base_item_types_row\`),
 \`damage_min\` INT NOT NULL,
 \`damage_max\` INT NOT NULL,
 \`range_max\` INT NOT NULL,
-\`null6\` INT NOT NULL);
+\`null6\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WeaponTypes.dat';
 
-CREATE TABLE \`wordlists\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY);
+CREATE TABLE \`wordlists\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Wordlists.dat';
 
 CREATE TABLE \`words\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`type\` INT NOT NULL,
 \`text\` TEXT NOT NULL,
 \`unknown6\` INT NOT NULL,
 \`text2\` TEXT NOT NULL,
-\`unknown8\` TEXT NOT NULL);
+\`unknown8\` TEXT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Words.dat';
 
 CREATE TABLE \`words_spawn_weight_tags\` (\`words_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'Words.dat: SpawnWeight_TagsKeys';
 
 CREATE TABLE \`world_areas\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`id\` TEXT NOT NULL,
@@ -3302,45 +3796,59 @@ INDEX (\`8_mods_full_clear_achievement_items_row\`),
 \`unknown90\` INT NOT NULL,
 \`unknown91\` INT NOT NULL,
 \`unknown92\` INT NOT NULL,
-\`unknown93\` INT NOT NULL);
+\`unknown93\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat';
 
 CREATE TABLE \`world_areas_connections_world_areas\` (\`world_areas_left_row\` BIGINT UNSIGNED,
-\`world_areas_right_row\` BIGINT UNSIGNED);
+\`world_areas_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: Connections_WorldAreasKeys';
 
 CREATE TABLE \`world_areas_topologies\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`topologies_row\` BIGINT UNSIGNED);
+\`topologies_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: TopologiesKeys';
 
 CREATE TABLE \`world_areas_bosses_monster_varieties\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: Bosses_MonsterVarietiesKeys';
 
 CREATE TABLE \`world_areas_monsters_monster_varieties\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`monster_varieties_row\` BIGINT UNSIGNED);
+\`monster_varieties_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: Monsters_MonsterVarietiesKeys';
 
 CREATE TABLE \`world_areas_spawn_weight_tags\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: SpawnWeight_TagsKeys';
 
 CREATE TABLE \`world_areas_full_clear_achievement_items\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: FullClear_AchievementItemsKeys';
 
 CREATE TABLE \`world_areas_mods\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`mods_row\` BIGINT UNSIGNED);
+\`mods_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: ModsKeys';
 
 CREATE TABLE \`world_areas_vaal_area_world_areas\` (\`world_areas_left_row\` BIGINT UNSIGNED,
-\`world_areas_right_row\` BIGINT UNSIGNED);
+\`world_areas_right_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: VaalArea_WorldAreasKeys';
 
 CREATE TABLE \`world_areas_area_type_tags\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: AreaType_TagsKeys';
 
 CREATE TABLE \`world_areas_tags\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`tags_row\` BIGINT UNSIGNED);
+\`tags_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: TagsKeys';
 
 CREATE TABLE \`world_areas1\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`achievement_items_row\` BIGINT UNSIGNED);
+\`achievement_items_row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: Keys1';
 
 CREATE TABLE \`world_areas2\` (\`world_areas_row\` BIGINT UNSIGNED,
-\`row\` BIGINT UNSIGNED);
+\`row\` BIGINT UNSIGNED)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'WorldAreas.dat: Keys2';
 
 CREATE TABLE \`xp_per_level_for_missions\` (\`row\` BIGINT UNSIGNED NOT NULL PRIMARY KEY,
 \`zone_level\` INT NOT NULL,
-\`experience\` INT NOT NULL);"
+\`experience\` INT NOT NULL)
+ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'XPPerLevelForMissions.dat';"
 `;

@@ -1,8 +1,8 @@
 const MysqlSchema = require('../../src/MysqlSchema');
 const { connection, name } = require('../../src/db');
-const specification = require('../../data/dat.specification.json');
+const specification = require('../../data/spec.json');
 
-const schema = new MysqlSchema(specification.dats);
+const schema = new MysqlSchema(specification);
 
 const db = connection({ database: undefined });
 

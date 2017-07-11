@@ -125,6 +125,8 @@ class MysqlTableSchema {
     );
   }
 
+  // TODO pypoe_exporter does not include virtual_fields
+  // but sometimes we have prefixed colds nontheless
   extendedProps(field) {
     if (this.isExtendedProp(field)) {
       return (
@@ -308,11 +310,15 @@ class MysqlTableSchema {
   }
 
   get fields() {
-    return this.props.fields === null ? [] : this.props.fields;
+    return this.props;
   }
 
+  /**
+   * TODO pypoe_exporter does not include virtual fields
+   * but we rely on them for extended props
+   */
   get virtual_fields() {
-    return this.props.virtual_fields || [];
+    return [];
   }
 
   assertFieldExists(field) {

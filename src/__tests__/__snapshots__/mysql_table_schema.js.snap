@@ -225,3 +225,5 @@ exports[`MysqlTableSchema should generate correct create queries for all relatio
 \`atlas_node_right_row\` BIGINT UNSIGNED)
 ENGINE = MyISAM, CHARACTER SET = utf8mb4, COLLATE = utf8mb4_unicode_ci, COMMENT = 'AtlasNode.dat: AtlasNodeKeys';"
 `;
+
+exports[`MysqlTableSchema should generate the col names for INSERT statements 1`] = `"INSERT INTO \`mods\`(\`row\`, \`id\`, \`unknown0\`, \`mod_type_row\`, \`level\`, \`stats1_row\`, \`stats2_row\`, \`stats3_row\`, \`stats4_row\`, \`domain\`, \`name\`, \`generation_type\`, \`correct_group\`, \`stat1_min\`, \`stat1_max\`, \`stat2_min\`, \`stat2_max\`, \`stat3_min\`, \`stat3_max\`, \`stat4_min\`, \`stat4_max\`, \`buff_definitions_row\`, \`buff_value\`, \`granted_effects_per_level_row\`, \`data1\`, \`data2\`, \`monster_metadata\`, \`data3\`, \`data4\`, \`0_row\`, \`stat5_min\`, \`stat5_max\`, \`stats5_row\`, \`achievement_items_row\`, \`data5\`, \`is_essence_only_modifier\`)"`;

@@ -285,6 +285,16 @@ class MysqlTableSchema {
     return this.orderedFieldNames().filter(field => this.isHasMany(field));
   }
 
+  insertExtendedQuery() {
+    return (
+      'INSERT INTO ' +
+      this.tableName() +
+      '(' +
+      this.cols().map(col => this.colName(col)).join(', ') +
+      ')'
+    );
+  }
+
   isKeyCandidate(field) {
     return field === PRIMARY || this.isForeignKey(field);
   }

@@ -92,4 +92,8 @@ describe('MysqlTableSchema', () => {
       ).createQueryRelations(),
     ).toMatchSnapshot();
   });
+
+  it('should generate the col names for INSERT statements', () => {
+    expect(mods.insertExtendedQuery()).toMatchSnapshot();
+  });
 });

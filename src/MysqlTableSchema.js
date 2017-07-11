@@ -286,9 +286,12 @@ class MysqlTableSchema {
     return this.orderedFieldNames().filter(field => this.isHasMany(field));
   }
 
-  insertExtendedQuery() {
+  insertQuery(options = { ignore: false }) {
+    const { ignore } = options;
+
     return (
       'INSERT INTO ' +
+      (ignore ? 'IGNORE ' : '') +
       this.tableName() +
       '(' +
       this.cols().map(col => this.colName(col)).join(', ') +

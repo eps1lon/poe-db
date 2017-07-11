@@ -17,8 +17,8 @@
     "db:rebuild": "yarn run db:drop && yarn run db:build",
     "precommit": "lint-staged",
     "test": "jest",
-    "preparse-spec": "nearleyc data/dat.specification.ne -o data/dat.specification.js",
-    "parse-spec": "node scripts/definitionsConfigObjToJson"
+    "parse-content": "pypoe_exporter dat json data/content.json",
+    "postparse-content": "node scripts/postParseContent"
   },
   "lint-staged": {
     "*.js": ["prettier --single-quote --trailing-comma all --write", "git add"]
@@ -37,7 +37,6 @@
   },
   "dependencies": {
     "mysql": "^2.13.0",
-    "nearley": "^2.10.1",
     "string": "^3.3.3",
     "yargs": "^8.0.2"
   }

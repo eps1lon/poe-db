@@ -2,7 +2,7 @@ const MysqlSchema = require('../../src/MysqlSchema');
 const { connection } = require('../../src/db');
 
 const db = connection({ multipleStatements: true });
-const specification = require('../../data/dat.specification.json');
+const specification = require('../../data/spec.json');
 
 const schema = new MysqlSchema(specification.dats);
 

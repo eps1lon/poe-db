@@ -290,10 +290,11 @@ class MysqlTableSchema {
     const { ignore } = options;
 
     return (
-      'INSERT INTO ' +
+      'INSERT ' +
       (ignore ? 'IGNORE ' : '') +
+      'INTO ' +
       this.tableName() +
-      '(' +
+      ' (' +
       this.cols().map(col => this.colName(col)).join(', ') +
       ')'
     );

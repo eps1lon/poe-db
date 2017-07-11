@@ -12,7 +12,15 @@ const content = require(pypoe_content);
 fs.writeFile(
   spec_out,
   JSON.stringify(
-    entriesToObj(content.map(row => [row.filename, row.header])),
+    entriesToObj(
+      content.map(row => [
+        row.filename,
+        {
+          fields: row.header,
+          virtual_fields: row.virtual_header,
+        },
+      ]),
+    ),
     null,
     2,
   ),

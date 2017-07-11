@@ -18,7 +18,7 @@
     "install": "cd pypoe && pip install -e .[cli]",
     "precommit": "lint-staged",
     "test": "jest",
-    "parse-content": "pypoe_exporter dat json data/content.json",
+    "parse-content": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postparse-content": "node scripts/postParseContent"
   },
   "lint-staged": {

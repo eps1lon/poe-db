@@ -1,6 +1,6 @@
 const MysqlSchema = require('../MysqlSchema');
 
-const spec = require('./spec.json')[0];
+const spec = require('./spec.json');
 
 describe('MysqlTableSchema', () => {
   it.skip('should match the db schema', () => {

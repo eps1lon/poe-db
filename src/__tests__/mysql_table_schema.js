@@ -1,6 +1,6 @@
 const MysqlTableSchema = require('../MysqlTableSchema');
 
-const spec = require('./spec.json')[0];
+const spec = require('./spec.json');
 
 describe('MysqlTableSchema', () => {
   const mods = new MysqlTableSchema('Mods.dat', spec['Mods.dat']);
@@ -11,7 +11,7 @@ describe('MysqlTableSchema', () => {
         'OldMapStashTabLayout.dat',
         spec['OldMapStashTabLayout.dat'],
       ).fields,
-    ).toEqual([]);
+    ).toEqual({});
   });
 
   it('should recognized extended props', () => {

@@ -256,14 +256,14 @@ class MysqlTableSchema {
   cols() {
     return [
       PRIMARY,
-      ...Object.keys(this.fields).filter(
+      ...this.orderedFieldNames().filter(
         field => !this.isHasMany(field) && !this.isExtendedProp(field),
       ),
     ];
   }
 
   relations() {
-    return Object.keys(this.fields).filter(field => this.isHasMany(field));
+    return this.orderedFieldNames().filter(field => this.isHasMany(field));
   }
 
   isKeyCandidate(field) {
@@ -329,6 +329,23 @@ class MysqlTableSchema {
 
   hasField(field) {
     return this.fields[field] !== undefined;
+  }
+
+  /**
+   * returns the field names in the order they are defined in
+   * spec.ini
+   * useful since the values are ordererd like this in the dats
+   * also for consistent col structure
+   * @return Array<string>
+   */
+  orderedFieldNames() {
+    return this.fieldNames().sort(
+      (a, b) => this.fields[a].rowid - this.fields[b].rowid,
+    );
+  }
+
+  fieldNames() {
+    return Object.keys(this.fields);
   }
 }
 

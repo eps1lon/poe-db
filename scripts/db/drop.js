@@ -1,8 +1,6 @@
-const mysql = require('mysql');
-
 const { connection, name } = require('../../src/db');
 
-const db = connection({ database: undefined, multipleStatements: true });
+const db = connection({ database: undefined });
 
 db.connect();
 

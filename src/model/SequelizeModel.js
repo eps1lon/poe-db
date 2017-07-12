@@ -41,7 +41,19 @@ class SequelizeModel extends Model {
     ];
   }
 
-  belongsTo() {}
+  belongsTo() {
+    return Object.keys(this.fields)
+      .filter(field => this._isBelongsTo(field))
+      .map(field => [
+        Model.name(this.fields[field].key),
+        {
+          foreignKey: SequelizeModel.colCasing(field),
+          target: SequelizeModel.colCasing(
+            this.fields[field].key_id || PRIMARY,
+          ),
+        },
+      ]);
+  }
 
   hasMany() {}
 
@@ -62,6 +74,10 @@ class SequelizeModel extends Model {
     } else {
       return /Key(s)?[0-9]*$/.test(field);
     }
+  }
+
+  _isBelongsTo(field) {
+    return /Key[0-9]*$/.test(field);
   }
 
   _isHasMany(field) {

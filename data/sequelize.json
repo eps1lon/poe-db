@@ -32,6 +32,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Achievements",
+        {
+          "foreignKey": "achievements_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -51,6 +60,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "AchievementSetsDisplay",
+        {
+          "foreignKey": "achievement_sets_display_key",
+          "target": "id"
+        }
+      ],
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -62,7 +87,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -81,7 +107,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -132,6 +159,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "AchievementSetsDisplay",
+        {
+          "foreignKey": "achievement_sets_display_key",
+          "target": "id"
+        }
+      ]
     ]
   },
   {
@@ -203,7 +239,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -214,7 +251,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -225,7 +263,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -236,7 +275,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -247,7 +287,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -258,6 +299,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -297,6 +347,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Characters",
+        {
+          "foreignKey": "characters_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -336,6 +395,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemVisualIdentity",
+        {
+          "foreignKey": "default_item_visual_identity_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemVisualIdentity",
+        {
+          "foreignKey": "shaped_item_visual_identity_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -359,6 +441,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -370,7 +468,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -389,7 +488,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -452,6 +552,43 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ItemClasses",
+        {
+          "foreignKey": "item_classes_key",
+          "target": "row"
+        }
+      ],
+      [
+        "FlavourText",
+        {
+          "foreignKey": "flavour_text_key",
+          "target": "row"
+        }
+      ],
+      [
+        "SoundEffects",
+        {
+          "foreignKey": "sound_effects_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemVisualIdentity",
+        {
+          "foreignKey": "item_visual_identity_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "equip_achievement_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -471,6 +608,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -494,7 +640,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -545,6 +692,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key2",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -588,6 +758,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "buff_definitions_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -599,7 +785,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -698,6 +885,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Stats",
+        {
+          "foreignKey": "maximum_stats_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "current_stats_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BuffVisuals",
+        {
+          "foreignKey": "buff_visuals_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -709,7 +919,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -720,7 +931,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -731,7 +943,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -766,6 +979,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MiscAnimated",
+        {
+          "foreignKey": "misc_animated_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MiscAnimated",
+        {
+          "foreignKey": "misc_animated_key2",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -797,7 +1026,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -824,7 +1054,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -835,7 +1066,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -862,6 +1094,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "CharacterPanelDescriptionModes",
+        {
+          "foreignKey": "character_panel_description_modes_key",
+          "target": "row"
+        }
+      ],
+      [
+        "CharacterPanelTabs",
+        {
+          "foreignKey": "character_panel_tabs_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -885,7 +1133,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -932,6 +1181,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "CharacterStartStates",
+        {
+          "foreignKey": "character_start_states_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -955,7 +1227,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -970,7 +1243,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1001,6 +1275,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Characters",
+        {
+          "foreignKey": "characters_key",
+          "target": "row"
+        }
+      ],
+      [
+        "CharacterStartStateSet",
+        {
+          "foreignKey": "character_start_state_set_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1024,7 +1321,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1131,6 +1429,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "start_skill_gem_base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "start_weapon_base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1162,7 +1476,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1225,7 +1540,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1296,6 +1612,50 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ChestEffects",
+        {
+          "foreignKey": "chest_effects_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "corrupt_achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "currency_use_achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "encounter_achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key4",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1315,7 +1675,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1330,6 +1691,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1357,7 +1727,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1380,6 +1751,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "id"
+        }
+      ]
     ]
   },
   {
@@ -1403,6 +1783,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "id"
+        }
+      ]
     ]
   },
   {
@@ -1422,6 +1811,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "id"
+        }
+      ]
     ]
   },
   {
@@ -1433,7 +1831,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1444,7 +1843,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1455,7 +1855,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1510,6 +1911,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCMaster",
+        {
+          "foreignKey": "npc_master_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1561,6 +1978,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "full_stack_base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "possession_achievement_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1596,6 +2036,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1607,7 +2056,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1646,6 +2096,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ],
+      [
+        "PVPTypes",
+        {
+          "foreignKey": "pvp_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1661,7 +2127,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1680,7 +2147,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1691,6 +2159,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Characters",
+        {
+          "foreignKey": "characters_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1738,6 +2222,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1749,7 +2242,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -1788,6 +2282,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Difficulties",
+        {
+          "foreignKey": "difficulty_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1807,6 +2310,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Characters",
+        {
+          "foreignKey": "characters_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1822,6 +2348,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1841,6 +2376,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Characters",
+        {
+          "foreignKey": "characters_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1872,6 +2430,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1899,6 +2466,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterPacks",
+        {
+          "foreignKey": "monster_packs_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1922,6 +2498,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -1989,6 +2574,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "hostage_monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2028,6 +2643,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2055,6 +2679,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "boss_monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2106,6 +2739,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2153,7 +2795,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2184,7 +2827,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2199,6 +2843,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2214,6 +2867,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2229,6 +2891,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2248,7 +2919,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2271,6 +2943,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2282,7 +2970,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2293,7 +2982,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2312,6 +3002,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2347,7 +3046,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2386,6 +3086,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2409,6 +3118,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Words",
+        {
+          "foreignKey": "words_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2492,6 +3210,316 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "quiver_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "amulet1_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "belt1_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "belt3_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "gloves1_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "boots1_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "body_armour1_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "helmet1_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "shield1_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "EssenceType",
+        {
+          "foreignKey": "essence_type_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key13",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key14",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key15",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "2_hand_mods_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "boots3_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "ranged_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "helmet2_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "body_armour2_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "boots2_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "gloves2_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "bow_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "wand_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "2_hand_mods_key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "2_hand_mods_key3",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "2_hand_mods_key4",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "2_hand_mods_key5",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key3",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key4",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key5",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key6",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key7",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key8",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "1_hand_mods_key9",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "belt2_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "amulet2_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "ring_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key41",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "shield2_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key43",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2515,7 +3543,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2534,6 +3563,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "EventSeason",
+        {
+          "foreignKey": "event_season_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2557,7 +3595,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2612,6 +3651,64 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "buff_definitions_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "friendly_monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MiscObjects",
+        {
+          "foreignKey": "misc_objects_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MiscAnimated",
+        {
+          "foreignKey": "misc_animated_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BuffVisuals",
+        {
+          "foreignKey": "buff_visuals_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "enemy_monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "buff_definitions_key2",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2623,7 +3720,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2666,7 +3764,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2701,6 +3800,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "buff_definitions_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -2712,7 +3827,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2735,7 +3851,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2758,7 +3875,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2777,7 +3895,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2796,7 +3915,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2807,7 +3927,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2830,7 +3951,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2841,7 +3963,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2872,7 +3995,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2883,7 +4007,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -2954,6 +4079,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ActiveSkills",
+        {
+          "foreignKey": "active_skills_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3077,6 +4211,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "GrantedEffects",
+        {
+          "foreignKey": "granted_effects_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3116,6 +4259,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCMaster",
+        {
+          "foreignKey": "npc_master_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3131,6 +4290,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3150,6 +4318,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "small_world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCMaster",
+        {
+          "foreignKey": "npc_master_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "medium_world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "large_world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3185,7 +4383,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3216,6 +4415,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3243,7 +4451,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3334,6 +4543,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3345,7 +4570,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3364,6 +4590,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3375,7 +4610,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3410,6 +4646,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3433,7 +4678,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3452,6 +4698,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3523,7 +4778,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3634,6 +4890,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "SoundEffects",
+        {
+          "foreignKey": "sound_effects_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "create_corrupted_jewel_achievement_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3657,6 +4929,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemVisualEffect",
+        {
+          "foreignKey": "item_visual_effect_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemVisualIdentity",
+        {
+          "foreignKey": "item_visual_identity_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemVisualIdentity",
+        {
+          "foreignKey": "item_visual_identity_key2",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3672,6 +4974,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3687,7 +5005,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3702,7 +5021,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3729,6 +5049,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Chests",
+        {
+          "foreignKey": "chests_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3744,6 +5073,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3771,7 +5109,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3802,6 +5141,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3825,6 +5180,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "buff_buff_definitions_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3836,7 +5207,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3899,6 +5271,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3926,6 +5307,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3949,6 +5339,43 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "LabyrinthSection",
+        {
+          "foreignKey": "labyrinth_section_key",
+          "target": "row"
+        }
+      ],
+      [
+        "LabyrinthSecrets",
+        {
+          "foreignKey": "labyrinth_secrets_key0",
+          "target": "row"
+        }
+      ],
+      [
+        "LabyrinthSecrets",
+        {
+          "foreignKey": "labyrinth_secrets_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "LabyrinthAreas",
+        {
+          "foreignKey": "labyrinth_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "LabyrinthNodeOverrides",
+        {
+          "foreignKey": "labyrinth_node_overrides_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3964,6 +5391,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "LabyrinthSecrets",
+        {
+          "foreignKey": "labyrinth_secrets_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "buff_buff_definitions_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -3975,7 +5425,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -3994,7 +5445,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4005,7 +5457,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4016,7 +5469,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4047,6 +5501,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MapPins",
+        {
+          "foreignKey": "map_pins_key0",
+          "target": "row"
+        }
+      ],
+      [
+        "MapPins",
+        {
+          "foreignKey": "map_pins_key1",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4070,7 +5540,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4085,6 +5556,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4136,6 +5616,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "normal_waypoint_world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "cruel_waypoint_world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "merciless_waypoint_world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4147,7 +5650,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4174,6 +5678,71 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "regular_world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "unique_world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "map_upgrade_base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Maps",
+        {
+          "foreignKey": "shaped_base_maps_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Maps",
+        {
+          "foreignKey": "maps_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "Maps",
+        {
+          "foreignKey": "maps_key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Maps",
+        {
+          "foreignKey": "maps_key3",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4185,7 +5754,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4204,6 +5774,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4223,6 +5802,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4234,6 +5822,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4269,7 +5866,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4292,7 +5890,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4315,6 +5914,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4342,7 +5950,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4353,6 +5962,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCMaster",
+        {
+          "foreignKey": "npc_master_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "mission_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4384,7 +6009,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4395,7 +6021,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4406,7 +6033,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4417,7 +6045,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4428,7 +6057,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4443,7 +6073,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4454,6 +6085,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ModSellPriceTypes",
+        {
+          "foreignKey": "mod_sell_price_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4469,7 +6109,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4580,6 +6221,78 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ModType",
+        {
+          "foreignKey": "mod_type_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key3",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key4",
+          "target": "row"
+        }
+      ],
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "buff_definitions_key",
+          "target": "row"
+        }
+      ],
+      [
+        "GrantedEffectsPerLevel",
+        {
+          "foreignKey": "granted_effects_per_level_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key5",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4591,6 +6304,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4610,7 +6332,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4621,7 +6344,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4632,7 +6356,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4651,6 +6376,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4662,7 +6396,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4693,6 +6428,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key3",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key4",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4724,6 +6489,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key3",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "stats_key4",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4747,6 +6542,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterPacks",
+        {
+          "foreignKey": "monster_packs_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -4794,7 +6605,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4857,7 +6669,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4868,7 +6681,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4887,7 +6701,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4898,7 +6713,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -4937,6 +6753,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterResistances",
+        {
+          "foreignKey": "monster_resistances_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5112,6 +6937,99 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterTypes",
+        {
+          "foreignKey": "monster_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key2",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemVisualIdentity",
+        {
+          "foreignKey": "back_item_visual_identity_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemClasses",
+        {
+          "foreignKey": "main_hand_item_classes_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemClasses",
+        {
+          "foreignKey": "off_hand_item_classes_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ],
+      [
+        "ItemVisualIdentity",
+        {
+          "foreignKey": "helmet_item_visual_identity_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "flashback_achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterSegments",
+        {
+          "foreignKey": "monster_segments_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterArmours",
+        {
+          "foreignKey": "monster_armours_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key4",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key3",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5131,7 +7049,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5142,7 +7061,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5153,7 +7073,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5176,7 +7097,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5211,6 +7133,43 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCs",
+        {
+          "foreignKey": "np_cs_key",
+          "target": "id"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "signature_mod_mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key2",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "talisman_achievement_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5242,6 +7201,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCMaster",
+        {
+          "foreignKey": "npc_master_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5269,7 +7237,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5368,6 +7337,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCs",
+        {
+          "foreignKey": "npc_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Quest",
+        {
+          "foreignKey": "quest_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key2",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5379,7 +7371,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5414,6 +7407,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Characters",
+        {
+          "foreignKey": "characters_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5453,6 +7455,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCMaster",
+        {
+          "foreignKey": "npc_master_key",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCShop",
+        {
+          "foreignKey": "npc_shop_key",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCAudio",
+        {
+          "foreignKey": "npc_audio_key1",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCAudio",
+        {
+          "foreignKey": "npc_audio_key2",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5484,7 +7516,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5523,7 +7556,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5534,6 +7568,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "PassiveSkills",
+        {
+          "foreignKey": "passive_skills_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5621,6 +7664,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "granted_buff_buff_definitions_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key2",
+          "target": "row"
+        }
+      ],
+      [
+        "Ascendancy",
+        {
+          "foreignKey": "ascendancy_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5656,7 +7729,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5667,7 +7741,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5690,6 +7765,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5717,6 +7801,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Chests",
+        {
+          "foreignKey": "chests_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5756,6 +7849,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5795,7 +7897,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5822,6 +7925,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5837,7 +7949,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5848,7 +7961,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5863,6 +7977,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Projectiles",
+        {
+          "foreignKey": "projectile_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -5914,7 +8037,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -5973,6 +8097,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ProphecyChain",
+        {
+          "foreignKey": "prophecy_chain_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6004,7 +8137,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6023,7 +8157,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6034,7 +8169,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6045,7 +8181,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6056,7 +8193,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6127,7 +8265,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6154,6 +8293,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Difficulties",
+        {
+          "foreignKey": "difficulties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6165,7 +8320,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6208,6 +8364,43 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Quest",
+        {
+          "foreignKey": "quest_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Characters",
+        {
+          "foreignKey": "characters_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6263,6 +8456,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Quest",
+        {
+          "foreignKey": "quest_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6290,6 +8492,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "stats_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Difficulties",
+        {
+          "foreignKey": "difficulty_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Quest",
+        {
+          "foreignKey": "quest_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6313,6 +8538,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCs",
+        {
+          "foreignKey": "npc_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6324,6 +8558,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Races",
+        {
+          "foreignKey": "races_key",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6347,6 +8597,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Races",
+        {
+          "foreignKey": "races_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6390,7 +8649,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6409,7 +8669,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6420,7 +8681,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6467,7 +8729,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6478,7 +8741,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6493,6 +8757,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6524,7 +8797,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6539,6 +8813,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6574,7 +8857,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6593,6 +8877,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ShopCurrency",
+        {
+          "foreignKey": "shop_currency_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6612,7 +8905,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6675,7 +8969,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6690,6 +8985,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ShopItem",
+        {
+          "foreignKey": "shop_item_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ShopRegion",
+        {
+          "foreignKey": "shop_region_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6749,6 +9060,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "contains_beta_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "ShopPaymentPackage",
+        {
+          "foreignKey": "upgrade_shop_payment_package_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6768,6 +9102,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ShopPaymentPackage",
+        {
+          "foreignKey": "shop_payment_package_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ShopItem",
+        {
+          "foreignKey": "shop_item_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ShopToken",
+        {
+          "foreignKey": "shop_token_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6783,6 +9140,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ShopPaymentPackage",
+        {
+          "foreignKey": "shop_payment_package_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ShopCountry",
+        {
+          "foreignKey": "shop_country_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6798,7 +9171,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6821,7 +9195,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6840,6 +9215,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BuffDefinitions",
+        {
+          "foreignKey": "buff_definitions_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6863,7 +9254,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -6926,6 +9318,43 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "ShrineBuffs",
+        {
+          "foreignKey": "player_shrine_buffs_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ShrineBuffs",
+        {
+          "foreignKey": "monster_shrine_buffs_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "summon_monster_monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "summon_player_monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "ShrineSounds",
+        {
+          "foreignKey": "shrine_sounds_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6953,6 +9382,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "GrantedEffects",
+        {
+          "foreignKey": "granted_effects_key",
+          "target": "row"
+        }
+      ],
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "vaal_variant_base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6968,6 +9420,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "SkillTotems",
+        {
+          "foreignKey": "skill_totems_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -6979,7 +9447,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7006,7 +9475,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7017,7 +9487,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7076,6 +9547,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Stats",
+        {
+          "foreignKey": "main_hand_alias_stats_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Stats",
+        {
+          "foreignKey": "off_hand_alias_stats_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7087,7 +9574,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7138,6 +9626,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7161,6 +9658,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7192,7 +9698,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7215,6 +9722,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7270,6 +9793,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterPacks",
+        {
+          "foreignKey": "monster_packs_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7297,6 +9843,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7324,7 +9879,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7351,6 +9907,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7394,6 +9959,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "dummy_monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7441,6 +10022,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterPacks",
+        {
+          "foreignKey": "monster_packs_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7476,7 +10073,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7523,7 +10121,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7578,6 +10177,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "relic_monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7605,6 +10220,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7632,6 +10256,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7667,7 +10300,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7714,6 +10348,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key3",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7749,6 +10399,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key2",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7804,6 +10477,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "NPCTalk",
+        {
+          "foreignKey": "npc_talk_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7827,6 +10509,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Chests",
+        {
+          "foreignKey": "chests_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7846,6 +10537,29 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Chests",
+        {
+          "foreignKey": "chests_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key2",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7865,6 +10579,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7892,6 +10622,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -7923,7 +10669,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7942,7 +10689,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -7961,6 +10709,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8000,6 +10757,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterPacks",
+        {
+          "foreignKey": "monster_packs_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8031,6 +10804,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Mods",
+        {
+          "foreignKey": "mods_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8050,7 +10853,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8069,7 +10873,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8100,6 +10905,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Environments",
+        {
+          "foreignKey": "environments_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8127,6 +10941,22 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "monster_varieties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "MonsterVarieties",
+        {
+          "foreignKey": "summoned_monster_monster_varieties_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8158,7 +10988,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8197,6 +11028,36 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Chests",
+        {
+          "foreignKey": "chests_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Words",
+        {
+          "foreignKey": "words_key",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key0",
+          "target": "row"
+        }
+      ],
+      [
+        "",
+        {
+          "foreignKey": "key1",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8212,6 +11073,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "",
+        {
+          "foreignKey": "unique_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8223,7 +11093,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8250,6 +11121,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "Words",
+        {
+          "foreignKey": "words_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8269,7 +11149,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8300,7 +11181,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8315,6 +11197,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8330,6 +11221,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "world_areas_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8385,7 +11285,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8440,7 +11341,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8451,7 +11353,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8462,7 +11365,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8473,7 +11377,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8508,7 +11413,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8519,7 +11425,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8554,6 +11461,15 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "BaseItemTypes",
+        {
+          "foreignKey": "base_item_types_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8565,7 +11481,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8596,7 +11513,8 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   },
   {
     "define": [
@@ -8871,6 +11789,50 @@
           "allowNull": false
         }
       }
+    ],
+    "belongsTo": [
+      [
+        "WorldAreas",
+        {
+          "foreignKey": "parent_town_world_areas_key",
+          "target": "row"
+        }
+      ],
+      [
+        "Difficulties",
+        {
+          "foreignKey": "difficulties_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "twinned_full_clear_achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "enter_achievement_items_key",
+          "target": "row"
+        }
+      ],
+      [
+        "AchievementItems",
+        {
+          "foreignKey": "8_mods_full_clear_achievement_items_key",
+          "target": "row"
+        }
+      ]
     ]
   },
   {
@@ -8890,6 +11852,7 @@
           "allowNull": false
         }
       }
-    ]
+    ],
+    "belongsTo": []
   }
 ]

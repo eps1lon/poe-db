@@ -15,7 +15,7 @@ class SequelizeModel extends Model {
     return {
       define: [this.name(), this.attributes()],
       belongsTo: this.belongsTo(),
-      hasMany: this.hasMany(),
+      belongsToMany: this.belongsToMany(),
     };
   }
 
@@ -55,7 +55,24 @@ class SequelizeModel extends Model {
       ]);
   }
 
-  hasMany() {}
+  belongsToMany() {
+    return Object.keys(this.fields)
+      .filter(field => this._isHasMany(field))
+      .map(field => {
+        const model_name = Model.name(this.fields[field].key || field);
+        let props = {
+          through: this.name() + model_name,
+        };
+
+        if (this._isExtendedProp(field)) {
+          props.through = field.replace(/Keys([0-9]*)$/, '$1').replace('_', '');
+          props.as = SequelizeModel.colCasing(props.through);
+        }
+
+        // field fallback for generic `KeysX`
+        return [model_name, props];
+      });
+  }
 
   get fields() {
     return this.props.fields || {};

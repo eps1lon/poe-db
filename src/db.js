@@ -1,15 +1,16 @@
-const mysql = require('mysql');
+const Sequelize = require('sequelize');
 
 const { POEDB_HOST, POEDB_USER, POEDB_PW, POEDB_DB } = process.env;
 
 const db = options =>
-  mysql.createConnection(
+  new Sequelize(
+    POEDB_DB,
+    POEDB_USER,
+    POEDB_PW,
     Object.assign(
       {
         host: POEDB_HOST,
-        user: POEDB_USER,
-        password: POEDB_PW,
-        database: POEDB_DB,
+        dialect: 'mysql',
       },
       options,
     ),

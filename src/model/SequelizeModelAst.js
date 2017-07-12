@@ -13,7 +13,7 @@ class SequelizeModelAst {
 
   body() {
     const requires = [...this.staticRequires()].map(path =>
-      this.buildRequire(path),
+      this.buildRequire(path, path),
     );
 
     return [...requires];
@@ -23,12 +23,34 @@ class SequelizeModelAst {
     return ['sequelize'];
   }
 
-  buildRequire(path) {
+  buildRequire(identifier, path) {
     return {
-      type: 'AssignmentExpression',
-      operator: '=',
-      left: {},
-      right: { type: 'CallExpression', callee: { type: '' } },
+      type: 'VariableDeclaration',
+      declarations: [
+        {
+          type: 'VariableDeclarator',
+          id: {
+            type: 'Identifier',
+            name: identifier,
+          },
+          init: {
+            type: 'CallExpression',
+            callee: {
+              type: 'Identifier',
+              name: 'require',
+            },
+            arguments: [
+              {
+                type: 'StringLiteral',
+                value: path,
+              },
+            ],
+          },
+        },
+      ],
+      kind: 'const',
     };
   }
 }
+
+module.exports = SequelizeModelAst;

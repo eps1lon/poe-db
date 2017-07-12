@@ -2,7 +2,7 @@ const S = require('string');
 const Sequelize = require('sequelize');
 
 const Model = require('./Model');
-const SequelizeModelAst = require('SequelizeModelAst');
+const SequelizeModelAst = require('./SequelizeModelAst');
 const { entriesToObj, propChain } = require('../util');
 
 const PRIMARY = 'row';
@@ -13,7 +13,7 @@ class SequelizeModel extends Model {
   }
 
   ast() {
-    return new SequelizeModelAst(this).ast;
+    return new SequelizeModelAst(this).ast();
   }
 
   serialize() {

@@ -1,0 +1,8895 @@
+[
+  {
+    "define": [
+      "AchievementItems",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "completions_required": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "AchievementSetRewards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "AchievementSets",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "AchievementSetsDisplay",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "title": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Achievements",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "objective": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown_unique": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag4": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ActiveSkills",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "displayed_name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "index3": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "icon_dds_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "active_skill_target_types": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "active_skill_types": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "website_description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "website_image": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown13": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "skill_totem_id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_manually_casted": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown19": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ActiveSkillTargetTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ActiveSkillType",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ArmourClasses",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ArmourSurfaceTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ArmourTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Ascendancy",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "class_no": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "coordinate_rect": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "rgb_flavour_text_colour": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flavour_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ogg_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "AtlasNode",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "x": {
+          "type": "FLOAT",
+          "allowNull": false
+        },
+        "y": {
+          "type": "FLOAT",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flavour_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "AtlasQuestItems",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "quest_flags": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "league_quest_flags": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "map_tier": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Attributes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BackendErrors",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BaseItemTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "width": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "height": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "inherits_from": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "drop_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown_unique": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown20": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_picked_up_by_monsters": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "data11": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BeyondDemons",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BindableVirtualKeys",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "key_code": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BloodTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file3": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file4": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file5": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file6": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file7": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file8": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file9": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Bloodlines",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "min_zone_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_zone_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown20": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BuffCategories",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BuffDefinitions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "invisible": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "removable": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag4": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag5": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag6": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag7": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag8": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag9": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "buff_limit": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag10": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_recovery": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BuffGroups",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BuffMergeModes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BuffVisualOrbTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "BuffVisuals",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "buff_dds_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "epk_file1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "epk_file2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterAudioEvents",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "quest_state": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterPanelDescriptionModes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "format_string_positive": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "format_string_negative": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterPanelStatContexts",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterPanelStats",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "data4": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterPanelTabs",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterStartItems",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "sockets": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "inventory_index": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "slot_x": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "slot_y": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stack_size": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "links": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "skill_gem_levels": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterStartQuestState",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "quest_states": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterStartStateSet",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterStartStates",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_pvp": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CharacterTextAudio",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Characters",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "act_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "base_max_life": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "base_max_mana": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "weapon_speed": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_damage": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_damage": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_attack_distance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "icon": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "integer_id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "base_strength": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "base_dexterity": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "base_intelligence": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown13": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown14": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown15": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown16": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "character_size": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "intro_sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown28": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "trait_description": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ChestClusters",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ChestEffects",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "normal_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "normal_closed_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "normal_open_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "magic_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unique_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "rare_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "magic_closed_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unique_closed_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "rare_closed_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "magic_open_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unique_open_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "rare_open_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Chests",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag4": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag5": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown19": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ClientStrings",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CloneShotVariations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Commands",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "command": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "command2": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ComponentArmour",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "armour": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "evasion": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "energy_shield": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ComponentAttributeRequirements",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "req_str": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "req_dex": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "req_int": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ComponentCharges",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "max_charges": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "per_charge": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CooldownBypassTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CooldownGroups",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CraftingBenchCustomActions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CraftingBenchOptions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "order": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "master_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "crafting_bench_custom_action": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "sockets": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "socket_colours": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "links": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "item_quantity": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_disabled": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CurrencyItems",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "stacks": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "currency_use_type": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "action": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "directions": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "cosmetic_type_name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown17": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "currency_tab_stack_size": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "abbreviation": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CurrencyStashTabLayout",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "CurrencyUseTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DailyMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DailyOverrides",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DamageParticleEffects",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Dances",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DaressoPitFights",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag_unknown0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag_unknown2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag_unknown3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Default",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DefaultMonsterStats",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "display_level": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "damage": {
+          "type": "FLOAT",
+          "allowNull": false
+        },
+        "evasion": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "accuracy": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "life": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "experience": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "ally_life": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DescentExiles",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DescentRewardChests",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DescentStarterChest",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "socket_colours": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DexIntMissionGuardMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DexIntMissionGuards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DexIntMissionTargets",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DexIntMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "kill_target": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "fail_if_target_killed": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "kill_guards": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "fail_if_guards_killed": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "time_limit": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "chest_flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "chest_flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "fail_if_no_guards_left": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "timer": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag7": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DexMissionMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DexMissionMonsters",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DexMissionTracking",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DexMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "magic_chance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "rare_chance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unique_monster_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "rare_monster_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "magic_monster_pack_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Difficulties",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "resistances": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "minimum_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "prefix": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DisplayMinionMonsterType",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DivinationCardArt",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "virtual_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DivinationCardStashTabLayout",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "is_enabled": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "DropPool",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "group": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "EclipseMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_prefix": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Effectiveness",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "EffectivenessCostConstants",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "EndlessLedgeChests",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "socket_colour": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Environments",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "base_ambient_sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "base_env_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "corrupted_env_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "corrupted_ambient_sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ambient_sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "EssenceStashTabLayout",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "x": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "y": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "int_id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "slot_width": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "slot_height": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_upgradable_essence_slot": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "EssenceType",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "essence_type": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_corrupted_essence": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Essences",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown10": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown23": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "drop_level_minimum": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "drop_level_maximum": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "tier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown31": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "item_level_restriction": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_screaming_essence": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "EventSeason",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "reward_command": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "EventSeasonRewards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "point": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "reward_command": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ExperienceLevels",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "index0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "experience": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ExplodingStormBuffs",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "stat_values": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown10": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown12": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown23": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown24": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown25": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_only_spawning_near_player": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ExtraTerrainFeatureFamily",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ExtraTerrainFeatures",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Flasks",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "group": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "life_per_use": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "mana_per_use": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "recovery_time": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "buff_stat_values": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "FlaskType",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "FlavourText",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Footprints",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "active_ao_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "idle_ao_files": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "GameConstants",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "value": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "GemTags",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tag": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "GemTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "GlobalAudioConfig",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "GlobalQuestFlags",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Grandmasters",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "gm_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ais_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "character_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "GrantedEffectGroups",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "GrantedEffects",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_support": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "support_gem_letter": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "cast_time": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "GrantedEffectsPerLevel",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat1_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat2_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat3_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat4_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat5_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat6_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat7_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat8_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "level_requirement": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "mana_multiplier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "level_requirement2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "level_requirement3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "critical_strike_chance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "mana_cost": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "damage_effectiveness": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stored_uses": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "cooldown": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "cooldown_bypass_type": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown30a": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "vaal_souls": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "vaal_stored_uses": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "cooldown_group": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "mana_reservation_override": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown34": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "damage_multiplier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown36": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown37": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "HideoutDoodads",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "variation_ao_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "favour_cost": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "master_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_non_master_doodad": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "HideoutInteractable",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "object": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Hideouts",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ImpactSoundData",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "sound": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "IntMissionMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data2": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "IntMissionMonsters",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "IntMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "monster_per_spawn_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "objective_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag4": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag5": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag6": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag7": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag8": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag9": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag10": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown13": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "InvasionMonsterGroups",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "InvasionMonsterRestrictions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "InvasionMonsterRoles",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "InvasionMonstersPerArea",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ItemClasses",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "category": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ItemExperiencePerLevel",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "item_current_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "experience": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ItemVisualEffect",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "dagger_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "bow_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "one_handed_mace_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "one_handed_sword_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "index5": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "two_handed_sword_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "two_handed_staff_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "two_handed_mace_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "one_handed_axe_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "two_handed_axe_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "claw_epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "pet_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ItemVisualIdentity",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "dds_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown_unique_int": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "ao_file2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "marauder_sm_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ranger_sm_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "witch_sm_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "duelist_dex_sm_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "templar_sm_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "shadow_sm_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "scion_sm_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "marauder_shape": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ranger_shape": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "witch_shape": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "duelist_shape": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "templar_shape": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "shadow_shape": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "scion_shape": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown28": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown29": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "sm_files": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "epk_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_alternate_art": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ItemisedVisualEffect",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "data3": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "KillstreakThresholds",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "kills": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthAreas",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthExclusionGroups",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthIzaroChests",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_labyrinth_tier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_labyrinth_tier": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthLadderRewards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthNodeOverrides",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "id2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data2": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthRewards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthSecretEffects",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "buff_values": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ot_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthSecretLocations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthSecrets",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "id2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown13": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "flag4": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthSection",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthSectionLayout",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flags1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flags2": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LabyrinthTrinkets",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "buff_values": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LeagueCategory",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LeagueFlag",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "image": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LeagueQuestFlags",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "LeagueTrophy",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MapConnections",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "restricted_area_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MapDeviceRecipes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MapInhabitants",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MapPins",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "position_x": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "position_y": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "notes": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "act": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "index3": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MapStashTabLayout",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Maps",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "regular_guild_character": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unique_guild_character": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "shaped_area_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MicrotransactionCharacterPortraitVariations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MicrotransactionFireworksVariations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MicrotransactionPortalVariations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "map_ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MicrotransactionSocialFrameVariations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MinimapIcons",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MiscAnimated",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MiscBeams",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MiscObjects",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "effect_virtual_path": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown_unique": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MissionTileMap",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MissionTransitionTiles",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tdt_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ModAuraFlags",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ModDomains",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ModFamily",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ModGenerationType",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ModSellPriceTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ModSellPrices",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ModType",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Mods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "domain": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "generation_type": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "correct_group": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "stat1_min": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat1_max": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat2_min": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat2_max": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat3_min": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat3_max": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat4_min": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat4_max": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "buff_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "monster_metadata": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data3": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data4": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "stat5_min": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat5_max": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data5": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_essence_only_modifier": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterAdditionalMonsterDrops",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterArmours",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "art_string_sm_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterBehavior",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterFleeConditions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterGroupEntries",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "monster_group_names_id": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterGroupNames",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterMapBossDifficulty",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "map_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat1_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat2_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat3_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat4_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterMapDifficulty",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "map_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat1_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat2_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat3_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat4_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterPackEntries",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterPacks",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "boss_monster_spawn_chance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "boss_monster_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterResistances",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "fire_normal": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "cold_normal": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "lightning_normal": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "chaos_normal": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "fire_cruel": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "cold_cruel": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "lightning_cruel": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "chaos_cruel": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "fire_merciless": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "cold_merciless": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "lightning_merciless": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "chaos_merciless": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterScalingByLevel",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterSegments",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "shapes": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterSize",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_summoned": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "armour": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "evasion": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "energy_shield_from_life": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "damage_spread": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MonsterVarieties",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "object_size": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "minimum_attack_distance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "maximum_attack_distance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "act_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "base_monster_type_index": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown_index0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown_index1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "model_size_multiplier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "experience_multiplier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown10": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "critical_strike_chance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "ais_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "stance": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "damage_multiplier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "life_multiplier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "attack_speed": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown13": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown14": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown15": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown16": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown17": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown18": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown19": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown20": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown21": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown22": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown23": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Music",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MysteryPack",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "MysteryPackItems",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NPCAudio",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NPCMaster",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_str_master": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_dex_master": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_int_master": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "hideout": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NPCMasterExperiencePerLevel",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "master_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "experience": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "item_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NPCShop",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown10": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NPCTalk",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "dialogue_option": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "script": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown12": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown15": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "script2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "data5": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data6": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown25": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown25c": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown26": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown27": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data7": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown30": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NPCTalkCategory",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NPCTextAudio",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "mono_audio_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "stereo_audio_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "has_stereo": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NPCs",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "metadata": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "short_name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "NormalDifficultyMasterWeights",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "master_id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Notifications",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "message": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PassiveJewelSlots",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PassiveSkills",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "icon_dds_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "stat1_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat2_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat3_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat4_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "passive_skill_graph_id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_keystone": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_notable": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flavour_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_just_icon": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_jewel_socket": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "buff_related_unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "buff_related_unknown1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_ascendancy_starting_node": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "skill_points_granted": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_multiple_choice": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_multiple_choice_option": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PathOfEndurance",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PerLevelValues",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PerandusBosses",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PerandusChests",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PerandusDaemons",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PerandusGuards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Pet",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PreloadGroups",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PreloadPriorities",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ProjectileVariations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Projectiles",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "loop_animation_id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "impact_animation_id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "projectile_speed": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "index4": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Prophecies",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "prediction_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown_unique": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flavour_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ogg_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "prophecy_chain_position": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_enabled": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "seal_cost_normal": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "seal_cost_cruel": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "seal_cost_merciless": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ProphecyChain",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ProphecyType",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown_unique": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "OldMapStashTabLayout",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Orientations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "PVPTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Quest",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "act": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "quest_state": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "icon_dds_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "quest_id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "is_quest": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "QuestAchievements",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "quest_state": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_hardcore_achievement": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_standard_achievement": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "QuestFlags",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "QuestRewards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "difficulty": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "item_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "rarity": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "socket_gems": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "QuestStates",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "quest_states": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "message": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "map_pins_texts": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "quest_finished_ogg_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "QuestStaticRewards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "stat_value": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "QuestVendorRewards",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "quest_state": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "RaceAreas",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "RaceTimes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "index": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "start_unix_time": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "end_unix_time": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Races",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "RandomUniqueMonsters",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "BIGINT",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Rarity",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Realms",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "server": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_enabled": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "server2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "short_name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "RelativeImportanceConstants",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "RogueExiles",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "RunicCircles",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShieldTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "block": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopCategory",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "client_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "client_jpg_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "website_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "website_jpg_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopCountry",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "country_two_letter_code": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "country": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopCurrency",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "currency_code": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "currency_sign": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopItem",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "small_art_jpg_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "youtube_video": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "large_art_jpg_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "daily_deal_art_jpg_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown15": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_tencent_item": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_tradeable": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopItemPrice",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "price": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopPaymentPackage",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "coins": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "available_flag": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "background_image": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "physical_item_points": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopPaymentPackageItems",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopPaymentPackagePrice",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "price": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopRegion",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShopToken",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "type_id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShrineBuffs",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "buff_stat_values": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "ShrineSounds",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "stereo_sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "mono_sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Shrines",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "charges_shared": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "description": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown10": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown14": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_pvp_only": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown17": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_lesser_shrine": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "SkillGems",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "str": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "dex": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "int": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "SkillTotemVariations",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "totem_skin_id": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "SkillTotems",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "SoundEffects",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "sound_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "sound_file_2_d": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StatDescriptionFunctions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Stats",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_local": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_weapon_local": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag3": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag5": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag6": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag7": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StatSemantics",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexIntMissionExtraRequirement",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "time_limit": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "has_time_bonus_per_kill": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "has_time_bonus_per_object_tagged": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "has_limited_portals": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "time_limit_bonus_from_objective": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "object_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexIntMissionMaps",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexIntMissionMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_unique_map": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexIntMissionUniqueMaps",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexIntMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "has_objective_boss_kill": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "has_objective_full_clear": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "has_objective_kill_exiles": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "has_objective_find_unique": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "has_objective_complete_master_mission": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "object_count_required": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "object_count_total": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexMissionArchetypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexMissionMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexMissionSpecialMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrDexMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "time_limit": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "dummy_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "dummy_spawn_timer": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown12": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrIntMissionMonsterWaves",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "wave_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "pack_timer": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "time_limit": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown13": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unique_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrIntMissionRelicMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrIntMissionRelicPatterns",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ally_relic_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_enemy_relic": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_ally_relic": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "enemy_relic_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrIntMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f9": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "has_time_limit": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "time_limit": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_destroy_relic1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_destroy_relic2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "feed_required": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f12": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrMapMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrMissionBosses",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrMissionMapModNumbers",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrMissionSpiritEffects",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ground_effect_unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "ground_effect_unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "b1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "b2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrMissionSpiritSecondaryEffects",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f8": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "StrMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f10": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f11": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f12": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "f13": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "b1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "b2": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Strongboxes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_cartographer_box": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "SummonedSpecificBarrels",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "SummonedSpecificMonsters",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "SummonedSpecificMonstersOnDeath",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "SupporterPackSets",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "format_title": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "background": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "time0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "time1": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Tags",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "TalismanMonsterMods",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "TalismanPacks",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown10": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Talismans",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "tier": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "TerrainPlugins",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown_unique": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Tips",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Topologies",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "dgr_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "TormentSpirits",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "min_zone_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_zone_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown13": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "TriggerSpawners",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "data0": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "UniqueChests",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "spawn_weight": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "ao_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "data2": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "UniqueJewelLimits",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "limit": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "UniqueSetNames",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "UniqueSets",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "VoteState",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "VoteType",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "accept_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "reject_text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown0": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WarbandsGraph",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "connections": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WarbandsMapGraph",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "connections": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WarbandsPackMonsters",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "BIGINT",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "tier1_name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tier2_name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tier3_name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tier4_name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tier1_art": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tier2_art": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tier3_art": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "tier4_art": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WarbandsPackNumbers",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "spawn_chance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "min_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "tier4_number": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "tier3_number": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "tier2_number": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "tier1_number": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WeaponArmourCommon",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WeaponClasses",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WeaponDamageScaling",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WeaponImpactSoundData",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown1": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown2": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown3": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown4": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown5": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WeaponSoundTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WeaponTypes",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "critical": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "speed": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "damage_min": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "damage_max": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "range_max": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "null6": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Wordlists",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "Words",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "type": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "text": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "text2": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "TEXT",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "WorldAreas",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "id": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "name": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "act": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_town": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "has_waypoint": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "area_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "has_doodads": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown6": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown7": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown8": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown9": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "loading_screen_dds_file": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown11": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "data1": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown15": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown21": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown22": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown23": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_map": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown32": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown33": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown39": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown40": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "strongbox_spawn_chance": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "strongbox_max_count": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "strongbox_rarity_weight": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "is_town_area": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown49": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "max_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown50": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_merciless_vaal_area": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown52": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_hideout": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown53": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown54": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown55": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown56": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown_index": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown59": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown60": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown61": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_vaal_area": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown64": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown65": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown66": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "is_labyrinth_airlock": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "is_labyrinth_area": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown73": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown74": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown75": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown76": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown77": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown78": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown79": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "flag0": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "flag1": {
+          "type": "BOOLEAN",
+          "allowNull": false
+        },
+        "unknown82": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown83": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "key0a": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "key0b": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "unknown88": {
+          "type": "TEXT",
+          "allowNull": false
+        },
+        "unknown89": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown90": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown91": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown92": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "unknown93": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  },
+  {
+    "define": [
+      "XPPerLevelForMissions",
+      {
+        "row": {
+          "type": "BIGINT.UNSIGNED",
+          "allowNull": false
+        },
+        "zone_level": {
+          "type": "INTEGER",
+          "allowNull": false
+        },
+        "experience": {
+          "type": "INTEGER",
+          "allowNull": false
+        }
+      }
+    ]
+  }
+]

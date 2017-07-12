@@ -2,9 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const { entriesToObj, throwOnError } = require('../src/util');
+const Model = require('../src/model/SequelizeModel');
 
 const pypoe_content = path.join(__dirname, '../data/content.json');
 const spec_out = path.join(__dirname, '../data/spec.json');
+const sequelize_out = path.join(__dirname, '../data/sequelize.json');
 const records_out = path.join(__dirname, '../data/records.json');
 
 const content = require(pypoe_content);
@@ -18,18 +20,21 @@ const entriesToObjWithNameAsKey = entries =>
     ]),
   );
 
+const spec = entriesToObj(
+  content.map(row => [
+    row.filename,
+    {
+      fields: entriesToObjWithNameAsKey(row.header),
+      virtual_fields: row.virtual_header,
+    },
+  ]),
+);
+fs.writeFile(spec_out, JSON.stringify(spec, null, 2), throwOnError());
+
 fs.writeFile(
-  spec_out,
+  records_out,
   JSON.stringify(
-    entriesToObj(
-      content.map(row => [
-        row.filename,
-        {
-          fields: entriesToObjWithNameAsKey(row.header),
-          virtual_fields: row.virtual_header,
-        },
-      ]),
-    ),
+    entriesToObj(content.map(row => [row.filename, row.data])),
     null,
     2,
   ),
@@ -37,9 +42,11 @@ fs.writeFile(
 );
 
 fs.writeFile(
-  records_out,
+  sequelize_out,
   JSON.stringify(
-    entriesToObj(content.map(row => [row.filename, row.data])),
+    Object.entries(spec).map(([name, definition]) =>
+      new Model(name, definition).serialize(),
+    ),
     null,
     2,
   ),

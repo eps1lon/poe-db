@@ -32,6 +32,6 @@ const db = options =>
 
 module.exports = {
   connection: db,
-  orm: orm,
+  orm_creator: orm,
   name: POEDB_DB,
 };

@@ -17,4 +17,7 @@ const entriesToObj = entries =>
     {},
   );
 
-module.exports = { entriesToObj, throwOnError };
+const propChain = (obj, chain) =>
+  chain.split('.').reduce((obj, prop) => obj[prop], obj);
+
+module.exports = { entriesToObj, propChain, throwOnError };

@@ -16,14 +16,6 @@ class SequelizeModel extends Model {
     return new SequelizeModelAst(this).ast();
   }
 
-  serialize() {
-    return {
-      define: [this.name(), this.attributes()],
-      belongsTo: this.belongsTo(),
-      belongsToMany: this.belongsToMany(),
-    };
-  }
-
   name() {
     return Model.name(this.file);
   }

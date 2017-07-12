@@ -10,6 +10,8 @@ const spec = require('../data/spec.json');
 const writeAst = async model => {
   const ast = model.ast();
 
+  fs.writeFile('./log.json', JSON.stringify(ast, null, 2), throwOnError());
+
   fs.writeFile(
     path.join(__dirname, '../src/models/', model.name() + '.js'),
     generate(ast).code,

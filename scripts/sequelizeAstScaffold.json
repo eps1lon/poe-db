@@ -50,33 +50,114 @@
           "computed": false
         },
         "right": {
-          "type": "CallExpression",
-          "callee": {
-            "type": "MemberExpression",
-            "object": {
+          "type": "ArrowFunctionExpression",
+          "id": null,
+          "generator": false,
+          "expression": false,
+          "async": false,
+          "params": [
+            {
               "type": "Identifier",
               "name": "sequelize"
             },
-            "property": {
+            {
               "type": "Identifier",
-              "name": "define"
-            },
-            "computed": false
-          },
-          "arguments": [
-            {
-              "type": "StringLiteral",
-              "extra": {
-                "rawValue": "model",
-                "raw": "'model'"
-              },
-              "value": "model"
-            },
-            {
-              "type": "ObjectExpression",
-              "properties": []
+              "name": "DataTypes"
             }
-          ]
+          ],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "VariableDeclaration",
+                "declarations": [
+                  {
+                    "type": "VariableDeclarator",
+                    "id": {
+                      "type": "Identifier",
+                      "name": "model"
+                    },
+                    "init": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "MemberExpression",
+                        "object": {
+                          "type": "Identifier",
+                          "name": "sequelize"
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "define"
+                        },
+                        "computed": false
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "extra": {
+                            "rawValue": "model_name",
+                            "raw": "'model_name'"
+                          },
+                          "value": "model_name"
+                        },
+                        {
+                          "type": "ObjectExpression",
+                          "properties": [
+                            {
+                              "type": "ObjectProperty",
+                              "method": false,
+                              "shorthand": false,
+                              "computed": false,
+                              "key": {
+                                "type": "Identifier",
+                                "name": "attribute_1"
+                              },
+                              "value": {
+                                "type": "ObjectExpression",
+                                "properties": [
+                                  {
+                                    "type": "ObjectProperty",
+                                    "method": false,
+                                    "shorthand": false,
+                                    "computed": false,
+                                    "key": {
+                                      "type": "Identifier",
+                                      "name": "type"
+                                    },
+                                    "value": {
+                                      "type": "MemberExpression",
+                                      "object": {
+                                        "type": "Identifier",
+                                        "name": "DataTypes"
+                                      },
+                                      "property": {
+                                        "type": "Identifier",
+                                        "name": "STRING"
+                                      },
+                                      "computed": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "kind": "const"
+              },
+              {
+                "type": "ReturnStatement",
+                "argument": {
+                  "type": "Identifier",
+                  "name": "model"
+                }
+              }
+            ],
+            "directives": []
+          }
         }
       }
     }

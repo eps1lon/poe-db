@@ -81,6 +81,7 @@ class SequelizeModel extends Model {
   _colProps(col) {
     return {
       type: this._dataType(col),
+      primaryKey: col === PRIMARY,
       allowNull: false,
     };
   }

@@ -40,15 +40,3 @@ fs.writeFile(
   ),
   throwOnError(),
 );
-
-fs.writeFile(
-  sequelize_out,
-  JSON.stringify(
-    Object.entries(spec).map(([name, definition]) =>
-      new Model(name, definition).serialize(),
-    ),
-    null,
-    2,
-  ),
-  throwOnError(),
-);

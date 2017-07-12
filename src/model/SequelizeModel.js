@@ -2,13 +2,18 @@ const S = require('string');
 const Sequelize = require('sequelize');
 
 const Model = require('./Model');
-const { entriesToObj } = require('../util');
+const SequelizeModelAst = require('SequelizeModelAst');
+const { entriesToObj, propChain } = require('../util');
 
 const PRIMARY = 'row';
 
 class SequelizeModel extends Model {
   static colCasing(col) {
     return S(col).underscore().s;
+  }
+
+  ast() {
+    return new SequelizeModelAst(this).ast;
   }
 
   serialize() {

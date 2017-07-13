@@ -8,7 +8,7 @@ class Model {
     this.props = props;
   }
 
-  serialize() {
+  ast() {
     throw new Error('not implemented');
   }
 }

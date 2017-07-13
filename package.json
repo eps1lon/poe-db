@@ -14,6 +14,8 @@
     "db:create": "node scripts/db/create",
     "db:insert": "node scripts/db/insert",
     "db:build": "yarn run db:create",
+    "db:models": "node --trace-warnings scripts/generateModels",
+    "postdb:models": "prettier-eslint --write \"src/models/*.js\"",
     "db:rebuild": "yarn run db:drop && yarn run db:build",
     "db:schema": "node scripts/db/schema",
     "install": "cd pypoe && pip install -e .[cli]",

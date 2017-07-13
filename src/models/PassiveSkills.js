@@ -146,7 +146,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key',
         $col_order: 14,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -155,7 +155,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'granted_buff_buff_definitions_key',
         $col_order: 16,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -164,7 +164,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'ascendancy_key',
         $col_order: 20,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

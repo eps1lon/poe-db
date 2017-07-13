@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'regular_world_areas_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'unique_world_areas_key',
         $col_order: 2,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -83,7 +83,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'map_upgrade_base_item_types_key',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -92,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shaped_base_maps_key',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -101,7 +101,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'maps_key1',
         $col_order: 12,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'maps_key2',
         $col_order: 13,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -119,7 +119,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'maps_key3',
         $col_order: 14,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

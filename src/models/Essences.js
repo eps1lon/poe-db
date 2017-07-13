@@ -134,7 +134,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -143,7 +143,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mods_key1',
         $col_order: 12,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -152,7 +152,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mods_key2',
         $col_order: 13,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -161,7 +161,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'quiver_mods_key',
         $col_order: 14,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -170,7 +170,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'amulet1_mods_key',
         $col_order: 15,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -179,7 +179,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'belt1_mods_key',
         $col_order: 16,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -188,7 +188,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'belt3_mods_key',
         $col_order: 17,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -197,7 +197,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'gloves1_mods_key',
         $col_order: 18,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -206,7 +206,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'boots1_mods_key',
         $col_order: 19,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -215,7 +215,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'body_armour1_mods_key',
         $col_order: 20,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -224,7 +224,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'helmet1_mods_key',
         $col_order: 21,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -233,7 +233,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shield1_mods_key',
         $col_order: 22,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -242,7 +242,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'essence_type_key',
         $col_order: 27,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -251,7 +251,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key1',
         $col_order: 30,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -260,7 +260,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mods_key13',
         $col_order: 31,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -269,7 +269,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mods_key14',
         $col_order: 32,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -278,7 +278,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mods_key15',
         $col_order: 33,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -287,7 +287,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '2_hand_mods_key1',
         $col_order: 34,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -296,7 +296,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'boots3_mods_key',
         $col_order: 35,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -305,7 +305,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'ranged_mods_key',
         $col_order: 36,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -314,7 +314,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'helmet2_mods_key',
         $col_order: 37,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -323,7 +323,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'body_armour2_mods_key',
         $col_order: 38,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -332,7 +332,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'boots2_mods_key',
         $col_order: 39,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -341,7 +341,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'gloves2_mods_key',
         $col_order: 40,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -350,7 +350,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'bow_mods_key',
         $col_order: 41,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -359,7 +359,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'wand_mods_key',
         $col_order: 42,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -368,7 +368,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '2_hand_mods_key2',
         $col_order: 43,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -377,7 +377,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '2_hand_mods_key3',
         $col_order: 44,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -386,7 +386,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '2_hand_mods_key4',
         $col_order: 45,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -395,7 +395,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '2_hand_mods_key5',
         $col_order: 46,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -404,7 +404,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key2',
         $col_order: 47,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -413,7 +413,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key3',
         $col_order: 48,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -422,7 +422,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key4',
         $col_order: 49,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -431,7 +431,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key5',
         $col_order: 50,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -440,7 +440,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key6',
         $col_order: 51,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -449,7 +449,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key7',
         $col_order: 52,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -458,7 +458,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key8',
         $col_order: 53,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -467,7 +467,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '1_hand_mods_key9',
         $col_order: 54,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -476,7 +476,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'belt2_mods_key',
         $col_order: 56,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -485,7 +485,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'amulet2_mods_key',
         $col_order: 57,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -494,7 +494,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'ring_mods_key',
         $col_order: 58,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -503,7 +503,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mods_key41',
         $col_order: 59,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -512,7 +512,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shield2_mods_key',
         $col_order: 60,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -521,7 +521,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mods_key43',
         $col_order: 61,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

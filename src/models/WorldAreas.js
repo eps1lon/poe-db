@@ -428,7 +428,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'parent_town_world_areas_key',
         $col_order: 17,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -437,7 +437,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'difficulties_key',
         $col_order: 18,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -446,7 +446,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key',
         $col_order: 30,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -455,7 +455,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'twinned_full_clear_achievement_items_key',
         $col_order: 62,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -464,7 +464,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'enter_achievement_items_key',
         $col_order: 63,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -473,7 +473,7 @@ module.exports = (sequelize, DataTypes) => {
         name: '8_mods_full_clear_achievement_items_key',
         $col_order: 68,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -104,7 +104,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key',
         $col_order: 17,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

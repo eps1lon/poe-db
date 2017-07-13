@@ -122,7 +122,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'hostage_monster_varieties_key',
         $col_order: 7,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -131,7 +131,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_talk_key',
         $col_order: 12,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

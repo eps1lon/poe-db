@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'world_areas_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

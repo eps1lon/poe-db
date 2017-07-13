@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_sets_display_key',
         $col_order: 2,
       },
-      target: 'id',
+      targetKey: 'id',
       nullable: true,
       constraints: false,
     });

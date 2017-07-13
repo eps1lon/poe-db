@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'world_areas_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -77,7 +77,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'default_item_visual_identity_key',
         $col_order: 7,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shaped_item_visual_identity_key',
         $col_order: 8,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

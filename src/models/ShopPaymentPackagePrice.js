@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shop_payment_package_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shop_country_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

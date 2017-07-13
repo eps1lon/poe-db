@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'monster_packs_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -170,7 +170,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -179,7 +179,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'quest_key',
         $col_order: 9,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

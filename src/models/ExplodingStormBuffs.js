@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'buff_definitions_key1',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -107,7 +107,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'friendly_monster_varieties_key',
         $col_order: 9,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -116,7 +116,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'misc_objects_key',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -125,7 +125,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'misc_animated_key',
         $col_order: 11,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -134,7 +134,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'buff_visuals_key',
         $col_order: 12,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -143,7 +143,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'enemy_monster_varieties_key',
         $col_order: 13,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -152,7 +152,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'buff_definitions_key2',
         $col_order: 17,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_master_key',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -77,7 +77,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_shop_key',
         $col_order: 8,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_audio_key1',
         $col_order: 9,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -95,7 +95,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_audio_key2',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

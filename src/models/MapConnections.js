@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'map_pins_key0',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'map_pins_key1',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'races_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

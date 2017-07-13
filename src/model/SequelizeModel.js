@@ -48,7 +48,7 @@ class SequelizeModel extends Model {
             name: SequelizeModel.colCasing(field),
             $col_order: this.fields[field].rowid,
           },
-          target: SequelizeModel.colCasing(
+          targetKey: SequelizeModel.colCasing(
             this.fields[field].key_id || PRIMARY,
           ),
         },

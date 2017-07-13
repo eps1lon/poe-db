@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'buff_definitions_key',
         $col_order: 2,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

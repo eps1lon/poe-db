@@ -290,7 +290,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'monster_types_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -299,7 +299,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'back_item_visual_identity_key',
         $col_order: 38,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -308,7 +308,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'main_hand_item_classes_key',
         $col_order: 39,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -317,7 +317,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'off_hand_item_classes_key',
         $col_order: 40,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -326,7 +326,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'helmet_item_visual_identity_key',
         $col_order: 42,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -335,7 +335,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'flashback_achievement_items_key',
         $col_order: 60,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -344,7 +344,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'monster_segments_key',
         $col_order: 61,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -353,7 +353,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'monster_armours_key',
         $col_order: 62,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -362,7 +362,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key',
         $col_order: 63,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -371,7 +371,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key4',
         $col_order: 64,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

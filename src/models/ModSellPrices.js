@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mod_sell_price_types_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

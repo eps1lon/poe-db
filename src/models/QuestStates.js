@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'quest_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

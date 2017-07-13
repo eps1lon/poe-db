@@ -176,7 +176,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'sound_effects_key',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -185,7 +185,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'create_corrupted_jewel_achievement_items_key',
         $col_order: 29,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

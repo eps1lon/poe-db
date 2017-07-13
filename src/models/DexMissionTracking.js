@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_talk_key',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

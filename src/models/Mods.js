@@ -188,7 +188,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mod_type_key',
         $col_order: 2,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -197,7 +197,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key1',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -206,7 +206,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key2',
         $col_order: 5,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -215,7 +215,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key3',
         $col_order: 6,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -224,7 +224,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key4',
         $col_order: 7,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -233,7 +233,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'buff_definitions_key',
         $col_order: 22,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -242,7 +242,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'granted_effects_per_level_key',
         $col_order: 25,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -251,7 +251,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key5',
         $col_order: 34,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -260,7 +260,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key',
         $col_order: 36,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

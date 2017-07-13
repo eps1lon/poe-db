@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_talk_key',
         $col_order: 11,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -107,7 +107,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'monster_packs_key',
         $col_order: 12,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'main_hand_alias_stats_key',
         $col_order: 9,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -107,7 +107,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'off_hand_alias_stats_key',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'normal_waypoint_world_areas_key',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -95,7 +95,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'cruel_waypoint_world_areas_key',
         $col_order: 11,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -104,7 +104,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'merciless_waypoint_world_areas_key',
         $col_order: 12,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

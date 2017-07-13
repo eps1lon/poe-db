@@ -158,7 +158,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'maximum_stats_key',
         $col_order: 9,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -167,7 +167,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'current_stats_key',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -176,7 +176,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'buff_visuals_key',
         $col_order: 13,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

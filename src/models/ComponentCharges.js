@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
         $col_order: 0,
       },
-      target: 'id',
+      targetKey: 'id',
       nullable: true,
       constraints: false,
     });

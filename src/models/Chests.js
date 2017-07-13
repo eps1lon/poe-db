@@ -134,7 +134,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
         $col_order: 13,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -143,7 +143,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'chest_effects_key',
         $col_order: 17,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -152,7 +152,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'corrupt_achievement_items_key',
         $col_order: 21,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -161,7 +161,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'currency_use_achievement_items_key',
         $col_order: 22,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -170,7 +170,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'encounter_achievement_items_key',
         $col_order: 23,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

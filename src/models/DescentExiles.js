@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'world_areas_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'characters_key',
         $col_order: 2,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'monster_varieties_key',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

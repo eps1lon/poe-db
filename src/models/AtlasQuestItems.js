@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -53,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'world_areas_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

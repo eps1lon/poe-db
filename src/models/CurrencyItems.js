@@ -92,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -101,7 +101,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'full_stack_base_item_types_key',
         $col_order: 5,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'possession_achievement_items_key',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

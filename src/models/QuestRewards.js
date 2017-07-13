@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'quest_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -95,7 +95,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'characters_key',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -104,7 +104,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

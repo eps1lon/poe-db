@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'upgrade_shop_payment_package_key',
         $col_order: 13,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

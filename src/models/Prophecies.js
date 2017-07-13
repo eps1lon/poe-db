@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'prophecy_chain_key',
         $col_order: 7,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'event_season_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

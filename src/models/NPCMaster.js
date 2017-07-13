@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'np_cs_key',
         $col_order: 1,
       },
-      target: 'id',
+      targetKey: 'id',
       nullable: true,
       constraints: false,
     });
@@ -83,7 +83,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'signature_mod_mods_key',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -92,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key',
         $col_order: 9,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -101,7 +101,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'talisman_achievement_items_key',
         $col_order: 15,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -116,7 +116,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'active_skills_key',
         $col_order: 13,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

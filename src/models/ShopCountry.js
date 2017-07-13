@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shop_currency_key',
         $col_order: 2,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

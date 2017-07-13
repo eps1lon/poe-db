@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'misc_animated_key',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'misc_animated_key2',
         $col_order: 5,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

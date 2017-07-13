@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'small_world_areas_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_master_key',
         $col_order: 2,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'medium_world_areas_key',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'large_world_areas_key',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

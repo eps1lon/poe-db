@@ -176,7 +176,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'start_skill_gem_base_item_types_key',
         $col_order: 17,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -185,7 +185,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'start_weapon_base_item_types_key',
         $col_order: 24,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

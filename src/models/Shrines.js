@@ -104,7 +104,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'player_shrine_buffs_key',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -113,7 +113,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'monster_shrine_buffs_key',
         $col_order: 8,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -122,7 +122,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'summon_monster_monster_varieties_key',
         $col_order: 9,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -131,7 +131,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'summon_player_monster_varieties_key',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -140,7 +140,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shrine_sounds_key',
         $col_order: 13,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

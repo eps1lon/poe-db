@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key1',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key2',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key3',
         $col_order: 5,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -83,7 +83,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key4',
         $col_order: 7,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

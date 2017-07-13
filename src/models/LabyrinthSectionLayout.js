@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'labyrinth_section_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -53,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'labyrinth_secrets_key0',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'labyrinth_secrets_key1',
         $col_order: 4,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'labyrinth_areas_key',
         $col_order: 5,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -80,7 +80,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'labyrinth_node_overrides_key',
         $col_order: 8,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

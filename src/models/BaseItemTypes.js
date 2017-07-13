@@ -104,7 +104,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'item_classes_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -113,7 +113,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'flavour_text_key',
         $col_order: 7,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -122,7 +122,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'sound_effects_key',
         $col_order: 10,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -131,7 +131,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'item_visual_identity_key',
         $col_order: 18,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -140,7 +140,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'equip_achievement_items_key',
         $col_order: 26,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

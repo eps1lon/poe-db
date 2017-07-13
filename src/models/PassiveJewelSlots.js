@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'passive_skills_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

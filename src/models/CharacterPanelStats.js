@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'character_panel_description_modes_key',
         $col_order: 3,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'character_panel_tabs_key',
         $col_order: 6,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'characters_key',
         $col_order: 2,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'character_start_state_set_key',
         $col_order: 6,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

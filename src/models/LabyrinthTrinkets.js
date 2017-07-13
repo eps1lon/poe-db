@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
         $col_order: 0,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'labyrinth_secrets_key',
         $col_order: 1,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'buff_buff_definitions_key',
         $col_order: 2,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

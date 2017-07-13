@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'difficulty_key',
         $col_order: 7,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

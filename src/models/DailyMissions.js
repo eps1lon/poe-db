@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_talk_key',
         $col_order: 6,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
@@ -77,7 +77,7 @@ module.exports = (sequelize, DataTypes) => {
         name: 'pvp_types_key',
         $col_order: 9,
       },
-      target: 'row',
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });

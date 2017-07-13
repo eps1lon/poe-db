@@ -1,3 +1,4 @@
 [submodule "pypoe"]
 	path = pypoe
 	url = https://github.com/OmegaK2/PyPoE.git
+	branch = dev

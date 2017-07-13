@@ -6,6 +6,3 @@ npm_debug.log
 data/content.json
 data/records.json
 data/spec.json
-
-/* mysql tmp */
-data/schema.sql

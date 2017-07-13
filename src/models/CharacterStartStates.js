@@ -94,24 +94,28 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.PassiveSkills, {
       as: 'passive_skills',
       through: 'CharacterStartStatesPassiveSkills',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'normal_character_start_quest_state',
       through: 'CharacterStartStatesNormalCharacterStartQuestStates',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'cruel_character_start_quest_state',
       through: 'CharacterStartStatesCruelCharacterStartQuestStates',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'merciless_character_start_quest_state',
       through: 'CharacterStartStatesMercilessCharacterStartQuestStates',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });

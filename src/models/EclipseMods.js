@@ -63,6 +63,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',
       through: 'EclipseModsSpawnWeightTags',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

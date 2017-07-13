@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.DailyMissions, {
       as: 'daily_missions',
       through: 'DailyOverridesDailyMissions',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mods, {
       as: 'mods',
       through: 'PathOfEnduranceMods',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });

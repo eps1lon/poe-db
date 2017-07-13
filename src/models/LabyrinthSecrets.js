@@ -117,24 +117,28 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.LabyrinthSecretEffects, {
       as: 'labyrinth_secret_effects0',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffects, {
       as: 'labyrinth_secret_effects1',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffects, {
       as: 'labyrinth_secret_effects2',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffects, {
       as: 'labyrinth_secret_effects3',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });

@@ -144,18 +144,21 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Tags, {
       as: 'signature_mod_spawn_weight_tags',
       through: 'NPCMasterSignatureModSpawnWeightTags',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'unknown_weight_tags',
       through: 'NPCMasterUnknownWeightTags',
+      $col_order: 12,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'master_level5_achievement_items',
       through: 'NPCMasterMasterLevel5AchievementItems',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });

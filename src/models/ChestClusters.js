@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Chests, {
       as: 'chests',
       through: 'ChestClustersChests',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

@@ -133,6 +133,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.LabyrinthSectionLayout, {
       as: 'labyrinth_section_layout',
       through: 'LabyrinthSectionLayoutLabyrinthSectionLayout',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.PreloadGroups, {
       as: 'preload_groups',
       through: 'MiscBeamsPreloadGroups',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });

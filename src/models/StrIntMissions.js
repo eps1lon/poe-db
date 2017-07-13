@@ -124,12 +124,14 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mods, {
       as: 'relic_mods',
       through: 'StrIntMissionsMods',
+      $col_order: 13,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'achievement_items',
       through: 'StrIntMissionsAchievementItems',
+      $col_order: 14,
       nullable: true,
       constraints: false,
     });

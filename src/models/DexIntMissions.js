@@ -154,6 +154,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.AchievementItems, {
       as: 'achievement_items',
       through: 'DexIntMissionsAchievementItems',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });

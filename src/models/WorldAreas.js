@@ -536,66 +536,77 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.WorldAreas, {
       as: 'connections_world_areas',
       through: 'WorldAreasConnectionsWorldAreas',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Topologies, {
       as: 'topologies',
       through: 'WorldAreasTopologies',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'bosses_monster_varieties',
       through: 'WorldAreasBossesMonsterVarieties',
+      $col_order: 22,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'monsters_monster_varieties',
       through: 'WorldAreasMonstersMonsterVarieties',
+      $col_order: 23,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',
       through: 'WorldAreasSpawnWeightTags',
+      $col_order: 24,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'full_clear_achievement_items',
       through: 'WorldAreasFullClearAchievementItems',
+      $col_order: 27,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'mods',
       through: 'WorldAreasMods',
+      $col_order: 31,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'vaal_area_world_areas',
       through: 'WorldAreasVaalAreaWorldAreas',
+      $col_order: 34,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'area_type_tags',
       through: 'WorldAreasAreaTypeTags',
+      $col_order: 42,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'tags',
       through: 'WorldAreasTags',
+      $col_order: 55,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: '1',
       through: 'WorldAreasAchievementItems',
+      $col_order: 72,
       nullable: true,
       constraints: false,
     });

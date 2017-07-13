@@ -98,12 +98,14 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.ShopItem, {
       as: 'package_shop_item',
       through: 'ShopItemPackageShopItems',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ShopCategory, {
       as: 'shop_category',
       through: 'ShopItemShopCategory',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

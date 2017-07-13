@@ -197,18 +197,21 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Stats, {
       as: 'stats',
       through: 'PassiveSkillsStats',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Characters, {
       as: 'characters',
       through: 'PassiveSkillsCharacters',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ClientStrings, {
       as: 'reminder_client_strings',
       through: 'PassiveSkillsReminderClientStrings',
+      $col_order: 22,
       nullable: true,
       constraints: false,
     });

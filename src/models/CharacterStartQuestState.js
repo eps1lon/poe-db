@@ -44,12 +44,14 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Quest, {
       as: 'quest',
       through: 'CharacterStartQuestStateQuest',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MapPins, {
       as: 'map_pins',
       through: 'CharacterStartQuestStateMapPins',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

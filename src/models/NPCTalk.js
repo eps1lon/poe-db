@@ -202,6 +202,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.NPCTextAudio, {
       as: 'npc_text_audio',
       through: 'NPCTalkNPCTextAudio',
+      $col_order: 12,
       nullable: true,
       constraints: false,
     });

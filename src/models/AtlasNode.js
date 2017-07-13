@@ -119,6 +119,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.AtlasNode, {
       as: 'atlas_node',
       through: 'AtlasNodeAtlasNode',
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });

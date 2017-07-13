@@ -474,114 +474,133 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mods, {
       as: 'mods',
       through: 'MonsterVarietiesMods',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'tags',
       through: 'MonsterVarietiesTags',
+      $col_order: 19,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.GrantedEffects, {
       as: 'granted_effects',
       through: 'MonsterVarietiesGrantedEffects',
+      $col_order: 27,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'mods2',
       through: 'MonsterVarietiesMods',
+      $col_order: 29,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon1_item_visual_identity',
       through: 'MonsterVarietiesWeapon1ItemVisualIdentities',
+      $col_order: 36,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon2_item_visual_identity',
       through: 'MonsterVarietiesWeapon2ItemVisualIdentities',
+      $col_order: 37,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'achievement_items',
       through: 'MonsterVarietiesAchievementItems',
+      $col_order: 44,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'special_mods',
       through: 'MonsterVarietiesSpecialMods',
+      $col_order: 45,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'achievement_items2',
       through: 'MonsterVarietiesAchievementItems',
+      $col_order: 46,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'normal_achievement_items',
       through: 'MonsterVarietiesNormalAchievementItems',
+      $col_order: 57,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'merciless_achievement_items',
       through: 'MonsterVarietiesMercilessAchievementItems',
+      $col_order: 58,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'cruel_achievement_items',
       through: 'MonsterVarietiesCruelAchievementItems',
+      $col_order: 59,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'normal_mods',
       through: 'MonsterVarietiesNormalMods',
+      $col_order: 65,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'cruel_mods',
       through: 'MonsterVarietiesCruelMods',
+      $col_order: 66,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'merciless_mods',
       through: 'MonsterVarietiesMercilessMods',
+      $col_order: 67,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'kill_rare_in_normal_achievement_items',
       through: 'MonsterVarietiesKillRareInNormalAchievementItems',
+      $col_order: 68,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'kill_rare_in_cruel_achievement_items',
       through: 'MonsterVarietiesKillRareInCruelAchievementItems',
+      $col_order: 69,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'kill_rare_in_merciless_achievement_items',
       through: 'MonsterVarietiesKillRareInMercilessAchievementItems',
+      $col_order: 70,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'count_kills_achievement_items',
       through: 'MonsterVarietiesCountKillsAchievementItems',
+      $col_order: 72,
       nullable: true,
       constraints: false,
     });

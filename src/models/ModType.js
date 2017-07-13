@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.ModSellPrices, {
       as: 'mod_sell_prices',
       through: 'ModTypeModSellPrices',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

@@ -202,12 +202,14 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterPacks, {
       as: 'monster_packs',
       through: 'MapsMonsterPacks',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'higher_tier_maps_base_item_types',
       through: 'MapsHigherTierMapsBaseItemTypes',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });

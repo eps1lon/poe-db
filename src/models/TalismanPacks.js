@@ -100,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterPacks, {
       as: 'monster_packs',
       through: 'TalismanPacksMonsterPacks',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

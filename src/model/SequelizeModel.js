@@ -64,6 +64,8 @@ class SequelizeModel extends Model {
           as: SequelizeModel.colCasing(field.replace(/Keys([0-9]*)$/, '$1')),
           // clear naming with SourceModelTargetModel
           through: this.name() + model_name,
+          // keep original col order for building from arrays of attributes
+          $col_order: this.fields[field].rowid,
         };
 
         if (this._isExtendedProp(field)) {

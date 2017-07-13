@@ -209,6 +209,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Stats, {
       as: 'stats',
       through: 'BuffDefinitionsStats',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

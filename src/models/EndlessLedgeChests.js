@@ -51,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.BaseItemTypes, {
       as: 'base_item_types',
       through: 'EndlessLedgeChestsBaseItemTypes',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

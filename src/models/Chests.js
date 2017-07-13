@@ -223,12 +223,14 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mods, {
       as: 'mods',
       through: 'ChestsMods',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'tags',
       through: 'ChestsTags',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });

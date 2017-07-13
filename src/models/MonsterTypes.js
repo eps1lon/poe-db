@@ -81,6 +81,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Tags, {
       as: 'tags',
       through: 'MonsterTypesTags',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });

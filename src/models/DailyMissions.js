@@ -100,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Characters, {
       as: 'characters',
       through: 'DailyMissionsCharacters',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });

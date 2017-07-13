@@ -110,18 +110,21 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.ItemClasses, {
       as: 'weapon_restriction_item_classes',
       through: 'ActiveSkillsWeaponRestrictionItemClasses',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
       as: 'input_stat',
       through: 'ActiveSkillsInputStats',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
       as: 'output_stat',
       through: 'ActiveSkillsOutputStats',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });

@@ -137,24 +137,28 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.WorldAreas, {
       as: 'normal_world_areas',
       through: 'MapPinsNormalWorldAreas',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'merciless_world_areas',
       through: 'MapPinsMercilessWorldAreas',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'cruel_world_areas',
       through: 'MapPinsCruelWorldAreas',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'world_areas',
       through: 'MapPinsWorldAreas',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });

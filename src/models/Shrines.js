@@ -193,6 +193,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.AchievementItems, {
       as: 'achievement_items',
       through: 'ShrinesAchievementItems',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });

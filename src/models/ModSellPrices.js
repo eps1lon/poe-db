@@ -39,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.BaseItemTypes, {
       as: 'base_item_types',
       through: 'ModSellPricesBaseItemTypes',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

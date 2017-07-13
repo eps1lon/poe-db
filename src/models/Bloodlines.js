@@ -112,18 +112,21 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mods, {
       as: 'mods',
       through: 'BloodlinesMods',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',
       through: 'BloodlinesSpawnWeightTags',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'item_weight_tags',
       through: 'BloodlinesItemWeightTags',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });

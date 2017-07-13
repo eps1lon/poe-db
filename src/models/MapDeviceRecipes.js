@@ -38,12 +38,14 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.BaseItemTypes, {
       as: 'base_item_types',
       through: 'MapDeviceRecipesBaseItemTypes',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'world_areas',
       through: 'MapDeviceRecipesWorldAreas',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

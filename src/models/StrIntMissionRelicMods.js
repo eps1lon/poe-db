@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mods, {
       as: 'mods',
       through: 'StrIntMissionRelicModsMods',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

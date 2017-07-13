@@ -105,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mods, {
       as: 'mods',
       through: 'StrMissionsMods',
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });

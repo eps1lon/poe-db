@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',
       through: 'WordsSpawnWeightTags',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

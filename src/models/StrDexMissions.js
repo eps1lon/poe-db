@@ -106,18 +106,21 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterVarieties, {
       as: 'allies_monster_varieties',
       through: 'StrDexMissionsAlliesMonsterVarieties',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'mods',
       through: 'StrDexMissionsMods',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'traps_monster_varieties',
       through: 'StrDexMissionsTrapsMonsterVarieties',
+      $col_order: 12,
       nullable: true,
       constraints: false,
     });

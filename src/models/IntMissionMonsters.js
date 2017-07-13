@@ -44,12 +44,14 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterVarieties, {
       as: 'objective_monster_varieties',
       through: 'IntMissionMonstersObjectiveMonsterVarieties',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'achievement_items',
       through: 'IntMissionMonstersAchievementItems',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

@@ -57,12 +57,14 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Characters, {
       as: 'characters',
       through: 'QuestVendorRewardsCharacters',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'base_item_types',
       through: 'QuestVendorRewardsBaseItemTypes',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

@@ -193,42 +193,49 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mods, {
       as: 'implicit_mods',
       through: 'BaseItemTypesImplicitMods',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'normal_purchase_base_item_types',
       through: 'BaseItemTypesNormalPurchaseBaseItemTypes',
+      $col_order: 11,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'magic_purchase_base_item_types',
       through: 'BaseItemTypesMagicPurchaseBaseItemTypes',
+      $col_order: 13,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'tags',
       through: 'BaseItemTypesTags',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'vendor_recipe_achievement_items',
       through: 'BaseItemTypesVendorRecipeAchievementItems',
+      $col_order: 20,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'rare_purchase_base_item_types',
       through: 'BaseItemTypesRarePurchaseBaseItemTypes',
+      $col_order: 21,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'unique_purchase_base_item_types',
       through: 'BaseItemTypesUniquePurchaseBaseItemTypes',
+      $col_order: 23,
       nullable: true,
       constraints: false,
     });

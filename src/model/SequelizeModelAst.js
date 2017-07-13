@@ -1,4 +1,5 @@
 const t = require('babel-types');
+const { removeProp } = require('../util');
 
 const objToAst = obj => {
   if (obj === null) {
@@ -86,7 +87,20 @@ class SequelizeModelAst {
   }
 
   attributeExpression(name, attribute) {
-    return t.objectProperty(t.identifier(name), objToAst(attribute));
+    return t.objectProperty(
+      t.identifier(name),
+      t.objectExpression([
+        // serialized type is an identifier, objToAst cant deserialize identifiers
+        t.objectProperty(
+          t.identifier('type'),
+          t.memberExpression(
+            t.identifier('DataTypes'),
+            t.identifier(attribute.type),
+          ),
+        ),
+        ...objToAst(removeProp(attribute, 'type')).properties,
+      ]),
+    );
   }
 
   defineOptions() {

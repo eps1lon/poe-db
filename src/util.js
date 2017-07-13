@@ -20,4 +20,15 @@ const entriesToObj = entries =>
 const propChain = (obj, chain) =>
   chain.split('.').reduce((obj, prop) => obj[prop], obj);
 
-module.exports = { entriesToObj, propChain, throwOnError };
+const filterObj = (obj, filter_fn) =>
+  entriesToObj(Object.entries(obj).filter(filter_fn));
+
+const removeProp = (obj, prop) => filterObj(obj, ([other]) => other !== prop);
+
+module.exports = {
+  entriesToObj,
+  filterObj,
+  propChain,
+  removeProp,
+  throwOnError,
+};

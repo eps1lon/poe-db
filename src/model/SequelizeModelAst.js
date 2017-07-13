@@ -86,18 +86,7 @@ class SequelizeModelAst {
   }
 
   attributeExpression(name, attribute) {
-    return t.objectProperty(
-      t.identifier(name),
-      t.objectExpression([
-        t.objectProperty(
-          t.identifier('type'),
-          t.memberExpression(
-            t.identifier('DataTypes'),
-            t.identifier(attribute.type),
-          ),
-        ),
-      ]),
-    );
+    return t.objectProperty(t.identifier(name), objToAst(attribute));
   }
 
   defineOptions() {

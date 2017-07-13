@@ -7,25 +7,39 @@ module.exports = (sequelize, DataTypes) => {
     'AchievementItems',
     {
       row: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: 'BIGINT.UNSIGNED',
+        primaryKey: true,
+        allowNull: false,
       },
       id: {
-        type: DataTypes.TEXT,
+        type: 'TEXT',
+        primaryKey: false,
+        allowNull: false,
       },
       unknown1: {
-        type: DataTypes.INTEGER,
+        type: 'INTEGER',
+        primaryKey: false,
+        allowNull: false,
       },
       unknown2: {
-        type: DataTypes.INTEGER,
+        type: 'INTEGER',
+        primaryKey: false,
+        allowNull: false,
       },
       name: {
-        type: DataTypes.TEXT,
+        type: 'TEXT',
+        primaryKey: false,
+        allowNull: false,
       },
       completions_required: {
-        type: DataTypes.INTEGER,
+        type: 'INTEGER',
+        primaryKey: false,
+        allowNull: false,
       },
       flag0: {
-        type: DataTypes.BOOLEAN,
+        type: 'BOOLEAN',
+        primaryKey: false,
+        allowNull: false,
       },
     },
     {

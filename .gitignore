@@ -6,3 +6,6 @@ npm_debug.log
 data/content.json
 data/records.json
 data/spec.json
+
+/* debug */
+.debug.json

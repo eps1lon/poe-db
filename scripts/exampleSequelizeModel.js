@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       classMethods: {
         associate: models => {
-          model.belongsTo(BelongsToModel, {
+          model.belongsTo(models.BelongsToModel, {
             foreignKey: '$foreignKey',
             targetKey: '$targetKey',
           });

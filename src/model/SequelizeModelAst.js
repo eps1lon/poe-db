@@ -139,7 +139,21 @@ class SequelizeModelAst {
   }
 
   belongsToManyStatements(models) {
-    return [];
+    return this.model.belongsToMany().map(([assoc_name, props]) => {
+      return t.expressionStatement(
+        t.callExpression(
+          t.memberExpression(
+            t.identifier('model'),
+            t.identifier('belongsToMany'),
+          ),
+          [
+            t.memberExpression(models, t.identifier(assoc_name)),
+            // make them nullable for circular references
+            objToAst(Object.assign({}, props, { nullable: true })),
+          ],
+        ),
+      );
+    });
   }
 
   staticRequires() {

@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: '$foreignKey',
             targetKey: '$targetKey',
           });
+
+          models.belongsToMany(models.BelongsToManyModel, {
+            foreignKey: '$foreignKey',
+            targetKey: '$targetKey',
+            through: '$through',
+          });
         },
       },
     },

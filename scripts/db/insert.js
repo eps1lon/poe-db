@@ -1,63 +1,40 @@
-const MysqlSchema = require('../../src/MysqlSchema');
-const MysqlTableSchema = require('../../src/MysqlTableSchema');
-const { connection } = require('../../src/db');
+const { orm_creator } = require('../../src/db');
+const SequelizeModel = require('../../src/model/SequelizeModel');
 
-const db = connection({ multipleStatements: true });
-const specification = require('../../data/spec.json');
 const records = require('../../data/records.json');
 
-const schema = new MysqlSchema(specification);
+const buildAttrObj = (record, model, init = {}) => {
+  return Object.entries(
+    model.attributes,
+  ).reduce((attributes, [attribute, props]) => {
+    const index = props['$col_order'];
+    // there shouldnt be any index error but for now we will blindly run into one
+    // -1 is only used for primary attr
+    if (index !== undefined && index !== -1) {
+      const value = record[index];
 
-db.connect();
-
-for (const [dat_file, dat] of Object.entries(schema.spec)) {
-  const table = new MysqlTableSchema(dat_file, dat);
-
-  let insert = table.insertQuery({ ignore: true }) + ' VALUES ';
-
-  for (let row = 0; row < records[dat_file].length; row += 1) {
-    const record = records[dat_file][row];
-
-    const values = table.cols().map(col => {
-      if (table.fields[col] === undefined) {
-        return row;
-      } else {
-        const value = record[table.fields[col].rowid];
-
-        if (value === undefined) {
-          return null;
-        } else {
-          if (Array.isArray(value)) {
-            return value.join(',');
-          } else {
-            return value;
-          }
-        }
-      }
-    });
-
-    if (row > 0) {
-      insert += ', ';
+      attributes[attribute] = Array.isArray(value) ? value.join(',') : value;
     }
 
-    insert += db.format(
-      '(' + Array(values.length).fill('?').join(', ') + ')',
-      values,
-    );
-  }
+    return attributes;
+  }, init);
+};
+(async () => {
+  const orm = orm_creator();
+  const models = require('../../src/models')(orm);
+  try {
+    for (const model of Object.values(models)) {
+      const model_records = records[model.DAT_FILE].map((record, row) => {
+        return buildAttrObj(record, model, { row });
+      });
 
-  if (records[dat_file].length > 0) {
-    db.query(insert, (error, results) => {
-      if (error) {
-        console.warn(insert, table.tableName());
-        throw error;
-      } else {
-        console.log(
-          `inserted ${results.affectedRows} into ${table.tableName()}`,
-        );
-      }
-    });
+      await model.bulkCreate(model_records, {
+        ignoreDuplicates: true,
+      });
+    }
+  } catch (e) {
+    console.warn(e);
+  } finally {
+    orm.close();
   }
-}
-
-db.end();
+})();

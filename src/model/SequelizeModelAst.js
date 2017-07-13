@@ -138,7 +138,9 @@ class SequelizeModelAst {
           [
             t.memberExpression(models, t.identifier(assoc_name)),
             // make them nullable for circular references
-            objToAst(Object.assign({}, props, { nullable: true })),
+            objToAst(
+              Object.assign({}, props, { nullable: true, constraints: false }),
+            ),
           ],
         ),
       );
@@ -156,7 +158,9 @@ class SequelizeModelAst {
           [
             t.memberExpression(models, t.identifier(assoc_name)),
             // make them nullable for circular references
-            objToAst(Object.assign({}, props, { nullable: true })),
+            objToAst(
+              Object.assign({}, props, { nullable: true, constraints: false }),
+            ),
           ],
         ),
       );

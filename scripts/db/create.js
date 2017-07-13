@@ -25,12 +25,9 @@ db.query('CREATE DATABASE IF NOT EXISTS ??', [name], async () => {
     await Promise.all(syncs);
   } catch (e) {
     console.log(e);
+  } finally {
     await orm.close();
   }
-
-  await orm.close();
-
-  return;
 });
 
 db.end();

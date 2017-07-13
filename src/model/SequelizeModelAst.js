@@ -105,7 +105,11 @@ class SequelizeModelAst {
   }
 
   defineOptions() {
-    return t.objectExpression([]);
+    return objToAst({
+      engine: 'MyISAM',
+      charset: 'utf8mb4',
+      collate: 'utf8mb4_unicode_ci',
+    });
   }
 
   associate() {

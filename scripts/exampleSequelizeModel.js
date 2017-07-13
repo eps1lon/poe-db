@@ -1,5 +1,3 @@
-const sequelize = require('sequelize');
-
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
     '$model_name',

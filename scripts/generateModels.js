@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const generate = require('babel-core').transformFromAst;
 
-const { entriesToObj, throwOnError } = require('../src/util');
+const { throwOnError } = require('../src/util');
 const SequelizeModel = require('../src/model/SequelizeModel');
 
 const spec = require('../data/spec.json');

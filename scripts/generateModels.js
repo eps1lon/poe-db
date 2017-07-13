@@ -20,11 +20,9 @@ const writeAst = async model => {
 };
 
 for (const [name, props] of Object.entries(spec).filter(
-  ([name]) => name === 'Mods.dat',
+  ([name]) => ['Mods.dat', 'AchievementItems.dat'].indexOf(name) !== -1,
 )) {
   const model = new SequelizeModel(name, props);
 
   writeAst(model);
-
-  break;
 }

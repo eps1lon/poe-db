@@ -72,6 +72,9 @@ module.exports = (sequelize, DataTypes) => {
       data4: {
         type: DataTypes.TEXT,
       },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+      },
       stat5_min: {
         type: DataTypes.INTEGER,
       },
@@ -120,11 +123,6 @@ module.exports = (sequelize, DataTypes) => {
           });
           model.belongsTo(models.GrantedEffectsPerLevel, {
             foreignKey: 'granted_effects_per_level_key',
-            target: 'row',
-            nullable: true,
-          });
-          model.belongsTo(models.FixMe, {
-            foreignKey: 'key0',
             target: 'row',
             nullable: true,
           });

@@ -87,12 +87,12 @@ class SequelizeModel extends Model {
     if (field === PRIMARY) {
       return false;
     } else {
-      return /Key(s)?[0-9]*$/.test(field);
+      return this._isBelongsTo(field) || this._isHasMany(field);
     }
   }
 
   _isBelongsTo(field) {
-    return /Key[0-9]*$/.test(field);
+    return /Key[0-9]*$/.test(field) && this.fields[field].key;
   }
 
   _isHasMany(field) {

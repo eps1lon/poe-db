@@ -58,6 +58,7 @@ class SequelizeModelAst {
   exportBody() {
     return t.blockStatement([
       this.modelDefinition(),
+      this.associate(),
       t.returnStatement(t.identifier('model')),
     ]);
   }
@@ -104,25 +105,24 @@ class SequelizeModelAst {
   }
 
   defineOptions() {
-    return t.objectExpression([
-      t.objectProperty(
-        t.identifier('classMethods'),
-        t.objectExpression([
-          t.objectProperty(t.identifier('associate'), this.associate()),
-        ]),
-      ),
-    ]);
+    return t.objectExpression([]);
   }
 
   associate() {
     const models = t.identifier('models');
 
-    return t.arrowFunctionExpression(
-      [models],
-      t.blockStatement([
-        ...this.belongsToStatements(models),
-        ...this.belongsToManyStatements(models),
-      ]),
+    return t.expressionStatement(
+      t.assignmentExpression(
+        '=',
+        t.memberExpression(t.identifier('model'), t.identifier('associate')),
+        t.arrowFunctionExpression(
+          [models],
+          t.blockStatement([
+            ...this.belongsToStatements(models),
+            ...this.belongsToManyStatements(models),
+          ]),
+        ),
+      ),
     );
   }
 

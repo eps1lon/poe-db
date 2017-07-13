@@ -144,17 +144,76 @@
                         },
                         {
                           "type": "ObjectExpression",
-                          "properties": [
-                            {
-                              "type": "ObjectProperty",
-                              "method": false,
-                              "shorthand": false,
-                              "computed": false,
-                              "key": {
+                          "properties": []
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "kind": "const"
+              },
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "AssignmentExpression",
+                  "operator": "=",
+                  "left": {
+                    "type": "MemberExpression",
+                    "object": {
+                      "type": "Identifier",
+                      "name": "model"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "associate"
+                    },
+                    "computed": false
+                  },
+                  "right": {
+                    "type": "ArrowFunctionExpression",
+                    "id": null,
+                    "generator": false,
+                    "expression": false,
+                    "async": false,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "models"
+                      }
+                    ],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "object": {
                                 "type": "Identifier",
-                                "name": "classMethods"
+                                "name": "model"
                               },
-                              "value": {
+                              "property": {
+                                "type": "Identifier",
+                                "name": "belongsTo"
+                              },
+                              "computed": false
+                            },
+                            "arguments": [
+                              {
+                                "type": "MemberExpression",
+                                "object": {
+                                  "type": "Identifier",
+                                  "name": "models"
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "BelongsToModel"
+                                },
+                                "computed": false
+                              },
+                              {
                                 "type": "ObjectExpression",
                                 "properties": [
                                   {
@@ -164,202 +223,136 @@
                                     "computed": false,
                                     "key": {
                                       "type": "Identifier",
-                                      "name": "associate"
+                                      "name": "foreignKey"
                                     },
                                     "value": {
-                                      "type": "ArrowFunctionExpression",
-                                      "id": null,
-                                      "generator": false,
-                                      "expression": false,
-                                      "async": false,
-                                      "params": [
-                                        {
-                                          "type": "Identifier",
-                                          "name": "models"
-                                        }
-                                      ],
-                                      "body": {
-                                        "type": "BlockStatement",
-                                        "body": [
-                                          {
-                                            "type": "ExpressionStatement",
-                                            "expression": {
-                                              "type": "CallExpression",
-                                              "callee": {
-                                                "type": "MemberExpression",
-                                                "object": {
-                                                  "type": "Identifier",
-                                                  "name": "model"
-                                                },
-                                                "property": {
-                                                  "type": "Identifier",
-                                                  "name": "belongsTo"
-                                                },
-                                                "computed": false
-                                              },
-                                              "arguments": [
-                                                {
-                                                  "type": "MemberExpression",
-                                                  "object": {
-                                                    "type": "Identifier",
-                                                    "name": "models"
-                                                  },
-                                                  "property": {
-                                                    "type": "Identifier",
-                                                    "name": "BelongsToModel"
-                                                  },
-                                                  "computed": false
-                                                },
-                                                {
-                                                  "type": "ObjectExpression",
-                                                  "properties": [
-                                                    {
-                                                      "type": "ObjectProperty",
-                                                      "method": false,
-                                                      "shorthand": false,
-                                                      "computed": false,
-                                                      "key": {
-                                                        "type": "Identifier",
-                                                        "name": "foreignKey"
-                                                      },
-                                                      "value": {
-                                                        "type": "StringLiteral",
-                                                        "extra": {
-                                                          "rawValue": "$foreignKey",
-                                                          "raw": "'$foreignKey'"
-                                                        },
-                                                        "value": "$foreignKey"
-                                                      }
-                                                    },
-                                                    {
-                                                      "type": "ObjectProperty",
-                                                      "method": false,
-                                                      "shorthand": false,
-                                                      "computed": false,
-                                                      "key": {
-                                                        "type": "Identifier",
-                                                        "name": "targetKey"
-                                                      },
-                                                      "value": {
-                                                        "type": "StringLiteral",
-                                                        "extra": {
-                                                          "rawValue": "$targetKey",
-                                                          "raw": "'$targetKey'"
-                                                        },
-                                                        "value": "$targetKey"
-                                                      }
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          },
-                                          {
-                                            "type": "ExpressionStatement",
-                                            "expression": {
-                                              "type": "CallExpression",
-                                              "callee": {
-                                                "type": "MemberExpression",
-                                                "object": {
-                                                  "type": "Identifier",
-                                                  "name": "models"
-                                                },
-                                                "property": {
-                                                  "type": "Identifier",
-                                                  "name": "belongsToMany"
-                                                },
-                                                "computed": false
-                                              },
-                                              "arguments": [
-                                                {
-                                                  "type": "MemberExpression",
-                                                  "object": {
-                                                    "type": "Identifier",
-                                                    "name": "models"
-                                                  },
-                                                  "property": {
-                                                    "type": "Identifier",
-                                                    "name": "BelongsToManyModel"
-                                                  },
-                                                  "computed": false
-                                                },
-                                                {
-                                                  "type": "ObjectExpression",
-                                                  "properties": [
-                                                    {
-                                                      "type": "ObjectProperty",
-                                                      "method": false,
-                                                      "shorthand": false,
-                                                      "computed": false,
-                                                      "key": {
-                                                        "type": "Identifier",
-                                                        "name": "foreignKey"
-                                                      },
-                                                      "value": {
-                                                        "type": "StringLiteral",
-                                                        "extra": {
-                                                          "rawValue": "$foreignKey",
-                                                          "raw": "'$foreignKey'"
-                                                        },
-                                                        "value": "$foreignKey"
-                                                      }
-                                                    },
-                                                    {
-                                                      "type": "ObjectProperty",
-                                                      "method": false,
-                                                      "shorthand": false,
-                                                      "computed": false,
-                                                      "key": {
-                                                        "type": "Identifier",
-                                                        "name": "targetKey"
-                                                      },
-                                                      "value": {
-                                                        "type": "StringLiteral",
-                                                        "extra": {
-                                                          "rawValue": "$targetKey",
-                                                          "raw": "'$targetKey'"
-                                                        },
-                                                        "value": "$targetKey"
-                                                      }
-                                                    },
-                                                    {
-                                                      "type": "ObjectProperty",
-                                                      "method": false,
-                                                      "shorthand": false,
-                                                      "computed": false,
-                                                      "key": {
-                                                        "type": "Identifier",
-                                                        "name": "through"
-                                                      },
-                                                      "value": {
-                                                        "type": "StringLiteral",
-                                                        "extra": {
-                                                          "rawValue": "$through",
-                                                          "raw": "'$through'"
-                                                        },
-                                                        "value": "$through"
-                                                      }
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          }
-                                        ],
-                                        "directives": []
-                                      }
+                                      "type": "StringLiteral",
+                                      "extra": {
+                                        "rawValue": "$foreignKey",
+                                        "raw": "'$foreignKey'"
+                                      },
+                                      "value": "$foreignKey"
+                                    }
+                                  },
+                                  {
+                                    "type": "ObjectProperty",
+                                    "method": false,
+                                    "shorthand": false,
+                                    "computed": false,
+                                    "key": {
+                                      "type": "Identifier",
+                                      "name": "targetKey"
+                                    },
+                                    "value": {
+                                      "type": "StringLiteral",
+                                      "extra": {
+                                        "rawValue": "$targetKey",
+                                        "raw": "'$targetKey'"
+                                      },
+                                      "value": "$targetKey"
                                     }
                                   }
                                 ]
                               }
-                            }
-                          ]
+                            ]
+                          }
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "object": {
+                                "type": "Identifier",
+                                "name": "models"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "belongsToMany"
+                              },
+                              "computed": false
+                            },
+                            "arguments": [
+                              {
+                                "type": "MemberExpression",
+                                "object": {
+                                  "type": "Identifier",
+                                  "name": "models"
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "BelongsToManyModel"
+                                },
+                                "computed": false
+                              },
+                              {
+                                "type": "ObjectExpression",
+                                "properties": [
+                                  {
+                                    "type": "ObjectProperty",
+                                    "method": false,
+                                    "shorthand": false,
+                                    "computed": false,
+                                    "key": {
+                                      "type": "Identifier",
+                                      "name": "foreignKey"
+                                    },
+                                    "value": {
+                                      "type": "StringLiteral",
+                                      "extra": {
+                                        "rawValue": "$foreignKey",
+                                        "raw": "'$foreignKey'"
+                                      },
+                                      "value": "$foreignKey"
+                                    }
+                                  },
+                                  {
+                                    "type": "ObjectProperty",
+                                    "method": false,
+                                    "shorthand": false,
+                                    "computed": false,
+                                    "key": {
+                                      "type": "Identifier",
+                                      "name": "targetKey"
+                                    },
+                                    "value": {
+                                      "type": "StringLiteral",
+                                      "extra": {
+                                        "rawValue": "$targetKey",
+                                        "raw": "'$targetKey'"
+                                      },
+                                      "value": "$targetKey"
+                                    }
+                                  },
+                                  {
+                                    "type": "ObjectProperty",
+                                    "method": false,
+                                    "shorthand": false,
+                                    "computed": false,
+                                    "key": {
+                                      "type": "Identifier",
+                                      "name": "through"
+                                    },
+                                    "value": {
+                                      "type": "StringLiteral",
+                                      "extra": {
+                                        "rawValue": "$through",
+                                        "raw": "'$through'"
+                                      },
+                                      "value": "$through"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
                         }
-                      ]
+                      ],
+                      "directives": []
                     }
                   }
-                ],
-                "kind": "const"
+                }
               },
               {
                 "type": "ReturnStatement",

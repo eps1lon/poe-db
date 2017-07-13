@@ -6,23 +6,21 @@ module.exports = (sequelize, DataTypes) => {
     {
       attribute_1: { type: DataTypes.STRING },
     },
-    {
-      classMethods: {
-        associate: models => {
-          model.belongsTo(models.BelongsToModel, {
-            foreignKey: '$foreignKey',
-            targetKey: '$targetKey',
-          });
-
-          models.belongsToMany(models.BelongsToManyModel, {
-            foreignKey: '$foreignKey',
-            targetKey: '$targetKey',
-            through: '$through',
-          });
-        },
-      },
-    },
+    {},
   );
+
+  model.associate = models => {
+    model.belongsTo(models.BelongsToModel, {
+      foreignKey: '$foreignKey',
+      targetKey: '$targetKey',
+    });
+
+    models.belongsToMany(models.BelongsToManyModel, {
+      foreignKey: '$foreignKey',
+      targetKey: '$targetKey',
+      through: '$through',
+    });
+  };
 
   return model;
 };

@@ -186,5 +186,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'GrantedEffectsPerLevel.dat';
   return model;
 };

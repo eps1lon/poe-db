@@ -78,5 +78,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'Achievements.dat';
   return model;
 };

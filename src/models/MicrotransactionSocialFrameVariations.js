@@ -28,5 +28,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'MicrotransactionSocialFrameVariations.dat';
   return model;
 };

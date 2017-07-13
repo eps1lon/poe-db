@@ -38,5 +38,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'MonsterGroupEntries.dat';
   return model;
 };

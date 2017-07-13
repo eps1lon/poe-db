@@ -56,5 +56,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'Hideouts.dat';
   return model;
 };

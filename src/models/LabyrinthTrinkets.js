@@ -45,5 +45,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'LabyrinthTrinkets.dat';
   return model;
 };

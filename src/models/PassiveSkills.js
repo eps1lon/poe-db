@@ -158,5 +158,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'PassiveSkills.dat';
   return model;
 };

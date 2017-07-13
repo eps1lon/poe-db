@@ -117,5 +117,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'DescentRewardChests.dat';
   return model;
 };

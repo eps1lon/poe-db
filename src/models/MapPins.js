@@ -114,5 +114,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'MapPins.dat';
   return model;
 };

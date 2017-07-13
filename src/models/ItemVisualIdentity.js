@@ -177,5 +177,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'ItemVisualIdentity.dat';
   return model;
 };

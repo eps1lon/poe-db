@@ -81,5 +81,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'NPCs.dat';
   return model;
 };

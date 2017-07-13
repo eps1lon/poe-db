@@ -94,5 +94,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'Stats.dat';
   return model;
 };

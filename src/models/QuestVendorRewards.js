@@ -55,5 +55,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'QuestVendorRewards.dat';
   return model;
 };

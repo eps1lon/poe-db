@@ -63,5 +63,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'PerandusGuards.dat';
   return model;
 };

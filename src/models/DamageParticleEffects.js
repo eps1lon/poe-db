@@ -31,5 +31,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'DamageParticleEffects.dat';
   return model;
 };

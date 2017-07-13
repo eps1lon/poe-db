@@ -58,5 +58,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'NPCTextAudio.dat';
   return model;
 };

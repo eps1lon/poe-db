@@ -50,5 +50,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'DescentStarterChest.dat';
   return model;
 };

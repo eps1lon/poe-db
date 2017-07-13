@@ -154,5 +154,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'Chests.dat';
   return model;
 };

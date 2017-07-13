@@ -66,5 +66,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'SkillGems.dat';
   return model;
 };

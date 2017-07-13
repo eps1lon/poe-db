@@ -60,5 +60,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'StrDexIntMissionUniqueMaps.dat';
   return model;
 };

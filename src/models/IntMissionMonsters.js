@@ -54,5 +54,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'IntMissionMonsters.dat';
   return model;
 };

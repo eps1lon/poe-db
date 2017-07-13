@@ -53,5 +53,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'Topologies.dat';
   return model;
 };

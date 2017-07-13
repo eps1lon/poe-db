@@ -59,6 +59,7 @@ class SequelizeModelAst {
     return t.blockStatement([
       this.modelDefinition(),
       this.associate(),
+      this.datFileGetter(),
       t.returnStatement(t.identifier('model')),
     ]);
   }
@@ -178,6 +179,16 @@ class SequelizeModelAst {
         t.callExpression(t.identifier('require'), [t.stringLiteral(path)]),
       ),
     ]);
+  }
+
+  datFileGetter() {
+    return t.expressionStatement(
+      t.assignmentExpression(
+        '=',
+        t.memberExpression(t.identifier('model'), t.identifier('DAT_FILE')),
+        t.stringLiteral(this.model.file),
+      ),
+    );
   }
 
   buildSequelizeImport(model) {}

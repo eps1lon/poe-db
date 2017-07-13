@@ -159,5 +159,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'Characters.dat';
   return model;
 };

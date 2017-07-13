@@ -21,5 +21,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'QuestFlags.dat';
   return model;
 };

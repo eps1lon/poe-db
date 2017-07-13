@@ -115,5 +115,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'ActiveSkills.dat';
   return model;
 };

@@ -44,5 +44,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'InvasionMonsterRestrictions.dat';
   return model;
 };

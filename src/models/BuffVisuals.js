@@ -70,5 +70,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'BuffVisuals.dat';
   return model;
 };

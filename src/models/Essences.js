@@ -382,5 +382,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'Essences.dat';
   return model;
 };

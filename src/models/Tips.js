@@ -31,5 +31,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'Tips.dat';
   return model;
 };

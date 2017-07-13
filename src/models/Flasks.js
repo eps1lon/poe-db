@@ -64,5 +64,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'Flasks.dat';
   return model;
 };

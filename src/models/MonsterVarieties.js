@@ -416,5 +416,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'MonsterVarieties.dat';
   return model;
 };

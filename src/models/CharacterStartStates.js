@@ -88,5 +88,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'CharacterStartStates.dat';
   return model;
 };

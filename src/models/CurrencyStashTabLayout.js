@@ -58,5 +58,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'CurrencyStashTabLayout.dat';
   return model;
 };

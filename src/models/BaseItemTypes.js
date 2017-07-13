@@ -159,5 +159,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'BaseItemTypes.dat';
   return model;
 };

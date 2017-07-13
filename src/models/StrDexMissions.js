@@ -92,5 +92,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'StrDexMissions.dat';
   return model;
 };

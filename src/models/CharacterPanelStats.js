@@ -72,5 +72,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'CharacterPanelStats.dat';
   return model;
 };

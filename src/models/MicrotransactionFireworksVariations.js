@@ -38,5 +38,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'MicrotransactionFireworksVariations.dat';
   return model;
 };

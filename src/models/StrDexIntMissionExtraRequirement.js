@@ -78,5 +78,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'StrDexIntMissionExtraRequirement.dat';
   return model;
 };

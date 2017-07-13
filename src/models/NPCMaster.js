@@ -104,5 +104,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'NPCMaster.dat';
   return model;
 };

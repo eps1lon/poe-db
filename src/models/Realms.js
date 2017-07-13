@@ -66,5 +66,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'Realms.dat';
   return model;
 };

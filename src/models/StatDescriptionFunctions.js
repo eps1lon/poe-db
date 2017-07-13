@@ -21,5 +21,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'StatDescriptionFunctions.dat';
   return model;
 };

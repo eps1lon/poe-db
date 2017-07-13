@@ -63,5 +63,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'DefaultMonsterStats.dat';
   return model;
 };

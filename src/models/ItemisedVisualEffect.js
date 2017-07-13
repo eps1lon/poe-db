@@ -71,5 +71,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'ItemisedVisualEffect.dat';
   return model;
 };

@@ -70,5 +70,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'InvasionMonstersPerArea.dat';
   return model;
 };

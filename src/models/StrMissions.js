@@ -89,5 +89,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'StrMissions.dat';
   return model;
 };

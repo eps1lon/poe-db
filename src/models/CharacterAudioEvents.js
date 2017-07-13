@@ -101,5 +101,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'CharacterAudioEvents.dat';
   return model;
 };

@@ -124,5 +124,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'ExplodingStormBuffs.dat';
   return model;
 };

@@ -134,5 +134,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'IntMissions.dat';
   return model;
 };

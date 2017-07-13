@@ -49,5 +49,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'StrDexIntMissionMaps.dat';
   return model;
 };

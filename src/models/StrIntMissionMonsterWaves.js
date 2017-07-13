@@ -84,5 +84,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'StrIntMissionMonsterWaves.dat';
   return model;
 };

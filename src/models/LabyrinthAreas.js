@@ -51,5 +51,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'LabyrinthAreas.dat';
   return model;
 };

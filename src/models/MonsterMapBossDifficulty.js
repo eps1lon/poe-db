@@ -71,5 +71,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'MonsterMapBossDifficulty.dat';
   return model;
 };

@@ -43,5 +43,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'DexIntMissionTargets.dat';
   return model;
 };

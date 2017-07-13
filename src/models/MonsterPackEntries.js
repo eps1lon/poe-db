@@ -49,5 +49,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'MonsterPackEntries.dat';
   return model;
 };

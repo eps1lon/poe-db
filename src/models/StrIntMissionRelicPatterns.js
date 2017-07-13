@@ -73,5 +73,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'StrIntMissionRelicPatterns.dat';
   return model;
 };

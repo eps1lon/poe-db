@@ -61,5 +61,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'Races.dat';
   return model;
 };

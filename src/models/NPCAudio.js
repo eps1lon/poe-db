@@ -36,5 +36,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'NPCAudio.dat';
   return model;
 };

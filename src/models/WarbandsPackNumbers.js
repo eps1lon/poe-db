@@ -76,5 +76,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'WarbandsPackNumbers.dat';
   return model;
 };

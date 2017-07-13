@@ -33,5 +33,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'CloneShotVariations.dat';
   return model;
 };

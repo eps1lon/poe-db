@@ -31,5 +31,6 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {};
 
+  model.DAT_FILE = 'GemTags.dat';
   return model;
 };

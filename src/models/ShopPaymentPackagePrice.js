@@ -39,5 +39,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'ShopPaymentPackagePrice.dat';
   return model;
 };

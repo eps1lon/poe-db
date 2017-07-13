@@ -85,5 +85,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  model.DAT_FILE = 'UniqueChests.dat';
   return model;
 };

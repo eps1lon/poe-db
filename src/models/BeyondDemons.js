@@ -8,12 +8,6 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      monster_varieties_key: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: false,
-        $col_order: 0,
-      },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
@@ -34,7 +28,27 @@ module.exports = (sequelize, DataTypes) => {
     },
   );
 
-  model.associate = models => {};
+  model.associate = models => {
+    model.belongsTo(models.MonsterVarieties, {
+      foreignKey: {
+        name: 'monster_varieties_key',
+        $col_order: 0,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'monster_varieties_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
+  };
 
   model.DAT_FILE = 'BeyondDemons.dat';
   return model;

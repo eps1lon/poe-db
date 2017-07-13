@@ -6,7 +6,6 @@ npm_debug.log
 data/content.json
 data/records.json
 data/spec.json
-data/sequelize.json
 
 /* mysql tmp */
 data/schema.sql

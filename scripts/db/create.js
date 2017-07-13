@@ -1,10 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-
-const SequelizeModel = require('../../src/model/SequelizeModel');
 const { orm_creator, connection, name } = require('../../src/db');
-
-const model_path = path.join(__dirname, '../../src/models');
 
 const db = connection({ database: undefined });
 
@@ -17,9 +11,11 @@ db.query('CREATE DATABASE IF NOT EXISTS ??', [name], async () => {
     await orm.authenticate();
 
     const syncs = [];
-    const models = require('../../src/models/')(orm);
+    require('../../src/models/')(orm);
 
-    for (const [name, model] of Object.entries(models)) {
+    // use orm.models instead of the returned models because we also
+    // need to create the models defined in 'through'
+    for (const [, model] of Object.entries(orm.models)) {
       syncs.push(model.sync({ force: true }));
     }
     await Promise.all(syncs);

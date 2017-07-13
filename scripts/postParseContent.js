@@ -2,11 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const { entriesToObj, throwOnError } = require('../src/util');
-const Model = require('../src/model/SequelizeModel');
 
 const pypoe_content = path.join(__dirname, '../data/content.json');
 const spec_out = path.join(__dirname, '../data/spec.json');
-const sequelize_out = path.join(__dirname, '../data/sequelize.json');
 const records_out = path.join(__dirname, '../data/records.json');
 
 const content = require(pypoe_content);

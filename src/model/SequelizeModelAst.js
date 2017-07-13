@@ -33,8 +33,6 @@ class SequelizeModelAst {
   exportBody() {
     return t.blockStatement([
       this.modelDefinition(),
-      ...this.belongsToStatements(),
-      ...this.belongsToManyStatements(),
       t.returnStatement(t.identifier('model')),
     ]);
   }
@@ -45,19 +43,18 @@ class SequelizeModelAst {
         t.identifier('model'),
         t.callExpression(
           t.memberExpression(t.identifier('sequelize'), t.identifier('define')),
-          [
-            t.stringLiteral(this.model.name()),
-            t.objectExpression(this.attributeExpressions()),
-          ],
+          [t.stringLiteral(this.model.name()), this.attributes()],
         ),
       ),
     ]);
   }
 
-  attributeExpressions() {
-    return Object.entries(this.model.attributes()).map(([name, attribute]) => {
-      return this.attributeExpression(name, attribute);
-    });
+  attributes() {
+    return t.objectExpression(
+      Object.entries(this.model.attributes()).map(([name, attribute]) => {
+        return this.attributeExpression(name, attribute);
+      }),
+    );
   }
 
   attributeExpression(name, attribute) {

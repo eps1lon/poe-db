@@ -96,7 +96,7 @@ class SequelizeModel extends Model {
   }
 
   _isHasMany(field) {
-    return /Keys[0-9]*$/.test(field);
+    return /Keys[0-9]*$/.test(field) && this.fields[field].key;
   }
 
   _isExtendedProp(field) {

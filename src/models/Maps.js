@@ -60,6 +60,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BaseItemTypes.hasMany(model, {
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.WorldAreas, {
       foreignKey: {
         name: 'regular_world_areas_key',
@@ -68,6 +78,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.WorldAreas.hasMany(model, {
+      foreignKey: {
+        name: 'regular_world_areas_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.WorldAreas, {
       foreignKey: {
@@ -78,6 +98,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.WorldAreas.hasMany(model, {
+      foreignKey: {
+        name: 'unique_world_areas_key',
+        $col_order: 2,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BaseItemTypes, {
       foreignKey: {
         name: 'map_upgrade_base_item_types_key',
@@ -86,6 +116,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.BaseItemTypes.hasMany(model, {
+      foreignKey: {
+        name: 'map_upgrade_base_item_types_key',
+        $col_order: 3,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Maps, {
       foreignKey: {
@@ -96,6 +136,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Maps.hasMany(model, {
+      foreignKey: {
+        name: 'shaped_base_maps_key',
+        $col_order: 10,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Maps, {
       foreignKey: {
         name: 'maps_key1',
@@ -104,6 +154,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Maps.hasMany(model, {
+      foreignKey: {
+        name: 'maps_key1',
+        $col_order: 12,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Maps, {
       foreignKey: {
@@ -114,6 +174,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Maps.hasMany(model, {
+      foreignKey: {
+        name: 'maps_key2',
+        $col_order: 13,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Maps, {
       foreignKey: {
         name: 'maps_key3',
@@ -122,6 +192,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Maps.hasMany(model, {
+      foreignKey: {
+        name: 'maps_key3',
+        $col_order: 14,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.MonsterPacks, {
       as: 'monster_packs',

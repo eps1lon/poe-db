@@ -54,6 +54,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'monster_varieties_key',
+        $col_order: 4,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
   };
 
   model.DAT_FILE = 'StrMissionBosses.dat';

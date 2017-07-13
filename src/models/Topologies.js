@@ -60,6 +60,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Environments.hasMany(model, {
+      foreignKey: {
+        name: 'environments_key',
+        $col_order: 5,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
   };
 
   model.DAT_FILE = 'Topologies.dat';

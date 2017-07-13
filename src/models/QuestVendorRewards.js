@@ -48,6 +48,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.NPCs.hasMany(model, {
+      foreignKey: {
+        name: 'npc_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.Characters, {
       as: 'characters',
       through: 'QuestVendorRewardsCharacters',

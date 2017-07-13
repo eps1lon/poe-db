@@ -36,6 +36,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.NPCMaster.hasMany(model, {
+      foreignKey: {
+        name: 'npc_master_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.WorldAreas, {
       as: 'world_areas',
       through: 'MissionTileMapWorldAreas',

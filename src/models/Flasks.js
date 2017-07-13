@@ -66,6 +66,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BaseItemTypes.hasMany(model, {
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BuffDefinitions, {
       foreignKey: {
         name: 'buff_definitions_key',
@@ -74,6 +84,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.BuffDefinitions.hasMany(model, {
+      foreignKey: {
+        name: 'buff_definitions_key',
+        $col_order: 6,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
   };
 

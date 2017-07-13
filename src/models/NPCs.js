@@ -72,6 +72,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.NPCMaster.hasMany(model, {
+      foreignKey: {
+        name: 'npc_master_key',
+        $col_order: 4,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.NPCShop, {
       foreignKey: {
         name: 'npc_shop_key',
@@ -80,6 +90,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.NPCShop.hasMany(model, {
+      foreignKey: {
+        name: 'npc_shop_key',
+        $col_order: 8,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.NPCAudio, {
       foreignKey: {
@@ -90,6 +110,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.NPCAudio.hasMany(model, {
+      foreignKey: {
+        name: 'npc_audio_key1',
+        $col_order: 9,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.NPCAudio, {
       foreignKey: {
         name: 'npc_audio_key2',
@@ -98,6 +128,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.NPCAudio.hasMany(model, {
+      foreignKey: {
+        name: 'npc_audio_key2',
+        $col_order: 10,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
   };
 

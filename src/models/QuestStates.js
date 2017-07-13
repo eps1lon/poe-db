@@ -102,6 +102,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Quest.hasMany(model, {
+      foreignKey: {
+        name: 'quest_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.MapPins, {
       as: 'map_pins1',
       through: 'QuestStatesMapPins',

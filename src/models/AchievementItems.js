@@ -66,6 +66,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Achievements.hasMany(model, {
+      foreignKey: {
+        name: 'achievements_key',
+        $col_order: 5,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
   };
 
   model.DAT_FILE = 'AchievementItems.dat';

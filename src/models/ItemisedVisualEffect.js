@@ -60,6 +60,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BaseItemTypes.hasMany(model, {
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ItemVisualEffect, {
       foreignKey: {
         name: 'item_visual_effect_key',
@@ -68,6 +78,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.ItemVisualEffect.hasMany(model, {
+      foreignKey: {
+        name: 'item_visual_effect_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
@@ -78,6 +98,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ItemVisualIdentity.hasMany(model, {
+      foreignKey: {
+        name: 'item_visual_identity_key1',
+        $col_order: 2,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
         name: 'item_visual_identity_key2',
@@ -86,6 +116,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.ItemVisualIdentity.hasMany(model, {
+      foreignKey: {
+        name: 'item_visual_identity_key2',
+        $col_order: 3,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
   };
 

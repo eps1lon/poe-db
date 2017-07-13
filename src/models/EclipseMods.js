@@ -54,6 +54,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key',
+        $col_order: 3,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',
       through: 'SpawnWeightTags',

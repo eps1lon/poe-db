@@ -48,6 +48,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'monster_varieties_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BuffDefinitions, {
       foreignKey: {
         name: 'buff_buff_definitions_key',
@@ -56,6 +66,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.BuffDefinitions.hasMany(model, {
+      foreignKey: {
+        name: 'buff_buff_definitions_key',
+        $col_order: 2,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
   };
 

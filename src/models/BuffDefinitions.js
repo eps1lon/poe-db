@@ -162,6 +162,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Stats.hasMany(model, {
+      foreignKey: {
+        name: 'maximum_stats_key',
+        $col_order: 9,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Stats, {
       foreignKey: {
         name: 'current_stats_key',
@@ -171,6 +181,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Stats.hasMany(model, {
+      foreignKey: {
+        name: 'current_stats_key',
+        $col_order: 10,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BuffVisuals, {
       foreignKey: {
         name: 'buff_visuals_key',
@@ -179,6 +199,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.BuffVisuals.hasMany(model, {
+      foreignKey: {
+        name: 'buff_visuals_key',
+        $col_order: 13,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Stats, {
       as: 'stats',

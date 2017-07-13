@@ -72,6 +72,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.NPCTalk.hasMany(model, {
+      foreignKey: {
+        name: 'npc_talk_key',
+        $col_order: 6,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.PVPTypes, {
       foreignKey: {
         name: 'pvp_types_key',
@@ -80,6 +90,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.PVPTypes.hasMany(model, {
+      foreignKey: {
+        name: 'pvp_types_key',
+        $col_order: 9,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Characters, {
       as: 'characters',

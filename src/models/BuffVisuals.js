@@ -66,6 +66,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MiscAnimated.hasMany(model, {
+      foreignKey: {
+        name: 'misc_animated_key',
+        $col_order: 4,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.MiscAnimated, {
       foreignKey: {
         name: 'misc_animated_key2',
@@ -74,6 +84,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.MiscAnimated.hasMany(model, {
+      foreignKey: {
+        name: 'misc_animated_key2',
+        $col_order: 5,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.PreloadGroups, {
       as: 'preload_groups',

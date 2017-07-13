@@ -54,6 +54,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'monster_varieties_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.MonsterVarieties, {
       foreignKey: {
         name: 'summoned_monster_monster_varieties_key',
@@ -62,6 +72,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'summoned_monster_monster_varieties_key',
+        $col_order: 7,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Mods, {
       as: 'spirit_mods',

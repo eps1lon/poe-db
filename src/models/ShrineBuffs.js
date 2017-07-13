@@ -48,6 +48,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BuffDefinitions.hasMany(model, {
+      foreignKey: {
+        name: 'buff_definitions_key',
+        $col_order: 2,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
   };
 
   model.DAT_FILE = 'ShrineBuffs.dat';

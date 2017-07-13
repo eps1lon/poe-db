@@ -198,6 +198,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.GrantedEffects.hasMany(model, {
+      foreignKey: {
+        name: 'granted_effects_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.Stats, {
       as: 'stats',
       through: 'GrantedEffectsPerLevelStats',

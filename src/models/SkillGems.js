@@ -54,6 +54,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BaseItemTypes.hasMany(model, {
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.GrantedEffects, {
       foreignKey: {
         name: 'granted_effects_key',
@@ -63,6 +73,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.GrantedEffects.hasMany(model, {
+      foreignKey: {
+        name: 'granted_effects_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BaseItemTypes, {
       foreignKey: {
         name: 'vaal_variant_base_item_types_key',
@@ -71,6 +91,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.BaseItemTypes.hasMany(model, {
+      foreignKey: {
+        name: 'vaal_variant_base_item_types_key',
+        $col_order: 6,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.GemTags, {
       as: 'gem_tags',

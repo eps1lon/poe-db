@@ -54,6 +54,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Chests.hasMany(model, {
+      foreignKey: {
+        name: 'chests_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
   };
 
   model.DAT_FILE = 'SummonedSpecificBarrels.dat';

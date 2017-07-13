@@ -180,6 +180,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.SoundEffects.hasMany(model, {
+      foreignKey: {
+        name: 'sound_effects_key',
+        $col_order: 3,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.AchievementItems, {
       foreignKey: {
         name: 'create_corrupted_jewel_achievement_items_key',
@@ -188,6 +198,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.AchievementItems.hasMany(model, {
+      foreignKey: {
+        name: 'create_corrupted_jewel_achievement_items_key',
+        $col_order: 29,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'pickup_achievement_items',

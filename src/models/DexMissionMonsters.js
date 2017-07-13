@@ -54,6 +54,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'boss_monster_varieties_key',
+        $col_order: 6,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.MonsterPacks, {
       as: 'monster_packs',
       through: 'DexMissionMonstersMonsterPacks',

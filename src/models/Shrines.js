@@ -108,6 +108,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ShrineBuffs.hasMany(model, {
+      foreignKey: {
+        name: 'player_shrine_buffs_key',
+        $col_order: 4,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ShrineBuffs, {
       foreignKey: {
         name: 'monster_shrine_buffs_key',
@@ -116,6 +126,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.ShrineBuffs.hasMany(model, {
+      foreignKey: {
+        name: 'monster_shrine_buffs_key',
+        $col_order: 8,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.MonsterVarieties, {
       foreignKey: {
@@ -126,6 +146,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'summon_monster_monster_varieties_key',
+        $col_order: 9,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.MonsterVarieties, {
       foreignKey: {
         name: 'summon_player_monster_varieties_key',
@@ -135,6 +165,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'summon_player_monster_varieties_key',
+        $col_order: 10,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ShrineSounds, {
       foreignKey: {
         name: 'shrine_sounds_key',
@@ -143,6 +183,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.ShrineSounds.hasMany(model, {
+      foreignKey: {
+        name: 'shrine_sounds_key',
+        $col_order: 13,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'achievement_items',

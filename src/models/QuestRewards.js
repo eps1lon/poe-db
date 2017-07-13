@@ -90,6 +90,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Quest.hasMany(model, {
+      foreignKey: {
+        name: 'quest_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Characters, {
       foreignKey: {
         name: 'characters_key',
@@ -99,6 +109,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Characters.hasMany(model, {
+      foreignKey: {
+        name: 'characters_key',
+        $col_order: 3,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BaseItemTypes, {
       foreignKey: {
         name: 'base_item_types_key',
@@ -107,6 +127,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.BaseItemTypes.hasMany(model, {
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 4,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
   };
 

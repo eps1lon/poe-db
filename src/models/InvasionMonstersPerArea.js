@@ -66,6 +66,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.WorldAreas.hasMany(model, {
+      foreignKey: {
+        name: 'world_areas_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'monster_varieties1',
       through: 'InvasionMonstersPerAreaMonsterVarieties',

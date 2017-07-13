@@ -108,6 +108,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ItemClasses.hasMany(model, {
+      foreignKey: {
+        name: 'item_classes_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.FlavourText, {
       foreignKey: {
         name: 'flavour_text_key',
@@ -116,6 +126,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.FlavourText.hasMany(model, {
+      foreignKey: {
+        name: 'flavour_text_key',
+        $col_order: 7,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.SoundEffects, {
       foreignKey: {
@@ -126,6 +146,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.SoundEffects.hasMany(model, {
+      foreignKey: {
+        name: 'sound_effects_key',
+        $col_order: 10,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
         name: 'item_visual_identity_key',
@@ -135,6 +165,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ItemVisualIdentity.hasMany(model, {
+      foreignKey: {
+        name: 'item_visual_identity_key',
+        $col_order: 18,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.AchievementItems, {
       foreignKey: {
         name: 'equip_achievement_items_key',
@@ -143,6 +183,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.AchievementItems.hasMany(model, {
+      foreignKey: {
+        name: 'equip_achievement_items_key',
+        $col_order: 26,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Mods, {
       as: 'implicit_mods',

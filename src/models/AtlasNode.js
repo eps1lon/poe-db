@@ -72,6 +72,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.WorldAreas.hasMany(model, {
+      foreignKey: {
+        name: 'world_areas_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
         name: 'default_item_visual_identity_key',
@@ -81,6 +91,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ItemVisualIdentity.hasMany(model, {
+      foreignKey: {
+        name: 'default_item_visual_identity_key',
+        $col_order: 7,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
         name: 'shaped_item_visual_identity_key',
@@ -89,6 +109,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.ItemVisualIdentity.hasMany(model, {
+      foreignKey: {
+        name: 'shaped_item_visual_identity_key',
+        $col_order: 8,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.AtlasNode, {
       as: 'atlas_node',

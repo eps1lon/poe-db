@@ -42,6 +42,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.EventSeason.hasMany(model, {
+      foreignKey: {
+        name: 'event_season_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
   };
 
   model.DAT_FILE = 'EventSeasonRewards.dat';

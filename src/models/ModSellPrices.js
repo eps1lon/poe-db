@@ -30,6 +30,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ModSellPriceTypes.hasMany(model, {
+      foreignKey: {
+        name: 'mod_sell_price_types_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'base_item_types',
       through: 'ModSellPricesBaseItemTypes',

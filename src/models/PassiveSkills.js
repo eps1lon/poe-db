@@ -150,6 +150,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.AchievementItems.hasMany(model, {
+      foreignKey: {
+        name: 'achievement_items_key',
+        $col_order: 14,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BuffDefinitions, {
       foreignKey: {
         name: 'granted_buff_buff_definitions_key',
@@ -159,6 +169,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BuffDefinitions.hasMany(model, {
+      foreignKey: {
+        name: 'granted_buff_buff_definitions_key',
+        $col_order: 16,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Ascendancy, {
       foreignKey: {
         name: 'ascendancy_key',
@@ -167,6 +187,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Ascendancy.hasMany(model, {
+      foreignKey: {
+        name: 'ascendancy_key',
+        $col_order: 20,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Stats, {
       as: 'stats',

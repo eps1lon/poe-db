@@ -30,6 +30,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.PassiveSkills.hasMany(model, {
+      foreignKey: {
+        name: 'passive_skills_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
   };
 
   model.DAT_FILE = 'PassiveJewelSlots.dat';

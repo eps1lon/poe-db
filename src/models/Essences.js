@@ -138,6 +138,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BaseItemTypes.hasMany(model, {
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'mods_key1',
@@ -146,6 +156,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key1',
+        $col_order: 12,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -156,6 +176,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key2',
+        $col_order: 13,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'quiver_mods_key',
@@ -164,6 +194,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'quiver_mods_key',
+        $col_order: 14,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -174,6 +214,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'amulet1_mods_key',
+        $col_order: 15,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'belt1_mods_key',
@@ -182,6 +232,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'belt1_mods_key',
+        $col_order: 16,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -192,6 +252,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'belt3_mods_key',
+        $col_order: 17,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'gloves1_mods_key',
@@ -200,6 +270,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'gloves1_mods_key',
+        $col_order: 18,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -210,6 +290,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'boots1_mods_key',
+        $col_order: 19,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'body_armour1_mods_key',
@@ -218,6 +308,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'body_armour1_mods_key',
+        $col_order: 20,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -228,6 +328,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'helmet1_mods_key',
+        $col_order: 21,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'shield1_mods_key',
@@ -236,6 +346,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'shield1_mods_key',
+        $col_order: 22,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.EssenceType, {
       foreignKey: {
@@ -246,6 +366,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.EssenceType.hasMany(model, {
+      foreignKey: {
+        name: 'essence_type_key',
+        $col_order: 27,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: '1_hand_mods_key1',
@@ -254,6 +384,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key1',
+        $col_order: 30,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -264,6 +404,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key13',
+        $col_order: 31,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'mods_key14',
@@ -272,6 +422,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key14',
+        $col_order: 32,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -282,6 +442,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key15',
+        $col_order: 33,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: '2_hand_mods_key1',
@@ -290,6 +460,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '2_hand_mods_key1',
+        $col_order: 34,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -300,6 +480,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'boots3_mods_key',
+        $col_order: 35,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'ranged_mods_key',
@@ -308,6 +498,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'ranged_mods_key',
+        $col_order: 36,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -318,6 +518,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'helmet2_mods_key',
+        $col_order: 37,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'body_armour2_mods_key',
@@ -326,6 +536,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'body_armour2_mods_key',
+        $col_order: 38,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -336,6 +556,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'boots2_mods_key',
+        $col_order: 39,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'gloves2_mods_key',
@@ -344,6 +574,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'gloves2_mods_key',
+        $col_order: 40,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -354,6 +594,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'bow_mods_key',
+        $col_order: 41,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'wand_mods_key',
@@ -362,6 +612,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'wand_mods_key',
+        $col_order: 42,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -372,6 +632,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '2_hand_mods_key2',
+        $col_order: 43,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: '2_hand_mods_key3',
@@ -380,6 +650,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '2_hand_mods_key3',
+        $col_order: 44,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -390,6 +670,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '2_hand_mods_key4',
+        $col_order: 45,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: '2_hand_mods_key5',
@@ -398,6 +688,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '2_hand_mods_key5',
+        $col_order: 46,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -408,6 +708,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key2',
+        $col_order: 47,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: '1_hand_mods_key3',
@@ -416,6 +726,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key3',
+        $col_order: 48,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -426,6 +746,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key4',
+        $col_order: 49,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: '1_hand_mods_key5',
@@ -434,6 +764,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key5',
+        $col_order: 50,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -444,6 +784,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key6',
+        $col_order: 51,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: '1_hand_mods_key7',
@@ -452,6 +802,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key7',
+        $col_order: 52,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -462,6 +822,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key8',
+        $col_order: 53,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: '1_hand_mods_key9',
@@ -470,6 +840,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: '1_hand_mods_key9',
+        $col_order: 54,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -480,6 +860,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'belt2_mods_key',
+        $col_order: 56,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'amulet2_mods_key',
@@ -488,6 +878,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'amulet2_mods_key',
+        $col_order: 57,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -498,6 +898,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'ring_mods_key',
+        $col_order: 58,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'mods_key41',
@@ -506,6 +916,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key41',
+        $col_order: 59,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Mods, {
       foreignKey: {
@@ -516,6 +936,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'shield2_mods_key',
+        $col_order: 60,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'mods_key43',
@@ -524,6 +954,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key43',
+        $col_order: 61,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Mods, {
       as: 'monster_mods',

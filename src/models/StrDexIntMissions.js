@@ -102,6 +102,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.NPCTalk.hasMany(model, {
+      foreignKey: {
+        name: 'npc_talk_key',
+        $col_order: 11,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.MonsterPacks, {
       foreignKey: {
         name: 'monster_packs_key',
@@ -110,6 +120,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.MonsterPacks.hasMany(model, {
+      foreignKey: {
+        name: 'monster_packs_key',
+        $col_order: 12,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Mods, {
       as: 'extra_mods',

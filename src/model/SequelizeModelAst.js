@@ -1,4 +1,6 @@
 const t = require('babel-types');
+const _ = require('lodash');
+
 const { removeProp } = require('../util');
 
 const objToAst = obj => {
@@ -132,20 +134,49 @@ class SequelizeModelAst {
   }
 
   belongsToStatements(models) {
-    return this.model.belongsTo().map(([assoc_name, props]) => {
-      return t.expressionStatement(
-        t.callExpression(
-          t.memberExpression(t.identifier('model'), t.identifier('belongsTo')),
-          [
-            t.memberExpression(models, t.identifier(assoc_name)),
-            // make them nullable for circular references
-            objToAst(
-              Object.assign({}, props, { nullable: true, constraints: false }),
-            ),
-          ],
-        ),
-      );
-    });
+    return _.flatten(
+      this.model.belongsTo().map(([assoc_name, props]) => {
+        const source = t.identifier('model');
+        const target = t.memberExpression(models, t.identifier(assoc_name));
+
+        const belongs_to_statment = t.expressionStatement(
+          t.callExpression(
+            t.memberExpression(source, t.identifier('belongsTo')),
+            [
+              target,
+              // make them nullable for circular references
+              objToAst(
+                Object.assign({}, props, {
+                  nullable: true,
+                  constraints: false,
+                }),
+              ),
+            ],
+          ),
+        );
+
+        const has_many_statement = t.expressionStatement(
+          t.callExpression(
+            t.memberExpression(target, t.identifier('hasMany')),
+            [
+              source,
+              // make them nullable for circular references
+              objToAst(
+                Object.assign({}, props, {
+                  nullable: true,
+                  constraints: false,
+                  // swap source target
+                  targetKey: undefined,
+                  sourceKey: props.targetKey,
+                }),
+              ),
+            ],
+          ),
+        );
+
+        return [belongs_to_statment, has_many_statement];
+      }),
+    );
   }
 
   belongsToManyStatements(models) {

@@ -66,6 +66,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Characters.hasMany(model, {
+      foreignKey: {
+        name: 'characters_key',
+        $col_order: 2,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.CharacterStartStateSet, {
       foreignKey: {
         name: 'character_start_state_set_key',
@@ -74,6 +84,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.CharacterStartStateSet.hasMany(model, {
+      foreignKey: {
+        name: 'character_start_state_set_key',
+        $col_order: 6,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.PassiveSkills, {
       as: 'passive_skills',

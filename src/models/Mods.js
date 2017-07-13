@@ -192,6 +192,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ModType.hasMany(model, {
+      foreignKey: {
+        name: 'mod_type_key',
+        $col_order: 2,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Stats, {
       foreignKey: {
         name: 'stats_key1',
@@ -200,6 +210,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Stats.hasMany(model, {
+      foreignKey: {
+        name: 'stats_key1',
+        $col_order: 4,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Stats, {
       foreignKey: {
@@ -210,6 +230,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Stats.hasMany(model, {
+      foreignKey: {
+        name: 'stats_key2',
+        $col_order: 5,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Stats, {
       foreignKey: {
         name: 'stats_key3',
@@ -218,6 +248,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Stats.hasMany(model, {
+      foreignKey: {
+        name: 'stats_key3',
+        $col_order: 6,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.Stats, {
       foreignKey: {
@@ -228,6 +268,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Stats.hasMany(model, {
+      foreignKey: {
+        name: 'stats_key4',
+        $col_order: 7,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BuffDefinitions, {
       foreignKey: {
         name: 'buff_definitions_key',
@@ -236,6 +286,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.BuffDefinitions.hasMany(model, {
+      foreignKey: {
+        name: 'buff_definitions_key',
+        $col_order: 22,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.GrantedEffectsPerLevel, {
       foreignKey: {
@@ -246,6 +306,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.GrantedEffectsPerLevel.hasMany(model, {
+      foreignKey: {
+        name: 'granted_effects_per_level_key',
+        $col_order: 25,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Stats, {
       foreignKey: {
         name: 'stats_key5',
@@ -255,6 +325,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.Stats.hasMany(model, {
+      foreignKey: {
+        name: 'stats_key5',
+        $col_order: 34,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.AchievementItems, {
       foreignKey: {
         name: 'achievement_items_key',
@@ -263,6 +343,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.AchievementItems.hasMany(model, {
+      foreignKey: {
+        name: 'achievement_items_key',
+        $col_order: 36,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',

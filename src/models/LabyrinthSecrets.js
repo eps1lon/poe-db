@@ -108,6 +108,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.AchievementItems.hasMany(model, {
+      foreignKey: {
+        name: 'achievement_items_key',
+        $col_order: 17,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.LabyrinthSecretEffects, {
       as: 'labyrinth_secret_effects0',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',

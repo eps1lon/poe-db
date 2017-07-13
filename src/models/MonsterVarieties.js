@@ -294,6 +294,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterTypes.hasMany(model, {
+      foreignKey: {
+        name: 'monster_types_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
         name: 'back_item_visual_identity_key',
@@ -302,6 +312,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.ItemVisualIdentity.hasMany(model, {
+      foreignKey: {
+        name: 'back_item_visual_identity_key',
+        $col_order: 38,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.ItemClasses, {
       foreignKey: {
@@ -312,6 +332,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ItemClasses.hasMany(model, {
+      foreignKey: {
+        name: 'main_hand_item_classes_key',
+        $col_order: 39,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.ItemClasses, {
       foreignKey: {
         name: 'off_hand_item_classes_key',
@@ -320,6 +350,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.ItemClasses.hasMany(model, {
+      foreignKey: {
+        name: 'off_hand_item_classes_key',
+        $col_order: 40,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
@@ -330,6 +370,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ItemVisualIdentity.hasMany(model, {
+      foreignKey: {
+        name: 'helmet_item_visual_identity_key',
+        $col_order: 42,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.AchievementItems, {
       foreignKey: {
         name: 'flashback_achievement_items_key',
@@ -338,6 +388,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.AchievementItems.hasMany(model, {
+      foreignKey: {
+        name: 'flashback_achievement_items_key',
+        $col_order: 60,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.MonsterSegments, {
       foreignKey: {
@@ -348,6 +408,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterSegments.hasMany(model, {
+      foreignKey: {
+        name: 'monster_segments_key',
+        $col_order: 61,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.MonsterArmours, {
       foreignKey: {
         name: 'monster_armours_key',
@@ -356,6 +426,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.MonsterArmours.hasMany(model, {
+      foreignKey: {
+        name: 'monster_armours_key',
+        $col_order: 62,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.AchievementItems, {
       foreignKey: {
@@ -366,6 +446,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.AchievementItems.hasMany(model, {
+      foreignKey: {
+        name: 'achievement_items_key',
+        $col_order: 63,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.AchievementItems, {
       foreignKey: {
         name: 'achievement_items_key4',
@@ -374,6 +464,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.AchievementItems.hasMany(model, {
+      foreignKey: {
+        name: 'achievement_items_key4',
+        $col_order: 64,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.Mods, {
       as: 'mods',

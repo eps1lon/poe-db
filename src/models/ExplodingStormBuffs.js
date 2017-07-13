@@ -102,6 +102,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BuffDefinitions.hasMany(model, {
+      foreignKey: {
+        name: 'buff_definitions_key1',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.MonsterVarieties, {
       foreignKey: {
         name: 'friendly_monster_varieties_key',
@@ -110,6 +120,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'friendly_monster_varieties_key',
+        $col_order: 9,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.MiscObjects, {
       foreignKey: {
@@ -120,6 +140,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MiscObjects.hasMany(model, {
+      foreignKey: {
+        name: 'misc_objects_key',
+        $col_order: 10,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.MiscAnimated, {
       foreignKey: {
         name: 'misc_animated_key',
@@ -128,6 +158,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.MiscAnimated.hasMany(model, {
+      foreignKey: {
+        name: 'misc_animated_key',
+        $col_order: 11,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsTo(models.BuffVisuals, {
       foreignKey: {
@@ -138,6 +178,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.BuffVisuals.hasMany(model, {
+      foreignKey: {
+        name: 'buff_visuals_key',
+        $col_order: 12,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.MonsterVarieties, {
       foreignKey: {
         name: 'enemy_monster_varieties_key',
@@ -147,6 +197,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'enemy_monster_varieties_key',
+        $col_order: 13,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.BuffDefinitions, {
       foreignKey: {
         name: 'buff_definitions_key2',
@@ -155,6 +215,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.BuffDefinitions.hasMany(model, {
+      foreignKey: {
+        name: 'buff_definitions_key2',
+        $col_order: 17,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
   };
 

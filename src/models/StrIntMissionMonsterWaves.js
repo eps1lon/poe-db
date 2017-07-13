@@ -90,6 +90,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.MonsterPacks.hasMany(model, {
+      foreignKey: {
+        name: 'monster_packs_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'unique_monster_varieties',
       through: 'UniqueMonsterVarieties',

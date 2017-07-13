@@ -114,6 +114,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ShopPaymentPackage.hasMany(model, {
+      foreignKey: {
+        name: 'upgrade_shop_payment_package_key',
+        $col_order: 13,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
   };
 
   model.DAT_FILE = 'ShopPaymentPackage.dat';

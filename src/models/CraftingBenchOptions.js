@@ -96,6 +96,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.NPCMaster.hasMany(model, {
+      foreignKey: {
+        name: 'npc_master_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Mods, {
       foreignKey: {
         name: 'mods_key',
@@ -104,6 +114,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Mods.hasMany(model, {
+      foreignKey: {
+        name: 'mods_key',
+        $col_order: 2,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'cost_base_item_types',

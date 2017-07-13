@@ -102,6 +102,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.ProphecyChain.hasMany(model, {
+      foreignKey: {
+        name: 'prophecy_chain_key',
+        $col_order: 7,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.ClientStrings, {
       as: 'quest_tracker_client_strings',
       through: 'QuestTrackerClientStrings',

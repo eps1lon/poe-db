@@ -174,6 +174,16 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.NPCs.hasMany(model, {
+      foreignKey: {
+        name: 'npc_key',
+        $col_order: 0,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsTo(models.Quest, {
       foreignKey: {
         name: 'quest_key',
@@ -182,6 +192,16 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.Quest.hasMany(model, {
+      foreignKey: {
+        name: 'quest_key',
+        $col_order: 9,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
     model.belongsToMany(models.NPCTextAudio, {
       as: 'npc_text_audio',

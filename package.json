@@ -13,7 +13,7 @@
     "db:drop": "node scripts/db/drop",
     "db:create": "node scripts/db/create",
     "db:insert": "node scripts/db/insert",
-    "db:build": "yarn run db:create",
+    "db:build": "yarn run db:create && yarn run db:insert",
     "db:rebuild": "yarn run db:drop && yarn run db:build",
     "dev:models": "node --trace-warnings scripts/generateModels",
     "postdev:models": "prettier-eslint --write \"src/models/*.js\"",
@@ -26,10 +26,7 @@
     "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"

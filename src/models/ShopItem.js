@@ -86,12 +86,13 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.ShopItem, {
-      through: 'PackageShopItem',
       as: 'package_shop_item',
+      through: 'PackageShopItem',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ShopCategory, {
+      as: 'shop_category',
       through: 'ShopItemShopCategory',
       nullable: true,
       constraints: false,

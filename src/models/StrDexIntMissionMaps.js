@@ -42,8 +42,8 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
-      through: 'MapBossMonsterVarieties',
       as: 'map_boss_monster_varieties',
+      through: 'MapBossMonsterVarieties',
       nullable: true,
       constraints: false,
     });

@@ -375,8 +375,8 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'MonsterMods',
       as: 'monster_mods',
+      through: 'MonsterMods',
       nullable: true,
       constraints: false,
     });

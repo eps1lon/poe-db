@@ -93,12 +93,13 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'ExtraMods',
       as: 'extra_mods',
+      through: 'ExtraMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
+      as: 'achievement_items',
       through: 'StrDexIntMissionsAchievementItems',
       nullable: true,
       constraints: false,

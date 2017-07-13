@@ -59,6 +59,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.GemTags, {
+      as: 'gem_tags',
       through: 'SkillGemsGemTags',
       nullable: true,
       constraints: false,

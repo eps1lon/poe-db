@@ -46,8 +46,8 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.Tags, {
-      through: 'SpawnWeightTags',
       as: 'spawn_weight_tags',
+      through: 'SpawnWeightTags',
       nullable: true,
       constraints: false,
     });

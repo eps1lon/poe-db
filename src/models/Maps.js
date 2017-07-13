@@ -94,13 +94,14 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterPacks, {
+      as: 'monster_packs',
       through: 'MapsMonsterPacks',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
-      through: 'HigherTierMapsBaseItemTypes',
       as: 'higher_tier_maps_base_item_types',
+      through: 'HigherTierMapsBaseItemTypes',
       nullable: true,
       constraints: false,
     });

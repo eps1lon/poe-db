@@ -301,110 +301,116 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
+      as: 'mods',
       through: 'MonsterVarietiesMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
+      as: 'tags',
       through: 'MonsterVarietiesTags',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.GrantedEffects, {
+      as: 'granted_effects',
       through: 'MonsterVarietiesGrantedEffects',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
+      as: 'mods2',
       through: 'MonsterVarietiesMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
-      through: 'Weapon1ItemVisualIdentity',
       as: 'weapon1_item_visual_identity',
+      through: 'Weapon1ItemVisualIdentity',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
-      through: 'Weapon2ItemVisualIdentity',
       as: 'weapon2_item_visual_identity',
+      through: 'Weapon2ItemVisualIdentity',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
+      as: 'achievement_items',
       through: 'MonsterVarietiesAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'SpecialMods',
       as: 'special_mods',
+      through: 'SpecialMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
+      as: 'achievement_items2',
       through: 'MonsterVarietiesAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
-      through: 'NormalAchievementItems',
       as: 'normal_achievement_items',
+      through: 'NormalAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
-      through: 'MercilessAchievementItems',
       as: 'merciless_achievement_items',
+      through: 'MercilessAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
-      through: 'CruelAchievementItems',
       as: 'cruel_achievement_items',
+      through: 'CruelAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'NormalMods',
       as: 'normal_mods',
+      through: 'NormalMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'CruelMods',
       as: 'cruel_mods',
+      through: 'CruelMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'MercilessMods',
       as: 'merciless_mods',
+      through: 'MercilessMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
-      through: 'KillRareInNormalAchievementItems',
       as: 'kill_rare_in_normal_achievement_items',
+      through: 'KillRareInNormalAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
-      through: 'KillRareInCruelAchievementItems',
       as: 'kill_rare_in_cruel_achievement_items',
+      through: 'KillRareInCruelAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
-      through: 'KillRareInMercilessAchievementItems',
       as: 'kill_rare_in_merciless_achievement_items',
+      through: 'KillRareInMercilessAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
-      through: 'CountKillsAchievementItems',
       as: 'count_kills_achievement_items',
+      through: 'CountKillsAchievementItems',
       nullable: true,
       constraints: false,
     });

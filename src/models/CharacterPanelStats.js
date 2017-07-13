@@ -53,16 +53,19 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
+      as: 'stats1',
       through: 'CharacterPanelStatsStats',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
+      as: 'stats2',
       through: 'CharacterPanelStatsStats',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
+      as: 'stats3',
       through: 'CharacterPanelStatsStats',
       nullable: true,
       constraints: false,

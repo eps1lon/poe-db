@@ -113,6 +113,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
+      as: 'achievement_items',
       through: 'DexIntMissionsAchievementItems',
       nullable: true,
       constraints: false,

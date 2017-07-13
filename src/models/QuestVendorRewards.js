@@ -42,11 +42,13 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Characters, {
+      as: 'characters',
       through: 'QuestVendorRewardsCharacters',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
+      as: 'base_item_types',
       through: 'QuestVendorRewardsBaseItemTypes',
       nullable: true,
       constraints: false,

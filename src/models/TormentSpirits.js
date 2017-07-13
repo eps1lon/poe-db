@@ -53,29 +53,31 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'SpiritMods',
       as: 'spirit_mods',
+      through: 'SpiritMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'TouchedMods',
       as: 'touched_mods',
+      through: 'TouchedMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
-      through: 'PossessedMods',
       as: 'possessed_mods',
+      through: 'PossessedMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
+      as: 'mods0',
       through: 'TormentSpiritsMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
+      as: 'mods1',
       through: 'TormentSpiritsMods',
       nullable: true,
       constraints: false,

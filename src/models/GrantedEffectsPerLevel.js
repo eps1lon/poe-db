@@ -167,17 +167,19 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
+      as: 'stats',
       through: 'GrantedEffectsPerLevelStats',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
-      through: 'QualityStats',
       as: 'quality_stats',
+      through: 'QualityStats',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
+      as: 'stats2',
       through: 'GrantedEffectsPerLevelStats',
       nullable: true,
       constraints: false,

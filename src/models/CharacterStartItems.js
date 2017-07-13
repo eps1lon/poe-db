@@ -83,12 +83,13 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.SkillGems, {
-      through: 'SocketedSkillGems',
       as: 'socketed_skill_gems',
+      through: 'SocketedSkillGems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
+      as: 'mods',
       through: 'CharacterStartItemsMods',
       nullable: true,
       constraints: false,

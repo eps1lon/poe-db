@@ -68,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Characters, {
+      as: 'characters',
       through: 'DailyMissionsCharacters',
       nullable: true,
       constraints: false,

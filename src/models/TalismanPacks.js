@@ -68,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterPacks, {
+      as: 'monster_packs',
       through: 'TalismanPacksMonsterPacks',
       nullable: true,
       constraints: false,

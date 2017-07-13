@@ -46,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.Chests, {
+      as: 'chests',
       through: 'ChestClustersChests',
       nullable: true,
       constraints: false,

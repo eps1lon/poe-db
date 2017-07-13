@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.DailyMissions, {
+      as: 'daily_missions',
       through: 'DailyOverridesDailyMissions',
       nullable: true,
       constraints: false,

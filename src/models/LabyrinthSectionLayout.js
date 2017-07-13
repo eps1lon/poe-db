@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSectionLayout, {
+      as: 'labyrinth_section_layout',
       through: 'LabyrinthSectionLayoutLabyrinthSectionLayout',
       nullable: true,
       constraints: false,

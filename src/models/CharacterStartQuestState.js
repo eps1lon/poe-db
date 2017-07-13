@@ -41,11 +41,13 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.Quest, {
+      as: 'quest',
       through: 'CharacterStartQuestStateQuest',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MapPins, {
+      as: 'map_pins',
       through: 'CharacterStartQuestStateMapPins',
       nullable: true,
       constraints: false,

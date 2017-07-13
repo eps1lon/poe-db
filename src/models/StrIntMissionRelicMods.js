@@ -51,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.Mods, {
+      as: 'mods',
       through: 'StrIntMissionRelicModsMods',
       nullable: true,
       constraints: false,

@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
+      as: 'world_areas',
       through: 'MissionTileMapWorldAreas',
       nullable: true,
       constraints: false,

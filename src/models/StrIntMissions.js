@@ -88,11 +88,13 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
+      as: 'relic_mods',
       through: 'StrIntMissionsMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
+      as: 'achievement_items',
       through: 'StrIntMissionsAchievementItems',
       nullable: true,
       constraints: false,

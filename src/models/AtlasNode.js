@@ -74,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AtlasNode, {
+      as: 'atlas_node',
       through: 'AtlasNodeAtlasNode',
       nullable: true,
       constraints: false,

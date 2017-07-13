@@ -78,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
+      as: 'mods',
       through: 'UniqueChestsMods',
       nullable: true,
       constraints: false,

@@ -88,12 +88,13 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
-      through: 'CostBaseItemTypes',
       as: 'cost_base_item_types',
+      through: 'CostBaseItemTypes',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemClasses, {
+      as: 'item_classes',
       through: 'CraftingBenchOptionsItemClasses',
       nullable: true,
       constraints: false,

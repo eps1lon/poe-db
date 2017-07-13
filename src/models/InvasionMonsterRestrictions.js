@@ -37,6 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
+      as: 'monster_varieties',
       through: 'InvasionMonsterRestrictionsMonsterVarieties',
       nullable: true,
       constraints: false,

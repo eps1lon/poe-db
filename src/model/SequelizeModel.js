@@ -58,6 +58,7 @@ class SequelizeModel extends Model {
       .map(field => {
         const model_name = Model.name(this.fields[field].key || field);
         let props = {
+          as: SequelizeModel.colCasing(field.replace(/Keys([0-9]*)$/, '$1')),
           through: this.name() + model_name,
         };
 

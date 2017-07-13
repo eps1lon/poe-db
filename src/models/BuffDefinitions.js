@@ -149,6 +149,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
+      as: 'stats',
       through: 'BuffDefinitionsStats',
       nullable: true,
       constraints: false,

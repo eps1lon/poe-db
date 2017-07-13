@@ -37,6 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.BaseItemTypes, {
+      as: 'base_item_types',
       through: 'EndlessLedgeChestsBaseItemTypes',
       nullable: true,
       constraints: false,

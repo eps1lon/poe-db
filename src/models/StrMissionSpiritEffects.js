@@ -76,14 +76,14 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.MonsterVarieties, {
-      through: 'SummonMonsterVarieties',
       as: 'summon_monster_varieties',
+      through: 'SummonMonsterVarieties',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
-      through: 'GroundEffectMonsterVarieties',
       as: 'ground_effect_monster_varieties',
+      through: 'GroundEffectMonsterVarieties',
       nullable: true,
       constraints: false,
     });

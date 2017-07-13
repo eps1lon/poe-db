@@ -92,21 +92,25 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffects, {
+      as: 'labyrinth_secret_effects0',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffects, {
+      as: 'labyrinth_secret_effects1',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffects, {
+      as: 'labyrinth_secret_effects2',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffects, {
+      as: 'labyrinth_secret_effects3',
       through: 'LabyrinthSecretsLabyrinthSecretEffects',
       nullable: true,
       constraints: false,

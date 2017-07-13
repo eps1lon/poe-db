@@ -36,11 +36,13 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.BaseItemTypes, {
+      as: 'base_item_types',
       through: 'MapDeviceRecipesBaseItemTypes',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
+      as: 'world_areas',
       through: 'MapDeviceRecipesWorldAreas',
       nullable: true,
       constraints: false,

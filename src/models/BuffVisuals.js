@@ -63,6 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.PreloadGroups, {
+      as: 'preload_groups',
       through: 'BuffVisualsPreloadGroups',
       nullable: true,
       constraints: false,

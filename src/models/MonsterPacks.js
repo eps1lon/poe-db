@@ -66,17 +66,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.WorldAreas, {
+      as: 'world_areas',
       through: 'MonsterPacksWorldAreas',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
-      through: 'BossMonsterMonsterVarieties',
       as: 'boss_monster_monster_varieties',
+      through: 'BossMonsterMonsterVarieties',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
+      as: 'tags',
       through: 'MonsterPacksTags',
       nullable: true,
       constraints: false,

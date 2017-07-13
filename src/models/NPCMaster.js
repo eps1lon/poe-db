@@ -85,20 +85,20 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
-      through: 'SignatureModSpawnWeightTags',
       as: 'signature_mod_spawn_weight_tags',
+      through: 'SignatureModSpawnWeightTags',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
-      through: 'UnknownWeightTags',
       as: 'unknown_weight_tags',
+      through: 'UnknownWeightTags',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
-      through: 'MasterLevel5AchievementItems',
       as: 'master_level5_achievement_items',
+      through: 'MasterLevel5AchievementItems',
       nullable: true,
       constraints: false,
     });

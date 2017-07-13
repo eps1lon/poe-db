@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const generate = require('babel-core').transformFromAst;
+const format = require('prettier-eslint');
 
 const { entriesToObj, throwOnError } = require('../src/util');
 const SequelizeModel = require('../src/model/SequelizeModel');
@@ -14,7 +15,7 @@ const writeAst = async model => {
 
   fs.writeFile(
     path.join(__dirname, '../src/models/', model.name() + '.js'),
-    generate(ast).code,
+    format({ text: generate(ast).code }),
     throwOnError(),
   );
 };

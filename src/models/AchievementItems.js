@@ -35,7 +35,6 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'achievements_key',
             target: 'row',
             nullable: true,
-            test: [],
           });
         },
       },

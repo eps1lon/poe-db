@@ -535,7 +535,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'connections_world_areas',
-      through: 'ConnectionsWorldAreas',
+      through: 'WorldAreasConnectionsWorldAreas',
       nullable: true,
       constraints: false,
     });
@@ -547,25 +547,25 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'bosses_monster_varieties',
-      through: 'BossesMonsterVarieties',
+      through: 'WorldAreasBossesMonsterVarieties',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'monsters_monster_varieties',
-      through: 'MonstersMonsterVarieties',
+      through: 'WorldAreasMonstersMonsterVarieties',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',
-      through: 'SpawnWeightTags',
+      through: 'WorldAreasSpawnWeightTags',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'full_clear_achievement_items',
-      through: 'FullClearAchievementItems',
+      through: 'WorldAreasFullClearAchievementItems',
       nullable: true,
       constraints: false,
     });
@@ -577,13 +577,13 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'vaal_area_world_areas',
-      through: 'VaalAreaWorldAreas',
+      through: 'WorldAreasVaalAreaWorldAreas',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'area_type_tags',
-      through: 'AreaTypeTags',
+      through: 'WorldAreasAreaTypeTags',
       nullable: true,
       constraints: false,
     });

@@ -123,7 +123,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'cost_base_item_types',
-      through: 'CostBaseItemTypes',
+      through: 'CraftingBenchOptionsCostBaseItemTypes',
       nullable: true,
       constraints: false,
     });

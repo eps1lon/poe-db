@@ -49,55 +49,55 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'marauder_character_text_audio',
-      through: 'MarauderCharacterTextAudio',
+      through: 'CharacterAudioEventsMarauderCharacterTextAudio',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'ranger_character_text_audio',
-      through: 'RangerCharacterTextAudio',
+      through: 'CharacterAudioEventsRangerCharacterTextAudio',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'witch_character_text_audio',
-      through: 'WitchCharacterTextAudio',
+      through: 'CharacterAudioEventsWitchCharacterTextAudio',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'duelist_character_text_audio',
-      through: 'DuelistCharacterTextAudio',
+      through: 'CharacterAudioEventsDuelistCharacterTextAudio',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'shadow_character_text_audio',
-      through: 'ShadowCharacterTextAudio',
+      through: 'CharacterAudioEventsShadowCharacterTextAudio',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'templar_character_text_audio',
-      through: 'TemplarCharacterTextAudio',
+      through: 'CharacterAudioEventsTemplarCharacterTextAudio',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'scion_character_text_audio',
-      through: 'ScionCharacterTextAudio',
+      through: 'CharacterAudioEventsScionCharacterTextAudio',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'goddess_character_text_audio',
-      through: 'GoddessCharacterTextAudio',
+      through: 'CharacterAudioEventsGoddessCharacterTextAudio',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'jack_the_axe_character_text_audio',
-      through: 'JackTheAxeCharacterTextAudio',
+      through: 'CharacterAudioEventsJackTheAxeCharacterTextAudio',
       nullable: true,
       constraints: false,
     });

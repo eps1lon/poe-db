@@ -212,7 +212,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stats, {
       as: 'quality_stats',
-      through: 'QualityStats',
+      through: 'GrantedEffectsPerLevelQualityStats',
       nullable: true,
       constraints: false,
     });

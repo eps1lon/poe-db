@@ -117,13 +117,13 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',
-      through: 'SpawnWeightTags',
+      through: 'BloodlinesSpawnWeightTags',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'item_weight_tags',
-      through: 'ItemWeightTags',
+      through: 'BloodlinesItemWeightTags',
       nullable: true,
       constraints: false,
     });

@@ -79,7 +79,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'boss_monster_monster_varieties',
-      through: 'BossMonsterMonsterVarieties',
+      through: 'MonsterPacksBossMonsterMonsterVarieties',
       nullable: true,
       constraints: false,
     });

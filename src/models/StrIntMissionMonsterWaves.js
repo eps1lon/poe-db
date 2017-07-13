@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'unique_monster_varieties',
-      through: 'UniqueMonsterVarieties',
+      through: 'StrIntMissionMonsterWavesUniqueMonsterVarieties',
       nullable: true,
       constraints: false,
     });

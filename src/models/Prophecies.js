@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ClientStrings, {
       as: 'quest_tracker_client_strings',
-      through: 'QuestTrackerClientStrings',
+      through: 'PropheciesQuestTrackerClientStrings',
       nullable: true,
       constraints: false,
     });

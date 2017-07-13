@@ -109,19 +109,19 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.ItemClasses, {
       as: 'weapon_restriction_item_classes',
-      through: 'WeaponRestrictionItemClasses',
+      through: 'ActiveSkillsWeaponRestrictionItemClasses',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
       as: 'input_stat',
-      through: 'InputStat',
+      through: 'ActiveSkillsInputStat',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
       as: 'output_stat',
-      through: 'OutputStat',
+      through: 'ActiveSkillsOutputStat',
       nullable: true,
       constraints: false,
     });

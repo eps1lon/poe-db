@@ -136,19 +136,19 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'normal_world_areas',
-      through: 'NormalWorldAreas',
+      through: 'MapPinsNormalWorldAreas',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'merciless_world_areas',
-      through: 'MercilessWorldAreas',
+      through: 'MapPinsMercilessWorldAreas',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'cruel_world_areas',
-      through: 'CruelWorldAreas',
+      through: 'MapPinsCruelWorldAreas',
       nullable: true,
       constraints: false,
     });

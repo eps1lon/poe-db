@@ -143,19 +143,19 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tags, {
       as: 'signature_mod_spawn_weight_tags',
-      through: 'SignatureModSpawnWeightTags',
+      through: 'NPCMasterSignatureModSpawnWeightTags',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tags, {
       as: 'unknown_weight_tags',
-      through: 'UnknownWeightTags',
+      through: 'NPCMasterUnknownWeightTags',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'master_level5_achievement_items',
-      through: 'MasterLevel5AchievementItems',
+      through: 'NPCMasterMasterLevel5AchievementItems',
       nullable: true,
       constraints: false,
     });

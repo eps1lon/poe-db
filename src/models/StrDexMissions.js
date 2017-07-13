@@ -105,7 +105,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'allies_monster_varieties',
-      through: 'AlliesMonsterVarieties',
+      through: 'StrDexMissionsAlliesMonsterVarieties',
       nullable: true,
       constraints: false,
     });
@@ -117,7 +117,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'traps_monster_varieties',
-      through: 'TrapsMonsterVarieties',
+      through: 'StrDexMissionsTrapsMonsterVarieties',
       nullable: true,
       constraints: false,
     });

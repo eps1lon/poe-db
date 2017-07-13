@@ -85,25 +85,25 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.MonsterVarieties, {
       as: 'tier4_monster_varieties',
-      through: 'Tier4MonsterVarieties',
+      through: 'WarbandsPackMonstersTier4MonsterVarieties',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'tier3_monster_varieties',
-      through: 'Tier3MonsterVarieties',
+      through: 'WarbandsPackMonstersTier3MonsterVarieties',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'tier2_monster_varieties',
-      through: 'Tier2MonsterVarieties',
+      through: 'WarbandsPackMonstersTier2MonsterVarieties',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVarieties, {
       as: 'tier1_monster_varieties',
-      through: 'Tier1MonsterVarieties',
+      through: 'WarbandsPackMonstersTier1MonsterVarieties',
       nullable: true,
       constraints: false,
     });

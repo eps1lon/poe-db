@@ -25,25 +25,25 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.WorldAreas, {
       as: 'normal_world_areas',
-      through: 'NormalWorldAreas',
+      through: 'LabyrinthAreasNormalWorldAreas',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'cruel_world_areas',
-      through: 'CruelWorldAreas',
+      through: 'LabyrinthAreasCruelWorldAreas',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'merciless_world_areas',
-      through: 'MercilessWorldAreas',
+      through: 'LabyrinthAreasMercilessWorldAreas',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldAreas, {
       as: 'endgame_world_areas',
-      through: 'EndgameWorldAreas',
+      through: 'LabyrinthAreasEndgameWorldAreas',
       nullable: true,
       constraints: false,
     });

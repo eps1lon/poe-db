@@ -497,13 +497,13 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon1_item_visual_identity',
-      through: 'Weapon1ItemVisualIdentity',
+      through: 'MonsterVarietiesWeapon1ItemVisualIdentity',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon2_item_visual_identity',
-      through: 'Weapon2ItemVisualIdentity',
+      through: 'MonsterVarietiesWeapon2ItemVisualIdentity',
       nullable: true,
       constraints: false,
     });
@@ -515,7 +515,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mods, {
       as: 'special_mods',
-      through: 'SpecialMods',
+      through: 'MonsterVarietiesSpecialMods',
       nullable: true,
       constraints: false,
     });
@@ -527,61 +527,61 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'normal_achievement_items',
-      through: 'NormalAchievementItems',
+      through: 'MonsterVarietiesNormalAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'merciless_achievement_items',
-      through: 'MercilessAchievementItems',
+      through: 'MonsterVarietiesMercilessAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'cruel_achievement_items',
-      through: 'CruelAchievementItems',
+      through: 'MonsterVarietiesCruelAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'normal_mods',
-      through: 'NormalMods',
+      through: 'MonsterVarietiesNormalMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'cruel_mods',
-      through: 'CruelMods',
+      through: 'MonsterVarietiesCruelMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mods, {
       as: 'merciless_mods',
-      through: 'MercilessMods',
+      through: 'MonsterVarietiesMercilessMods',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'kill_rare_in_normal_achievement_items',
-      through: 'KillRareInNormalAchievementItems',
+      through: 'MonsterVarietiesKillRareInNormalAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'kill_rare_in_cruel_achievement_items',
-      through: 'KillRareInCruelAchievementItems',
+      through: 'MonsterVarietiesKillRareInCruelAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'kill_rare_in_merciless_achievement_items',
-      through: 'KillRareInMercilessAchievementItems',
+      through: 'MonsterVarietiesKillRareInMercilessAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'count_kills_achievement_items',
-      through: 'CountKillsAchievementItems',
+      through: 'MonsterVarietiesCountKillsAchievementItems',
       nullable: true,
       constraints: false,
     });

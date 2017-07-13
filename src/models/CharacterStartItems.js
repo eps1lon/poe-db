@@ -117,7 +117,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.SkillGems, {
       as: 'socketed_skill_gems',
-      through: 'SocketedSkillGems',
+      through: 'CharacterStartItemsSocketedSkillGems',
       nullable: true,
       constraints: false,
     });

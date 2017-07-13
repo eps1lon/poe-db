@@ -352,7 +352,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tags, {
       as: 'spawn_weight_tags',
-      through: 'SpawnWeightTags',
+      through: 'ModsSpawnWeightTags',
       nullable: true,
       constraints: false,
     });
@@ -364,7 +364,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tags, {
       as: 'generation_weight_tags',
-      through: 'GenerationWeightTags',
+      through: 'ModsGenerationWeightTags',
       nullable: true,
       constraints: false,
     });

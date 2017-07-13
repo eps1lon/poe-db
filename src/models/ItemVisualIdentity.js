@@ -207,19 +207,19 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'pickup_achievement_items',
-      through: 'PickupAchievementItems',
+      through: 'ItemVisualIdentityPickupAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'identify_achievement_items',
-      through: 'IdentifyAchievementItems',
+      through: 'ItemVisualIdentityIdentifyAchievementItems',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'corrupt_achievement_items',
-      through: 'CorruptAchievementItems',
+      through: 'ItemVisualIdentityCorruptAchievementItems',
       nullable: true,
       constraints: false,
     });

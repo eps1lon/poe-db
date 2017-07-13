@@ -97,7 +97,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.ShopItem, {
       as: 'package_shop_item',
-      through: 'PackageShopItem',
+      through: 'ShopItemPackageShopItem',
       nullable: true,
       constraints: false,
     });

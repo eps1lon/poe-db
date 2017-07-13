@@ -208,7 +208,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ClientStrings, {
       as: 'reminder_client_strings',
-      through: 'ReminderClientStrings',
+      through: 'PassiveSkillsReminderClientStrings',
       nullable: true,
       constraints: false,
     });

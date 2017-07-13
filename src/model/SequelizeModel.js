@@ -61,12 +61,15 @@ class SequelizeModel extends Model {
         const model_name = Model.name(this.fields[field].key || field);
         let props = {
           as: SequelizeModel.colCasing(field.replace(/Keys([0-9]*)$/, '$1')),
+          // clear naming with SourceModelTargetModel
           through: this.name() + model_name,
         };
 
         if (this._isExtendedProp(field)) {
-          props.through = field.replace(/Keys([0-9]*)$/, '$1').replace('_', '');
-          props.as = SequelizeModel.colCasing(props.through);
+          // keep the prefix, only remove the KeysX keyword
+          props.through = S(
+            this.name() + field.replace(/Keys([0-9]*)$/, '$1'),
+          ).camelize().s;
         }
 
         // field fallback for generic `KeysX`

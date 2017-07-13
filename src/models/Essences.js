@@ -963,7 +963,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mods, {
       as: 'monster_mods',
-      through: 'MonsterMods',
+      through: 'EssencesMonsterMods',
       nullable: true,
       constraints: false,
     });

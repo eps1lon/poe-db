@@ -142,7 +142,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItems, {
       as: 'usage_achievement_items',
-      through: 'UsageAchievementItems',
+      through: 'CurrencyItemsUsageAchievementItems',
       nullable: true,
       constraints: false,
     });

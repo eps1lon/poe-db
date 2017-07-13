@@ -207,7 +207,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemTypes, {
       as: 'higher_tier_maps_base_item_types',
-      through: 'HigherTierMapsBaseItemTypes',
+      through: 'MapsHigherTierMapsBaseItemTypes',
       nullable: true,
       constraints: false,
     });

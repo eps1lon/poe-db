@@ -129,7 +129,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mods, {
       as: 'extra_mods',
-      through: 'ExtraMods',
+      through: 'StrDexIntMissionsExtraMods',
       nullable: true,
       constraints: false,
     });

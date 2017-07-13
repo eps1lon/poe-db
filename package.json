@@ -20,6 +20,7 @@
     "dev:parseContent": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postdev:parseContent": "node scripts/postParseContent",
     "install": "cd pypoe && pip install -e .[cli]",
+    "lint": "prettier-eslint",
     "precommit": "lint-staged",
     "test": "jest",
     "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\""

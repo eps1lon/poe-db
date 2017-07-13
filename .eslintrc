@@ -1,16 +1,16 @@
 {
+  "env": {
+    "node": true
+  },
   "parserOptions": {
     "ecmaVersion": 8
   },
-  "extends": [
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
-      "error", {
+      "error",
+      {
         "singleQuote": true,
         "trailingComma": "all",
         "bracketSpacing": true

@@ -200,7 +200,7 @@ class SequelizeModelAst {
   }
 
   staticRequires() {
-    return ['path', 'sequelize'];
+    return [];
   }
 
   buildRequire(identifier, path) {
@@ -222,9 +222,9 @@ class SequelizeModelAst {
     );
   }
 
-  buildSequelizeImport(model) {}
+  buildSequelizeImport() {}
 
-  buildAttribute(attr) {}
+  buildAttribute() {}
 }
 
 module.exports = SequelizeModelAst;

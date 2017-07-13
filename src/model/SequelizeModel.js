@@ -1,9 +1,8 @@
 const S = require('string');
-const Sequelize = require('sequelize');
 
 const Model = require('./Model');
 const SequelizeModelAst = require('./SequelizeModelAst');
-const { entriesToObj, propChain } = require('../util');
+const { entriesToObj } = require('../util');
 
 const PRIMARY = 'row';
 

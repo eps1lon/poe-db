@@ -99,19 +99,19 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'normal_character_start_quest_state',
-      through: 'CharacterStartStatesNormalCharacterStartQuestState',
+      through: 'CharacterStartStatesNormalCharacterStartQuestStates',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'cruel_character_start_quest_state',
-      through: 'CharacterStartStatesCruelCharacterStartQuestState',
+      through: 'CharacterStartStatesCruelCharacterStartQuestStates',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'merciless_character_start_quest_state',
-      through: 'CharacterStartStatesMercilessCharacterStartQuestState',
+      through: 'CharacterStartStatesMercilessCharacterStartQuestStates',
       nullable: true,
       constraints: false,
     });

@@ -497,13 +497,13 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon1_item_visual_identity',
-      through: 'MonsterVarietiesWeapon1ItemVisualIdentity',
+      through: 'MonsterVarietiesWeapon1ItemVisualIdentities',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon2_item_visual_identity',
-      through: 'MonsterVarietiesWeapon2ItemVisualIdentity',
+      through: 'MonsterVarietiesWeapon2ItemVisualIdentities',
       nullable: true,
       constraints: false,
     });

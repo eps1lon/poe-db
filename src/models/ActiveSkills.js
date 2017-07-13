@@ -115,13 +115,13 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stats, {
       as: 'input_stat',
-      through: 'ActiveSkillsInputStat',
+      through: 'ActiveSkillsInputStats',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stats, {
       as: 'output_stat',
-      through: 'ActiveSkillsOutputStat',
+      through: 'ActiveSkillsOutputStats',
       nullable: true,
       constraints: false,
     });

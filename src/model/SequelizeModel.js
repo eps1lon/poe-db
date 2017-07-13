@@ -1,4 +1,5 @@
 const S = require('string');
+const inflection = require('inflection');
 
 const Model = require('./Model');
 const SequelizeModelAst = require('./SequelizeModelAst');
@@ -68,7 +69,9 @@ class SequelizeModel extends Model {
         if (this._isExtendedProp(field)) {
           // keep the prefix, only remove the KeysX keyword
           props.through = S(
-            this.name() + field.replace(/Keys([0-9]*)$/, '$1'),
+            inflection.pluralize(
+              this.name() + field.replace(/Keys([0-9]*)$/, '$1'),
+            ),
           ).camelize().s;
         }
 

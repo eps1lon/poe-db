@@ -20,13 +20,11 @@
     "precommit": "lint-staged",
     "test": "jest",
     "parse-content": "pypoe_exporter dat json --include-virtual-fields data/content.json",
-    "postparse-content": "node scripts/postParseContent"
+    "postparse-content": "node scripts/postParseContent",
+    "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --single-quote --trailing-comma all --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"
@@ -38,7 +36,9 @@
     "husky": "^0.14.0",
     "jest": "^20.0.4",
     "lint-staged": "^4.0.0",
-    "prettier": "^1.4.4"
+    "prettier": "^1.5.2",
+    "prettier-eslint": "^6.4.2",
+    "prettier-eslint-cli": "^4.1.1"
   },
   "dependencies": {
     "babel-core": "^6.25.0",

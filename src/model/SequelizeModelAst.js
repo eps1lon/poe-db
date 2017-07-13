@@ -1,5 +1,29 @@
 const t = require('babel-types');
 
+const objToAst = obj => {
+  if (obj === null) {
+    return t.nullLiteral();
+  } else if (obj === undefined) {
+    return t.identifier('undefined'); // TODO undefinedLiteral?
+  } else if (typeof obj === 'string') {
+    return t.stringLiteral(obj);
+  } else if (typeof obj === 'boolean') {
+    return t.booleanLiteral(obj);
+  } else if (Array.isArray(obj)) {
+    return t.arrayExpression(obj.map(objToAst));
+  } else if (typeof obj === 'object') {
+    const properties = Object.getOwnPropertyNames(obj).map(prop => {
+      return t.objectProperty(t.stringLiteral(prop), objToAst(obj[prop]));
+    });
+
+    return t.objectExpression(properties);
+  } else if (!isNaN(obj)) {
+    return t.numericLiteral(obj);
+  } else {
+    throw Error(`unrecognized type ${typeof obj}`, obj);
+  }
+};
+
 class SequelizeModelAst {
   constructor(model) {
     this.model = model;
@@ -43,7 +67,11 @@ class SequelizeModelAst {
         t.identifier('model'),
         t.callExpression(
           t.memberExpression(t.identifier('sequelize'), t.identifier('define')),
-          [t.stringLiteral(this.model.name()), this.attributes()],
+          [
+            t.stringLiteral(this.model.name()),
+            this.attributes(),
+            this.defineOptions(),
+          ],
         ),
       ),
     ]);
@@ -72,11 +100,45 @@ class SequelizeModelAst {
     );
   }
 
-  belongsToStatements() {
-    return [];
+  defineOptions() {
+    return t.objectExpression([
+      t.objectProperty(
+        t.identifier('classMethods'),
+        t.objectExpression([
+          t.objectProperty(t.identifier('associate'), this.associate()),
+        ]),
+      ),
+    ]);
   }
 
-  belongsToManyStatements() {
+  associate() {
+    const models = t.identifier('models');
+
+    return t.arrowFunctionExpression(
+      [models],
+      t.blockStatement([
+        ...this.belongsToStatements(models),
+        ...this.belongsToManyStatements(models),
+      ]),
+    );
+  }
+
+  belongsToStatements(models) {
+    return this.model.belongsTo().map(([assoc_name, props]) => {
+      return t.expressionStatement(
+        t.callExpression(
+          t.memberExpression(t.identifier('model'), t.identifier('belongsTo')),
+          [
+            t.memberExpression(models, t.identifier(assoc_name)),
+            // make them nullable for circular references
+            objToAst(Object.assign({}, props, { nullable: true })),
+          ],
+        ),
+      );
+    });
+  }
+
+  belongsToManyStatements(models) {
     return [];
   }
 

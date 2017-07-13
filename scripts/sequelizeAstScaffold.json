@@ -95,10 +95,10 @@
                         {
                           "type": "StringLiteral",
                           "extra": {
-                            "rawValue": "model_name",
-                            "raw": "'model_name'"
+                            "rawValue": "$model_name",
+                            "raw": "'$model_name'"
                           },
-                          "value": "model_name"
+                          "value": "$model_name"
                         },
                         {
                           "type": "ObjectExpression",
@@ -135,6 +135,120 @@
                                         "name": "STRING"
                                       },
                                       "computed": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ObjectExpression",
+                          "properties": [
+                            {
+                              "type": "ObjectProperty",
+                              "method": false,
+                              "shorthand": false,
+                              "computed": false,
+                              "key": {
+                                "type": "Identifier",
+                                "name": "classMethods"
+                              },
+                              "value": {
+                                "type": "ObjectExpression",
+                                "properties": [
+                                  {
+                                    "type": "ObjectProperty",
+                                    "method": false,
+                                    "shorthand": false,
+                                    "computed": false,
+                                    "key": {
+                                      "type": "Identifier",
+                                      "name": "associate"
+                                    },
+                                    "value": {
+                                      "type": "ArrowFunctionExpression",
+                                      "id": null,
+                                      "generator": false,
+                                      "expression": false,
+                                      "async": false,
+                                      "params": [
+                                        {
+                                          "type": "Identifier",
+                                          "name": "models"
+                                        }
+                                      ],
+                                      "body": {
+                                        "type": "BlockStatement",
+                                        "body": [
+                                          {
+                                            "type": "ExpressionStatement",
+                                            "expression": {
+                                              "type": "CallExpression",
+                                              "callee": {
+                                                "type": "MemberExpression",
+                                                "object": {
+                                                  "type": "Identifier",
+                                                  "name": "model"
+                                                },
+                                                "property": {
+                                                  "type": "Identifier",
+                                                  "name": "belongsTo"
+                                                },
+                                                "computed": false
+                                              },
+                                              "arguments": [
+                                                {
+                                                  "type": "Identifier",
+                                                  "name": "BelongsToModel"
+                                                },
+                                                {
+                                                  "type": "ObjectExpression",
+                                                  "properties": [
+                                                    {
+                                                      "type": "ObjectProperty",
+                                                      "method": false,
+                                                      "shorthand": false,
+                                                      "computed": false,
+                                                      "key": {
+                                                        "type": "Identifier",
+                                                        "name": "foreignKey"
+                                                      },
+                                                      "value": {
+                                                        "type": "StringLiteral",
+                                                        "extra": {
+                                                          "rawValue": "$foreignKey",
+                                                          "raw": "'$foreignKey'"
+                                                        },
+                                                        "value": "$foreignKey"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "ObjectProperty",
+                                                      "method": false,
+                                                      "shorthand": false,
+                                                      "computed": false,
+                                                      "key": {
+                                                        "type": "Identifier",
+                                                        "name": "targetKey"
+                                                      },
+                                                      "value": {
+                                                        "type": "StringLiteral",
+                                                        "extra": {
+                                                          "rawValue": "$targetKey",
+                                                          "raw": "'$targetKey'"
+                                                        },
+                                                        "value": "$targetKey"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ],
+                                        "directives": []
+                                      }
                                     }
                                   }
                                 ]

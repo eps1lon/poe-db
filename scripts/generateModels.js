@@ -19,8 +19,16 @@ const writeAst = async model => {
   );
 };
 
+// TODO remove example
+// remeber to provide all associations in the example
+const example = [
+  'AchievementItems',
+  'Achievements',
+  'AchievementSetsDisplay',
+].map(name => name + '.dat');
+
 for (const [name, props] of Object.entries(spec).filter(
-  ([name]) => ['Mods.dat', 'AchievementItems.dat'].indexOf(name) !== -1,
+  ([name]) => example.indexOf(name) !== -1,
 )) {
   const model = new SequelizeModel(name, props);
 

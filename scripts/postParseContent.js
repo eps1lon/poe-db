@@ -29,6 +29,16 @@ const spec = entriesToObj(
 );
 fs.writeFile(spec_out, JSON.stringify(spec, null, 2), throwOnError());
 
+for (const [name, props] of Object.entries(spec)) {
+  for (const [field_name, field] of Object.entries(props.fields)) {
+    if (/.Key(s)?[0-9]?$/.test(field_name) && !field.key) {
+      console.warn(
+        `${field_name} in ${name} might have a missing key information`,
+      );
+    }
+  }
+}
+
 fs.writeFile(
   records_out,
   JSON.stringify(

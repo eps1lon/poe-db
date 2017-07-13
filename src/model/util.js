@@ -1,9 +1,45 @@
-const nonCircularAssociations = model =>
+const filterAssociations = (model, fn) =>
   Object.entries(model.associations)
-    .filter(
-      ([, props]) =>
-        ['BelongsTo', 'BelongsToMany'].indexOf(props.associationType) !== -1,
-    )
+    .filter(([name, props]) => fn(name, props))
     .map(([name]) => name);
 
-module.exports = { nonCircularAssociations };
+const findAssociations = (model, ...types) =>
+  filterAssociations(
+    model,
+    (name, props) => types.indexOf(props.associationType) !== -1,
+  );
+
+const nonCircularAssociations = model =>
+  findAssociations(model, 'BelongsTo', 'BelongsToMany');
+
+const buildAttrObj = (record, model, init = {}) => {
+  return Object.entries(
+    model.attributes,
+  ).reduce((attributes, [attribute, props]) => {
+    const index = props['$col_order'];
+    // there shouldnt be any index error but for now we will blindly run into one
+    // -1 is only used for primary attr
+    if (index !== undefined && index !== -1) {
+      const value = record[index];
+
+      attributes[attribute] = Array.isArray(value) ? value.join(',') : value;
+    }
+
+    return attributes;
+  }, init);
+};
+
+const buildAssocKeys = (model, record, row) =>
+  findAssociations(model, 'BelongsToMany').reduce((attributes, assoc_name) => {
+    attributes[assoc_name] = record[
+      model.associations[assoc_name].options.$col_order
+    ].map(target => [row, target]);
+
+    return attributes;
+  }, {});
+
+module.exports = {
+  buildAssocKeys,
+  buildAttrObj,
+  nonCircularAssociations,
+};

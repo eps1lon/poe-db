@@ -4,15 +4,30 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'HideoutDoodads',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
+      variation_ao_files: {
         type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      favour_cost: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      master_level: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      is_non_master_doodad: {
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
@@ -26,18 +41,8 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
+      unknown3: {
         type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
-        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,8 +55,14 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.BaseItemTypes, {
+      foreignKey: 'base_item_types_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.NPCMaster, {
+      foreignKey: 'npc_master_key',
       target: 'row',
       nullable: true,
       constraints: false,

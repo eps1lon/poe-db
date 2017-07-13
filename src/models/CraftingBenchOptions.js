@@ -4,14 +4,54 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'CraftingBenchOptions',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
+      order: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      master_level: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      name: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      crafting_bench_custom_action: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      sockets: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      socket_colours: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      links: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      item_quantity: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -21,42 +61,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      objective: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown_unique: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag1: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag2: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag3: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown3: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag4: {
+      is_disabled: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -70,9 +75,26 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
+    model.belongsTo(models.NPCMaster, {
+      foreignKey: 'npc_master_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Mods, {
+      foreignKey: 'mods_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.BaseItemTypes, {
+      through: 'CostBaseItemTypes',
+      as: 'cost_base_item_types',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.ItemClasses, {
+      through: 'CraftingBenchOptionsItemClasses',
       nullable: true,
       constraints: false,
     });

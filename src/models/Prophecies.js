@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'Prophecies',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,12 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      description: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      objective: {
+      prediction_text: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -31,32 +26,47 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      name: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag1: {
-        type: DataTypes.BOOLEAN,
+      flavour_text: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag2: {
-        type: DataTypes.BOOLEAN,
+      ogg_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag3: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown3: {
+      prophecy_chain_position: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag4: {
+      is_enabled: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      seal_cost_normal: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      seal_cost_cruel: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      seal_cost_merciless: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -70,9 +80,15 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
+    model.belongsTo(models.ProphecyChain, {
+      foreignKey: 'prophecy_chain_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.ClientStrings, {
+      through: 'QuestTrackerClientStrings',
+      as: 'quest_tracker_client_strings',
       nullable: true,
       constraints: false,
     });

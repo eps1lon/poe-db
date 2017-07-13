@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'ChestEffects',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,48 +16,63 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      description: {
+      normal_epk_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      objective: {
+      normal_closed_ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown_unique: {
-        type: DataTypes.INTEGER,
+      normal_open_ao_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      magic_epk_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag1: {
-        type: DataTypes.BOOLEAN,
+      unique_epk_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag2: {
-        type: DataTypes.BOOLEAN,
+      rare_epk_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag3: {
-        type: DataTypes.BOOLEAN,
+      magic_closed_ao_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown3: {
-        type: DataTypes.INTEGER,
+      unique_closed_ao_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag4: {
-        type: DataTypes.BOOLEAN,
+      rare_closed_ao_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      magic_open_ao_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unique_open_ao_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      rare_open_ao_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -69,14 +84,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
   return model;
 };

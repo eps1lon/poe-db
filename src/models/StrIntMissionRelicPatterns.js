@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'StrIntMissionRelicPatterns',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,28 +16,43 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
+      ally_relic_count: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      unknown: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
+      is_enemy_relic: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      is_ally_relic: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      spawn_weight: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      min_level: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      max_level: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      enemy_relic_count: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,9 +65,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
-      target: 'row',
+    model.belongsToMany(models.Mods, {
+      through: 'RelicMods',
+      as: 'relic_mods',
       nullable: true,
       constraints: false,
     });

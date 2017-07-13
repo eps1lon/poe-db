@@ -4,35 +4,40 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'AtlasNode',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
+      x: {
+        type: DataTypes.FLOAT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      y: {
+        type: DataTypes.FLOAT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown4: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown5: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown6: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      flavour_text: {
         type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown1: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown2: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
-        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,9 +55,26 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.WorldAreas, {
+      foreignKey: 'world_areas_key',
       target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.ItemVisualIdentity, {
+      foreignKey: 'default_item_visual_identity_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.ItemVisualIdentity, {
+      foreignKey: 'shaped_item_visual_identity_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AtlasNode, {
+      through: 'AtlasNodeAtlasNode',
       nullable: true,
       constraints: false,
     });

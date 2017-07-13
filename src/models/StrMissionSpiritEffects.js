@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'StrMissionSpiritEffects',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,27 +16,52 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
+      spawn_weight: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      min_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
+      max_level: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      key0: {
+        type: DataTypes.BIGINT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      data1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
+      ground_effect_unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
+      ground_effect_unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      key3: {
+        type: DataTypes.BIGINT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      b1: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      b2: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -50,9 +75,15 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
-      target: 'row',
+    model.belongsToMany(models.MonsterVarieties, {
+      through: 'SummonMonsterVarieties',
+      as: 'summon_monster_varieties',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.MonsterVarieties, {
+      through: 'GroundEffectMonsterVarieties',
+      as: 'ground_effect_monster_varieties',
       nullable: true,
       constraints: false,
     });

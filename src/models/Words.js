@@ -4,40 +4,35 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'Words',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
+      type: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      text: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
+      unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      name: {
+      text2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      unknown8: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,9 +45,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
-      target: 'row',
+    model.belongsToMany(models.Tags, {
+      through: 'SpawnWeightTags',
+      as: 'spawn_weight_tags',
       nullable: true,
       constraints: false,
     });

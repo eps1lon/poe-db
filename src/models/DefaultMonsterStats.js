@@ -4,40 +4,45 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'DefaultMonsterStats',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
+      display_level: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
+      damage: {
+        type: DataTypes.FLOAT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      evasion: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      accuracy: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
+      life: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      experience: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      ally_life: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,8 +55,8 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.Difficulties, {
+      foreignKey: 'difficulty_key',
       target: 'row',
       nullable: true,
       constraints: false,

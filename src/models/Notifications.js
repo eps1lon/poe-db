@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'Notifications',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,28 +16,33 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
+      unknown0: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
       unknown1: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      name: {
+      message: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
-        type: DataTypes.INTEGER,
+      unknown2: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
+      unknown3: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown4: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -49,14 +54,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
-      target: 'row',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
   return model;
 };

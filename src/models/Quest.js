@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'Quest',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,17 +16,27 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      description: {
+      act: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      name: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      objective: {
+      quest_state: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      icon_dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown_unique: {
+      quest_id: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -36,8 +46,33 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
+      unknown6: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: false,
+        allowNull: false,
+      },
+      is_quest: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown8: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown9: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: false,
+        allowNull: false,
+      },
       flag1: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown11: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -51,16 +86,6 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown3: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag4: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
     },
     {
       engine: 'MyISAM',
@@ -69,14 +94,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
   return model;
 };

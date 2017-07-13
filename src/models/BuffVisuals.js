@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'BuffVisuals',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,22 +16,22 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown2: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      name: {
+      buff_dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
+      epk_file1: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      epk_file2: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -50,9 +50,20 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.MiscAnimated, {
+      foreignKey: 'misc_animated_key',
       target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.MiscAnimated, {
+      foreignKey: 'misc_animated_key2',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.PreloadGroups, {
+      through: 'BuffVisualsPreloadGroups',
       nullable: true,
       constraints: false,
     });

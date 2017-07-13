@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'MonsterPacks',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,28 +16,43 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
+      unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
+      unknown5: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
+      boss_monster_spawn_chance: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      boss_monster_count: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown11: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      data1: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,9 +65,19 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
-      target: 'row',
+    model.belongsToMany(models.WorldAreas, {
+      through: 'MonsterPacksWorldAreas',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.MonsterVarieties, {
+      through: 'BossMonsterMonsterVarieties',
+      as: 'boss_monster_monster_varieties',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Tags, {
+      through: 'MonsterPacksTags',
       nullable: true,
       constraints: false,
     });

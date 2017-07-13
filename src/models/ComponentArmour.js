@@ -4,40 +4,25 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'ComponentArmour',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown1: {
+      armour: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      evasion: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
+      energy_shield: {
         type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
-        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,9 +35,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
-      target: 'row',
+    model.belongsTo(models.BaseItemTypes, {
+      foreignKey: 'base_item_types_key',
+      target: 'id',
       nullable: true,
       constraints: false,
     });

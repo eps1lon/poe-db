@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'MonsterTypes',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -21,23 +21,28 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
+      is_summoned: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      armour: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      evasion: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      energy_shield_from_life: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      damage_spread: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,9 +55,14 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.MonsterResistances, {
+      foreignKey: 'monster_resistances_key',
       target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Tags, {
+      through: 'MonsterTypesTags',
       nullable: true,
       constraints: false,
     });

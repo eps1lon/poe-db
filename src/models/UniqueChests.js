@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'UniqueChests',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,28 +16,43 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
+      min_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      spawn_weight: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
+      data1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
-        type: DataTypes.INTEGER,
+      ao_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      data2: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: false,
+      },
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,9 +65,20 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.Chests, {
+      foreignKey: 'chests_key',
       target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Words, {
+      foreignKey: 'words_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Mods, {
+      through: 'UniqueChestsMods',
       nullable: true,
       constraints: false,
     });

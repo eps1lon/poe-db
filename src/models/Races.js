@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'Races',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,8 +16,23 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
+      data0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      data1: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
       unknown1: {
         type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      flag0: {
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
@@ -26,18 +41,13 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
+      unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      unknown4: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -49,14 +59,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
-      target: 'row',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
   return model;
 };

@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'LabyrinthSecretEffects',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,28 +16,13 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown2: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      name: {
+      buff_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      ot_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,8 +35,14 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.MonsterVarieties, {
+      foreignKey: 'monster_varieties_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.BuffDefinitions, {
+      foreignKey: 'buff_buff_definitions_key',
       target: 'row',
       nullable: true,
       constraints: false,

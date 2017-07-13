@@ -4,40 +4,35 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'MonsterMapBossDifficulty',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown1: {
+      map_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      stat1_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
+      stat2_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      stat3_value: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      stat4_value: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,8 +45,26 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.Stats, {
+      foreignKey: 'stats_key1',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Stats, {
+      foreignKey: 'stats_key2',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Stats, {
+      foreignKey: 'stats_key3',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Stats, {
+      foreignKey: 'stats_key4',
       target: 'row',
       nullable: true,
       constraints: false,

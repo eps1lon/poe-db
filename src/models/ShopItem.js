@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'ShopItem',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,17 +16,47 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
+      name: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
       description: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      objective: {
+      small_art_jpg_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown_unique: {
+      youtube_video: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown11: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      large_art_jpg_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      description2: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      daily_deal_art_jpg_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown15: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -36,27 +66,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      flag1: {
+      is_tencent_item: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
-      flag2: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag3: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown3: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag4: {
+      is_tradeable: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -70,9 +85,14 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
+    model.belongsToMany(models.ShopItem, {
+      through: 'PackageShopItem',
+      as: 'package_shop_item',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.ShopCategory, {
+      through: 'ShopItemShopCategory',
       nullable: true,
       constraints: false,
     });

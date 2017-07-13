@@ -4,34 +4,24 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'SkillGems',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown1: {
+      str: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      dex: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
+      int: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -50,9 +40,26 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.BaseItemTypes, {
+      foreignKey: 'base_item_types_key',
       target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.GrantedEffects, {
+      foreignKey: 'granted_effects_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.BaseItemTypes, {
+      foreignKey: 'vaal_variant_base_item_types_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.GemTags, {
+      through: 'SkillGemsGemTags',
       nullable: true,
       constraints: false,
     });

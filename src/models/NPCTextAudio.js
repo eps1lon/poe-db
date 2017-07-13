@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'NPCTextAudio',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,23 +16,23 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown2: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      name: {
+      text: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
-        type: DataTypes.INTEGER,
+      mono_audio_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      stereo_audio_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      has_stereo: {
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,8 +50,8 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.Characters, {
+      foreignKey: 'characters_key',
       target: 'row',
       nullable: true,
       constraints: false,

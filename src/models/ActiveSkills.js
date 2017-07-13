@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'ActiveSkills',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,18 +16,43 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
+      displayed_name: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
       description: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      objective: {
+      index3: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown_unique: {
-        type: DataTypes.INTEGER,
+      icon_dds_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      active_skill_target_types: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      active_skill_types: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      website_description: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      website_image: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -36,28 +61,28 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
+      unknown13: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
       flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
-      flag2: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag3: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown3: {
+      skill_totem_id: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag4: {
+      is_manually_casted: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown19: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -70,9 +95,21 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
+    model.belongsToMany(models.ItemClasses, {
+      through: 'WeaponRestrictionItemClasses',
+      as: 'weapon_restriction_item_classes',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Stats, {
+      through: 'InputStat',
+      as: 'input_stat',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Stats, {
+      through: 'OutputStat',
+      as: 'output_stat',
       nullable: true,
       constraints: false,
     });

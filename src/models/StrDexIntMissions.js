@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'StrDexIntMissions',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,48 +16,58 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      description: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      objective: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown_unique: {
+      spawn_weight: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
+      has_objective_boss_kill: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
-      flag1: {
+      has_objective_full_clear: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
-      flag2: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag3: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown3: {
+      unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag4: {
+      unknown5: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      has_objective_kill_exiles: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      has_objective_find_unique: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: false,
+      },
+      has_objective_complete_master_mission: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      object_count_required: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      object_count_total: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -70,9 +80,26 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
+    model.belongsTo(models.NPCTalk, {
+      foreignKey: 'npc_talk_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.MonsterPacks, {
+      foreignKey: 'monster_packs_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Mods, {
+      through: 'ExtraMods',
+      as: 'extra_mods',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItems, {
+      through: 'StrDexIntMissionsAchievementItems',
       nullable: true,
       constraints: false,
     });

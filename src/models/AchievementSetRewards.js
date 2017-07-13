@@ -4,16 +4,11 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'AchievementSetRewards',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
-      },
-      id: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
         allowNull: false,
       },
       unknown1: {
@@ -26,21 +21,6 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
     },
     {
       engine: 'MyISAM',
@@ -50,8 +30,14 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.AchievementSetsDisplay, {
+      foreignKey: 'achievement_sets_display_key',
+      target: 'id',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.BaseItemTypes, {
+      foreignKey: 'base_item_types_key',
       target: 'row',
       nullable: true,
       constraints: false,

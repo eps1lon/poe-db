@@ -4,14 +4,29 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'CurrencyItems',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
+      stacks: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      currency_use_type: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+      },
+      action: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      directions: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -21,43 +36,33 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      objective: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown_unique: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-      },
       flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
-      flag2: {
-        type: DataTypes.BOOLEAN,
+      cosmetic_type_name: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag3: {
-        type: DataTypes.BOOLEAN,
+      keys0: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown3: {
+      unknown17: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      currency_tab_stack_size: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag4: {
-        type: DataTypes.BOOLEAN,
+      abbreviation: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -70,9 +75,27 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
+    model.belongsTo(models.BaseItemTypes, {
+      foreignKey: 'base_item_types_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.BaseItemTypes, {
+      foreignKey: 'full_stack_base_item_types_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.AchievementItems, {
+      foreignKey: 'possession_achievement_items_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItems, {
+      through: 'UsageAchievementItems',
+      as: 'usage_achievement_items',
       nullable: true,
       constraints: false,
     });

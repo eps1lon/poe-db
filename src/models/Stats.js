@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'Stats',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,37 +16,47 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      description: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      objective: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown_unique: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
-      flag1: {
+      is_local: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
       },
-      flag2: {
+      is_weapon_local: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown2: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
       flag3: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      text: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      flag5: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      flag6: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: false,
+      },
+      flag7: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -56,8 +66,8 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      flag4: {
-        type: DataTypes.BOOLEAN,
+      unknown0: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -70,9 +80,15 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
+    model.belongsTo(models.Stats, {
+      foreignKey: 'main_hand_alias_stats_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Stats, {
+      foreignKey: 'off_hand_alias_stats_key',
+      target: 'row',
       nullable: true,
       constraints: false,
     });

@@ -4,39 +4,29 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'EclipseMods',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
       },
-      id: {
+      key: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
+      min_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
+      max_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      flag0: {
+      is_prefix: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -50,9 +40,15 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.Mods, {
+      foreignKey: 'mods_key',
       target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Tags, {
+      through: 'SpawnWeightTags',
+      as: 'spawn_weight_tags',
       nullable: true,
       constraints: false,
     });

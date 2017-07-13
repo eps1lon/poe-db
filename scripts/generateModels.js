@@ -21,11 +21,13 @@ const writeAst = async model => {
 
 // TODO remove example
 // remeber to provide all associations in the example
-const example = [
+const example = Object.keys(
+  spec,
+); /*[
   'AchievementItems',
   'Achievements',
   'AchievementSetsDisplay',
-].map(name => name + '.dat');
+].map(name => name + '.dat');//*/
 
 for (const [name, props] of Object.entries(spec).filter(
   ([name]) => example.indexOf(name) !== -1,

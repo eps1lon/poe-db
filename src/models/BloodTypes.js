@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Achievements',
+    'BloodTypes',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,48 +16,68 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      description: {
+      pet_file1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      objective: {
+      pet_file2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown_unique: {
-        type: DataTypes.INTEGER,
+      pet_file3: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
       },
-      flag1: {
-        type: DataTypes.BOOLEAN,
+      pet_file4: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag2: {
-        type: DataTypes.BOOLEAN,
+      pet_file5: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      flag3: {
-        type: DataTypes.BOOLEAN,
+      pet_file6: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
-      unknown3: {
-        type: DataTypes.INTEGER,
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
       },
-      flag4: {
-        type: DataTypes.BOOLEAN,
+      keys0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      key2: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: false,
+      },
+      pet_file7: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      pet_file8: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      pet_file9: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
       },
@@ -69,14 +89,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.AchievementSetsDisplay, {
-      foreignKey: 'achievement_sets_display_key',
-      target: 'id',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
   return model;
 };

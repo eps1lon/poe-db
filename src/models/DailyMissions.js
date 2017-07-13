@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'DailyMissions',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       },
       id: {
         type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown0: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -26,18 +31,18 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
+      spawn_weight: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      description: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+      },
+      unknown8: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,9 +55,20 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.NPCTalk, {
+      foreignKey: 'npc_talk_key',
       target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.PVPTypes, {
+      foreignKey: 'pvp_types_key',
+      target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Characters, {
+      through: 'DailyMissionsCharacters',
       nullable: true,
       constraints: false,
     });

@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'SummonedSpecificMonstersOnDeath',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -16,28 +16,23 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: false,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
       unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.TEXT,
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
       },
-      completions_required: {
+      unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      unknown7: {
+        type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: false,
         allowNull: false,
       },
@@ -50,8 +45,8 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.MonsterVarieties, {
+      foreignKey: 'monster_varieties_key',
       target: 'row',
       nullable: true,
       constraints: false,

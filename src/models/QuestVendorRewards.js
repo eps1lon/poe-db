@@ -4,7 +4,7 @@ const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItems',
+    'QuestVendorRewards',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -12,26 +12,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       id: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
       },
-      unknown2: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-      },
-      name: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-      },
-      completions_required: {
+      quest_state: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -50,9 +35,19 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievements, {
-      foreignKey: 'achievements_key',
+    model.belongsTo(models.NPCs, {
+      foreignKey: 'npc_key',
       target: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Characters, {
+      through: 'QuestVendorRewardsCharacters',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.BaseItemTypes, {
+      through: 'QuestVendorRewardsBaseItemTypes',
       nullable: true,
       constraints: false,
     });

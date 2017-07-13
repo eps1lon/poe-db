@@ -20,7 +20,7 @@ db.query('CREATE DATABASE IF NOT EXISTS ??', [name], async () => {
     const models = require('../../src/models/')(orm);
 
     for (const [name, model] of Object.entries(models)) {
-      syncs.push(model.sync());
+      syncs.push(model.sync({ force: true }));
     }
     await Promise.all(syncs);
   } catch (e) {

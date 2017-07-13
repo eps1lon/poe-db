@@ -10,31 +10,37 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       format_title: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       background: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       time0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       time1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
     },
     {

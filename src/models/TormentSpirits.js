@@ -10,26 +10,31 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       min_zone_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       max_zone_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       spawn_weight: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       unknown13: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
     },
     {
@@ -41,13 +46,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MonsterVarieties, {
-      foreignKey: 'monster_varieties_key',
+      foreignKey: {
+        name: 'monster_varieties_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.MonsterVarieties, {
-      foreignKey: 'summoned_monster_monster_varieties_key',
+      foreignKey: {
+        name: 'summoned_monster_monster_varieties_key',
+        $col_order: 7,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

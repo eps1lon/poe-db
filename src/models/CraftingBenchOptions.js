@@ -10,61 +10,73 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       order: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       master_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       name: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       crafting_bench_custom_action: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 7,
       },
       sockets: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 9,
       },
       socket_colours: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 10,
       },
       links: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 11,
       },
       item_quantity: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 12,
       },
       unknown1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 13,
       },
       description: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 14,
       },
       is_disabled: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 15,
       },
     },
     {
@@ -76,13 +88,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
-      foreignKey: 'npc_master_key',
+      foreignKey: {
+        name: 'npc_master_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.Mods, {
-      foreignKey: 'mods_key',
+      foreignKey: {
+        name: 'mods_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

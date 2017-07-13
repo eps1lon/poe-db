@@ -10,16 +10,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       point: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       reward_command: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
     },
     {
@@ -31,7 +34,10 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.EventSeason, {
-      foreignKey: 'event_season_key',
+      foreignKey: {
+        name: 'event_season_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

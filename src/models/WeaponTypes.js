@@ -10,36 +10,43 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       critical: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       speed: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       damage_min: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       damage_max: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       range_max: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       null6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
     },
     {
@@ -51,7 +58,10 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemTypes, {
-      foreignKey: 'base_item_types_key',
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

@@ -10,16 +10,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       unknown0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
     },
     {
@@ -31,19 +34,28 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ShopPaymentPackage, {
-      foreignKey: 'shop_payment_package_key',
+      foreignKey: {
+        name: 'shop_payment_package_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ShopItem, {
-      foreignKey: 'shop_item_key',
+      foreignKey: {
+        name: 'shop_item_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ShopToken, {
-      foreignKey: 'shop_token_key',
+      foreignKey: {
+        name: 'shop_token_key',
+        $col_order: 4,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

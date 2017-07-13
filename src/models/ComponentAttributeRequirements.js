@@ -10,21 +10,25 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       req_str: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       req_dex: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       req_int: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
     },
     {
@@ -36,7 +40,10 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemTypes, {
-      foreignKey: 'base_item_types_key',
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
       target: 'id',
       nullable: true,
       constraints: false,

@@ -10,21 +10,25 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       buff_stat_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       key0: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
     },
     {
@@ -36,7 +40,10 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BuffDefinitions, {
-      foreignKey: 'buff_definitions_key',
+      foreignKey: {
+        name: 'buff_definitions_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

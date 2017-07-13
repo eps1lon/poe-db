@@ -10,71 +10,85 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       width: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       height: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       name: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       inherits_from: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       drop_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 9,
       },
       unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 16,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 17,
       },
       unknown_unique: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 19,
       },
       unknown20: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 25,
       },
       is_picked_up_by_monsters: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 27,
       },
       data11: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 28,
       },
     },
     {
@@ -86,31 +100,46 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ItemClasses, {
-      foreignKey: 'item_classes_key',
+      foreignKey: {
+        name: 'item_classes_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.FlavourText, {
-      foreignKey: 'flavour_text_key',
+      foreignKey: {
+        name: 'flavour_text_key',
+        $col_order: 7,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.SoundEffects, {
-      foreignKey: 'sound_effects_key',
+      foreignKey: {
+        name: 'sound_effects_key',
+        $col_order: 10,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
-      foreignKey: 'item_visual_identity_key',
+      foreignKey: {
+        name: 'item_visual_identity_key',
+        $col_order: 18,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItems, {
-      foreignKey: 'equip_achievement_items_key',
+      foreignKey: {
+        name: 'equip_achievement_items_key',
+        $col_order: 26,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

@@ -10,31 +10,37 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       map_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       stat1_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       stat2_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       stat3_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       stat4_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
     },
     {
@@ -46,25 +52,37 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Stats, {
-      foreignKey: 'stats_key1',
+      foreignKey: {
+        name: 'stats_key1',
+        $col_order: 3,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.Stats, {
-      foreignKey: 'stats_key2',
+      foreignKey: {
+        name: 'stats_key2',
+        $col_order: 4,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.Stats, {
-      foreignKey: 'stats_key3',
+      foreignKey: {
+        name: 'stats_key3',
+        $col_order: 5,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.Stats, {
-      foreignKey: 'stats_key4',
+      foreignKey: {
+        name: 'stats_key4',
+        $col_order: 7,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

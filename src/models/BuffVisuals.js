@@ -10,36 +10,43 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       buff_dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       epk_file1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       epk_file2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
     },
     {
@@ -51,13 +58,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MiscAnimated, {
-      foreignKey: 'misc_animated_key',
+      foreignKey: {
+        name: 'misc_animated_key',
+        $col_order: 4,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.MiscAnimated, {
-      foreignKey: 'misc_animated_key2',
+      foreignKey: {
+        name: 'misc_animated_key2',
+        $col_order: 5,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

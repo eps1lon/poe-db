@@ -10,46 +10,55 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       is_str_master: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       is_dex_master: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       is_int_master: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       hideout: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       keys0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 7,
       },
       unknown7: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
       key2: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 14,
       },
     },
     {
@@ -61,25 +70,37 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCs, {
-      foreignKey: 'np_cs_key',
+      foreignKey: {
+        name: 'np_cs_key',
+        $col_order: 1,
+      },
       target: 'id',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.Mods, {
-      foreignKey: 'signature_mod_mods_key',
+      foreignKey: {
+        name: 'signature_mod_mods_key',
+        $col_order: 4,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItems, {
-      foreignKey: 'achievement_items_key',
+      foreignKey: {
+        name: 'achievement_items_key',
+        $col_order: 9,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItems, {
-      foreignKey: 'talisman_achievement_items_key',
+      foreignKey: {
+        name: 'talisman_achievement_items_key',
+        $col_order: 15,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

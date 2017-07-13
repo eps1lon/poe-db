@@ -10,26 +10,31 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       key: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       min_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       max_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       is_prefix: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
     },
     {
@@ -41,7 +46,10 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Mods, {
-      foreignKey: 'mods_key',
+      foreignKey: {
+        name: 'mods_key',
+        $col_order: 3,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

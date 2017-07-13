@@ -10,61 +10,73 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       stacks: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       currency_use_type: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       action: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       directions: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       description: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
       cosmetic_type_name: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 9,
       },
       keys0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 11,
       },
       unknown17: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 12,
       },
       currency_tab_stack_size: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 13,
       },
       abbreviation: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 14,
       },
     },
     {
@@ -76,19 +88,28 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemTypes, {
-      foreignKey: 'base_item_types_key',
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.BaseItemTypes, {
-      foreignKey: 'full_stack_base_item_types_key',
+      foreignKey: {
+        name: 'full_stack_base_item_types_key',
+        $col_order: 5,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItems, {
-      foreignKey: 'possession_achievement_items_key',
+      foreignKey: {
+        name: 'possession_achievement_items_key',
+        $col_order: 10,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

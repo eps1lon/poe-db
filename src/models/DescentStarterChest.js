@@ -10,16 +10,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       socket_colours: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
     },
     {
@@ -31,19 +34,28 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Characters, {
-      foreignKey: 'characters_key',
+      foreignKey: {
+        name: 'characters_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.BaseItemTypes, {
-      foreignKey: 'base_item_types_key',
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'world_areas_key',
+      foreignKey: {
+        name: 'world_areas_key',
+        $col_order: 4,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

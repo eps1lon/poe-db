@@ -10,226 +10,271 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       object_size: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       minimum_attack_distance: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       maximum_attack_distance: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       act_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 7,
       },
       base_monster_type_index: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
       unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 10,
       },
       unknown_index0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 11,
       },
       unknown_index1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 12,
       },
       model_size_multiplier: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 13,
       },
       unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 14,
       },
       unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 15,
       },
       unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 16,
       },
       unknown5: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 17,
       },
       unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 18,
       },
       experience_multiplier: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 20,
       },
       unknown7: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 21,
       },
       unknown8: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 22,
       },
       unknown9: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 23,
       },
       unknown10: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 24,
       },
       critical_strike_chance: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 25,
       },
       unknown11: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 26,
       },
       ais_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 28,
       },
       stance: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 30,
       },
       key2: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 31,
       },
       name: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 32,
       },
       damage_multiplier: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 33,
       },
       life_multiplier: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 34,
       },
       attack_speed: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 35,
       },
       key1: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 41,
       },
       unknown13: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 43,
       },
       unknown14: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 47,
       },
       unknown15: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 48,
       },
       unknown16: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 49,
       },
       unknown17: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 50,
       },
       unknown18: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 51,
       },
       unknown19: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 52,
       },
       unknown20: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 53,
       },
       unknown21: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 54,
       },
       unknown22: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 55,
       },
       unknown23: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 56,
       },
       key3: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 71,
       },
     },
     {
@@ -241,61 +286,91 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MonsterTypes, {
-      foreignKey: 'monster_types_key',
+      foreignKey: {
+        name: 'monster_types_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
-      foreignKey: 'back_item_visual_identity_key',
+      foreignKey: {
+        name: 'back_item_visual_identity_key',
+        $col_order: 38,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ItemClasses, {
-      foreignKey: 'main_hand_item_classes_key',
+      foreignKey: {
+        name: 'main_hand_item_classes_key',
+        $col_order: 39,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ItemClasses, {
-      foreignKey: 'off_hand_item_classes_key',
+      foreignKey: {
+        name: 'off_hand_item_classes_key',
+        $col_order: 40,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
-      foreignKey: 'helmet_item_visual_identity_key',
+      foreignKey: {
+        name: 'helmet_item_visual_identity_key',
+        $col_order: 42,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItems, {
-      foreignKey: 'flashback_achievement_items_key',
+      foreignKey: {
+        name: 'flashback_achievement_items_key',
+        $col_order: 60,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.MonsterSegments, {
-      foreignKey: 'monster_segments_key',
+      foreignKey: {
+        name: 'monster_segments_key',
+        $col_order: 61,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.MonsterArmours, {
-      foreignKey: 'monster_armours_key',
+      foreignKey: {
+        name: 'monster_armours_key',
+        $col_order: 62,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItems, {
-      foreignKey: 'achievement_items_key',
+      foreignKey: {
+        name: 'achievement_items_key',
+        $col_order: 63,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItems, {
-      foreignKey: 'achievement_items_key4',
+      foreignKey: {
+        name: 'achievement_items_key4',
+        $col_order: 64,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

@@ -10,21 +10,25 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       quest_flags: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       league_quest_flags: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       map_tier: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
     },
     {
@@ -36,13 +40,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemTypes, {
-      foreignKey: 'base_item_types_key',
+      foreignKey: {
+        name: 'base_item_types_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'world_areas_key',
+      foreignKey: {
+        name: 'world_areas_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

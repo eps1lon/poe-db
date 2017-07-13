@@ -10,31 +10,37 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       restricted_area_text: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       unknown5: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
     },
     {
@@ -46,13 +52,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MapPins, {
-      foreignKey: 'map_pins_key0',
+      foreignKey: {
+        name: 'map_pins_key0',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.MapPins, {
-      foreignKey: 'map_pins_key1',
+      foreignKey: {
+        name: 'map_pins_key1',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

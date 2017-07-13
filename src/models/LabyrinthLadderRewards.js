@@ -10,16 +10,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       key0: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
     },
     {

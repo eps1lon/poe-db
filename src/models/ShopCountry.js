@@ -10,16 +10,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       country_two_letter_code: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       country: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
     },
     {
@@ -31,7 +34,10 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ShopCurrency, {
-      foreignKey: 'shop_currency_key',
+      foreignKey: {
+        name: 'shop_currency_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

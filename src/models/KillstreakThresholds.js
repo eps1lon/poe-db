@@ -10,11 +10,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       kills: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
     },
     {
@@ -26,13 +28,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MonsterVarieties, {
-      foreignKey: 'monster_varieties_key',
+      foreignKey: {
+        name: 'monster_varieties_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItems, {
-      foreignKey: 'achievement_items_key',
+      foreignKey: {
+        name: 'achievement_items_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

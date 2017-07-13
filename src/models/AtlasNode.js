@@ -10,41 +10,49 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       x: {
         type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       y: {
         type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       unknown5: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       flavour_text: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 9,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 10,
       },
     },
     {
@@ -56,19 +64,28 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'world_areas_key',
+      foreignKey: {
+        name: 'world_areas_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
-      foreignKey: 'default_item_visual_identity_key',
+      foreignKey: {
+        name: 'default_item_visual_identity_key',
+        $col_order: 7,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
-      foreignKey: 'shaped_item_visual_identity_key',
+      foreignKey: {
+        name: 'shaped_item_visual_identity_key',
+        $col_order: 8,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

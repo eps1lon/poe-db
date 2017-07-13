@@ -10,41 +10,49 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       spawn_weight: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
       description: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       unknown8: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
     },
     {
@@ -56,13 +64,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCTalk, {
-      foreignKey: 'npc_talk_key',
+      foreignKey: {
+        name: 'npc_talk_key',
+        $col_order: 6,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.PVPTypes, {
-      foreignKey: 'pvp_types_key',
+      foreignKey: {
+        name: 'pvp_types_key',
+        $col_order: 9,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

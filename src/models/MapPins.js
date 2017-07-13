@@ -10,56 +10,67 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       position_x: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       position_y: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
       name: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       notes: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       data1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 7,
       },
       act: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
       index3: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 13,
       },
       unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 14,
       },
       unknown3: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 16,
       },
     },
     {
@@ -71,19 +82,28 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'normal_waypoint_world_areas_key',
+      foreignKey: {
+        name: 'normal_waypoint_world_areas_key',
+        $col_order: 3,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'cruel_waypoint_world_areas_key',
+      foreignKey: {
+        name: 'cruel_waypoint_world_areas_key',
+        $col_order: 11,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'merciless_waypoint_world_areas_key',
+      foreignKey: {
+        name: 'merciless_waypoint_world_areas_key',
+        $col_order: 12,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

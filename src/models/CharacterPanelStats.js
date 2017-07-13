@@ -10,26 +10,31 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       text: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 7,
       },
       data4: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 8,
       },
     },
     {
@@ -41,13 +46,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.CharacterPanelDescriptionModes, {
-      foreignKey: 'character_panel_description_modes_key',
+      foreignKey: {
+        name: 'character_panel_description_modes_key',
+        $col_order: 3,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.CharacterPanelTabs, {
-      foreignKey: 'character_panel_tabs_key',
+      foreignKey: {
+        name: 'character_panel_tabs_key',
+        $col_order: 6,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

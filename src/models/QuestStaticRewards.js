@@ -10,26 +10,31 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       stat_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
     },
     {
@@ -41,19 +46,28 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemTypes, {
-      foreignKey: 'stats_key',
+      foreignKey: {
+        name: 'stats_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.Difficulties, {
-      foreignKey: 'difficulty_key',
+      foreignKey: {
+        name: 'difficulty_key',
+        $col_order: 4,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.Quest, {
-      foreignKey: 'quest_key',
+      foreignKey: {
+        name: 'quest_key',
+        $col_order: 5,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

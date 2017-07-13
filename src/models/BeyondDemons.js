@@ -10,21 +10,25 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       monster_varieties_key: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
     },
     {

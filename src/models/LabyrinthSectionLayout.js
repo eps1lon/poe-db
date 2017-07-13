@@ -10,21 +10,25 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       flags1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 6,
       },
       flags2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 7,
       },
     },
     {
@@ -36,31 +40,46 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.LabyrinthSection, {
-      foreignKey: 'labyrinth_section_key',
+      foreignKey: {
+        name: 'labyrinth_section_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.LabyrinthSecrets, {
-      foreignKey: 'labyrinth_secrets_key0',
+      foreignKey: {
+        name: 'labyrinth_secrets_key0',
+        $col_order: 3,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.LabyrinthSecrets, {
-      foreignKey: 'labyrinth_secrets_key1',
+      foreignKey: {
+        name: 'labyrinth_secrets_key1',
+        $col_order: 4,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.LabyrinthAreas, {
-      foreignKey: 'labyrinth_areas_key',
+      foreignKey: {
+        name: 'labyrinth_areas_key',
+        $col_order: 5,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.LabyrinthNodeOverrides, {
-      foreignKey: 'labyrinth_node_overrides_key',
+      foreignKey: {
+        name: 'labyrinth_node_overrides_key',
+        $col_order: 8,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

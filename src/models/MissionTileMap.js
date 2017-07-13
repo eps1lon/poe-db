@@ -10,11 +10,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       mission_key: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
     },
     {
@@ -26,7 +28,10 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
-      foreignKey: 'npc_master_key',
+      foreignKey: {
+        name: 'npc_master_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

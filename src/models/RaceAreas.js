@@ -10,16 +10,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       keys0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       keys1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 4,
       },
     },
     {
@@ -31,13 +34,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Races, {
-      foreignKey: 'races_key',
+      foreignKey: {
+        name: 'races_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'world_areas_key',
+      foreignKey: {
+        name: 'world_areas_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

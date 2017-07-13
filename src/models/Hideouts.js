@@ -10,16 +10,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       unknown9: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
     },
     {
@@ -31,25 +34,37 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'small_world_areas_key',
+      foreignKey: {
+        name: 'small_world_areas_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.NPCMaster, {
-      foreignKey: 'npc_master_key',
+      foreignKey: {
+        name: 'npc_master_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'medium_world_areas_key',
+      foreignKey: {
+        name: 'medium_world_areas_key',
+        $col_order: 3,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.WorldAreas, {
-      foreignKey: 'large_world_areas_key',
+      foreignKey: {
+        name: 'large_world_areas_key',
+        $col_order: 4,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

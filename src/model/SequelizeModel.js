@@ -44,7 +44,10 @@ class SequelizeModel extends Model {
       .map(field => [
         Model.name(this.fields[field].key),
         {
-          foreignKey: SequelizeModel.colCasing(field),
+          foreignKey: {
+            name: SequelizeModel.colCasing(field),
+            $col_order: this.fields[field].rowid,
+          },
           target: SequelizeModel.colCasing(
             this.fields[field].key_id || PRIMARY,
           ),
@@ -77,10 +80,18 @@ class SequelizeModel extends Model {
   }
 
   _colProps(col) {
+    // describes the ordering in the content.ggpk file
+    // used for inserting records since they are serialized as arrays
+    // prefix with `$` to signify that sequelize doesnt use this prop
+    const $col_order = this.props.fields[col]
+      ? this.props.fields[col].rowid
+      : -1;
+
     return {
       type: this._dataType(col),
       primaryKey: col === PRIMARY,
       allowNull: false,
+      $col_order,
     };
   }
 

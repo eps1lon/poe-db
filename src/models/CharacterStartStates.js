@@ -10,36 +10,43 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 0,
       },
       description: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
+        $col_order: 1,
       },
       level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 3,
       },
       is_pvp: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
+        $col_order: 5,
       },
       key1: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 7,
       },
       unknown: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: false,
         allowNull: false,
+        $col_order: 11,
       },
     },
     {
@@ -51,13 +58,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Characters, {
-      foreignKey: 'characters_key',
+      foreignKey: {
+        name: 'characters_key',
+        $col_order: 2,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.CharacterStartStateSet, {
-      foreignKey: 'character_start_state_set_key',
+      foreignKey: {
+        name: 'character_start_state_set_key',
+        $col_order: 6,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

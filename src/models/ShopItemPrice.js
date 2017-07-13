@@ -10,11 +10,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
+        $col_order: -1,
       },
       price: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
+        $col_order: 2,
       },
     },
     {
@@ -26,13 +28,19 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ShopItem, {
-      foreignKey: 'shop_item_key',
+      foreignKey: {
+        name: 'shop_item_key',
+        $col_order: 0,
+      },
       target: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.ShopRegion, {
-      foreignKey: 'shop_region_key',
+      foreignKey: {
+        name: 'shop_region_key',
+        $col_order: 1,
+      },
       target: 'row',
       nullable: true,
       constraints: false,

@@ -1,14 +1,12 @@
+const t = require('babel-types');
+
 class SequelizeModelAst {
   constructor(model) {
     this.model = model;
   }
 
   ast() {
-    return {
-      type: 'Program',
-      sourceType: 'script',
-      body: this.body(),
-    };
+    return t.program(this.body());
   }
 
   body() {
@@ -20,102 +18,40 @@ class SequelizeModelAst {
   }
 
   exports() {
-    return {
-      type: 'ExpressionStatement',
-      expression: {
-        type: 'AssignmentExpression',
-        operator: '=',
-        left: {
-          type: 'MemberExpression',
-          object: {
-            type: 'Identifier',
-            name: 'module',
-          },
-          property: {
-            type: 'Identifier',
-            name: 'exports',
-          },
-          computed: false,
-        },
-        right: {
-          type: 'ArrowFunctionExpression',
-          id: null,
-          generator: false,
-          expression: false,
-          async: false,
-          params: [
-            {
-              type: 'Identifier',
-              name: 'sequelize',
-            },
-            {
-              type: 'Identifier',
-              name: 'DataTypes',
-            },
-          ],
-          body: {
-            type: 'BlockStatement',
-            body: this.exportBody(),
-          },
-        },
-      },
-    };
+    return t.expressionStatement(
+      t.assignmentExpression(
+        '=',
+        t.memberExpression(t.identifier('module'), t.identifier('exports')),
+        t.arrowFunctionExpression(
+          [t.identifier('sequelize'), t.identifier('DataTypes')],
+          this.exportBody(),
+        ),
+      ),
+    );
   }
 
   exportBody() {
-    return [
+    return t.blockStatement([
       this.modelDefinition(),
       ...this.belongsToStatements(),
       ...this.belongsToManyStatements(),
-      {
-        type: 'ReturnStatement',
-        argument: {
-          type: 'Identifier',
-          name: 'model',
-        },
-      },
-    ];
+      t.returnStatement(t.identifier('model')),
+    ]);
   }
 
   modelDefinition() {
-    return {
-      type: 'VariableDeclaration',
-      declarations: [
-        {
-          type: 'VariableDeclarator',
-          id: {
-            type: 'Identifier',
-            name: 'model',
-          },
-          init: {
-            type: 'CallExpression',
-            callee: {
-              type: 'MemberExpression',
-              object: {
-                type: 'Identifier',
-                name: 'sequelize',
-              },
-              property: {
-                type: 'Identifier',
-                name: 'define',
-              },
-              computed: false,
-            },
-            arguments: [
-              {
-                type: 'StringLiteral',
-                value: this.model.name(),
-              },
-              {
-                type: 'ObjectExpression',
-                properties: this.attributeExpressions(),
-              },
-            ],
-          },
-        },
-      ],
-      kind: 'const',
-    };
+    return t.variableDeclaration('const', [
+      t.variableDeclarator(
+        t.identifier('model'),
+        t.callExpression(
+          t.memberExpression(t.identifier('sequelize'), t.identifier('define')),
+          [
+            t.stringLiteral(this.model.name()),
+            t.objectExpression(this.attributeExpressions()),
+          ],
+        ),
+      ),
+    ]);
   }
 
   attributeExpressions() {
@@ -125,43 +61,18 @@ class SequelizeModelAst {
   }
 
   attributeExpression(name, attribute) {
-    return {
-      type: 'ObjectProperty',
-      method: false,
-      shorthand: false,
-      computed: false,
-      key: {
-        type: 'Identifier',
-        name: name,
-      },
-      value: {
-        type: 'ObjectExpression',
-        properties: [
-          {
-            type: 'ObjectProperty',
-            method: false,
-            shorthand: false,
-            computed: false,
-            key: {
-              type: 'Identifier',
-              name: 'type',
-            },
-            value: {
-              type: 'MemberExpression',
-              object: {
-                type: 'Identifier',
-                name: 'DataTypes',
-              },
-              property: {
-                type: 'Identifier',
-                name: attribute.type,
-              },
-              computed: false,
-            },
-          },
-        ],
-      },
-    };
+    return t.objectProperty(
+      t.identifier(name),
+      t.objectExpression([
+        t.objectProperty(
+          t.identifier('type'),
+          t.memberExpression(
+            t.identifier('DataTypes'),
+            t.identifier(attribute.type),
+          ),
+        ),
+      ]),
+    );
   }
 
   belongsToStatements() {
@@ -177,32 +88,12 @@ class SequelizeModelAst {
   }
 
   buildRequire(identifier, path) {
-    return {
-      type: 'VariableDeclaration',
-      declarations: [
-        {
-          type: 'VariableDeclarator',
-          id: {
-            type: 'Identifier',
-            name: identifier,
-          },
-          init: {
-            type: 'CallExpression',
-            callee: {
-              type: 'Identifier',
-              name: 'require',
-            },
-            arguments: [
-              {
-                type: 'StringLiteral',
-                value: path,
-              },
-            ],
-          },
-        },
-      ],
-      kind: 'const',
-    };
+    return t.variableDeclaration('const', [
+      t.variableDeclarator(
+        t.identifier(identifier),
+        t.callExpression(t.identifier('require'), [t.stringLiteral(path)]),
+      ),
+    ]);
   }
 
   buildSequelizeImport(model) {}

@@ -31,9 +31,19 @@ const buildAttrObj = (record, model, init = {}) => {
 
 const buildAssocKeys = (model, record, row) =>
   findAssociations(model, 'BelongsToMany').reduce((attributes, assoc_name) => {
-    attributes[assoc_name] = record[
-      model.associations[assoc_name].options.$col_order
-    ].map(target => [row, target]);
+    const index = model.associations[assoc_name].options.$col_order;
+    let targets = record[index];
+
+    // this should not happen but i.e. DailyOverrides says Keys but only
+    // provides a single error
+    if (!Array.isArray(targets)) {
+      console.log(
+        `in model ${model.name} the record ${row} does not provide an array for ${assoc_name} at index ${index}`,
+      );
+      targets = [targets];
+    }
+
+    attributes[assoc_name] = targets.map(target => [row, target]);
 
     return attributes;
   }, {});

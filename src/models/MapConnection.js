@@ -45,10 +45,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['map_pins_key0'],
+          fields: [
+            {
+              attribute: 'map_pins_key0',
+            },
+          ],
         },
         {
-          fields: ['map_pins_key1'],
+          fields: [
+            {
+              attribute: 'map_pins_key1',
+            },
+          ],
         },
       ],
       tableName: 'map_connections',
@@ -60,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'map_pins_key0',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -69,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'map_pins_key0',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -79,6 +89,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'map_pins_key1',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -88,6 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'map_pins_key1',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

@@ -27,13 +27,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['characters_key'],
+          fields: [
+            {
+              attribute: 'characters_key',
+            },
+          ],
         },
         {
-          fields: ['base_item_types_key'],
+          fields: [
+            {
+              attribute: 'base_item_types_key',
+            },
+          ],
         },
         {
-          fields: ['world_areas_key'],
+          fields: [
+            {
+              attribute: 'world_areas_key',
+            },
+          ],
         },
       ],
       tableName: 'descent_starter_chests',
@@ -45,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -54,6 +67,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -64,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -73,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -83,6 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -92,6 +109,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

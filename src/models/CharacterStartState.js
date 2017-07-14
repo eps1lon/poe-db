@@ -51,10 +51,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['characters_key'],
+          fields: [
+            {
+              attribute: 'characters_key',
+            },
+          ],
         },
         {
-          fields: ['character_start_state_set_key'],
+          fields: [
+            {
+              attribute: 'character_start_state_set_key',
+            },
+          ],
         },
       ],
       tableName: 'character_start_states',
@@ -66,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'characters_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -75,6 +84,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'characters_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -85,6 +95,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'character_start_state_set_key',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -94,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'character_start_state_set_key',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

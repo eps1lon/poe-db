@@ -21,7 +21,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['daily_missions_keys'],
+          fields: [
+            {
+              attribute: 'daily_missions_keys',
+            },
+          ],
         },
       ],
       tableName: 'daily_overrides',
@@ -33,6 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'daily_missions_keys',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -42,6 +47,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'daily_missions_keys',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

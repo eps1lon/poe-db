@@ -417,22 +417,46 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['parent_town_world_areas_key'],
+          fields: [
+            {
+              attribute: 'parent_town_world_areas_key',
+            },
+          ],
         },
         {
-          fields: ['difficulties_key'],
+          fields: [
+            {
+              attribute: 'difficulties_key',
+            },
+          ],
         },
         {
-          fields: ['achievement_items_key'],
+          fields: [
+            {
+              attribute: 'achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['twinned_full_clear_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'twinned_full_clear_achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['enter_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'enter_achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['8_mods_full_clear_achievement_items_key'],
+          fields: [
+            {
+              attribute: '8_mods_full_clear_achievement_items_key',
+            },
+          ],
         },
       ],
       tableName: 'world_areas',
@@ -444,6 +468,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'parent_town_world_areas_key',
         $col_order: 17,
+        $type: 'uint',
       },
       targetKey: 'row',
       nullable: true,
@@ -453,6 +478,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'parent_town_world_areas_key',
         $col_order: 17,
+        $type: 'uint',
       },
       targetKey: undefined,
       nullable: true,
@@ -463,6 +489,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'difficulties_key',
         $col_order: 18,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -472,6 +499,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'difficulties_key',
         $col_order: 18,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -482,6 +510,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 30,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -491,6 +520,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 30,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -501,6 +531,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'twinned_full_clear_achievement_items_key',
         $col_order: 62,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -510,6 +541,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'twinned_full_clear_achievement_items_key',
         $col_order: 62,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -520,6 +552,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'enter_achievement_items_key',
         $col_order: 63,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -529,6 +562,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'enter_achievement_items_key',
         $col_order: 63,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -539,6 +573,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '8_mods_full_clear_achievement_items_key',
         $col_order: 68,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -548,6 +583,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '8_mods_full_clear_achievement_items_key',
         $col_order: 68,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

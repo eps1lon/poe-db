@@ -39,10 +39,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['character_panel_description_modes_key'],
+          fields: [
+            {
+              attribute: 'character_panel_description_modes_key',
+            },
+          ],
         },
         {
-          fields: ['character_panel_tabs_key'],
+          fields: [
+            {
+              attribute: 'character_panel_tabs_key',
+            },
+          ],
         },
       ],
       tableName: 'character_panel_stats',
@@ -54,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'character_panel_description_modes_key',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -63,6 +72,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'character_panel_description_modes_key',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -73,6 +83,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'character_panel_tabs_key',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -82,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'character_panel_tabs_key',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

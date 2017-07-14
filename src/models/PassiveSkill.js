@@ -135,13 +135,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['achievement_items_key'],
+          fields: [
+            {
+              attribute: 'achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['granted_buff_buff_definitions_key'],
+          fields: [
+            {
+              attribute: 'granted_buff_buff_definitions_key',
+            },
+          ],
         },
         {
-          fields: ['ascendancy_key'],
+          fields: [
+            {
+              attribute: 'ascendancy_key',
+            },
+          ],
         },
       ],
       tableName: 'passive_skills',
@@ -153,6 +165,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 14,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -162,6 +175,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 14,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -172,6 +186,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'granted_buff_buff_definitions_key',
         $col_order: 16,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -181,6 +196,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'granted_buff_buff_definitions_key',
         $col_order: 16,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -191,6 +207,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'ascendancy_key',
         $col_order: 20,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -200,6 +217,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'ascendancy_key',
         $col_order: 20,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

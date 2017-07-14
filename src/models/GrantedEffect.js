@@ -105,7 +105,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['active_skills_key'],
+          fields: [
+            {
+              attribute: 'active_skills_key',
+            },
+          ],
         },
       ],
       tableName: 'granted_effects',
@@ -117,6 +121,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'active_skills_key',
         $col_order: 13,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -126,6 +131,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'active_skills_key',
         $col_order: 13,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

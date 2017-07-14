@@ -75,7 +75,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['achievement_sets_display_key'],
+          fields: [
+            {
+              attribute: 'achievement_sets_display_key',
+            },
+          ],
         },
       ],
       tableName: 'achievements',
@@ -87,6 +91,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_sets_display_key',
         $col_order: 2,
+        $type: 'int',
       },
       targetKey: 'id',
       nullable: true,
@@ -96,6 +101,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_sets_display_key',
         $col_order: 2,
+        $type: 'int',
       },
       targetKey: undefined,
       nullable: true,

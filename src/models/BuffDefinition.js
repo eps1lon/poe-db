@@ -147,13 +147,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['maximum_stats_key'],
+          fields: [
+            {
+              attribute: 'maximum_stats_key',
+            },
+          ],
         },
         {
-          fields: ['current_stats_key'],
+          fields: [
+            {
+              attribute: 'current_stats_key',
+            },
+          ],
         },
         {
-          fields: ['buff_visuals_key'],
+          fields: [
+            {
+              attribute: 'buff_visuals_key',
+            },
+          ],
         },
       ],
       tableName: 'buff_definitions',
@@ -165,6 +177,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'maximum_stats_key',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -174,6 +187,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'maximum_stats_key',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -184,6 +198,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'current_stats_key',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -193,6 +208,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'current_stats_key',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -203,6 +219,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_visuals_key',
         $col_order: 13,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -212,6 +229,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_visuals_key',
         $col_order: 13,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

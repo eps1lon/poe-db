@@ -15,7 +15,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['base_item_types_key'],
+          fields: [
+            {
+              attribute: 'base_item_types_key',
+            },
+          ],
         },
       ],
       tableName: 'microtransaction_social_frame_variations',
@@ -27,6 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'long',
       },
       targetKey: 'row',
       nullable: true,
@@ -36,6 +41,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'long',
       },
       targetKey: undefined,
       nullable: true,

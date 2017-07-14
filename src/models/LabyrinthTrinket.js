@@ -21,13 +21,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['base_item_types_key'],
+          fields: [
+            {
+              attribute: 'base_item_types_key',
+            },
+          ],
         },
         {
-          fields: ['labyrinth_secrets_key'],
+          fields: [
+            {
+              attribute: 'labyrinth_secrets_key',
+            },
+          ],
         },
         {
-          fields: ['buff_buff_definitions_key'],
+          fields: [
+            {
+              attribute: 'buff_buff_definitions_key',
+            },
+          ],
         },
       ],
       tableName: 'labyrinth_trinkets',
@@ -39,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -48,6 +61,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -58,6 +72,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'labyrinth_secrets_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -67,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'labyrinth_secrets_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -77,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_buff_definitions_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -86,6 +103,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_buff_definitions_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

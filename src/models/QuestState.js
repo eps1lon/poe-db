@@ -87,7 +87,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['quest_key'],
+          fields: [
+            {
+              attribute: 'quest_key',
+            },
+          ],
         },
       ],
       tableName: 'quest_states',
@@ -99,6 +103,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quest_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -108,6 +113,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quest_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

@@ -87,10 +87,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['main_hand_alias_stats_key'],
+          fields: [
+            {
+              attribute: 'main_hand_alias_stats_key',
+            },
+          ],
         },
         {
-          fields: ['off_hand_alias_stats_key'],
+          fields: [
+            {
+              attribute: 'off_hand_alias_stats_key',
+            },
+          ],
         },
       ],
       tableName: 'stats',
@@ -102,6 +110,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'main_hand_alias_stats_key',
         $col_order: 9,
+        $type: 'int',
       },
       targetKey: 'row',
       nullable: true,
@@ -111,6 +120,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'main_hand_alias_stats_key',
         $col_order: 9,
+        $type: 'int',
       },
       targetKey: undefined,
       nullable: true,
@@ -121,6 +131,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'off_hand_alias_stats_key',
         $col_order: 10,
+        $type: 'int',
       },
       targetKey: 'row',
       nullable: true,
@@ -130,6 +141,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'off_hand_alias_stats_key',
         $col_order: 10,
+        $type: 'int',
       },
       targetKey: undefined,
       nullable: true,

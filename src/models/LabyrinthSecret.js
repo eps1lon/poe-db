@@ -93,7 +93,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['achievement_items_key'],
+          fields: [
+            {
+              attribute: 'achievement_items_key',
+            },
+          ],
         },
       ],
       tableName: 'labyrinth_secrets',
@@ -105,6 +109,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 17,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -114,6 +119,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 17,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

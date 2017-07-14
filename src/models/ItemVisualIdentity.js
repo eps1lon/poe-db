@@ -165,10 +165,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['sound_effects_key'],
+          fields: [
+            {
+              attribute: 'sound_effects_key',
+            },
+          ],
         },
         {
-          fields: ['create_corrupted_jewel_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'create_corrupted_jewel_achievement_items_key',
+            },
+          ],
         },
       ],
       tableName: 'item_visual_identities',
@@ -180,6 +188,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'sound_effects_key',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -189,6 +198,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'sound_effects_key',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -199,6 +209,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'create_corrupted_jewel_achievement_items_key',
         $col_order: 29,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -208,6 +219,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'create_corrupted_jewel_achievement_items_key',
         $col_order: 29,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

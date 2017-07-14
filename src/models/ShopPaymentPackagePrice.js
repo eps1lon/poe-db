@@ -21,10 +21,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['shop_payment_package_key'],
+          fields: [
+            {
+              attribute: 'shop_payment_package_key',
+            },
+          ],
         },
         {
-          fields: ['shop_country_key'],
+          fields: [
+            {
+              attribute: 'shop_country_key',
+            },
+          ],
         },
       ],
       tableName: 'shop_payment_package_prices',
@@ -36,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_payment_package_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -45,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_payment_package_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -55,6 +65,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_country_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -64,6 +75,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_country_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

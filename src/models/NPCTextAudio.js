@@ -51,7 +51,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['characters_key'],
+          fields: [
+            {
+              attribute: 'characters_key',
+            },
+          ],
         },
       ],
       tableName: 'n_p_c_text_audios',
@@ -63,6 +67,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,
+        $type: 'long',
       },
       targetKey: 'row',
       nullable: true,
@@ -72,6 +77,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,
+        $type: 'long',
       },
       targetKey: undefined,
       nullable: true,

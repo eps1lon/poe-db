@@ -87,25 +87,53 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['buff_definitions_key1'],
+          fields: [
+            {
+              attribute: 'buff_definitions_key1',
+            },
+          ],
         },
         {
-          fields: ['friendly_monster_varieties_key'],
+          fields: [
+            {
+              attribute: 'friendly_monster_varieties_key',
+            },
+          ],
         },
         {
-          fields: ['misc_objects_key'],
+          fields: [
+            {
+              attribute: 'misc_objects_key',
+            },
+          ],
         },
         {
-          fields: ['misc_animated_key'],
+          fields: [
+            {
+              attribute: 'misc_animated_key',
+            },
+          ],
         },
         {
-          fields: ['buff_visuals_key'],
+          fields: [
+            {
+              attribute: 'buff_visuals_key',
+            },
+          ],
         },
         {
-          fields: ['enemy_monster_varieties_key'],
+          fields: [
+            {
+              attribute: 'enemy_monster_varieties_key',
+            },
+          ],
         },
         {
-          fields: ['buff_definitions_key2'],
+          fields: [
+            {
+              attribute: 'buff_definitions_key2',
+            },
+          ],
         },
       ],
       tableName: 'exploding_storm_buffs',
@@ -117,6 +145,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key1',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -126,6 +155,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key1',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -136,6 +166,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'friendly_monster_varieties_key',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -145,6 +176,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'friendly_monster_varieties_key',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -155,6 +187,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_objects_key',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -164,6 +197,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_objects_key',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -174,6 +208,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_animated_key',
         $col_order: 11,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -183,6 +218,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_animated_key',
         $col_order: 11,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -193,6 +229,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_visuals_key',
         $col_order: 12,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -202,6 +239,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_visuals_key',
         $col_order: 12,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -212,6 +250,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'enemy_monster_varieties_key',
         $col_order: 13,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -221,6 +260,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'enemy_monster_varieties_key',
         $col_order: 13,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -231,6 +271,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key2',
         $col_order: 17,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -240,6 +281,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key2',
         $col_order: 17,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

@@ -39,7 +39,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['mods_key'],
+          fields: [
+            {
+              attribute: 'mods_key',
+            },
+          ],
         },
       ],
       tableName: 'str_map_mods',
@@ -51,6 +55,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -60,6 +65,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

@@ -69,10 +69,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['buff_definitions_key'],
+          fields: [
+            {
+              attribute: 'buff_definitions_key',
+            },
+          ],
         },
         {
-          fields: ['monster_varieties_key'],
+          fields: [
+            {
+              attribute: 'monster_varieties_key',
+            },
+          ],
         },
       ],
       tableName: 'bloodlines',
@@ -84,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -93,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -103,6 +113,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 11,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -112,6 +123,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 11,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

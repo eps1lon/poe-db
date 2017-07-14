@@ -57,10 +57,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['monster_varieties_key'],
+          fields: [
+            {
+              attribute: 'monster_varieties_key',
+            },
+          ],
         },
         {
-          fields: ['monster_packs_key'],
+          fields: [
+            {
+              attribute: 'monster_packs_key',
+            },
+          ],
         },
       ],
       tableName: 'talisman_packs',
@@ -72,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -81,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -91,6 +101,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_packs_key',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -100,6 +111,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_packs_key',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

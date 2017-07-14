@@ -39,10 +39,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['achievement_items_key'],
+          fields: [
+            {
+              attribute: 'achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['difficulties_key'],
+          fields: [
+            {
+              attribute: 'difficulties_key',
+            },
+          ],
         },
       ],
       tableName: 'quest_achievements',
@@ -54,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -63,6 +72,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -73,6 +83,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'difficulties_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -82,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'difficulties_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

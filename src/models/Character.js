@@ -165,10 +165,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['start_skill_gem_base_item_types_key'],
+          fields: [
+            {
+              attribute: 'start_skill_gem_base_item_types_key',
+            },
+          ],
         },
         {
-          fields: ['start_weapon_base_item_types_key'],
+          fields: [
+            {
+              attribute: 'start_weapon_base_item_types_key',
+            },
+          ],
         },
       ],
       tableName: 'characters',
@@ -180,6 +188,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'start_skill_gem_base_item_types_key',
         $col_order: 17,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -189,6 +198,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'start_skill_gem_base_item_types_key',
         $col_order: 17,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -199,6 +209,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'start_weapon_base_item_types_key',
         $col_order: 24,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -208,6 +219,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'start_weapon_base_item_types_key',
         $col_order: 24,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

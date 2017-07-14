@@ -33,10 +33,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['base_item_types_key'],
+          fields: [
+            {
+              attribute: 'base_item_types_key',
+            },
+          ],
         },
         {
-          fields: ['world_areas_key'],
+          fields: [
+            {
+              attribute: 'world_areas_key',
+            },
+          ],
         },
       ],
       tableName: 'atlas_quest_items',
@@ -48,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -57,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -67,6 +77,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -76,6 +87,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

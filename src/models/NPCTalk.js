@@ -159,10 +159,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['npc_key'],
+          fields: [
+            {
+              attribute: 'npc_key',
+            },
+          ],
         },
         {
-          fields: ['quest_key'],
+          fields: [
+            {
+              attribute: 'quest_key',
+            },
+          ],
         },
       ],
       tableName: 'n_p_c_talks',
@@ -174,6 +182,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -183,6 +192,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -193,6 +203,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quest_key',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -202,6 +213,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quest_key',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

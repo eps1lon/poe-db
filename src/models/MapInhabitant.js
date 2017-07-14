@@ -21,7 +21,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['stats_key'],
+          fields: [
+            {
+              attribute: 'stats_key',
+            },
+          ],
         },
       ],
       tableName: 'map_inhabitants',
@@ -33,6 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -42,6 +47,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

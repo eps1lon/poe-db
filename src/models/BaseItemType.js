@@ -93,19 +93,39 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['item_classes_key'],
+          fields: [
+            {
+              attribute: 'item_classes_key',
+            },
+          ],
         },
         {
-          fields: ['flavour_text_key'],
+          fields: [
+            {
+              attribute: 'flavour_text_key',
+            },
+          ],
         },
         {
-          fields: ['sound_effects_key'],
+          fields: [
+            {
+              attribute: 'sound_effects_key',
+            },
+          ],
         },
         {
-          fields: ['item_visual_identity_key'],
+          fields: [
+            {
+              attribute: 'item_visual_identity_key',
+            },
+          ],
         },
         {
-          fields: ['equip_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'equip_achievement_items_key',
+            },
+          ],
         },
       ],
       tableName: 'base_item_types',
@@ -117,6 +137,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'item_classes_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -126,6 +147,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'item_classes_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -136,6 +158,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'flavour_text_key',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -145,6 +168,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'flavour_text_key',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -155,6 +179,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'sound_effects_key',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -164,6 +189,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'sound_effects_key',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -174,6 +200,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'item_visual_identity_key',
         $col_order: 18,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -183,6 +210,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'item_visual_identity_key',
         $col_order: 18,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -193,6 +221,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'equip_achievement_items_key',
         $col_order: 26,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -202,6 +231,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'equip_achievement_items_key',
         $col_order: 26,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

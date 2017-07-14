@@ -39,7 +39,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['boss_monster_varieties_key'],
+          fields: [
+            {
+              attribute: 'boss_monster_varieties_key',
+            },
+          ],
         },
       ],
       tableName: 'dex_mission_monsters',
@@ -51,6 +55,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'boss_monster_varieties_key',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -60,6 +65,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'boss_monster_varieties_key',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

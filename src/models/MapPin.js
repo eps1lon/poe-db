@@ -75,13 +75,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['normal_waypoint_world_areas_key'],
+          fields: [
+            {
+              attribute: 'normal_waypoint_world_areas_key',
+            },
+          ],
         },
         {
-          fields: ['cruel_waypoint_world_areas_key'],
+          fields: [
+            {
+              attribute: 'cruel_waypoint_world_areas_key',
+            },
+          ],
         },
         {
-          fields: ['merciless_waypoint_world_areas_key'],
+          fields: [
+            {
+              attribute: 'merciless_waypoint_world_areas_key',
+            },
+          ],
         },
       ],
       tableName: 'map_pins',
@@ -93,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'normal_waypoint_world_areas_key',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -102,6 +115,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'normal_waypoint_world_areas_key',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -112,6 +126,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'cruel_waypoint_world_areas_key',
         $col_order: 11,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -121,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'cruel_waypoint_world_areas_key',
         $col_order: 11,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -131,6 +147,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'merciless_waypoint_world_areas_key',
         $col_order: 12,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -140,6 +157,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'merciless_waypoint_world_areas_key',
         $col_order: 12,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

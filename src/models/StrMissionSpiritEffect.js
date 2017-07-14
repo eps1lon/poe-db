@@ -81,10 +81,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['summon_monster_varieties_keys'],
+          fields: [
+            {
+              attribute: 'summon_monster_varieties_keys',
+            },
+          ],
         },
         {
-          fields: ['ground_effect_monster_varieties_keys'],
+          fields: [
+            {
+              attribute: 'ground_effect_monster_varieties_keys',
+            },
+          ],
         },
       ],
       tableName: 'str_mission_spirit_effects',
@@ -96,6 +104,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'summon_monster_varieties_keys',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -105,6 +114,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'summon_monster_varieties_keys',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -115,6 +125,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'ground_effect_monster_varieties_keys',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -124,6 +135,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'ground_effect_monster_varieties_keys',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

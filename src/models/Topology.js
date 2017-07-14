@@ -45,7 +45,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['environments_key'],
+          fields: [
+            {
+              attribute: 'environments_key',
+            },
+          ],
         },
       ],
       tableName: 'topologies',
@@ -57,6 +61,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'environments_key',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -66,6 +71,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'environments_key',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

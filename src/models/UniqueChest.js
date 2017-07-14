@@ -69,10 +69,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['chests_key'],
+          fields: [
+            {
+              attribute: 'chests_key',
+            },
+          ],
         },
         {
-          fields: ['words_key'],
+          fields: [
+            {
+              attribute: 'words_key',
+            },
+          ],
         },
       ],
       tableName: 'unique_chests',
@@ -84,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'chests_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -93,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'chests_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -103,6 +113,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'words_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -112,6 +123,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'words_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

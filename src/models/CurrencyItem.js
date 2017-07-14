@@ -81,13 +81,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['base_item_types_key'],
+          fields: [
+            {
+              attribute: 'base_item_types_key',
+            },
+          ],
         },
         {
-          fields: ['full_stack_base_item_types_key'],
+          fields: [
+            {
+              attribute: 'full_stack_base_item_types_key',
+            },
+          ],
         },
         {
-          fields: ['possession_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'possession_achievement_items_key',
+            },
+          ],
         },
       ],
       tableName: 'currency_items',
@@ -99,6 +111,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -108,6 +121,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -118,6 +132,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'full_stack_base_item_types_key',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -127,6 +142,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'full_stack_base_item_types_key',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -137,6 +153,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'possession_achievement_items_key',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -146,6 +163,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'possession_achievement_items_key',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

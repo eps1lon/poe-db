@@ -57,16 +57,32 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['npc_master_key'],
+          fields: [
+            {
+              attribute: 'npc_master_key',
+            },
+          ],
         },
         {
-          fields: ['npc_shop_key'],
+          fields: [
+            {
+              attribute: 'npc_shop_key',
+            },
+          ],
         },
         {
-          fields: ['npc_audio_key1'],
+          fields: [
+            {
+              attribute: 'npc_audio_key1',
+            },
+          ],
         },
         {
-          fields: ['npc_audio_key2'],
+          fields: [
+            {
+              attribute: 'npc_audio_key2',
+            },
+          ],
         },
       ],
       tableName: 'n_p_cs',
@@ -78,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_master_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -87,6 +104,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_master_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -97,6 +115,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_shop_key',
         $col_order: 8,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -106,6 +125,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_shop_key',
         $col_order: 8,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -116,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_audio_key1',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -125,6 +146,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_audio_key1',
         $col_order: 9,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -135,6 +157,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_audio_key2',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -144,6 +167,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_audio_key2',
         $col_order: 10,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

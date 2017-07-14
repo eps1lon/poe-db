@@ -63,10 +63,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['dummy_monster_varieties_key'],
+          fields: [
+            {
+              attribute: 'dummy_monster_varieties_key',
+            },
+          ],
         },
         {
-          fields: ['npc_talk_key'],
+          fields: [
+            {
+              attribute: 'npc_talk_key',
+            },
+          ],
         },
       ],
       tableName: 'str_dex_missions',
@@ -78,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'dummy_monster_varieties_key',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -87,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'dummy_monster_varieties_key',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -97,6 +107,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_talk_key',
         $col_order: 8,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -106,6 +117,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_talk_key',
         $col_order: 8,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

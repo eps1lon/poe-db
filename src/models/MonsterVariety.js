@@ -279,34 +279,74 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['monster_types_key'],
+          fields: [
+            {
+              attribute: 'monster_types_key',
+            },
+          ],
         },
         {
-          fields: ['back_item_visual_identity_key'],
+          fields: [
+            {
+              attribute: 'back_item_visual_identity_key',
+            },
+          ],
         },
         {
-          fields: ['main_hand_item_classes_key'],
+          fields: [
+            {
+              attribute: 'main_hand_item_classes_key',
+            },
+          ],
         },
         {
-          fields: ['off_hand_item_classes_key'],
+          fields: [
+            {
+              attribute: 'off_hand_item_classes_key',
+            },
+          ],
         },
         {
-          fields: ['helmet_item_visual_identity_key'],
+          fields: [
+            {
+              attribute: 'helmet_item_visual_identity_key',
+            },
+          ],
         },
         {
-          fields: ['flashback_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'flashback_achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['monster_segments_key'],
+          fields: [
+            {
+              attribute: 'monster_segments_key',
+            },
+          ],
         },
         {
-          fields: ['monster_armours_key'],
+          fields: [
+            {
+              attribute: 'monster_armours_key',
+            },
+          ],
         },
         {
-          fields: ['achievement_items_key'],
+          fields: [
+            {
+              attribute: 'achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['achievement_items_key4'],
+          fields: [
+            {
+              attribute: 'achievement_items_key4',
+            },
+          ],
         },
       ],
       tableName: 'monster_varieties',
@@ -318,6 +358,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_types_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -327,6 +368,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_types_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -337,6 +379,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'back_item_visual_identity_key',
         $col_order: 38,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -346,6 +389,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'back_item_visual_identity_key',
         $col_order: 38,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -356,6 +400,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'main_hand_item_classes_key',
         $col_order: 39,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -365,6 +410,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'main_hand_item_classes_key',
         $col_order: 39,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -375,6 +421,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'off_hand_item_classes_key',
         $col_order: 40,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -384,6 +431,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'off_hand_item_classes_key',
         $col_order: 40,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -394,6 +442,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'helmet_item_visual_identity_key',
         $col_order: 42,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -403,6 +452,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'helmet_item_visual_identity_key',
         $col_order: 42,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -413,6 +463,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'flashback_achievement_items_key',
         $col_order: 60,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -422,6 +473,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'flashback_achievement_items_key',
         $col_order: 60,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -432,6 +484,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_segments_key',
         $col_order: 61,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -441,6 +494,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_segments_key',
         $col_order: 61,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -451,6 +505,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_armours_key',
         $col_order: 62,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -460,6 +515,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_armours_key',
         $col_order: 62,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -470,6 +526,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 63,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -479,6 +536,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 63,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -489,6 +547,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key4',
         $col_order: 64,
+        $type: 'ref|list|ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -498,6 +557,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key4',
         $col_order: 64,
+        $type: 'ref|list|ulong',
       },
       targetKey: undefined,
       nullable: true,

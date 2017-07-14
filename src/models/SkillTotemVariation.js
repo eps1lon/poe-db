@@ -21,10 +21,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['skill_totems_key'],
+          fields: [
+            {
+              attribute: 'skill_totems_key',
+            },
+          ],
         },
         {
-          fields: ['monster_varieties_key'],
+          fields: [
+            {
+              attribute: 'monster_varieties_key',
+            },
+          ],
         },
       ],
       tableName: 'skill_totem_variations',
@@ -36,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'skill_totems_key',
         $col_order: 0,
+        $type: 'int',
       },
       targetKey: 'row',
       nullable: true,
@@ -45,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'skill_totems_key',
         $col_order: 0,
+        $type: 'int',
       },
       targetKey: undefined,
       nullable: true,
@@ -55,6 +65,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -64,6 +75,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

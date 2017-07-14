@@ -39,13 +39,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['stats_key'],
+          fields: [
+            {
+              attribute: 'stats_key',
+            },
+          ],
         },
         {
-          fields: ['difficulty_key'],
+          fields: [
+            {
+              attribute: 'difficulty_key',
+            },
+          ],
         },
         {
-          fields: ['quest_key'],
+          fields: [
+            {
+              attribute: 'quest_key',
+            },
+          ],
         },
       ],
       tableName: 'quest_static_rewards',
@@ -57,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -66,6 +79,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -76,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'difficulty_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -85,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'difficulty_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -95,6 +111,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quest_key',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -104,6 +121,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quest_key',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

@@ -27,13 +27,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['shop_payment_package_key'],
+          fields: [
+            {
+              attribute: 'shop_payment_package_key',
+            },
+          ],
         },
         {
-          fields: ['shop_item_key'],
+          fields: [
+            {
+              attribute: 'shop_item_key',
+            },
+          ],
         },
         {
-          fields: ['shop_token_key'],
+          fields: [
+            {
+              attribute: 'shop_token_key',
+            },
+          ],
         },
       ],
       tableName: 'shop_payment_package_items',
@@ -45,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_payment_package_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -54,6 +67,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_payment_package_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -64,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_item_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -73,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_item_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -83,6 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_token_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -92,6 +109,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_token_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

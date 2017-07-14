@@ -39,7 +39,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['chests_key'],
+          fields: [
+            {
+              attribute: 'chests_key',
+            },
+          ],
         },
       ],
       tableName: 'summoned_specific_barrels',
@@ -51,6 +55,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'chests_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -60,6 +65,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'chests_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

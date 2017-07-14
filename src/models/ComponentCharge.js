@@ -27,7 +27,12 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['base_item_types_key'],
+          fields: [
+            {
+              attribute: 'base_item_types_key',
+              length: 255,
+            },
+          ],
         },
       ],
       tableName: 'component_charges',
@@ -39,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ref|string',
       },
       targetKey: 'id',
       nullable: true,
@@ -48,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ref|string',
       },
       targetKey: undefined,
       nullable: true,

@@ -99,7 +99,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['upgrade_shop_payment_package_key'],
+          fields: [
+            {
+              attribute: 'upgrade_shop_payment_package_key',
+            },
+          ],
         },
       ],
       tableName: 'shop_payment_packages',
@@ -111,6 +115,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'upgrade_shop_payment_package_key',
         $col_order: 13,
+        $type: 'int',
       },
       targetKey: 'row',
       nullable: true,
@@ -120,6 +125,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'upgrade_shop_payment_package_key',
         $col_order: 13,
+        $type: 'int',
       },
       targetKey: undefined,
       nullable: true,

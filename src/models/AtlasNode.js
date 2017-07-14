@@ -57,13 +57,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['world_areas_key'],
+          fields: [
+            {
+              attribute: 'world_areas_key',
+            },
+          ],
         },
         {
-          fields: ['default_item_visual_identity_key'],
+          fields: [
+            {
+              attribute: 'default_item_visual_identity_key',
+            },
+          ],
         },
         {
-          fields: ['shaped_item_visual_identity_key'],
+          fields: [
+            {
+              attribute: 'shaped_item_visual_identity_key',
+            },
+          ],
         },
       ],
       tableName: 'atlas_nodes',
@@ -75,6 +87,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -84,6 +97,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -94,6 +108,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'default_item_visual_identity_key',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -103,6 +118,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'default_item_visual_identity_key',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -113,6 +129,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shaped_item_visual_identity_key',
         $col_order: 8,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -122,6 +139,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shaped_item_visual_identity_key',
         $col_order: 8,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

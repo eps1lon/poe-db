@@ -47,6 +47,8 @@ class SequelizeModel extends Model {
           foreignKey: {
             name: SequelizeModel.colCasing(field),
             $col_order: this.fields[field].rowid,
+            // save the type of the column to determine index key length
+            $type: this.fields[field].type,
           },
           targetKey: SequelizeModel.colCasing(
             this.fields[field].key_id || PRIMARY,
@@ -91,13 +93,24 @@ class SequelizeModel extends Model {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: this.belongsTo().map(([, { foreignKey: { name } }]) => {
-        return {
-          fields: [name],
-        };
-      }),
+      indexes: this.indices(),
       tableName: tableize(this.name()),
     };
+  }
+
+  indices() {
+    return this.belongsTo().map(([, { foreignKey: { name, $type } }]) => {
+      const index = {
+        fields: [{ attribute: name }],
+      };
+
+      const key_length = this._indexKeyLength($type);
+      if (key_length !== -1) {
+        index.fields[0].length = key_length;
+      }
+
+      return index;
+    });
   }
 
   get fields() {
@@ -228,6 +241,16 @@ class SequelizeModel extends Model {
         default:
           throw new Error(`unrecognized type '${props.type}'`);
       }
+    }
+  }
+
+  _indexKeyLength(type) {
+    if (type === 'ref|string') {
+      // max length, maybe require more info about the field to
+      // determine meaningful key length
+      return 255;
+    } else {
+      return -1;
     }
   }
 }

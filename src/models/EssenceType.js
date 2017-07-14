@@ -33,7 +33,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['words_key'],
+          fields: [
+            {
+              attribute: 'words_key',
+            },
+          ],
         },
       ],
       tableName: 'essence_types',
@@ -45,6 +49,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'words_key',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -54,6 +59,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'words_key',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

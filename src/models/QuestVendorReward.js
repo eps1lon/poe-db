@@ -33,7 +33,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['npc_key'],
+          fields: [
+            {
+              attribute: 'npc_key',
+            },
+          ],
         },
       ],
       tableName: 'quest_vendor_rewards',
@@ -45,6 +49,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -54,6 +59,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

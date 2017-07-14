@@ -39,13 +39,25 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['base_item_types_key'],
+          fields: [
+            {
+              attribute: 'base_item_types_key',
+            },
+          ],
         },
         {
-          fields: ['granted_effects_key'],
+          fields: [
+            {
+              attribute: 'granted_effects_key',
+            },
+          ],
         },
         {
-          fields: ['vaal_variant_base_item_types_key'],
+          fields: [
+            {
+              attribute: 'vaal_variant_base_item_types_key',
+            },
+          ],
         },
       ],
       tableName: 'skill_gems',
@@ -57,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -66,6 +79,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -76,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'granted_effects_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -85,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'granted_effects_key',
         $col_order: 1,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -95,6 +111,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'vaal_variant_base_item_types_key',
         $col_order: 6,
+        $type: 'long',
       },
       targetKey: 'row',
       nullable: true,
@@ -104,6 +121,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'vaal_variant_base_item_types_key',
         $col_order: 6,
+        $type: 'long',
       },
       targetKey: undefined,
       nullable: true,

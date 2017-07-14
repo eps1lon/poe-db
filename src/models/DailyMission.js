@@ -57,10 +57,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['npc_talk_key'],
+          fields: [
+            {
+              attribute: 'npc_talk_key',
+            },
+          ],
         },
         {
-          fields: ['pvp_types_key'],
+          fields: [
+            {
+              attribute: 'pvp_types_key',
+            },
+          ],
         },
       ],
       tableName: 'daily_missions',
@@ -72,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_talk_key',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -81,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_talk_key',
         $col_order: 6,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -91,6 +101,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'pvp_types_key',
         $col_order: 9,
+        $type: 'int',
       },
       targetKey: 'row',
       nullable: true,
@@ -100,6 +111,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'pvp_types_key',
         $col_order: 9,
+        $type: 'int',
       },
       targetKey: undefined,
       nullable: true,

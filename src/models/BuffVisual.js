@@ -51,10 +51,18 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['misc_animated_key'],
+          fields: [
+            {
+              attribute: 'misc_animated_key',
+            },
+          ],
         },
         {
-          fields: ['misc_animated_key2'],
+          fields: [
+            {
+              attribute: 'misc_animated_key2',
+            },
+          ],
         },
       ],
       tableName: 'buff_visuals',
@@ -66,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_animated_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -75,6 +84,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_animated_key',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -85,6 +95,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_animated_key2',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -94,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_animated_key2',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

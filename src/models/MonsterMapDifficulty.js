@@ -45,16 +45,32 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['stats_key1'],
+          fields: [
+            {
+              attribute: 'stats_key1',
+            },
+          ],
         },
         {
-          fields: ['stats_key2'],
+          fields: [
+            {
+              attribute: 'stats_key2',
+            },
+          ],
         },
         {
-          fields: ['stats_key3'],
+          fields: [
+            {
+              attribute: 'stats_key3',
+            },
+          ],
         },
         {
-          fields: ['stats_key4'],
+          fields: [
+            {
+              attribute: 'stats_key4',
+            },
+          ],
         },
       ],
       tableName: 'monster_map_difficulties',
@@ -66,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key1',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -75,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key1',
         $col_order: 3,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -85,6 +103,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key2',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -94,6 +113,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key2',
         $col_order: 4,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -104,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key3',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -113,6 +134,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key3',
         $col_order: 5,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -123,6 +145,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key4',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -132,6 +155,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key4',
         $col_order: 7,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

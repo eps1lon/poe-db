@@ -123,19 +123,39 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['base_item_types_key'],
+          fields: [
+            {
+              attribute: 'base_item_types_key',
+            },
+          ],
         },
         {
-          fields: ['chest_effects_key'],
+          fields: [
+            {
+              attribute: 'chest_effects_key',
+            },
+          ],
         },
         {
-          fields: ['corrupt_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'corrupt_achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['currency_use_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'currency_use_achievement_items_key',
+            },
+          ],
         },
         {
-          fields: ['encounter_achievement_items_key'],
+          fields: [
+            {
+              attribute: 'encounter_achievement_items_key',
+            },
+          ],
         },
       ],
       tableName: 'chests',
@@ -147,6 +167,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 13,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -156,6 +177,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 13,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -166,6 +188,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'chest_effects_key',
         $col_order: 17,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -175,6 +198,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'chest_effects_key',
         $col_order: 17,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -185,6 +209,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'corrupt_achievement_items_key',
         $col_order: 21,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -194,6 +219,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'corrupt_achievement_items_key',
         $col_order: 21,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -204,6 +230,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'currency_use_achievement_items_key',
         $col_order: 22,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -213,6 +240,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'currency_use_achievement_items_key',
         $col_order: 22,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,
@@ -223,6 +251,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'encounter_achievement_items_key',
         $col_order: 23,
+        $type: 'ref|list|ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -232,6 +261,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'encounter_achievement_items_key',
         $col_order: 23,
+        $type: 'ref|list|ulong',
       },
       targetKey: undefined,
       nullable: true,

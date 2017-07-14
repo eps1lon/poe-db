@@ -27,7 +27,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['shop_currency_key'],
+          fields: [
+            {
+              attribute: 'shop_currency_key',
+            },
+          ],
         },
       ],
       tableName: 'shop_countries',
@@ -39,6 +43,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_currency_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -48,6 +53,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_currency_key',
         $col_order: 2,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

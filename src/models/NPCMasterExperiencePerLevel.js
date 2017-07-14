@@ -45,7 +45,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['npc_master_key'],
+          fields: [
+            {
+              attribute: 'npc_master_key',
+            },
+          ],
         },
       ],
       tableName: 'n_p_c_master_experience_per_levels',
@@ -57,6 +61,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_master_key',
         $col_order: 0,
+        $type: 'long',
       },
       targetKey: 'row',
       nullable: true,
@@ -66,6 +71,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_master_key',
         $col_order: 0,
+        $type: 'long',
       },
       targetKey: undefined,
       nullable: true,

@@ -15,7 +15,11 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['mod_sell_price_types_key'],
+          fields: [
+            {
+              attribute: 'mod_sell_price_types_key',
+            },
+          ],
         },
       ],
       tableName: 'mod_sell_prices',
@@ -27,6 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mod_sell_price_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
@@ -36,6 +41,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mod_sell_price_types_key',
         $col_order: 0,
+        $type: 'ulong',
       },
       targetKey: undefined,
       nullable: true,

@@ -5,7 +5,7 @@ const records = require('../../data/records.json');
 
 (async () => {
   const orm = orm_creator({ logging: false });
-  const models = require('../../src/models')(orm);
+  const models = require('../../src/models').init(orm);
 
   const start_time = Date.now();
 

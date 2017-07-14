@@ -1,24 +1,30 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports = sequelize => {
-  // define
-  const models = fs
+const modelFiles = () =>
+  fs
     .readdirSync(__dirname)
     .filter(name => name !== 'index.js')
-    .reduce((models, model_file) => {
-      const model = sequelize.import(path.join(__dirname, model_file));
+    .map(file => path.join(__dirname, file));
+
+module.exports = {
+  modelFiles,
+  init: sequelize => {
+    // define
+    const models = modelFiles().reduce((models, model_file) => {
+      const model = sequelize.import(model_file);
 
       models[model.name] = model;
 
       return models;
     }, {});
 
-  // link assoc
+    // link assoc
 
-  for (const model of Object.values(models)) {
-    model.associate(models);
-  }
+    for (const model of Object.values(models)) {
+      model.associate(models);
+    }
 
-  return models;
+    return models;
+  },
 };

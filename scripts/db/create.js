@@ -11,7 +11,7 @@ db.query('CREATE DATABASE IF NOT EXISTS ??', [name], async () => {
     await orm.authenticate();
 
     const syncs = [];
-    require('../../src/models/')(orm);
+    require('../../src/models/').init(orm);
 
     // use orm.models instead of the returned models because we also
     // need to create the models defined in 'through'

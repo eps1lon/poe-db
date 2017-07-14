@@ -17,6 +17,7 @@
     "db:rebuild": "yarn run db:drop && yarn run db:build",
     "dev:server": "nodemon server.js",
     "dev:models": "node --trace-warnings scripts/generateModels",
+    "dev:models:clear": "node scripts/clearModels",
     "postdev:models": "prettier-eslint --write \"src/models/*.js\"",
     "dev:parseContent": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postdev:parseContent": "node scripts/postParseContent",
@@ -28,10 +29,7 @@
     "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"

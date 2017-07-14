@@ -79,24 +79,55 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['summon_monster_varieties_keys'],
+        },
+        {
+          fields: ['ground_effect_monster_varieties_keys'],
+        },
+      ],
     },
   );
 
   model.associate = models => {
-    model.belongsToMany(models.MonsterVarieties, {
-      as: 'summon_monster_varieties',
-      through: 'StrMissionSpiritEffectsSummonMonsterVarieties',
-      $col_order: 6,
+    model.belongsTo(models.MonsterVarieties, {
+      foreignKey: {
+        name: 'summon_monster_varieties_keys',
+        $col_order: 6,
+      },
+      targetKey: 'row',
       nullable: true,
       constraints: false,
     });
-    model.belongsToMany(models.MonsterVarieties, {
-      as: 'ground_effect_monster_varieties',
-      through: 'StrMissionSpiritEffectsGroundEffectMonsterVarieties',
-      $col_order: 7,
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'summon_monster_varieties_keys',
+        $col_order: 6,
+      },
+      targetKey: undefined,
       nullable: true,
       constraints: false,
+      sourceKey: 'row',
+    });
+    model.belongsTo(models.MonsterVarieties, {
+      foreignKey: {
+        name: 'ground_effect_monster_varieties_keys',
+        $col_order: 7,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    models.MonsterVarieties.hasMany(model, {
+      foreignKey: {
+        name: 'ground_effect_monster_varieties_keys',
+        $col_order: 7,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
   };
 

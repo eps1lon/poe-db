@@ -129,12 +129,22 @@ class SequelizeModel extends Model {
     }
   }
 
+  // there exists currently inconsistent naming in several fields
+  // where the fields are named in a hasMany pattern but do not provide a list of keys
   _isBelongsTo(field) {
-    return /Key[0-9]*$/.test(field) && this.fields[field].key;
+    return (
+      !this._isHasMany(field) &&
+      /Key(s)?[0-9]*$/.test(field) &&
+      this.fields[field].key
+    );
   }
 
   _isHasMany(field) {
-    return /Keys[0-9]*$/.test(field) && this.fields[field].key;
+    return (
+      /Keys[0-9]*$/.test(field) &&
+      this.fields[field].key &&
+      this.fields[field].type.startsWith('ref|list')
+    );
   }
 
   _isExtendedProp(field) {

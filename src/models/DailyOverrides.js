@@ -19,17 +19,33 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['daily_missions_keys'],
+        },
+      ],
     },
   );
 
   model.associate = models => {
-    model.belongsToMany(models.DailyMissions, {
-      as: 'daily_missions',
-      through: 'DailyOverridesDailyMissions',
-      $col_order: 1,
+    model.belongsTo(models.DailyMissions, {
+      foreignKey: {
+        name: 'daily_missions_keys',
+        $col_order: 1,
+      },
+      targetKey: 'row',
       nullable: true,
       constraints: false,
+    });
+    models.DailyMissions.hasMany(model, {
+      foreignKey: {
+        name: 'daily_missions_keys',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
     });
   };
 

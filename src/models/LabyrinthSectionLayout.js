@@ -31,6 +31,23 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['labyrinth_section_key'],
+        },
+        {
+          fields: ['labyrinth_secrets_key0'],
+        },
+        {
+          fields: ['labyrinth_secrets_key1'],
+        },
+        {
+          fields: ['labyrinth_areas_key'],
+        },
+        {
+          fields: ['labyrinth_node_overrides_key'],
+        },
+      ],
     },
   );
 

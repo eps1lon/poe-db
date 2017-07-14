@@ -19,6 +19,14 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['shop_payment_package_key'],
+        },
+        {
+          fields: ['shop_country_key'],
+        },
+      ],
     },
   );
 

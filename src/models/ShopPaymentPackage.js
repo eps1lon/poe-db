@@ -97,6 +97,11 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['upgrade_shop_payment_package_key'],
+        },
+      ],
     },
   );
 

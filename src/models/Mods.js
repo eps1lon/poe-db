@@ -175,6 +175,35 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['mod_type_key'],
+        },
+        {
+          fields: ['stats_key1'],
+        },
+        {
+          fields: ['stats_key2'],
+        },
+        {
+          fields: ['stats_key3'],
+        },
+        {
+          fields: ['stats_key4'],
+        },
+        {
+          fields: ['buff_definitions_key'],
+        },
+        {
+          fields: ['granted_effects_per_level_key'],
+        },
+        {
+          fields: ['stats_key5'],
+        },
+        {
+          fields: ['achievement_items_key'],
+        },
+      ],
     },
   );
 

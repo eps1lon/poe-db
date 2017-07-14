@@ -163,6 +163,14 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['start_skill_gem_base_item_types_key'],
+        },
+        {
+          fields: ['start_weapon_base_item_types_key'],
+        },
+      ],
     },
   );
 

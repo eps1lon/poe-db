@@ -91,6 +91,23 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['player_shrine_buffs_key'],
+        },
+        {
+          fields: ['monster_shrine_buffs_key'],
+        },
+        {
+          fields: ['summon_monster_monster_varieties_key'],
+        },
+        {
+          fields: ['summon_player_monster_varieties_key'],
+        },
+        {
+          fields: ['shrine_sounds_key'],
+        },
+      ],
     },
   );
 

@@ -277,6 +277,38 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['monster_types_key'],
+        },
+        {
+          fields: ['back_item_visual_identity_key'],
+        },
+        {
+          fields: ['main_hand_item_classes_key'],
+        },
+        {
+          fields: ['off_hand_item_classes_key'],
+        },
+        {
+          fields: ['helmet_item_visual_identity_key'],
+        },
+        {
+          fields: ['flashback_achievement_items_key'],
+        },
+        {
+          fields: ['monster_segments_key'],
+        },
+        {
+          fields: ['monster_armours_key'],
+        },
+        {
+          fields: ['achievement_items_key'],
+        },
+        {
+          fields: ['achievement_items_key4'],
+        },
+      ],
     },
   );
 

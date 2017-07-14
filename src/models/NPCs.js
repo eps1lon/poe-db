@@ -55,6 +55,20 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['npc_master_key'],
+        },
+        {
+          fields: ['npc_shop_key'],
+        },
+        {
+          fields: ['npc_audio_key1'],
+        },
+        {
+          fields: ['npc_audio_key2'],
+        },
+      ],
     },
   );
 

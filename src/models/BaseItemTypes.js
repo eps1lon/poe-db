@@ -91,6 +91,23 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['item_classes_key'],
+        },
+        {
+          fields: ['flavour_text_key'],
+        },
+        {
+          fields: ['sound_effects_key'],
+        },
+        {
+          fields: ['item_visual_identity_key'],
+        },
+        {
+          fields: ['equip_achievement_items_key'],
+        },
+      ],
     },
   );
 

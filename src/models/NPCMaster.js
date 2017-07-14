@@ -61,6 +61,20 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['np_cs_key'],
+        },
+        {
+          fields: ['signature_mod_mods_key'],
+        },
+        {
+          fields: ['achievement_items_key'],
+        },
+        {
+          fields: ['talisman_achievement_items_key'],
+        },
+      ],
     },
   );
 

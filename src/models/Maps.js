@@ -43,6 +43,32 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['base_item_types_key'],
+        },
+        {
+          fields: ['regular_world_areas_key'],
+        },
+        {
+          fields: ['unique_world_areas_key'],
+        },
+        {
+          fields: ['map_upgrade_base_item_types_key'],
+        },
+        {
+          fields: ['shaped_base_maps_key'],
+        },
+        {
+          fields: ['maps_key1'],
+        },
+        {
+          fields: ['maps_key2'],
+        },
+        {
+          fields: ['maps_key3'],
+        },
+      ],
     },
   );
 

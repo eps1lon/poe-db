@@ -415,6 +415,26 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['parent_town_world_areas_key'],
+        },
+        {
+          fields: ['difficulties_key'],
+        },
+        {
+          fields: ['achievement_items_key'],
+        },
+        {
+          fields: ['twinned_full_clear_achievement_items_key'],
+        },
+        {
+          fields: ['enter_achievement_items_key'],
+        },
+        {
+          fields: ['8_mods_full_clear_achievement_items_key'],
+        },
+      ],
     },
   );
 

@@ -73,6 +73,17 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['normal_waypoint_world_areas_key'],
+        },
+        {
+          fields: ['cruel_waypoint_world_areas_key'],
+        },
+        {
+          fields: ['merciless_waypoint_world_areas_key'],
+        },
+      ],
     },
   );
 

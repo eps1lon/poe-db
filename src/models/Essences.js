@@ -121,6 +121,140 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['base_item_types_key'],
+        },
+        {
+          fields: ['mods_key1'],
+        },
+        {
+          fields: ['mods_key2'],
+        },
+        {
+          fields: ['quiver_mods_key'],
+        },
+        {
+          fields: ['amulet1_mods_key'],
+        },
+        {
+          fields: ['belt1_mods_key'],
+        },
+        {
+          fields: ['belt3_mods_key'],
+        },
+        {
+          fields: ['gloves1_mods_key'],
+        },
+        {
+          fields: ['boots1_mods_key'],
+        },
+        {
+          fields: ['body_armour1_mods_key'],
+        },
+        {
+          fields: ['helmet1_mods_key'],
+        },
+        {
+          fields: ['shield1_mods_key'],
+        },
+        {
+          fields: ['essence_type_key'],
+        },
+        {
+          fields: ['1_hand_mods_key1'],
+        },
+        {
+          fields: ['mods_key13'],
+        },
+        {
+          fields: ['mods_key14'],
+        },
+        {
+          fields: ['mods_key15'],
+        },
+        {
+          fields: ['2_hand_mods_key1'],
+        },
+        {
+          fields: ['boots3_mods_key'],
+        },
+        {
+          fields: ['ranged_mods_key'],
+        },
+        {
+          fields: ['helmet2_mods_key'],
+        },
+        {
+          fields: ['body_armour2_mods_key'],
+        },
+        {
+          fields: ['boots2_mods_key'],
+        },
+        {
+          fields: ['gloves2_mods_key'],
+        },
+        {
+          fields: ['bow_mods_key'],
+        },
+        {
+          fields: ['wand_mods_key'],
+        },
+        {
+          fields: ['2_hand_mods_key2'],
+        },
+        {
+          fields: ['2_hand_mods_key3'],
+        },
+        {
+          fields: ['2_hand_mods_key4'],
+        },
+        {
+          fields: ['2_hand_mods_key5'],
+        },
+        {
+          fields: ['1_hand_mods_key2'],
+        },
+        {
+          fields: ['1_hand_mods_key3'],
+        },
+        {
+          fields: ['1_hand_mods_key4'],
+        },
+        {
+          fields: ['1_hand_mods_key5'],
+        },
+        {
+          fields: ['1_hand_mods_key6'],
+        },
+        {
+          fields: ['1_hand_mods_key7'],
+        },
+        {
+          fields: ['1_hand_mods_key8'],
+        },
+        {
+          fields: ['1_hand_mods_key9'],
+        },
+        {
+          fields: ['belt2_mods_key'],
+        },
+        {
+          fields: ['amulet2_mods_key'],
+        },
+        {
+          fields: ['ring_mods_key'],
+        },
+        {
+          fields: ['mods_key41'],
+        },
+        {
+          fields: ['shield2_mods_key'],
+        },
+        {
+          fields: ['mods_key43'],
+        },
+      ],
     },
   );
 

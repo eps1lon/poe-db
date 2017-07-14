@@ -85,6 +85,29 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['buff_definitions_key1'],
+        },
+        {
+          fields: ['friendly_monster_varieties_key'],
+        },
+        {
+          fields: ['misc_objects_key'],
+        },
+        {
+          fields: ['misc_animated_key'],
+        },
+        {
+          fields: ['buff_visuals_key'],
+        },
+        {
+          fields: ['enemy_monster_varieties_key'],
+        },
+        {
+          fields: ['buff_definitions_key2'],
+        },
+      ],
     },
   );
 

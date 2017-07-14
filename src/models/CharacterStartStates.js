@@ -49,6 +49,14 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['characters_key'],
+        },
+        {
+          fields: ['character_start_state_set_key'],
+        },
+      ],
     },
   );
 

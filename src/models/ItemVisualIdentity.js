@@ -163,6 +163,14 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['sound_effects_key'],
+        },
+        {
+          fields: ['create_corrupted_jewel_achievement_items_key'],
+        },
+      ],
     },
   );
 

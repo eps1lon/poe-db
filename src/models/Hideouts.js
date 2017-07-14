@@ -25,6 +25,20 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['small_world_areas_key'],
+        },
+        {
+          fields: ['npc_master_key'],
+        },
+        {
+          fields: ['medium_world_areas_key'],
+        },
+        {
+          fields: ['large_world_areas_key'],
+        },
+      ],
     },
   );
 

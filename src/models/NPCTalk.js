@@ -165,6 +165,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['quest_key'],
         },
       ],
+      tableName: 'n_p_c_talks',
     },
   );
 

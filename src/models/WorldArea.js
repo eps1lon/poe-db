@@ -435,6 +435,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['8_mods_full_clear_achievement_items_key'],
         },
       ],
+      tableName: 'world_areas',
     },
   );
 

@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['passive_skills_key'],
         },
       ],
+      tableName: 'passive_jewel_slots',
     },
   );
 

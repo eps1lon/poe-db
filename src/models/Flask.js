@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['buff_definitions_key'],
         },
       ],
+      tableName: 'flasks',
     },
   );
 

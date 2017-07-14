@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['shaped_item_visual_identity_key'],
         },
       ],
+      tableName: 'atlas_nodes',
     },
   );
 

@@ -309,6 +309,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['achievement_items_key4'],
         },
       ],
+      tableName: 'monster_varieties',
     },
   );
 

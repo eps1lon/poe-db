@@ -138,6 +138,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['encounter_achievement_items_key'],
         },
       ],
+      tableName: 'chests',
     },
   );
 

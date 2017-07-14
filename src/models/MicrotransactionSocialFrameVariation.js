@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['base_item_types_key'],
         },
       ],
+      tableName: 'microtransaction_social_frame_variations',
     },
   );
 

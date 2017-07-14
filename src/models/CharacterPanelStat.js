@@ -45,6 +45,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['character_panel_tabs_key'],
         },
       ],
+      tableName: 'character_panel_stats',
     },
   );
 

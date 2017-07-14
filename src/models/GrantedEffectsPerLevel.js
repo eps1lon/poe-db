@@ -186,6 +186,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['granted_effects_key'],
         },
       ],
+      tableName: 'granted_effects_per_levels',
     },
   );
 

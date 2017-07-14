@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['monster_varieties_key'],
         },
       ],
+      tableName: 'rogue_exiles',
     },
   );
 

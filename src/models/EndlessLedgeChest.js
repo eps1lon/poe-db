@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['world_areas_key'],
         },
       ],
+      tableName: 'endless_ledge_chests',
     },
   );
 

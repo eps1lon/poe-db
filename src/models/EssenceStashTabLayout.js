@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['base_item_types_key'],
         },
       ],
+      tableName: 'essence_stash_tab_layouts',
     },
   );
 

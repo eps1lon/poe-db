@@ -68,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
+      tableName: 'str_int_mission_relic_patterns',
     },
   );
 

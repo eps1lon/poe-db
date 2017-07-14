@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['world_areas_key'],
         },
       ],
+      tableName: 'warbands_map_graphs',
     },
   );
 

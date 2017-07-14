@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['npc_master_key'],
         },
       ],
+      tableName: 'mission_tile_maps',
     },
   );
 

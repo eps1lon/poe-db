@@ -69,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['maps_key3'],
         },
       ],
+      tableName: 'maps',
     },
   );
 

@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['races_key'],
         },
       ],
+      tableName: 'race_times',
     },
   );
 

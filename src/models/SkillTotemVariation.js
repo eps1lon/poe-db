@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['monster_varieties_key'],
         },
       ],
+      tableName: 'skill_totem_variations',
     },
   );
 

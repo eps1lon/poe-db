@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['shop_region_key'],
         },
       ],
+      tableName: 'shop_item_prices',
     },
   );
 

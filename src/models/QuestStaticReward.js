@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['quest_key'],
         },
       ],
+      tableName: 'quest_static_rewards',
     },
   );
 

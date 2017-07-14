@@ -255,6 +255,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['mods_key43'],
         },
       ],
+      tableName: 'essences',
     },
   );
 

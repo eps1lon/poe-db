@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['labyrinth_node_overrides_key'],
         },
       ],
+      tableName: 'labyrinth_section_layouts',
     },
   );
 

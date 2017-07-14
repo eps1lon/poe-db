@@ -90,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['possession_achievement_items_key'],
         },
       ],
+      tableName: 'currency_items',
     },
   );
 

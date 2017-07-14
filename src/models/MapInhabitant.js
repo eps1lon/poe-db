@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['stats_key'],
         },
       ],
+      tableName: 'map_inhabitants',
     },
   );
 

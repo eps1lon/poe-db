@@ -63,6 +63,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['pvp_types_key'],
         },
       ],
+      tableName: 'daily_missions',
     },
   );
 

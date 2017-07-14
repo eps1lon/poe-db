@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['monster_varieties_key'],
         },
       ],
+      tableName: 'str_mission_spirit_secondary_effects',
     },
   );
 

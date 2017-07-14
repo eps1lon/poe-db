@@ -75,6 +75,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['words_key'],
         },
       ],
+      tableName: 'unique_chests',
     },
   );
 

@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['npc_key'],
         },
       ],
+      tableName: 'quest_vendor_rewards',
     },
   );
 

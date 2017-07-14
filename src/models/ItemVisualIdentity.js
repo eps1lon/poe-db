@@ -171,6 +171,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['create_corrupted_jewel_achievement_items_key'],
         },
       ],
+      tableName: 'item_visual_identities',
     },
   );
 

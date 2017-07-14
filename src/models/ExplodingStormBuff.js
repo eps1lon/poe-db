@@ -108,6 +108,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['buff_definitions_key2'],
         },
       ],
+      tableName: 'exploding_storm_buffs',
     },
   );
 

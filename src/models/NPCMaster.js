@@ -75,6 +75,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['talisman_achievement_items_key'],
         },
       ],
+      tableName: 'n_p_c_masters',
     },
   );
 

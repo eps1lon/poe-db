@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['monster_resistances_key'],
         },
       ],
+      tableName: 'monster_types',
     },
   );
 

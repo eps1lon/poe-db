@@ -108,6 +108,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['active_skills_key'],
         },
       ],
+      tableName: 'granted_effects',
     },
   );
 

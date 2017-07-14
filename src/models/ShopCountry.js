@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['shop_currency_key'],
         },
       ],
+      tableName: 'shop_countries',
     },
   );
 

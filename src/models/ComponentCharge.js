@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['base_item_types_key'],
         },
       ],
+      tableName: 'component_charges',
     },
   );
 

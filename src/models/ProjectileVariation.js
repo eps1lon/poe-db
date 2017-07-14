@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['projectile_key'],
         },
       ],
+      tableName: 'projectile_variations',
     },
   );
 

@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['vaal_variant_base_item_types_key'],
         },
       ],
+      tableName: 'skill_gems',
     },
   );
 

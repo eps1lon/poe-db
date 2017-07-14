@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['npc_master_key'],
         },
       ],
+      tableName: 'n_p_c_master_experience_per_levels',
     },
   );
 

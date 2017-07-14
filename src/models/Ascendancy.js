@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['characters_key'],
         },
       ],
+      tableName: 'ascendancies',
     },
   );
 

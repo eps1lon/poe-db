@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['words_key'],
         },
       ],
+      tableName: 'essence_types',
     },
   );
 

@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['mod_sell_price_types_key'],
         },
       ],
+      tableName: 'mod_sell_prices',
     },
   );
 

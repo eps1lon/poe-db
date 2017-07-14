@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['environments_key'],
         },
       ],
+      tableName: 'topologies',
     },
   );
 

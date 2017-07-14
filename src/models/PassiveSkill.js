@@ -144,6 +144,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['ascendancy_key'],
         },
       ],
+      tableName: 'passive_skills',
     },
   );
 

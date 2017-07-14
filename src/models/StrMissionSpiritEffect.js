@@ -87,6 +87,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['ground_effect_monster_varieties_keys'],
         },
       ],
+      tableName: 'str_mission_spirit_effects',
     },
   );
 

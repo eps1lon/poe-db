@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['buff_buff_definitions_key'],
         },
       ],
+      tableName: 'labyrinth_trinkets',
     },
   );
 

@@ -117,6 +117,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['npc_talk_key'],
         },
       ],
+      tableName: 'dex_int_missions',
     },
   );
 

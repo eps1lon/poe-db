@@ -87,6 +87,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['mods_key'],
         },
       ],
+      tableName: 'crafting_bench_options',
     },
   );
 

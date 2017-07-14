@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['monster_varieties_key'],
         },
       ],
+      tableName: 'dex_int_mission_targets',
     },
   );
 

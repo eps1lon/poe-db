@@ -93,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['off_hand_alias_stats_key'],
         },
       ],
+      tableName: 'stats',
     },
   );
 

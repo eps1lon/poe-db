@@ -84,6 +84,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['merciless_waypoint_world_areas_key'],
         },
       ],
+      tableName: 'map_pins',
     },
   );
 

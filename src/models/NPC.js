@@ -69,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['npc_audio_key2'],
         },
       ],
+      tableName: 'n_p_cs',
     },
   );
 

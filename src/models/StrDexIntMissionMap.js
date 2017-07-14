@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['world_areas_key'],
         },
       ],
+      tableName: 'str_dex_int_mission_maps',
     },
   );
 

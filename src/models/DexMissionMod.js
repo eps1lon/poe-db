@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['mods_key'],
         },
       ],
+      tableName: 'dex_mission_mods',
     },
   );
 

@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['misc_animated_key2'],
         },
       ],
+      tableName: 'buff_visuals',
     },
   );
 

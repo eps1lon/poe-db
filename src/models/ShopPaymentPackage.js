@@ -102,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['upgrade_shop_payment_package_key'],
         },
       ],
+      tableName: 'shop_payment_packages',
     },
   );
 

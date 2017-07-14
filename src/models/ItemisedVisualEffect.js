@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['item_visual_identity_key2'],
         },
       ],
+      tableName: 'itemised_visual_effects',
     },
   );
 

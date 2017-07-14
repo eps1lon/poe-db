@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['event_season_key'],
         },
       ],
+      tableName: 'event_season_rewards',
     },
   );
 

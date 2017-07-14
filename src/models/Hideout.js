@@ -39,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['large_world_areas_key'],
         },
       ],
+      tableName: 'hideouts',
     },
   );
 

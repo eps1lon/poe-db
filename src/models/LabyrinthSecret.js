@@ -96,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['achievement_items_key'],
         },
       ],
+      tableName: 'labyrinth_secrets',
     },
   );
 

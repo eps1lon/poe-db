@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['character_start_state_set_key'],
         },
       ],
+      tableName: 'character_start_states',
     },
   );
 

@@ -156,6 +156,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['buff_visuals_key'],
         },
       ],
+      tableName: 'buff_definitions',
     },
   );
 

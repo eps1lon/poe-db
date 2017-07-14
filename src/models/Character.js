@@ -171,6 +171,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['start_weapon_base_item_types_key'],
         },
       ],
+      tableName: 'characters',
     },
   );
 

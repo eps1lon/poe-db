@@ -108,6 +108,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['shrine_sounds_key'],
         },
       ],
+      tableName: 'shrines',
     },
   );
 

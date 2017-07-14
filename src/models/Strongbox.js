@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['chests_key'],
         },
       ],
+      tableName: 'strongboxes',
     },
   );
 

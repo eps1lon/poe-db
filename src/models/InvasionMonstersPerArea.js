@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['world_areas_key'],
         },
       ],
+      tableName: 'invasion_monsters_per_areas',
     },
   );
 

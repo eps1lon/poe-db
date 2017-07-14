@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['stats_key4'],
         },
       ],
+      tableName: 'monster_map_boss_difficulties',
     },
   );
 

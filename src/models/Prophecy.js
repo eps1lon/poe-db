@@ -90,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['prophecy_chain_key'],
         },
       ],
+      tableName: 'prophecies',
     },
   );
 

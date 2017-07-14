@@ -51,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['map_pins_key1'],
         },
       ],
+      tableName: 'map_connections',
     },
   );
 

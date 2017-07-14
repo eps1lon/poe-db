@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['characters_key'],
         },
       ],
+      tableName: 'n_p_c_text_audios',
     },
   );
 

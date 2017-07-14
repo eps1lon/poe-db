@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['chests_key'],
         },
       ],
+      tableName: 'summoned_specific_barrels',
     },
   );
 

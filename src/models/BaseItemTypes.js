@@ -201,6 +201,8 @@ module.exports = (sequelize, DataTypes) => {
       as: 'normal_purchase_base_item_types',
       through: 'BaseItemTypesNormalPurchaseBaseItemTypes',
       $col_order: 11,
+      foreignKey: 'source_row',
+      targetKey: 'target_row',
       nullable: true,
       constraints: false,
     });
@@ -208,6 +210,8 @@ module.exports = (sequelize, DataTypes) => {
       as: 'magic_purchase_base_item_types',
       through: 'BaseItemTypesMagicPurchaseBaseItemTypes',
       $col_order: 13,
+      foreignKey: 'source_row',
+      targetKey: 'target_row',
       nullable: true,
       constraints: false,
     });
@@ -229,6 +233,8 @@ module.exports = (sequelize, DataTypes) => {
       as: 'rare_purchase_base_item_types',
       through: 'BaseItemTypesRarePurchaseBaseItemTypes',
       $col_order: 21,
+      foreignKey: 'source_row',
+      targetKey: 'target_row',
       nullable: true,
       constraints: false,
     });
@@ -236,6 +242,8 @@ module.exports = (sequelize, DataTypes) => {
       as: 'unique_purchase_base_item_types',
       through: 'BaseItemTypesUniquePurchaseBaseItemTypes',
       $col_order: 23,
+      foreignKey: 'source_row',
+      targetKey: 'target_row',
       nullable: true,
       constraints: false,
     });

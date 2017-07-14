@@ -99,6 +99,8 @@ module.exports = (sequelize, DataTypes) => {
       as: 'package_shop_item',
       through: 'ShopItemPackageShopItems',
       $col_order: 3,
+      foreignKey: 'source_row',
+      targetKey: 'target_row',
       nullable: true,
       constraints: false,
     });

@@ -537,6 +537,8 @@ module.exports = (sequelize, DataTypes) => {
       as: 'connections_world_areas',
       through: 'WorldAreasConnectionsWorldAreas',
       $col_order: 5,
+      foreignKey: 'source_row',
+      targetKey: 'target_row',
       nullable: true,
       constraints: false,
     });
@@ -586,6 +588,8 @@ module.exports = (sequelize, DataTypes) => {
       as: 'vaal_area_world_areas',
       through: 'WorldAreasVaalAreaWorldAreas',
       $col_order: 34,
+      foreignKey: 'source_row',
+      targetKey: 'target_row',
       nullable: true,
       constraints: false,
     });

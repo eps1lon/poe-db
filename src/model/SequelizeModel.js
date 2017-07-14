@@ -5,7 +5,7 @@ const Model = require('./Model');
 const SequelizeModelAst = require('./SequelizeModelAst');
 const { entriesToObj } = require('../util');
 
-const PRIMARY = 'row';
+const PRIMARY = 'Row';
 
 class SequelizeModel extends Model {
   static colCasing(col) {
@@ -75,6 +75,12 @@ class SequelizeModel extends Model {
               this.name() + field.replace(/Keys([0-9]*)$/, '$1'),
             ),
           ).camelize().s;
+        }
+
+        // self_assoc
+        if (this.name() === model_name) {
+          props.foreignKey = SequelizeModel.colCasing('Source' + PRIMARY);
+          props.targetKey = SequelizeModel.colCasing('Target' + PRIMARY);
         }
 
         // field fallback for generic `KeysX`

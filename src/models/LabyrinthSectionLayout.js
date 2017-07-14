@@ -134,6 +134,8 @@ module.exports = (sequelize, DataTypes) => {
       as: 'labyrinth_section_layout',
       through: 'LabyrinthSectionLayoutLabyrinthSectionLayout',
       $col_order: 2,
+      foreignKey: 'source_row',
+      targetKey: 'target_row',
       nullable: true,
       constraints: false,
     });

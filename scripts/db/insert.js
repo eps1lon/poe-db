@@ -4,7 +4,7 @@ const { buildAssocKeys, buildAttrObj } = require('../../src/model/util');
 const records = require('../../data/records.json');
 
 (async () => {
-  const orm = orm_creator();
+  const orm = orm_creator({ logging: false });
   const models = require('../../src/models')(orm);
   try {
     for (const model of Object.values(models)) {
@@ -34,17 +34,18 @@ const records = require('../../data/records.json');
         {},
       );
 
-      await model.bulkCreate(records_as_obj, {
+      const inserted = await model.bulkCreate(records_as_obj, {
         ignoreDuplicates: true,
       });
+
+      console.log(`inserted ${inserted.length} instances into ${model.name}`);
 
       // create entries in the Through models
       for (const assoc in many_to_may_records) {
         const records = many_to_may_records[assoc];
+        const assoc_model = model.associations[assoc].through.model;
 
-        await model.associations[
-          assoc
-        ].through.model.bulkCreate(
+        const affected_rows = (await assoc_model.bulkCreate(
           records.map(([source, target]) => {
             return {
               [model.associations[assoc].foreignKey]: source,
@@ -52,6 +53,10 @@ const records = require('../../data/records.json');
             };
           }),
           { ignoreDuplicates: true },
+        )).length;
+
+        console.log(
+          `inserted ${affected_rows} associations into ${assoc_model.name}`,
         );
       }
     }

@@ -58,7 +58,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.WorldAreas, {
+    model.belongsTo(models.WorldArea, {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 0,
@@ -67,7 +67,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldAreas.hasMany(model, {
+    models.WorldArea.hasMany(model, {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 0,
@@ -77,16 +77,16 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsToMany(models.MonsterVarieties, {
+    model.belongsToMany(models.MonsterVariety, {
       as: 'monster_varieties1',
-      through: 'InvasionMonstersPerAreaMonsterVarieties',
+      through: 'InvasionMonstersPerAreaMonsterVariety',
       $col_order: 4,
       nullable: true,
       constraints: false,
     });
-    model.belongsToMany(models.MonsterVarieties, {
+    model.belongsToMany(models.MonsterVariety, {
       as: 'monster_varieties2',
-      through: 'InvasionMonstersPerAreaMonsterVarieties',
+      through: 'InvasionMonstersPerAreaMonsterVariety',
       $col_order: 5,
       nullable: true,
       constraints: false,

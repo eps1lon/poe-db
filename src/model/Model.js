@@ -1,6 +1,8 @@
+const { singularize } = require('inflection');
+
 class Model {
   static name(dat_file) {
-    return dat_file.replace(/\.dat$/, '');
+    return singularize(dat_file.replace(/\.dat$/, ''));
   }
 
   constructor(file, props) {

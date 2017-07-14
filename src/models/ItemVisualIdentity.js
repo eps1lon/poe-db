@@ -175,7 +175,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.SoundEffects, {
+    model.belongsTo(models.SoundEffect, {
       foreignKey: {
         name: 'sound_effects_key',
         $col_order: 3,
@@ -184,7 +184,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.SoundEffects.hasMany(model, {
+    models.SoundEffect.hasMany(model, {
       foreignKey: {
         name: 'sound_effects_key',
         $col_order: 3,
@@ -194,7 +194,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.AchievementItems, {
+    model.belongsTo(models.AchievementItem, {
       foreignKey: {
         name: 'create_corrupted_jewel_achievement_items_key',
         $col_order: 29,
@@ -203,7 +203,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItems.hasMany(model, {
+    models.AchievementItem.hasMany(model, {
       foreignKey: {
         name: 'create_corrupted_jewel_achievement_items_key',
         $col_order: 29,
@@ -213,21 +213,21 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsToMany(models.AchievementItems, {
+    model.belongsToMany(models.AchievementItem, {
       as: 'pickup_achievement_items',
       through: 'ItemVisualIdentityPickupAchievementItems',
       $col_order: 22,
       nullable: true,
       constraints: false,
     });
-    model.belongsToMany(models.AchievementItems, {
+    model.belongsToMany(models.AchievementItem, {
       as: 'identify_achievement_items',
       through: 'ItemVisualIdentityIdentifyAchievementItems',
       $col_order: 24,
       nullable: true,
       constraints: false,
     });
-    model.belongsToMany(models.AchievementItems, {
+    model.belongsToMany(models.AchievementItem, {
       as: 'corrupt_achievement_items',
       through: 'ItemVisualIdentityCorruptAchievementItems',
       $col_order: 26,

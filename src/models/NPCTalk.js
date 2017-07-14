@@ -169,7 +169,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.NPCs, {
+    model.belongsTo(models.NPC, {
       foreignKey: {
         name: 'npc_key',
         $col_order: 0,
@@ -178,7 +178,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPCs.hasMany(model, {
+    models.NPC.hasMany(model, {
       foreignKey: {
         name: 'npc_key',
         $col_order: 0,

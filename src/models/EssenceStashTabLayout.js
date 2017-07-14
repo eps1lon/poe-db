@@ -64,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.BaseItemTypes, {
+    model.belongsTo(models.BaseItemType, {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 1,
@@ -73,7 +73,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemTypes.hasMany(model, {
+    models.BaseItemType.hasMany(model, {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 1,

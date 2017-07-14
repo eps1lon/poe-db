@@ -24,9 +24,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsToMany(models.ModSellPrices, {
+    model.belongsToMany(models.ModSellPrice, {
       as: 'mod_sell_prices',
-      through: 'ModTypeModSellPrices',
+      through: 'ModTypeModSellPrice',
       $col_order: 1,
       nullable: true,
       constraints: false,

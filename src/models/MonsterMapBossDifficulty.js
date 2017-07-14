@@ -61,7 +61,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Stats, {
+    model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key1',
         $col_order: 3,
@@ -70,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stats.hasMany(model, {
+    models.Stat.hasMany(model, {
       foreignKey: {
         name: 'stats_key1',
         $col_order: 3,
@@ -80,7 +80,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.Stats, {
+    model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key2',
         $col_order: 4,
@@ -89,7 +89,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stats.hasMany(model, {
+    models.Stat.hasMany(model, {
       foreignKey: {
         name: 'stats_key2',
         $col_order: 4,
@@ -99,7 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.Stats, {
+    model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key3',
         $col_order: 5,
@@ -108,7 +108,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stats.hasMany(model, {
+    models.Stat.hasMany(model, {
       foreignKey: {
         name: 'stats_key3',
         $col_order: 5,
@@ -118,7 +118,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.Stats, {
+    model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key4',
         $col_order: 7,
@@ -127,7 +127,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stats.hasMany(model, {
+    models.Stat.hasMany(model, {
       foreignKey: {
         name: 'stats_key4',
         $col_order: 7,

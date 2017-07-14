@@ -64,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Characters, {
+    model.belongsTo(models.Character, {
       foreignKey: {
         name: 'characters_key',
         $col_order: 2,
@@ -73,7 +73,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Characters.hasMany(model, {
+    models.Character.hasMany(model, {
       foreignKey: {
         name: 'characters_key',
         $col_order: 2,

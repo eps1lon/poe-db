@@ -60,9 +60,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsToMany(models.Mods, {
+    model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'PathOfEnduranceMods',
+      through: 'PathOfEnduranceMod',
       $col_order: 3,
       nullable: true,
       constraints: false,

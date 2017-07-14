@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Words, {
+    model.belongsTo(models.Word, {
       foreignKey: {
         name: 'words_key',
         $col_order: 3,
@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Words.hasMany(model, {
+    models.Word.hasMany(model, {
       foreignKey: {
         name: 'words_key',
         $col_order: 3,

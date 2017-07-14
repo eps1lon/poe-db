@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.MonsterVarieties, {
+    model.belongsTo(models.MonsterVariety, {
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 1,
@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterVarieties.hasMany(model, {
+    models.MonsterVariety.hasMany(model, {
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 1,

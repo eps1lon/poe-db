@@ -1,0 +1,126 @@
+module.exports = (sequelize, DataTypes) => {
+  const model = sequelize.define(
+    'Hideout',
+    {
+      row: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: true,
+        allowNull: false,
+        $col_order: -1,
+      },
+      id: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+        $col_order: 0,
+      },
+      unknown9: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: false,
+        $col_order: 5,
+      },
+    },
+    {
+      engine: 'MyISAM',
+      charset: 'utf8mb4',
+      collate: 'utf8mb4_unicode_ci',
+      indexes: [
+        {
+          fields: ['small_world_areas_key'],
+        },
+        {
+          fields: ['npc_master_key'],
+        },
+        {
+          fields: ['medium_world_areas_key'],
+        },
+        {
+          fields: ['large_world_areas_key'],
+        },
+      ],
+    },
+  );
+
+  model.associate = models => {
+    model.belongsTo(models.WorldArea, {
+      foreignKey: {
+        name: 'small_world_areas_key',
+        $col_order: 1,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    models.WorldArea.hasMany(model, {
+      foreignKey: {
+        name: 'small_world_areas_key',
+        $col_order: 1,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
+    model.belongsTo(models.NPCMaster, {
+      foreignKey: {
+        name: 'npc_master_key',
+        $col_order: 2,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    models.NPCMaster.hasMany(model, {
+      foreignKey: {
+        name: 'npc_master_key',
+        $col_order: 2,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
+    model.belongsTo(models.WorldArea, {
+      foreignKey: {
+        name: 'medium_world_areas_key',
+        $col_order: 3,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    models.WorldArea.hasMany(model, {
+      foreignKey: {
+        name: 'medium_world_areas_key',
+        $col_order: 3,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
+    model.belongsTo(models.WorldArea, {
+      foreignKey: {
+        name: 'large_world_areas_key',
+        $col_order: 4,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    models.WorldArea.hasMany(model, {
+      foreignKey: {
+        name: 'large_world_areas_key',
+        $col_order: 4,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
+  };
+
+  model.DAT_FILE = 'Hideouts.dat';
+  return model;
+};

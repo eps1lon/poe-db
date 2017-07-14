@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.Characters, {
+    model.belongsTo(models.Character, {
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,
@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Characters.hasMany(model, {
+    models.Character.hasMany(model, {
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,
@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.BaseItemTypes, {
+    model.belongsTo(models.BaseItemType, {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 2,
@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemTypes.hasMany(model, {
+    models.BaseItemType.hasMany(model, {
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 2,
@@ -78,7 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.WorldAreas, {
+    model.belongsTo(models.WorldArea, {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 4,
@@ -87,7 +87,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldAreas.hasMany(model, {
+    models.WorldArea.hasMany(model, {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 4,

@@ -54,7 +54,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsToMany(models.Tags, {
+    model.belongsToMany(models.Tag, {
       as: 'sold_item_tags',
       through: 'NPCShopSoldItemTags',
       $col_order: 2,

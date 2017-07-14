@@ -190,7 +190,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.GrantedEffects, {
+    model.belongsTo(models.GrantedEffect, {
       foreignKey: {
         name: 'granted_effects_key',
         $col_order: 0,
@@ -199,7 +199,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.GrantedEffects.hasMany(model, {
+    models.GrantedEffect.hasMany(model, {
       foreignKey: {
         name: 'granted_effects_key',
         $col_order: 0,
@@ -209,23 +209,23 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsToMany(models.Stats, {
+    model.belongsToMany(models.Stat, {
       as: 'stats',
-      through: 'GrantedEffectsPerLevelStats',
+      through: 'GrantedEffectsPerLevelStat',
       $col_order: 2,
       nullable: true,
       constraints: false,
     });
-    model.belongsToMany(models.Stats, {
+    model.belongsToMany(models.Stat, {
       as: 'quality_stats',
       through: 'GrantedEffectsPerLevelQualityStats',
       $col_order: 15,
       nullable: true,
       constraints: false,
     });
-    model.belongsToMany(models.Stats, {
+    model.belongsToMany(models.Stat, {
       as: 'stats2',
-      through: 'GrantedEffectsPerLevelStats',
+      through: 'GrantedEffectsPerLevelStat',
       $col_order: 23,
       nullable: true,
       constraints: false,

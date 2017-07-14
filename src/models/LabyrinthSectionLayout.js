@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.LabyrinthSecrets, {
+    model.belongsTo(models.LabyrinthSecret, {
       foreignKey: {
         name: 'labyrinth_secrets_key0',
         $col_order: 3,
@@ -80,7 +80,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.LabyrinthSecrets.hasMany(model, {
+    models.LabyrinthSecret.hasMany(model, {
       foreignKey: {
         name: 'labyrinth_secrets_key0',
         $col_order: 3,
@@ -90,7 +90,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.LabyrinthSecrets, {
+    model.belongsTo(models.LabyrinthSecret, {
       foreignKey: {
         name: 'labyrinth_secrets_key1',
         $col_order: 4,
@@ -99,7 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.LabyrinthSecrets.hasMany(model, {
+    models.LabyrinthSecret.hasMany(model, {
       foreignKey: {
         name: 'labyrinth_secrets_key1',
         $col_order: 4,
@@ -109,7 +109,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.LabyrinthAreas, {
+    model.belongsTo(models.LabyrinthArea, {
       foreignKey: {
         name: 'labyrinth_areas_key',
         $col_order: 5,
@@ -118,7 +118,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.LabyrinthAreas.hasMany(model, {
+    models.LabyrinthArea.hasMany(model, {
       foreignKey: {
         name: 'labyrinth_areas_key',
         $col_order: 5,
@@ -128,7 +128,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
       sourceKey: 'row',
     });
-    model.belongsTo(models.LabyrinthNodeOverrides, {
+    model.belongsTo(models.LabyrinthNodeOverride, {
       foreignKey: {
         name: 'labyrinth_node_overrides_key',
         $col_order: 8,
@@ -137,7 +137,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.LabyrinthNodeOverrides.hasMany(model, {
+    models.LabyrinthNodeOverride.hasMany(model, {
       foreignKey: {
         name: 'labyrinth_node_overrides_key',
         $col_order: 8,

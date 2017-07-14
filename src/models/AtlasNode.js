@@ -70,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.WorldAreas, {
+    model.belongsTo(models.WorldArea, {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 0,
@@ -79,7 +79,7 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldAreas.hasMany(model, {
+    models.WorldArea.hasMany(model, {
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 0,

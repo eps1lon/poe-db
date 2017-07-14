@@ -16,7 +16,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 // mount router
-app.use(router(models));
+app.use('/v1', router(models));
 
 app.listen(port);
 

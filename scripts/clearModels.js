@@ -4,6 +4,4 @@ const { throwOnError } = require('../src/util');
 
 const { modelFiles } = require('../src/models');
 
-modelFiles()
-  .filter(file => /^[A-Z].*\.js$/.test(file))
-  .map(file => fs.unlink(file, throwOnError()));
+modelFiles().map(file => fs.unlink(file, throwOnError()));

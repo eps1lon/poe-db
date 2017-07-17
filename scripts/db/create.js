@@ -10,15 +10,12 @@ db.query('CREATE DATABASE IF NOT EXISTS ??', [name], async () => {
   try {
     await orm.authenticate();
 
-    const syncs = [];
     require('../../src/models/').init(orm);
 
-    // use orm.models instead of the returned models because we also
-    // need to create the models defined in 'through'
-    for (const [, model] of Object.entries(orm.models)) {
-      syncs.push(model.sync({ force: true }));
-    }
-    await Promise.all(syncs);
+    // use orm.sync instead of the returned models because we also
+    // need to create the models defined in 'through' or might miss other
+    // auto generated models
+    await orm.sync();
   } catch (e) {
     console.log(e);
   } finally {

@@ -74,17 +74,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MapPin.hasMany(model, {
-      foreignKey: {
-        name: 'map_pins_key0',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MapPin, {
       foreignKey: {
         name: 'map_pins_key1',
@@ -94,17 +83,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MapPin.hasMany(model, {
-      foreignKey: {
-        name: 'map_pins_key1',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

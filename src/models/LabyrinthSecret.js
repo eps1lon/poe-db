@@ -115,42 +115,27 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'achievement_items_key',
-        $col_order: 17,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects0',
-      through: 'LabyrinthSecretLabyrinthSecretEffect',
-      $col_order: 5,
+      through: models.LabyrinthSecretLabyrinthSecretEffects0,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects1',
-      through: 'LabyrinthSecretLabyrinthSecretEffect',
-      $col_order: 6,
+      through: models.LabyrinthSecretLabyrinthSecretEffects1,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects2',
-      through: 'LabyrinthSecretLabyrinthSecretEffect',
-      $col_order: 7,
+      through: models.LabyrinthSecretLabyrinthSecretEffects2,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects3',
-      through: 'LabyrinthSecretLabyrinthSecretEffect',
-      $col_order: 9,
+      through: models.LabyrinthSecretLabyrinthSecretEffects3,
       nullable: true,
       constraints: false,
     });

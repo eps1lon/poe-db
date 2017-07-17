@@ -61,17 +61,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterPack.hasMany(model, {
-      foreignKey: {
-        name: 'monster_packs_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
   };
 
   model.DAT_FILE = 'DexIntMissionGuards.dat';

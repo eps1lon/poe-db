@@ -68,17 +68,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.CharacterPanelDescriptionMode.hasMany(model, {
-      foreignKey: {
-        name: 'character_panel_description_modes_key',
-        $col_order: 3,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.CharacterPanelTab, {
       foreignKey: {
         name: 'character_panel_tabs_key',
@@ -89,35 +78,21 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.CharacterPanelTab.hasMany(model, {
-      foreignKey: {
-        name: 'character_panel_tabs_key',
-        $col_order: 6,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Stat, {
       as: 'stats1',
-      through: 'CharacterPanelStatStat',
-      $col_order: 2,
+      through: models.CharacterPanelStatStats1,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
       as: 'stats2',
-      through: 'CharacterPanelStatStat',
-      $col_order: 4,
+      through: models.CharacterPanelStatStats2,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
       as: 'stats3',
-      through: 'CharacterPanelStatStat',
-      $col_order: 5,
+      through: models.CharacterPanelStatStats3,
       nullable: true,
       constraints: false,
     });

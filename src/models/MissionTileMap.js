@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_master_key',
+              attribute: 'n_p_c_master_key',
             },
           ],
         },
@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
       foreignKey: {
-        name: 'npc_master_key',
+        name: 'n_p_c_master_key',
         $col_order: 0,
         $type: 'ulong',
       },
@@ -43,21 +43,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPCMaster.hasMany(model, {
-      foreignKey: {
-        name: 'npc_master_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
-      through: 'MissionTileMapWorldArea',
-      $col_order: 2,
+      through: models.MissionTileMapWorldArea,
       nullable: true,
       constraints: false,
     });

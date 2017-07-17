@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
-      client_jpg_file: {
+      client_j_p_g_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      website_jpg_file: {
+      website_j_p_g_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

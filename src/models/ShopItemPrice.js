@@ -50,17 +50,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ShopItem.hasMany(model, {
-      foreignKey: {
-        name: 'shop_item_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.ShopRegion, {
       foreignKey: {
         name: 'shop_region_key',
@@ -70,17 +59,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.ShopRegion.hasMany(model, {
-      foreignKey: {
-        name: 'shop_region_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

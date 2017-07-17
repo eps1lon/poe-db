@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 4,
       },
-      ogg_file: {
+      o_g_g_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -56,19 +56,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 9,
       },
-      seal_cost_normal: {
+      seal_cost__normal: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 10,
       },
-      seal_cost_cruel: {
+      seal_cost__cruel: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 11,
       },
-      seal_cost_merciless: {
+      seal_cost__merciless: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -109,21 +109,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ProphecyChain.hasMany(model, {
-      foreignKey: {
-        name: 'prophecy_chain_key',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.ClientString, {
-      as: 'quest_tracker_client_strings',
-      through: 'ProphecyQuestTrackerClientStrings',
-      $col_order: 5,
+      as: 'quest_tracker__client_strings',
+      through: models.ProphecyQuestTrackerClientstring,
       nullable: true,
       constraints: false,
     });

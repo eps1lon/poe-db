@@ -4,7 +4,9 @@ const _ = require('lodash');
 const { removeProp } = require('../util');
 
 const objToAst = obj => {
-  if (obj === null) {
+  if (t.isMemberExpression(obj)) {
+    return obj;
+  } else if (obj === null) {
     return t.nullLiteral();
   } else if (obj === undefined) {
     return t.identifier('undefined'); // TODO undefinedLiteral?
@@ -27,9 +29,18 @@ const objToAst = obj => {
   }
 };
 
+const default_constructor_options = {
+  // useful for intermediate through models
+  skip_has_many: false,
+  // through model exists in sequelize.models
+  // otherwise use string value to let sequelize auto generate it
+  through_models_defined: false,
+};
+
 class SequelizeModelAst {
-  constructor(model) {
+  constructor(model, options = {}) {
     this.model = model;
+    this.options = Object.assign(default_constructor_options, options);
   }
 
   ast() {
@@ -151,7 +162,7 @@ class SequelizeModelAst {
           ),
         );
 
-        const has_many_statement = t.expressionStatement(
+        let has_many_statement = t.expressionStatement(
           t.callExpression(
             t.memberExpression(target, t.identifier('hasMany')),
             [
@@ -170,7 +181,12 @@ class SequelizeModelAst {
           ),
         );
 
-        return [belongs_to_statment, has_many_statement];
+        if (this.options.skip_has_many) {
+          has_many_statement = null;
+        }
+
+        // remove empty expressions
+        return [belongs_to_statment, has_many_statement].filter(Boolean);
       }),
     );
   }
@@ -187,7 +203,11 @@ class SequelizeModelAst {
             t.memberExpression(models, t.identifier(assoc_name)),
             // make them nullable for circular references
             objToAst(
-              Object.assign({}, props, { nullable: true, constraints: false }),
+              Object.assign({}, props, {
+                nullable: true,
+                constraints: false,
+                through: this._throughProperty(props.through),
+              }),
             ),
           ],
         ),
@@ -213,14 +233,18 @@ class SequelizeModelAst {
       t.assignmentExpression(
         '=',
         t.memberExpression(t.identifier('model'), t.identifier('DAT_FILE')),
-        t.stringLiteral(this.model.file),
+        t.stringLiteral(this.model.dat_file),
       ),
     );
   }
 
-  buildSequelizeImport() {}
-
-  buildAttribute() {}
+  _throughProperty(prop) {
+    if (this.options.through_models_defined) {
+      return t.memberExpression(t.identifier('models'), t.identifier(prop));
+    } else {
+      return t.stringLiteral(prop);
+    }
+  }
 }
 
 module.exports = SequelizeModelAst;

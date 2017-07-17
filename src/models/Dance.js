@@ -44,17 +44,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'base_item_types_key',
-        $col_order: 0,
-        $type: 'long',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Character, {
       foreignKey: {
         name: 'characters_key',
@@ -64,17 +53,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Character.hasMany(model, {
-      foreignKey: {
-        name: 'characters_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

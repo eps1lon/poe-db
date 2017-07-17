@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_master_key',
+              attribute: 'n_p_c_master_key',
             },
           ],
         },
@@ -70,37 +70,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'small_world_areas_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.NPCMaster, {
       foreignKey: {
-        name: 'npc_master_key',
+        name: 'n_p_c_master_key',
         $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPCMaster.hasMany(model, {
-      foreignKey: {
-        name: 'npc_master_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.WorldArea, {
       foreignKey: {
@@ -112,17 +90,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'medium_world_areas_key',
-        $col_order: 3,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.WorldArea, {
       foreignKey: {
         name: 'large_world_areas_key',
@@ -132,17 +99,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'large_world_areas_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

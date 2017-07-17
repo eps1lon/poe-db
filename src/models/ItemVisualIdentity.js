@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      dds_file: {
+      d_d_s_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      ao_file: {
+      a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -32,49 +32,49 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 4,
       },
-      ao_file2: {
+      a_o_file2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 5,
       },
-      marauder_sm_files: {
+      marauder_s_m_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 6,
       },
-      ranger_sm_files: {
+      ranger_s_m_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 7,
       },
-      witch_sm_files: {
+      witch_s_m_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 8,
       },
-      duelist_dex_sm_files: {
+      duelist_dex_s_m_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 9,
       },
-      templar_sm_files: {
+      templar_s_m_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 10,
       },
-      shadow_sm_files: {
+      shadow_s_m_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 11,
       },
-      scion_sm_files: {
+      scion_s_m_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -134,13 +134,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 21,
       },
-      sm_files: {
+      s_m_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 23,
       },
-      epk_file: {
+      e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -194,17 +194,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.SoundEffect.hasMany(model, {
-      foreignKey: {
-        name: 'sound_effects_key',
-        $col_order: 3,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
         name: 'create_corrupted_jewel_achievement_items_key',
@@ -215,35 +204,21 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'create_corrupted_jewel_achievement_items_key',
-        $col_order: 29,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.AchievementItem, {
-      as: 'pickup_achievement_items',
-      through: 'ItemVisualIdentityPickupAchievementItems',
-      $col_order: 22,
+      as: 'pickup__achievement_items',
+      through: models.ItemVisualIdentityPickupAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'identify_achievement_items',
-      through: 'ItemVisualIdentityIdentifyAchievementItems',
-      $col_order: 24,
+      as: 'identify__achievement_items',
+      through: models.ItemVisualIdentityIdentifyAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'corrupt_achievement_items',
-      through: 'ItemVisualIdentityCorruptAchievementItems',
-      $col_order: 26,
+      as: 'corrupt__achievement_items',
+      through: models.ItemVisualIdentityCorruptAchievementitem,
       nullable: true,
       constraints: false,
     });

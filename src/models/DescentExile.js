@@ -63,17 +63,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'world_areas_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Character, {
       foreignKey: {
         name: 'characters_key',
@@ -84,17 +73,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Character.hasMany(model, {
-      foreignKey: {
-        name: 'characters_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
         name: 'monster_varieties_key',
@@ -104,17 +82,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'monster_varieties_key',
-        $col_order: 3,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

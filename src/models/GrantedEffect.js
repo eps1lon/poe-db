@@ -127,17 +127,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ActiveSkill.hasMany(model, {
-      foreignKey: {
-        name: 'active_skills_key',
-        $col_order: 13,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
   };
 
   model.DAT_FILE = 'GrantedEffects.dat';

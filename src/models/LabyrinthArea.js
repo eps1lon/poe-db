@@ -26,30 +26,26 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.WorldArea, {
-      as: 'normal_world_areas',
-      through: 'LabyrinthAreaNormalWorldAreas',
-      $col_order: 1,
+      as: 'normal__world_areas',
+      through: models.LabyrinthAreaNormalWorldarea,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'cruel_world_areas',
-      through: 'LabyrinthAreaCruelWorldAreas',
-      $col_order: 2,
+      as: 'cruel__world_areas',
+      through: models.LabyrinthAreaCruelWorldarea,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'merciless_world_areas',
-      through: 'LabyrinthAreaMercilessWorldAreas',
-      $col_order: 3,
+      as: 'merciless__world_areas',
+      through: models.LabyrinthAreaMercilessWorldarea,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'endgame_world_areas',
-      through: 'LabyrinthAreaEndgameWorldAreas',
-      $col_order: 4,
+      as: 'endgame__world_areas',
+      through: models.LabyrinthAreaEndgameWorldarea,
       nullable: true,
       constraints: false,
     });

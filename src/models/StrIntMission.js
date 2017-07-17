@@ -83,14 +83,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'relic_monster_varieties_key',
+              attribute: 'relic__monster_varieties_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'npc_talk_key',
+              attribute: 'n_p_c_talk_key',
             },
           ],
         },
@@ -102,28 +102,17 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'relic_monster_varieties_key',
+        name: 'relic__monster_varieties_key',
         $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'relic_monster_varieties_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.NPCTalk, {
       foreignKey: {
-        name: 'npc_talk_key',
+        name: 'n_p_c_talk_key',
         $col_order: 5,
         $type: 'ulong',
       },
@@ -131,28 +120,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPCTalk.hasMany(model, {
-      foreignKey: {
-        name: 'npc_talk_key',
-        $col_order: 5,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Mod, {
       as: 'relic_mods',
-      through: 'StrIntMissionMod',
-      $col_order: 13,
+      through: models.StrIntMissionRelicMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: 'StrIntMissionAchievementItem',
-      $col_order: 14,
+      through: models.StrIntMissionAchievementItem,
       nullable: true,
       constraints: false,
     });

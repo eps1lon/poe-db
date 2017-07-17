@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      icon_dds_file: {
+      icon__d_d_s_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -110,23 +110,20 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.ItemClass, {
-      as: 'weapon_restriction_item_classes',
-      through: 'ActiveSkillWeaponRestrictionItemClasses',
-      $col_order: 7,
+      as: 'weapon_restriction__item_classes',
+      through: models.ActiveSkillWeaponRestrictionItemclass,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
-      as: 'input_stat',
-      through: 'ActiveSkillInputStats',
-      $col_order: 15,
+      as: 'input__stat',
+      through: models.ActiveSkillInputStat,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
-      as: 'output_stat',
-      through: 'ActiveSkillOutputStats',
-      $col_order: 16,
+      as: 'output__stat',
+      through: models.ActiveSkillOutputStat,
       nullable: true,
       constraints: false,
     });

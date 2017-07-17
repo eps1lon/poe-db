@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
-      format_string_positive: {
+      format_string__positive: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      format_string_negative: {
+      format_string__negative: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

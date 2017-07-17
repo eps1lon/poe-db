@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'np_cs_key',
+              attribute: 'n_p_cs_key',
               length: 255,
             },
           ],
@@ -73,7 +73,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'signature_mod_mods_key',
+              attribute: 'signature_mod__mods_key',
             },
           ],
         },
@@ -87,7 +87,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'talisman_achievement_items_key',
+              attribute: 'talisman__achievement_items_key',
             },
           ],
         },
@@ -99,7 +99,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPC, {
       foreignKey: {
-        name: 'np_cs_key',
+        name: 'n_p_cs_key',
         $col_order: 1,
         $type: 'ref|string',
       },
@@ -107,37 +107,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPC.hasMany(model, {
-      foreignKey: {
-        name: 'np_cs_key',
-        $col_order: 1,
-        $type: 'ref|string',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'id',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'signature_mod_mods_key',
+        name: 'signature_mod__mods_key',
         $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'signature_mod_mods_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
@@ -149,20 +127,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'achievement_items_key',
-        $col_order: 9,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'talisman_achievement_items_key',
+        name: 'talisman__achievement_items_key',
         $col_order: 15,
         $type: 'ulong',
       },
@@ -170,35 +137,21 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'talisman_achievement_items_key',
-        $col_order: 15,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Tag, {
-      as: 'signature_mod_spawn_weight_tags',
-      through: 'NPCMasterSignatureModSpawnWeightTags',
-      $col_order: 10,
+      as: 'signature_mod_spawn_weight__tags',
+      through: models.NPCMasterSignatureModSpawnWeightTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'unknown_weight_tags',
-      through: 'NPCMasterUnknownWeightTags',
-      $col_order: 12,
+      as: 'unknown_weight__tags',
+      through: models.NPCMasterUnknownWeightTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'master_level5_achievement_items',
-      through: 'NPCMasterMasterLevel5AchievementItems',
-      $col_order: 16,
+      as: 'master_level5__achievement_items',
+      through: models.NPCMasterMasterLevel5Achievementitem,
       nullable: true,
       constraints: false,
     });

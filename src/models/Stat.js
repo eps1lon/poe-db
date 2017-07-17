@@ -89,14 +89,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'main_hand_alias_stats_key',
+              attribute: 'main_hand_alias__stats_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'off_hand_alias_stats_key',
+              attribute: 'off_hand_alias__stats_key',
             },
           ],
         },
@@ -108,45 +108,23 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Stat, {
       foreignKey: {
-        name: 'main_hand_alias_stats_key',
+        name: 'main_hand_alias__stats_key',
         $col_order: 9,
         $type: 'int',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'main_hand_alias_stats_key',
-        $col_order: 9,
-        $type: 'int',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Stat, {
       foreignKey: {
-        name: 'off_hand_alias_stats_key',
+        name: 'off_hand_alias__stats_key',
         $col_order: 10,
         $type: 'int',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'off_hand_alias_stats_key',
-        $col_order: 10,
-        $type: 'int',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

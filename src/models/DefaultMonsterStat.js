@@ -79,17 +79,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Difficulty.hasMany(model, {
-      foreignKey: {
-        name: 'difficulty_key',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
   };
 
   model.DAT_FILE = 'DefaultMonsterStats.dat';

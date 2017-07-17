@@ -61,28 +61,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'world_areas_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'StrDexIntMissionUniqueMapMod',
-      $col_order: 5,
+      through: models.StrDexIntMissionUniqueMapMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'map_boss_monster_varieties',
-      through: 'StrDexIntMissionUniqueMapMapBossMonsterVarieties',
-      $col_order: 6,
+      as: 'map_boss__monster_varieties',
+      through: models.StrDexIntMissionUniqueMapMapBossMonstervariety,
       nullable: true,
       constraints: false,
     });

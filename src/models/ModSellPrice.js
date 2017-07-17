@@ -37,21 +37,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ModSellPriceType.hasMany(model, {
-      foreignKey: {
-        name: 'mod_sell_price_types_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: 'ModSellPriceBaseItemType',
-      $col_order: 1,
+      through: models.ModSellPriceBaseItemType,
       nullable: true,
       constraints: false,
     });

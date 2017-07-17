@@ -98,17 +98,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BuffDefinition.hasMany(model, {
-      foreignKey: {
-        name: 'buff_definitions_key',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
         name: 'monster_varieties_key',
@@ -119,35 +108,21 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'monster_varieties_key',
-        $col_order: 11,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'BloodlineMod',
-      $col_order: 1,
+      through: models.BloodlineMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'spawn_weight_tags',
-      through: 'BloodlineSpawnWeightTags',
-      $col_order: 4,
+      as: 'spawn_weight__tags',
+      through: models.BloodlineSpawnWeightTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'item_weight_tags',
-      through: 'BloodlineItemWeightTags',
-      $col_order: 9,
+      as: 'item_weight__tags',
+      through: models.BloodlineItemWeightTag,
       nullable: true,
       constraints: false,
     });

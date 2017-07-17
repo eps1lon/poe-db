@@ -101,7 +101,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'upgrade_shop_payment_package_key',
+              attribute: 'upgrade__shop_payment_package_key',
             },
           ],
         },
@@ -113,24 +113,13 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.ShopPaymentPackage, {
       foreignKey: {
-        name: 'upgrade_shop_payment_package_key',
+        name: 'upgrade__shop_payment_package_key',
         $col_order: 13,
         $type: 'int',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.ShopPaymentPackage.hasMany(model, {
-      foreignKey: {
-        name: 'upgrade_shop_payment_package_key',
-        $col_order: 13,
-        $type: 'int',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

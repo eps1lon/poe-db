@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      variation_ao_files: {
+      variation__a_o_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -66,7 +66,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_master_key',
+              attribute: 'n_p_c_master_key',
             },
           ],
         },
@@ -86,37 +86,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'base_item_types_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.NPCMaster, {
       foreignKey: {
-        name: 'npc_master_key',
+        name: 'n_p_c_master_key',
         $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPCMaster.hasMany(model, {
-      foreignKey: {
-        name: 'npc_master_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

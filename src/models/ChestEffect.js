@@ -14,73 +14,73 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      normal_epk_file: {
+      normal__e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      normal_closed_ao_file: {
+      normal__closed__a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      normal_open_ao_file: {
+      normal__open__a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 3,
       },
-      magic_epk_file: {
+      magic__e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 4,
       },
-      unique_epk_file: {
+      unique__e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 5,
       },
-      rare_epk_file: {
+      rare__e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 6,
       },
-      magic_closed_ao_file: {
+      magic__closed__a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 7,
       },
-      unique_closed_ao_file: {
+      unique__closed__a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 8,
       },
-      rare_closed_ao_file: {
+      rare__closed__a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 9,
       },
-      magic_open_ao_file: {
+      magic__open__a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 10,
       },
-      unique_open_ao_file: {
+      unique__open__a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 11,
       },
-      rare_open_ao_file: {
+      rare__open__a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

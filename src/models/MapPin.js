@@ -77,21 +77,21 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'normal_waypoint_world_areas_key',
+              attribute: 'normal_waypoint__world_areas_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'cruel_waypoint_world_areas_key',
+              attribute: 'cruel_waypoint__world_areas_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'merciless_waypoint_world_areas_key',
+              attribute: 'merciless_waypoint__world_areas_key',
             },
           ],
         },
@@ -103,7 +103,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
       foreignKey: {
-        name: 'normal_waypoint_world_areas_key',
+        name: 'normal_waypoint__world_areas_key',
         $col_order: 3,
         $type: 'ulong',
       },
@@ -111,20 +111,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'normal_waypoint_world_areas_key',
-        $col_order: 3,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.WorldArea, {
       foreignKey: {
-        name: 'cruel_waypoint_world_areas_key',
+        name: 'cruel_waypoint__world_areas_key',
         $col_order: 11,
         $type: 'ulong',
       },
@@ -132,20 +121,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'cruel_waypoint_world_areas_key',
-        $col_order: 11,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.WorldArea, {
       foreignKey: {
-        name: 'merciless_waypoint_world_areas_key',
+        name: 'merciless_waypoint__world_areas_key',
         $col_order: 12,
         $type: 'ulong',
       },
@@ -153,42 +131,27 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'merciless_waypoint_world_areas_key',
-        $col_order: 12,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.WorldArea, {
-      as: 'normal_world_areas',
-      through: 'MapPinNormalWorldAreas',
-      $col_order: 4,
+      as: 'normal__world_areas',
+      through: models.MapPinNormalWorldarea,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'merciless_world_areas',
-      through: 'MapPinMercilessWorldAreas',
-      $col_order: 9,
+      as: 'merciless__world_areas',
+      through: models.MapPinMercilessWorldarea,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'cruel_world_areas',
-      through: 'MapPinCruelWorldAreas',
-      $col_order: 10,
+      as: 'cruel__world_areas',
+      through: models.MapPinCruelWorldarea,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
-      through: 'MapPinWorldArea',
-      $col_order: 15,
+      through: models.MapPinWorldArea,
       nullable: true,
       constraints: false,
     });

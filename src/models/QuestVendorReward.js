@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_key',
+              attribute: 'n_p_c_key',
             },
           ],
         },
@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPC, {
       foreignKey: {
-        name: 'npc_key',
+        name: 'n_p_c_key',
         $col_order: 1,
         $type: 'ulong',
       },
@@ -55,28 +55,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPC.hasMany(model, {
-      foreignKey: {
-        name: 'npc_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: 'QuestVendorRewardCharacter',
-      $col_order: 3,
+      through: models.QuestVendorRewardCharacter,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: 'QuestVendorRewardBaseItemType',
-      $col_order: 4,
+      through: models.QuestVendorRewardBaseItemType,
       nullable: true,
       constraints: false,
     });

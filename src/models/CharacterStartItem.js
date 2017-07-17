@@ -104,17 +104,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.CharacterStartState.hasMany(model, {
-      foreignKey: {
-        name: 'character_start_states_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.BaseItemType, {
       foreignKey: {
         name: 'base_item_types_key',
@@ -125,28 +114,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'base_item_types_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.SkillGem, {
-      as: 'socketed_skill_gems',
-      through: 'CharacterStartItemSocketedSkillGems',
-      $col_order: 4,
+      as: 'socketed__skill_gems',
+      through: models.CharacterStartItemSocketedSkillgem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'CharacterStartItemMod',
-      $col_order: 5,
+      through: models.CharacterStartItemMod,
       nullable: true,
       constraints: false,
     });

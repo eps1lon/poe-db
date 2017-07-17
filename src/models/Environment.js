@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      base_ambient_sound_file: {
+      base__ambient_sound_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -26,13 +26,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 2,
       },
-      base_env_file: {
+      base__e_n_v_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 3,
       },
-      corrupted_env_file: {
+      corrupted__e_n_v_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 5,
       },
-      corrupted_ambient_sound_file: {
+      corrupted__ambient_sound_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

@@ -68,17 +68,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'achievement_items_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Difficulty, {
       foreignKey: {
         name: 'difficulties_key',
@@ -88,17 +77,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Difficulty.hasMany(model, {
-      foreignKey: {
-        name: 'difficulties_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

@@ -73,21 +73,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'monster_varieties_key',
-        $col_order: 5,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'IntMissionModMod',
-      $col_order: 4,
+      through: models.IntMissionModMod,
       nullable: true,
       constraints: false,
     });

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      dgr_file: {
+      d_g_r_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -66,17 +66,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Environment.hasMany(model, {
-      foreignKey: {
-        name: 'environments_key',
-        $col_order: 5,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

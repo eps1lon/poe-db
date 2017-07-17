@@ -79,17 +79,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key',
-        $col_order: 2,
-        $type: 'ref|list|long',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
   };
 
   model.DAT_FILE = 'DexMissionMods.dat';

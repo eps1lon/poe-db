@@ -61,17 +61,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
   };
 
   model.DAT_FILE = 'StrMapMods.dat';

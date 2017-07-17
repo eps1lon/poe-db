@@ -50,17 +50,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.SkillTotem.hasMany(model, {
-      foreignKey: {
-        name: 'skill_totems_key',
-        $col_order: 0,
-        $type: 'int',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
         name: 'monster_varieties_key',
@@ -70,17 +59,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'monster_varieties_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

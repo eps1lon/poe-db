@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
-      ao_file: {
+      a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      act_file: {
+      a_c_t_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -167,14 +167,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'start_skill_gem_base_item_types_key',
+              attribute: 'start_skill_gem__base_item_types_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'start_weapon_base_item_types_key',
+              attribute: 'start_weapon__base_item_types_key',
             },
           ],
         },
@@ -186,45 +186,23 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       foreignKey: {
-        name: 'start_skill_gem_base_item_types_key',
+        name: 'start_skill_gem__base_item_types_key',
         $col_order: 17,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'start_skill_gem_base_item_types_key',
-        $col_order: 17,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.BaseItemType, {
       foreignKey: {
-        name: 'start_weapon_base_item_types_key',
+        name: 'start_weapon__base_item_types_key',
         $col_order: 24,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'start_weapon_base_item_types_key',
-        $col_order: 24,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

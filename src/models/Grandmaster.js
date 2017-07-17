@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      gm_file: {
+      g_m_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      ais_file: {
+      a_i_s_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -51,8 +51,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'GrandmasterMod',
-      $col_order: 3,
+      through: models.GrandmasterMod,
       nullable: true,
       constraints: false,
     });

@@ -123,7 +123,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'equip_achievement_items_key',
+              attribute: 'equip__achievement_items_key',
             },
           ],
         },
@@ -143,17 +143,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ItemClass.hasMany(model, {
-      foreignKey: {
-        name: 'item_classes_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.FlavourText, {
       foreignKey: {
         name: 'flavour_text_key',
@@ -163,17 +152,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.FlavourText.hasMany(model, {
-      foreignKey: {
-        name: 'flavour_text_key',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.SoundEffect, {
       foreignKey: {
@@ -185,17 +163,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.SoundEffect.hasMany(model, {
-      foreignKey: {
-        name: 'sound_effects_key',
-        $col_order: 10,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
         name: 'item_visual_identity_key',
@@ -206,20 +173,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ItemVisualIdentity.hasMany(model, {
-      foreignKey: {
-        name: 'item_visual_identity_key',
-        $col_order: 18,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'equip_achievement_items_key',
+        name: 'equip__achievement_items_key',
         $col_order: 26,
         $type: 'ulong',
       },
@@ -227,71 +183,45 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'equip_achievement_items_key',
-        $col_order: 26,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Mod, {
-      as: 'implicit_mods',
-      through: 'BaseItemTypeImplicitMods',
-      $col_order: 8,
+      as: 'implicit__mods',
+      through: models.BaseItemTypeImplicitMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'normal_purchase_base_item_types',
-      through: 'BaseItemTypeNormalPurchaseBaseItemTypes',
-      $col_order: 11,
-      foreignKey: 'source_row',
-      targetKey: 'target_row',
+      as: 'normal_purchase__base_item_types',
+      through: models.BaseItemTypeNormalPurchaseBaseitemtype,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'magic_purchase_base_item_types',
-      through: 'BaseItemTypeMagicPurchaseBaseItemTypes',
-      $col_order: 13,
-      foreignKey: 'source_row',
-      targetKey: 'target_row',
+      as: 'magic_purchase__base_item_types',
+      through: models.BaseItemTypeMagicPurchaseBaseitemtype,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: 'BaseItemTypeTag',
-      $col_order: 15,
+      through: models.BaseItemTypeTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'vendor_recipe_achievement_items',
-      through: 'BaseItemTypeVendorRecipeAchievementItems',
-      $col_order: 20,
+      as: 'vendor_recipe__achievement_items',
+      through: models.BaseItemTypeVendorRecipeAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'rare_purchase_base_item_types',
-      through: 'BaseItemTypeRarePurchaseBaseItemTypes',
-      $col_order: 21,
-      foreignKey: 'source_row',
-      targetKey: 'target_row',
+      as: 'rare_purchase__base_item_types',
+      through: models.BaseItemTypeRarePurchaseBaseitemtype,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'unique_purchase_base_item_types',
-      through: 'BaseItemTypeUniquePurchaseBaseItemTypes',
-      $col_order: 23,
-      foreignKey: 'source_row',
-      targetKey: 'target_row',
+      as: 'unique_purchase__base_item_types',
+      through: models.BaseItemTypeUniquePurchaseBaseitemtype,
       nullable: true,
       constraints: false,
     });

@@ -39,15 +39,13 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: 'MapDeviceRecipeBaseItemType',
-      $col_order: 1,
+      through: models.MapDeviceRecipeBaseItemType,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
-      through: 'MapDeviceRecipeWorldArea',
-      $col_order: 2,
+      through: models.MapDeviceRecipeWorldArea,
       nullable: true,
       constraints: false,
     });

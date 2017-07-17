@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 2,
       },
-      small_art_jpg_file: {
+      small_art__j_p_g_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 8,
       },
-      large_art_jpg_file: {
+      large_art__j_p_g_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 10,
       },
-      daily_deal_art_jpg_file: {
+      daily_deal_art__j_p_g_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -98,18 +98,14 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.ShopItem, {
-      as: 'package_shop_item',
-      through: 'ShopItemPackageShopItems',
-      $col_order: 3,
-      foreignKey: 'source_row',
-      targetKey: 'target_row',
+      as: 'package__shop_item',
+      through: models.ShopItemPackageShopitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ShopCategory, {
       as: 'shop_category',
-      through: 'ShopItemShopCategory',
-      $col_order: 5,
+      through: models.ShopItemShopCategory,
       nullable: true,
       constraints: false,
     });

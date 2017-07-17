@@ -86,17 +86,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'monster_varieties_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MonsterPack, {
       foreignKey: {
         name: 'monster_packs_key',
@@ -107,21 +96,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterPack.hasMany(model, {
-      foreignKey: {
-        name: 'monster_packs_key',
-        $col_order: 9,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
-      through: 'TalismanPackMonsterPack',
-      $col_order: 1,
+      through: models.TalismanPackMonsterPack,
       nullable: true,
       constraints: false,
     });

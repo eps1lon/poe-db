@@ -79,21 +79,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterResistance.hasMany(model, {
-      foreignKey: {
-        name: 'monster_resistances_key',
-        $col_order: 8,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: 'MonsterTypeTag',
-      $col_order: 7,
+      through: models.MonsterTypeTag,
       nullable: true,
       constraints: false,
     });

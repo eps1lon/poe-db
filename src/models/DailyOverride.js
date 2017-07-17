@@ -43,17 +43,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.DailyMission.hasMany(model, {
-      foreignKey: {
-        name: 'daily_missions_keys',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
   };
 
   model.DAT_FILE = 'DailyOverrides.dat';

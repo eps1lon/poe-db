@@ -1,32 +1,23 @@
-const S = require('string');
-const { pluralize, tableize } = require('inflection');
-
 const Model = require('./Model');
+const SequelizeBaseModel = require('./SequelizeBaseModel');
+const SequelizeThroughModel = require('./SequelizeThroughModel');
 const SequelizeModelAst = require('./SequelizeModelAst');
 const { entriesToObj } = require('../util');
 
-const PRIMARY = 'Row';
+const PRIMARY = SequelizeBaseModel.PRIMARY;
 
-class SequelizeModel extends Model {
-  static colCasing(col) {
-    return S(col).underscore().s;
-  }
-
-  ast() {
-    return new SequelizeModelAst(this).ast();
-  }
-
-  name() {
-    return Model.name(this.file);
-  }
-
+class SequelizeModel extends SequelizeBaseModel {
   attributes() {
     return entriesToObj(
       this.cols().map(col => [
-        SequelizeModel.colCasing(col),
+        SequelizeBaseModel.colCasing(col),
         this._colProps(col),
       ]),
     );
+  }
+
+  ast() {
+    return new SequelizeModelAst(this, { through_models_defined: true }).ast();
   }
 
   cols() {
@@ -58,33 +49,23 @@ class SequelizeModel extends Model {
   }
 
   belongsToMany() {
+    return this.throughModels().map(([as, model]) => {
+      // field fallback for generic `KeysX`
+      return [model.targetModelName(), { as, through: model.name() }];
+    });
+  }
+
+  throughModels() {
     return Object.keys(this.fields)
       .filter(field => this._isHasMany(field))
       .map(field => {
-        const model_name = Model.name(this.fields[field].key || field);
-        let props = {
-          as: SequelizeModel.colCasing(field.replace(/Keys([0-9]*)$/, '$1')),
-          // clear naming with SourceModelTargetModel
-          through: this.name() + model_name,
-          // keep original col order for building from arrays of attributes
-          $col_order: this.fields[field].rowid,
-        };
-
-        if (this._isExtendedProp(field)) {
-          // keep the prefix, only remove the KeysX keyword
-          props.through = S(
-            pluralize(this.name() + field.replace(/Keys([0-9]*)$/, '$1')),
-          ).camelize().s;
-        }
-
-        // self_assoc
-        if (this.name() === model_name) {
-          props.foreignKey = SequelizeModel.colCasing('Source' + PRIMARY);
-          props.targetKey = SequelizeModel.colCasing('Target' + PRIMARY);
-        }
-
-        // field fallback for generic `KeysX`
-        return [model_name, props];
+        return [
+          SequelizeModel.colCasing(field.replace(/Keys([0-9]*)$/, '$1')),
+          new SequelizeThroughModel(
+            this,
+            Object.assign({ name: field }, this.fields[field]),
+          ),
+        ];
       });
   }
 
@@ -94,7 +75,7 @@ class SequelizeModel extends Model {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: this.indices(),
-      tableName: tableize(this.name()),
+      tableName: SequelizeBaseModel.tableCasing(this.name()),
     };
   }
 
@@ -186,62 +167,6 @@ class SequelizeModel extends Model {
 
   _isKeyCandidate(field) {
     return field === PRIMARY || this._isForeignKey(field);
-  }
-
-  _dataType(col, passed_options) {
-    const options = Object.assign(
-      {},
-      {
-        is_atomic: false,
-      },
-      passed_options,
-    );
-    const { is_atomic } = options;
-    const props = this.fields[col];
-
-    if (this._isKeyCandidate(col)) {
-      return 'BIGINT.UNSIGNED';
-    } else {
-      let { type } = props;
-
-      if (type.startsWith('ref|list')) {
-        if (is_atomic) {
-          type = type.replace('ref|list|', '');
-        } else {
-          return 'TEXT';
-        }
-      }
-
-      switch (type) {
-        case 'short':
-          return 'INTEGER';
-        case 'int':
-          return 'INTEGER';
-        case 'uint':
-          return 'INTEGER.UNSIGNED';
-        case 'long':
-          return 'BIGINT';
-        case 'ulong':
-          return 'BIGINT.UNSIGNED';
-        case 'float':
-          return 'FLOAT';
-        case 'double':
-          return 'DOUBLE';
-        case 'ref|string':
-          return 'TEXT';
-        case 'bool':
-          return 'BOOLEAN';
-        case 'byte':
-          return 'INTEGER.UNSIGNED'; // TODO bits in sequelize
-        case 'ref|int':
-          return 'INTEGER';
-        case 'ubyte':
-          // @TODO what actually are unsigned bytes? whats the point?
-          return 'INTEGER.UNSIGNED'; // TODO bits in sequelize
-        default:
-          throw new Error(`unrecognized type '${props.type}'`);
-      }
-    }
   }
 
   _indexKeyLength(type) {

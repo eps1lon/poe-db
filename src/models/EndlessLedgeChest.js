@@ -49,21 +49,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'world_areas_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: 'EndlessLedgeChestBaseItemType',
-      $col_order: 2,
+      through: models.EndlessLedgeChestBaseItemType,
       nullable: true,
       constraints: false,
     });

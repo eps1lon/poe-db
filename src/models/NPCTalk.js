@@ -161,7 +161,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_key',
+              attribute: 'n_p_c_key',
             },
           ],
         },
@@ -180,24 +180,13 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPC, {
       foreignKey: {
-        name: 'npc_key',
+        name: 'n_p_c_key',
         $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPC.hasMany(model, {
-      foreignKey: {
-        name: 'npc_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Quest, {
       foreignKey: {
@@ -209,21 +198,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Quest.hasMany(model, {
-      foreignKey: {
-        name: 'quest_key',
-        $col_order: 9,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.NPCTextAudio, {
-      as: 'npc_text_audio',
-      through: 'NPCTalkNPCTextAudio',
-      $col_order: 12,
+      as: 'n_p_c_text_audio',
+      through: models.NPCTalkNPCTextAudio,
       nullable: true,
       constraints: false,
     });

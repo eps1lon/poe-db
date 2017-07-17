@@ -88,17 +88,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key1',
-        $col_order: 3,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key2',
@@ -108,17 +97,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key2',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Stat, {
       foreignKey: {
@@ -130,17 +108,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key3',
-        $col_order: 5,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key4',
@@ -150,17 +117,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key4',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

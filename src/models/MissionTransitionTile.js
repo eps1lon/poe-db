@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      tdt_file: {
+      t_d_t_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

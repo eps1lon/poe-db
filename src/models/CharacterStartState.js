@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      is_pvp: {
+      is_p_v_p: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -80,17 +80,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Character.hasMany(model, {
-      foreignKey: {
-        name: 'characters_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.CharacterStartStateSet, {
       foreignKey: {
         name: 'character_start_state_set_key',
@@ -101,42 +90,27 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.CharacterStartStateSet.hasMany(model, {
-      foreignKey: {
-        name: 'character_start_state_set_key',
-        $col_order: 6,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.PassiveSkill, {
       as: 'passive_skills',
-      through: 'CharacterStartStatePassiveSkill',
-      $col_order: 4,
+      through: models.CharacterStartStatePassiveSkill,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'normal_character_start_quest_state',
-      through: 'CharacterStartStateNormalCharacterStartQuestStates',
-      $col_order: 8,
+      as: 'normal__character_start_quest_state',
+      through: models.CharacterStartStateNormalCharacterstartqueststate,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'cruel_character_start_quest_state',
-      through: 'CharacterStartStateCruelCharacterStartQuestStates',
-      $col_order: 9,
+      as: 'cruel__character_start_quest_state',
+      through: models.CharacterStartStateCruelCharacterstartqueststate,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'merciless_character_start_quest_state',
-      through: 'CharacterStartStateMercilessCharacterStartQuestStates',
-      $col_order: 10,
+      as: 'merciless__character_start_quest_state',
+      through: models.CharacterStartStateMercilessCharacterstartqueststate,
       nullable: true,
       constraints: false,
     });

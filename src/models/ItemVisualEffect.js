@@ -14,25 +14,25 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      dagger_epk_file: {
+      dagger_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      bow_epk_file: {
+      bow_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      one_handed_mace_epk_file: {
+      one_handed_mace_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 3,
       },
-      one_handed_sword_epk_file: {
+      one_handed_sword_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -44,13 +44,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 5,
       },
-      two_handed_sword_epk_file: {
+      two_handed_sword_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 6,
       },
-      two_handed_staff_epk_file: {
+      two_handed_staff_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -62,31 +62,31 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 8,
       },
-      two_handed_mace_epk_file: {
+      two_handed_mace_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 9,
       },
-      one_handed_axe_epk_file: {
+      one_handed_axe_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 10,
       },
-      two_handed_axe_epk_file: {
+      two_handed_axe_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 11,
       },
-      claw_epk_file: {
+      claw_e_p_k_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 12,
       },
-      pet_file: {
+      p_e_t_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

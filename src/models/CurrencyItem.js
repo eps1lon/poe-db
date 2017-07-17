@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 12,
       },
-      currency_tab_stack_size: {
+      currency_tab__stack_size: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -90,14 +90,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'full_stack_base_item_types_key',
+              attribute: 'full_stack__base_item_types_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'possession_achievement_items_key',
+              attribute: 'possession__achievement_items_key',
             },
           ],
         },
@@ -117,41 +117,19 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'base_item_types_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.BaseItemType, {
       foreignKey: {
-        name: 'full_stack_base_item_types_key',
+        name: 'full_stack__base_item_types_key',
         $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'full_stack_base_item_types_key',
-        $col_order: 5,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'possession_achievement_items_key',
+        name: 'possession__achievement_items_key',
         $col_order: 10,
         $type: 'ulong',
       },
@@ -159,21 +137,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'possession_achievement_items_key',
-        $col_order: 10,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.AchievementItem, {
-      as: 'usage_achievement_items',
-      through: 'CurrencyItemUsageAchievementItems',
-      $col_order: 7,
+      as: 'usage__achievement_items',
+      through: models.CurrencyItemUsageAchievementitem,
       nullable: true,
       constraints: false,
     });

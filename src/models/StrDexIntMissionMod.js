@@ -51,8 +51,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'StrDexIntMissionModMod',
-      $col_order: 1,
+      through: models.StrDexIntMissionModMod,
       nullable: true,
       constraints: false,
     });

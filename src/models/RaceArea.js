@@ -56,17 +56,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Race.hasMany(model, {
-      foreignKey: {
-        name: 'races_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.WorldArea, {
       foreignKey: {
         name: 'world_areas_key',
@@ -77,21 +66,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'world_areas_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'RaceAreaMod',
-      $col_order: 2,
+      through: models.RaceAreaMod,
       nullable: true,
       constraints: false,
     });

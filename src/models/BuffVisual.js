@@ -14,19 +14,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      buff_dds_file: {
+      buff_d_d_s_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      epk_file1: {
+      e_p_k_file1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      epk_file2: {
+      e_p_k_file2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -80,17 +80,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MiscAnimated.hasMany(model, {
-      foreignKey: {
-        name: 'misc_animated_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MiscAnimated, {
       foreignKey: {
         name: 'misc_animated_key2',
@@ -101,21 +90,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MiscAnimated.hasMany(model, {
-      foreignKey: {
-        name: 'misc_animated_key2',
-        $col_order: 5,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.PreloadGroup, {
       as: 'preload_groups',
-      through: 'BuffVisualPreloadGroup',
-      $col_order: 7,
+      through: models.BuffVisualPreloadGroup,
       nullable: true,
       constraints: false,
     });

@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
-      start_unix_time: {
+      start_u_n_i_x_time: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      end_unix_time: {
+      end_u_n_i_x_time: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -54,17 +54,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Race.hasMany(model, {
-      foreignKey: {
-        name: 'races_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

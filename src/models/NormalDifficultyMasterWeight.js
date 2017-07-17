@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      master_id: {
+      master_i_d: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,

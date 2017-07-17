@@ -146,63 +146,63 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'quiver_mods_key',
+              attribute: 'quiver__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'amulet1_mods_key',
+              attribute: 'amulet1__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'belt1_mods_key',
+              attribute: 'belt1__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'belt3_mods_key',
+              attribute: 'belt3__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'gloves1_mods_key',
+              attribute: 'gloves1__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'boots1_mods_key',
+              attribute: 'boots1__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'body_armour1_mods_key',
+              attribute: 'body_armour1__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'helmet1_mods_key',
+              attribute: 'helmet1__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'shield1_mods_key',
+              attribute: 'shield1__mods_key',
             },
           ],
         },
@@ -216,7 +216,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: '1_hand_mods_key1',
+              attribute: '1_hand__mods_key1',
             },
           ],
         },
@@ -244,168 +244,168 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: '2_hand_mods_key1',
+              attribute: '2_hand__mods_key1',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'boots3_mods_key',
+              attribute: 'boots3__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'ranged_mods_key',
+              attribute: 'ranged__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'helmet2_mods_key',
+              attribute: 'helmet2__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'body_armour2_mods_key',
+              attribute: 'body_armour2__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'boots2_mods_key',
+              attribute: 'boots2__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'gloves2_mods_key',
+              attribute: 'gloves2__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'bow_mods_key',
+              attribute: 'bow__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'wand_mods_key',
+              attribute: 'wand__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '2_hand_mods_key2',
+              attribute: '2_hand__mods_key2',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '2_hand_mods_key3',
+              attribute: '2_hand__mods_key3',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '2_hand_mods_key4',
+              attribute: '2_hand__mods_key4',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '2_hand_mods_key5',
+              attribute: '2_hand__mods_key5',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '1_hand_mods_key2',
+              attribute: '1_hand__mods_key2',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '1_hand_mods_key3',
+              attribute: '1_hand__mods_key3',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '1_hand_mods_key4',
+              attribute: '1_hand__mods_key4',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '1_hand_mods_key5',
+              attribute: '1_hand__mods_key5',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '1_hand_mods_key6',
+              attribute: '1_hand__mods_key6',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '1_hand_mods_key7',
+              attribute: '1_hand__mods_key7',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '1_hand_mods_key8',
+              attribute: '1_hand__mods_key8',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '1_hand_mods_key9',
+              attribute: '1_hand__mods_key9',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'belt2_mods_key',
+              attribute: 'belt2__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'amulet2_mods_key',
+              attribute: 'amulet2__mods_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'ring_mods_key',
+              attribute: 'ring__mods_key',
             },
           ],
         },
@@ -419,7 +419,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'shield2_mods_key',
+              attribute: 'shield2__mods_key',
             },
           ],
         },
@@ -446,17 +446,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'base_item_types_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
         name: 'mods_key1',
@@ -466,17 +455,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key1',
-        $col_order: 12,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Mod, {
       foreignKey: {
@@ -488,20 +466,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key2',
-        $col_order: 13,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'quiver_mods_key',
+        name: 'quiver__mods_key',
         $col_order: 14,
         $type: 'ulong',
       },
@@ -509,20 +476,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'quiver_mods_key',
-        $col_order: 14,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'amulet1_mods_key',
+        name: 'amulet1__mods_key',
         $col_order: 15,
         $type: 'ulong',
       },
@@ -530,20 +486,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'amulet1_mods_key',
-        $col_order: 15,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'belt1_mods_key',
+        name: 'belt1__mods_key',
         $col_order: 16,
         $type: 'ulong',
       },
@@ -551,20 +496,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'belt1_mods_key',
-        $col_order: 16,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'belt3_mods_key',
+        name: 'belt3__mods_key',
         $col_order: 17,
         $type: 'ulong',
       },
@@ -572,20 +506,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'belt3_mods_key',
-        $col_order: 17,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'gloves1_mods_key',
+        name: 'gloves1__mods_key',
         $col_order: 18,
         $type: 'ulong',
       },
@@ -593,20 +516,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'gloves1_mods_key',
-        $col_order: 18,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'boots1_mods_key',
+        name: 'boots1__mods_key',
         $col_order: 19,
         $type: 'ulong',
       },
@@ -614,20 +526,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'boots1_mods_key',
-        $col_order: 19,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'body_armour1_mods_key',
+        name: 'body_armour1__mods_key',
         $col_order: 20,
         $type: 'ulong',
       },
@@ -635,20 +536,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'body_armour1_mods_key',
-        $col_order: 20,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'helmet1_mods_key',
+        name: 'helmet1__mods_key',
         $col_order: 21,
         $type: 'ulong',
       },
@@ -656,37 +546,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'helmet1_mods_key',
-        $col_order: 21,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'shield1_mods_key',
+        name: 'shield1__mods_key',
         $col_order: 22,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'shield1_mods_key',
-        $col_order: 22,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.EssenceType, {
       foreignKey: {
@@ -698,37 +566,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.EssenceType.hasMany(model, {
-      foreignKey: {
-        name: 'essence_type_key',
-        $col_order: 27,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key1',
+        name: '1_hand__mods_key1',
         $col_order: 30,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key1',
-        $col_order: 30,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Mod, {
       foreignKey: {
@@ -740,17 +586,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key13',
-        $col_order: 31,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
         name: 'mods_key14',
@@ -760,17 +595,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key14',
-        $col_order: 32,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Mod, {
       foreignKey: {
@@ -782,20 +606,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key15',
-        $col_order: 33,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '2_hand_mods_key1',
+        name: '2_hand__mods_key1',
         $col_order: 34,
         $type: 'ulong',
       },
@@ -803,20 +616,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '2_hand_mods_key1',
-        $col_order: 34,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'boots3_mods_key',
+        name: 'boots3__mods_key',
         $col_order: 35,
         $type: 'ulong',
       },
@@ -824,20 +626,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'boots3_mods_key',
-        $col_order: 35,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'ranged_mods_key',
+        name: 'ranged__mods_key',
         $col_order: 36,
         $type: 'ulong',
       },
@@ -845,20 +636,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'ranged_mods_key',
-        $col_order: 36,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'helmet2_mods_key',
+        name: 'helmet2__mods_key',
         $col_order: 37,
         $type: 'ulong',
       },
@@ -866,20 +646,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'helmet2_mods_key',
-        $col_order: 37,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'body_armour2_mods_key',
+        name: 'body_armour2__mods_key',
         $col_order: 38,
         $type: 'ulong',
       },
@@ -887,20 +656,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'body_armour2_mods_key',
-        $col_order: 38,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'boots2_mods_key',
+        name: 'boots2__mods_key',
         $col_order: 39,
         $type: 'ulong',
       },
@@ -908,20 +666,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'boots2_mods_key',
-        $col_order: 39,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'gloves2_mods_key',
+        name: 'gloves2__mods_key',
         $col_order: 40,
         $type: 'ulong',
       },
@@ -929,20 +676,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'gloves2_mods_key',
-        $col_order: 40,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'bow_mods_key',
+        name: 'bow__mods_key',
         $col_order: 41,
         $type: 'ulong',
       },
@@ -950,20 +686,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'bow_mods_key',
-        $col_order: 41,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'wand_mods_key',
+        name: 'wand__mods_key',
         $col_order: 42,
         $type: 'ulong',
       },
@@ -971,20 +696,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'wand_mods_key',
-        $col_order: 42,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '2_hand_mods_key2',
+        name: '2_hand__mods_key2',
         $col_order: 43,
         $type: 'ulong',
       },
@@ -992,20 +706,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '2_hand_mods_key2',
-        $col_order: 43,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '2_hand_mods_key3',
+        name: '2_hand__mods_key3',
         $col_order: 44,
         $type: 'ulong',
       },
@@ -1013,20 +716,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '2_hand_mods_key3',
-        $col_order: 44,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '2_hand_mods_key4',
+        name: '2_hand__mods_key4',
         $col_order: 45,
         $type: 'ulong',
       },
@@ -1034,20 +726,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '2_hand_mods_key4',
-        $col_order: 45,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '2_hand_mods_key5',
+        name: '2_hand__mods_key5',
         $col_order: 46,
         $type: 'ulong',
       },
@@ -1055,20 +736,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '2_hand_mods_key5',
-        $col_order: 46,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key2',
+        name: '1_hand__mods_key2',
         $col_order: 47,
         $type: 'ulong',
       },
@@ -1076,20 +746,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key2',
-        $col_order: 47,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key3',
+        name: '1_hand__mods_key3',
         $col_order: 48,
         $type: 'ulong',
       },
@@ -1097,20 +756,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key3',
-        $col_order: 48,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key4',
+        name: '1_hand__mods_key4',
         $col_order: 49,
         $type: 'ulong',
       },
@@ -1118,20 +766,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key4',
-        $col_order: 49,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key5',
+        name: '1_hand__mods_key5',
         $col_order: 50,
         $type: 'ulong',
       },
@@ -1139,20 +776,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key5',
-        $col_order: 50,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key6',
+        name: '1_hand__mods_key6',
         $col_order: 51,
         $type: 'ulong',
       },
@@ -1160,20 +786,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key6',
-        $col_order: 51,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key7',
+        name: '1_hand__mods_key7',
         $col_order: 52,
         $type: 'ulong',
       },
@@ -1181,20 +796,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key7',
-        $col_order: 52,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key8',
+        name: '1_hand__mods_key8',
         $col_order: 53,
         $type: 'ulong',
       },
@@ -1202,20 +806,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key8',
-        $col_order: 53,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: '1_hand_mods_key9',
+        name: '1_hand__mods_key9',
         $col_order: 54,
         $type: 'ulong',
       },
@@ -1223,20 +816,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: '1_hand_mods_key9',
-        $col_order: 54,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'belt2_mods_key',
+        name: 'belt2__mods_key',
         $col_order: 56,
         $type: 'ulong',
       },
@@ -1244,20 +826,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'belt2_mods_key',
-        $col_order: 56,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'amulet2_mods_key',
+        name: 'amulet2__mods_key',
         $col_order: 57,
         $type: 'ulong',
       },
@@ -1265,37 +836,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'amulet2_mods_key',
-        $col_order: 57,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'ring_mods_key',
+        name: 'ring__mods_key',
         $col_order: 58,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'ring_mods_key',
-        $col_order: 58,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Mod, {
       foreignKey: {
@@ -1307,37 +856,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key41',
-        $col_order: 59,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Mod, {
       foreignKey: {
-        name: 'shield2_mods_key',
+        name: 'shield2__mods_key',
         $col_order: 60,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'shield2_mods_key',
-        $col_order: 60,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Mod, {
       foreignKey: {
@@ -1348,22 +875,10 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key43',
-        $col_order: 61,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsToMany(models.Mod, {
-      as: 'monster_mods',
-      through: 'EssenceMonsterMods',
-      $col_order: 26,
+      as: 'monster__mods',
+      through: models.EssenceMonsterMod,
       nullable: true,
       constraints: false,
     });

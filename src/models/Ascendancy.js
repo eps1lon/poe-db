@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      rgb_flavour_text_colour: {
+      r_g_b_flavour_text_colour: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 6,
       },
-      ogg_file: {
+      o_g_g_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -78,17 +78,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Character.hasMany(model, {
-      foreignKey: {
-        name: 'characters_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

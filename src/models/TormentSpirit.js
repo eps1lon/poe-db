@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'summoned_monster_monster_varieties_key',
+              attribute: 'summoned_monster__monster_varieties_key',
             },
           ],
         },
@@ -68,20 +68,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'monster_varieties_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'summoned_monster_monster_varieties_key',
+        name: 'summoned_monster__monster_varieties_key',
         $col_order: 7,
         $type: 'ulong',
       },
@@ -89,49 +78,33 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'summoned_monster_monster_varieties_key',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Mod, {
-      as: 'spirit_mods',
-      through: 'TormentSpiritSpiritMods',
-      $col_order: 1,
+      as: 'spirit__mods',
+      through: models.TormentSpiritSpiritMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'touched_mods',
-      through: 'TormentSpiritTouchedMods',
-      $col_order: 2,
+      as: 'touched__mods',
+      through: models.TormentSpiritTouchedMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'possessed_mods',
-      through: 'TormentSpiritPossessedMods',
-      $col_order: 3,
+      as: 'possessed__mods',
+      through: models.TormentSpiritPossessedMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods0',
-      through: 'TormentSpiritMod',
-      $col_order: 9,
+      through: models.TormentSpiritMods0,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods1',
-      through: 'TormentSpiritMod',
-      $col_order: 10,
+      through: models.TormentSpiritMods1,
       nullable: true,
       constraints: false,
     });

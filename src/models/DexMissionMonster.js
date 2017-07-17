@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'boss_monster_varieties_key',
+              attribute: 'boss__monster_varieties_key',
             },
           ],
         },
@@ -53,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'boss_monster_varieties_key',
+        name: 'boss__monster_varieties_key',
         $col_order: 6,
         $type: 'ulong',
       },
@@ -61,28 +61,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'boss_monster_varieties_key',
-        $col_order: 6,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
-      through: 'DexMissionMonsterMonsterPack',
-      $col_order: 1,
+      through: models.DexMissionMonsterMonsterPack,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'monster_varieties',
-      through: 'DexMissionMonsterMonsterVariety',
-      $col_order: 5,
+      through: models.DexMissionMonsterMonsterVariety,
       nullable: true,
       constraints: false,
     });

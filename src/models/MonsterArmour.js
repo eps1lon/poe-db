@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      art_string_sm_file: {
+      art_string__s_m_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

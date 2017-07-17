@@ -149,14 +149,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'maximum_stats_key',
+              attribute: 'maximum__stats_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'current_stats_key',
+              attribute: 'current__stats_key',
             },
           ],
         },
@@ -175,45 +175,23 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Stat, {
       foreignKey: {
-        name: 'maximum_stats_key',
+        name: 'maximum__stats_key',
         $col_order: 9,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'maximum_stats_key',
-        $col_order: 9,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Stat, {
       foreignKey: {
-        name: 'current_stats_key',
+        name: 'current__stats_key',
         $col_order: 10,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'current_stats_key',
-        $col_order: 10,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.BuffVisual, {
       foreignKey: {
@@ -225,21 +203,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BuffVisual.hasMany(model, {
-      foreignKey: {
-        name: 'buff_visuals_key',
-        $col_order: 13,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Stat, {
       as: 'stats',
-      through: 'BuffDefinitionStat',
-      $col_order: 5,
+      through: models.BuffDefinitionStat,
       nullable: true,
       constraints: false,
     });

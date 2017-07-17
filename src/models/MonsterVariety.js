@@ -38,13 +38,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 5,
       },
-      act_file: {
+      a_c_t_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 6,
       },
-      ao_file: {
+      a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -152,7 +152,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 26,
       },
-      ais_file: {
+      a_i_s_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -288,35 +288,35 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'back_item_visual_identity_key',
+              attribute: 'back__item_visual_identity_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'main_hand_item_classes_key',
+              attribute: 'main_hand__item_classes_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'off_hand_item_classes_key',
+              attribute: 'off_hand__item_classes_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'helmet_item_visual_identity_key',
+              attribute: 'helmet__item_visual_identity_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'flashback_achievement_items_key',
+              attribute: 'flashback__achievement_items_key',
             },
           ],
         },
@@ -364,20 +364,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterType.hasMany(model, {
-      foreignKey: {
-        name: 'monster_types_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
-        name: 'back_item_visual_identity_key',
+        name: 'back__item_visual_identity_key',
         $col_order: 38,
         $type: 'ulong',
       },
@@ -385,20 +374,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ItemVisualIdentity.hasMany(model, {
-      foreignKey: {
-        name: 'back_item_visual_identity_key',
-        $col_order: 38,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.ItemClass, {
       foreignKey: {
-        name: 'main_hand_item_classes_key',
+        name: 'main_hand__item_classes_key',
         $col_order: 39,
         $type: 'ulong',
       },
@@ -406,79 +384,35 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ItemClass.hasMany(model, {
-      foreignKey: {
-        name: 'main_hand_item_classes_key',
-        $col_order: 39,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.ItemClass, {
       foreignKey: {
-        name: 'off_hand_item_classes_key',
+        name: 'off_hand__item_classes_key',
         $col_order: 40,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.ItemClass.hasMany(model, {
-      foreignKey: {
-        name: 'off_hand_item_classes_key',
-        $col_order: 40,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.ItemVisualIdentity, {
       foreignKey: {
-        name: 'helmet_item_visual_identity_key',
+        name: 'helmet__item_visual_identity_key',
         $col_order: 42,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.ItemVisualIdentity.hasMany(model, {
-      foreignKey: {
-        name: 'helmet_item_visual_identity_key',
-        $col_order: 42,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'flashback_achievement_items_key',
+        name: 'flashback__achievement_items_key',
         $col_order: 60,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'flashback_achievement_items_key',
-        $col_order: 60,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.MonsterSegment, {
       foreignKey: {
@@ -490,17 +424,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterSegment.hasMany(model, {
-      foreignKey: {
-        name: 'monster_segments_key',
-        $col_order: 61,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MonsterArmour, {
       foreignKey: {
         name: 'monster_armours_key',
@@ -511,17 +434,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterArmour.hasMany(model, {
-      foreignKey: {
-        name: 'monster_armours_key',
-        $col_order: 62,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
         name: 'achievement_items_key',
@@ -532,17 +444,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'achievement_items_key',
-        $col_order: 63,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
         name: 'achievement_items_key4',
@@ -552,148 +453,118 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'achievement_items_key4',
-        $col_order: 64,
-        $type: 'ref|list|ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'MonsterVarietyMod',
-      $col_order: 9,
+      through: models.MonsterVarietyMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: 'MonsterVarietyTag',
-      $col_order: 19,
+      through: models.MonsterVarietyTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.GrantedEffect, {
       as: 'granted_effects',
-      through: 'MonsterVarietyGrantedEffect',
-      $col_order: 27,
+      through: models.MonsterVarietyGrantedEffect,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods2',
-      through: 'MonsterVarietyMod',
-      $col_order: 29,
+      through: models.MonsterVarietyMods2,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
-      as: 'weapon1_item_visual_identity',
-      through: 'MonsterVarietyWeapon1ItemVisualIdentities',
-      $col_order: 36,
+      as: 'weapon1__item_visual_identity',
+      through: models.MonsterVarietyWeapon1Itemvisualidentity,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
-      as: 'weapon2_item_visual_identity',
-      through: 'MonsterVarietyWeapon2ItemVisualIdentities',
-      $col_order: 37,
+      as: 'weapon2__item_visual_identity',
+      through: models.MonsterVarietyWeapon2Itemvisualidentity,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: 'MonsterVarietyAchievementItem',
-      $col_order: 44,
+      through: models.MonsterVarietyAchievementItem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'special_mods',
-      through: 'MonsterVarietySpecialMods',
-      $col_order: 45,
+      as: 'special__mods',
+      through: models.MonsterVarietySpecialMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items2',
-      through: 'MonsterVarietyAchievementItem',
-      $col_order: 46,
+      through: models.MonsterVarietyAchievementItems2,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'normal_achievement_items',
-      through: 'MonsterVarietyNormalAchievementItems',
-      $col_order: 57,
+      as: 'normal__achievement_items',
+      through: models.MonsterVarietyNormalAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'merciless_achievement_items',
-      through: 'MonsterVarietyMercilessAchievementItems',
-      $col_order: 58,
+      as: 'merciless__achievement_items',
+      through: models.MonsterVarietyMercilessAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'cruel_achievement_items',
-      through: 'MonsterVarietyCruelAchievementItems',
-      $col_order: 59,
+      as: 'cruel__achievement_items',
+      through: models.MonsterVarietyCruelAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'normal_mods',
-      through: 'MonsterVarietyNormalMods',
-      $col_order: 65,
+      as: 'normal__mods',
+      through: models.MonsterVarietyNormalMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'cruel_mods',
-      through: 'MonsterVarietyCruelMods',
-      $col_order: 66,
+      as: 'cruel__mods',
+      through: models.MonsterVarietyCruelMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'merciless_mods',
-      through: 'MonsterVarietyMercilessMods',
-      $col_order: 67,
+      as: 'merciless__mods',
+      through: models.MonsterVarietyMercilessMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'kill_rare_in_normal_achievement_items',
-      through: 'MonsterVarietyKillRareInNormalAchievementItems',
-      $col_order: 68,
+      as: 'kill_rare_in_normal__achievement_items',
+      through: models.MonsterVarietyKillRareInNormalAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'kill_rare_in_cruel_achievement_items',
-      through: 'MonsterVarietyKillRareInCruelAchievementItems',
-      $col_order: 69,
+      as: 'kill_rare_in_cruel__achievement_items',
+      through: models.MonsterVarietyKillRareInCruelAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'kill_rare_in_merciless_achievement_items',
-      through: 'MonsterVarietyKillRareInMercilessAchievementItems',
-      $col_order: 70,
+      as: 'kill_rare_in_merciless__achievement_items',
+      through: models.MonsterVarietyKillRareInMercilessAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'count_kills_achievement_items',
-      through: 'MonsterVarietyCountKillsAchievementItems',
-      $col_order: 72,
+      as: 'count_kills__achievement_items',
+      through: models.MonsterVarietyCountKillsAchievementitem,
       nullable: true,
       constraints: false,
     });

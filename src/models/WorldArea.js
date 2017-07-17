@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 11,
       },
-      loading_screen_dds_file: {
+      loading_screen__d_d_s_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -146,19 +146,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 33,
       },
-      strongbox_spawn_chance: {
+      strongbox__spawn_chance: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 36,
       },
-      strongbox_max_count: {
+      strongbox__max_count: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 37,
       },
-      strongbox_rarity_weight: {
+      strongbox__rarity_weight: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -419,7 +419,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'parent_town_world_areas_key',
+              attribute: 'parent_town__world_areas_key',
             },
           ],
         },
@@ -440,21 +440,21 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'twinned_full_clear_achievement_items_key',
+              attribute: 'twinned_full_clear__achievement_items_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'enter_achievement_items_key',
+              attribute: 'enter__achievement_items_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: '8_mods_full_clear_achievement_items_key',
+              attribute: '8_mods_full_clear__achievement_items_key',
             },
           ],
         },
@@ -466,24 +466,13 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
       foreignKey: {
-        name: 'parent_town_world_areas_key',
+        name: 'parent_town__world_areas_key',
         $col_order: 17,
         $type: 'uint',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'parent_town_world_areas_key',
-        $col_order: 17,
-        $type: 'uint',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Difficulty, {
       foreignKey: {
@@ -495,17 +484,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Difficulty.hasMany(model, {
-      foreignKey: {
-        name: 'difficulties_key',
-        $col_order: 18,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
         name: 'achievement_items_key',
@@ -516,20 +494,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'achievement_items_key',
-        $col_order: 30,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'twinned_full_clear_achievement_items_key',
+        name: 'twinned_full_clear__achievement_items_key',
         $col_order: 62,
         $type: 'ulong',
       },
@@ -537,20 +504,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'twinned_full_clear_achievement_items_key',
-        $col_order: 62,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'enter_achievement_items_key',
+        name: 'enter__achievement_items_key',
         $col_order: 63,
         $type: 'ulong',
       },
@@ -558,116 +514,79 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'enter_achievement_items_key',
-        $col_order: 63,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: '8_mods_full_clear_achievement_items_key',
+        name: '8_mods_full_clear__achievement_items_key',
         $col_order: 68,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: '8_mods_full_clear_achievement_items_key',
-        $col_order: 68,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'connections_world_areas',
-      through: 'WorldAreaConnectionsWorldAreas',
-      $col_order: 5,
-      foreignKey: 'source_row',
-      targetKey: 'target_row',
+      as: 'connections__world_areas',
+      through: models.WorldAreaConnectionsWorldarea,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Topology, {
       as: 'topologies',
-      through: 'WorldAreaTopology',
-      $col_order: 16,
+      through: models.WorldAreaTopology,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'bosses_monster_varieties',
-      through: 'WorldAreaBossesMonsterVarieties',
-      $col_order: 22,
+      as: 'bosses__monster_varieties',
+      through: models.WorldAreaBossesMonstervariety,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'monsters_monster_varieties',
-      through: 'WorldAreaMonstersMonsterVarieties',
-      $col_order: 23,
+      as: 'monsters__monster_varieties',
+      through: models.WorldAreaMonstersMonstervariety,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'spawn_weight_tags',
-      through: 'WorldAreaSpawnWeightTags',
-      $col_order: 24,
+      as: 'spawn_weight__tags',
+      through: models.WorldAreaSpawnWeightTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'full_clear_achievement_items',
-      through: 'WorldAreaFullClearAchievementItems',
-      $col_order: 27,
+      as: 'full_clear__achievement_items',
+      through: models.WorldAreaFullClearAchievementitem,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'WorldAreaMod',
-      $col_order: 31,
+      through: models.WorldAreaMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'vaal_area_world_areas',
-      through: 'WorldAreaVaalAreaWorldAreas',
-      $col_order: 34,
-      foreignKey: 'source_row',
-      targetKey: 'target_row',
+      as: 'vaal_area__world_areas',
+      through: models.WorldAreaVaalAreaWorldarea,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'area_type_tags',
-      through: 'WorldAreaAreaTypeTags',
-      $col_order: 42,
+      as: 'area_type__tags',
+      through: models.WorldAreaAreaTypeTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: 'WorldAreaTag',
-      $col_order: 55,
+      through: models.WorldAreaTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: '1',
-      through: 'WorldAreaAchievementItem',
-      $col_order: 72,
+      through: models.WorldArea1,
       nullable: true,
       constraints: false,
     });

@@ -113,14 +113,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'hostage_monster_varieties_key',
+              attribute: 'hostage__monster_varieties_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'npc_talk_key',
+              attribute: 'n_p_c_talk_key',
             },
           ],
         },
@@ -132,28 +132,17 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'hostage_monster_varieties_key',
+        name: 'hostage__monster_varieties_key',
         $col_order: 7,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'hostage_monster_varieties_key',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.NPCTalk, {
       foreignKey: {
-        name: 'npc_talk_key',
+        name: 'n_p_c_talk_key',
         $col_order: 12,
         $type: 'long',
       },
@@ -161,21 +150,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPCTalk.hasMany(model, {
-      foreignKey: {
-        name: 'npc_talk_key',
-        $col_order: 12,
-        $type: 'long',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: 'DexIntMissionAchievementItem',
-      $col_order: 16,
+      through: models.DexIntMissionAchievementItem,
       nullable: true,
       constraints: false,
     });

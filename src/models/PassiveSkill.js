@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      icon_dds_file: {
+      icon__d_d_s_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -144,7 +144,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'granted_buff_buff_definitions_key',
+              attribute: 'granted_buff__buff_definitions_key',
             },
           ],
         },
@@ -171,37 +171,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'achievement_items_key',
-        $col_order: 14,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.BuffDefinition, {
       foreignKey: {
-        name: 'granted_buff_buff_definitions_key',
+        name: 'granted_buff__buff_definitions_key',
         $col_order: 16,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.BuffDefinition.hasMany(model, {
-      foreignKey: {
-        name: 'granted_buff_buff_definitions_key',
-        $col_order: 16,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Ascendancy, {
       foreignKey: {
@@ -213,35 +191,21 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Ascendancy.hasMany(model, {
-      foreignKey: {
-        name: 'ascendancy_key',
-        $col_order: 20,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Stat, {
       as: 'stats',
-      through: 'PassiveSkillStat',
-      $col_order: 2,
+      through: models.PassiveSkillStat,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: 'PassiveSkillCharacter',
-      $col_order: 9,
+      through: models.PassiveSkillCharacter,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ClientString, {
-      as: 'reminder_client_strings',
-      through: 'PassiveSkillReminderClientStrings',
-      $col_order: 22,
+      as: 'reminder__client_strings',
+      through: models.PassiveSkillReminderClientstring,
       nullable: true,
       constraints: false,
     });

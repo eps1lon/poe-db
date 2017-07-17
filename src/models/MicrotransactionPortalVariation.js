@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      ao_file: {
+      a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      map_ao_file: {
+      map_a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -48,17 +48,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'base_item_types_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

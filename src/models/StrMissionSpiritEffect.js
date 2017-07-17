@@ -83,14 +83,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'summon_monster_varieties_keys',
+              attribute: 'summon__monster_varieties_keys',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'ground_effect_monster_varieties_keys',
+              attribute: 'ground_effect__monster_varieties_keys',
             },
           ],
         },
@@ -102,45 +102,23 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'summon_monster_varieties_keys',
+        name: 'summon__monster_varieties_keys',
         $col_order: 6,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'summon_monster_varieties_keys',
-        $col_order: 6,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'ground_effect_monster_varieties_keys',
+        name: 'ground_effect__monster_varieties_keys',
         $col_order: 7,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'ground_effect_monster_varieties_keys',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

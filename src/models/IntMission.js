@@ -137,7 +137,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_talk_key',
+              attribute: 'n_p_c_talk_key',
             },
           ],
         },
@@ -156,24 +156,13 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCTalk, {
       foreignKey: {
-        name: 'npc_talk_key',
+        name: 'n_p_c_talk_key',
         $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPCTalk.hasMany(model, {
-      foreignKey: {
-        name: 'npc_talk_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
@@ -184,17 +173,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'monster_varieties_key',
-        $col_order: 20,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

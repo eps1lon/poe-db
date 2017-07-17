@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 14,
       },
-      is_pvp_only: {
+      is_p_v_p_only: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -95,28 +95,28 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'player_shrine_buffs_key',
+              attribute: 'player__shrine_buffs_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'monster_shrine_buffs_key',
+              attribute: 'monster__shrine_buffs_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'summon_monster_monster_varieties_key',
+              attribute: 'summon_monster__monster_varieties_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'summon_player_monster_varieties_key',
+              attribute: 'summon_player__monster_varieties_key',
             },
           ],
         },
@@ -135,28 +135,17 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.ShrineBuff, {
       foreignKey: {
-        name: 'player_shrine_buffs_key',
+        name: 'player__shrine_buffs_key',
         $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.ShrineBuff.hasMany(model, {
-      foreignKey: {
-        name: 'player_shrine_buffs_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.ShrineBuff, {
       foreignKey: {
-        name: 'monster_shrine_buffs_key',
+        name: 'monster__shrine_buffs_key',
         $col_order: 8,
         $type: 'ulong',
       },
@@ -164,20 +153,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ShrineBuff.hasMany(model, {
-      foreignKey: {
-        name: 'monster_shrine_buffs_key',
-        $col_order: 8,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'summon_monster_monster_varieties_key',
+        name: 'summon_monster__monster_varieties_key',
         $col_order: 9,
         $type: 'ulong',
       },
@@ -185,37 +163,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'summon_monster_monster_varieties_key',
-        $col_order: 9,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'summon_player_monster_varieties_key',
+        name: 'summon_player__monster_varieties_key',
         $col_order: 10,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'summon_player_monster_varieties_key',
-        $col_order: 10,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.ShrineSound, {
       foreignKey: {
@@ -227,21 +183,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ShrineSound.hasMany(model, {
-      foreignKey: {
-        name: 'shrine_sounds_key',
-        $col_order: 13,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: 'ShrineAchievementItem',
-      $col_order: 15,
+      through: models.ShrineAchievementItem,
       nullable: true,
       constraints: false,
     });

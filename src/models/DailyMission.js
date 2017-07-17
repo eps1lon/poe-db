@@ -59,14 +59,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_talk_key',
+              attribute: 'n_p_c_talk_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'pvp_types_key',
+              attribute: 'p_v_p_types_key',
             },
           ],
         },
@@ -78,28 +78,17 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCTalk, {
       foreignKey: {
-        name: 'npc_talk_key',
+        name: 'n_p_c_talk_key',
         $col_order: 6,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPCTalk.hasMany(model, {
-      foreignKey: {
-        name: 'npc_talk_key',
-        $col_order: 6,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.PVPType, {
       foreignKey: {
-        name: 'pvp_types_key',
+        name: 'p_v_p_types_key',
         $col_order: 9,
         $type: 'int',
       },
@@ -107,21 +96,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.PVPType.hasMany(model, {
-      foreignKey: {
-        name: 'pvp_types_key',
-        $col_order: 9,
-        $type: 'int',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: 'DailyMissionCharacter',
-      $col_order: 7,
+      through: models.DailyMissionCharacter,
       nullable: true,
       constraints: false,
     });

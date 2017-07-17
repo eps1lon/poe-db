@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_master_key',
+              attribute: 'n_p_c_master_key',
             },
           ],
         },
@@ -59,24 +59,13 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
       foreignKey: {
-        name: 'npc_master_key',
+        name: 'n_p_c_master_key',
         $col_order: 0,
         $type: 'long',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPCMaster.hasMany(model, {
-      foreignKey: {
-        name: 'npc_master_key',
-        $col_order: 0,
-        $type: 'long',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

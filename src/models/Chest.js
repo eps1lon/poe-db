@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      ao_file: {
+      a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -74,13 +74,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 10,
       },
-      unknown_keys: {
+      unknown__keys: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 11,
       },
-      unknown_values: {
+      unknown__values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -139,21 +139,21 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'corrupt_achievement_items_key',
+              attribute: 'corrupt__achievement_items_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'currency_use_achievement_items_key',
+              attribute: 'currency_use__achievement_items_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'encounter_achievement_items_key',
+              attribute: 'encounter__achievement_items_key',
             },
           ],
         },
@@ -173,17 +173,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'base_item_types_key',
-        $col_order: 13,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.ChestEffect, {
       foreignKey: {
         name: 'chest_effects_key',
@@ -194,20 +183,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ChestEffect.hasMany(model, {
-      foreignKey: {
-        name: 'chest_effects_key',
-        $col_order: 17,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'corrupt_achievement_items_key',
+        name: 'corrupt__achievement_items_key',
         $col_order: 21,
         $type: 'ulong',
       },
@@ -215,20 +193,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'corrupt_achievement_items_key',
-        $col_order: 21,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'currency_use_achievement_items_key',
+        name: 'currency_use__achievement_items_key',
         $col_order: 22,
         $type: 'ulong',
       },
@@ -236,49 +203,25 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'currency_use_achievement_items_key',
-        $col_order: 22,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
-        name: 'encounter_achievement_items_key',
+        name: 'encounter__achievement_items_key',
         $col_order: 23,
         $type: 'ref|list|ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'encounter_achievement_items_key',
-        $col_order: 23,
-        $type: 'ref|list|ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'ChestMod',
-      $col_order: 15,
+      through: models.ChestMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: 'ChestTag',
-      $col_order: 16,
+      through: models.ChestTag,
       nullable: true,
       constraints: false,
     });

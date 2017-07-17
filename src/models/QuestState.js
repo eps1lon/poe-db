@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 11,
       },
-      quest_finished_ogg_file: {
+      quest_finished__o_g_g_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -109,28 +109,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Quest.hasMany(model, {
-      foreignKey: {
-        name: 'quest_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.MapPin, {
       as: 'map_pins1',
-      through: 'QuestStateMapPin',
-      $col_order: 7,
+      through: models.QuestStateMapPins1,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MapPin, {
       as: 'map_pins2',
-      through: 'QuestStateMapPin',
-      $col_order: 10,
+      through: models.QuestStateMapPins2,
       nullable: true,
       constraints: false,
     });

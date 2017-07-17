@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 6,
       },
-      ao_file: {
+      a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -98,17 +98,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Chest.hasMany(model, {
-      foreignKey: {
-        name: 'chests_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Word, {
       foreignKey: {
         name: 'words_key',
@@ -119,21 +108,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Word.hasMany(model, {
-      foreignKey: {
-        name: 'words_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'UniqueChestMod',
-      $col_order: 4,
+      through: models.UniqueChestMod,
       nullable: true,
       constraints: false,
     });

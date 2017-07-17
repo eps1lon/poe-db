@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      ao_file: {
+      a_o_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -39,8 +39,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.PreloadGroup, {
       as: 'preload_groups',
-      through: 'MiscAnimatedPreloadGroup',
-      $col_order: 2,
+      through: models.MiscAnimatedPreloadGroup,
       nullable: true,
       constraints: false,
     });

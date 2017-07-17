@@ -205,35 +205,21 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.GrantedEffect.hasMany(model, {
-      foreignKey: {
-        name: 'granted_effects_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Stat, {
       as: 'stats',
-      through: 'GrantedEffectsPerLevelStat',
-      $col_order: 2,
+      through: models.GrantedEffectsPerLevelStat,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
-      as: 'quality_stats',
-      through: 'GrantedEffectsPerLevelQualityStats',
-      $col_order: 15,
+      as: 'quality__stats',
+      through: models.GrantedEffectsPerLevelQualityStat,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
       as: 'stats2',
-      through: 'GrantedEffectsPerLevelStat',
-      $col_order: 23,
+      through: models.GrantedEffectsPerLevelStats2,
       nullable: true,
       constraints: false,
     });

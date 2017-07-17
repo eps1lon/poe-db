@@ -59,28 +59,28 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_master_key',
+              attribute: 'n_p_c_master_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'npc_shop_key',
+              attribute: 'n_p_c_shop_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'npc_audio_key1',
+              attribute: 'n_p_c_audio_key1',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'npc_audio_key2',
+              attribute: 'n_p_c_audio_key2',
             },
           ],
         },
@@ -92,28 +92,17 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
       foreignKey: {
-        name: 'npc_master_key',
+        name: 'n_p_c_master_key',
         $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPCMaster.hasMany(model, {
-      foreignKey: {
-        name: 'npc_master_key',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.NPCShop, {
       foreignKey: {
-        name: 'npc_shop_key',
+        name: 'n_p_c_shop_key',
         $col_order: 8,
         $type: 'ulong',
       },
@@ -121,20 +110,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPCShop.hasMany(model, {
-      foreignKey: {
-        name: 'npc_shop_key',
-        $col_order: 8,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.NPCAudio, {
       foreignKey: {
-        name: 'npc_audio_key1',
+        name: 'n_p_c_audio_key1',
         $col_order: 9,
         $type: 'ulong',
       },
@@ -142,37 +120,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPCAudio.hasMany(model, {
-      foreignKey: {
-        name: 'npc_audio_key1',
-        $col_order: 9,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.NPCAudio, {
       foreignKey: {
-        name: 'npc_audio_key2',
+        name: 'n_p_c_audio_key2',
         $col_order: 10,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPCAudio.hasMany(model, {
-      foreignKey: {
-        name: 'npc_audio_key2',
-        $col_order: 10,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

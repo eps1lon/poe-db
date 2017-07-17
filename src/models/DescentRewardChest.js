@@ -43,112 +43,87 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.WorldArea.hasMany(model, {
-      foreignKey: {
-        name: 'world_areas_key',
-        $col_order: 13,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types1',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 1,
+      through: models.DescentRewardChestBaseItemTypes1,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types2',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 2,
+      through: models.DescentRewardChestBaseItemTypes2,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types3',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 3,
+      through: models.DescentRewardChestBaseItemTypes3,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types4',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 4,
+      through: models.DescentRewardChestBaseItemTypes4,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types5',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 5,
+      through: models.DescentRewardChestBaseItemTypes5,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types6',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 6,
+      through: models.DescentRewardChestBaseItemTypes6,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types7',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 7,
+      through: models.DescentRewardChestBaseItemTypes7,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types8',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 8,
+      through: models.DescentRewardChestBaseItemTypes8,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types9',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 9,
+      through: models.DescentRewardChestBaseItemTypes9,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types10',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 10,
+      through: models.DescentRewardChestBaseItemTypes10,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types11',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 11,
+      through: models.DescentRewardChestBaseItemTypes11,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types12',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 12,
+      through: models.DescentRewardChestBaseItemTypes12,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types13',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 14,
+      through: models.DescentRewardChestBaseItemTypes13,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types14',
-      through: 'DescentRewardChestBaseItemType',
-      $col_order: 15,
+      through: models.DescentRewardChestBaseItemTypes14,
       nullable: true,
       constraints: false,
     });

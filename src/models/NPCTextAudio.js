@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 2,
       },
-      mono_audio_file: {
+      mono__audio_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 3,
       },
-      stereo_audio_file: {
+      stereo__audio_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -72,17 +72,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Character.hasMany(model, {
-      foreignKey: {
-        name: 'characters_key',
-        $col_order: 1,
-        $type: 'long',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

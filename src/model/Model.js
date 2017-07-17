@@ -6,12 +6,16 @@ class Model {
   }
 
   constructor(file, props) {
-    this.file = file;
+    this.dat_file = file;
     this.props = props;
   }
 
   ast() {
     throw new Error('not implemented');
+  }
+
+  name() {
+    return Model.name(this.dat_file);
   }
 }
 

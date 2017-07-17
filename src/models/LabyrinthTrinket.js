@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      buff_values: {
+      buff__values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'buff_buff_definitions_key',
+              attribute: 'buff__buff_definitions_key',
             },
           ],
         },
@@ -57,17 +57,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BaseItemType.hasMany(model, {
-      foreignKey: {
-        name: 'base_item_types_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.LabyrinthSecret, {
       foreignKey: {
         name: 'labyrinth_secrets_key',
@@ -78,37 +67,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.LabyrinthSecret.hasMany(model, {
-      foreignKey: {
-        name: 'labyrinth_secrets_key',
-        $col_order: 1,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.BuffDefinition, {
       foreignKey: {
-        name: 'buff_buff_definitions_key',
+        name: 'buff__buff_definitions_key',
         $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.BuffDefinition.hasMany(model, {
-      foreignKey: {
-        name: 'buff_buff_definitions_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

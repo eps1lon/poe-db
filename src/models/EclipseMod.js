@@ -61,21 +61,9 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key',
-        $col_order: 3,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Tag, {
-      as: 'spawn_weight_tags',
-      through: 'EclipseModSpawnWeightTags',
-      $col_order: 1,
+      as: 'spawn_weight__tags',
+      through: models.EclipseModSpawnWeightTag,
       nullable: true,
       constraints: false,
     });

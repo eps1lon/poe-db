@@ -83,7 +83,7 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_master_key',
+              attribute: 'n_p_c_master_key',
             },
           ],
         },
@@ -102,24 +102,13 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
       foreignKey: {
-        name: 'npc_master_key',
+        name: 'n_p_c_master_key',
         $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.NPCMaster.hasMany(model, {
-      foreignKey: {
-        name: 'npc_master_key',
-        $col_order: 0,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Mod, {
       foreignKey: {
@@ -131,28 +120,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Mod.hasMany(model, {
-      foreignKey: {
-        name: 'mods_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.BaseItemType, {
-      as: 'cost_base_item_types',
-      through: 'CraftingBenchOptionCostBaseItemTypes',
-      $col_order: 3,
+      as: 'cost__base_item_types',
+      through: models.CraftingBenchOptionCostBaseitemtype,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemClass, {
       as: 'item_classes',
-      through: 'CraftingBenchOptionItemClass',
-      $col_order: 8,
+      through: models.CraftingBenchOptionItemClass,
       nullable: true,
       constraints: false,
     });

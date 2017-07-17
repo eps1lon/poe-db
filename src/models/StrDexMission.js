@@ -65,14 +65,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'dummy_monster_varieties_key',
+              attribute: 'dummy__monster_varieties_key',
             },
           ],
         },
         {
           fields: [
             {
-              attribute: 'npc_talk_key',
+              attribute: 'n_p_c_talk_key',
             },
           ],
         },
@@ -84,28 +84,17 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
       foreignKey: {
-        name: 'dummy_monster_varieties_key',
+        name: 'dummy__monster_varieties_key',
         $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.MonsterVariety.hasMany(model, {
-      foreignKey: {
-        name: 'dummy_monster_varieties_key',
-        $col_order: 5,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.NPCTalk, {
       foreignKey: {
-        name: 'npc_talk_key',
+        name: 'n_p_c_talk_key',
         $col_order: 8,
         $type: 'ulong',
       },
@@ -113,35 +102,21 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.NPCTalk.hasMany(model, {
-      foreignKey: {
-        name: 'npc_talk_key',
-        $col_order: 8,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'allies_monster_varieties',
-      through: 'StrDexMissionAlliesMonsterVarieties',
-      $col_order: 9,
+      as: 'allies__monster_varieties',
+      through: models.StrDexMissionAlliesMonstervariety,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: 'StrDexMissionMod',
-      $col_order: 10,
+      through: models.StrDexMissionMod,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'traps_monster_varieties',
-      through: 'StrDexMissionTrapsMonsterVarieties',
-      $col_order: 12,
+      as: 'traps__monster_varieties',
+      through: models.StrDexMissionTrapsMonstervariety,
       nullable: true,
       constraints: false,
     });

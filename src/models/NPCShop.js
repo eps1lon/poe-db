@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
-      data0_keys0: {
+      data0__keys0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 4,
       },
-      data0_values: {
+      data0__values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -56,9 +56,8 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.Tag, {
-      as: 'sold_item_tags',
-      through: 'NPCShopSoldItemTags',
-      $col_order: 2,
+      as: 'sold_item__tags',
+      through: models.NPCShopSoldItemTag,
       nullable: true,
       constraints: false,
     });

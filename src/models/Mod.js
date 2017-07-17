@@ -255,17 +255,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.ModType.hasMany(model, {
-      foreignKey: {
-        name: 'mod_type_key',
-        $col_order: 2,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key1',
@@ -275,17 +264,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key1',
-        $col_order: 4,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Stat, {
       foreignKey: {
@@ -297,17 +275,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key2',
-        $col_order: 5,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key3',
@@ -318,17 +285,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key3',
-        $col_order: 6,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.Stat, {
       foreignKey: {
         name: 'stats_key4',
@@ -338,17 +294,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key4',
-        $col_order: 7,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.BuffDefinition, {
       foreignKey: {
@@ -360,17 +305,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.BuffDefinition.hasMany(model, {
-      foreignKey: {
-        name: 'buff_definitions_key',
-        $col_order: 22,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.GrantedEffectsPerLevel, {
       foreignKey: {
         name: 'granted_effects_per_level_key',
@@ -380,17 +314,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.GrantedEffectsPerLevel.hasMany(model, {
-      foreignKey: {
-        name: 'granted_effects_per_level_key',
-        $col_order: 25,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
     model.belongsTo(models.Stat, {
       foreignKey: {
@@ -402,17 +325,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.Stat.hasMany(model, {
-      foreignKey: {
-        name: 'stats_key5',
-        $col_order: 34,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsTo(models.AchievementItem, {
       foreignKey: {
         name: 'achievement_items_key',
@@ -423,35 +335,21 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementItem.hasMany(model, {
-      foreignKey: {
-        name: 'achievement_items_key',
-        $col_order: 36,
-        $type: 'ulong',
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
-    });
     model.belongsToMany(models.Tag, {
-      as: 'spawn_weight_tags',
-      through: 'ModSpawnWeightTags',
-      $col_order: 20,
+      as: 'spawn_weight__tags',
+      through: models.ModSpawnWeightTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: 'ModTag',
-      $col_order: 24,
+      through: models.ModTag,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'generation_weight_tags',
-      through: 'ModGenerationWeightTags',
-      $col_order: 37,
+      as: 'generation_weight__tags',
+      through: models.ModGenerationWeightTag,
       nullable: true,
       constraints: false,
     });

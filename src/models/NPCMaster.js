@@ -66,7 +66,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: [
             {
               attribute: 'n_p_cs_key',
-              length: 255,
+              length: 250,
             },
           ],
           name: 'index_n_p_cs_key',

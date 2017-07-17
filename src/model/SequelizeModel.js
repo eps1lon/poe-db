@@ -184,9 +184,11 @@ class SequelizeModel extends SequelizeBaseModel {
 
   _indexKeyLength(type) {
     if (type === 'ref|string') {
-      // max length, maybe require more info about the field to
+      // 1000 byte max length in mysql, utf8_mb4 => 4 bytes per char
+      // 1000 / 4 = 250
+      // maybe require more info about the field to
       // determine meaningful key length
-      return 255;
+      return 250;
     } else {
       return -1;
     }

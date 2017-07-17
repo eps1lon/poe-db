@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: [
             {
               attribute: 'base_item_types_key',
-              length: 255,
+              length: 250,
             },
           ],
           name: 'index_base_item_types_key',

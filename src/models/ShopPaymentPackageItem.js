@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shop_payment_package_key',
             },
           ],
+          name: 'index_shop_payment_package_key',
         },
         {
           fields: [
@@ -39,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shop_item_key',
             },
           ],
+          name: 'index_shop_item_key',
         },
         {
           fields: [
@@ -46,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shop_token_key',
             },
           ],
+          name: 'index_shop_token_key',
         },
       ],
       tableName: 'shop_payment_package_items',

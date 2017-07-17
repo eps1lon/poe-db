@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['prophecy_row', 'client_string_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'prophecy_habtm_quest_tracker_clientstrings',
     },
   );

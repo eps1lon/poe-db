@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
         {
           fields: [
@@ -45,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff__buff_definitions_key',
             },
           ],
+          name: 'index_buff__buff_definitions_key',
         },
       ],
       tableName: 'labyrinth_secret_effects',

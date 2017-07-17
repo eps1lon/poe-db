@@ -92,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'prophecy_chain_key',
             },
           ],
+          name: 'index_prophecy_chain_key',
         },
       ],
       tableName: 'prophecies',
@@ -111,7 +112,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ClientString, {
       as: 'quest_tracker__client_strings',
-      through: models.ProphecyHabtmQuestTrackerClientstring,
+      through: {
+        model: models.ProphecyHabtmQuestTrackerClientstring,
+        unique: false,
+      },
       foreignKey: 'prophecy_row',
       otherKey: 'client_string_row',
       nullable: true,

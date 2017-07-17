@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'races_key',
             },
           ],
+          name: 'index_races_key',
         },
         {
           fields: [
@@ -39,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'world_areas_key',
             },
           ],
+          name: 'index_world_areas_key',
         },
       ],
       tableName: 'race_areas',
@@ -68,7 +70,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.RaceAreaHabtmMod,
+      through: {
+        model: models.RaceAreaHabtmMod,
+        unique: false,
+      },
       foreignKey: 'race_area_row',
       otherKey: 'mod_row',
       nullable: true,

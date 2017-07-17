@@ -170,6 +170,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'start_skill_gem__base_item_types_key',
             },
           ],
+          name: 'index_start_skill_gem__base_item_types_key',
         },
         {
           fields: [
@@ -177,6 +178,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'start_weapon__base_item_types_key',
             },
           ],
+          name: 'index_start_weapon__base_item_types_key',
         },
       ],
       tableName: 'characters',

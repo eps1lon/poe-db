@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_master_key',
             },
           ],
+          name: 'index_n_p_c_master_key',
         },
       ],
       tableName: 'n_p_c_master_experience_per_levels',

@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'characters_key',
             },
           ],
+          name: 'index_characters_key',
         },
       ],
       tableName: 'ascendancies',

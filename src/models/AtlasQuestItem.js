@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -45,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'world_areas_key',
             },
           ],
+          name: 'index_world_areas_key',
         },
       ],
       tableName: 'atlas_quest_items',

@@ -152,6 +152,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'maximum__stats_key',
             },
           ],
+          name: 'index_maximum__stats_key',
         },
         {
           fields: [
@@ -159,6 +160,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'current__stats_key',
             },
           ],
+          name: 'index_current__stats_key',
         },
         {
           fields: [
@@ -166,6 +168,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff_visuals_key',
             },
           ],
+          name: 'index_buff_visuals_key',
         },
       ],
       tableName: 'buff_definitions',
@@ -205,7 +208,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats',
-      through: models.BuffDefinitionHabtmStat,
+      through: {
+        model: models.BuffDefinitionHabtmStat,
+        unique: false,
+      },
       foreignKey: 'buff_definition_row',
       otherKey: 'stat_row',
       nullable: true,

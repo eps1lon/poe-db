@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['passive_skill_row', 'client_string_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'passive_skill_habtm_reminder_clientstrings',
     },
   );

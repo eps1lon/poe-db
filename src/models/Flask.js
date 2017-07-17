@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -63,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff_definitions_key',
             },
           ],
+          name: 'index_buff_definitions_key',
         },
       ],
       tableName: 'flasks',

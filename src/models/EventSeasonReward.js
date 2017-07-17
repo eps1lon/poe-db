@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'event_season_key',
             },
           ],
+          name: 'index_event_season_key',
         },
       ],
       tableName: 'event_season_rewards',

@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_master_key',
             },
           ],
+          name: 'index_n_p_c_master_key',
         },
       ],
       tableName: 'mission_tile_maps',
@@ -45,7 +46,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
-      through: models.MissionTileMapHabtmWorldArea,
+      through: {
+        model: models.MissionTileMapHabtmWorldArea,
+        unique: false,
+      },
       foreignKey: 'mission_tile_map_row',
       otherKey: 'world_area_row',
       nullable: true,

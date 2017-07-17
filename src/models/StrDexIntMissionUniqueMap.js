@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'world_areas_key',
             },
           ],
+          name: 'index_world_areas_key',
         },
       ],
       tableName: 'str_dex_int_mission_unique_maps',
@@ -63,7 +64,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.StrDexIntMissionUniqueMapHabtmMod,
+      through: {
+        model: models.StrDexIntMissionUniqueMapHabtmMod,
+        unique: false,
+      },
       foreignKey: 'str_dex_int_mission_unique_map_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -71,7 +75,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'map_boss__monster_varieties',
-      through: models.StrDexIntMissionUniqueMapHabtmMapBossMonstervariety,
+      through: {
+        model: models.StrDexIntMissionUniqueMapHabtmMapBossMonstervariety,
+        unique: false,
+      },
       foreignKey: 'str_dex_int_mission_unique_map_row',
       otherKey: 'monster_variety_row',
       nullable: true,

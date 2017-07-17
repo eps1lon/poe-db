@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shop_item_key',
             },
           ],
+          name: 'index_shop_item_key',
         },
         {
           fields: [
@@ -33,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shop_region_key',
             },
           ],
+          name: 'index_shop_region_key',
         },
       ],
       tableName: 'shop_item_prices',

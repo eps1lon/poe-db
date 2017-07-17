@@ -92,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'quest_key',
             },
           ],
+          name: 'index_quest_key',
         },
       ],
       tableName: 'quest_states',
@@ -111,7 +112,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MapPin, {
       as: 'map_pins1',
-      through: models.QuestStateHabtmMapPins1,
+      through: {
+        model: models.QuestStateHabtmMapPins1,
+        unique: false,
+      },
       foreignKey: 'quest_state_row',
       otherKey: 'map_pin_row',
       nullable: true,
@@ -119,7 +123,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MapPin, {
       as: 'map_pins2',
-      through: models.QuestStateHabtmMapPins2,
+      through: {
+        model: models.QuestStateHabtmMapPins2,
+        unique: false,
+      },
       foreignKey: 'quest_state_row',
       otherKey: 'map_pin_row',
       nullable: true,

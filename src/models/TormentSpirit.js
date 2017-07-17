@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
         {
           fields: [
@@ -51,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'summoned_monster__monster_varieties_key',
             },
           ],
+          name: 'index_summoned_monster__monster_varieties_key',
         },
       ],
       tableName: 'torment_spirits',
@@ -80,7 +82,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'spirit__mods',
-      through: models.TormentSpiritHabtmSpiritMod,
+      through: {
+        model: models.TormentSpiritHabtmSpiritMod,
+        unique: false,
+      },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -88,7 +93,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'touched__mods',
-      through: models.TormentSpiritHabtmTouchedMod,
+      through: {
+        model: models.TormentSpiritHabtmTouchedMod,
+        unique: false,
+      },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -96,7 +104,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'possessed__mods',
-      through: models.TormentSpiritHabtmPossessedMod,
+      through: {
+        model: models.TormentSpiritHabtmPossessedMod,
+        unique: false,
+      },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -104,7 +115,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods0',
-      through: models.TormentSpiritHabtmMods0,
+      through: {
+        model: models.TormentSpiritHabtmMods0,
+        unique: false,
+      },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -112,7 +126,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods1',
-      through: models.TormentSpiritHabtmMods1,
+      through: {
+        model: models.TormentSpiritHabtmMods1,
+        unique: false,
+      },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,

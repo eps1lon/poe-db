@@ -128,6 +128,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -135,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'chest_effects_key',
             },
           ],
+          name: 'index_chest_effects_key',
         },
         {
           fields: [
@@ -142,6 +144,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'corrupt__achievement_items_key',
             },
           ],
+          name: 'index_corrupt__achievement_items_key',
         },
         {
           fields: [
@@ -149,6 +152,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'currency_use__achievement_items_key',
             },
           ],
+          name: 'index_currency_use__achievement_items_key',
         },
         {
           fields: [
@@ -156,6 +160,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'encounter__achievement_items_key',
             },
           ],
+          name: 'index_encounter__achievement_items_key',
         },
       ],
       tableName: 'chests',
@@ -215,7 +220,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.ChestHabtmMod,
+      through: {
+        model: models.ChestHabtmMod,
+        unique: false,
+      },
       foreignKey: 'chest_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -223,7 +231,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: models.ChestHabtmTag,
+      through: {
+        model: models.ChestHabtmTag,
+        unique: false,
+      },
       foreignKey: 'chest_row',
       otherKey: 'tag_row',
       nullable: true,

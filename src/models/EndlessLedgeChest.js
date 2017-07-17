@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'world_areas_key',
             },
           ],
+          name: 'index_world_areas_key',
         },
       ],
       tableName: 'endless_ledge_chests',
@@ -51,7 +52,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: models.EndlessLedgeChestHabtmBaseItemType,
+      through: {
+        model: models.EndlessLedgeChestHabtmBaseItemType,
+        unique: false,
+      },
       foreignKey: 'endless_ledge_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,

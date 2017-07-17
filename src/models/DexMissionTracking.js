@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_talk_key',
             },
           ],
+          name: 'index_n_p_c_talk_key',
         },
       ],
       tableName: 'dex_mission_trackings',

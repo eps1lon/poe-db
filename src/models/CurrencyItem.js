@@ -86,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -93,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'full_stack__base_item_types_key',
             },
           ],
+          name: 'index_full_stack__base_item_types_key',
         },
         {
           fields: [
@@ -100,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'possession__achievement_items_key',
             },
           ],
+          name: 'index_possession__achievement_items_key',
         },
       ],
       tableName: 'currency_items',
@@ -139,7 +142,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'usage__achievement_items',
-      through: models.CurrencyItemHabtmUsageAchievementitem,
+      through: {
+        model: models.CurrencyItemHabtmUsageAchievementitem,
+        unique: false,
+      },
       foreignKey: 'currency_item_row',
       otherKey: 'achievement_item_row',
       nullable: true,

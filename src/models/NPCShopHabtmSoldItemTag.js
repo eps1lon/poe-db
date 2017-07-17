@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['n_p_c_shop_row', 'tag_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'n_p_c_shop_habtm_sold_item_tags',
     },
   );

@@ -92,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'main_hand_alias__stats_key',
             },
           ],
+          name: 'index_main_hand_alias__stats_key',
         },
         {
           fields: [
@@ -99,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'off_hand_alias__stats_key',
             },
           ],
+          name: 'index_off_hand_alias__stats_key',
         },
       ],
       tableName: 'stats',

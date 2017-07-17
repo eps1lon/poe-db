@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'environments_key',
             },
           ],
+          name: 'index_environments_key',
         },
       ],
       tableName: 'topologies',

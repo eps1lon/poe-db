@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'achievements_key',
             },
           ],
+          name: 'index_achievements_key',
         },
       ],
       tableName: 'achievement_items',

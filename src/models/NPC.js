@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_master_key',
             },
           ],
+          name: 'index_n_p_c_master_key',
         },
         {
           fields: [
@@ -69,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_shop_key',
             },
           ],
+          name: 'index_n_p_c_shop_key',
         },
         {
           fields: [
@@ -76,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_audio_key1',
             },
           ],
+          name: 'index_n_p_c_audio_key1',
         },
         {
           fields: [
@@ -83,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_audio_key2',
             },
           ],
+          name: 'index_n_p_c_audio_key2',
         },
       ],
       tableName: 'n_p_cs',

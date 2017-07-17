@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'daily_missions_keys',
             },
           ],
+          name: 'index_daily_missions_keys',
         },
       ],
       tableName: 'daily_overrides',

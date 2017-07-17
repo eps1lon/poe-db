@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'small_world_areas_key',
             },
           ],
+          name: 'index_small_world_areas_key',
         },
         {
           fields: [
@@ -39,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_master_key',
             },
           ],
+          name: 'index_n_p_c_master_key',
         },
         {
           fields: [
@@ -46,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'medium_world_areas_key',
             },
           ],
+          name: 'index_medium_world_areas_key',
         },
         {
           fields: [
@@ -53,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'large_world_areas_key',
             },
           ],
+          name: 'index_large_world_areas_key',
         },
       ],
       tableName: 'hideouts',

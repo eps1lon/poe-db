@@ -116,6 +116,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'hostage__monster_varieties_key',
             },
           ],
+          name: 'index_hostage__monster_varieties_key',
         },
         {
           fields: [
@@ -123,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_talk_key',
             },
           ],
+          name: 'index_n_p_c_talk_key',
         },
       ],
       tableName: 'dex_int_missions',
@@ -152,7 +154,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: models.DexIntMissionHabtmAchievementItem,
+      through: {
+        model: models.DexIntMissionHabtmAchievementItem,
+        unique: false,
+      },
       foreignKey: 'dex_int_mission_row',
       otherKey: 'achievement_item_row',
       nullable: true,

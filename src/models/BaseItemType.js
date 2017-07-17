@@ -98,6 +98,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'item_classes_key',
             },
           ],
+          name: 'index_item_classes_key',
         },
         {
           fields: [
@@ -105,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'flavour_text_key',
             },
           ],
+          name: 'index_flavour_text_key',
         },
         {
           fields: [
@@ -112,6 +114,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'sound_effects_key',
             },
           ],
+          name: 'index_sound_effects_key',
         },
         {
           fields: [
@@ -119,6 +122,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'item_visual_identity_key',
             },
           ],
+          name: 'index_item_visual_identity_key',
         },
         {
           fields: [
@@ -126,6 +130,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'equip__achievement_items_key',
             },
           ],
+          name: 'index_equip__achievement_items_key',
         },
       ],
       tableName: 'base_item_types',
@@ -185,7 +190,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'implicit__mods',
-      through: models.BaseItemTypeHabtmImplicitMod,
+      through: {
+        model: models.BaseItemTypeHabtmImplicitMod,
+        unique: false,
+      },
       foreignKey: 'base_item_type_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -193,7 +201,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'normal_purchase__base_item_types',
-      through: models.BaseItemTypeHabtmNormalPurchaseBaseitemtype,
+      through: {
+        model: models.BaseItemTypeHabtmNormalPurchaseBaseitemtype,
+        unique: false,
+      },
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,
@@ -201,7 +212,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'magic_purchase__base_item_types',
-      through: models.BaseItemTypeHabtmMagicPurchaseBaseitemtype,
+      through: {
+        model: models.BaseItemTypeHabtmMagicPurchaseBaseitemtype,
+        unique: false,
+      },
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,
@@ -209,7 +223,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: models.BaseItemTypeHabtmTag,
+      through: {
+        model: models.BaseItemTypeHabtmTag,
+        unique: false,
+      },
       foreignKey: 'base_item_type_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -217,7 +234,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'vendor_recipe__achievement_items',
-      through: models.BaseItemTypeHabtmVendorRecipeAchievementitem,
+      through: {
+        model: models.BaseItemTypeHabtmVendorRecipeAchievementitem,
+        unique: false,
+      },
       foreignKey: 'base_item_type_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -225,7 +245,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'rare_purchase__base_item_types',
-      through: models.BaseItemTypeHabtmRarePurchaseBaseitemtype,
+      through: {
+        model: models.BaseItemTypeHabtmRarePurchaseBaseitemtype,
+        unique: false,
+      },
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,
@@ -233,7 +256,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'unique_purchase__base_item_types',
-      through: models.BaseItemTypeHabtmUniquePurchaseBaseitemtype,
+      through: {
+        model: models.BaseItemTypeHabtmUniquePurchaseBaseitemtype,
+        unique: false,
+      },
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,

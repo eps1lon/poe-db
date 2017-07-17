@@ -182,6 +182,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mod_type_key',
             },
           ],
+          name: 'index_mod_type_key',
         },
         {
           fields: [
@@ -189,6 +190,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key1',
             },
           ],
+          name: 'index_stats_key1',
         },
         {
           fields: [
@@ -196,6 +198,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key2',
             },
           ],
+          name: 'index_stats_key2',
         },
         {
           fields: [
@@ -203,6 +206,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key3',
             },
           ],
+          name: 'index_stats_key3',
         },
         {
           fields: [
@@ -210,6 +214,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key4',
             },
           ],
+          name: 'index_stats_key4',
         },
         {
           fields: [
@@ -217,6 +222,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff_definitions_key',
             },
           ],
+          name: 'index_buff_definitions_key',
         },
         {
           fields: [
@@ -224,6 +230,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'granted_effects_per_level_key',
             },
           ],
+          name: 'index_granted_effects_per_level_key',
         },
         {
           fields: [
@@ -231,6 +238,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key5',
             },
           ],
+          name: 'index_stats_key5',
         },
         {
           fields: [
@@ -238,6 +246,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'achievement_items_key',
             },
           ],
+          name: 'index_achievement_items_key',
         },
       ],
       tableName: 'mods',
@@ -337,7 +346,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'spawn_weight__tags',
-      through: models.ModHabtmSpawnWeightTag,
+      through: {
+        model: models.ModHabtmSpawnWeightTag,
+        unique: false,
+      },
       foreignKey: 'mod_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -345,7 +357,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: models.ModHabtmTag,
+      through: {
+        model: models.ModHabtmTag,
+        unique: false,
+      },
       foreignKey: 'mod_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -353,7 +368,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'generation_weight__tags',
-      through: models.ModHabtmGenerationWeightTag,
+      through: {
+        model: models.ModHabtmGenerationWeightTag,
+        unique: false,
+      },
       foreignKey: 'mod_row',
       otherKey: 'tag_row',
       nullable: true,

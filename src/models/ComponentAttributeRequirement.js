@@ -39,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
               length: 255,
             },
           ],
+          name: 'index_base_item_types_key',
         },
       ],
       tableName: 'component_attribute_requirements',

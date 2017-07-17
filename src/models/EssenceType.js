@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'words_key',
             },
           ],
+          name: 'index_words_key',
         },
       ],
       tableName: 'essence_types',

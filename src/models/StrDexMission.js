@@ -68,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'dummy__monster_varieties_key',
             },
           ],
+          name: 'index_dummy__monster_varieties_key',
         },
         {
           fields: [
@@ -75,6 +76,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_talk_key',
             },
           ],
+          name: 'index_n_p_c_talk_key',
         },
       ],
       tableName: 'str_dex_missions',
@@ -104,7 +106,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'allies__monster_varieties',
-      through: models.StrDexMissionHabtmAlliesMonstervariety,
+      through: {
+        model: models.StrDexMissionHabtmAlliesMonstervariety,
+        unique: false,
+      },
       foreignKey: 'str_dex_mission_row',
       otherKey: 'monster_variety_row',
       nullable: true,
@@ -112,7 +117,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.StrDexMissionHabtmMod,
+      through: {
+        model: models.StrDexMissionHabtmMod,
+        unique: false,
+      },
       foreignKey: 'str_dex_mission_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -120,7 +128,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'traps__monster_varieties',
-      through: models.StrDexMissionHabtmTrapsMonstervariety,
+      through: {
+        model: models.StrDexMissionHabtmTrapsMonstervariety,
+        unique: false,
+      },
       foreignKey: 'str_dex_mission_row',
       otherKey: 'monster_variety_row',
       nullable: true,

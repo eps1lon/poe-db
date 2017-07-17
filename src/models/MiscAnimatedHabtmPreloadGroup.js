@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['misc_animated_row', 'preload_group_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'misc_animated_habtm_preload_groups',
     },
   );

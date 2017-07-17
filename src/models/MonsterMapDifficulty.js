@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key1',
             },
           ],
+          name: 'index_stats_key1',
         },
         {
           fields: [
@@ -57,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key2',
             },
           ],
+          name: 'index_stats_key2',
         },
         {
           fields: [
@@ -64,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key3',
             },
           ],
+          name: 'index_stats_key3',
         },
         {
           fields: [
@@ -71,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key4',
             },
           ],
+          name: 'index_stats_key4',
         },
       ],
       tableName: 'monster_map_difficulties',

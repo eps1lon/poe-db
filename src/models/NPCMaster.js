@@ -69,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
               length: 255,
             },
           ],
+          name: 'index_n_p_cs_key',
         },
         {
           fields: [
@@ -76,6 +77,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'signature_mod__mods_key',
             },
           ],
+          name: 'index_signature_mod__mods_key',
         },
         {
           fields: [
@@ -83,6 +85,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'achievement_items_key',
             },
           ],
+          name: 'index_achievement_items_key',
         },
         {
           fields: [
@@ -90,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'talisman__achievement_items_key',
             },
           ],
+          name: 'index_talisman__achievement_items_key',
         },
       ],
       tableName: 'n_p_c_masters',
@@ -139,7 +143,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'signature_mod_spawn_weight__tags',
-      through: models.NPCMasterHabtmSignatureModSpawnWeightTag,
+      through: {
+        model: models.NPCMasterHabtmSignatureModSpawnWeightTag,
+        unique: false,
+      },
       foreignKey: 'n_p_c_master_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -147,7 +154,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'unknown_weight__tags',
-      through: models.NPCMasterHabtmUnknownWeightTag,
+      through: {
+        model: models.NPCMasterHabtmUnknownWeightTag,
+        unique: false,
+      },
       foreignKey: 'n_p_c_master_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -155,7 +165,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'master_level5__achievement_items',
-      through: models.NPCMasterHabtmMasterLevel5Achievementitem,
+      through: {
+        model: models.NPCMasterHabtmMasterLevel5Achievementitem,
+        unique: false,
+      },
       foreignKey: 'n_p_c_master_row',
       otherKey: 'achievement_item_row',
       nullable: true,

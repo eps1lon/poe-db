@@ -98,6 +98,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'achievement_items_key',
             },
           ],
+          name: 'index_achievement_items_key',
         },
       ],
       tableName: 'labyrinth_secrets',
@@ -117,7 +118,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects0',
-      through: models.LabyrinthSecretHabtmLabyrinthSecretEffects0,
+      through: {
+        model: models.LabyrinthSecretHabtmLabyrinthSecretEffects0,
+        unique: false,
+      },
       foreignKey: 'labyrinth_secret_row',
       otherKey: 'labyrinth_secret_effect_row',
       nullable: true,
@@ -125,7 +129,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects1',
-      through: models.LabyrinthSecretHabtmLabyrinthSecretEffects1,
+      through: {
+        model: models.LabyrinthSecretHabtmLabyrinthSecretEffects1,
+        unique: false,
+      },
       foreignKey: 'labyrinth_secret_row',
       otherKey: 'labyrinth_secret_effect_row',
       nullable: true,
@@ -133,7 +140,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects2',
-      through: models.LabyrinthSecretHabtmLabyrinthSecretEffects2,
+      through: {
+        model: models.LabyrinthSecretHabtmLabyrinthSecretEffects2,
+        unique: false,
+      },
       foreignKey: 'labyrinth_secret_row',
       otherKey: 'labyrinth_secret_effect_row',
       nullable: true,
@@ -141,7 +151,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects3',
-      through: models.LabyrinthSecretHabtmLabyrinthSecretEffects3,
+      through: {
+        model: models.LabyrinthSecretHabtmLabyrinthSecretEffects3,
+        unique: false,
+      },
       foreignKey: 'labyrinth_secret_row',
       otherKey: 'labyrinth_secret_effect_row',
       nullable: true,

@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -57,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'item_visual_effect_key',
             },
           ],
+          name: 'index_item_visual_effect_key',
         },
         {
           fields: [
@@ -64,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'item_visual_identity_key1',
             },
           ],
+          name: 'index_item_visual_identity_key1',
         },
         {
           fields: [
@@ -71,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'item_visual_identity_key2',
             },
           ],
+          name: 'index_item_visual_identity_key2',
         },
       ],
       tableName: 'itemised_visual_effects',

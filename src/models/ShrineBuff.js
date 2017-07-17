@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff_definitions_key',
             },
           ],
+          name: 'index_buff_definitions_key',
         },
       ],
       tableName: 'shrine_buffs',

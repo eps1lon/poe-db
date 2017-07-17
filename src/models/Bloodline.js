@@ -74,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff_definitions_key',
             },
           ],
+          name: 'index_buff_definitions_key',
         },
         {
           fields: [
@@ -81,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
       ],
       tableName: 'bloodlines',
@@ -110,7 +112,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.BloodlineHabtmMod,
+      through: {
+        model: models.BloodlineHabtmMod,
+        unique: false,
+      },
       foreignKey: 'bloodline_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -118,7 +123,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'spawn_weight__tags',
-      through: models.BloodlineHabtmSpawnWeightTag,
+      through: {
+        model: models.BloodlineHabtmSpawnWeightTag,
+        unique: false,
+      },
       foreignKey: 'bloodline_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -126,7 +134,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'item_weight__tags',
-      through: models.BloodlineHabtmItemWeightTag,
+      through: {
+        model: models.BloodlineHabtmItemWeightTag,
+        unique: false,
+      },
       foreignKey: 'bloodline_row',
       otherKey: 'tag_row',
       nullable: true,

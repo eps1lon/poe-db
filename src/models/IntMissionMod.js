@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
       ],
       tableName: 'int_mission_mods',
@@ -75,7 +76,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.IntMissionModHabtmMod,
+      through: {
+        model: models.IntMissionModHabtmMod,
+        unique: false,
+      },
       foreignKey: 'int_mission_mod_row',
       otherKey: 'mod_row',
       nullable: true,

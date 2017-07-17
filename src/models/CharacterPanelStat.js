@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'character_panel_description_modes_key',
             },
           ],
+          name: 'index_character_panel_description_modes_key',
         },
         {
           fields: [
@@ -51,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'character_panel_tabs_key',
             },
           ],
+          name: 'index_character_panel_tabs_key',
         },
       ],
       tableName: 'character_panel_stats',
@@ -80,7 +82,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats1',
-      through: models.CharacterPanelStatHabtmStats1,
+      through: {
+        model: models.CharacterPanelStatHabtmStats1,
+        unique: false,
+      },
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -88,7 +93,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats2',
-      through: models.CharacterPanelStatHabtmStats2,
+      through: {
+        model: models.CharacterPanelStatHabtmStats2,
+        unique: false,
+      },
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -96,7 +104,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats3',
-      through: models.CharacterPanelStatHabtmStats3,
+      through: {
+        model: models.CharacterPanelStatHabtmStats3,
+        unique: false,
+      },
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
       nullable: true,

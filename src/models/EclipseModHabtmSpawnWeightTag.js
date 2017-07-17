@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['eclipse_mod_row', 'tag_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'eclipse_mod_habtm_spawn_weight_tags',
     },
   );

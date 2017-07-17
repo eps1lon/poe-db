@@ -86,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_master_key',
             },
           ],
+          name: 'index_n_p_c_master_key',
         },
         {
           fields: [
@@ -93,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key',
             },
           ],
+          name: 'index_mods_key',
         },
       ],
       tableName: 'crafting_bench_options',
@@ -122,7 +124,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'cost__base_item_types',
-      through: models.CraftingBenchOptionHabtmCostBaseitemtype,
+      through: {
+        model: models.CraftingBenchOptionHabtmCostBaseitemtype,
+        unique: false,
+      },
       foreignKey: 'crafting_bench_option_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -130,7 +135,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ItemClass, {
       as: 'item_classes',
-      through: models.CraftingBenchOptionHabtmItemClass,
+      through: {
+        model: models.CraftingBenchOptionHabtmItemClass,
+        unique: false,
+      },
       foreignKey: 'crafting_bench_option_row',
       otherKey: 'item_class_row',
       nullable: true,

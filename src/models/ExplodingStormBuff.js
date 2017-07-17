@@ -92,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff_definitions_key1',
             },
           ],
+          name: 'index_buff_definitions_key1',
         },
         {
           fields: [
@@ -99,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'friendly__monster_varieties_key',
             },
           ],
+          name: 'index_friendly__monster_varieties_key',
         },
         {
           fields: [
@@ -106,6 +108,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'misc_objects_key',
             },
           ],
+          name: 'index_misc_objects_key',
         },
         {
           fields: [
@@ -113,6 +116,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'misc_animated_key',
             },
           ],
+          name: 'index_misc_animated_key',
         },
         {
           fields: [
@@ -120,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff_visuals_key',
             },
           ],
+          name: 'index_buff_visuals_key',
         },
         {
           fields: [
@@ -127,6 +132,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'enemy__monster_varieties_key',
             },
           ],
+          name: 'index_enemy__monster_varieties_key',
         },
         {
           fields: [
@@ -134,6 +140,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'buff_definitions_key2',
             },
           ],
+          name: 'index_buff_definitions_key2',
         },
       ],
       tableName: 'exploding_storm_buffs',

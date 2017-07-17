@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -51,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'granted_effects_key',
             },
           ],
+          name: 'index_granted_effects_key',
         },
         {
           fields: [
@@ -58,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'vaal_variant__base_item_types_key',
             },
           ],
+          name: 'index_vaal_variant__base_item_types_key',
         },
       ],
       tableName: 'skill_gems',
@@ -97,7 +100,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.GemTag, {
       as: 'gem_tags',
-      through: models.SkillGemHabtmGemTag,
+      through: {
+        model: models.SkillGemHabtmGemTag,
+        unique: false,
+      },
       foreignKey: 'skill_gem_row',
       otherKey: 'gem_tag_row',
       nullable: true,

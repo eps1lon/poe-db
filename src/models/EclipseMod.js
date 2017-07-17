@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key',
             },
           ],
+          name: 'index_mods_key',
         },
       ],
       tableName: 'eclipse_mods',
@@ -63,7 +64,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'spawn_weight__tags',
-      through: models.EclipseModHabtmSpawnWeightTag,
+      through: {
+        model: models.EclipseModHabtmSpawnWeightTag,
+        unique: false,
+      },
       foreignKey: 'eclipse_mod_row',
       otherKey: 'tag_row',
       nullable: true,

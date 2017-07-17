@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'character_start_states_key',
             },
           ],
+          name: 'index_character_start_states_key',
         },
         {
           fields: [
@@ -87,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
       ],
       tableName: 'character_start_items',
@@ -116,7 +118,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.SkillGem, {
       as: 'socketed__skill_gems',
-      through: models.CharacterStartItemHabtmSocketedSkillgem,
+      through: {
+        model: models.CharacterStartItemHabtmSocketedSkillgem,
+        unique: false,
+      },
       foreignKey: 'character_start_item_row',
       otherKey: 'skill_gem_row',
       nullable: true,
@@ -124,7 +129,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.CharacterStartItemHabtmMod,
+      through: {
+        model: models.CharacterStartItemHabtmMod,
+        unique: false,
+      },
       foreignKey: 'character_start_item_row',
       otherKey: 'mod_row',
       nullable: true,

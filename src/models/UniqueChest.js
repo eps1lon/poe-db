@@ -74,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'chests_key',
             },
           ],
+          name: 'index_chests_key',
         },
         {
           fields: [
@@ -81,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'words_key',
             },
           ],
+          name: 'index_words_key',
         },
       ],
       tableName: 'unique_chests',
@@ -110,7 +112,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.UniqueChestHabtmMod,
+      through: {
+        model: models.UniqueChestHabtmMod,
+        unique: false,
+      },
       foreignKey: 'unique_chest_row',
       otherKey: 'mod_row',
       nullable: true,

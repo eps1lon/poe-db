@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['labyrinth_secret_row', 'labyrinth_secret_effect_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'labyrinth_secret_habtm_labyrinth_secret_effects2s',
     },
   );

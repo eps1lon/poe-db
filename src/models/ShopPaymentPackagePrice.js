@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shop_payment_package_key',
             },
           ],
+          name: 'index_shop_payment_package_key',
         },
         {
           fields: [
@@ -33,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shop_country_key',
             },
           ],
+          name: 'index_shop_country_key',
         },
       ],
       tableName: 'shop_payment_package_prices',

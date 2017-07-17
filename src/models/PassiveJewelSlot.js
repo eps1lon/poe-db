@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'passive_skills_key',
             },
           ],
+          name: 'index_passive_skills_key',
         },
       ],
       tableName: 'passive_jewel_slots',

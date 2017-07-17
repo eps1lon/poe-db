@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'skill_totems_key',
             },
           ],
+          name: 'index_skill_totems_key',
         },
         {
           fields: [
@@ -33,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
       ],
       tableName: 'skill_totem_variations',

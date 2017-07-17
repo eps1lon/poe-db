@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key',
             },
           ],
+          name: 'index_mods_key',
         },
       ],
       tableName: 'str_map_mods',

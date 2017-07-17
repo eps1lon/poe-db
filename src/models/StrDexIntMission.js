@@ -92,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_talk_key',
             },
           ],
+          name: 'index_n_p_c_talk_key',
         },
         {
           fields: [
@@ -99,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_packs_key',
             },
           ],
+          name: 'index_monster_packs_key',
         },
       ],
       tableName: 'str_dex_int_missions',
@@ -128,7 +130,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'extra__mods',
-      through: models.StrDexIntMissionHabtmExtraMod,
+      through: {
+        model: models.StrDexIntMissionHabtmExtraMod,
+        unique: false,
+      },
       foreignKey: 'str_dex_int_mission_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -136,7 +141,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: models.StrDexIntMissionHabtmAchievementItem,
+      through: {
+        model: models.StrDexIntMissionHabtmAchievementItem,
+        unique: false,
+      },
       foreignKey: 'str_dex_int_mission_row',
       otherKey: 'achievement_item_row',
       nullable: true,

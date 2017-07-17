@@ -63,7 +63,14 @@ class SequelizeThroughModel extends SequelizeBaseModel {
   }
 
   indices() {
-    return []; // TODO
+    return [
+      {
+        fields: [this.foreignKey(), this.targetKey()],
+        name: 'composite primary_alias',
+        unique: true,
+      },
+      // TODO belongsTo
+    ];
   }
 
   get fields() {

@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['source_row', 'target_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'labyrinth_section_layout_habtm_labyrinth_section_layouts',
     },
   );

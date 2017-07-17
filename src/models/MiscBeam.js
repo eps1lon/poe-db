@@ -45,7 +45,10 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.PreloadGroup, {
       as: 'preload_groups',
-      through: models.MiscBeamHabtmPreloadGroup,
+      through: {
+        model: models.MiscBeamHabtmPreloadGroup,
+        unique: false,
+      },
       foreignKey: 'misc_beam_row',
       otherKey: 'preload_group_row',
       nullable: true,

@@ -55,7 +55,10 @@ class SequelizeModel extends SequelizeBaseModel {
         model.targetModelName(),
         {
           as,
-          through: model.name(),
+          // dont create the unique key here because sequelize will
+          // auto generate a key name which can easily hit the max ident length
+          // constrainth given by mysql
+          through: { model: model.name(), unique: false },
           foreignKey: model.foreignKey(),
           otherKey: model.targetKey(),
         },
@@ -91,6 +94,8 @@ class SequelizeModel extends SequelizeBaseModel {
     return this.belongsTo().map(([, { foreignKey: { name, $type } }]) => {
       const index = {
         fields: [{ attribute: name }],
+        // use the column name otherwise we hit max identifier length
+        name: `index_${name}`,
       };
 
       const key_length = this._indexKeyLength($type);

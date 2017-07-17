@@ -27,7 +27,10 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.ModSellPrice, {
       as: 'mod_sell_prices',
-      through: models.ModTypeHabtmModSellPrice,
+      through: {
+        model: models.ModTypeHabtmModSellPrice,
+        unique: false,
+      },
       foreignKey: 'mod_type_row',
       otherKey: 'mod_sell_price_row',
       nullable: true,

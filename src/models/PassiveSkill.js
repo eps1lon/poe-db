@@ -140,6 +140,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'achievement_items_key',
             },
           ],
+          name: 'index_achievement_items_key',
         },
         {
           fields: [
@@ -147,6 +148,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'granted_buff__buff_definitions_key',
             },
           ],
+          name: 'index_granted_buff__buff_definitions_key',
         },
         {
           fields: [
@@ -154,6 +156,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'ascendancy_key',
             },
           ],
+          name: 'index_ascendancy_key',
         },
       ],
       tableName: 'passive_skills',
@@ -193,7 +196,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats',
-      through: models.PassiveSkillHabtmStat,
+      through: {
+        model: models.PassiveSkillHabtmStat,
+        unique: false,
+      },
       foreignKey: 'passive_skill_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -201,7 +207,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: models.PassiveSkillHabtmCharacter,
+      through: {
+        model: models.PassiveSkillHabtmCharacter,
+        unique: false,
+      },
       foreignKey: 'passive_skill_row',
       otherKey: 'character_row',
       nullable: true,
@@ -209,7 +218,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ClientString, {
       as: 'reminder__client_strings',
-      through: models.PassiveSkillHabtmReminderClientstring,
+      through: {
+        model: models.PassiveSkillHabtmReminderClientstring,
+        unique: false,
+      },
       foreignKey: 'passive_skill_row',
       otherKey: 'client_string_row',
       nullable: true,

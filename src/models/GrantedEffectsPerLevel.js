@@ -188,6 +188,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'granted_effects_key',
             },
           ],
+          name: 'index_granted_effects_key',
         },
       ],
       tableName: 'granted_effects_per_levels',
@@ -207,7 +208,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats',
-      through: models.GrantedEffectsPerLevelHabtmStat,
+      through: {
+        model: models.GrantedEffectsPerLevelHabtmStat,
+        unique: false,
+      },
       foreignKey: 'granted_effects_per_level_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -215,7 +219,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'quality__stats',
-      through: models.GrantedEffectsPerLevelHabtmQualityStat,
+      through: {
+        model: models.GrantedEffectsPerLevelHabtmQualityStat,
+        unique: false,
+      },
       foreignKey: 'granted_effects_per_level_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -223,7 +230,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats2',
-      through: models.GrantedEffectsPerLevelHabtmStats2,
+      through: {
+        model: models.GrantedEffectsPerLevelHabtmStats2,
+        unique: false,
+      },
       foreignKey: 'granted_effects_per_level_row',
       otherKey: 'stat_row',
       nullable: true,

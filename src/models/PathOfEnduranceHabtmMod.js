@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['path_of_endurance_row', 'mod_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'path_of_endurance_habtm_mods',
     },
   );

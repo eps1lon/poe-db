@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'achievement_items_key',
             },
           ],
+          name: 'index_achievement_items_key',
         },
         {
           fields: [
@@ -51,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'difficulties_key',
             },
           ],
+          name: 'index_difficulties_key',
         },
       ],
       tableName: 'quest_achievements',

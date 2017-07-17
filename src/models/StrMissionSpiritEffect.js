@@ -86,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'summon__monster_varieties_keys',
             },
           ],
+          name: 'index_summon__monster_varieties_keys',
         },
         {
           fields: [
@@ -93,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'ground_effect__monster_varieties_keys',
             },
           ],
+          name: 'index_ground_effect__monster_varieties_keys',
         },
       ],
       tableName: 'str_mission_spirit_effects',

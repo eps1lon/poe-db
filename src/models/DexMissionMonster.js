@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'boss__monster_varieties_key',
             },
           ],
+          name: 'index_boss__monster_varieties_key',
         },
       ],
       tableName: 'dex_mission_monsters',
@@ -63,7 +64,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
-      through: models.DexMissionMonsterHabtmMonsterPack,
+      through: {
+        model: models.DexMissionMonsterHabtmMonsterPack,
+        unique: false,
+      },
       foreignKey: 'dex_mission_monster_row',
       otherKey: 'monster_pack_row',
       nullable: true,
@@ -71,7 +75,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'monster_varieties',
-      through: models.DexMissionMonsterHabtmMonsterVariety,
+      through: {
+        model: models.DexMissionMonsterHabtmMonsterVariety,
+        unique: false,
+      },
       foreignKey: 'dex_mission_monster_row',
       otherKey: 'monster_variety_row',
       nullable: true,

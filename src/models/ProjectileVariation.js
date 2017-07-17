@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'projectile_key',
             },
           ],
+          name: 'index_projectile_key',
         },
       ],
       tableName: 'projectile_variations',

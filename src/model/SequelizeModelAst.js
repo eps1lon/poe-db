@@ -206,7 +206,9 @@ class SequelizeModelAst {
               Object.assign({}, props, {
                 nullable: true,
                 constraints: false,
-                through: this._throughProperty(props.through),
+                through: Object.assign({}, props.through, {
+                  model: this._throughProperty(props.through.model),
+                }),
               }),
             ),
           ],

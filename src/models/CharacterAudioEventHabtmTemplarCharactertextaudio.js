@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['character_audio_event_row', 'character_text_audio_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'character_audio_event_habtm_templar_charactertextaudios',
     },
   );

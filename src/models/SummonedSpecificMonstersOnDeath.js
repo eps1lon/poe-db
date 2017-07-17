@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
       ],
       tableName: 'summoned_specific_monsters_on_deaths',

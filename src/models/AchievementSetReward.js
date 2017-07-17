@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'achievement_sets_display_key',
             },
           ],
+          name: 'index_achievement_sets_display_key',
         },
         {
           fields: [
@@ -39,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
       ],
       tableName: 'achievement_set_rewards',

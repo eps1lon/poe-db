@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_packs_key',
             },
           ],
+          name: 'index_monster_packs_key',
         },
         {
           fields: [
@@ -45,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
       ],
       tableName: 'monster_pack_entries',

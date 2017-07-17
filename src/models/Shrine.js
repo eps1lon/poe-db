@@ -98,6 +98,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'player__shrine_buffs_key',
             },
           ],
+          name: 'index_player__shrine_buffs_key',
         },
         {
           fields: [
@@ -105,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster__shrine_buffs_key',
             },
           ],
+          name: 'index_monster__shrine_buffs_key',
         },
         {
           fields: [
@@ -112,6 +114,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'summon_monster__monster_varieties_key',
             },
           ],
+          name: 'index_summon_monster__monster_varieties_key',
         },
         {
           fields: [
@@ -119,6 +122,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'summon_player__monster_varieties_key',
             },
           ],
+          name: 'index_summon_player__monster_varieties_key',
         },
         {
           fields: [
@@ -126,6 +130,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shrine_sounds_key',
             },
           ],
+          name: 'index_shrine_sounds_key',
         },
       ],
       tableName: 'shrines',
@@ -185,7 +190,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: models.ShrineHabtmAchievementItem,
+      through: {
+        model: models.ShrineHabtmAchievementItem,
+        unique: false,
+      },
       foreignKey: 'shrine_row',
       otherKey: 'achievement_item_row',
       nullable: true,

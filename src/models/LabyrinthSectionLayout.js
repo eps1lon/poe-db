@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'labyrinth_section_key',
             },
           ],
+          name: 'index_labyrinth_section_key',
         },
         {
           fields: [
@@ -45,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'labyrinth_secrets_key0',
             },
           ],
+          name: 'index_labyrinth_secrets_key0',
         },
         {
           fields: [
@@ -52,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'labyrinth_secrets_key1',
             },
           ],
+          name: 'index_labyrinth_secrets_key1',
         },
         {
           fields: [
@@ -59,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'labyrinth_areas_key',
             },
           ],
+          name: 'index_labyrinth_areas_key',
         },
         {
           fields: [
@@ -66,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'labyrinth_node_overrides_key',
             },
           ],
+          name: 'index_labyrinth_node_overrides_key',
         },
       ],
       tableName: 'labyrinth_section_layouts',
@@ -125,7 +130,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.LabyrinthSectionLayout, {
       as: 'labyrinth_section_layout',
-      through: models.LabyrinthSectionLayoutHabtmLabyrinthSectionLayout,
+      through: {
+        model: models.LabyrinthSectionLayoutHabtmLabyrinthSectionLayout,
+        unique: false,
+      },
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,

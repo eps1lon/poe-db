@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_key',
             },
           ],
+          name: 'index_n_p_c_key',
         },
       ],
       tableName: 'quest_vendor_rewards',
@@ -57,7 +58,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: models.QuestVendorRewardHabtmCharacter,
+      through: {
+        model: models.QuestVendorRewardHabtmCharacter,
+        unique: false,
+      },
       foreignKey: 'quest_vendor_reward_row',
       otherKey: 'character_row',
       nullable: true,
@@ -65,7 +69,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: models.QuestVendorRewardHabtmBaseItemType,
+      through: {
+        model: models.QuestVendorRewardHabtmBaseItemType,
+        unique: false,
+      },
       foreignKey: 'quest_vendor_reward_row',
       otherKey: 'base_item_type_row',
       nullable: true,

@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key',
             },
           ],
+          name: 'index_stats_key',
         },
         {
           fields: [
@@ -51,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'difficulty_key',
             },
           ],
+          name: 'index_difficulty_key',
         },
         {
           fields: [
@@ -58,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'quest_key',
             },
           ],
+          name: 'index_quest_key',
         },
       ],
       tableName: 'quest_static_rewards',

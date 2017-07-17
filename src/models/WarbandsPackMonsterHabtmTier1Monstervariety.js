@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['warbands_pack_monster_row', 'monster_variety_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'warbands_pack_monster_habtm_tier1_monstervarieties',
     },
   );

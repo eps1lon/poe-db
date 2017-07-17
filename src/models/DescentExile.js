@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'world_areas_key',
             },
           ],
+          name: 'index_world_areas_key',
         },
         {
           fields: [
@@ -39,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'characters_key',
             },
           ],
+          name: 'index_characters_key',
         },
         {
           fields: [
@@ -46,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
       ],
       tableName: 'descent_exiles',

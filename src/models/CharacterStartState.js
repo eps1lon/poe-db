@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'characters_key',
             },
           ],
+          name: 'index_characters_key',
         },
         {
           fields: [
@@ -63,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'character_start_state_set_key',
             },
           ],
+          name: 'index_character_start_state_set_key',
         },
       ],
       tableName: 'character_start_states',
@@ -92,7 +94,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.PassiveSkill, {
       as: 'passive_skills',
-      through: models.CharacterStartStateHabtmPassiveSkill,
+      through: {
+        model: models.CharacterStartStateHabtmPassiveSkill,
+        unique: false,
+      },
       foreignKey: 'character_start_state_row',
       otherKey: 'passive_skill_row',
       nullable: true,
@@ -100,7 +105,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'normal__character_start_quest_state',
-      through: models.CharacterStartStateHabtmNormalCharacterstartqueststate,
+      through: {
+        model: models.CharacterStartStateHabtmNormalCharacterstartqueststate,
+        unique: false,
+      },
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
       nullable: true,
@@ -108,7 +116,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'cruel__character_start_quest_state',
-      through: models.CharacterStartStateHabtmCruelCharacterstartqueststate,
+      through: {
+        model: models.CharacterStartStateHabtmCruelCharacterstartqueststate,
+        unique: false,
+      },
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
       nullable: true,
@@ -116,7 +127,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'merciless__character_start_quest_state',
-      through: models.CharacterStartStateHabtmMercilessCharacterstartqueststate,
+      through: {
+        model: models.CharacterStartStateHabtmMercilessCharacterstartqueststate,
+        unique: false,
+      },
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
       nullable: true,

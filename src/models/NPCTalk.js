@@ -164,6 +164,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_key',
             },
           ],
+          name: 'index_n_p_c_key',
         },
         {
           fields: [
@@ -171,6 +172,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'quest_key',
             },
           ],
+          name: 'index_quest_key',
         },
       ],
       tableName: 'n_p_c_talks',
@@ -200,7 +202,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.NPCTextAudio, {
       as: 'n_p_c_text_audio',
-      through: models.NPCTalkHabtmNPCTextAudio,
+      through: {
+        model: models.NPCTalkHabtmNPCTextAudio,
+        unique: false,
+      },
       foreignKey: 'n_p_c_talk_row',
       otherKey: 'n_p_c_text_audio_row',
       nullable: true,

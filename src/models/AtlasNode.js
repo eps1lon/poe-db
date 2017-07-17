@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'world_areas_key',
             },
           ],
+          name: 'index_world_areas_key',
         },
         {
           fields: [
@@ -69,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'default__item_visual_identity_key',
             },
           ],
+          name: 'index_default__item_visual_identity_key',
         },
         {
           fields: [
@@ -76,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shaped__item_visual_identity_key',
             },
           ],
+          name: 'index_shaped__item_visual_identity_key',
         },
       ],
       tableName: 'atlas_nodes',
@@ -115,7 +118,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AtlasNode, {
       as: 'atlas_node',
-      through: models.AtlasNodeHabtmAtlasNode,
+      through: {
+        model: models.AtlasNodeHabtmAtlasNode,
+        unique: false,
+      },
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,

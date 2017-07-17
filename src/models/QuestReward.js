@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'quest_key',
             },
           ],
+          name: 'index_quest_key',
         },
         {
           fields: [
@@ -87,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'characters_key',
             },
           ],
+          name: 'index_characters_key',
         },
         {
           fields: [
@@ -94,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
       ],
       tableName: 'quest_rewards',

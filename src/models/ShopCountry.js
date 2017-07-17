@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shop_currency_key',
             },
           ],
+          name: 'index_shop_currency_key',
         },
       ],
       tableName: 'shop_countries',

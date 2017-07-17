@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'world_areas_key',
             },
           ],
+          name: 'index_world_areas_key',
         },
       ],
       tableName: 'descent_reward_chests',
@@ -45,7 +46,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types1',
-      through: models.DescentRewardChestHabtmBaseItemTypes1,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes1,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -53,7 +57,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types2',
-      through: models.DescentRewardChestHabtmBaseItemTypes2,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes2,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -61,7 +68,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types3',
-      through: models.DescentRewardChestHabtmBaseItemTypes3,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes3,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -69,7 +79,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types4',
-      through: models.DescentRewardChestHabtmBaseItemTypes4,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes4,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -77,7 +90,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types5',
-      through: models.DescentRewardChestHabtmBaseItemTypes5,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes5,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -85,7 +101,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types6',
-      through: models.DescentRewardChestHabtmBaseItemTypes6,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes6,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -93,7 +112,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types7',
-      through: models.DescentRewardChestHabtmBaseItemTypes7,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes7,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -101,7 +123,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types8',
-      through: models.DescentRewardChestHabtmBaseItemTypes8,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes8,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -109,7 +134,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types9',
-      through: models.DescentRewardChestHabtmBaseItemTypes9,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes9,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -117,7 +145,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types10',
-      through: models.DescentRewardChestHabtmBaseItemTypes10,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes10,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -125,7 +156,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types11',
-      through: models.DescentRewardChestHabtmBaseItemTypes11,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes11,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -133,7 +167,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types12',
-      through: models.DescentRewardChestHabtmBaseItemTypes12,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes12,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -141,7 +178,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types13',
-      through: models.DescentRewardChestHabtmBaseItemTypes13,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes13,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -149,7 +189,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types14',
-      through: models.DescentRewardChestHabtmBaseItemTypes14,
+      through: {
+        model: models.DescentRewardChestHabtmBaseItemTypes14,
+        unique: false,
+      },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,

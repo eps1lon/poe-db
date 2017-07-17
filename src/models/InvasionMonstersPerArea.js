@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'world_areas_key',
             },
           ],
+          name: 'index_world_areas_key',
         },
       ],
       tableName: 'invasion_monsters_per_areas',
@@ -75,7 +76,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'monster_varieties1',
-      through: models.InvasionMonstersPerAreaHabtmMonsterVarieties1,
+      through: {
+        model: models.InvasionMonstersPerAreaHabtmMonsterVarieties1,
+        unique: false,
+      },
       foreignKey: 'invasion_monsters_per_area_row',
       otherKey: 'monster_variety_row',
       nullable: true,
@@ -83,7 +87,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'monster_varieties2',
-      through: models.InvasionMonstersPerAreaHabtmMonsterVarieties2,
+      through: {
+        model: models.InvasionMonstersPerAreaHabtmMonsterVarieties2,
+        unique: false,
+      },
       foreignKey: 'invasion_monsters_per_area_row',
       otherKey: 'monster_variety_row',
       nullable: true,

@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'words_key',
             },
           ],
+          name: 'index_words_key',
         },
       ],
       tableName: 'unique_sets',

@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_resistances_key',
             },
           ],
+          name: 'index_monster_resistances_key',
         },
       ],
       tableName: 'monster_types',
@@ -81,7 +82,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: models.MonsterTypeHabtmTag,
+      through: {
+        model: models.MonsterTypeHabtmTag,
+        unique: false,
+      },
       foreignKey: 'monster_type_row',
       otherKey: 'tag_row',
       nullable: true,

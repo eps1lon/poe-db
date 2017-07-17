@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'difficulty_key',
             },
           ],
+          name: 'index_difficulty_key',
         },
       ],
       tableName: 'default_monster_stats',

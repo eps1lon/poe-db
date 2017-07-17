@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'stats_key',
             },
           ],
+          name: 'index_stats_key',
         },
       ],
       tableName: 'map_inhabitants',

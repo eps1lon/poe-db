@@ -128,6 +128,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -135,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key1',
             },
           ],
+          name: 'index_mods_key1',
         },
         {
           fields: [
@@ -142,6 +144,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key2',
             },
           ],
+          name: 'index_mods_key2',
         },
         {
           fields: [
@@ -149,6 +152,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'quiver__mods_key',
             },
           ],
+          name: 'index_quiver__mods_key',
         },
         {
           fields: [
@@ -156,6 +160,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'amulet1__mods_key',
             },
           ],
+          name: 'index_amulet1__mods_key',
         },
         {
           fields: [
@@ -163,6 +168,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'belt1__mods_key',
             },
           ],
+          name: 'index_belt1__mods_key',
         },
         {
           fields: [
@@ -170,6 +176,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'belt3__mods_key',
             },
           ],
+          name: 'index_belt3__mods_key',
         },
         {
           fields: [
@@ -177,6 +184,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'gloves1__mods_key',
             },
           ],
+          name: 'index_gloves1__mods_key',
         },
         {
           fields: [
@@ -184,6 +192,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'boots1__mods_key',
             },
           ],
+          name: 'index_boots1__mods_key',
         },
         {
           fields: [
@@ -191,6 +200,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'body_armour1__mods_key',
             },
           ],
+          name: 'index_body_armour1__mods_key',
         },
         {
           fields: [
@@ -198,6 +208,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'helmet1__mods_key',
             },
           ],
+          name: 'index_helmet1__mods_key',
         },
         {
           fields: [
@@ -205,6 +216,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shield1__mods_key',
             },
           ],
+          name: 'index_shield1__mods_key',
         },
         {
           fields: [
@@ -212,6 +224,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'essence_type_key',
             },
           ],
+          name: 'index_essence_type_key',
         },
         {
           fields: [
@@ -219,6 +232,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key1',
             },
           ],
+          name: 'index_1_hand__mods_key1',
         },
         {
           fields: [
@@ -226,6 +240,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key13',
             },
           ],
+          name: 'index_mods_key13',
         },
         {
           fields: [
@@ -233,6 +248,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key14',
             },
           ],
+          name: 'index_mods_key14',
         },
         {
           fields: [
@@ -240,6 +256,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key15',
             },
           ],
+          name: 'index_mods_key15',
         },
         {
           fields: [
@@ -247,6 +264,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '2_hand__mods_key1',
             },
           ],
+          name: 'index_2_hand__mods_key1',
         },
         {
           fields: [
@@ -254,6 +272,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'boots3__mods_key',
             },
           ],
+          name: 'index_boots3__mods_key',
         },
         {
           fields: [
@@ -261,6 +280,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'ranged__mods_key',
             },
           ],
+          name: 'index_ranged__mods_key',
         },
         {
           fields: [
@@ -268,6 +288,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'helmet2__mods_key',
             },
           ],
+          name: 'index_helmet2__mods_key',
         },
         {
           fields: [
@@ -275,6 +296,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'body_armour2__mods_key',
             },
           ],
+          name: 'index_body_armour2__mods_key',
         },
         {
           fields: [
@@ -282,6 +304,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'boots2__mods_key',
             },
           ],
+          name: 'index_boots2__mods_key',
         },
         {
           fields: [
@@ -289,6 +312,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'gloves2__mods_key',
             },
           ],
+          name: 'index_gloves2__mods_key',
         },
         {
           fields: [
@@ -296,6 +320,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'bow__mods_key',
             },
           ],
+          name: 'index_bow__mods_key',
         },
         {
           fields: [
@@ -303,6 +328,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'wand__mods_key',
             },
           ],
+          name: 'index_wand__mods_key',
         },
         {
           fields: [
@@ -310,6 +336,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '2_hand__mods_key2',
             },
           ],
+          name: 'index_2_hand__mods_key2',
         },
         {
           fields: [
@@ -317,6 +344,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '2_hand__mods_key3',
             },
           ],
+          name: 'index_2_hand__mods_key3',
         },
         {
           fields: [
@@ -324,6 +352,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '2_hand__mods_key4',
             },
           ],
+          name: 'index_2_hand__mods_key4',
         },
         {
           fields: [
@@ -331,6 +360,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '2_hand__mods_key5',
             },
           ],
+          name: 'index_2_hand__mods_key5',
         },
         {
           fields: [
@@ -338,6 +368,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key2',
             },
           ],
+          name: 'index_1_hand__mods_key2',
         },
         {
           fields: [
@@ -345,6 +376,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key3',
             },
           ],
+          name: 'index_1_hand__mods_key3',
         },
         {
           fields: [
@@ -352,6 +384,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key4',
             },
           ],
+          name: 'index_1_hand__mods_key4',
         },
         {
           fields: [
@@ -359,6 +392,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key5',
             },
           ],
+          name: 'index_1_hand__mods_key5',
         },
         {
           fields: [
@@ -366,6 +400,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key6',
             },
           ],
+          name: 'index_1_hand__mods_key6',
         },
         {
           fields: [
@@ -373,6 +408,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key7',
             },
           ],
+          name: 'index_1_hand__mods_key7',
         },
         {
           fields: [
@@ -380,6 +416,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key8',
             },
           ],
+          name: 'index_1_hand__mods_key8',
         },
         {
           fields: [
@@ -387,6 +424,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: '1_hand__mods_key9',
             },
           ],
+          name: 'index_1_hand__mods_key9',
         },
         {
           fields: [
@@ -394,6 +432,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'belt2__mods_key',
             },
           ],
+          name: 'index_belt2__mods_key',
         },
         {
           fields: [
@@ -401,6 +440,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'amulet2__mods_key',
             },
           ],
+          name: 'index_amulet2__mods_key',
         },
         {
           fields: [
@@ -408,6 +448,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'ring__mods_key',
             },
           ],
+          name: 'index_ring__mods_key',
         },
         {
           fields: [
@@ -415,6 +456,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key41',
             },
           ],
+          name: 'index_mods_key41',
         },
         {
           fields: [
@@ -422,6 +464,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shield2__mods_key',
             },
           ],
+          name: 'index_shield2__mods_key',
         },
         {
           fields: [
@@ -429,6 +472,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key43',
             },
           ],
+          name: 'index_mods_key43',
         },
       ],
       tableName: 'essences',
@@ -878,7 +922,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'monster__mods',
-      through: models.EssenceHabtmMonsterMod,
+      through: {
+        model: models.EssenceHabtmMonsterMod,
+        unique: false,
+      },
       foreignKey: 'essence_row',
       otherKey: 'mod_row',
       nullable: true,

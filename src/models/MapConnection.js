@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'map_pins_key0',
             },
           ],
+          name: 'index_map_pins_key0',
         },
         {
           fields: [
@@ -57,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'map_pins_key1',
             },
           ],
+          name: 'index_map_pins_key1',
         },
       ],
       tableName: 'map_connections',

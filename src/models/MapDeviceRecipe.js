@@ -39,7 +39,10 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: models.MapDeviceRecipeHabtmBaseItemType,
+      through: {
+        model: models.MapDeviceRecipeHabtmBaseItemType,
+        unique: false,
+      },
       foreignKey: 'map_device_recipe_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -47,7 +50,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
-      through: models.MapDeviceRecipeHabtmWorldArea,
+      through: {
+        model: models.MapDeviceRecipeHabtmWorldArea,
+        unique: false,
+      },
       foreignKey: 'map_device_recipe_row',
       otherKey: 'world_area_row',
       nullable: true,

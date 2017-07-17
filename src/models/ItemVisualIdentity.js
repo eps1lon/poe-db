@@ -170,6 +170,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'sound_effects_key',
             },
           ],
+          name: 'index_sound_effects_key',
         },
         {
           fields: [
@@ -177,6 +178,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'create_corrupted_jewel_achievement_items_key',
             },
           ],
+          name: 'index_create_corrupted_jewel_achievement_items_key',
         },
       ],
       tableName: 'item_visual_identities',
@@ -206,7 +208,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'pickup__achievement_items',
-      through: models.ItemVisualIdentityHabtmPickupAchievementitem,
+      through: {
+        model: models.ItemVisualIdentityHabtmPickupAchievementitem,
+        unique: false,
+      },
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -214,7 +219,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'identify__achievement_items',
-      through: models.ItemVisualIdentityHabtmIdentifyAchievementitem,
+      through: {
+        model: models.ItemVisualIdentityHabtmIdentifyAchievementitem,
+        unique: false,
+      },
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -222,7 +230,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'corrupt__achievement_items',
-      through: models.ItemVisualIdentityHabtmCorruptAchievementitem,
+      through: {
+        model: models.ItemVisualIdentityHabtmCorruptAchievementitem,
+        unique: false,
+      },
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
       nullable: true,

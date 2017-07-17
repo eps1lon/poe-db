@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key',
             },
           ],
+          name: 'index_mods_key',
         },
       ],
       tableName: 'dex_mission_mods',

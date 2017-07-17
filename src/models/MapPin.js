@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'normal_waypoint__world_areas_key',
             },
           ],
+          name: 'index_normal_waypoint__world_areas_key',
         },
         {
           fields: [
@@ -87,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'cruel_waypoint__world_areas_key',
             },
           ],
+          name: 'index_cruel_waypoint__world_areas_key',
         },
         {
           fields: [
@@ -94,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'merciless_waypoint__world_areas_key',
             },
           ],
+          name: 'index_merciless_waypoint__world_areas_key',
         },
       ],
       tableName: 'map_pins',
@@ -133,7 +136,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'normal__world_areas',
-      through: models.MapPinHabtmNormalWorldarea,
+      through: {
+        model: models.MapPinHabtmNormalWorldarea,
+        unique: false,
+      },
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
       nullable: true,
@@ -141,7 +147,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'merciless__world_areas',
-      through: models.MapPinHabtmMercilessWorldarea,
+      through: {
+        model: models.MapPinHabtmMercilessWorldarea,
+        unique: false,
+      },
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
       nullable: true,
@@ -149,7 +158,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'cruel__world_areas',
-      through: models.MapPinHabtmCruelWorldarea,
+      through: {
+        model: models.MapPinHabtmCruelWorldarea,
+        unique: false,
+      },
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
       nullable: true,
@@ -157,7 +169,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
-      through: models.MapPinHabtmWorldArea,
+      through: {
+        model: models.MapPinHabtmWorldArea,
+        unique: false,
+      },
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
       nullable: true,

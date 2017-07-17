@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_packs_key',
             },
           ],
+          name: 'index_monster_packs_key',
         },
       ],
       tableName: 'str_int_mission_monster_waves',
@@ -99,7 +100,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'unique__monster_varieties',
-      through: models.StrIntMissionMonsterWaveHabtmUniqueMonstervariety,
+      through: {
+        model: models.StrIntMissionMonsterWaveHabtmUniqueMonstervariety,
+        unique: false,
+      },
       foreignKey: 'str_int_mission_monster_wave_row',
       otherKey: 'monster_variety_row',
       nullable: true,

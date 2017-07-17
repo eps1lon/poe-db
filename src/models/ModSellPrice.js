@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mod_sell_price_types_key',
             },
           ],
+          name: 'index_mod_sell_price_types_key',
         },
       ],
       tableName: 'mod_sell_prices',
@@ -39,7 +40,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: models.ModSellPriceHabtmBaseItemType,
+      through: {
+        model: models.ModSellPriceHabtmBaseItemType,
+        unique: false,
+      },
       foreignKey: 'mod_sell_price_row',
       otherKey: 'base_item_type_row',
       nullable: true,

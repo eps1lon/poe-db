@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'chests_key',
             },
           ],
+          name: 'index_chests_key',
         },
       ],
       tableName: 'labyrinth_izaro_chests',

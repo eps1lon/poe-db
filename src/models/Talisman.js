@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -69,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'mods_key',
             },
           ],
+          name: 'index_mods_key',
         },
       ],
       tableName: 'talismans',

@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'base_item_types_key',
             },
           ],
+          name: 'index_base_item_types_key',
         },
         {
           fields: [
@@ -57,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'regular__world_areas_key',
             },
           ],
+          name: 'index_regular__world_areas_key',
         },
         {
           fields: [
@@ -64,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'unique__world_areas_key',
             },
           ],
+          name: 'index_unique__world_areas_key',
         },
         {
           fields: [
@@ -71,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'map_upgrade__base_item_types_key',
             },
           ],
+          name: 'index_map_upgrade__base_item_types_key',
         },
         {
           fields: [
@@ -78,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'shaped__base__maps_key',
             },
           ],
+          name: 'index_shaped__base__maps_key',
         },
         {
           fields: [
@@ -85,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'maps_key1',
             },
           ],
+          name: 'index_maps_key1',
         },
         {
           fields: [
@@ -92,6 +98,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'maps_key2',
             },
           ],
+          name: 'index_maps_key2',
         },
         {
           fields: [
@@ -99,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'maps_key3',
             },
           ],
+          name: 'index_maps_key3',
         },
       ],
       tableName: 'maps',
@@ -188,7 +196,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
-      through: models.MapHabtmMonsterPack,
+      through: {
+        model: models.MapHabtmMonsterPack,
+        unique: false,
+      },
       foreignKey: 'map_row',
       otherKey: 'monster_pack_row',
       nullable: true,
@@ -196,7 +207,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'higher_tier_maps__base_item_types',
-      through: models.MapHabtmHigherTierMapsBaseitemtype,
+      through: {
+        model: models.MapHabtmHigherTierMapsBaseitemtype,
+        unique: false,
+      },
       foreignKey: 'map_row',
       otherKey: 'base_item_type_row',
       nullable: true,

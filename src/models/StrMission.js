@@ -86,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_talk_key',
             },
           ],
+          name: 'index_n_p_c_talk_key',
         },
       ],
       tableName: 'str_missions',
@@ -105,7 +106,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.StrMissionHabtmMod,
+      through: {
+        model: models.StrMissionHabtmMod,
+        unique: false,
+      },
       foreignKey: 'str_mission_row',
       otherKey: 'mod_row',
       nullable: true,

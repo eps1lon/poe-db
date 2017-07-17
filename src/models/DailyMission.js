@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'n_p_c_talk_key',
             },
           ],
+          name: 'index_n_p_c_talk_key',
         },
         {
           fields: [
@@ -69,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'p_v_p_types_key',
             },
           ],
+          name: 'index_p_v_p_types_key',
         },
       ],
       tableName: 'daily_missions',
@@ -98,7 +100,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: models.DailyMissionHabtmCharacter,
+      through: {
+        model: models.DailyMissionHabtmCharacter,
+        unique: false,
+      },
       foreignKey: 'daily_mission_row',
       otherKey: 'character_row',
       nullable: true,

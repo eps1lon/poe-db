@@ -104,6 +104,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'upgrade__shop_payment_package_key',
             },
           ],
+          name: 'index_upgrade__shop_payment_package_key',
         },
       ],
       tableName: 'shop_payment_packages',

@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'misc_animated_key',
             },
           ],
+          name: 'index_misc_animated_key',
         },
         {
           fields: [
@@ -63,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'misc_animated_key2',
             },
           ],
+          name: 'index_misc_animated_key2',
         },
       ],
       tableName: 'buff_visuals',
@@ -92,7 +94,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.PreloadGroup, {
       as: 'preload_groups',
-      through: models.BuffVisualHabtmPreloadGroup,
+      through: {
+        model: models.BuffVisualHabtmPreloadGroup,
+        unique: false,
+      },
       foreignKey: 'buff_visual_row',
       otherKey: 'preload_group_row',
       nullable: true,

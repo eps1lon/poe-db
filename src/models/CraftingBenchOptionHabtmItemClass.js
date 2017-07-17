@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: ['crafting_bench_option_row', 'item_class_row'],
+          name: 'composite primary_alias',
+          unique: true,
+        },
+      ],
       tableName: 'crafting_bench_option_habtm_item_classes',
     },
   );

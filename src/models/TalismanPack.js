@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_varieties_key',
             },
           ],
+          name: 'index_monster_varieties_key',
         },
         {
           fields: [
@@ -69,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
               attribute: 'monster_packs_key',
             },
           ],
+          name: 'index_monster_packs_key',
         },
       ],
       tableName: 'talisman_packs',
@@ -98,7 +100,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
-      through: models.TalismanPackHabtmMonsterPack,
+      through: {
+        model: models.TalismanPackHabtmMonsterPack,
+        unique: false,
+      },
       foreignKey: 'talisman_pack_row',
       otherKey: 'monster_pack_row',
       nullable: true,

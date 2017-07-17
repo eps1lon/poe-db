@@ -457,114 +457,152 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: models.MonsterVarietyMod,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
       through: models.MonsterVarietyTag,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.GrantedEffect, {
       as: 'granted_effects',
       through: models.MonsterVarietyGrantedEffect,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'granted_effect_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods2',
       through: models.MonsterVarietyMods2,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon1__item_visual_identity',
       through: models.MonsterVarietyWeapon1Itemvisualidentity,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'item_visual_identity_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon2__item_visual_identity',
       through: models.MonsterVarietyWeapon2Itemvisualidentity,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'item_visual_identity_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
       through: models.MonsterVarietyAchievementItem,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'special__mods',
       through: models.MonsterVarietySpecialMod,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items2',
       through: models.MonsterVarietyAchievementItems2,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'normal__achievement_items',
       through: models.MonsterVarietyNormalAchievementitem,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'merciless__achievement_items',
       through: models.MonsterVarietyMercilessAchievementitem,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'cruel__achievement_items',
       through: models.MonsterVarietyCruelAchievementitem,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'normal__mods',
       through: models.MonsterVarietyNormalMod,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'cruel__mods',
       through: models.MonsterVarietyCruelMod,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'merciless__mods',
       through: models.MonsterVarietyMercilessMod,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'kill_rare_in_normal__achievement_items',
       through: models.MonsterVarietyKillRareInNormalAchievementitem,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'kill_rare_in_cruel__achievement_items',
       through: models.MonsterVarietyKillRareInCruelAchievementitem,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'kill_rare_in_merciless__achievement_items',
       through: models.MonsterVarietyKillRareInMercilessAchievementitem,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'count_kills__achievement_items',
       through: models.MonsterVarietyCountKillsAchievementitem,
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });

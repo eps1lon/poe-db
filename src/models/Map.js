@@ -189,12 +189,16 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
       through: models.MapMonsterPack,
+      foreignKey: 'map_row',
+      otherKey: 'monster_pack_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'higher_tier_maps__base_item_types',
       through: models.MapHigherTierMapsBaseitemtype,
+      foreignKey: 'map_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });

@@ -81,30 +81,40 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'spirit__mods',
       through: models.TormentSpiritSpiritMod,
+      foreignKey: 'torment_spirit_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'touched__mods',
       through: models.TormentSpiritTouchedMod,
+      foreignKey: 'torment_spirit_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'possessed__mods',
       through: models.TormentSpiritPossessedMod,
+      foreignKey: 'torment_spirit_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods0',
       through: models.TormentSpiritMods0,
+      foreignKey: 'torment_spirit_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods1',
       through: models.TormentSpiritMods1,
+      foreignKey: 'torment_spirit_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });

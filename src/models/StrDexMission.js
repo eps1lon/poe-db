@@ -105,18 +105,24 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterVariety, {
       as: 'allies__monster_varieties',
       through: models.StrDexMissionAlliesMonstervariety,
+      foreignKey: 'str_dex_mission_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: models.StrDexMissionMod,
+      foreignKey: 'str_dex_mission_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'traps__monster_varieties',
       through: models.StrDexMissionTrapsMonstervariety,
+      foreignKey: 'str_dex_mission_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });

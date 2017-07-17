@@ -106,6 +106,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: models.StrMissionMod,
+      foreignKey: 'str_mission_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });

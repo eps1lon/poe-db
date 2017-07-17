@@ -186,42 +186,56 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'implicit__mods',
       through: models.BaseItemTypeImplicitMod,
+      foreignKey: 'base_item_type_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'normal_purchase__base_item_types',
       through: models.BaseItemTypeNormalPurchaseBaseitemtype,
+      foreignKey: 'source_row',
+      otherKey: 'target_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'magic_purchase__base_item_types',
       through: models.BaseItemTypeMagicPurchaseBaseitemtype,
+      foreignKey: 'source_row',
+      otherKey: 'target_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
       through: models.BaseItemTypeTag,
+      foreignKey: 'base_item_type_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'vendor_recipe__achievement_items',
       through: models.BaseItemTypeVendorRecipeAchievementitem,
+      foreignKey: 'base_item_type_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'rare_purchase__base_item_types',
       through: models.BaseItemTypeRarePurchaseBaseitemtype,
+      foreignKey: 'source_row',
+      otherKey: 'target_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'unique_purchase__base_item_types',
       through: models.BaseItemTypeUniquePurchaseBaseitemtype,
+      foreignKey: 'source_row',
+      otherKey: 'target_row',
       nullable: true,
       constraints: false,
     });

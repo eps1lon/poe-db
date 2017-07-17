@@ -194,18 +194,24 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Stat, {
       as: 'stats',
       through: models.PassiveSkillStat,
+      foreignKey: 'passive_skill_row',
+      otherKey: 'stat_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Character, {
       as: 'characters',
       through: models.PassiveSkillCharacter,
+      foreignKey: 'passive_skill_row',
+      otherKey: 'character_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ClientString, {
       as: 'reminder__client_strings',
       through: models.PassiveSkillReminderClientstring,
+      foreignKey: 'passive_skill_row',
+      otherKey: 'client_string_row',
       nullable: true,
       constraints: false,
     });

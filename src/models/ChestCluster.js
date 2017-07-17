@@ -52,6 +52,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Chest, {
       as: 'chests',
       through: models.ChestClusterChest,
+      foreignKey: 'chest_cluster_row',
+      otherKey: 'chest_row',
       nullable: true,
       constraints: false,
     });

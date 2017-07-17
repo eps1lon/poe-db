@@ -58,6 +58,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Tag, {
       as: 'sold_item__tags',
       through: models.NPCShopSoldItemTag,
+      foreignKey: 'n_p_c_shop_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });

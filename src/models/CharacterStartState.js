@@ -93,24 +93,32 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.PassiveSkill, {
       as: 'passive_skills',
       through: models.CharacterStartStatePassiveSkill,
+      foreignKey: 'character_start_state_row',
+      otherKey: 'passive_skill_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'normal__character_start_quest_state',
       through: models.CharacterStartStateNormalCharacterstartqueststate,
+      foreignKey: 'character_start_state_row',
+      otherKey: 'character_start_quest_state_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'cruel__character_start_quest_state',
       through: models.CharacterStartStateCruelCharacterstartqueststate,
+      foreignKey: 'character_start_state_row',
+      otherKey: 'character_start_quest_state_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'merciless__character_start_quest_state',
       through: models.CharacterStartStateMercilessCharacterstartqueststate,
+      foreignKey: 'character_start_state_row',
+      otherKey: 'character_start_quest_state_row',
       nullable: true,
       constraints: false,
     });

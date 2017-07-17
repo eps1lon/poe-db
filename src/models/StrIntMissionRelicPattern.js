@@ -76,6 +76,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'relic__mods',
       through: models.StrIntMissionRelicPatternRelicMod,
+      foreignKey: 'str_int_mission_relic_pattern_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });

@@ -51,7 +51,15 @@ class SequelizeModel extends SequelizeBaseModel {
   belongsToMany() {
     return this.throughModels().map(([as, model]) => {
       // field fallback for generic `KeysX`
-      return [model.targetModelName(), { as, through: model.name() }];
+      return [
+        model.targetModelName(),
+        {
+          as,
+          through: model.name(),
+          foreignKey: model.foreignKey(),
+          otherKey: model.targetKey(),
+        },
+      ];
     });
   }
 

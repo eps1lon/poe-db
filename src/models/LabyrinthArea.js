@@ -28,24 +28,32 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.WorldArea, {
       as: 'normal__world_areas',
       through: models.LabyrinthAreaNormalWorldarea,
+      foreignKey: 'labyrinth_area_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'cruel__world_areas',
       through: models.LabyrinthAreaCruelWorldarea,
+      foreignKey: 'labyrinth_area_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'merciless__world_areas',
       through: models.LabyrinthAreaMercilessWorldarea,
+      foreignKey: 'labyrinth_area_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'endgame__world_areas',
       through: models.LabyrinthAreaEndgameWorldarea,
+      foreignKey: 'labyrinth_area_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });

@@ -100,12 +100,16 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.ShopItem, {
       as: 'package__shop_item',
       through: models.ShopItemPackageShopitem,
+      foreignKey: 'source_row',
+      otherKey: 'target_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.ShopCategory, {
       as: 'shop_category',
       through: models.ShopItemShopCategory,
+      foreignKey: 'shop_item_row',
+      otherKey: 'shop_category_row',
       nullable: true,
       constraints: false,
     });

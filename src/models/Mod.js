@@ -338,18 +338,24 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Tag, {
       as: 'spawn_weight__tags',
       through: models.ModSpawnWeightTag,
+      foreignKey: 'mod_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
       through: models.ModTag,
+      foreignKey: 'mod_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'generation_weight__tags',
       through: models.ModGenerationWeightTag,
+      foreignKey: 'mod_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });

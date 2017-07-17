@@ -28,6 +28,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.ModSellPrice, {
       as: 'mod_sell_prices',
       through: models.ModTypeModSellPrice,
+      foreignKey: 'mod_type_row',
+      otherKey: 'mod_sell_price_row',
       nullable: true,
       constraints: false,
     });

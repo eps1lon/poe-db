@@ -76,18 +76,24 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
       through: models.MonsterPackWorldArea,
+      foreignKey: 'monster_pack_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'boss_monster__monster_varieties',
       through: models.MonsterPackBossMonsterMonstervariety,
+      foreignKey: 'monster_pack_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
       through: models.MonsterPackTag,
+      foreignKey: 'monster_pack_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });

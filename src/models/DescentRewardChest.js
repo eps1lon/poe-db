@@ -46,84 +46,112 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types1',
       through: models.DescentRewardChestBaseItemTypes1,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types2',
       through: models.DescentRewardChestBaseItemTypes2,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types3',
       through: models.DescentRewardChestBaseItemTypes3,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types4',
       through: models.DescentRewardChestBaseItemTypes4,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types5',
       through: models.DescentRewardChestBaseItemTypes5,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types6',
       through: models.DescentRewardChestBaseItemTypes6,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types7',
       through: models.DescentRewardChestBaseItemTypes7,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types8',
       through: models.DescentRewardChestBaseItemTypes8,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types9',
       through: models.DescentRewardChestBaseItemTypes9,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types10',
       through: models.DescentRewardChestBaseItemTypes10,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types11',
       through: models.DescentRewardChestBaseItemTypes11,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types12',
       through: models.DescentRewardChestBaseItemTypes12,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types13',
       through: models.DescentRewardChestBaseItemTypes13,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types14',
       through: models.DescentRewardChestBaseItemTypes14,
+      foreignKey: 'descent_reward_chest_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });

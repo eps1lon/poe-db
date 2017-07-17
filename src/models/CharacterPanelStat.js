@@ -81,18 +81,24 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Stat, {
       as: 'stats1',
       through: models.CharacterPanelStatStats1,
+      foreignKey: 'character_panel_stat_row',
+      otherKey: 'stat_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
       as: 'stats2',
       through: models.CharacterPanelStatStats2,
+      foreignKey: 'character_panel_stat_row',
+      otherKey: 'stat_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
       as: 'stats3',
       through: models.CharacterPanelStatStats3,
+      foreignKey: 'character_panel_stat_row',
+      otherKey: 'stat_row',
       nullable: true,
       constraints: false,
     });

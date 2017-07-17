@@ -134,24 +134,32 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.WorldArea, {
       as: 'normal__world_areas',
       through: models.MapPinNormalWorldarea,
+      foreignKey: 'map_pin_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'merciless__world_areas',
       through: models.MapPinMercilessWorldarea,
+      foreignKey: 'map_pin_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'cruel__world_areas',
       through: models.MapPinCruelWorldarea,
+      foreignKey: 'map_pin_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
       through: models.MapPinWorldArea,
+      foreignKey: 'map_pin_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });

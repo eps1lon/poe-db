@@ -46,12 +46,16 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterVariety, {
       as: 'objective__monster_varieties',
       through: models.IntMissionMonsterObjectiveMonstervariety,
+      foreignKey: 'int_mission_monster_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
       through: models.IntMissionMonsterAchievementItem,
+      foreignKey: 'int_mission_monster_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });

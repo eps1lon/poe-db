@@ -206,6 +206,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Stat, {
       as: 'stats',
       through: models.BuffDefinitionStat,
+      foreignKey: 'buff_definition_row',
+      otherKey: 'stat_row',
       nullable: true,
       constraints: false,
     });

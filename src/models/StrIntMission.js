@@ -123,12 +123,16 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'relic_mods',
       through: models.StrIntMissionRelicMod,
+      foreignKey: 'str_int_mission_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
       through: models.StrIntMissionAchievementItem,
+      foreignKey: 'str_int_mission_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });

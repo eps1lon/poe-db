@@ -40,6 +40,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.PreloadGroup, {
       as: 'preload_groups',
       through: models.MiscAnimatedPreloadGroup,
+      foreignKey: 'misc_animated_row',
+      otherKey: 'preload_group_row',
       nullable: true,
       constraints: false,
     });

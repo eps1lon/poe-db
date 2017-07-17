@@ -117,12 +117,16 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.SkillGem, {
       as: 'socketed__skill_gems',
       through: models.CharacterStartItemSocketedSkillgem,
+      foreignKey: 'character_start_item_row',
+      otherKey: 'skill_gem_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: models.CharacterStartItemMod,
+      foreignKey: 'character_start_item_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });

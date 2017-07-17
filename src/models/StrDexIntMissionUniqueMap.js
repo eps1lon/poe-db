@@ -64,12 +64,16 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: models.StrDexIntMissionUniqueMapMod,
+      foreignKey: 'str_dex_int_mission_unique_map_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'map_boss__monster_varieties',
       through: models.StrDexIntMissionUniqueMapMapBossMonstervariety,
+      foreignKey: 'str_dex_int_mission_unique_map_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });

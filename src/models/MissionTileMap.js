@@ -46,6 +46,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
       through: models.MissionTileMapWorldArea,
+      foreignKey: 'mission_tile_map_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });

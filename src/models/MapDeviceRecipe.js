@@ -40,12 +40,16 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
       through: models.MapDeviceRecipeBaseItemType,
+      foreignKey: 'map_device_recipe_row',
+      otherKey: 'base_item_type_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
       through: models.MapDeviceRecipeWorldArea,
+      foreignKey: 'map_device_recipe_row',
+      otherKey: 'world_area_row',
       nullable: true,
       constraints: false,
     });

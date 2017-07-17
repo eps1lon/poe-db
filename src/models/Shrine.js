@@ -186,6 +186,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
       through: models.ShrineAchievementItem,
+      foreignKey: 'shrine_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });

@@ -88,24 +88,32 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterVariety, {
       as: 'tier4__monster_varieties',
       through: models.WarbandsPackMonsterTier4Monstervariety,
+      foreignKey: 'warbands_pack_monster_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'tier3__monster_varieties',
       through: models.WarbandsPackMonsterTier3Monstervariety,
+      foreignKey: 'warbands_pack_monster_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'tier2__monster_varieties',
       through: models.WarbandsPackMonsterTier2Monstervariety,
+      foreignKey: 'warbands_pack_monster_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'tier1__monster_varieties',
       through: models.WarbandsPackMonsterTier1Monstervariety,
+      foreignKey: 'warbands_pack_monster_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });

@@ -52,6 +52,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: models.GrandmasterMod,
+      foreignKey: 'grandmaster_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });

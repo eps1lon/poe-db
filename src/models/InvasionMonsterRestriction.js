@@ -52,6 +52,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.MonsterVariety, {
       as: 'monster_varieties',
       through: models.InvasionMonsterRestrictionMonsterVariety,
+      foreignKey: 'invasion_monster_restriction_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });

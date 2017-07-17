@@ -208,18 +208,24 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Stat, {
       as: 'stats',
       through: models.GrantedEffectsPerLevelStat,
+      foreignKey: 'granted_effects_per_level_row',
+      otherKey: 'stat_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
       as: 'quality__stats',
       through: models.GrantedEffectsPerLevelQualityStat,
+      foreignKey: 'granted_effects_per_level_row',
+      otherKey: 'stat_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
       as: 'stats2',
       through: models.GrantedEffectsPerLevelStats2,
+      foreignKey: 'granted_effects_per_level_row',
+      otherKey: 'stat_row',
       nullable: true,
       constraints: false,
     });

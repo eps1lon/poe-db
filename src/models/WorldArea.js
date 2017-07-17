@@ -527,66 +527,88 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.WorldArea, {
       as: 'connections__world_areas',
       through: models.WorldAreaConnectionsWorldarea,
+      foreignKey: 'source_row',
+      otherKey: 'target_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Topology, {
       as: 'topologies',
       through: models.WorldAreaTopology,
+      foreignKey: 'world_area_row',
+      otherKey: 'topology_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'bosses__monster_varieties',
       through: models.WorldAreaBossesMonstervariety,
+      foreignKey: 'world_area_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'monsters__monster_varieties',
       through: models.WorldAreaMonstersMonstervariety,
+      foreignKey: 'world_area_row',
+      otherKey: 'monster_variety_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'spawn_weight__tags',
       through: models.WorldAreaSpawnWeightTag,
+      foreignKey: 'world_area_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'full_clear__achievement_items',
       through: models.WorldAreaFullClearAchievementitem,
+      foreignKey: 'world_area_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: models.WorldAreaMod,
+      foreignKey: 'world_area_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
       as: 'vaal_area__world_areas',
       through: models.WorldAreaVaalAreaWorldarea,
+      foreignKey: 'source_row',
+      otherKey: 'target_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'area_type__tags',
       through: models.WorldAreaAreaTypeTag,
+      foreignKey: 'world_area_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
       through: models.WorldAreaTag,
+      foreignKey: 'world_area_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
       as: '1',
       through: models.WorldArea1,
+      foreignKey: 'world_area_row',
+      otherKey: 'achievement_item_row',
       nullable: true,
       constraints: false,
     });

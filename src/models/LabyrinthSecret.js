@@ -118,24 +118,32 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects0',
       through: models.LabyrinthSecretLabyrinthSecretEffects0,
+      foreignKey: 'labyrinth_secret_row',
+      otherKey: 'labyrinth_secret_effect_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects1',
       through: models.LabyrinthSecretLabyrinthSecretEffects1,
+      foreignKey: 'labyrinth_secret_row',
+      otherKey: 'labyrinth_secret_effect_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects2',
       through: models.LabyrinthSecretLabyrinthSecretEffects2,
+      foreignKey: 'labyrinth_secret_row',
+      otherKey: 'labyrinth_secret_effect_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.LabyrinthSecretEffect, {
       as: 'labyrinth_secret_effects3',
       through: models.LabyrinthSecretLabyrinthSecretEffects3,
+      foreignKey: 'labyrinth_secret_row',
+      otherKey: 'labyrinth_secret_effect_row',
       nullable: true,
       constraints: false,
     });

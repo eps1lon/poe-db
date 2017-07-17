@@ -216,12 +216,16 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: models.ChestMod,
+      foreignKey: 'chest_row',
+      otherKey: 'mod_row',
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
       through: models.ChestTag,
+      foreignKey: 'chest_row',
+      otherKey: 'tag_row',
       nullable: true,
       constraints: false,
     });

@@ -116,6 +116,8 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsToMany(models.AtlasNode, {
       as: 'atlas_node',
       through: models.AtlasNodeAtlasNode,
+      foreignKey: 'source_row',
+      otherKey: 'target_row',
       nullable: true,
       constraints: false,
     });

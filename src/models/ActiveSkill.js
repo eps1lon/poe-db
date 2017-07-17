@@ -111,7 +111,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.ItemClass, {
       as: 'weapon_restriction__item_classes',
-      through: models.ActiveSkillWeaponRestrictionItemclass,
+      through: models.ActiveSkillHabtmWeaponRestrictionItemclass,
       foreignKey: 'active_skill_row',
       otherKey: 'item_class_row',
       nullable: true,
@@ -119,7 +119,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'input__stat',
-      through: models.ActiveSkillInputStat,
+      through: models.ActiveSkillHabtmInputStat,
       foreignKey: 'active_skill_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -127,7 +127,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'output__stat',
-      through: models.ActiveSkillOutputStat,
+      through: models.ActiveSkillHabtmOutputStat,
       foreignKey: 'active_skill_row',
       otherKey: 'stat_row',
       nullable: true,

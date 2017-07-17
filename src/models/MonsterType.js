@@ -81,7 +81,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: models.MonsterTypeTag,
+      through: models.MonsterTypeHabtmTag,
       foreignKey: 'monster_type_row',
       otherKey: 'tag_row',
       nullable: true,

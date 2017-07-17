@@ -206,7 +206,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'pickup__achievement_items',
-      through: models.ItemVisualIdentityPickupAchievementitem,
+      through: models.ItemVisualIdentityHabtmPickupAchievementitem,
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -214,7 +214,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'identify__achievement_items',
-      through: models.ItemVisualIdentityIdentifyAchievementitem,
+      through: models.ItemVisualIdentityHabtmIdentifyAchievementitem,
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -222,7 +222,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'corrupt__achievement_items',
-      through: models.ItemVisualIdentityCorruptAchievementitem,
+      through: models.ItemVisualIdentityHabtmCorruptAchievementitem,
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
       nullable: true,

@@ -125,7 +125,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.LabyrinthSectionLayout, {
       as: 'labyrinth_section_layout',
-      through: models.LabyrinthSectionLayoutLabyrinthSectionLayout,
+      through: models.LabyrinthSectionLayoutHabtmLabyrinthSectionLayout,
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,

@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.Quest, {
       as: 'quest',
-      through: models.CharacterStartQuestStateQuest,
+      through: models.CharacterStartQuestStateHabtmQuest,
       foreignKey: 'character_start_quest_state_row',
       otherKey: 'quest_row',
       nullable: true,
@@ -53,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MapPin, {
       as: 'map_pins',
-      through: models.CharacterStartQuestStateMapPin,
+      through: models.CharacterStartQuestStateHabtmMapPin,
       foreignKey: 'character_start_quest_state_row',
       otherKey: 'map_pin_row',
       nullable: true,

@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
-      through: models.PerandusGuardMonsterPack,
+      through: models.PerandusGuardHabtmMonsterPack,
       foreignKey: 'perandus_guard_row',
       otherKey: 'monster_pack_row',
       nullable: true,

@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: models.ModSellPriceBaseItemType,
+      through: models.ModSellPriceHabtmBaseItemType,
       foreignKey: 'mod_sell_price_row',
       otherKey: 'base_item_type_row',
       nullable: true,

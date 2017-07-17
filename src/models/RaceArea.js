@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.RaceAreaMod,
+      through: models.RaceAreaHabtmMod,
       foreignKey: 'race_area_row',
       otherKey: 'mod_row',
       nullable: true,

@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: models.QuestVendorRewardCharacter,
+      through: models.QuestVendorRewardHabtmCharacter,
       foreignKey: 'quest_vendor_reward_row',
       otherKey: 'character_row',
       nullable: true,
@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: models.QuestVendorRewardBaseItemType,
+      through: models.QuestVendorRewardHabtmBaseItemType,
       foreignKey: 'quest_vendor_reward_row',
       otherKey: 'base_item_type_row',
       nullable: true,

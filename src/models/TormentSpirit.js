@@ -80,7 +80,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'spirit__mods',
-      through: models.TormentSpiritSpiritMod,
+      through: models.TormentSpiritHabtmSpiritMod,
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -88,7 +88,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'touched__mods',
-      through: models.TormentSpiritTouchedMod,
+      through: models.TormentSpiritHabtmTouchedMod,
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -96,7 +96,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'possessed__mods',
-      through: models.TormentSpiritPossessedMod,
+      through: models.TormentSpiritHabtmPossessedMod,
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -104,7 +104,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods0',
-      through: models.TormentSpiritMods0,
+      through: models.TormentSpiritHabtmMods0,
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -112,7 +112,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods1',
-      through: models.TormentSpiritMods1,
+      through: models.TormentSpiritHabtmMods1,
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
       nullable: true,

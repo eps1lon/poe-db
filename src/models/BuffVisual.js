@@ -92,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.PreloadGroup, {
       as: 'preload_groups',
-      through: models.BuffVisualPreloadGroup,
+      through: models.BuffVisualHabtmPreloadGroup,
       foreignKey: 'buff_visual_row',
       otherKey: 'preload_group_row',
       nullable: true,

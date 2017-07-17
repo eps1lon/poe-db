@@ -39,6 +39,7 @@ class SequelizeThroughModel extends SequelizeBaseModel {
         // StrDexMissionsMods. StrDexIntMissions avoids this by naming the field
         // Extra_ModsKey.
         this.sourceModelName() +
+          'Habtm' +
           this.from_field.name.replace(/Keys([0-9]*)$/, '$1'),
       ),
     );

@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'marauder__character_text_audio',
-      through: models.CharacterAudioEventMarauderCharactertextaudio,
+      through: models.CharacterAudioEventHabtmMarauderCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,
@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'ranger__character_text_audio',
-      through: models.CharacterAudioEventRangerCharactertextaudio,
+      through: models.CharacterAudioEventHabtmRangerCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,
@@ -67,7 +67,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'witch__character_text_audio',
-      through: models.CharacterAudioEventWitchCharactertextaudio,
+      through: models.CharacterAudioEventHabtmWitchCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,
@@ -75,7 +75,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'duelist__character_text_audio',
-      through: models.CharacterAudioEventDuelistCharactertextaudio,
+      through: models.CharacterAudioEventHabtmDuelistCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,
@@ -83,7 +83,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'shadow__character_text_audio',
-      through: models.CharacterAudioEventShadowCharactertextaudio,
+      through: models.CharacterAudioEventHabtmShadowCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,
@@ -91,7 +91,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'templar__character_text_audio',
-      through: models.CharacterAudioEventTemplarCharactertextaudio,
+      through: models.CharacterAudioEventHabtmTemplarCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,
@@ -99,7 +99,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'scion__character_text_audio',
-      through: models.CharacterAudioEventScionCharactertextaudio,
+      through: models.CharacterAudioEventHabtmScionCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,
@@ -107,7 +107,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'goddess__character_text_audio',
-      through: models.CharacterAudioEventGoddessCharactertextaudio,
+      through: models.CharacterAudioEventHabtmGoddessCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,
@@ -115,7 +115,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterTextAudio, {
       as: 'jack_the_axe__character_text_audio',
-      through: models.CharacterAudioEventJackTheAxeCharactertextaudio,
+      through: models.CharacterAudioEventHabtmJackTheAxeCharactertextaudio,
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
       nullable: true,

@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types',
-      through: models.EndlessLedgeChestBaseItemType,
+      through: models.EndlessLedgeChestHabtmBaseItemType,
       foreignKey: 'endless_ledge_chest_row',
       otherKey: 'base_item_type_row',
       nullable: true,

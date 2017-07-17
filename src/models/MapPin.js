@@ -133,7 +133,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'normal__world_areas',
-      through: models.MapPinNormalWorldarea,
+      through: models.MapPinHabtmNormalWorldarea,
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
       nullable: true,
@@ -141,7 +141,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'merciless__world_areas',
-      through: models.MapPinMercilessWorldarea,
+      through: models.MapPinHabtmMercilessWorldarea,
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
       nullable: true,
@@ -149,7 +149,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'cruel__world_areas',
-      through: models.MapPinCruelWorldarea,
+      through: models.MapPinHabtmCruelWorldarea,
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
       nullable: true,
@@ -157,7 +157,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.WorldArea, {
       as: 'world_areas',
-      through: models.MapPinWorldArea,
+      through: models.MapPinHabtmWorldArea,
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
       nullable: true,

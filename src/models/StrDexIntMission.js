@@ -128,7 +128,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'extra__mods',
-      through: models.StrDexIntMissionExtraMod,
+      through: models.StrDexIntMissionHabtmExtraMod,
       foreignKey: 'str_dex_int_mission_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -136,7 +136,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: models.StrDexIntMissionAchievementItem,
+      through: models.StrDexIntMissionHabtmAchievementItem,
       foreignKey: 'str_dex_int_mission_row',
       otherKey: 'achievement_item_row',
       nullable: true,

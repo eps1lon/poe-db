@@ -7,12 +7,12 @@ const SequelizeModel = require('../src/model/SequelizeModel');
 
 const spec = require('../data/spec.json');
 
-const writeAst = async (model, subdir = '') => {
+const writeAst = async model => {
   const ast = model.ast();
 
   try {
     fs.writeFile(
-      path.join(__dirname, '../src/models/', subdir, model.name() + '.js'),
+      path.join(__dirname, '../src/models/', model.name() + '.js'),
       generate(ast).code,
       throwOnError(),
     );
@@ -32,5 +32,5 @@ for (const [name, props] of Object.entries(spec).filter(
 
   writeAst(model);
 
-  model.throughModels().map(([, model]) => writeAst(model, 'through'));
+  model.throughModels().map(([, model]) => writeAst(model));
 }

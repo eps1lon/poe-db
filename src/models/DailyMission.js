@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: models.DailyMissionCharacter,
+      through: models.DailyMissionHabtmCharacter,
       foreignKey: 'daily_mission_row',
       otherKey: 'character_row',
       nullable: true,

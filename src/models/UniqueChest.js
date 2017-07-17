@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.UniqueChestMod,
+      through: models.UniqueChestHabtmMod,
       foreignKey: 'unique_chest_row',
       otherKey: 'mod_row',
       nullable: true,

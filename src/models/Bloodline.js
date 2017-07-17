@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.BloodlineMod,
+      through: models.BloodlineHabtmMod,
       foreignKey: 'bloodline_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -118,7 +118,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'spawn_weight__tags',
-      through: models.BloodlineSpawnWeightTag,
+      through: models.BloodlineHabtmSpawnWeightTag,
       foreignKey: 'bloodline_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -126,7 +126,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'item_weight__tags',
-      through: models.BloodlineItemWeightTag,
+      through: models.BloodlineHabtmItemWeightTag,
       foreignKey: 'bloodline_row',
       otherKey: 'tag_row',
       nullable: true,

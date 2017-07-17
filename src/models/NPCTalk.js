@@ -200,7 +200,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.NPCTextAudio, {
       as: 'n_p_c_text_audio',
-      through: models.NPCTalkNPCTextAudio,
+      through: models.NPCTalkHabtmNPCTextAudio,
       foreignKey: 'n_p_c_talk_row',
       otherKey: 'n_p_c_text_audio_row',
       nullable: true,

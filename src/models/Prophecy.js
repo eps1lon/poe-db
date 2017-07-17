@@ -111,7 +111,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ClientString, {
       as: 'quest_tracker__client_strings',
-      through: models.ProphecyQuestTrackerClientstring,
+      through: models.ProphecyHabtmQuestTrackerClientstring,
       foreignKey: 'prophecy_row',
       otherKey: 'client_string_row',
       nullable: true,

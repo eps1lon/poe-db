@@ -87,7 +87,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.MonsterVariety, {
       as: 'tier4__monster_varieties',
-      through: models.WarbandsPackMonsterTier4Monstervariety,
+      through: models.WarbandsPackMonsterHabtmTier4Monstervariety,
       foreignKey: 'warbands_pack_monster_row',
       otherKey: 'monster_variety_row',
       nullable: true,
@@ -95,7 +95,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'tier3__monster_varieties',
-      through: models.WarbandsPackMonsterTier3Monstervariety,
+      through: models.WarbandsPackMonsterHabtmTier3Monstervariety,
       foreignKey: 'warbands_pack_monster_row',
       otherKey: 'monster_variety_row',
       nullable: true,
@@ -103,7 +103,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'tier2__monster_varieties',
-      through: models.WarbandsPackMonsterTier2Monstervariety,
+      through: models.WarbandsPackMonsterHabtmTier2Monstervariety,
       foreignKey: 'warbands_pack_monster_row',
       otherKey: 'monster_variety_row',
       nullable: true,
@@ -111,7 +111,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'tier1__monster_varieties',
-      through: models.WarbandsPackMonsterTier1Monstervariety,
+      through: models.WarbandsPackMonsterHabtmTier1Monstervariety,
       foreignKey: 'warbands_pack_monster_row',
       otherKey: 'monster_variety_row',
       nullable: true,

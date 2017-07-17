@@ -122,7 +122,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'cost__base_item_types',
-      through: models.CraftingBenchOptionCostBaseitemtype,
+      through: models.CraftingBenchOptionHabtmCostBaseitemtype,
       foreignKey: 'crafting_bench_option_row',
       otherKey: 'base_item_type_row',
       nullable: true,
@@ -130,7 +130,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ItemClass, {
       as: 'item_classes',
-      through: models.CraftingBenchOptionItemClass,
+      through: models.CraftingBenchOptionHabtmItemClass,
       foreignKey: 'crafting_bench_option_row',
       otherKey: 'item_class_row',
       nullable: true,

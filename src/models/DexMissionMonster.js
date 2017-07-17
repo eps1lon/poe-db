@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
-      through: models.DexMissionMonsterMonsterPack,
+      through: models.DexMissionMonsterHabtmMonsterPack,
       foreignKey: 'dex_mission_monster_row',
       otherKey: 'monster_pack_row',
       nullable: true,
@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'monster_varieties',
-      through: models.DexMissionMonsterMonsterVariety,
+      through: models.DexMissionMonsterHabtmMonsterVariety,
       foreignKey: 'dex_mission_monster_row',
       otherKey: 'monster_variety_row',
       nullable: true,

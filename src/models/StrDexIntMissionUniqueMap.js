@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.StrDexIntMissionUniqueMapMod,
+      through: models.StrDexIntMissionUniqueMapHabtmMod,
       foreignKey: 'str_dex_int_mission_unique_map_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'map_boss__monster_varieties',
-      through: models.StrDexIntMissionUniqueMapMapBossMonstervariety,
+      through: models.StrDexIntMissionUniqueMapHabtmMapBossMonstervariety,
       foreignKey: 'str_dex_int_mission_unique_map_row',
       otherKey: 'monster_variety_row',
       nullable: true,

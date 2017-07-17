@@ -99,7 +99,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.ShopItem, {
       as: 'package__shop_item',
-      through: models.ShopItemPackageShopitem,
+      through: models.ShopItemHabtmPackageShopitem,
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,
@@ -107,7 +107,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ShopCategory, {
       as: 'shop_category',
-      through: models.ShopItemShopCategory,
+      through: models.ShopItemHabtmShopCategory,
       foreignKey: 'shop_item_row',
       otherKey: 'shop_category_row',
       nullable: true,

@@ -139,7 +139,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'usage__achievement_items',
-      through: models.CurrencyItemUsageAchievementitem,
+      through: models.CurrencyItemHabtmUsageAchievementitem,
       foreignKey: 'currency_item_row',
       otherKey: 'achievement_item_row',
       nullable: true,

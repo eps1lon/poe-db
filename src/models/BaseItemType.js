@@ -185,7 +185,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'implicit__mods',
-      through: models.BaseItemTypeImplicitMod,
+      through: models.BaseItemTypeHabtmImplicitMod,
       foreignKey: 'base_item_type_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -193,7 +193,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'normal_purchase__base_item_types',
-      through: models.BaseItemTypeNormalPurchaseBaseitemtype,
+      through: models.BaseItemTypeHabtmNormalPurchaseBaseitemtype,
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,
@@ -201,7 +201,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'magic_purchase__base_item_types',
-      through: models.BaseItemTypeMagicPurchaseBaseitemtype,
+      through: models.BaseItemTypeHabtmMagicPurchaseBaseitemtype,
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,
@@ -209,7 +209,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: models.BaseItemTypeTag,
+      through: models.BaseItemTypeHabtmTag,
       foreignKey: 'base_item_type_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -217,7 +217,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'vendor_recipe__achievement_items',
-      through: models.BaseItemTypeVendorRecipeAchievementitem,
+      through: models.BaseItemTypeHabtmVendorRecipeAchievementitem,
       foreignKey: 'base_item_type_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -225,7 +225,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'rare_purchase__base_item_types',
-      through: models.BaseItemTypeRarePurchaseBaseitemtype,
+      through: models.BaseItemTypeHabtmRarePurchaseBaseitemtype,
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,
@@ -233,7 +233,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.BaseItemType, {
       as: 'unique_purchase__base_item_types',
-      through: models.BaseItemTypeUniquePurchaseBaseitemtype,
+      through: models.BaseItemTypeHabtmUniquePurchaseBaseitemtype,
       foreignKey: 'source_row',
       otherKey: 'target_row',
       nullable: true,

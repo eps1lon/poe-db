@@ -92,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.PassiveSkill, {
       as: 'passive_skills',
-      through: models.CharacterStartStatePassiveSkill,
+      through: models.CharacterStartStateHabtmPassiveSkill,
       foreignKey: 'character_start_state_row',
       otherKey: 'passive_skill_row',
       nullable: true,
@@ -100,7 +100,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'normal__character_start_quest_state',
-      through: models.CharacterStartStateNormalCharacterstartqueststate,
+      through: models.CharacterStartStateHabtmNormalCharacterstartqueststate,
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
       nullable: true,
@@ -108,7 +108,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'cruel__character_start_quest_state',
-      through: models.CharacterStartStateCruelCharacterstartqueststate,
+      through: models.CharacterStartStateHabtmCruelCharacterstartqueststate,
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
       nullable: true,
@@ -116,7 +116,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.CharacterStartQuestState, {
       as: 'merciless__character_start_quest_state',
-      through: models.CharacterStartStateMercilessCharacterstartqueststate,
+      through: models.CharacterStartStateHabtmMercilessCharacterstartqueststate,
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
       nullable: true,

@@ -193,7 +193,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats',
-      through: models.PassiveSkillStat,
+      through: models.PassiveSkillHabtmStat,
       foreignKey: 'passive_skill_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -201,7 +201,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Character, {
       as: 'characters',
-      through: models.PassiveSkillCharacter,
+      through: models.PassiveSkillHabtmCharacter,
       foreignKey: 'passive_skill_row',
       otherKey: 'character_row',
       nullable: true,
@@ -209,7 +209,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ClientString, {
       as: 'reminder__client_strings',
-      through: models.PassiveSkillReminderClientstring,
+      through: models.PassiveSkillHabtmReminderClientstring,
       foreignKey: 'passive_skill_row',
       otherKey: 'client_string_row',
       nullable: true,

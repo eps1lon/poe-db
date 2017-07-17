@@ -80,7 +80,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats1',
-      through: models.CharacterPanelStatStats1,
+      through: models.CharacterPanelStatHabtmStats1,
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -88,7 +88,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats2',
-      through: models.CharacterPanelStatStats2,
+      through: models.CharacterPanelStatHabtmStats2,
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
       nullable: true,
@@ -96,7 +96,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Stat, {
       as: 'stats3',
-      through: models.CharacterPanelStatStats3,
+      through: models.CharacterPanelStatHabtmStats3,
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
       nullable: true,

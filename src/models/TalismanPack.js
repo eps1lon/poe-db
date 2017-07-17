@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterPack, {
       as: 'monster_packs',
-      through: models.TalismanPackMonsterPack,
+      through: models.TalismanPackHabtmMonsterPack,
       foreignKey: 'talisman_pack_row',
       otherKey: 'monster_pack_row',
       nullable: true,

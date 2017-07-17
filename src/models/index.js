@@ -3,16 +3,11 @@ const path = require('path');
 
 const isModelFile = file => /[A-Z].*\.js$/.test(file);
 
-const modelFiles = () => [
-  ...fs
+const modelFiles = () =>
+  fs
     .readdirSync(__dirname)
     .filter(isModelFile)
-    .map(file => path.join(__dirname, file)),
-  ...fs
-    .readdirSync(path.join(__dirname, 'through'))
-    .filter(isModelFile)
-    .map(file => path.join(__dirname, 'through', file)),
-];
+    .map(file => path.join(__dirname, file));
 
 module.exports = {
   modelFiles,

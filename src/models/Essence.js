@@ -878,7 +878,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'monster__mods',
-      through: models.EssenceMonsterMod,
+      through: models.EssenceHabtmMonsterMod,
       foreignKey: 'essence_row',
       otherKey: 'mod_row',
       nullable: true,

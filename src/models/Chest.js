@@ -215,7 +215,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.ChestMod,
+      through: models.ChestHabtmMod,
       foreignKey: 'chest_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -223,7 +223,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: models.ChestTag,
+      through: models.ChestHabtmTag,
       foreignKey: 'chest_row',
       otherKey: 'tag_row',
       nullable: true,

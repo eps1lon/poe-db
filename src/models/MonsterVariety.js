@@ -456,7 +456,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods',
-      through: models.MonsterVarietyMod,
+      through: models.MonsterVarietyHabtmMod,
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -464,7 +464,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Tag, {
       as: 'tags',
-      through: models.MonsterVarietyTag,
+      through: models.MonsterVarietyHabtmTag,
       foreignKey: 'monster_variety_row',
       otherKey: 'tag_row',
       nullable: true,
@@ -472,7 +472,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.GrantedEffect, {
       as: 'granted_effects',
-      through: models.MonsterVarietyGrantedEffect,
+      through: models.MonsterVarietyHabtmGrantedEffect,
       foreignKey: 'monster_variety_row',
       otherKey: 'granted_effect_row',
       nullable: true,
@@ -480,7 +480,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'mods2',
-      through: models.MonsterVarietyMods2,
+      through: models.MonsterVarietyHabtmMods2,
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -488,7 +488,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon1__item_visual_identity',
-      through: models.MonsterVarietyWeapon1Itemvisualidentity,
+      through: models.MonsterVarietyHabtmWeapon1Itemvisualidentity,
       foreignKey: 'monster_variety_row',
       otherKey: 'item_visual_identity_row',
       nullable: true,
@@ -496,7 +496,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.ItemVisualIdentity, {
       as: 'weapon2__item_visual_identity',
-      through: models.MonsterVarietyWeapon2Itemvisualidentity,
+      through: models.MonsterVarietyHabtmWeapon2Itemvisualidentity,
       foreignKey: 'monster_variety_row',
       otherKey: 'item_visual_identity_row',
       nullable: true,
@@ -504,7 +504,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items',
-      through: models.MonsterVarietyAchievementItem,
+      through: models.MonsterVarietyHabtmAchievementItem,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -512,7 +512,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'special__mods',
-      through: models.MonsterVarietySpecialMod,
+      through: models.MonsterVarietyHabtmSpecialMod,
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -520,7 +520,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'achievement_items2',
-      through: models.MonsterVarietyAchievementItems2,
+      through: models.MonsterVarietyHabtmAchievementItems2,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -528,7 +528,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'normal__achievement_items',
-      through: models.MonsterVarietyNormalAchievementitem,
+      through: models.MonsterVarietyHabtmNormalAchievementitem,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -536,7 +536,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'merciless__achievement_items',
-      through: models.MonsterVarietyMercilessAchievementitem,
+      through: models.MonsterVarietyHabtmMercilessAchievementitem,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -544,7 +544,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'cruel__achievement_items',
-      through: models.MonsterVarietyCruelAchievementitem,
+      through: models.MonsterVarietyHabtmCruelAchievementitem,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -552,7 +552,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'normal__mods',
-      through: models.MonsterVarietyNormalMod,
+      through: models.MonsterVarietyHabtmNormalMod,
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -560,7 +560,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'cruel__mods',
-      through: models.MonsterVarietyCruelMod,
+      through: models.MonsterVarietyHabtmCruelMod,
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -568,7 +568,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.Mod, {
       as: 'merciless__mods',
-      through: models.MonsterVarietyMercilessMod,
+      through: models.MonsterVarietyHabtmMercilessMod,
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
       nullable: true,
@@ -576,7 +576,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'kill_rare_in_normal__achievement_items',
-      through: models.MonsterVarietyKillRareInNormalAchievementitem,
+      through: models.MonsterVarietyHabtmKillRareInNormalAchievementitem,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -584,7 +584,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'kill_rare_in_cruel__achievement_items',
-      through: models.MonsterVarietyKillRareInCruelAchievementitem,
+      through: models.MonsterVarietyHabtmKillRareInCruelAchievementitem,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -592,7 +592,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'kill_rare_in_merciless__achievement_items',
-      through: models.MonsterVarietyKillRareInMercilessAchievementitem,
+      through: models.MonsterVarietyHabtmKillRareInMercilessAchievementitem,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,
@@ -600,7 +600,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.AchievementItem, {
       as: 'count_kills__achievement_items',
-      through: models.MonsterVarietyCountKillsAchievementitem,
+      through: models.MonsterVarietyHabtmCountKillsAchievementitem,
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       nullable: true,

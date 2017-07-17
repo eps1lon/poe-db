@@ -97,7 +97,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.GemTag, {
       as: 'gem_tags',
-      through: models.SkillGemGemTag,
+      through: models.SkillGemHabtmGemTag,
       foreignKey: 'skill_gem_row',
       otherKey: 'gem_tag_row',
       nullable: true,

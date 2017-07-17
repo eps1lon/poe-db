@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsToMany(models.MonsterVariety, {
       as: 'map_boss__monster_varieties',
-      through: models.StrDexIntMissionMapMapBossMonstervariety,
+      through: models.StrDexIntMissionMapHabtmMapBossMonstervariety,
       foreignKey: 'str_dex_int_mission_map_row',
       otherKey: 'monster_variety_row',
       nullable: true,

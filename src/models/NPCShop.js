@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsToMany(models.Tag, {
       as: 'sold_item__tags',
-      through: models.NPCShopSoldItemTag,
+      through: models.NPCShopHabtmSoldItemTag,
       foreignKey: 'n_p_c_shop_row',
       otherKey: 'tag_row',
       nullable: true,

@@ -106,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_int_mission_monster_wave_row',
       otherKey: 'monster_variety_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });

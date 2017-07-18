@@ -214,6 +214,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'granted_effects_per_level_row',
       otherKey: 'stat_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });
@@ -225,6 +226,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'granted_effects_per_level_row',
       otherKey: 'stat_row',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });
@@ -236,6 +238,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'granted_effects_per_level_row',
       otherKey: 'stat_row',
+      $col_order: 23,
       nullable: true,
       constraints: false,
     });

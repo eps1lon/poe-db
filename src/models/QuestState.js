@@ -118,6 +118,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'quest_state_row',
       otherKey: 'map_pin_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
@@ -129,6 +130,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'quest_state_row',
       otherKey: 'map_pin_row',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });

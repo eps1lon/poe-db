@@ -32,5 +32,5 @@ for (const [name, props] of Object.entries(spec).filter(
 
   writeAst(model);
 
-  model.throughModels().map(([, model]) => writeAst(model));
+  model.throughModels().map(({ model }) => writeAst(model));
 }

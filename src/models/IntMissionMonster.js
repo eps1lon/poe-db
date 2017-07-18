@@ -51,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'int_mission_monster_row',
       otherKey: 'monster_variety_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -62,6 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'int_mission_monster_row',
       otherKey: 'achievement_item_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

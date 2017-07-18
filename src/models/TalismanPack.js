@@ -106,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'talisman_pack_row',
       otherKey: 'monster_pack_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

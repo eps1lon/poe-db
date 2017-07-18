@@ -49,7 +49,7 @@ class SequelizeModel extends SequelizeBaseModel {
   }
 
   belongsToMany() {
-    return this.throughModels().map(([as, model]) => {
+    return this.throughModels().map(({ as, model, field_index }) => {
       // field fallback for generic `KeysX`
       return [
         model.targetModelName(),
@@ -61,6 +61,7 @@ class SequelizeModel extends SequelizeBaseModel {
           through: { model: model.name(), unique: false },
           foreignKey: model.foreignKey(),
           otherKey: model.targetKey(),
+          $col_order: field_index,
         },
       ];
     });
@@ -70,13 +71,14 @@ class SequelizeModel extends SequelizeBaseModel {
     return Object.keys(this.fields)
       .filter(field => this._isHasMany(field))
       .map(field => {
-        return [
-          SequelizeModel.colCasing(field.replace(/Keys([0-9]*)$/, '$1')),
-          new SequelizeThroughModel(
+        return {
+          as: SequelizeModel.colCasing(field.replace(/Keys([0-9]*)$/, '$1')),
+          model: new SequelizeThroughModel(
             this,
             Object.assign({ name: field }, this.fields[field]),
           ),
-        ];
+          field_index: this.fields[field].rowid,
+        };
       });
   }
 

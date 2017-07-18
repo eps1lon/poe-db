@@ -76,6 +76,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'race_area_row',
       otherKey: 'mod_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

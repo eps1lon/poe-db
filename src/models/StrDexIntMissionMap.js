@@ -64,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_dex_int_mission_map_row',
       otherKey: 'monster_variety_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

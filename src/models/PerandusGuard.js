@@ -69,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'perandus_guard_row',
       otherKey: 'monster_pack_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

@@ -124,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'labyrinth_secret_row',
       otherKey: 'labyrinth_secret_effect_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });
@@ -135,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'labyrinth_secret_row',
       otherKey: 'labyrinth_secret_effect_row',
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });
@@ -146,6 +148,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'labyrinth_secret_row',
       otherKey: 'labyrinth_secret_effect_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
@@ -157,6 +160,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'labyrinth_secret_row',
       otherKey: 'labyrinth_secret_effect_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });

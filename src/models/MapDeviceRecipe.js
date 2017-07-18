@@ -45,6 +45,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'map_device_recipe_row',
       otherKey: 'base_item_type_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
@@ -56,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'map_device_recipe_row',
       otherKey: 'world_area_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

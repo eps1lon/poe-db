@@ -118,6 +118,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'prophecy_row',
       otherKey: 'client_string_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

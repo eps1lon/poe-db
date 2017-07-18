@@ -51,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'misc_beam_row',
       otherKey: 'preload_group_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });

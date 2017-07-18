@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'word_row',
       otherKey: 'tag_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

@@ -136,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_dex_int_mission_row',
       otherKey: 'mod_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -147,6 +148,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_dex_int_mission_row',
       otherKey: 'achievement_item_row',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });

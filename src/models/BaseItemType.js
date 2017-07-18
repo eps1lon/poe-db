@@ -196,6 +196,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'base_item_type_row',
       otherKey: 'mod_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });
@@ -207,6 +208,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
+      $col_order: 11,
       nullable: true,
       constraints: false,
     });
@@ -218,6 +220,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
+      $col_order: 13,
       nullable: true,
       constraints: false,
     });
@@ -229,6 +232,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'base_item_type_row',
       otherKey: 'tag_row',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });
@@ -240,6 +244,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'base_item_type_row',
       otherKey: 'achievement_item_row',
+      $col_order: 20,
       nullable: true,
       constraints: false,
     });
@@ -251,6 +256,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
+      $col_order: 21,
       nullable: true,
       constraints: false,
     });
@@ -262,6 +268,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
+      $col_order: 23,
       nullable: true,
       constraints: false,
     });

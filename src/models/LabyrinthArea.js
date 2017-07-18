@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'labyrinth_area_row',
       otherKey: 'world_area_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
@@ -44,6 +45,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'labyrinth_area_row',
       otherKey: 'world_area_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });
@@ -55,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'labyrinth_area_row',
       otherKey: 'world_area_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
@@ -66,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'labyrinth_area_row',
       otherKey: 'world_area_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

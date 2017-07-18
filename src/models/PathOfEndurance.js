@@ -69,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'path_of_endurance_row',
       otherKey: 'mod_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });

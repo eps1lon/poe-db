@@ -142,6 +142,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -153,6 +154,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
@@ -164,6 +166,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });
@@ -175,6 +178,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'map_pin_row',
       otherKey: 'world_area_row',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });

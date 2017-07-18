@@ -196,6 +196,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'shrine_row',
       otherKey: 'achievement_item_row',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });

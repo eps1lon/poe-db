@@ -88,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_type_row',
       otherKey: 'tag_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });

@@ -928,6 +928,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'essence_row',
       otherKey: 'mod_row',
+      $col_order: 26,
       nullable: true,
       constraints: false,
     });

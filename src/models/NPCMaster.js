@@ -149,6 +149,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'n_p_c_master_row',
       otherKey: 'tag_row',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });
@@ -160,6 +161,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'n_p_c_master_row',
       otherKey: 'tag_row',
+      $col_order: 12,
       nullable: true,
       constraints: false,
     });
@@ -171,6 +173,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'n_p_c_master_row',
       otherKey: 'achievement_item_row',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });

@@ -472,6 +472,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
@@ -483,6 +484,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'tag_row',
+      $col_order: 19,
       nullable: true,
       constraints: false,
     });
@@ -494,6 +496,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'granted_effect_row',
+      $col_order: 27,
       nullable: true,
       constraints: false,
     });
@@ -505,6 +508,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
+      $col_order: 29,
       nullable: true,
       constraints: false,
     });
@@ -516,6 +520,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'item_visual_identity_row',
+      $col_order: 36,
       nullable: true,
       constraints: false,
     });
@@ -527,6 +532,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'item_visual_identity_row',
+      $col_order: 37,
       nullable: true,
       constraints: false,
     });
@@ -538,6 +544,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 44,
       nullable: true,
       constraints: false,
     });
@@ -549,6 +556,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
+      $col_order: 45,
       nullable: true,
       constraints: false,
     });
@@ -560,6 +568,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 46,
       nullable: true,
       constraints: false,
     });
@@ -571,6 +580,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 57,
       nullable: true,
       constraints: false,
     });
@@ -582,6 +592,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 58,
       nullable: true,
       constraints: false,
     });
@@ -593,6 +604,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 59,
       nullable: true,
       constraints: false,
     });
@@ -604,6 +616,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
+      $col_order: 65,
       nullable: true,
       constraints: false,
     });
@@ -615,6 +628,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
+      $col_order: 66,
       nullable: true,
       constraints: false,
     });
@@ -626,6 +640,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
+      $col_order: 67,
       nullable: true,
       constraints: false,
     });
@@ -637,6 +652,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 68,
       nullable: true,
       constraints: false,
     });
@@ -648,6 +664,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 69,
       nullable: true,
       constraints: false,
     });
@@ -659,6 +676,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 70,
       nullable: true,
       constraints: false,
     });
@@ -670,6 +688,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
+      $col_order: 72,
       nullable: true,
       constraints: false,
     });

@@ -88,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
@@ -99,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });
@@ -110,6 +112,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
@@ -121,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
@@ -132,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'torment_spirit_row',
       otherKey: 'mod_row',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });

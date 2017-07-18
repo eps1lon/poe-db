@@ -45,6 +45,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'misc_animated_row',
       otherKey: 'preload_group_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

@@ -81,6 +81,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_int_mission_relic_pattern_row',
       otherKey: 'mod_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });

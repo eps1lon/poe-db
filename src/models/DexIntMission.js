@@ -160,6 +160,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'dex_int_mission_row',
       otherKey: 'achievement_item_row',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });

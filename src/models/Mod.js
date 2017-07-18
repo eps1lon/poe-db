@@ -352,6 +352,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'mod_row',
       otherKey: 'tag_row',
+      $col_order: 20,
       nullable: true,
       constraints: false,
     });
@@ -363,6 +364,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'mod_row',
       otherKey: 'tag_row',
+      $col_order: 24,
       nullable: true,
       constraints: false,
     });
@@ -374,6 +376,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'mod_row',
       otherKey: 'tag_row',
+      $col_order: 37,
       nullable: true,
       constraints: false,
     });

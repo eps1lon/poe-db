@@ -93,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'warbands_pack_monster_row',
       otherKey: 'monster_variety_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
@@ -104,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'warbands_pack_monster_row',
       otherKey: 'monster_variety_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -115,6 +117,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'warbands_pack_monster_row',
       otherKey: 'monster_variety_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });
@@ -126,6 +129,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'warbands_pack_monster_row',
       otherKey: 'monster_variety_row',
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });

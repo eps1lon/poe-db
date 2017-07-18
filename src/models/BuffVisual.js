@@ -100,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'buff_visual_row',
       otherKey: 'preload_group_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });

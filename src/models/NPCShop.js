@@ -63,6 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'n_p_c_shop_row',
       otherKey: 'tag_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

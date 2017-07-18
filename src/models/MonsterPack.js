@@ -81,6 +81,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_pack_row',
       otherKey: 'world_area_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
@@ -92,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_pack_row',
       otherKey: 'monster_variety_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
@@ -103,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_pack_row',
       otherKey: 'tag_row',
+      $col_order: 11,
       nullable: true,
       constraints: false,
     });

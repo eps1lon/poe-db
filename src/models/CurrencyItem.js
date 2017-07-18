@@ -148,6 +148,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'currency_item_row',
       otherKey: 'achievement_item_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });

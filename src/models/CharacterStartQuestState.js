@@ -51,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_start_quest_state_row',
       otherKey: 'quest_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
@@ -62,6 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_start_quest_state_row',
       otherKey: 'map_pin_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

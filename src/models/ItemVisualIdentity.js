@@ -214,6 +214,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
+      $col_order: 22,
       nullable: true,
       constraints: false,
     });
@@ -225,6 +226,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
+      $col_order: 24,
       nullable: true,
       constraints: false,
     });
@@ -236,6 +238,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'item_visual_identity_row',
       otherKey: 'achievement_item_row',
+      $col_order: 26,
       nullable: true,
       constraints: false,
     });

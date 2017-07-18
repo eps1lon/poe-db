@@ -58,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'endless_ledge_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

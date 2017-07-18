@@ -202,6 +202,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'map_row',
       otherKey: 'monster_pack_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -213,6 +214,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'map_row',
       otherKey: 'base_item_type_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });

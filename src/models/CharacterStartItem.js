@@ -124,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_start_item_row',
       otherKey: 'skill_gem_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -135,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_start_item_row',
       otherKey: 'mod_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

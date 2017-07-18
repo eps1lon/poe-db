@@ -105,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
@@ -116,6 +117,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'shop_item_row',
       otherKey: 'shop_category_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

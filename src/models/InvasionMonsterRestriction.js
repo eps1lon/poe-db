@@ -58,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'invasion_monster_restriction_row',
       otherKey: 'monster_variety_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

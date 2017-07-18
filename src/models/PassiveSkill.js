@@ -202,6 +202,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'passive_skill_row',
       otherKey: 'stat_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });
@@ -213,6 +214,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'passive_skill_row',
       otherKey: 'character_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
@@ -224,6 +226,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'passive_skill_row',
       otherKey: 'client_string_row',
+      $col_order: 22,
       nullable: true,
       constraints: false,
     });

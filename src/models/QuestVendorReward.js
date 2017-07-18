@@ -64,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'quest_vendor_reward_row',
       otherKey: 'character_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
@@ -75,6 +76,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'quest_vendor_reward_row',
       otherKey: 'base_item_type_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

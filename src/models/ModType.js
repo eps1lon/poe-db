@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'mod_type_row',
       otherKey: 'mod_sell_price_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

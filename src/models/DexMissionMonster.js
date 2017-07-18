@@ -70,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'dex_mission_monster_row',
       otherKey: 'monster_pack_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
@@ -81,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'dex_mission_monster_row',
       otherKey: 'monster_variety_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

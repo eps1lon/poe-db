@@ -118,6 +118,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'bloodline_row',
       otherKey: 'mod_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
@@ -129,6 +130,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'bloodline_row',
       otherKey: 'tag_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -140,6 +142,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'bloodline_row',
       otherKey: 'tag_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });

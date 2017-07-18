@@ -52,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });
@@ -63,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });
@@ -74,6 +76,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
@@ -85,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -96,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });
@@ -107,6 +112,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });
@@ -118,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
@@ -129,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });
@@ -140,6 +148,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
@@ -151,6 +160,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });
@@ -162,6 +172,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 11,
       nullable: true,
       constraints: false,
     });
@@ -173,6 +184,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 12,
       nullable: true,
       constraints: false,
     });
@@ -184,6 +196,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 14,
       nullable: true,
       constraints: false,
     });
@@ -195,6 +208,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'descent_reward_chest_row',
       otherKey: 'base_item_type_row',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });

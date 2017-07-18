@@ -63,6 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_int_mission_relic_mod_row',
       otherKey: 'mod_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

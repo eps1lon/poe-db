@@ -214,6 +214,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'buff_definition_row',
       otherKey: 'stat_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

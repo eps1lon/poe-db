@@ -130,6 +130,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'crafting_bench_option_row',
       otherKey: 'base_item_type_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
@@ -141,6 +142,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'crafting_bench_option_row',
       otherKey: 'item_class_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });

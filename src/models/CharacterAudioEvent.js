@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -68,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });
@@ -79,6 +81,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });
@@ -90,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
@@ -101,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });
@@ -112,6 +117,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
@@ -123,6 +129,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });
@@ -134,6 +141,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 11,
       nullable: true,
       constraints: false,
     });
@@ -145,6 +153,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_audio_event_row',
       otherKey: 'character_text_audio_row',
+      $col_order: 12,
       nullable: true,
       constraints: false,
     });

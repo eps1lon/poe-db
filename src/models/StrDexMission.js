@@ -112,6 +112,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_dex_mission_row',
       otherKey: 'monster_variety_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
@@ -123,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_dex_mission_row',
       otherKey: 'mod_row',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });
@@ -134,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_dex_mission_row',
       otherKey: 'monster_variety_row',
+      $col_order: 12,
       nullable: true,
       constraints: false,
     });

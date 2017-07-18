@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'chest_cluster_row',
       otherKey: 'chest_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

@@ -88,6 +88,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });
@@ -99,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -110,6 +112,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_panel_stat_row',
       otherKey: 'stat_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

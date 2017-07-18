@@ -538,6 +538,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });
@@ -549,6 +550,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'topology_row',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });
@@ -560,6 +562,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'monster_variety_row',
+      $col_order: 22,
       nullable: true,
       constraints: false,
     });
@@ -571,6 +574,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'monster_variety_row',
+      $col_order: 23,
       nullable: true,
       constraints: false,
     });
@@ -582,6 +586,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'tag_row',
+      $col_order: 24,
       nullable: true,
       constraints: false,
     });
@@ -593,6 +598,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'achievement_item_row',
+      $col_order: 27,
       nullable: true,
       constraints: false,
     });
@@ -604,6 +610,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'mod_row',
+      $col_order: 31,
       nullable: true,
       constraints: false,
     });
@@ -615,6 +622,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
+      $col_order: 34,
       nullable: true,
       constraints: false,
     });
@@ -626,6 +634,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'tag_row',
+      $col_order: 42,
       nullable: true,
       constraints: false,
     });
@@ -637,6 +646,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'tag_row',
+      $col_order: 55,
       nullable: true,
       constraints: false,
     });
@@ -648,6 +658,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'achievement_item_row',
+      $col_order: 72,
       nullable: true,
       constraints: false,
     });

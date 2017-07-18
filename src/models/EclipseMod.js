@@ -70,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'eclipse_mod_row',
       otherKey: 'tag_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

@@ -82,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'invasion_monsters_per_area_row',
       otherKey: 'monster_variety_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -93,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'invasion_monsters_per_area_row',
       otherKey: 'monster_variety_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

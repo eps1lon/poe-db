@@ -208,6 +208,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'n_p_c_talk_row',
       otherKey: 'n_p_c_text_audio_row',
+      $col_order: 12,
       nullable: true,
       constraints: false,
     });

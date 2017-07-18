@@ -106,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'daily_mission_row',
       otherKey: 'character_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });

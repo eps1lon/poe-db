@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_dex_mission_special_mod_row',
       otherKey: 'mod_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

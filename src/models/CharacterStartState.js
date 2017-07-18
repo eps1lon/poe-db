@@ -100,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_start_state_row',
       otherKey: 'passive_skill_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });
@@ -111,6 +112,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });
@@ -122,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });
@@ -133,6 +136,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });

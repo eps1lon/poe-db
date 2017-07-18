@@ -118,6 +118,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'unique_chest_row',
       otherKey: 'mod_row',
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

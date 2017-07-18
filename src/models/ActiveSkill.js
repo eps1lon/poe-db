@@ -117,6 +117,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'active_skill_row',
       otherKey: 'item_class_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
@@ -128,6 +129,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'active_skill_row',
       otherKey: 'stat_row',
+      $col_order: 15,
       nullable: true,
       constraints: false,
     });
@@ -139,6 +141,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'active_skill_row',
       otherKey: 'stat_row',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });

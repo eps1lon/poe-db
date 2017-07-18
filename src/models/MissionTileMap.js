@@ -52,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'mission_tile_map_row',
       otherKey: 'world_area_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

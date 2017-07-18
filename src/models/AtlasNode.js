@@ -124,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });

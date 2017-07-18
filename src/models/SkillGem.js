@@ -106,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'skill_gem_row',
       otherKey: 'gem_tag_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

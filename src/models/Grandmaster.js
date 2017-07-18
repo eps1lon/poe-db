@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'grandmaster_row',
       otherKey: 'mod_row',
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });

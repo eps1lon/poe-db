@@ -12,7 +12,7 @@ const writeAst = async model => {
 
   try {
     fs.writeFile(
-      path.join(__dirname, '../src/models/', model.name() + '.js'),
+      path.join(__dirname, '../src/models/base/', model.name() + '.js'),
       generate(ast).code,
       throwOnError(),
     );

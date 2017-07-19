@@ -32,3 +32,8 @@ commands:
    `yarn run dev:models`
 
 4. see install step 4
+
+### models
+The models in src/models/base are auto generated. For specific scopes, 
+getters, setters etc create or update the specific files in the corresponding
+folders.

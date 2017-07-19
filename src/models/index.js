@@ -1,31 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+const { modelFiles } = require('./util');
 
-const isModelFile = file => /[A-Z].*\.js$/.test(file);
-
-const modelFiles = () =>
-  fs
-    .readdirSync(__dirname)
-    .filter(isModelFile)
-    .map(file => path.join(__dirname, file));
+const base = require('./base/');
 
 module.exports = {
   modelFiles,
   init: sequelize => {
-    // define
-    const models = modelFiles().reduce((models, model_file) => {
-      const model = sequelize.import(model_file);
+    const models = base(sequelize);
 
-      models[model.name] = model;
-
-      return models;
-    }, {});
-
-    // link assoc
-
-    for (const model of Object.values(models)) {
-      model.associate(models);
-    }
+    // TODO add scopes
 
     return models;
   },

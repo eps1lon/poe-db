@@ -8,7 +8,7 @@ module.exports = models => {
     const model = models[model_name];
 
     if (model !== undefined) {
-      const scopes = require(scope_file);
+      const scopes = require(scope_file)(models);
 
       for (const [name, scope] of Object.entries(scopes)) {
         model.addScope(name, scope, { overide: false });

@@ -1,7 +1,7 @@
 const { orm_creator } = require('../../src/db');
 const { buildAssocKeys, buildAttrObj } = require('../../src/model/util');
 
-const records = require('../../data/records.json');
+const all_records = require('../../data/records.json');
 
 (async () => {
   const orm = orm_creator({ logging: false });
@@ -12,14 +12,25 @@ const records = require('../../data/records.json');
   let total_insert_count = 0;
 
   try {
-    for (const model of Object.values(models)) {
-      const model_records = records[model.DAT_FILE];
+    for (const [dat_file, records] of Object.entries(all_records)) {
+      const model = Object.values(models).find(
+        model => model.DAT_FILE === dat_file,
+      );
 
-      const records_as_obj = model_records.map((record, row) => {
+      const records_as_obj = records.map((record, row) => {
         return buildAttrObj(record, model, { row });
       });
 
-      const many_to_may_records = model_records.reduce(
+      const inserted = await model.bulkCreate(records_as_obj, {
+        ignoreDuplicates: true,
+      });
+      const affected_rows = inserted.length;
+
+      total_insert_count += affected_rows;
+
+      console.log(`inserted ${affected_rows} instances into ${model.name}`);
+
+      const many_to_may_records = records.reduce(
         (associations, record, row) => {
           const assoc_keys = buildAssocKeys(model, record, row);
 
@@ -38,15 +49,6 @@ const records = require('../../data/records.json');
         },
         {},
       );
-
-      const inserted = await model.bulkCreate(records_as_obj, {
-        ignoreDuplicates: true,
-      });
-      const affected_rows = inserted.length;
-
-      total_insert_count += affected_rows;
-
-      console.log(`inserted ${affected_rows} instances into ${model.name}`);
 
       // create entries in the Through models
       for (const assoc in many_to_may_records) {

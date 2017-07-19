@@ -43,6 +43,7 @@ const buildAssocKeys = (model, record, row) =>
       targets = [targets];
     }
 
+    // this is now a list of [foreignKey, targetKey] pairs
     attributes[assoc_name] = targets.map(target => [row, target]);
 
     return attributes;

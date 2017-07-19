@@ -159,8 +159,14 @@ class SequelizeThroughModel extends SequelizeBaseModel {
   _colProps(col) {
     return {
       type: this._dataType(col),
-      primaryKey: col === PRIMARY,
       allowNull: false,
+      primaryKey: col === PRIMARY,
+      // auto increment on primary because it is just an alias for
+      // [foreignKey, targetKey]
+      // we dont use composite keys because i didnt have a pleasent
+      // experience with the those in rails 3. seems like there are either not
+      // enough use cases or they are an anti pattern
+      autoIncrement: col === PRIMARY,
     };
   }
 

@@ -4,8 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: true,
         allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
       },
     },
     {

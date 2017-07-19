@@ -1,8 +1,8 @@
-const { modelFiles } = require('../util');
+const { baseModelFiles } = require('../util');
 
 module.exports = sequelize => {
   // define
-  const models = modelFiles().reduce((models, model_file) => {
+  const models = baseModelFiles().reduce((models, model_file) => {
     const model = sequelize.import(model_file);
 
     models[model.name] = model;

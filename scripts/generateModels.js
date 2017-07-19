@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const generate = require('babel-core').transformFromAst;
 
+const { BASE_PATH } = require('../src/models/util');
 const { throwOnError } = require('../src/util');
 const SequelizeModel = require('../src/model/SequelizeModel');
 
@@ -12,7 +13,7 @@ const writeAst = async model => {
 
   try {
     fs.writeFile(
-      path.join(__dirname, '../src/models/base/', model.name() + '.js'),
+      path.join(BASE_PATH, model.name() + '.js'),
       generate(ast).code,
       throwOnError(),
     );

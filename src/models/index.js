@@ -1,9 +1,9 @@
-const { modelFiles } = require('./util');
+const { baseModelFiles } = require('./util');
 
 const base = require('./base/');
 
 module.exports = {
-  modelFiles,
+  baseModelFiles,
   init: sequelize => {
     const models = base(sequelize);
 

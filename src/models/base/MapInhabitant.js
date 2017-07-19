@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Stat, {
       as: 'stat',
+      $inverse: 'map_inhabitants',
       foreignKey: {
         name: 'stats_key',
         $col_order: 1,

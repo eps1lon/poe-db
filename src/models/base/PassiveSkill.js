@@ -166,6 +166,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
+      $inverse: 'passive_skills',
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 14,
@@ -177,6 +178,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BuffDefinition, {
       as: 'granted_buff__buff_definition',
+      $inverse: 'passive_skills',
       foreignKey: {
         name: 'granted_buff__buff_definitions_key',
         $col_order: 16,
@@ -188,6 +190,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Ascendancy, {
       as: 'ascendancy',
+      $inverse: 'passive_skills',
       foreignKey: {
         name: 'ascendancy_key',
         $col_order: 20,

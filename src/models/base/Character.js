@@ -188,6 +188,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'start_skill_gem__base_item_type',
+      $inverse: 'characters',
       foreignKey: {
         name: 'start_skill_gem__base_item_types_key',
         $col_order: 17,
@@ -199,6 +200,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BaseItemType, {
       as: 'start_weapon__base_item_type',
+      $inverse: 'characters',
       foreignKey: {
         name: 'start_weapon__base_item_types_key',
         $col_order: 24,

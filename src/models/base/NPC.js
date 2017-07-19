@@ -96,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
+      $inverse: 'n_p_cs',
       foreignKey: {
         name: 'n_p_c_master_key',
         $col_order: 4,
@@ -107,6 +108,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.NPCShop, {
       as: 'n_p_c_shop',
+      $inverse: 'n_p_cs',
       foreignKey: {
         name: 'n_p_c_shop_key',
         $col_order: 8,
@@ -118,6 +120,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.NPCAudio, {
       as: 'n_p_c_audio1',
+      $inverse: 'n_p_cs1',
       foreignKey: {
         name: 'n_p_c_audio_key1',
         $col_order: 9,
@@ -129,6 +132,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.NPCAudio, {
       as: 'n_p_c_audio2',
+      $inverse: 'n_p_cs2',
       foreignKey: {
         name: 'n_p_c_audio_key2',
         $col_order: 10,

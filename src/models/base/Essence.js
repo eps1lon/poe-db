@@ -482,6 +482,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'essences',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -493,6 +494,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mods1',
+      $inverse: 'essences1',
       foreignKey: {
         name: 'mods_key1',
         $col_order: 12,
@@ -504,6 +506,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mods2',
+      $inverse: 'essences2',
       foreignKey: {
         name: 'mods_key2',
         $col_order: 13,
@@ -515,6 +518,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'quiver__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'quiver__mods_key',
         $col_order: 14,
@@ -526,6 +530,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'amulet1__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'amulet1__mods_key',
         $col_order: 15,
@@ -537,6 +542,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'belt1__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'belt1__mods_key',
         $col_order: 16,
@@ -548,6 +554,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'belt3__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'belt3__mods_key',
         $col_order: 17,
@@ -559,6 +566,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'gloves1__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'gloves1__mods_key',
         $col_order: 18,
@@ -570,6 +578,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'boots1__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'boots1__mods_key',
         $col_order: 19,
@@ -581,6 +590,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'body_armour1__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'body_armour1__mods_key',
         $col_order: 20,
@@ -592,6 +602,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'helmet1__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'helmet1__mods_key',
         $col_order: 21,
@@ -603,6 +614,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'shield1__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'shield1__mods_key',
         $col_order: 22,
@@ -614,6 +626,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.EssenceType, {
       as: 'essence_type',
+      $inverse: 'essences',
       foreignKey: {
         name: 'essence_type_key',
         $col_order: 27,
@@ -625,6 +638,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods1',
+      $inverse: 'essences1',
       foreignKey: {
         name: '1_hand__mods_key1',
         $col_order: 30,
@@ -636,6 +650,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mods13',
+      $inverse: 'essences13',
       foreignKey: {
         name: 'mods_key13',
         $col_order: 31,
@@ -647,6 +662,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mods14',
+      $inverse: 'essences14',
       foreignKey: {
         name: 'mods_key14',
         $col_order: 32,
@@ -658,6 +674,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mods15',
+      $inverse: 'essences15',
       foreignKey: {
         name: 'mods_key15',
         $col_order: 33,
@@ -669,6 +686,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '2_hand__mods1',
+      $inverse: 'essences1',
       foreignKey: {
         name: '2_hand__mods_key1',
         $col_order: 34,
@@ -680,6 +698,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'boots3__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'boots3__mods_key',
         $col_order: 35,
@@ -691,6 +710,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'ranged__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'ranged__mods_key',
         $col_order: 36,
@@ -702,6 +722,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'helmet2__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'helmet2__mods_key',
         $col_order: 37,
@@ -713,6 +734,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'body_armour2__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'body_armour2__mods_key',
         $col_order: 38,
@@ -724,6 +746,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'boots2__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'boots2__mods_key',
         $col_order: 39,
@@ -735,6 +758,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'gloves2__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'gloves2__mods_key',
         $col_order: 40,
@@ -746,6 +770,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'bow__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'bow__mods_key',
         $col_order: 41,
@@ -757,6 +782,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'wand__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'wand__mods_key',
         $col_order: 42,
@@ -768,6 +794,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '2_hand__mods2',
+      $inverse: 'essences2',
       foreignKey: {
         name: '2_hand__mods_key2',
         $col_order: 43,
@@ -779,6 +806,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '2_hand__mods3',
+      $inverse: 'essences3',
       foreignKey: {
         name: '2_hand__mods_key3',
         $col_order: 44,
@@ -790,6 +818,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '2_hand__mods4',
+      $inverse: 'essences4',
       foreignKey: {
         name: '2_hand__mods_key4',
         $col_order: 45,
@@ -801,6 +830,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '2_hand__mods5',
+      $inverse: 'essences5',
       foreignKey: {
         name: '2_hand__mods_key5',
         $col_order: 46,
@@ -812,6 +842,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods2',
+      $inverse: 'essences2',
       foreignKey: {
         name: '1_hand__mods_key2',
         $col_order: 47,
@@ -823,6 +854,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods3',
+      $inverse: 'essences3',
       foreignKey: {
         name: '1_hand__mods_key3',
         $col_order: 48,
@@ -834,6 +866,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods4',
+      $inverse: 'essences4',
       foreignKey: {
         name: '1_hand__mods_key4',
         $col_order: 49,
@@ -845,6 +878,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods5',
+      $inverse: 'essences5',
       foreignKey: {
         name: '1_hand__mods_key5',
         $col_order: 50,
@@ -856,6 +890,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods6',
+      $inverse: 'essences6',
       foreignKey: {
         name: '1_hand__mods_key6',
         $col_order: 51,
@@ -867,6 +902,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods7',
+      $inverse: 'essences7',
       foreignKey: {
         name: '1_hand__mods_key7',
         $col_order: 52,
@@ -878,6 +914,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods8',
+      $inverse: 'essences8',
       foreignKey: {
         name: '1_hand__mods_key8',
         $col_order: 53,
@@ -889,6 +926,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: '1_hand__mods9',
+      $inverse: 'essences9',
       foreignKey: {
         name: '1_hand__mods_key9',
         $col_order: 54,
@@ -900,6 +938,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'belt2__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'belt2__mods_key',
         $col_order: 56,
@@ -911,6 +950,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'amulet2__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'amulet2__mods_key',
         $col_order: 57,
@@ -922,6 +962,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'ring__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'ring__mods_key',
         $col_order: 58,
@@ -933,6 +974,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mods41',
+      $inverse: 'essences41',
       foreignKey: {
         name: 'mods_key41',
         $col_order: 59,
@@ -944,6 +986,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'shield2__mod',
+      $inverse: 'essences',
       foreignKey: {
         name: 'shield2__mods_key',
         $col_order: 60,
@@ -955,6 +998,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mods43',
+      $inverse: 'essences43',
       foreignKey: {
         name: 'mods_key43',
         $col_order: 61,

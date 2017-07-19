@@ -96,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCTalk, {
       as: 'n_p_c_talk',
+      $inverse: 'str_missions',
       foreignKey: {
         name: 'n_p_c_talk_key',
         $col_order: 4,

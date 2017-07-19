@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.DailyMission, {
       as: 'daily_missionss',
+      $inverse: 'daily_overrides',
       foreignKey: {
         name: 'daily_missions_keys',
         $col_order: 1,

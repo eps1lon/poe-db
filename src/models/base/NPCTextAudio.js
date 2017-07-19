@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Character, {
       as: 'character',
+      $inverse: 'n_p_c_text_audios',
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,

@@ -102,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Quest, {
       as: 'quest',
+      $inverse: 'quest_states',
       foreignKey: {
         name: 'quest_key',
         $col_order: 0,

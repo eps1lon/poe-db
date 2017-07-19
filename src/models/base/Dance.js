@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'dances',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -49,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Character, {
       as: 'character',
+      $inverse: 'dances',
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,

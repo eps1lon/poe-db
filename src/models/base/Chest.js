@@ -170,6 +170,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'chests',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 13,
@@ -181,6 +182,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.ChestEffect, {
       as: 'chest_effect',
+      $inverse: 'chests',
       foreignKey: {
         name: 'chest_effects_key',
         $col_order: 17,
@@ -192,6 +194,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'corrupt__achievement_item',
+      $inverse: 'chests',
       foreignKey: {
         name: 'corrupt__achievement_items_key',
         $col_order: 21,
@@ -203,6 +206,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'currency_use__achievement_item',
+      $inverse: 'chests',
       foreignKey: {
         name: 'currency_use__achievement_items_key',
         $col_order: 22,
@@ -214,6 +218,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'encounter__achievement_item',
+      $inverse: 'chests',
       foreignKey: {
         name: 'encounter__achievement_items_key',
         $col_order: 23,

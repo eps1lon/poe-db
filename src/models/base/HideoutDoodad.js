@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'hideout_doodads',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -91,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
+      $inverse: 'hideout_doodads',
       foreignKey: {
         name: 'n_p_c_master_key',
         $col_order: 4,

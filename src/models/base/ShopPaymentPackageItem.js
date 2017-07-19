@@ -58,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.ShopPaymentPackage, {
       as: 'shop_payment_package',
+      $inverse: 'shop_payment_package_items',
       foreignKey: {
         name: 'shop_payment_package_key',
         $col_order: 1,
@@ -69,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.ShopItem, {
       as: 'shop_item',
+      $inverse: 'shop_payment_package_items',
       foreignKey: {
         name: 'shop_item_key',
         $col_order: 2,
@@ -80,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.ShopToken, {
       as: 'shop_token',
+      $inverse: 'shop_payment_package_items',
       foreignKey: {
         name: 'shop_token_key',
         $col_order: 4,

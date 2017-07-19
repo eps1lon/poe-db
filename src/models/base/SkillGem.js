@@ -70,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'skill_gems',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -81,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.GrantedEffect, {
       as: 'granted_effect',
+      $inverse: 'skill_gems',
       foreignKey: {
         name: 'granted_effects_key',
         $col_order: 1,
@@ -92,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BaseItemType, {
       as: 'vaal_variant__base_item_type',
+      $inverse: 'skill_gems',
       foreignKey: {
         name: 'vaal_variant__base_item_types_key',
         $col_order: 6,

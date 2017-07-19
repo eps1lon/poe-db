@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_definition',
+      $inverse: 'shrine_buffs',
       foreignKey: {
         name: 'buff_definitions_key',
         $col_order: 2,

@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'talismans',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -91,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mod',
+      $inverse: 'talismans',
       foreignKey: {
         name: 'mods_key',
         $col_order: 2,

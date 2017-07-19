@@ -366,6 +366,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MonsterType, {
       as: 'monster_type',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'monster_types_key',
         $col_order: 1,
@@ -377,6 +378,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'back__item_visual_identity',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'back__item_visual_identity_key',
         $col_order: 38,
@@ -388,6 +390,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.ItemClass, {
       as: 'main_hand__item_class',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'main_hand__item_classes_key',
         $col_order: 39,
@@ -399,6 +402,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.ItemClass, {
       as: 'off_hand__item_class',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'off_hand__item_classes_key',
         $col_order: 40,
@@ -410,6 +414,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'helmet__item_visual_identity',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'helmet__item_visual_identity_key',
         $col_order: 42,
@@ -421,6 +426,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'flashback__achievement_item',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'flashback__achievement_items_key',
         $col_order: 60,
@@ -432,6 +438,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.MonsterSegment, {
       as: 'monster_segment',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'monster_segments_key',
         $col_order: 61,
@@ -443,6 +450,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.MonsterArmour, {
       as: 'monster_armour',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'monster_armours_key',
         $col_order: 62,
@@ -454,6 +462,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
+      $inverse: 'monster_varieties',
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 63,
@@ -465,6 +474,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_items4',
+      $inverse: 'monster_varieties4',
       foreignKey: {
         name: 'achievement_items_key4',
         $col_order: 64,

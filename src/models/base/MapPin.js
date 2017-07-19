@@ -106,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
       as: 'normal_waypoint__world_area',
+      $inverse: 'map_pins',
       foreignKey: {
         name: 'normal_waypoint__world_areas_key',
         $col_order: 3,
@@ -117,6 +118,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.WorldArea, {
       as: 'cruel_waypoint__world_area',
+      $inverse: 'map_pins',
       foreignKey: {
         name: 'cruel_waypoint__world_areas_key',
         $col_order: 11,
@@ -128,6 +130,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.WorldArea, {
       as: 'merciless_waypoint__world_area',
+      $inverse: 'map_pins',
       foreignKey: {
         name: 'merciless_waypoint__world_areas_key',
         $col_order: 12,

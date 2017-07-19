@@ -74,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MiscAnimated, {
       as: 'misc_animated',
+      $inverse: 'buff_visuals',
       foreignKey: {
         name: 'misc_animated_key',
         $col_order: 4,
@@ -85,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.MiscAnimated, {
       as: 'misc_animated2',
+      $inverse: 'buff_visuals2',
       foreignKey: {
         name: 'misc_animated_key2',
         $col_order: 5,

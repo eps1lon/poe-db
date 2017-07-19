@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'atlas_quest_items',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -67,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.WorldArea, {
       as: 'world_area',
+      $inverse: 'atlas_quest_items',
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 1,

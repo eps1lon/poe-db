@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
       as: 'monster_variety',
+      $inverse: 'str_dex_mission_archetypes',
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 1,

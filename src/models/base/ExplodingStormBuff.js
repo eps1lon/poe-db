@@ -150,6 +150,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_definitions1',
+      $inverse: 'exploding_storm_buffs1',
       foreignKey: {
         name: 'buff_definitions_key1',
         $col_order: 1,
@@ -161,6 +162,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.MonsterVariety, {
       as: 'friendly__monster_variety',
+      $inverse: 'exploding_storm_buffs',
       foreignKey: {
         name: 'friendly__monster_varieties_key',
         $col_order: 9,
@@ -172,6 +174,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.MiscObject, {
       as: 'misc_object',
+      $inverse: 'exploding_storm_buffs',
       foreignKey: {
         name: 'misc_objects_key',
         $col_order: 10,
@@ -183,6 +186,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.MiscAnimated, {
       as: 'misc_animated',
+      $inverse: 'exploding_storm_buffs',
       foreignKey: {
         name: 'misc_animated_key',
         $col_order: 11,
@@ -194,6 +198,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BuffVisual, {
       as: 'buff_visual',
+      $inverse: 'exploding_storm_buffs',
       foreignKey: {
         name: 'buff_visuals_key',
         $col_order: 12,
@@ -205,6 +210,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.MonsterVariety, {
       as: 'enemy__monster_variety',
+      $inverse: 'exploding_storm_buffs',
       foreignKey: {
         name: 'enemy__monster_varieties_key',
         $col_order: 13,
@@ -216,6 +222,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_definitions2',
+      $inverse: 'exploding_storm_buffs2',
       foreignKey: {
         name: 'buff_definitions_key2',
         $col_order: 17,

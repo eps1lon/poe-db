@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.ShopCurrency, {
       as: 'shop_currency',
+      $inverse: 'shop_countries',
       foreignKey: {
         name: 'shop_currency_key',
         $col_order: 2,

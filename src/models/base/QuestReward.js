@@ -106,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Quest, {
       as: 'quest',
+      $inverse: 'quest_rewards',
       foreignKey: {
         name: 'quest_key',
         $col_order: 0,
@@ -117,6 +118,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Character, {
       as: 'character',
+      $inverse: 'quest_rewards',
       foreignKey: {
         name: 'characters_key',
         $col_order: 3,
@@ -128,6 +130,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'quest_rewards',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 4,

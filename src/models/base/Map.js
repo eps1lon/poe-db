@@ -116,6 +116,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'maps',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -127,6 +128,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.WorldArea, {
       as: 'regular__world_area',
+      $inverse: 'maps',
       foreignKey: {
         name: 'regular__world_areas_key',
         $col_order: 1,
@@ -138,6 +140,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.WorldArea, {
       as: 'unique__world_area',
+      $inverse: 'maps',
       foreignKey: {
         name: 'unique__world_areas_key',
         $col_order: 2,
@@ -149,6 +152,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BaseItemType, {
       as: 'map_upgrade__base_item_type',
+      $inverse: 'maps',
       foreignKey: {
         name: 'map_upgrade__base_item_types_key',
         $col_order: 3,
@@ -160,6 +164,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Map, {
       as: 'shaped__base__map',
+      $inverse: 'maps',
       foreignKey: {
         name: 'shaped__base__maps_key',
         $col_order: 10,
@@ -171,6 +176,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Map, {
       as: 'maps1',
+      $inverse: 'maps1',
       foreignKey: {
         name: 'maps_key1',
         $col_order: 12,
@@ -182,6 +188,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Map, {
       as: 'maps2',
+      $inverse: 'maps2',
       foreignKey: {
         name: 'maps_key2',
         $col_order: 13,
@@ -193,6 +200,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Map, {
       as: 'maps3',
+      $inverse: 'maps3',
       foreignKey: {
         name: 'maps_key3',
         $col_order: 14,

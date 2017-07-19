@@ -472,6 +472,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
       as: 'parent_town__world_area',
+      $inverse: 'world_areas',
       foreignKey: {
         name: 'parent_town__world_areas_key',
         $col_order: 17,
@@ -483,6 +484,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Difficulty, {
       as: 'difficulty',
+      $inverse: 'world_areas',
       foreignKey: {
         name: 'difficulties_key',
         $col_order: 18,
@@ -494,6 +496,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
+      $inverse: 'world_areas',
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 30,
@@ -505,6 +508,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'twinned_full_clear__achievement_item',
+      $inverse: 'world_areas',
       foreignKey: {
         name: 'twinned_full_clear__achievement_items_key',
         $col_order: 62,
@@ -516,6 +520,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'enter__achievement_item',
+      $inverse: 'world_areas',
       foreignKey: {
         name: 'enter__achievement_items_key',
         $col_order: 63,
@@ -527,6 +532,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: '8_mods_full_clear__achievement_item',
+      $inverse: 'world_areas',
       foreignKey: {
         name: '8_mods_full_clear__achievement_items_key',
         $col_order: 68,

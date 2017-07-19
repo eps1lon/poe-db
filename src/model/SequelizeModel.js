@@ -1,4 +1,4 @@
-const { singularize } = require('inflection');
+const { pluralize, singularize } = require('inflection');
 
 const Model = require('./Model');
 const SequelizeBaseModel = require('./SequelizeBaseModel');
@@ -34,23 +34,31 @@ class SequelizeModel extends SequelizeBaseModel {
   belongsTo() {
     return Object.keys(this.fields)
       .filter(field => this._isBelongsTo(field))
-      .map(field => [
-        Model.name(this.fields[field].key),
-        {
-          as: SequelizeBaseModel.colCasing(
-            singularize(field.replace(/Key([0-9]*)/, '$1')),
-          ),
-          foreignKey: {
-            name: SequelizeModel.colCasing(field),
-            $col_order: this.fields[field].rowid,
-            // save the type of the column to determine index key length
-            $type: this.fields[field].type,
+      .map(field => {
+        const number = field.match(/([0-9]*)$/)[1] || '';
+
+        return [
+          Model.name(this.fields[field].key),
+          {
+            as: SequelizeBaseModel.colCasing(
+              singularize(field.replace(/Key([0-9]*)/, '$1')),
+            ),
+            // this is the alias for the has many assoc
+            $inverse: SequelizeBaseModel.colCasing(
+              pluralize(this.name()) + number,
+            ),
+            foreignKey: {
+              name: SequelizeModel.colCasing(field),
+              $col_order: this.fields[field].rowid,
+              // save the type of the column to determine index key length
+              $type: this.fields[field].type,
+            },
+            targetKey: SequelizeModel.colCasing(
+              this.fields[field].key_id || PRIMARY,
+            ),
           },
-          targetKey: SequelizeModel.colCasing(
-            this.fields[field].key_id || PRIMARY,
-          ),
-        },
-      ]);
+        ];
+      });
   }
 
   belongsToMany() {

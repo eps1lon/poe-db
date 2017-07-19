@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Mod, {
       as: 'mod',
+      $inverse: 'str_map_mods',
       foreignKey: {
         name: 'mods_key',
         $col_order: 4,

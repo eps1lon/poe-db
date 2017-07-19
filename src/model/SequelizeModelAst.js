@@ -172,6 +172,7 @@ class SequelizeModelAst {
                 Object.assign({}, props, {
                   nullable: true,
                   constraints: false,
+                  as: props.$inverse,
                   // swap source target
                   targetKey: undefined,
                   sourceKey: props.targetKey,

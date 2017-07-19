@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.AchievementSetsDisplay, {
       as: 'achievement_sets_display',
+      $inverse: 'achievement_set_rewards',
       foreignKey: {
         name: 'achievement_sets_display_key',
         $col_order: 0,
@@ -60,7 +61,8 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     models.AchievementSetsDisplay.hasMany(model, {
-      as: 'achievement_sets_display',
+      as: 'achievement_set_rewards',
+      $inverse: 'achievement_set_rewards',
       foreignKey: {
         name: 'achievement_sets_display_key',
         $col_order: 0,
@@ -73,6 +75,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
+      $inverse: 'achievement_set_rewards',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 2,
@@ -83,7 +86,8 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     models.BaseItemType.hasMany(model, {
-      as: 'base_item_type',
+      as: 'achievement_set_rewards',
+      $inverse: 'achievement_set_rewards',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 2,

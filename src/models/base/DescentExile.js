@@ -58,6 +58,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
       as: 'world_area',
+      $inverse: 'descent_exiles',
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 1,
@@ -69,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Character, {
       as: 'character',
+      $inverse: 'descent_exiles',
       foreignKey: {
         name: 'characters_key',
         $col_order: 2,
@@ -80,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.MonsterVariety, {
       as: 'monster_variety',
+      $inverse: 'descent_exiles',
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 3,

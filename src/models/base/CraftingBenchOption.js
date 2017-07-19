@@ -104,6 +104,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
+      $inverse: 'crafting_bench_options',
       foreignKey: {
         name: 'n_p_c_master_key',
         $col_order: 0,
@@ -115,6 +116,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Mod, {
       as: 'mod',
+      $inverse: 'crafting_bench_options',
       foreignKey: {
         name: 'mods_key',
         $col_order: 2,

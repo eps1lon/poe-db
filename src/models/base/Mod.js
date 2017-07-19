@@ -256,6 +256,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.ModType, {
       as: 'mod_type',
+      $inverse: 'mods',
       foreignKey: {
         name: 'mod_type_key',
         $col_order: 2,
@@ -267,6 +268,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Stat, {
       as: 'stats1',
+      $inverse: 'mods1',
       foreignKey: {
         name: 'stats_key1',
         $col_order: 4,
@@ -278,6 +280,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Stat, {
       as: 'stats2',
+      $inverse: 'mods2',
       foreignKey: {
         name: 'stats_key2',
         $col_order: 5,
@@ -289,6 +292,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Stat, {
       as: 'stats3',
+      $inverse: 'mods3',
       foreignKey: {
         name: 'stats_key3',
         $col_order: 6,
@@ -300,6 +304,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Stat, {
       as: 'stats4',
+      $inverse: 'mods4',
       foreignKey: {
         name: 'stats_key4',
         $col_order: 7,
@@ -311,6 +316,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_definition',
+      $inverse: 'mods',
       foreignKey: {
         name: 'buff_definitions_key',
         $col_order: 22,
@@ -322,6 +328,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.GrantedEffectsPerLevel, {
       as: 'granted_effects_per_level',
+      $inverse: 'mods',
       foreignKey: {
         name: 'granted_effects_per_level_key',
         $col_order: 25,
@@ -333,6 +340,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Stat, {
       as: 'stats5',
+      $inverse: 'mods5',
       foreignKey: {
         name: 'stats_key5',
         $col_order: 34,
@@ -344,6 +352,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
+      $inverse: 'mods',
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 36,

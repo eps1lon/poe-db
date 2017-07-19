@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
       as: 'world_area',
+      $inverse: 'invasion_monster_restrictions',
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 1,

@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
       as: 'small_world_area',
+      $inverse: 'hideouts',
       foreignKey: {
         name: 'small_world_areas_key',
         $col_order: 1,
@@ -77,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
+      $inverse: 'hideouts',
       foreignKey: {
         name: 'n_p_c_master_key',
         $col_order: 2,
@@ -88,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.WorldArea, {
       as: 'medium_world_area',
+      $inverse: 'hideouts',
       foreignKey: {
         name: 'medium_world_areas_key',
         $col_order: 3,
@@ -99,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.WorldArea, {
       as: 'large_world_area',
+      $inverse: 'hideouts',
       foreignKey: {
         name: 'large_world_areas_key',
         $col_order: 4,

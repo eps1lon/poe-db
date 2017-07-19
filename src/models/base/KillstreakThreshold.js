@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
       as: 'monster_variety',
+      $inverse: 'killstreak_thresholds',
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 1,
@@ -55,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
+      $inverse: 'killstreak_thresholds',
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 2,

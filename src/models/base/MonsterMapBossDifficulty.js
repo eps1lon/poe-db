@@ -84,6 +84,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Stat, {
       as: 'stats1',
+      $inverse: 'monster_map_boss_difficulties1',
       foreignKey: {
         name: 'stats_key1',
         $col_order: 3,
@@ -95,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Stat, {
       as: 'stats2',
+      $inverse: 'monster_map_boss_difficulties2',
       foreignKey: {
         name: 'stats_key2',
         $col_order: 4,
@@ -106,6 +108,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Stat, {
       as: 'stats3',
+      $inverse: 'monster_map_boss_difficulties3',
       foreignKey: {
         name: 'stats_key3',
         $col_order: 5,
@@ -117,6 +120,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Stat, {
       as: 'stats4',
+      $inverse: 'monster_map_boss_difficulties4',
       foreignKey: {
         name: 'stats_key4',
         $col_order: 7,

@@ -1,40 +1,67 @@
+const { singularize } = require('inflection');
+
 const { usage } = require('../routes');
 const { nonCircularAssociations } = require('../model/util');
 
+const prepareAssociationsForInclude = model => {
+  return nonCircularAssociations(model).map(name => {
+    const association = model.associations[name];
+    const include = {
+      model: association.target,
+      as: name,
+    };
+
+    // exclude the join model, it is after all an implementation detail
+    if (association.associationType === 'BelongsToMany') {
+      include.through = { attributes: [] };
+    }
+
+    return include;
+  });
+};
+
+const findAll = (model, where = {}, attributes = undefined) => {
+  return model.findAll({
+    attributes,
+    where,
+    include: prepareAssociationsForInclude(model),
+  });
+};
+
+const findOne = (model, id, attributes = undefined) => {
+  return model.findById(id, {
+    attributes,
+    include: prepareAssociationsForInclude(model),
+  });
+};
+
 module.exports = models => async (req, res) => {
-  const { params: { model_name } } = req;
+  const { params: { model_name, id } } = req;
 
   if (model_name === undefined) {
     usage(req, res);
   } else {
-    if (models[model_name] === undefined) {
-      res.json({ error: `${model_name} does not exist` });
+    const singular = singularize(model_name);
+
+    if (models[singular] === undefined) {
+      res.json({ error: `no model found for ${model_name}` });
     } else {
-      const model = models[model_name];
-      const non_circular_associations = nonCircularAssociations(
-        model,
-      ).map(name => {
-        const association = model.associations[name];
-        const include = {
-          model: association.target,
-          as: name,
-        };
+      const model = models[singular];
 
-        // exclude the join model, it is after all an implementation detail
-        if (association.associationType === 'BelongsToMany') {
-          include.through = { attributes: [] };
-        }
+      const attributes = JSON.parse(req.query.attributes || 0) || undefined;
 
-        return include;
-      });
+      let result = [];
+      // /Model/:id
+      if (singular === model_name) {
+        result = await findOne(model, id, attributes);
+      } else {
+        // /Models?params
+        // default to {} if not where given, passing undefined would throw
+        const where = JSON.parse(req.query.where || '{}');
+        result = await findAll(model, where, attributes);
+      }
 
-      const results = model.findAll({
-        attributes: JSON.parse(req.query.attributes || 0) || undefined,
-        where: JSON.parse(req.query.where || '{}'),
-        include: non_circular_associations,
-      });
-
-      res.json({ results: await results });
+      res.json({ result });
     }
   }
 };

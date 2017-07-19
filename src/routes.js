@@ -8,7 +8,9 @@ const usage = (req, res) =>
 module.exports = {
   router: models => {
     router.get('/', usage);
-    router.get('/:model_name/:where?', controller(models));
+
+    // model name can be plural => many, or singular => one
+    router.get('/:model_name/:id?', controller(models));
 
     return router;
   },

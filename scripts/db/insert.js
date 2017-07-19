@@ -1,5 +1,25 @@
+const _ = require('lodash');
+
 const { orm_creator } = require('../../src/db');
 const { buildAssocKeys, buildAttrObj } = require('../../src/model/util');
+
+// maximum tally of records inserted in one packet
+const MAX_PACKET_SIZE = 50000;
+
+// splits records into chunks and maps model#bulkCreate on these chunks
+const bulkChunkCreate = (model, records, size, options = {}) =>
+  _.chunk(records, size).map(
+    async chunk => await model.bulkCreate(chunk, options),
+  );
+
+/**
+ * gets the affectedRows by all the chunks
+ * @param {bulkdCreate.returnval[]} chunks 
+ */
+const affectedRowsInChunks = async chunks => {
+  const inserted = await Promise.all(chunks);
+  return _.sum(inserted.map(chunk => chunk.length));
+};
 
 const all_records = require('../../data/records.json');
 
@@ -55,17 +75,32 @@ const all_records = require('../../data/records.json');
         const records = many_to_may_records[assoc];
         const assoc_model = model.associations[assoc].through.model;
 
-        const inserted = await assoc_model.bulkCreate(
-          records.map(([source, target]) => {
-            return {
-              [model.associations[assoc].foreignKey]: source,
-              [model.associations[assoc].otherKey]: target,
-            };
-          }),
-          { ignoreDuplicates: true },
-        );
-        const affected_rows = inserted.length;
+        const assocs_as_obj = records.map(([source, target]) => {
+          return {
+            [model.associations[assoc].foreignKey]: source,
+            [model.associations[assoc].otherKey]: target,
+          };
+        });
 
+        // chunk or we will get packet to large
+        const inserts = bulkChunkCreate(
+          assoc_model,
+          assocs_as_obj,
+          MAX_PACKET_SIZE,
+          {
+            ignoreDuplicates: true,
+            // keep this as simple as possible
+            // these are just join models so we are cutting it a bit loose to
+            // be fast
+            hooks: false,
+            validate: false,
+            // not documented but according to stackoverflow this
+            // will skip building every single object
+            raw: true,
+          },
+        );
+
+        const affected_rows = await affectedRowsInChunks(inserts);
         total_insert_count += affected_rows;
 
         console.log(

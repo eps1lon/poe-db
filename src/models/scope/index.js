@@ -1,0 +1,23 @@
+const path = require('path');
+
+const { modelFiles } = require('../util');
+
+module.exports = sequelize => {
+  for (const scope_file of modelFiles(__dirname)) {
+    const model_name = path.basename(scope_file, 'js');
+    const model = sequelize.models[model_name];
+
+    if (model !== undefined) {
+      const scopes = require(scope_file);
+
+      for (const [name, scope] of Object.entries(scopes)) {
+        model.addScope(name, scope, { overide: false });
+      }
+    }
+  }
+
+  // for chaining, would be nice to have it side-effect free
+  // but the sequelize obj also includes a connection, 500+ models
+  // so its prob better this way
+  return sequelize;
+};

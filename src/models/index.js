@@ -1,13 +1,15 @@
 const { baseModelFiles } = require('./util');
 
 const base = require('./base/');
+const addScopes = require('./scope');
 
 module.exports = {
   baseModelFiles,
   init: sequelize => {
     const models = base(sequelize);
 
-    // TODO add scopes
+    // add scopes
+    addScopes(models);
 
     return models;
   },

@@ -1,3 +1,20 @@
+const prepareAssociationsForInclude = model => {
+  return nonCircularAssociations(model).map(name => {
+    const association = model.associations[name];
+    const include = {
+      model: association.target,
+      as: name,
+    };
+
+    // exclude the join model, it is after all an implementation detail
+    if (association.associationType === 'BelongsToMany') {
+      include.through = { attributes: [] };
+    }
+
+    return include;
+  });
+};
+
 const filterAssociations = (model, fn) =>
   Object.entries(model.associations)
     .filter(([name, props]) => fn(name, props))
@@ -53,4 +70,5 @@ module.exports = {
   buildAssocKeys,
   buildAttrObj,
   nonCircularAssociations,
+  prepareAssociationsForInclude,
 };

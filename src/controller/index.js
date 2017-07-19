@@ -1,24 +1,7 @@
 const { singularize } = require('inflection');
 
 const { usage } = require('../routes');
-const { nonCircularAssociations } = require('../model/util');
-
-const prepareAssociationsForInclude = model => {
-  return nonCircularAssociations(model).map(name => {
-    const association = model.associations[name];
-    const include = {
-      model: association.target,
-      as: name,
-    };
-
-    // exclude the join model, it is after all an implementation detail
-    if (association.associationType === 'BelongsToMany') {
-      include.through = { attributes: [] };
-    }
-
-    return include;
-  });
-};
+const { prepareAssociationsForInclude } = require('../model/util');
 
 const findAll = (model, where = {}, attributes = undefined) => {
   return model.findAll({

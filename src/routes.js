@@ -8,7 +8,7 @@ const usage = (req, res) =>
 module.exports = {
   router: models => {
     router.get('/', usage);
-    router.get('/:model/:where?', controller(models));
+    router.get('/:model_name/:where?', controller(models));
 
     return router;
   },

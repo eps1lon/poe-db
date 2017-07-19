@@ -91,6 +91,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Chest, {
+      as: 'chest',
       foreignKey: {
         name: 'chests_key',
         $col_order: 1,
@@ -101,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Word, {
+      as: 'word',
       foreignKey: {
         name: 'words_key',
         $col_order: 2,

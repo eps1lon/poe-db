@@ -73,6 +73,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Character, {
+      as: 'character',
       foreignKey: {
         name: 'characters_key',
         $col_order: 2,
@@ -83,6 +84,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.CharacterStartStateSet, {
+      as: 'character_start_state_set',
       foreignKey: {
         name: 'character_start_state_set_key',
         $col_order: 6,

@@ -59,6 +59,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
+      as: 'n_p_c_master',
       foreignKey: {
         name: 'n_p_c_master_key',
         $col_order: 0,

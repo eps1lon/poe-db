@@ -43,6 +43,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.SkillTotem, {
+      as: 'skill_totem',
       foreignKey: {
         name: 'skill_totems_key',
         $col_order: 0,
@@ -53,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.MonsterVariety, {
+      as: 'monster_variety',
       foreignKey: {
         name: 'monster_varieties_key',
         $col_order: 2,

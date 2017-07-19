@@ -111,6 +111,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
+      as: 'base_item_type',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -121,6 +122,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BaseItemType, {
+      as: 'full_stack__base_item_type',
       foreignKey: {
         name: 'full_stack__base_item_types_key',
         $col_order: 5,
@@ -131,6 +133,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
+      as: 'possession__achievement_item',
       foreignKey: {
         name: 'possession__achievement_items_key',
         $col_order: 10,

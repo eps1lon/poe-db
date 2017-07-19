@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ModSellPriceType, {
+      as: 'mod_sell_price_type',
       foreignKey: {
         name: 'mod_sell_price_types_key',
         $col_order: 0,

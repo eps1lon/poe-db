@@ -69,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
+      as: 'stat',
       foreignKey: {
         name: 'stats_key',
         $col_order: 2,
@@ -79,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Difficulty, {
+      as: 'difficulty',
       foreignKey: {
         name: 'difficulty_key',
         $col_order: 4,
@@ -89,6 +91,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Quest, {
+      as: 'quest',
       foreignKey: {
         name: 'quest_key',
         $col_order: 5,

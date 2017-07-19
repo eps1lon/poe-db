@@ -61,6 +61,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.AchievementItem, {
+      as: 'achievement_item',
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 0,
@@ -71,6 +72,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Difficulty, {
+      as: 'difficulty',
       foreignKey: {
         name: 'difficulties_key',
         $col_order: 4,

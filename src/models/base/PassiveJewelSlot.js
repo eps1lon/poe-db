@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.PassiveSkill, {
+      as: 'passive_skill',
       foreignKey: {
         name: 'passive_skills_key',
         $col_order: 0,

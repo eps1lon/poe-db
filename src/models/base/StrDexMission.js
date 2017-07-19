@@ -85,6 +85,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
+      as: 'dummy__monster_variety',
       foreignKey: {
         name: 'dummy__monster_varieties_key',
         $col_order: 5,
@@ -95,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCTalk, {
+      as: 'n_p_c_talk',
       foreignKey: {
         name: 'n_p_c_talk_key',
         $col_order: 8,

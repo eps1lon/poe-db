@@ -119,6 +119,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ActiveSkill, {
+      as: 'active_skill',
       foreignKey: {
         name: 'active_skills_key',
         $col_order: 13,

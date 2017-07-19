@@ -41,6 +41,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.EventSeason, {
+      as: 'event_season',
       foreignKey: {
         name: 'event_season_key',
         $col_order: 0,

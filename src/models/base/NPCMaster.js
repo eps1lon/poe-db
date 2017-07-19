@@ -102,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPC, {
+      as: 'n_p_c',
       foreignKey: {
         name: 'n_p_cs_key',
         $col_order: 1,
@@ -112,6 +113,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
+      as: 'signature_mod__mod',
       foreignKey: {
         name: 'signature_mod__mods_key',
         $col_order: 4,
@@ -122,6 +124,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
+      as: 'achievement_item',
       foreignKey: {
         name: 'achievement_items_key',
         $col_order: 9,
@@ -132,6 +135,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
+      as: 'talisman__achievement_item',
       foreignKey: {
         name: 'talisman__achievement_items_key',
         $col_order: 15,

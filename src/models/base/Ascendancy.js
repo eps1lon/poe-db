@@ -71,6 +71,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Character, {
+      as: 'character',
       foreignKey: {
         name: 'characters_key',
         $col_order: 2,

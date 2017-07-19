@@ -79,6 +79,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.LabyrinthSection, {
+      as: 'labyrinth_section',
       foreignKey: {
         name: 'labyrinth_section_key',
         $col_order: 0,
@@ -89,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.LabyrinthSecret, {
+      as: 'labyrinth_secrets0',
       foreignKey: {
         name: 'labyrinth_secrets_key0',
         $col_order: 3,
@@ -99,6 +101,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.LabyrinthSecret, {
+      as: 'labyrinth_secrets1',
       foreignKey: {
         name: 'labyrinth_secrets_key1',
         $col_order: 4,
@@ -109,6 +112,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.LabyrinthArea, {
+      as: 'labyrinth_area',
       foreignKey: {
         name: 'labyrinth_areas_key',
         $col_order: 5,
@@ -119,6 +123,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.LabyrinthNodeOverride, {
+      as: 'labyrinth_node_override',
       foreignKey: {
         name: 'labyrinth_node_overrides_key',
         $col_order: 8,

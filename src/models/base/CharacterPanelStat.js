@@ -61,6 +61,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.CharacterPanelDescriptionMode, {
+      as: 'character_panel_description_mode',
       foreignKey: {
         name: 'character_panel_description_modes_key',
         $col_order: 3,
@@ -71,6 +72,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.CharacterPanelTab, {
+      as: 'character_panel_tab',
       foreignKey: {
         name: 'character_panel_tabs_key',
         $col_order: 6,

@@ -59,6 +59,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Environment, {
+      as: 'environment',
       foreignKey: {
         name: 'environments_key',
         $col_order: 5,

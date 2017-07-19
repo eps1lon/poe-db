@@ -139,6 +139,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ItemClass, {
+      as: 'item_class',
       foreignKey: {
         name: 'item_classes_key',
         $col_order: 1,
@@ -149,6 +150,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.FlavourText, {
+      as: 'flavour_text',
       foreignKey: {
         name: 'flavour_text_key',
         $col_order: 7,
@@ -159,6 +161,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.SoundEffect, {
+      as: 'sound_effect',
       foreignKey: {
         name: 'sound_effects_key',
         $col_order: 10,
@@ -169,6 +172,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
+      as: 'item_visual_identity',
       foreignKey: {
         name: 'item_visual_identity_key',
         $col_order: 18,
@@ -179,6 +183,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
+      as: 'equip__achievement_item',
       foreignKey: {
         name: 'equip__achievement_items_key',
         $col_order: 26,

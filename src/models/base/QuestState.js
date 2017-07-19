@@ -101,6 +101,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Quest, {
+      as: 'quest',
       foreignKey: {
         name: 'quest_key',
         $col_order: 0,

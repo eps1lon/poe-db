@@ -69,6 +69,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
+      as: 'base_item_type',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -79,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.GrantedEffect, {
+      as: 'granted_effect',
       foreignKey: {
         name: 'granted_effects_key',
         $col_order: 1,
@@ -89,6 +91,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BaseItemType, {
+      as: 'vaal_variant__base_item_type',
       foreignKey: {
         name: 'vaal_variant__base_item_types_key',
         $col_order: 6,

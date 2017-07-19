@@ -83,6 +83,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Stat, {
+      as: 'stats1',
       foreignKey: {
         name: 'stats_key1',
         $col_order: 3,
@@ -93,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Stat, {
+      as: 'stats2',
       foreignKey: {
         name: 'stats_key2',
         $col_order: 4,
@@ -103,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Stat, {
+      as: 'stats3',
       foreignKey: {
         name: 'stats_key3',
         $col_order: 5,
@@ -113,6 +116,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Stat, {
+      as: 'stats4',
       foreignKey: {
         name: 'stats_key4',
         $col_order: 7,

@@ -41,6 +41,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ShopCurrency, {
+      as: 'shop_currency',
       foreignKey: {
         name: 'shop_currency_key',
         $col_order: 2,

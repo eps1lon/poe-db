@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Character, {
+      as: 'character',
       foreignKey: {
         name: 'characters_key',
         $col_order: 1,
@@ -67,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BaseItemType, {
+      as: 'base_item_type',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 2,
@@ -77,6 +79,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.WorldArea, {
+      as: 'world_area',
       foreignKey: {
         name: 'world_areas_key',
         $col_order: 4,

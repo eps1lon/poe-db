@@ -181,6 +181,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPC, {
+      as: 'n_p_c',
       foreignKey: {
         name: 'n_p_c_key',
         $col_order: 0,
@@ -191,6 +192,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Quest, {
+      as: 'quest',
       foreignKey: {
         name: 'quest_key',
         $col_order: 9,

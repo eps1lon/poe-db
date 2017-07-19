@@ -95,6 +95,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
+      as: 'n_p_c_master',
       foreignKey: {
         name: 'n_p_c_master_key',
         $col_order: 4,
@@ -105,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCShop, {
+      as: 'n_p_c_shop',
       foreignKey: {
         name: 'n_p_c_shop_key',
         $col_order: 8,
@@ -115,6 +117,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCAudio, {
+      as: 'n_p_c_audio1',
       foreignKey: {
         name: 'n_p_c_audio_key1',
         $col_order: 9,
@@ -125,6 +128,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCAudio, {
+      as: 'n_p_c_audio2',
       foreignKey: {
         name: 'n_p_c_audio_key2',
         $col_order: 10,

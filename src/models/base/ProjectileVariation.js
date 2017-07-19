@@ -35,6 +35,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Projectile, {
+      as: 'projectile',
       foreignKey: {
         name: 'projectile_key',
         $col_order: 1,

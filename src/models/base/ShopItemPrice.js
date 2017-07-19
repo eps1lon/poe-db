@@ -43,6 +43,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ShopItem, {
+      as: 'shop_item',
       foreignKey: {
         name: 'shop_item_key',
         $col_order: 0,
@@ -53,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ShopRegion, {
+      as: 'shop_region',
       foreignKey: {
         name: 'shop_region_key',
         $col_order: 1,

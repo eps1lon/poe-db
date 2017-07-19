@@ -1,3 +1,5 @@
+const { singularize } = require('inflection');
+
 const Model = require('./Model');
 const SequelizeBaseModel = require('./SequelizeBaseModel');
 const SequelizeThroughModel = require('./SequelizeThroughModel');
@@ -35,6 +37,9 @@ class SequelizeModel extends SequelizeBaseModel {
       .map(field => [
         Model.name(this.fields[field].key),
         {
+          as: SequelizeBaseModel.colCasing(
+            singularize(field.replace(/Key([0-9]*)/, '$1')),
+          ),
           foreignKey: {
             name: SequelizeModel.colCasing(field),
             $col_order: this.fields[field].rowid,

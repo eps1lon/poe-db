@@ -83,6 +83,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
+      as: 'base_item_type',
       foreignKey: {
         name: 'base_item_types_key',
         $col_order: 0,
@@ -93,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ItemVisualEffect, {
+      as: 'item_visual_effect',
       foreignKey: {
         name: 'item_visual_effect_key',
         $col_order: 1,
@@ -103,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
+      as: 'item_visual_identity1',
       foreignKey: {
         name: 'item_visual_identity_key1',
         $col_order: 2,
@@ -113,6 +116,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
+      as: 'item_visual_identity2',
       foreignKey: {
         name: 'item_visual_identity_key2',
         $col_order: 3,

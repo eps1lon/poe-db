@@ -197,6 +197,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.GrantedEffect, {
+      as: 'granted_effect',
       foreignKey: {
         name: 'granted_effects_key',
         $col_order: 0,

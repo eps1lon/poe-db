@@ -109,6 +109,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Stat, {
+      as: 'main_hand_alias__stat',
       foreignKey: {
         name: 'main_hand_alias__stats_key',
         $col_order: 9,
@@ -119,6 +120,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Stat, {
+      as: 'off_hand_alias__stat',
       foreignKey: {
         name: 'off_hand_alias__stats_key',
         $col_order: 10,

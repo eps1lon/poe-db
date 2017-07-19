@@ -101,6 +101,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ProphecyChain, {
+      as: 'prophecy_chain',
       foreignKey: {
         name: 'prophecy_chain_key',
         $col_order: 7,

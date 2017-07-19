@@ -67,6 +67,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MapPin, {
+      as: 'map_pins0',
       foreignKey: {
         name: 'map_pins_key0',
         $col_order: 0,
@@ -77,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.MapPin, {
+      as: 'map_pins1',
       foreignKey: {
         name: 'map_pins_key1',
         $col_order: 1,

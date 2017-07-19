@@ -26,6 +26,12 @@ const findAssociations = (model, ...types) =>
     (name, props) => types.indexOf(props.associationType) !== -1,
   );
 
+const foreignKeys = model => {
+  return findAssociations(model, 'BelongsTo').map(
+    assoc => model.associations[assoc].foreignKey,
+  );
+};
+
 const nonCircularAssociations = model =>
   findAssociations(model, 'BelongsTo', 'BelongsToMany');
 
@@ -69,6 +75,8 @@ const buildAssocKeys = (model, record, row) =>
 module.exports = {
   buildAssocKeys,
   buildAttrObj,
+  findAssociations,
+  foreignKeys,
   nonCircularAssociations,
   prepareAssociationsForInclude,
 };

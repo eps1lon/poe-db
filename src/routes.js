@@ -14,7 +14,11 @@ module.exports = {
   router: models => {
     router.get('/', usage);
 
-    const { describe, find, scoped } = controller(models);
+    const { describe, find, modelsController, scoped } = controller(models);
+
+    // more like an alias for /describe/ and /find/ which corresponds
+    // to the index
+    router.get('/models', modelsController);
 
     router.get('/describe/:model_name', describe);
 

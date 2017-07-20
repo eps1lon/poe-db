@@ -113,12 +113,16 @@ const describe = (models, model_name) => {
   }
 };
 
+// see SequelizeThroughModel#name
+const isJoinModel = name => name.indexOf('Habtm') !== -1;
+
 module.exports = {
   buildAssocKeys,
   buildAttrObj,
   describe,
   findAssociations,
   foreignKeys,
+  isJoinModel,
   nonCircularAssociations,
   prepareAssociationsForInclude,
 };

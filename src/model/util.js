@@ -109,11 +109,6 @@ const describe = (models, model_name) => {
     description.hasMany = assocDescription(model, 'HasMany');
     description.belongsToMany = assocDescription(model, 'BelongsToMany');
 
-    // remove foreignKeys
-    for (const assoc of findAssociations(model, 'BelongsTo')) {
-      console.log(model.associations[assoc].foreignKey);
-    }
-
     return description;
   }
 };

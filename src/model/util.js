@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 const prepareAssociationsForInclude = model => {
   return nonCircularAssociations(model).map(name => {
     const association = model.associations[name];
@@ -72,9 +74,46 @@ const buildAssocKeys = (model, record, row) =>
     return attributes;
   }, {});
 
+const describe = (models, model_name) => {
+  if (model_name === undefined || models[model_name] === undefined) {
+    return undefined;
+  } else {
+    const model = models[model_name];
+
+    const description = {};
+
+    // build attribute_name => type
+    const attributes = _.mapValues(model.attributes, ({ type }) =>
+      type.toString(),
+    );
+
+    // and remove foreignkeys
+    const foreign_keys = foreignKeys(model);
+    const attributes_without_foreign_keys = _.omitBy(
+      attributes,
+      (attribute, name) => foreign_keys.includes(name),
+    );
+
+    description.attributes = attributes_without_foreign_keys;
+
+    // assoc
+    description.belongsTo = findAssociations(model, 'BelongsTo');
+    description.hasMany = findAssociations(model, 'HasMany');
+    description.belongsToMany = findAssociations(model, 'BelongsToMany');
+
+    // remove foreignKeys
+    for (const assoc of findAssociations(model, 'BelongsTo')) {
+      console.log(model.associations[assoc].foreignKey);
+    }
+
+    return description;
+  }
+};
+
 module.exports = {
   buildAssocKeys,
   buildAttrObj,
+  describe,
   findAssociations,
   foreignKeys,
   nonCircularAssociations,

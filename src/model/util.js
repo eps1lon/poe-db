@@ -74,6 +74,14 @@ const buildAssocKeys = (model, record, row) =>
     return attributes;
   }, {});
 
+const assocDescription = (model, type) => {
+  return _.fromPairs(
+    findAssociations(model, type).map(name => {
+      return [name, model.associations[name].target.name];
+    }),
+  );
+};
+
 const describe = (models, model_name) => {
   if (model_name === undefined || models[model_name] === undefined) {
     return undefined;
@@ -97,9 +105,9 @@ const describe = (models, model_name) => {
     description.attributes = attributes_without_foreign_keys;
 
     // assoc
-    description.belongsTo = findAssociations(model, 'BelongsTo');
-    description.hasMany = findAssociations(model, 'HasMany');
-    description.belongsToMany = findAssociations(model, 'BelongsToMany');
+    description.belongsTo = assocDescription(model, 'BelongsTo');
+    description.hasMany = assocDescription(model, 'HasMany');
+    description.belongsToMany = assocDescription(model, 'BelongsToMany');
 
     // remove foreignKeys
     for (const assoc of findAssociations(model, 'BelongsTo')) {

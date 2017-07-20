@@ -31,7 +31,7 @@ module.exports = models => async (req, res) => {
     } else {
       const model = models[singular];
 
-      const attributes = JSON.parse(req.query.attributes || 0) || undefined;
+      const { attributes, where } = req.query;
 
       let result = [];
       // /Model/:id
@@ -39,8 +39,6 @@ module.exports = models => async (req, res) => {
         result = await findOne(model, id, attributes);
       } else {
         // /Models?params
-        // default to {} if not where given, passing undefined would throw
-        const where = JSON.parse(req.query.where || '{}');
         result = await findAll(model, where, attributes);
       }
 

@@ -3,18 +3,32 @@ const { singularize } = require('inflection');
 const { usage } = require('../routes');
 const { prepareAssociationsForInclude } = require('../model/util');
 
-const findAll = (model, where = {}, attributes = undefined) => {
+const intOrUndefined = val => {
+  const number = parseInt(val, 10);
+
+  if (Number.isNaN(number)) {
+    return undefined;
+  } else {
+    return number;
+  }
+};
+
+const findAll = (where = {}) => ({ model, attributes, offset, limit }) => {
   return model.findAll({
     attributes,
     where,
     include: prepareAssociationsForInclude(model),
+    offset,
+    limit,
   });
 };
 
-const findOne = (model, id, attributes = undefined) => {
+const findOne = id => ({ model, attributes, offset, limit }) => {
   return model.findById(id, {
     attributes,
     include: prepareAssociationsForInclude(model),
+    offset,
+    limit,
   });
 };
 
@@ -31,18 +45,46 @@ module.exports = models => async (req, res) => {
     } else {
       const model = models[singular];
 
-      const { attributes, where } = req.query;
+      const { attributes, where, offset, limit } = req.query;
 
-      let result = [];
+      let find;
       // /Model/:id
       if (singular === model_name) {
-        result = await findOne(model, id, attributes);
+        find = findOne(id);
       } else {
         // /Models?params
-        result = await findAll(model, where, attributes);
+        find = findAll(where);
       }
 
-      res.json({ result });
+      const find_arguments = {
+        model,
+        attributes,
+        offset: intOrUndefined(offset),
+        limit: intOrUndefined(limit),
+      };
+
+      const warnings = [];
+      if (
+        find_arguments.offset === undefined &&
+        find_arguments.offset !== offset
+      ) {
+        warnings.push(
+          'ignoring offset because we couldnt figure out what number it represents',
+        );
+      }
+
+      if (
+        find_arguments.limit === undefined &&
+        find_arguments.limit !== limit
+      ) {
+        warnings.push(
+          'ignoring limit because we couldnt figure out what number it represents',
+        );
+      }
+
+      const result = await find(find_arguments);
+
+      res.json({ result, warnings });
     }
   }
 };

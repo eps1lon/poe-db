@@ -13,8 +13,17 @@ const intOrUndefined = val => {
   }
 };
 
+const intOrDefault = (val, otherwise) => {
+  const number = intOrUndefined(val);
+  if (number === undefined) {
+    return otherwise;
+  } else {
+    return number;
+  }
+};
+
 const findAll = (where = {}) => ({ model, attributes, offset, limit }) => {
-  return model.findAll({
+  return model.findAndCountAll({
     attributes,
     where,
     include: prepareAssociationsForInclude(model),
@@ -24,12 +33,17 @@ const findAll = (where = {}) => ({ model, attributes, offset, limit }) => {
 };
 
 const findOne = id => ({ model, attributes, offset, limit }) => {
-  return model.findById(id, {
-    attributes,
-    include: prepareAssociationsForInclude(model),
-    offset,
-    limit,
-  });
+  return (
+    model
+      .findById(id, {
+        attributes,
+        include: prepareAssociationsForInclude(model),
+        offset,
+        limit,
+      })
+      // imitate the returnval of findAndCountAll
+      .then(result => Promise.resolve({ count: 1, rows: result }))
+  );
 };
 
 module.exports = models => async (req, res) => {
@@ -45,7 +59,7 @@ module.exports = models => async (req, res) => {
     } else {
       const model = models[singular];
 
-      const { attributes, where, offset, limit } = req.query;
+      const { attributes, where, page, page_size } = req.query;
 
       let find;
       // /Model/:id
@@ -56,35 +70,25 @@ module.exports = models => async (req, res) => {
         find = findAll(where);
       }
 
-      const find_arguments = {
+      // prevent user from accidentally requesting large ressources
+      // if he wants everything he should tell us explicitly
+      const normalized_arguments = {
         model,
+        where,
         attributes,
-        offset: intOrUndefined(offset),
-        limit: intOrUndefined(limit),
+        offset: (intOrDefault(page, 1) - 1) * intOrDefault(page_size, 20),
+        limit: intOrDefault(page_size, 20),
       };
 
+      const { rows, count } = await find(normalized_arguments);
+
       const warnings = [];
-      if (
-        find_arguments.offset === undefined &&
-        find_arguments.offset !== offset
-      ) {
-        warnings.push(
-          'ignoring offset because we couldnt figure out what number it represents',
-        );
-      }
 
-      if (
-        find_arguments.limit === undefined &&
-        find_arguments.limit !== limit
-      ) {
-        warnings.push(
-          'ignoring limit because we couldnt figure out what number it represents',
-        );
-      }
-
-      const result = await find(find_arguments);
-
-      res.json({ result, warnings });
+      res.json({
+        pages: Math.ceil(count / normalized_arguments.limit),
+        result: rows,
+        warnings,
+      });
     }
   }
 };

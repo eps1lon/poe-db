@@ -59,9 +59,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ShopPaymentPackage, {
       as: 'shop_payment_package',
       $inverse: 'shop_payment_package_items',
+      $col_order: 1,
       foreignKey: {
         name: 'shop_payment_package_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -71,9 +71,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ShopItem, {
       as: 'shop_item',
       $inverse: 'shop_payment_package_items',
+      $col_order: 2,
       foreignKey: {
         name: 'shop_item_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -83,9 +83,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ShopToken, {
       as: 'shop_token',
       $inverse: 'shop_payment_package_items',
+      $col_order: 4,
       foreignKey: {
         name: 'shop_token_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',

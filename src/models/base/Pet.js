@@ -55,9 +55,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'pets',
+      $col_order: 1,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

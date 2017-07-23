@@ -49,9 +49,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPC, {
       as: 'n_p_c',
       $inverse: 'quest_vendor_rewards',
+      $col_order: 1,
       foreignKey: {
         name: 'n_p_c_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

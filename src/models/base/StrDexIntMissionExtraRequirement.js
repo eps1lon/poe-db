@@ -91,9 +91,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCTalk, {
       as: 'n_p_c_talk',
       $inverse: 'str_dex_int_mission_extra_requirements',
+      $col_order: 8,
       foreignKey: {
         name: 'n_p_c_talk_key',
-        $col_order: 8,
         $type: 'ulong',
       },
       targetKey: 'row',

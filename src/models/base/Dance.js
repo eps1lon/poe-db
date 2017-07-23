@@ -39,9 +39,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'dances',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'long',
       },
       targetKey: 'row',
@@ -51,9 +51,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Character, {
       as: 'character',
       $inverse: 'dances',
+      $col_order: 1,
       foreignKey: {
         name: 'characters_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

@@ -51,9 +51,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Race, {
       as: 'race',
       $inverse: 'race_areas',
+      $col_order: 0,
       foreignKey: {
         name: 'races_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -63,9 +63,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'world_area',
       $inverse: 'race_areas',
+      $col_order: 1,
       foreignKey: {
         name: 'world_areas_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

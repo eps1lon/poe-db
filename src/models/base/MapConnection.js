@@ -69,9 +69,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MapPin, {
       as: 'map_pins0',
       $inverse: 'map_connections0',
+      $col_order: 0,
       foreignKey: {
         name: 'map_pins_key0',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -81,9 +81,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MapPin, {
       as: 'map_pins1',
       $inverse: 'map_connections1',
+      $col_order: 1,
       foreignKey: {
         name: 'map_pins_key1',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

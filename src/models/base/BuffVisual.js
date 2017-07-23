@@ -75,9 +75,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MiscAnimated, {
       as: 'misc_animated',
       $inverse: 'buff_visuals',
+      $col_order: 4,
       foreignKey: {
         name: 'misc_animated_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -87,9 +87,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MiscAnimated, {
       as: 'misc_animated2',
       $inverse: 'buff_visuals2',
+      $col_order: 5,
       foreignKey: {
         name: 'misc_animated_key2',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',

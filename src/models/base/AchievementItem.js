@@ -67,9 +67,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Achievement, {
       as: 'achievement',
       $inverse: 'achievement_items',
+      $col_order: 5,
       foreignKey: {
         name: 'achievements_key',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -79,9 +79,9 @@ module.exports = (sequelize, DataTypes) => {
     models.Achievement.hasMany(model, {
       as: 'achievement_items',
       $inverse: 'achievement_items',
+      $col_order: 5,
       foreignKey: {
         name: 'achievements_key',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: undefined,

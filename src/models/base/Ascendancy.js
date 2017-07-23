@@ -73,9 +73,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Character, {
       as: 'character',
       $inverse: 'ascendancies',
+      $col_order: 2,
       foreignKey: {
         name: 'characters_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

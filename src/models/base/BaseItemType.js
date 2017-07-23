@@ -141,9 +141,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemClass, {
       as: 'item_class',
       $inverse: 'base_item_types',
+      $col_order: 1,
       foreignKey: {
         name: 'item_classes_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -153,9 +153,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.FlavourText, {
       as: 'flavour_text',
       $inverse: 'base_item_types',
+      $col_order: 7,
       foreignKey: {
         name: 'flavour_text_key',
-        $col_order: 7,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -165,9 +165,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.SoundEffect, {
       as: 'sound_effect',
       $inverse: 'base_item_types',
+      $col_order: 10,
       foreignKey: {
         name: 'sound_effects_key',
-        $col_order: 10,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -177,9 +177,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'item_visual_identity',
       $inverse: 'base_item_types',
+      $col_order: 18,
       foreignKey: {
         name: 'item_visual_identity_key',
-        $col_order: 18,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -189,9 +189,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'equip__achievement_item',
       $inverse: 'base_item_types',
+      $col_order: 26,
       foreignKey: {
         name: 'equip__achievement_items_key',
-        $col_order: 26,
         $type: 'ulong',
       },
       targetKey: 'row',

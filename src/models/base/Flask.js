@@ -75,9 +75,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'flasks',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -87,9 +87,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_definition',
       $inverse: 'flasks',
+      $col_order: 6,
       foreignKey: {
         name: 'buff_definitions_key',
-        $col_order: 6,
         $type: 'ulong',
       },
       targetKey: 'row',

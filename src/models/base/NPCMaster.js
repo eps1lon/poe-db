@@ -104,9 +104,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPC, {
       as: 'n_p_c',
       $inverse: 'n_p_c_masters',
+      $col_order: 1,
       foreignKey: {
         name: 'n_p_cs_key',
-        $col_order: 1,
         $type: 'ref|string',
       },
       targetKey: 'id',
@@ -116,9 +116,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Mod, {
       as: 'signature_mod__mod',
       $inverse: 'n_p_c_masters',
+      $col_order: 4,
       foreignKey: {
         name: 'signature_mod__mods_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -128,9 +128,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
       $inverse: 'n_p_c_masters',
+      $col_order: 9,
       foreignKey: {
         name: 'achievement_items_key',
-        $col_order: 9,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -140,9 +140,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'talisman__achievement_item',
       $inverse: 'n_p_c_masters',
+      $col_order: 15,
       foreignKey: {
         name: 'talisman__achievement_items_key',
-        $col_order: 15,
         $type: 'ulong',
       },
       targetKey: 'row',

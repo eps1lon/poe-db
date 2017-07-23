@@ -115,9 +115,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ShopPaymentPackage, {
       as: 'upgrade__shop_payment_package',
       $inverse: 'shop_payment_packages',
+      $col_order: 13,
       foreignKey: {
         name: 'upgrade__shop_payment_package_key',
-        $col_order: 13,
         $type: 'int',
       },
       targetKey: 'row',

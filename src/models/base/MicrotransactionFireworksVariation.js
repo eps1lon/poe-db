@@ -43,9 +43,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'microtransaction_fireworks_variations',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'long',
       },
       targetKey: 'row',

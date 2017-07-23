@@ -81,9 +81,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'hideout_doodads',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -93,9 +93,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
       $inverse: 'hideout_doodads',
+      $col_order: 4,
       foreignKey: {
         name: 'n_p_c_master_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',

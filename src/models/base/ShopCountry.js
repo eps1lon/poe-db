@@ -43,9 +43,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ShopCurrency, {
       as: 'shop_currency',
       $inverse: 'shop_countries',
+      $col_order: 2,
       foreignKey: {
         name: 'shop_currency_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

@@ -473,9 +473,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'parent_town__world_area',
       $inverse: 'world_areas',
+      $col_order: 17,
       foreignKey: {
         name: 'parent_town__world_areas_key',
-        $col_order: 17,
         $type: 'uint',
       },
       targetKey: 'row',
@@ -485,9 +485,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Difficulty, {
       as: 'difficulty',
       $inverse: 'world_areas',
+      $col_order: 18,
       foreignKey: {
         name: 'difficulties_key',
-        $col_order: 18,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -497,9 +497,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
       $inverse: 'world_areas',
+      $col_order: 30,
       foreignKey: {
         name: 'achievement_items_key',
-        $col_order: 30,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -509,9 +509,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'twinned_full_clear__achievement_item',
       $inverse: 'world_areas',
+      $col_order: 62,
       foreignKey: {
         name: 'twinned_full_clear__achievement_items_key',
-        $col_order: 62,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -521,9 +521,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'enter__achievement_item',
       $inverse: 'world_areas',
+      $col_order: 63,
       foreignKey: {
         name: 'enter__achievement_items_key',
-        $col_order: 63,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -533,9 +533,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: '8_mods_full_clear__achievement_item',
       $inverse: 'world_areas',
+      $col_order: 68,
       foreignKey: {
         name: '8_mods_full_clear__achievement_items_key',
-        $col_order: 68,
         $type: 'ulong',
       },
       targetKey: 'row',

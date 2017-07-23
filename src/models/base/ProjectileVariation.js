@@ -37,9 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Projectile, {
       as: 'projectile',
       $inverse: 'projectile_variations',
+      $col_order: 1,
       foreignKey: {
         name: 'projectile_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

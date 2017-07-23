@@ -85,9 +85,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats1',
       $inverse: 'monster_map_difficulties1',
+      $col_order: 3,
       foreignKey: {
         name: 'stats_key1',
-        $col_order: 3,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -97,9 +97,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats2',
       $inverse: 'monster_map_difficulties2',
+      $col_order: 4,
       foreignKey: {
         name: 'stats_key2',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -109,9 +109,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats3',
       $inverse: 'monster_map_difficulties3',
+      $col_order: 5,
       foreignKey: {
         name: 'stats_key3',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -121,9 +121,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats4',
       $inverse: 'monster_map_difficulties4',
+      $col_order: 7,
       foreignKey: {
         name: 'stats_key4',
-        $col_order: 7,
         $type: 'ulong',
       },
       targetKey: 'row',

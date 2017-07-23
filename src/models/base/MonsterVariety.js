@@ -367,9 +367,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterType, {
       as: 'monster_type',
       $inverse: 'monster_varieties',
+      $col_order: 1,
       foreignKey: {
         name: 'monster_types_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -379,9 +379,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'back__item_visual_identity',
       $inverse: 'monster_varieties',
+      $col_order: 38,
       foreignKey: {
         name: 'back__item_visual_identity_key',
-        $col_order: 38,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -391,9 +391,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemClass, {
       as: 'main_hand__item_class',
       $inverse: 'monster_varieties',
+      $col_order: 39,
       foreignKey: {
         name: 'main_hand__item_classes_key',
-        $col_order: 39,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -403,9 +403,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemClass, {
       as: 'off_hand__item_class',
       $inverse: 'monster_varieties',
+      $col_order: 40,
       foreignKey: {
         name: 'off_hand__item_classes_key',
-        $col_order: 40,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -415,9 +415,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'helmet__item_visual_identity',
       $inverse: 'monster_varieties',
+      $col_order: 42,
       foreignKey: {
         name: 'helmet__item_visual_identity_key',
-        $col_order: 42,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -427,9 +427,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'flashback__achievement_item',
       $inverse: 'monster_varieties',
+      $col_order: 60,
       foreignKey: {
         name: 'flashback__achievement_items_key',
-        $col_order: 60,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -439,9 +439,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterSegment, {
       as: 'monster_segment',
       $inverse: 'monster_varieties',
+      $col_order: 61,
       foreignKey: {
         name: 'monster_segments_key',
-        $col_order: 61,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -451,9 +451,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterArmour, {
       as: 'monster_armour',
       $inverse: 'monster_varieties',
+      $col_order: 62,
       foreignKey: {
         name: 'monster_armours_key',
-        $col_order: 62,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -463,9 +463,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
       $inverse: 'monster_varieties',
+      $col_order: 63,
       foreignKey: {
         name: 'achievement_items_key',
-        $col_order: 63,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -475,9 +475,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_items4',
       $inverse: 'monster_varieties4',
+      $col_order: 64,
       foreignKey: {
         name: 'achievement_items_key4',
-        $col_order: 64,
         $type: 'ref|list|ulong',
       },
       targetKey: 'row',

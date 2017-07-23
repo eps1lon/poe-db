@@ -103,9 +103,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Quest, {
       as: 'quest',
       $inverse: 'quest_states',
+      $col_order: 0,
       foreignKey: {
         name: 'quest_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',

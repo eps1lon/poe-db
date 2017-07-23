@@ -53,9 +53,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'labyrinth_trinkets',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -65,9 +65,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.LabyrinthSecret, {
       as: 'labyrinth_secret',
       $inverse: 'labyrinth_trinkets',
+      $col_order: 1,
       foreignKey: {
         name: 'labyrinth_secrets_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -77,9 +77,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BuffDefinition, {
       as: 'buff__buff_definition',
       $inverse: 'labyrinth_trinkets',
+      $col_order: 2,
       foreignKey: {
         name: 'buff__buff_definitions_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

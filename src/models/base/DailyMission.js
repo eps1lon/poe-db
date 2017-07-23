@@ -81,9 +81,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCTalk, {
       as: 'n_p_c_talk',
       $inverse: 'daily_missions',
+      $col_order: 6,
       foreignKey: {
         name: 'n_p_c_talk_key',
-        $col_order: 6,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -93,9 +93,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.PVPType, {
       as: 'p_v_p_type',
       $inverse: 'daily_missions',
+      $col_order: 9,
       foreignKey: {
         name: 'p_v_p_types_key',
-        $col_order: 9,
         $type: 'int',
       },
       targetKey: 'row',

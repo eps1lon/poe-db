@@ -45,9 +45,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.SkillTotem, {
       as: 'skill_totem',
       $inverse: 'skill_totem_variations',
+      $col_order: 0,
       foreignKey: {
         name: 'skill_totems_key',
-        $col_order: 0,
         $type: 'int',
       },
       targetKey: 'row',
@@ -57,9 +57,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterVariety, {
       as: 'monster_variety',
       $inverse: 'skill_totem_variations',
+      $col_order: 2,
       foreignKey: {
         name: 'monster_varieties_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

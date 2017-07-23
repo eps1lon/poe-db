@@ -87,9 +87,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterVariety, {
       as: 'dummy__monster_variety',
       $inverse: 'str_dex_missions',
+      $col_order: 5,
       foreignKey: {
         name: 'dummy__monster_varieties_key',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -99,9 +99,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCTalk, {
       as: 'n_p_c_talk',
       $inverse: 'str_dex_missions',
+      $col_order: 8,
       foreignKey: {
         name: 'n_p_c_talk_key',
-        $col_order: 8,
         $type: 'ulong',
       },
       targetKey: 'row',

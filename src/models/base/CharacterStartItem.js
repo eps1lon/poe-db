@@ -99,9 +99,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.CharacterStartState, {
       as: 'character_start_state',
       $inverse: 'character_start_items',
+      $col_order: 0,
       foreignKey: {
         name: 'character_start_states_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -111,9 +111,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'character_start_items',
+      $col_order: 2,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

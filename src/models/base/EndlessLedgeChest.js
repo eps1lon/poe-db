@@ -43,9 +43,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'world_area',
       $inverse: 'endless_ledge_chests',
+      $col_order: 1,
       foreignKey: {
         name: 'world_areas_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

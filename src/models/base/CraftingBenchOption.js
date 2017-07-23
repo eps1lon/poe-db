@@ -105,9 +105,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
       $inverse: 'crafting_bench_options',
+      $col_order: 0,
       foreignKey: {
         name: 'n_p_c_master_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -117,9 +117,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Mod, {
       as: 'mod',
       $inverse: 'crafting_bench_options',
+      $col_order: 2,
       foreignKey: {
         name: 'mods_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

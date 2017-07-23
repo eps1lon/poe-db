@@ -37,9 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stat',
       $inverse: 'map_inhabitants',
+      $col_order: 1,
       foreignKey: {
         name: 'stats_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

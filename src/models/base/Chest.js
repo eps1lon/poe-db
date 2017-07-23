@@ -171,9 +171,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'chests',
+      $col_order: 13,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 13,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -183,9 +183,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ChestEffect, {
       as: 'chest_effect',
       $inverse: 'chests',
+      $col_order: 17,
       foreignKey: {
         name: 'chest_effects_key',
-        $col_order: 17,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -195,9 +195,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'corrupt__achievement_item',
       $inverse: 'chests',
+      $col_order: 21,
       foreignKey: {
         name: 'corrupt__achievement_items_key',
-        $col_order: 21,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -207,9 +207,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'currency_use__achievement_item',
       $inverse: 'chests',
+      $col_order: 22,
       foreignKey: {
         name: 'currency_use__achievement_items_key',
-        $col_order: 22,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -219,9 +219,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'encounter__achievement_item',
       $inverse: 'chests',
+      $col_order: 23,
       foreignKey: {
         name: 'encounter__achievement_items_key',
-        $col_order: 23,
         $type: 'ref|list|ulong',
       },
       targetKey: 'row',

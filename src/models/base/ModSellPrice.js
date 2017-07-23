@@ -31,9 +31,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ModSellPriceType, {
       as: 'mod_sell_price_type',
       $inverse: 'mod_sell_prices',
+      $col_order: 0,
       foreignKey: {
         name: 'mod_sell_price_types_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',

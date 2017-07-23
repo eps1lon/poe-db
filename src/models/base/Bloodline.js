@@ -93,9 +93,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_definition',
       $inverse: 'bloodlines',
+      $col_order: 7,
       foreignKey: {
         name: 'buff_definitions_key',
-        $col_order: 7,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -105,9 +105,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterVariety, {
       as: 'monster_variety',
       $inverse: 'bloodlines',
+      $col_order: 11,
       foreignKey: {
         name: 'monster_varieties_key',
-        $col_order: 11,
         $type: 'ulong',
       },
       targetKey: 'row',

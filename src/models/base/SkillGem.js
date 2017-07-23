@@ -71,9 +71,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'skill_gems',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -83,9 +83,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.GrantedEffect, {
       as: 'granted_effect',
       $inverse: 'skill_gems',
+      $col_order: 1,
       foreignKey: {
         name: 'granted_effects_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -95,9 +95,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'vaal_variant__base_item_type',
       $inverse: 'skill_gems',
+      $col_order: 6,
       foreignKey: {
         name: 'vaal_variant__base_item_types_key',
-        $col_order: 6,
         $type: 'long',
       },
       targetKey: 'row',

@@ -61,9 +61,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Environment, {
       as: 'environment',
       $inverse: 'topologies',
+      $col_order: 5,
       foreignKey: {
         name: 'environments_key',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',

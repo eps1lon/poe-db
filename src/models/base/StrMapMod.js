@@ -55,9 +55,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Mod, {
       as: 'mod',
       $inverse: 'str_map_mods',
+      $col_order: 4,
       foreignKey: {
         name: 'mods_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',

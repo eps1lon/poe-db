@@ -55,9 +55,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Mod, {
       as: 'mod',
       $inverse: 'eclipse_mods',
+      $col_order: 3,
       foreignKey: {
         name: 'mods_key',
-        $col_order: 3,
         $type: 'ulong',
       },
       targetKey: 'row',

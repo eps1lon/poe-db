@@ -121,9 +121,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ActiveSkill, {
       as: 'active_skill',
       $inverse: 'granted_effects',
+      $col_order: 13,
       foreignKey: {
         name: 'active_skills_key',
-        $col_order: 13,
         $type: 'ulong',
       },
       targetKey: 'row',

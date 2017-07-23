@@ -31,9 +31,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.PassiveSkill, {
       as: 'passive_skill',
       $inverse: 'passive_jewel_slots',
+      $col_order: 0,
       foreignKey: {
         name: 'passive_skills_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',

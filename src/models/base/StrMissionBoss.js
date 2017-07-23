@@ -55,9 +55,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterVariety, {
       as: 'monster_variety',
       $inverse: 'str_mission_bosses',
+      $col_order: 4,
       foreignKey: {
         name: 'monster_varieties_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',

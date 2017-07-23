@@ -89,9 +89,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'world_area',
       $inverse: 'atlas_nodes',
+      $col_order: 0,
       foreignKey: {
         name: 'world_areas_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -101,9 +101,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'default__item_visual_identity',
       $inverse: 'atlas_nodes',
+      $col_order: 7,
       foreignKey: {
         name: 'default__item_visual_identity_key',
-        $col_order: 7,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -113,9 +113,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'shaped__item_visual_identity',
       $inverse: 'atlas_nodes',
+      $col_order: 8,
       foreignKey: {
         name: 'shaped__item_visual_identity_key',
-        $col_order: 8,
         $type: 'ulong',
       },
       targetKey: 'row',

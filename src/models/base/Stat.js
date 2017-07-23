@@ -111,9 +111,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'main_hand_alias__stat',
       $inverse: 'stats',
+      $col_order: 9,
       foreignKey: {
         name: 'main_hand_alias__stats_key',
-        $col_order: 9,
         $type: 'int',
       },
       targetKey: 'row',
@@ -123,9 +123,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'off_hand_alias__stat',
       $inverse: 'stats',
+      $col_order: 10,
       foreignKey: {
         name: 'off_hand_alias__stats_key',
-        $col_order: 10,
         $type: 'int',
       },
       targetKey: 'row',

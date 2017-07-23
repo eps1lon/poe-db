@@ -179,9 +179,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'maximum__stat',
       $inverse: 'buff_definitions',
+      $col_order: 9,
       foreignKey: {
         name: 'maximum__stats_key',
-        $col_order: 9,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -191,9 +191,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'current__stat',
       $inverse: 'buff_definitions',
+      $col_order: 10,
       foreignKey: {
         name: 'current__stats_key',
-        $col_order: 10,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -203,9 +203,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BuffVisual, {
       as: 'buff_visual',
       $inverse: 'buff_definitions',
+      $col_order: 13,
       foreignKey: {
         name: 'buff_visuals_key',
-        $col_order: 13,
         $type: 'ulong',
       },
       targetKey: 'row',

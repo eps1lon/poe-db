@@ -37,9 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
       $inverse: 'mission_tile_maps',
+      $col_order: 0,
       foreignKey: {
         name: 'n_p_c_master_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',

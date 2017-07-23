@@ -189,9 +189,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.SoundEffect, {
       as: 'sound_effect',
       $inverse: 'item_visual_identities',
+      $col_order: 3,
       foreignKey: {
         name: 'sound_effects_key',
-        $col_order: 3,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -201,9 +201,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'create_corrupted_jewel_achievement_item',
       $inverse: 'item_visual_identities',
+      $col_order: 29,
       foreignKey: {
         name: 'create_corrupted_jewel_achievement_items_key',
-        $col_order: 29,
         $type: 'ulong',
       },
       targetKey: 'row',

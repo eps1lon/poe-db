@@ -81,9 +81,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'talismans',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -93,9 +93,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Mod, {
       as: 'mod',
       $inverse: 'talismans',
+      $col_order: 2,
       foreignKey: {
         name: 'mods_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

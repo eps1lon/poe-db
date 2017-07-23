@@ -37,9 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.DailyMission, {
       as: 'daily_missionss',
       $inverse: 'daily_overrides',
+      $col_order: 1,
       foreignKey: {
         name: 'daily_missions_keys',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

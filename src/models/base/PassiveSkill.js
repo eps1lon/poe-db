@@ -167,9 +167,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
       $inverse: 'passive_skills',
+      $col_order: 14,
       foreignKey: {
         name: 'achievement_items_key',
-        $col_order: 14,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -179,9 +179,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BuffDefinition, {
       as: 'granted_buff__buff_definition',
       $inverse: 'passive_skills',
+      $col_order: 16,
       foreignKey: {
         name: 'granted_buff__buff_definitions_key',
-        $col_order: 16,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -191,9 +191,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Ascendancy, {
       as: 'ascendancy',
       $inverse: 'passive_skills',
+      $col_order: 20,
       foreignKey: {
         name: 'ascendancy_key',
-        $col_order: 20,
         $type: 'ulong',
       },
       targetKey: 'row',

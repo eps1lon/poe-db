@@ -109,9 +109,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
       $inverse: 'labyrinth_secrets',
+      $col_order: 17,
       foreignKey: {
         name: 'achievement_items_key',
-        $col_order: 17,
         $type: 'ulong',
       },
       targetKey: 'row',

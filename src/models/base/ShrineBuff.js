@@ -49,9 +49,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_definition',
       $inverse: 'shrine_buffs',
+      $col_order: 2,
       foreignKey: {
         name: 'buff_definitions_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

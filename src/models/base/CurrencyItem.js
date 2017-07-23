@@ -113,9 +113,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'currency_items',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -125,9 +125,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'full_stack__base_item_type',
       $inverse: 'currency_items',
+      $col_order: 5,
       foreignKey: {
         name: 'full_stack__base_item_types_key',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -137,9 +137,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'possession__achievement_item',
       $inverse: 'currency_items',
+      $col_order: 10,
       foreignKey: {
         name: 'possession__achievement_items_key',
-        $col_order: 10,
         $type: 'ulong',
       },
       targetKey: 'row',

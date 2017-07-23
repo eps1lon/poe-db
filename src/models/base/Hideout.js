@@ -67,9 +67,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'small_world_area',
       $inverse: 'hideouts',
+      $col_order: 1,
       foreignKey: {
         name: 'small_world_areas_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -79,9 +79,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
       $inverse: 'hideouts',
+      $col_order: 2,
       foreignKey: {
         name: 'n_p_c_master_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -91,9 +91,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'medium_world_area',
       $inverse: 'hideouts',
+      $col_order: 3,
       foreignKey: {
         name: 'medium_world_areas_key',
-        $col_order: 3,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -103,9 +103,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'large_world_area',
       $inverse: 'hideouts',
+      $col_order: 4,
       foreignKey: {
         name: 'large_world_areas_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',

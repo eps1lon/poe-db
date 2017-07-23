@@ -73,9 +73,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Mod, {
       as: 'mod',
       $inverse: 'dex_mission_mods',
+      $col_order: 2,
       foreignKey: {
         name: 'mods_key',
-        $col_order: 2,
         $type: 'ref|list|long',
       },
       targetKey: 'row',

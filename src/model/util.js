@@ -77,7 +77,13 @@ const buildAssocKeys = (model, record, row) =>
 const assocDescription = (model, type) => {
   return _.fromPairs(
     findAssociations(model, type).map(name => {
-      return [name, model.associations[name].target.name];
+      return [
+        name,
+        {
+          target_name: model.associations[name].target.name,
+          orig_order: model.associations[name].options.$col_order,
+        },
+      ];
     }),
   );
 };
@@ -91,9 +97,9 @@ const describe = (models, model_name) => {
     const description = {};
 
     // build attribute_name => type
-    const attributes = _.mapValues(model.attributes, ({ type }) =>
-      type.toString(),
-    );
+    const attributes = _.mapValues(model.attributes, ({ type, $col_order }) => {
+      return { type: type.toString(), orig_order: $col_order };
+    });
 
     // and remove foreignkeys
     const foreign_keys = foreignKeys(model);

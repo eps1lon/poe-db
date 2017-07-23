@@ -49,9 +49,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Race, {
       as: 'race',
       $inverse: 'race_times',
+      $col_order: 0,
       foreignKey: {
         name: 'races_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',

@@ -61,9 +61,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCMaster, {
       as: 'n_p_c_master',
       $inverse: 'n_p_c_master_experience_per_levels',
+      $col_order: 0,
       foreignKey: {
         name: 'n_p_c_master_key',
-        $col_order: 0,
         $type: 'long',
       },
       targetKey: 'row',

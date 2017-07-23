@@ -55,9 +55,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Chest, {
       as: 'chest',
       $inverse: 'summoned_specific_barrels',
+      $col_order: 1,
       foreignKey: {
         name: 'chests_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

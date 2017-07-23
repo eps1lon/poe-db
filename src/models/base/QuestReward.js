@@ -107,9 +107,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Quest, {
       as: 'quest',
       $inverse: 'quest_rewards',
+      $col_order: 0,
       foreignKey: {
         name: 'quest_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -119,9 +119,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Character, {
       as: 'character',
       $inverse: 'quest_rewards',
+      $col_order: 3,
       foreignKey: {
         name: 'characters_key',
-        $col_order: 3,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -131,9 +131,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'quest_rewards',
+      $col_order: 4,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',

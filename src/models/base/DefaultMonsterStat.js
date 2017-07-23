@@ -73,9 +73,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Difficulty, {
       as: 'difficulty',
       $inverse: 'default_monster_stats',
+      $col_order: 7,
       foreignKey: {
         name: 'difficulty_key',
-        $col_order: 7,
         $type: 'ulong',
       },
       targetKey: 'row',

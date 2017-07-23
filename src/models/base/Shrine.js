@@ -141,9 +141,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ShrineBuff, {
       as: 'player__shrine_buff',
       $inverse: 'shrines',
+      $col_order: 4,
       foreignKey: {
         name: 'player__shrine_buffs_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -153,9 +153,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ShrineBuff, {
       as: 'monster__shrine_buff',
       $inverse: 'shrines',
+      $col_order: 8,
       foreignKey: {
         name: 'monster__shrine_buffs_key',
-        $col_order: 8,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -165,9 +165,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterVariety, {
       as: 'summon_monster__monster_variety',
       $inverse: 'shrines',
+      $col_order: 9,
       foreignKey: {
         name: 'summon_monster__monster_varieties_key',
-        $col_order: 9,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -177,9 +177,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterVariety, {
       as: 'summon_player__monster_variety',
       $inverse: 'shrines',
+      $col_order: 10,
       foreignKey: {
         name: 'summon_player__monster_varieties_key',
-        $col_order: 10,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -189,9 +189,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ShrineSound, {
       as: 'shrine_sound',
       $inverse: 'shrines',
+      $col_order: 13,
       foreignKey: {
         name: 'shrine_sounds_key',
-        $col_order: 13,
         $type: 'ulong',
       },
       targetKey: 'row',

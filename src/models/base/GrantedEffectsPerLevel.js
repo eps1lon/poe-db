@@ -199,9 +199,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.GrantedEffect, {
       as: 'granted_effect',
       $inverse: 'granted_effects_per_levels',
+      $col_order: 0,
       foreignKey: {
         name: 'granted_effects_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',

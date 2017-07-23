@@ -47,9 +47,10 @@ class SequelizeModel extends SequelizeBaseModel {
             $inverse: SequelizeBaseModel.colCasing(
               pluralize(this.name()) + number,
             ),
+            // save orig order for consistent ordering
+            $col_order: this.fields[field].rowid,
             foreignKey: {
               name: SequelizeModel.colCasing(field),
-              $col_order: this.fields[field].rowid,
               // save the type of the column to determine index key length
               $type: this.fields[field].type,
             },

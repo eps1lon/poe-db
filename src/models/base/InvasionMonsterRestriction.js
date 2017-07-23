@@ -43,9 +43,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'world_area',
       $inverse: 'invasion_monster_restrictions',
+      $col_order: 1,
       foreignKey: {
         name: 'world_areas_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',

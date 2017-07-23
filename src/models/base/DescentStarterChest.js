@@ -59,9 +59,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Character, {
       as: 'character',
       $inverse: 'descent_starter_chests',
+      $col_order: 1,
       foreignKey: {
         name: 'characters_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -71,9 +71,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'descent_starter_chests',
+      $col_order: 2,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -83,9 +83,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'world_area',
       $inverse: 'descent_starter_chests',
+      $col_order: 4,
       foreignKey: {
         name: 'world_areas_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',

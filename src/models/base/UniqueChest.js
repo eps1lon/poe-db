@@ -93,9 +93,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Chest, {
       as: 'chest',
       $inverse: 'unique_chests',
+      $col_order: 1,
       foreignKey: {
         name: 'chests_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -105,9 +105,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Word, {
       as: 'word',
       $inverse: 'unique_chests',
+      $col_order: 2,
       foreignKey: {
         name: 'words_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

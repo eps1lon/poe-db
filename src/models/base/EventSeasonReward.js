@@ -43,9 +43,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.EventSeason, {
       as: 'event_season',
       $inverse: 'event_season_rewards',
+      $col_order: 0,
       foreignKey: {
         name: 'event_season_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',

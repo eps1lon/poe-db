@@ -257,9 +257,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ModType, {
       as: 'mod_type',
       $inverse: 'mods',
+      $col_order: 2,
       foreignKey: {
         name: 'mod_type_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -269,9 +269,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats1',
       $inverse: 'mods1',
+      $col_order: 4,
       foreignKey: {
         name: 'stats_key1',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -281,9 +281,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats2',
       $inverse: 'mods2',
+      $col_order: 5,
       foreignKey: {
         name: 'stats_key2',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -293,9 +293,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats3',
       $inverse: 'mods3',
+      $col_order: 6,
       foreignKey: {
         name: 'stats_key3',
-        $col_order: 6,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -305,9 +305,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats4',
       $inverse: 'mods4',
+      $col_order: 7,
       foreignKey: {
         name: 'stats_key4',
-        $col_order: 7,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -317,9 +317,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_definition',
       $inverse: 'mods',
+      $col_order: 22,
       foreignKey: {
         name: 'buff_definitions_key',
-        $col_order: 22,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -329,9 +329,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.GrantedEffectsPerLevel, {
       as: 'granted_effects_per_level',
       $inverse: 'mods',
+      $col_order: 25,
       foreignKey: {
         name: 'granted_effects_per_level_key',
-        $col_order: 25,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -341,9 +341,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stats5',
       $inverse: 'mods5',
+      $col_order: 34,
       foreignKey: {
         name: 'stats_key5',
-        $col_order: 34,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -353,9 +353,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
       $inverse: 'mods',
+      $col_order: 36,
       foreignKey: {
         name: 'achievement_items_key',
-        $col_order: 36,
         $type: 'ulong',
       },
       targetKey: 'row',

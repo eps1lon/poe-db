@@ -55,9 +55,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Word, {
       as: 'word',
       $inverse: 'unique_sets',
+      $col_order: 2,
       foreignKey: {
         name: 'words_key',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',

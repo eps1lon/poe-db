@@ -81,9 +81,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.LabyrinthSection, {
       as: 'labyrinth_section',
       $inverse: 'labyrinth_section_layouts',
+      $col_order: 0,
       foreignKey: {
         name: 'labyrinth_section_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -93,9 +93,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.LabyrinthSecret, {
       as: 'labyrinth_secrets0',
       $inverse: 'labyrinth_section_layouts0',
+      $col_order: 3,
       foreignKey: {
         name: 'labyrinth_secrets_key0',
-        $col_order: 3,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -105,9 +105,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.LabyrinthSecret, {
       as: 'labyrinth_secrets1',
       $inverse: 'labyrinth_section_layouts1',
+      $col_order: 4,
       foreignKey: {
         name: 'labyrinth_secrets_key1',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -117,9 +117,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.LabyrinthArea, {
       as: 'labyrinth_area',
       $inverse: 'labyrinth_section_layouts',
+      $col_order: 5,
       foreignKey: {
         name: 'labyrinth_areas_key',
-        $col_order: 5,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -129,9 +129,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.LabyrinthNodeOverride, {
       as: 'labyrinth_node_override',
       $inverse: 'labyrinth_section_layouts',
+      $col_order: 8,
       foreignKey: {
         name: 'labyrinth_node_overrides_key',
-        $col_order: 8,
         $type: 'ulong',
       },
       targetKey: 'row',

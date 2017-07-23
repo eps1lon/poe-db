@@ -63,9 +63,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
       $inverse: 'quest_achievements',
+      $col_order: 0,
       foreignKey: {
         name: 'achievement_items_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -75,9 +75,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Difficulty, {
       as: 'difficulty',
       $inverse: 'quest_achievements',
+      $col_order: 4,
       foreignKey: {
         name: 'difficulties_key',
-        $col_order: 4,
         $type: 'ulong',
       },
       targetKey: 'row',

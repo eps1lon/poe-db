@@ -183,9 +183,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPC, {
       as: 'n_p_c',
       $inverse: 'n_p_c_talks',
+      $col_order: 0,
       foreignKey: {
         name: 'n_p_c_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -195,9 +195,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Quest, {
       as: 'quest',
       $inverse: 'n_p_c_talks',
+      $col_order: 9,
       foreignKey: {
         name: 'quest_key',
-        $col_order: 9,
         $type: 'ulong',
       },
       targetKey: 'row',

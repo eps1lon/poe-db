@@ -85,9 +85,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'itemised_visual_effects',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
-        $col_order: 0,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -97,9 +97,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemVisualEffect, {
       as: 'item_visual_effect',
       $inverse: 'itemised_visual_effects',
+      $col_order: 1,
       foreignKey: {
         name: 'item_visual_effect_key',
-        $col_order: 1,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -109,9 +109,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'item_visual_identity1',
       $inverse: 'itemised_visual_effects1',
+      $col_order: 2,
       foreignKey: {
         name: 'item_visual_identity_key1',
-        $col_order: 2,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -121,9 +121,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.ItemVisualIdentity, {
       as: 'item_visual_identity2',
       $inverse: 'itemised_visual_effects2',
+      $col_order: 3,
       foreignKey: {
         name: 'item_visual_identity_key2',
-        $col_order: 3,
         $type: 'ulong',
       },
       targetKey: 'row',

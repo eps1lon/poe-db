@@ -63,9 +63,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.CharacterPanelDescriptionMode, {
       as: 'character_panel_description_mode',
       $inverse: 'character_panel_stats',
+      $col_order: 3,
       foreignKey: {
         name: 'character_panel_description_modes_key',
-        $col_order: 3,
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -75,9 +75,9 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.CharacterPanelTab, {
       as: 'character_panel_tab',
       $inverse: 'character_panel_stats',
+      $col_order: 6,
       foreignKey: {
         name: 'character_panel_tabs_key',
-        $col_order: 6,
         $type: 'ulong',
       },
       targetKey: 'row',

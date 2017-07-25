@@ -122,6 +122,31 @@ const describe = (models, model_name) => {
 // see SequelizeThroughModel#name
 const isJoinModel = name => name.indexOf('Habtm') !== -1;
 
+/**
+ * prepares a list of order consumeable by sequelize
+ * @param {[attr, ordering][]} orders 
+ * @return {[string, 'ASC'|'DESC'][] | undefined}
+ */
+const safeOrder = orders => {
+  if (!Array.isArray(orders)) {
+    return undefined;
+  } else {
+    return orders.map(order => {
+      if (Array.isArray(order)) {
+        const [attr, ordering] = order;
+        // force string value even for undefined and null
+        // only allow DESC or default to ASC
+        return [
+          String(attr),
+          ordering.toLowerCase() === 'desc' ? 'DESC' : 'ASC',
+        ];
+      } else {
+        return [String(order), 'ASC'];
+      }
+    });
+  }
+};
+
 module.exports = {
   buildAssocKeys,
   buildAttrObj,
@@ -131,4 +156,5 @@ module.exports = {
   isJoinModel,
   nonCircularAssociations,
   prepareAssociationsForInclude,
+  safeOrder,
 };

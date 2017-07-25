@@ -1,7 +1,7 @@
 const { singularize } = require('inflection');
 
 const { usage } = require('../routes');
-const { prepareAssociationsForInclude } = require('../model/util');
+const { prepareAssociationsForInclude, safeOrder } = require('../model/util');
 
 const intOrUndefined = val => {
   const number = parseInt(val, 10);
@@ -22,13 +22,20 @@ const intOrDefault = (val, otherwise) => {
   }
 };
 
-const findAll = (where = {}) => ({ model, attributes, offset, limit }) => {
+const findAll = (where = {}) => ({
+  model,
+  attributes,
+  offset,
+  limit,
+  order,
+}) => {
   return model.findAndCountAll({
     attributes,
     where,
     include: prepareAssociationsForInclude(model),
     offset,
     limit,
+    order: safeOrder(order),
   });
 };
 
@@ -59,7 +66,7 @@ module.exports = models => async (req, res) => {
     } else {
       const model = models[singular];
 
-      const { attributes, where, page, page_size } = req.query;
+      const { attributes, where, page, page_size, order } = req.query;
 
       let find;
       // /Model/:id
@@ -78,6 +85,7 @@ module.exports = models => async (req, res) => {
         attributes,
         offset: (intOrDefault(page, 1) - 1) * intOrDefault(page_size, 20),
         limit: intOrDefault(page_size, 20),
+        order,
       };
 
       const { rows, count } = await find(normalized_arguments);

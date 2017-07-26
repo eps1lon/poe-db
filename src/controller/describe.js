@@ -14,5 +14,6 @@ module.exports = models => async (req, res, next) => {
     );
   } else {
     res.json({ description });
+    next();
   }
 };

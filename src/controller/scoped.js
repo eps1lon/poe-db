@@ -1,1 +1,1 @@
-module.exports = models => async (req, res) => {};
+module.exports = models => async (req, res, next) => {};

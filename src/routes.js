@@ -1,5 +1,3 @@
-const router = require('express').Router();
-
 const controller = require('./controller');
 
 const usage = (req, res) =>
@@ -10,24 +8,26 @@ const usage = (req, res) =>
     },
   });
 
+const mountRoutes = models => server => {
+  server.get('/', usage);
+
+  const { describe, find, modelsController, scoped } = controller(models);
+
+  // more like an alias for /describe/ and /find/ which corresponds
+  // to the index
+  server.get('/models', modelsController);
+
+  server.get('/describe/:model_name', describe);
+
+  // model name can be plural => many, or singular => one
+  server.get('/find/:model_name/:id?', find);
+
+  server.get('/scoped/:scope_alias', scoped);
+
+  return server;
+};
+
 module.exports = {
-  router: models => {
-    router.get('/', usage);
-
-    const { describe, find, modelsController, scoped } = controller(models);
-
-    // more like an alias for /describe/ and /find/ which corresponds
-    // to the index
-    router.get('/models', modelsController);
-
-    router.get('/describe/:model_name', describe);
-
-    // model name can be plural => many, or singular => one
-    router.get('/find/:model_name/:id?', find);
-
-    router.get('/scoped/:scope_alias', scoped);
-
-    return router;
-  },
+  mountRoutes: mountRoutes,
   usage,
 };

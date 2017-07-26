@@ -1,31 +1,43 @@
-const express = require('express');
+const restify = require('restify');
 
-const { router } = require('./src/routes');
+const { mountRoutes } = require('./src/routes');
+const orm = require('./src/db').orm_creator();
 
-const { orm_creator } = require('./src/db');
-const orm = orm_creator();
+const port = process.env.PORT || 3000;
 
-orm.authenticate().catch(e => console.warn(e));
+const orm_ready = orm
+  .authenticate({ logging: false })
+  .then(() => {
+    console.log('db connection authenticated');
+  })
+  .catch(e => console.warn(e));
 
 console.log('building models...');
 const models = require('./src/models')({ normalization: 3 }).init(orm);
 console.log('done');
 
-const port = process.env.PORT || 3000;
-
-const app = express();
-
-// allow cords
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET');
-
-  next();
+const server = restify.createServer({
+  name: 'mypoedb',
+  version: '1.0.0',
 });
+server.use(restify.plugins.acceptParser(server.acceptable));
+server.use(restify.plugins.queryParser());
+server.use(restify.plugins.bodyParser());
 
 // mount router
-app.use('/v1', router(models));
+mountRoutes(models)(server);
 
-app.listen(port);
+const listening = new Promise((resolve, reject) => {
+  server.listen(port, error => {
+    if (error) {
+      reject(error);
+    } else {
+      console.log(`listening to ${port}`);
+      resolve();
+    }
+  });
+});
 
-console.log(`listen to localhost:${port}`);
+Promise.all([orm_ready, listening]).then(() => {
+  console.log('server ready');
+});

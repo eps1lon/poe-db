@@ -372,6 +372,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_types_key',
         $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -384,6 +385,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'back_item_visual_identity_key',
         $type: 'ulong',
+        $col_order: 38,
       },
       targetKey: 'row',
       nullable: true,
@@ -396,6 +398,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'main_hand_item_classes_key',
         $type: 'ulong',
+        $col_order: 39,
       },
       targetKey: 'row',
       nullable: true,
@@ -408,6 +411,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'off_hand_item_classes_key',
         $type: 'ulong',
+        $col_order: 40,
       },
       targetKey: 'row',
       nullable: true,
@@ -420,6 +424,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'helmet_item_visual_identity_key',
         $type: 'ulong',
+        $col_order: 42,
       },
       targetKey: 'row',
       nullable: true,
@@ -432,6 +437,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'flashback_achievement_items_key',
         $type: 'ulong',
+        $col_order: 60,
       },
       targetKey: 'row',
       nullable: true,
@@ -444,6 +450,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_segments_key',
         $type: 'ulong',
+        $col_order: 61,
       },
       targetKey: 'row',
       nullable: true,
@@ -456,6 +463,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_armours_key',
         $type: 'ulong',
+        $col_order: 62,
       },
       targetKey: 'row',
       nullable: true,
@@ -468,6 +476,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $type: 'ulong',
+        $col_order: 63,
       },
       targetKey: 'row',
       nullable: true,
@@ -480,6 +489,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key4',
         $type: 'ref|list|ulong',
+        $col_order: 64,
       },
       targetKey: 'row',
       nullable: true,

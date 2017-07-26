@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'skill_totems_key',
         $type: 'int',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -62,6 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_varieties_key',
         $type: 'ulong',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,

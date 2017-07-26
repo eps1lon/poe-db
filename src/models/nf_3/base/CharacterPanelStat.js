@@ -68,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'character_panel_description_modes_key',
         $type: 'ulong',
+        $col_order: 3,
       },
       targetKey: 'row',
       nullable: true,
@@ -80,6 +81,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'character_panel_tabs_key',
         $type: 'ulong',
+        $col_order: 6,
       },
       targetKey: 'row',
       nullable: true,

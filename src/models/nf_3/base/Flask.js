@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -92,6 +93,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key',
         $type: 'ulong',
+        $col_order: 6,
       },
       targetKey: 'row',
       nullable: true,

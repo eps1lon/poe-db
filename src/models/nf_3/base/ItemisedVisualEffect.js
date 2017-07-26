@@ -90,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -102,6 +103,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'item_visual_effect_key',
         $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -114,6 +116,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'item_visual_identity_key1',
         $type: 'ulong',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -126,6 +129,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'item_visual_identity_key2',
         $type: 'ulong',
+        $col_order: 3,
       },
       targetKey: 'row',
       nullable: true,

@@ -172,6 +172,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $type: 'ulong',
+        $col_order: 14,
       },
       targetKey: 'row',
       nullable: true,
@@ -184,6 +185,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'granted_buff_buff_definitions_key',
         $type: 'ulong',
+        $col_order: 16,
       },
       targetKey: 'row',
       nullable: true,
@@ -196,6 +198,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'ascendancy_key',
         $type: 'ulong',
+        $col_order: 20,
       },
       targetKey: 'row',
       nullable: true,

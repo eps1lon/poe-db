@@ -64,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_payment_package_key',
         $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -76,6 +77,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_item_key',
         $type: 'ulong',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -88,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_token_key',
         $type: 'ulong',
+        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,

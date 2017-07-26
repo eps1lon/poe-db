@@ -194,6 +194,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'start_skill_gem_base_item_types_key',
         $type: 'ulong',
+        $col_order: 17,
       },
       targetKey: 'row',
       nullable: true,
@@ -206,6 +207,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'start_weapon_base_item_types_key',
         $type: 'ulong',
+        $col_order: 24,
       },
       targetKey: 'row',
       nullable: true,

@@ -114,6 +114,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $type: 'ulong',
+        $col_order: 17,
       },
       targetKey: 'row',
       nullable: true,

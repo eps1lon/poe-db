@@ -262,6 +262,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mod_type_key',
         $type: 'ulong',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -274,6 +275,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key1',
         $type: 'ulong',
+        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,
@@ -286,6 +288,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key2',
         $type: 'ulong',
+        $col_order: 5,
       },
       targetKey: 'row',
       nullable: true,
@@ -298,6 +301,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key3',
         $type: 'ulong',
+        $col_order: 6,
       },
       targetKey: 'row',
       nullable: true,
@@ -310,6 +314,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key4',
         $type: 'ulong',
+        $col_order: 7,
       },
       targetKey: 'row',
       nullable: true,
@@ -322,6 +327,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key',
         $type: 'ulong',
+        $col_order: 22,
       },
       targetKey: 'row',
       nullable: true,
@@ -334,6 +340,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'granted_effects_per_level_key',
         $type: 'ulong',
+        $col_order: 25,
       },
       targetKey: 'row',
       nullable: true,
@@ -346,6 +353,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key5',
         $type: 'ulong',
+        $col_order: 34,
       },
       targetKey: 'row',
       nullable: true,
@@ -358,6 +366,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $type: 'ulong',
+        $col_order: 36,
       },
       targetKey: 'row',
       nullable: true,

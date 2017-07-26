@@ -156,6 +156,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key1',
         $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -168,6 +169,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'friendly_monster_varieties_key',
         $type: 'ulong',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,
@@ -180,6 +182,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_objects_key',
         $type: 'ulong',
+        $col_order: 10,
       },
       targetKey: 'row',
       nullable: true,
@@ -192,6 +195,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'misc_animated_key',
         $type: 'ulong',
+        $col_order: 11,
       },
       targetKey: 'row',
       nullable: true,
@@ -204,6 +208,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_visuals_key',
         $type: 'ulong',
+        $col_order: 12,
       },
       targetKey: 'row',
       nullable: true,
@@ -216,6 +221,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'enemy_monster_varieties_key',
         $type: 'ulong',
+        $col_order: 13,
       },
       targetKey: 'row',
       nullable: true,
@@ -228,6 +234,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_definitions_key2',
         $type: 'ulong',
+        $col_order: 17,
       },
       targetKey: 'row',
       nullable: true,

@@ -120,6 +120,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'upgrade_shop_payment_package_key',
         $type: 'int',
+        $col_order: 13,
       },
       targetKey: 'row',
       nullable: true,

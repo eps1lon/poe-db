@@ -76,6 +76,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -88,6 +89,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'granted_effects_key',
         $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -100,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'vaal_variant_base_item_types_key',
         $type: 'long',
+        $col_order: 6,
       },
       targetKey: 'row',
       nullable: true,

@@ -72,6 +72,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'small_world_areas_key',
         $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -84,6 +85,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_master_key',
         $type: 'ulong',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -96,6 +98,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'medium_world_areas_key',
         $type: 'ulong',
+        $col_order: 3,
       },
       targetKey: 'row',
       nullable: true,
@@ -108,6 +111,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'large_world_areas_key',
         $type: 'ulong',
+        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,

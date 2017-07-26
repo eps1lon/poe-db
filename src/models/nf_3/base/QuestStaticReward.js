@@ -76,6 +76,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'stats_key',
         $type: 'ulong',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -88,6 +89,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'difficulty_key',
         $type: 'ulong',
+        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,
@@ -100,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quest_key',
         $type: 'ulong',
+        $col_order: 5,
       },
       targetKey: 'row',
       nullable: true,

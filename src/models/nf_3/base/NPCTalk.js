@@ -188,6 +188,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -200,6 +201,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quest_key',
         $type: 'ulong',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,

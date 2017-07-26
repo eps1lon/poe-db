@@ -78,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key',
         $type: 'ref|list|long',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,

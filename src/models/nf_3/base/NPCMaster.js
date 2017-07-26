@@ -109,6 +109,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'np_cs_key',
         $type: 'ref|string',
+        $col_order: 1,
       },
       targetKey: 'id',
       nullable: true,
@@ -121,6 +122,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'signature_mod_mods_key',
         $type: 'ulong',
+        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,
@@ -133,6 +135,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $type: 'ulong',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,
@@ -145,6 +148,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'talisman_achievement_items_key',
         $type: 'ulong',
+        $col_order: 15,
       },
       targetKey: 'row',
       nullable: true,

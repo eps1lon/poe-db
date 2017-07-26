@@ -478,6 +478,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'parent_town_world_areas_key',
         $type: 'uint',
+        $col_order: 17,
       },
       targetKey: 'row',
       nullable: true,
@@ -490,6 +491,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'difficulties_key',
         $type: 'ulong',
+        $col_order: 18,
       },
       targetKey: 'row',
       nullable: true,
@@ -502,6 +504,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_items_key',
         $type: 'ulong',
+        $col_order: 30,
       },
       targetKey: 'row',
       nullable: true,
@@ -514,6 +517,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'twinned_full_clear_achievement_items_key',
         $type: 'ulong',
+        $col_order: 62,
       },
       targetKey: 'row',
       nullable: true,
@@ -526,6 +530,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'enter_achievement_items_key',
         $type: 'ulong',
+        $col_order: 63,
       },
       targetKey: 'row',
       nullable: true,
@@ -538,6 +543,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '8_mods_full_clear_achievement_items_key',
         $type: 'ulong',
+        $col_order: 68,
       },
       targetKey: 'row',
       nullable: true,

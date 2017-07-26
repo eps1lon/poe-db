@@ -122,6 +122,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -134,6 +135,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'regular_world_areas_key',
         $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -146,6 +148,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'unique_world_areas_key',
         $type: 'ulong',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -158,6 +161,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'map_upgrade_base_item_types_key',
         $type: 'ulong',
+        $col_order: 3,
       },
       targetKey: 'row',
       nullable: true,
@@ -170,6 +174,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shaped_base_maps_key',
         $type: 'int',
+        $col_order: 10,
       },
       targetKey: 'row',
       nullable: true,
@@ -182,6 +187,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'maps_key1',
         $type: 'int',
+        $col_order: 12,
       },
       targetKey: 'row',
       nullable: true,
@@ -194,6 +200,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'maps_key2',
         $type: 'int',
+        $col_order: 13,
       },
       targetKey: 'row',
       nullable: true,
@@ -206,6 +213,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'maps_key3',
         $type: 'int',
+        $col_order: 14,
       },
       targetKey: 'row',
       nullable: true,

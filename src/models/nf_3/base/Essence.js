@@ -488,6 +488,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'base_item_types_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -500,6 +501,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key1',
         $type: 'ulong',
+        $col_order: 12,
       },
       targetKey: 'row',
       nullable: true,
@@ -512,6 +514,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key2',
         $type: 'ulong',
+        $col_order: 13,
       },
       targetKey: 'row',
       nullable: true,
@@ -524,6 +527,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'quiver_mods_key',
         $type: 'ulong',
+        $col_order: 14,
       },
       targetKey: 'row',
       nullable: true,
@@ -536,6 +540,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'amulet1_mods_key',
         $type: 'ulong',
+        $col_order: 15,
       },
       targetKey: 'row',
       nullable: true,
@@ -548,6 +553,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'belt1_mods_key',
         $type: 'ulong',
+        $col_order: 16,
       },
       targetKey: 'row',
       nullable: true,
@@ -560,6 +566,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'belt3_mods_key',
         $type: 'ulong',
+        $col_order: 17,
       },
       targetKey: 'row',
       nullable: true,
@@ -572,6 +579,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'gloves1_mods_key',
         $type: 'ulong',
+        $col_order: 18,
       },
       targetKey: 'row',
       nullable: true,
@@ -584,6 +592,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'boots1_mods_key',
         $type: 'ulong',
+        $col_order: 19,
       },
       targetKey: 'row',
       nullable: true,
@@ -596,6 +605,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'body_armour1_mods_key',
         $type: 'ulong',
+        $col_order: 20,
       },
       targetKey: 'row',
       nullable: true,
@@ -608,6 +618,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'helmet1_mods_key',
         $type: 'ulong',
+        $col_order: 21,
       },
       targetKey: 'row',
       nullable: true,
@@ -620,6 +631,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shield1_mods_key',
         $type: 'ulong',
+        $col_order: 22,
       },
       targetKey: 'row',
       nullable: true,
@@ -632,6 +644,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'essence_type_key',
         $type: 'ulong',
+        $col_order: 27,
       },
       targetKey: 'row',
       nullable: true,
@@ -644,6 +657,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key1',
         $type: 'ulong',
+        $col_order: 30,
       },
       targetKey: 'row',
       nullable: true,
@@ -656,6 +670,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key13',
         $type: 'ulong',
+        $col_order: 31,
       },
       targetKey: 'row',
       nullable: true,
@@ -668,6 +683,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key14',
         $type: 'ulong',
+        $col_order: 32,
       },
       targetKey: 'row',
       nullable: true,
@@ -680,6 +696,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key15',
         $type: 'ulong',
+        $col_order: 33,
       },
       targetKey: 'row',
       nullable: true,
@@ -692,6 +709,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '2_hand_mods_key1',
         $type: 'ulong',
+        $col_order: 34,
       },
       targetKey: 'row',
       nullable: true,
@@ -704,6 +722,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'boots3_mods_key',
         $type: 'ulong',
+        $col_order: 35,
       },
       targetKey: 'row',
       nullable: true,
@@ -716,6 +735,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'ranged_mods_key',
         $type: 'ulong',
+        $col_order: 36,
       },
       targetKey: 'row',
       nullable: true,
@@ -728,6 +748,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'helmet2_mods_key',
         $type: 'ulong',
+        $col_order: 37,
       },
       targetKey: 'row',
       nullable: true,
@@ -740,6 +761,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'body_armour2_mods_key',
         $type: 'ulong',
+        $col_order: 38,
       },
       targetKey: 'row',
       nullable: true,
@@ -752,6 +774,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'boots2_mods_key',
         $type: 'ulong',
+        $col_order: 39,
       },
       targetKey: 'row',
       nullable: true,
@@ -764,6 +787,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'gloves2_mods_key',
         $type: 'ulong',
+        $col_order: 40,
       },
       targetKey: 'row',
       nullable: true,
@@ -776,6 +800,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'bow_mods_key',
         $type: 'ulong',
+        $col_order: 41,
       },
       targetKey: 'row',
       nullable: true,
@@ -788,6 +813,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'wand_mods_key',
         $type: 'ulong',
+        $col_order: 42,
       },
       targetKey: 'row',
       nullable: true,
@@ -800,6 +826,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '2_hand_mods_key2',
         $type: 'ulong',
+        $col_order: 43,
       },
       targetKey: 'row',
       nullable: true,
@@ -812,6 +839,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '2_hand_mods_key3',
         $type: 'ulong',
+        $col_order: 44,
       },
       targetKey: 'row',
       nullable: true,
@@ -824,6 +852,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '2_hand_mods_key4',
         $type: 'ulong',
+        $col_order: 45,
       },
       targetKey: 'row',
       nullable: true,
@@ -836,6 +865,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '2_hand_mods_key5',
         $type: 'ulong',
+        $col_order: 46,
       },
       targetKey: 'row',
       nullable: true,
@@ -848,6 +878,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key2',
         $type: 'ulong',
+        $col_order: 47,
       },
       targetKey: 'row',
       nullable: true,
@@ -860,6 +891,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key3',
         $type: 'ulong',
+        $col_order: 48,
       },
       targetKey: 'row',
       nullable: true,
@@ -872,6 +904,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key4',
         $type: 'ulong',
+        $col_order: 49,
       },
       targetKey: 'row',
       nullable: true,
@@ -884,6 +917,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key5',
         $type: 'ulong',
+        $col_order: 50,
       },
       targetKey: 'row',
       nullable: true,
@@ -896,6 +930,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key6',
         $type: 'ulong',
+        $col_order: 51,
       },
       targetKey: 'row',
       nullable: true,
@@ -908,6 +943,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key7',
         $type: 'ulong',
+        $col_order: 52,
       },
       targetKey: 'row',
       nullable: true,
@@ -920,6 +956,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key8',
         $type: 'ulong',
+        $col_order: 53,
       },
       targetKey: 'row',
       nullable: true,
@@ -932,6 +969,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: '1_hand_mods_key9',
         $type: 'ulong',
+        $col_order: 54,
       },
       targetKey: 'row',
       nullable: true,
@@ -944,6 +982,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'belt2_mods_key',
         $type: 'ulong',
+        $col_order: 56,
       },
       targetKey: 'row',
       nullable: true,
@@ -956,6 +995,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'amulet2_mods_key',
         $type: 'ulong',
+        $col_order: 57,
       },
       targetKey: 'row',
       nullable: true,
@@ -968,6 +1008,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'ring_mods_key',
         $type: 'ulong',
+        $col_order: 58,
       },
       targetKey: 'row',
       nullable: true,
@@ -980,6 +1021,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key41',
         $type: 'ulong',
+        $col_order: 59,
       },
       targetKey: 'row',
       nullable: true,
@@ -992,6 +1034,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shield2_mods_key',
         $type: 'ulong',
+        $col_order: 60,
       },
       targetKey: 'row',
       nullable: true,
@@ -1004,6 +1047,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mods_key43',
         $type: 'ulong',
+        $col_order: 61,
       },
       targetKey: 'row',
       nullable: true,

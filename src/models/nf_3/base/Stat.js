@@ -116,6 +116,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'main_hand_alias_stats_key',
         $type: 'int',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,
@@ -128,6 +129,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'off_hand_alias_stats_key',
         $type: 'int',
+        $col_order: 10,
       },
       targetKey: 'row',
       nullable: true,

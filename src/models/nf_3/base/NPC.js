@@ -102,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_master_key',
         $type: 'ulong',
+        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,
@@ -114,6 +115,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_shop_key',
         $type: 'ulong',
+        $col_order: 8,
       },
       targetKey: 'row',
       nullable: true,
@@ -126,6 +128,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_audio_key1',
         $type: 'ulong',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,
@@ -138,6 +141,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_audio_key2',
         $type: 'ulong',
+        $col_order: 10,
       },
       targetKey: 'row',
       nullable: true,

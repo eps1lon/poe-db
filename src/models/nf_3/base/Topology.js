@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'environments_key',
         $type: 'ulong',
+        $col_order: 5,
       },
       targetKey: 'row',
       nullable: true,

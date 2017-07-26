@@ -204,6 +204,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'granted_effects_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,

@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'event_season_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,

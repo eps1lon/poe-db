@@ -96,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_sets_display_key',
         $type: 'int',
+        $col_order: 2,
       },
       targetKey: 'id',
       nullable: true,
@@ -108,6 +109,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'achievement_sets_display_key',
         $type: 'int',
+        $col_order: 2,
       },
       targetKey: undefined,
       nullable: true,

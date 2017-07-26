@@ -112,6 +112,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'normal_waypoint_world_areas_key',
         $type: 'ulong',
+        $col_order: 3,
       },
       targetKey: 'row',
       nullable: true,
@@ -124,6 +125,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'cruel_waypoint_world_areas_key',
         $type: 'ulong',
+        $col_order: 11,
       },
       targetKey: 'row',
       nullable: true,
@@ -136,6 +138,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'merciless_waypoint_world_areas_key',
         $type: 'ulong',
+        $col_order: 12,
       },
       targetKey: 'row',
       nullable: true,

@@ -86,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'labyrinth_section_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -98,6 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'labyrinth_secrets_key0',
         $type: 'ulong',
+        $col_order: 3,
       },
       targetKey: 'row',
       nullable: true,
@@ -110,6 +112,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'labyrinth_secrets_key1',
         $type: 'ulong',
+        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,
@@ -122,6 +125,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'labyrinth_areas_key',
         $type: 'ulong',
+        $col_order: 5,
       },
       targetKey: 'row',
       nullable: true,
@@ -134,6 +138,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'labyrinth_node_overrides_key',
         $type: 'ulong',
+        $col_order: 8,
       },
       targetKey: 'row',
       nullable: true,

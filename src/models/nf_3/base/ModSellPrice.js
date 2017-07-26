@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'mod_sell_price_types_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,

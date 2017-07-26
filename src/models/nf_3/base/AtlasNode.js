@@ -94,6 +94,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'world_areas_key',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -106,6 +107,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'default_item_visual_identity_key',
         $type: 'ulong',
+        $col_order: 7,
       },
       targetKey: 'row',
       nullable: true,
@@ -118,6 +120,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shaped_item_visual_identity_key',
         $type: 'ulong',
+        $col_order: 8,
       },
       targetKey: 'row',
       nullable: true,

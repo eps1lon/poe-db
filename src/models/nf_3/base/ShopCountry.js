@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shop_currency_key',
         $type: 'ulong',
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,

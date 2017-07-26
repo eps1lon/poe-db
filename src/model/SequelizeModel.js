@@ -53,6 +53,8 @@ class SequelizeModel extends SequelizeBaseModel {
               name: SequelizeModel.colCasing(field),
               // save the type of the column to determine index key length
               $type: this.fields[field].type,
+              // save duplicate orig_order to be able to access it in model.attributes[]
+              $col_order: this.fields[field].rowid,
             },
             targetKey: SequelizeModel.colCasing(
               this.fields[field].key_id || PRIMARY,

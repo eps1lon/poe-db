@@ -78,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_resistances_key',
         $type: 'ulong',
+        $col_order: 8,
       },
       targetKey: 'row',
       nullable: true,

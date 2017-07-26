@@ -92,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'dummy_monster_varieties_key',
         $type: 'ulong',
+        $col_order: 5,
       },
       targetKey: 'row',
       nullable: true,
@@ -104,6 +105,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_talk_key',
         $type: 'ulong',
+        $col_order: 8,
       },
       targetKey: 'row',
       nullable: true,

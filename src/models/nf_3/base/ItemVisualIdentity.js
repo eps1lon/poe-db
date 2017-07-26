@@ -194,6 +194,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'sound_effects_key',
         $type: 'ulong',
+        $col_order: 3,
       },
       targetKey: 'row',
       nullable: true,
@@ -206,6 +207,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'create_corrupted_jewel_achievement_items_key',
         $type: 'ulong',
+        $col_order: 29,
       },
       targetKey: 'row',
       nullable: true,

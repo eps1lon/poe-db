@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_master_key',
         $type: 'long',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,

@@ -32,9 +32,7 @@ const all_records = require('../../data/records.json');
   let total_insert_count = 0;
 
   try {
-    for (const [dat_file, records] of Object.entries(all_records).filter(
-      ([dat]) => dat === 'Achievements.dat',
-    )) {
+    for (const [dat_file, records] of Object.entries(all_records)) {
       const model = Object.values(models).find(
         model => model.DAT_FILE === dat_file,
       );

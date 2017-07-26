@@ -74,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'map_pins_key0',
         $type: 'ulong',
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -86,6 +87,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'map_pins_key1',
         $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,

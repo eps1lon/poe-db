@@ -146,6 +146,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'player_shrine_buffs_key',
         $type: 'ulong',
+        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,
@@ -158,6 +159,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'monster_shrine_buffs_key',
         $type: 'ulong',
+        $col_order: 8,
       },
       targetKey: 'row',
       nullable: true,
@@ -170,6 +172,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'summon_monster_monster_varieties_key',
         $type: 'ulong',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,
@@ -182,6 +185,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'summon_player_monster_varieties_key',
         $type: 'ulong',
+        $col_order: 10,
       },
       targetKey: 'row',
       nullable: true,
@@ -194,6 +198,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'shrine_sounds_key',
         $type: 'ulong',
+        $col_order: 13,
       },
       targetKey: 'row',
       nullable: true,

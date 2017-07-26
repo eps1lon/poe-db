@@ -96,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'npc_talk_key',
         $type: 'ulong',
+        $col_order: 10,
       },
       targetKey: 'row',
       nullable: true,

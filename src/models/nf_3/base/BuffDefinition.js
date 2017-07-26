@@ -184,6 +184,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'maximum_stats_key',
         $type: 'ulong',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,
@@ -196,6 +197,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'current_stats_key',
         $type: 'ulong',
+        $col_order: 10,
       },
       targetKey: 'row',
       nullable: true,
@@ -208,6 +210,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: {
         name: 'buff_visuals_key',
         $type: 'ulong',
+        $col_order: 13,
       },
       targetKey: 'row',
       nullable: true,

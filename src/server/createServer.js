@@ -18,7 +18,7 @@ const createServer = () => {
   server.use(restify.plugins.acceptParser(server.acceptable));
   server.use(restify.plugins.queryParser());
   server.use(restify.plugins.bodyParser());
-  server.use(restify.plugins.throttle({ burst: 10, rate: 5, ip: true }));
+  server.use(restify.plugins.throttle({ burst: 10, rate: 1, ip: true }));
   server.use(cors());
 
   return server;

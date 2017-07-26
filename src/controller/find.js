@@ -1,4 +1,5 @@
 const { singularize } = require('inflection');
+const { NotFoundError } = require('restify-errors');
 
 const { prepareAssociationsForInclude, safeOrder } = require('../model/util');
 
@@ -52,50 +53,45 @@ const findOne = id => ({ model, attributes, offset, limit }) => {
   );
 };
 
-module.exports = models => async (req, res) => {
+module.exports = models => async (req, res, next) => {
   const { params: { model_name, id } } = req;
+  const singular = singularize(model_name);
 
-  if (model_name === undefined) {
-    // TODO error handling
+  if (models[singular] === undefined) {
+    next(new NotFoundError(`no model found for ${model_name}`));
   } else {
-    const singular = singularize(model_name);
+    const model = models[singular];
 
-    if (models[singular] === undefined) {
-      res.json({ error: `no model found for ${model_name}` });
+    const { attributes, where, page, page_size, order } = req.query;
+
+    let find;
+    // /Model/:id
+    if (singular === model_name) {
+      find = findOne(id);
     } else {
-      const model = models[singular];
-
-      const { attributes, where, page, page_size, order } = req.query;
-
-      let find;
-      // /Model/:id
-      if (singular === model_name) {
-        find = findOne(id);
-      } else {
-        // /Models?params
-        find = findAll(where);
-      }
-
-      // prevent user from accidentally requesting large ressources
-      // if he wants everything he should tell us explicitly
-      const normalized_arguments = {
-        model,
-        where,
-        attributes,
-        offset: (intOrDefault(page, 1) - 1) * intOrDefault(page_size, 20),
-        limit: intOrDefault(page_size, 20),
-        order,
-      };
-
-      const { rows, count } = await find(normalized_arguments);
-
-      const warnings = [];
-
-      res.json({
-        pages: Math.ceil(count / normalized_arguments.limit),
-        result: rows,
-        warnings,
-      });
+      // /Models?params
+      find = findAll(where);
     }
+
+    // prevent user from accidentally requesting large ressources
+    // if he wants everything he should tell us explicitly
+    const normalized_arguments = {
+      model,
+      where,
+      attributes,
+      offset: (intOrDefault(page, 1) - 1) * intOrDefault(page_size, 20),
+      limit: intOrDefault(page_size, 20),
+      order,
+    };
+
+    const { rows, count } = await find(normalized_arguments);
+
+    const warnings = [];
+
+    res.json({
+      pages: Math.ceil(count / normalized_arguments.limit),
+      result: rows,
+      warnings,
+    });
   }
 };

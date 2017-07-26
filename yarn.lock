@@ -3242,7 +3242,7 @@ resolve@^1.1.6, resolve@^1.3.2:
   dependencies:
     path-parse "^1.0.5"
 
-restify-errors@^4.2.3:
+restify-errors@^4.2.3, restify-errors@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/restify-errors/-/restify-errors-4.3.0.tgz#ec90f30934d7f3119135181dfc303e30be601abe"
   dependencies:

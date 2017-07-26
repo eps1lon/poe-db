@@ -1,6 +1,5 @@
 const { singularize } = require('inflection');
 
-const { usage } = require('../routes');
 const { prepareAssociationsForInclude, safeOrder } = require('../model/util');
 
 const intOrUndefined = val => {
@@ -57,7 +56,7 @@ module.exports = models => async (req, res) => {
   const { params: { model_name, id } } = req;
 
   if (model_name === undefined) {
-    usage(req, res);
+    // TODO error handling
   } else {
     const singular = singularize(model_name);
 

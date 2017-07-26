@@ -1,4 +1,4 @@
-const controller = require('./controller');
+const controller = require('../controller');
 
 const usage = (req, res) =>
   res.json({

@@ -1,6 +1,5 @@
-const restify = require('restify');
-
-const { mountRoutes } = require('./src/routes');
+const createServer = require('./src/server/createServer');
+const { mountRoutes } = require('./src/server/routes');
 const orm = require('./src/db').orm_creator();
 
 const port = process.env.PORT || 3000;
@@ -16,13 +15,7 @@ console.log('building models...');
 const models = require('./src/models')({ normalization: 3 }).init(orm);
 console.log('done');
 
-const server = restify.createServer({
-  name: 'mypoedb',
-  version: '1.0.0',
-});
-server.use(restify.plugins.acceptParser(server.acceptable));
-server.use(restify.plugins.queryParser());
-server.use(restify.plugins.bodyParser());
+const server = createServer();
 
 // mount router
 mountRoutes(models)(server);

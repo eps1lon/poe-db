@@ -1,4 +1,5 @@
 const createServer = require('./src/server/createServer');
+const useErrorHandlers = require('./src/server/useErrorHandlers');
 const { mountRoutes } = require('./src/server/routes');
 const orm = require('./src/db').orm_creator();
 
@@ -16,6 +17,8 @@ const models = require('./src/models')({ normalization: 3 }).init(orm);
 console.log('done');
 
 const server = createServer();
+
+useErrorHandlers(server);
 
 // mount router
 mountRoutes(models)(server);

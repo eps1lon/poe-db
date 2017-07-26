@@ -1,5 +1,5 @@
 const { singularize } = require('inflection');
-const { NotFoundError } = require('restify-errors');
+const { NotFoundError, InternalServerError } = require('restify-errors');
 
 const { prepareAssociationsForInclude, safeOrder } = require('../model/util');
 
@@ -84,16 +84,17 @@ module.exports = models => async (req, res, next) => {
       order,
     };
 
-    const { rows, count } = await find(normalized_arguments);
+    find(normalized_arguments)
+      .then(({ rows, count }) => {
+        res.json({
+          pages: Math.ceil(count / normalized_arguments.limit),
+          result: rows,
+        });
 
-    const warnings = [];
-
-    res.json({
-      pages: Math.ceil(count / normalized_arguments.limit),
-      result: rows,
-      warnings,
-    });
-
-    next();
+        next();
+      })
+      .catch(() => {
+        next(new InternalServerError('sam went into the forbidden library'));
+      });
   }
 };

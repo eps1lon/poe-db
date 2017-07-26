@@ -122,7 +122,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.SkillGem, {
-      as: 'socketed__skill_gems',
+      as: 'socketed_skill_gems',
       through: {
         model: models.CharacterStartItemHabtmSocketedSkillgem,
         unique: false,

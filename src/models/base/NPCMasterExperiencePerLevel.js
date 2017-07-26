@@ -47,10 +47,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_master_key',
+              attribute: 'npc_master_key',
             },
           ],
-          name: 'index_n_p_c_master_key',
+          name: 'index_npc_master_key',
         },
       ],
       tableName: 'n_p_c_master_experience_per_levels',
@@ -60,11 +60,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
-      as: 'n_p_c_master',
-      $inverse: 'n_p_c_master_experience_per_levels',
+      as: 'npc_master',
+      $inverse: 'npc_master_experience_per_levels',
       $col_order: 0,
       foreignKey: {
-        name: 'n_p_c_master_key',
+        name: 'npc_master_key',
         $type: 'long',
       },
       targetKey: 'row',

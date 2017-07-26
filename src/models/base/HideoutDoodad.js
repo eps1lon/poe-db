@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      variation__a_o_files: {
+      variation_ao_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -67,10 +67,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_master_key',
+              attribute: 'npc_master_key',
             },
           ],
-          name: 'index_n_p_c_master_key',
+          name: 'index_npc_master_key',
         },
       ],
       tableName: 'hideout_doodads',
@@ -92,11 +92,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCMaster, {
-      as: 'n_p_c_master',
+      as: 'npc_master',
       $inverse: 'hideout_doodads',
       $col_order: 4,
       foreignKey: {
-        name: 'n_p_c_master_key',
+        name: 'npc_master_key',
         $type: 'ulong',
       },
       targetKey: 'row',

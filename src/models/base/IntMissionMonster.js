@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.MonsterVariety, {
-      as: 'objective__monster_varieties',
+      as: 'objective_monster_varieties',
       through: {
         model: models.IntMissionMonsterHabtmObjectiveMonstervariety,
         unique: false,

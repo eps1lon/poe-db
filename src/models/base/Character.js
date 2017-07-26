@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
-      a_o_file: {
+      ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      a_c_t_file: {
+      act_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -167,18 +167,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'start_skill_gem__base_item_types_key',
+              attribute: 'start_skill_gem_base_item_types_key',
             },
           ],
-          name: 'index_start_skill_gem__base_item_types_key',
+          name: 'index_start_skill_gem_base_item_types_key',
         },
         {
           fields: [
             {
-              attribute: 'start_weapon__base_item_types_key',
+              attribute: 'start_weapon_base_item_types_key',
             },
           ],
-          name: 'index_start_weapon__base_item_types_key',
+          name: 'index_start_weapon_base_item_types_key',
         },
       ],
       tableName: 'characters',
@@ -188,11 +188,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
-      as: 'start_skill_gem__base_item_type',
+      as: 'start_skill_gem_base_item_type',
       $inverse: 'characters',
       $col_order: 17,
       foreignKey: {
-        name: 'start_skill_gem__base_item_types_key',
+        name: 'start_skill_gem_base_item_types_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -200,11 +200,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BaseItemType, {
-      as: 'start_weapon__base_item_type',
+      as: 'start_weapon_base_item_type',
       $inverse: 'characters',
       $col_order: 24,
       foreignKey: {
-        name: 'start_weapon__base_item_types_key',
+        name: 'start_weapon_base_item_types_key',
         $type: 'ulong',
       },
       targetKey: 'row',

@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 5,
       },
-      regular__guild_character: {
+      regular_guild_character: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 6,
       },
-      unique__guild_character: {
+      unique_guild_character: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 9,
       },
-      shaped__area_level: {
+      shaped_area_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -55,34 +55,34 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'regular__world_areas_key',
+              attribute: 'regular_world_areas_key',
             },
           ],
-          name: 'index_regular__world_areas_key',
+          name: 'index_regular_world_areas_key',
         },
         {
           fields: [
             {
-              attribute: 'unique__world_areas_key',
+              attribute: 'unique_world_areas_key',
             },
           ],
-          name: 'index_unique__world_areas_key',
+          name: 'index_unique_world_areas_key',
         },
         {
           fields: [
             {
-              attribute: 'map_upgrade__base_item_types_key',
+              attribute: 'map_upgrade_base_item_types_key',
             },
           ],
-          name: 'index_map_upgrade__base_item_types_key',
+          name: 'index_map_upgrade_base_item_types_key',
         },
         {
           fields: [
             {
-              attribute: 'shaped__base__maps_key',
+              attribute: 'shaped_base_maps_key',
             },
           ],
-          name: 'index_shaped__base__maps_key',
+          name: 'index_shaped_base_maps_key',
         },
         {
           fields: [
@@ -128,11 +128,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.WorldArea, {
-      as: 'regular__world_area',
+      as: 'regular_world_area',
       $inverse: 'maps',
       $col_order: 1,
       foreignKey: {
-        name: 'regular__world_areas_key',
+        name: 'regular_world_areas_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -140,11 +140,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.WorldArea, {
-      as: 'unique__world_area',
+      as: 'unique_world_area',
       $inverse: 'maps',
       $col_order: 2,
       foreignKey: {
-        name: 'unique__world_areas_key',
+        name: 'unique_world_areas_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -152,11 +152,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BaseItemType, {
-      as: 'map_upgrade__base_item_type',
+      as: 'map_upgrade_base_item_type',
       $inverse: 'maps',
       $col_order: 3,
       foreignKey: {
-        name: 'map_upgrade__base_item_types_key',
+        name: 'map_upgrade_base_item_types_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -164,11 +164,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Map, {
-      as: 'shaped__base__map',
+      as: 'shaped_base_map',
       $inverse: 'maps',
       $col_order: 10,
       foreignKey: {
-        name: 'shaped__base__maps_key',
+        name: 'shaped_base_maps_key',
         $type: 'int',
       },
       targetKey: 'row',
@@ -224,7 +224,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'higher_tier_maps__base_item_types',
+      as: 'higher_tier_maps_base_item_types',
       through: {
         model: models.MapHabtmHigherTierMapsBaseitemtype,
         unique: false,

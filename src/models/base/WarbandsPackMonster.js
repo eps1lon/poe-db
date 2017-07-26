@@ -87,7 +87,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.MonsterVariety, {
-      as: 'tier4__monster_varieties',
+      as: 'tier4_monster_varieties',
       through: {
         model: models.WarbandsPackMonsterHabtmTier4Monstervariety,
         unique: false,
@@ -99,7 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'tier3__monster_varieties',
+      as: 'tier3_monster_varieties',
       through: {
         model: models.WarbandsPackMonsterHabtmTier3Monstervariety,
         unique: false,
@@ -111,7 +111,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'tier2__monster_varieties',
+      as: 'tier2_monster_varieties',
       through: {
         model: models.WarbandsPackMonsterHabtmTier2Monstervariety,
         unique: false,
@@ -123,7 +123,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'tier1__monster_varieties',
+      as: 'tier1_monster_varieties',
       through: {
         model: models.WarbandsPackMonsterHabtmTier1Monstervariety,
         unique: false,

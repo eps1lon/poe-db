@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
-      start_u_n_i_x_time: {
+      start_unix_time: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      end_u_n_i_x_time: {
+      end_unix_time: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,

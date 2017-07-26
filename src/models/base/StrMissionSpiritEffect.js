@@ -83,18 +83,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'summon__monster_varieties_keys',
+              attribute: 'summon_monster_varieties_keys',
             },
           ],
-          name: 'index_summon__monster_varieties_keys',
+          name: 'index_summon_monster_varieties_keys',
         },
         {
           fields: [
             {
-              attribute: 'ground_effect__monster_varieties_keys',
+              attribute: 'ground_effect_monster_varieties_keys',
             },
           ],
-          name: 'index_ground_effect__monster_varieties_keys',
+          name: 'index_ground_effect_monster_varieties_keys',
         },
       ],
       tableName: 'str_mission_spirit_effects',
@@ -104,11 +104,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
-      as: 'summon__monster_varietiess',
+      as: 'summon_monster_varietiess',
       $inverse: 'str_mission_spirit_effects',
       $col_order: 6,
       foreignKey: {
-        name: 'summon__monster_varieties_keys',
+        name: 'summon_monster_varieties_keys',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -116,11 +116,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.MonsterVariety, {
-      as: 'ground_effect__monster_varietiess',
+      as: 'ground_effect_monster_varietiess',
       $inverse: 'str_mission_spirit_effects',
       $col_order: 7,
       foreignKey: {
-        name: 'ground_effect__monster_varieties_keys',
+        name: 'ground_effect_monster_varieties_keys',
         $type: 'ulong',
       },
       targetKey: 'row',

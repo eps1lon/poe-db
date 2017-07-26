@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['n_p_c_talk_row', 'n_p_c_text_audio_row'],
+          fields: ['npc_talk_row', 'npc_text_audio_row'],
           name: 'composite primary_alias',
           unique: true,
         },
@@ -27,13 +27,13 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCTalk, {
-      foreignKey: 'n_p_c_talk_row',
+      foreignKey: 'npc_talk_row',
       targetKey: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.NPCTextAudio, {
-      foreignKey: 'n_p_c_text_audio_row',
+      foreignKey: 'npc_text_audio_row',
       targetKey: 'row',
       nullable: true,
       constraints: false,

@@ -77,26 +77,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'normal_waypoint__world_areas_key',
+              attribute: 'normal_waypoint_world_areas_key',
             },
           ],
-          name: 'index_normal_waypoint__world_areas_key',
+          name: 'index_normal_waypoint_world_areas_key',
         },
         {
           fields: [
             {
-              attribute: 'cruel_waypoint__world_areas_key',
+              attribute: 'cruel_waypoint_world_areas_key',
             },
           ],
-          name: 'index_cruel_waypoint__world_areas_key',
+          name: 'index_cruel_waypoint_world_areas_key',
         },
         {
           fields: [
             {
-              attribute: 'merciless_waypoint__world_areas_key',
+              attribute: 'merciless_waypoint_world_areas_key',
             },
           ],
-          name: 'index_merciless_waypoint__world_areas_key',
+          name: 'index_merciless_waypoint_world_areas_key',
         },
       ],
       tableName: 'map_pins',
@@ -106,11 +106,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
-      as: 'normal_waypoint__world_area',
+      as: 'normal_waypoint_world_area',
       $inverse: 'map_pins',
       $col_order: 3,
       foreignKey: {
-        name: 'normal_waypoint__world_areas_key',
+        name: 'normal_waypoint_world_areas_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -118,11 +118,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.WorldArea, {
-      as: 'cruel_waypoint__world_area',
+      as: 'cruel_waypoint_world_area',
       $inverse: 'map_pins',
       $col_order: 11,
       foreignKey: {
-        name: 'cruel_waypoint__world_areas_key',
+        name: 'cruel_waypoint_world_areas_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -130,11 +130,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.WorldArea, {
-      as: 'merciless_waypoint__world_area',
+      as: 'merciless_waypoint_world_area',
       $inverse: 'map_pins',
       $col_order: 12,
       foreignKey: {
-        name: 'merciless_waypoint__world_areas_key',
+        name: 'merciless_waypoint_world_areas_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -142,7 +142,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'normal__world_areas',
+      as: 'normal_world_areas',
       through: {
         model: models.MapPinHabtmNormalWorldarea,
         unique: false,
@@ -154,7 +154,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'merciless__world_areas',
+      as: 'merciless_world_areas',
       through: {
         model: models.MapPinHabtmMercilessWorldarea,
         unique: false,
@@ -166,7 +166,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'cruel__world_areas',
+      as: 'cruel_world_areas',
       through: {
         model: models.MapPinHabtmCruelWorldarea,
         unique: false,

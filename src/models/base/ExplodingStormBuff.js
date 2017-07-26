@@ -97,10 +97,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'friendly__monster_varieties_key',
+              attribute: 'friendly_monster_varieties_key',
             },
           ],
-          name: 'index_friendly__monster_varieties_key',
+          name: 'index_friendly_monster_varieties_key',
         },
         {
           fields: [
@@ -129,10 +129,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'enemy__monster_varieties_key',
+              attribute: 'enemy_monster_varieties_key',
             },
           ],
-          name: 'index_enemy__monster_varieties_key',
+          name: 'index_enemy_monster_varieties_key',
         },
         {
           fields: [
@@ -162,11 +162,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.MonsterVariety, {
-      as: 'friendly__monster_variety',
+      as: 'friendly_monster_variety',
       $inverse: 'exploding_storm_buffs',
       $col_order: 9,
       foreignKey: {
-        name: 'friendly__monster_varieties_key',
+        name: 'friendly_monster_varieties_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -210,11 +210,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.MonsterVariety, {
-      as: 'enemy__monster_variety',
+      as: 'enemy_monster_variety',
       $inverse: 'exploding_storm_buffs',
       $col_order: 13,
       foreignKey: {
-        name: 'enemy__monster_varieties_key',
+        name: 'enemy_monster_varieties_key',
         $type: 'ulong',
       },
       targetKey: 'row',

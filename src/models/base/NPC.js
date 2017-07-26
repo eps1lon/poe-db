@@ -59,34 +59,34 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_master_key',
+              attribute: 'npc_master_key',
             },
           ],
-          name: 'index_n_p_c_master_key',
+          name: 'index_npc_master_key',
         },
         {
           fields: [
             {
-              attribute: 'n_p_c_shop_key',
+              attribute: 'npc_shop_key',
             },
           ],
-          name: 'index_n_p_c_shop_key',
+          name: 'index_npc_shop_key',
         },
         {
           fields: [
             {
-              attribute: 'n_p_c_audio_key1',
+              attribute: 'npc_audio_key1',
             },
           ],
-          name: 'index_n_p_c_audio_key1',
+          name: 'index_npc_audio_key1',
         },
         {
           fields: [
             {
-              attribute: 'n_p_c_audio_key2',
+              attribute: 'npc_audio_key2',
             },
           ],
-          name: 'index_n_p_c_audio_key2',
+          name: 'index_npc_audio_key2',
         },
       ],
       tableName: 'n_p_cs',
@@ -96,11 +96,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
-      as: 'n_p_c_master',
-      $inverse: 'n_p_cs',
+      as: 'npc_master',
+      $inverse: 'np_cs',
       $col_order: 4,
       foreignKey: {
-        name: 'n_p_c_master_key',
+        name: 'npc_master_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -108,11 +108,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCShop, {
-      as: 'n_p_c_shop',
-      $inverse: 'n_p_cs',
+      as: 'npc_shop',
+      $inverse: 'np_cs',
       $col_order: 8,
       foreignKey: {
-        name: 'n_p_c_shop_key',
+        name: 'npc_shop_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -120,11 +120,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCAudio, {
-      as: 'n_p_c_audio1',
-      $inverse: 'n_p_cs1',
+      as: 'npc_audio1',
+      $inverse: 'np_cs1',
       $col_order: 9,
       foreignKey: {
-        name: 'n_p_c_audio_key1',
+        name: 'npc_audio_key1',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -132,11 +132,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCAudio, {
-      as: 'n_p_c_audio2',
-      $inverse: 'n_p_cs2',
+      as: 'npc_audio2',
+      $inverse: 'np_cs2',
       $col_order: 10,
       foreignKey: {
-        name: 'n_p_c_audio_key2',
+        name: 'npc_audio_key2',
         $type: 'ulong',
       },
       targetKey: 'row',

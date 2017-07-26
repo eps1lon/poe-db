@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      d_d_s_file: {
+      dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      a_o_file: {
+      ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -32,49 +32,49 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 4,
       },
-      a_o_file2: {
+      ao_file2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 5,
       },
-      marauder_s_m_files: {
+      marauder_sm_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 6,
       },
-      ranger_s_m_files: {
+      ranger_sm_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 7,
       },
-      witch_s_m_files: {
+      witch_sm_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 8,
       },
-      duelist_dex_s_m_files: {
+      duelist_dex_sm_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 9,
       },
-      templar_s_m_files: {
+      templar_sm_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 10,
       },
-      shadow_s_m_files: {
+      shadow_sm_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 11,
       },
-      scion_s_m_files: {
+      scion_sm_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -134,13 +134,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 21,
       },
-      s_m_files: {
+      sm_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 23,
       },
-      e_p_k_file: {
+      epk_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -212,7 +212,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'pickup__achievement_items',
+      as: 'pickup_achievement_items',
       through: {
         model: models.ItemVisualIdentityHabtmPickupAchievementitem,
         unique: false,
@@ -224,7 +224,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'identify__achievement_items',
+      as: 'identify_achievement_items',
       through: {
         model: models.ItemVisualIdentityHabtmIdentifyAchievementitem,
         unique: false,
@@ -236,7 +236,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'corrupt__achievement_items',
+      as: 'corrupt_achievement_items',
       through: {
         model: models.ItemVisualIdentityHabtmCorruptAchievementitem,
         unique: false,

@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 11,
       },
-      loading_screen__d_d_s_file: {
+      loading_screen_dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -146,19 +146,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 33,
       },
-      strongbox__spawn_chance: {
+      strongbox_spawn_chance: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 36,
       },
-      strongbox__max_count: {
+      strongbox_max_count: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 37,
       },
-      strongbox__rarity_weight: {
+      strongbox_rarity_weight: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -419,10 +419,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'parent_town__world_areas_key',
+              attribute: 'parent_town_world_areas_key',
             },
           ],
-          name: 'index_parent_town__world_areas_key',
+          name: 'index_parent_town_world_areas_key',
         },
         {
           fields: [
@@ -443,26 +443,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'twinned_full_clear__achievement_items_key',
+              attribute: 'twinned_full_clear_achievement_items_key',
             },
           ],
-          name: 'index_twinned_full_clear__achievement_items_key',
+          name: 'index_twinned_full_clear_achievement_items_key',
         },
         {
           fields: [
             {
-              attribute: 'enter__achievement_items_key',
+              attribute: 'enter_achievement_items_key',
             },
           ],
-          name: 'index_enter__achievement_items_key',
+          name: 'index_enter_achievement_items_key',
         },
         {
           fields: [
             {
-              attribute: '8_mods_full_clear__achievement_items_key',
+              attribute: '8_mods_full_clear_achievement_items_key',
             },
           ],
-          name: 'index_8_mods_full_clear__achievement_items_key',
+          name: 'index_8_mods_full_clear_achievement_items_key',
         },
       ],
       tableName: 'world_areas',
@@ -472,11 +472,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.WorldArea, {
-      as: 'parent_town__world_area',
+      as: 'parent_town_world_area',
       $inverse: 'world_areas',
       $col_order: 17,
       foreignKey: {
-        name: 'parent_town__world_areas_key',
+        name: 'parent_town_world_areas_key',
         $type: 'uint',
       },
       targetKey: 'row',
@@ -508,11 +508,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'twinned_full_clear__achievement_item',
+      as: 'twinned_full_clear_achievement_item',
       $inverse: 'world_areas',
       $col_order: 62,
       foreignKey: {
-        name: 'twinned_full_clear__achievement_items_key',
+        name: 'twinned_full_clear_achievement_items_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -520,11 +520,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'enter__achievement_item',
+      as: 'enter_achievement_item',
       $inverse: 'world_areas',
       $col_order: 63,
       foreignKey: {
-        name: 'enter__achievement_items_key',
+        name: 'enter_achievement_items_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -532,11 +532,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: '8_mods_full_clear__achievement_item',
+      as: '8_mods_full_clear_achievement_item',
       $inverse: 'world_areas',
       $col_order: 68,
       foreignKey: {
-        name: '8_mods_full_clear__achievement_items_key',
+        name: '8_mods_full_clear_achievement_items_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -544,7 +544,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'connections__world_areas',
+      as: 'connections_world_areas',
       through: {
         model: models.WorldAreaHabtmConnectionsWorldarea,
         unique: false,
@@ -568,7 +568,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'bosses__monster_varieties',
+      as: 'bosses_monster_varieties',
       through: {
         model: models.WorldAreaHabtmBossesMonstervariety,
         unique: false,
@@ -580,7 +580,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'monsters__monster_varieties',
+      as: 'monsters_monster_varieties',
       through: {
         model: models.WorldAreaHabtmMonstersMonstervariety,
         unique: false,
@@ -592,7 +592,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'spawn_weight__tags',
+      as: 'spawn_weight_tags',
       through: {
         model: models.WorldAreaHabtmSpawnWeightTag,
         unique: false,
@@ -604,7 +604,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'full_clear__achievement_items',
+      as: 'full_clear_achievement_items',
       through: {
         model: models.WorldAreaHabtmFullClearAchievementitem,
         unique: false,
@@ -628,7 +628,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'vaal_area__world_areas',
+      as: 'vaal_area_world_areas',
       through: {
         model: models.WorldAreaHabtmVaalAreaWorldarea,
         unique: false,
@@ -640,7 +640,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'area_type__tags',
+      as: 'area_type_tags',
       through: {
         model: models.WorldAreaHabtmAreaTypeTag,
         unique: false,

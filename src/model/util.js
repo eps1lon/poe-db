@@ -1,4 +1,7 @@
 const _ = require('lodash');
+const S = require('string');
+
+const underscore = name => S(name).underscore().s;
 
 const prepareAssociationsForInclude = model => {
   return nonCircularAssociations(model).map(name => {
@@ -157,4 +160,5 @@ module.exports = {
   nonCircularAssociations,
   prepareAssociationsForInclude,
   safeOrder,
+  underscore,
 };

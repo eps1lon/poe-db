@@ -14,19 +14,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      p_e_t_file1: {
+      pet_file1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      p_e_t_file2: {
+      pet_file2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      p_e_t_file3: {
+      pet_file3: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -38,19 +38,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 4,
       },
-      p_e_t_file4: {
+      pet_file4: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 5,
       },
-      p_e_t_file5: {
+      pet_file5: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 6,
       },
-      p_e_t_file6: {
+      pet_file6: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -74,19 +74,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 10,
       },
-      p_e_t_file7: {
+      pet_file7: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 11,
       },
-      p_e_t_file8: {
+      pet_file8: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 12,
       },
-      p_e_t_file9: {
+      pet_file9: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      r_g_b_flavour_text_colour: {
+      rgb_flavour_text_colour: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 6,
       },
-      o_g_g_file: {
+      ogg_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

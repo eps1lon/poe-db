@@ -89,18 +89,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'main_hand_alias__stats_key',
+              attribute: 'main_hand_alias_stats_key',
             },
           ],
-          name: 'index_main_hand_alias__stats_key',
+          name: 'index_main_hand_alias_stats_key',
         },
         {
           fields: [
             {
-              attribute: 'off_hand_alias__stats_key',
+              attribute: 'off_hand_alias_stats_key',
             },
           ],
-          name: 'index_off_hand_alias__stats_key',
+          name: 'index_off_hand_alias_stats_key',
         },
       ],
       tableName: 'stats',
@@ -110,11 +110,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Stat, {
-      as: 'main_hand_alias__stat',
+      as: 'main_hand_alias_stat',
       $inverse: 'stats',
       $col_order: 9,
       foreignKey: {
-        name: 'main_hand_alias__stats_key',
+        name: 'main_hand_alias_stats_key',
         $type: 'int',
       },
       targetKey: 'row',
@@ -122,11 +122,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Stat, {
-      as: 'off_hand_alias__stat',
+      as: 'off_hand_alias_stat',
       $inverse: 'stats',
       $col_order: 10,
       foreignKey: {
-        name: 'off_hand_alias__stats_key',
+        name: 'off_hand_alias_stats_key',
         $type: 'int',
       },
       targetKey: 'row',

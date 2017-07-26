@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      a_o_file: {
+      ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -74,13 +74,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 10,
       },
-      unknown__keys: {
+      unknown_keys: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 11,
       },
-      unknown__values: {
+      unknown_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -141,26 +141,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'corrupt__achievement_items_key',
+              attribute: 'corrupt_achievement_items_key',
             },
           ],
-          name: 'index_corrupt__achievement_items_key',
+          name: 'index_corrupt_achievement_items_key',
         },
         {
           fields: [
             {
-              attribute: 'currency_use__achievement_items_key',
+              attribute: 'currency_use_achievement_items_key',
             },
           ],
-          name: 'index_currency_use__achievement_items_key',
+          name: 'index_currency_use_achievement_items_key',
         },
         {
           fields: [
             {
-              attribute: 'encounter__achievement_items_key',
+              attribute: 'encounter_achievement_items_key',
             },
           ],
-          name: 'index_encounter__achievement_items_key',
+          name: 'index_encounter_achievement_items_key',
         },
       ],
       tableName: 'chests',
@@ -194,11 +194,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'corrupt__achievement_item',
+      as: 'corrupt_achievement_item',
       $inverse: 'chests',
       $col_order: 21,
       foreignKey: {
-        name: 'corrupt__achievement_items_key',
+        name: 'corrupt_achievement_items_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -206,11 +206,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'currency_use__achievement_item',
+      as: 'currency_use_achievement_item',
       $inverse: 'chests',
       $col_order: 22,
       foreignKey: {
-        name: 'currency_use__achievement_items_key',
+        name: 'currency_use_achievement_items_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -218,11 +218,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'encounter__achievement_item',
+      as: 'encounter_achievement_item',
       $inverse: 'chests',
       $col_order: 23,
       foreignKey: {
-        name: 'encounter__achievement_items_key',
+        name: 'encounter_achievement_items_key',
         $type: 'ref|list|ulong',
       },
       targetKey: 'row',

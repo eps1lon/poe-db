@@ -57,10 +57,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'vaal_variant__base_item_types_key',
+              attribute: 'vaal_variant_base_item_types_key',
             },
           ],
-          name: 'index_vaal_variant__base_item_types_key',
+          name: 'index_vaal_variant_base_item_types_key',
         },
       ],
       tableName: 'skill_gems',
@@ -94,11 +94,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BaseItemType, {
-      as: 'vaal_variant__base_item_type',
+      as: 'vaal_variant_base_item_type',
       $inverse: 'skill_gems',
       $col_order: 6,
       foreignKey: {
-        name: 'vaal_variant__base_item_types_key',
+        name: 'vaal_variant_base_item_types_key',
         $type: 'long',
       },
       targetKey: 'row',

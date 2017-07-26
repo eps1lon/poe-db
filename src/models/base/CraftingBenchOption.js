@@ -83,10 +83,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_master_key',
+              attribute: 'npc_master_key',
             },
           ],
-          name: 'index_n_p_c_master_key',
+          name: 'index_npc_master_key',
         },
         {
           fields: [
@@ -104,11 +104,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
-      as: 'n_p_c_master',
+      as: 'npc_master',
       $inverse: 'crafting_bench_options',
       $col_order: 0,
       foreignKey: {
-        name: 'n_p_c_master_key',
+        name: 'npc_master_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -128,7 +128,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'cost__base_item_types',
+      as: 'cost_base_item_types',
       through: {
         model: models.CraftingBenchOptionHabtmCostBaseitemtype,
         unique: false,

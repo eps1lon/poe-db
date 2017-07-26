@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      is_p_v_p: {
+      is_pvp: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'normal__character_start_quest_state',
+      as: 'normal_character_start_quest_state',
       through: {
         model: models.CharacterStartStateHabtmNormalCharacterstartqueststate,
         unique: false,
@@ -122,7 +122,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'cruel__character_start_quest_state',
+      as: 'cruel_character_start_quest_state',
       through: {
         model: models.CharacterStartStateHabtmCruelCharacterstartqueststate,
         unique: false,
@@ -134,7 +134,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'merciless__character_start_quest_state',
+      as: 'merciless_character_start_quest_state',
       through: {
         model: models.CharacterStartStateHabtmMercilessCharacterstartqueststate,
         unique: false,

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      icon__d_d_s_file: {
+      icon_dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -145,10 +145,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'granted_buff__buff_definitions_key',
+              attribute: 'granted_buff_buff_definitions_key',
             },
           ],
-          name: 'index_granted_buff__buff_definitions_key',
+          name: 'index_granted_buff_buff_definitions_key',
         },
         {
           fields: [
@@ -178,11 +178,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BuffDefinition, {
-      as: 'granted_buff__buff_definition',
+      as: 'granted_buff_buff_definition',
       $inverse: 'passive_skills',
       $col_order: 16,
       foreignKey: {
-        name: 'granted_buff__buff_definitions_key',
+        name: 'granted_buff_buff_definitions_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -226,7 +226,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.ClientString, {
-      as: 'reminder__client_strings',
+      as: 'reminder_client_strings',
       through: {
         model: models.PassiveSkillHabtmReminderClientstring,
         unique: false,

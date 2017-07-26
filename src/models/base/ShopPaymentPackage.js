@@ -101,10 +101,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'upgrade__shop_payment_package_key',
+              attribute: 'upgrade_shop_payment_package_key',
             },
           ],
-          name: 'index_upgrade__shop_payment_package_key',
+          name: 'index_upgrade_shop_payment_package_key',
         },
       ],
       tableName: 'shop_payment_packages',
@@ -114,11 +114,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ShopPaymentPackage, {
-      as: 'upgrade__shop_payment_package',
+      as: 'upgrade_shop_payment_package',
       $inverse: 'shop_payment_packages',
       $col_order: 13,
       foreignKey: {
-        name: 'upgrade__shop_payment_package_key',
+        name: 'upgrade_shop_payment_package_key',
         $type: 'int',
       },
       targetKey: 'row',

@@ -75,7 +75,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.Mod, {
-      as: 'relic__mods',
+      as: 'relic_mods',
       through: {
         model: models.StrIntMissionRelicPatternHabtmRelicMod,
         unique: false,

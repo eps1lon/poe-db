@@ -149,18 +149,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'maximum__stats_key',
+              attribute: 'maximum_stats_key',
             },
           ],
-          name: 'index_maximum__stats_key',
+          name: 'index_maximum_stats_key',
         },
         {
           fields: [
             {
-              attribute: 'current__stats_key',
+              attribute: 'current_stats_key',
             },
           ],
-          name: 'index_current__stats_key',
+          name: 'index_current_stats_key',
         },
         {
           fields: [
@@ -178,11 +178,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.Stat, {
-      as: 'maximum__stat',
+      as: 'maximum_stat',
       $inverse: 'buff_definitions',
       $col_order: 9,
       foreignKey: {
-        name: 'maximum__stats_key',
+        name: 'maximum_stats_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -190,11 +190,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Stat, {
-      as: 'current__stat',
+      as: 'current_stat',
       $inverse: 'buff_definitions',
       $col_order: 10,
       foreignKey: {
-        name: 'current__stats_key',
+        name: 'current_stats_key',
         $type: 'ulong',
       },
       targetKey: 'row',

@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 2,
       },
-      mono__audio_file: {
+      mono_audio_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 3,
       },
-      stereo__audio_file: {
+      stereo_audio_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -67,7 +67,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Character, {
       as: 'character',
-      $inverse: 'n_p_c_text_audios',
+      $inverse: 'npc_text_audios',
       $col_order: 1,
       foreignKey: {
         name: 'characters_key',

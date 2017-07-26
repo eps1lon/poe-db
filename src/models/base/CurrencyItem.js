@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 12,
       },
-      currency_tab__stack_size: {
+      currency_tab_stack_size: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
@@ -91,18 +91,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'full_stack__base_item_types_key',
+              attribute: 'full_stack_base_item_types_key',
             },
           ],
-          name: 'index_full_stack__base_item_types_key',
+          name: 'index_full_stack_base_item_types_key',
         },
         {
           fields: [
             {
-              attribute: 'possession__achievement_items_key',
+              attribute: 'possession_achievement_items_key',
             },
           ],
-          name: 'index_possession__achievement_items_key',
+          name: 'index_possession_achievement_items_key',
         },
       ],
       tableName: 'currency_items',
@@ -124,11 +124,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BaseItemType, {
-      as: 'full_stack__base_item_type',
+      as: 'full_stack_base_item_type',
       $inverse: 'currency_items',
       $col_order: 5,
       foreignKey: {
-        name: 'full_stack__base_item_types_key',
+        name: 'full_stack_base_item_types_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -136,11 +136,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'possession__achievement_item',
+      as: 'possession_achievement_item',
       $inverse: 'currency_items',
       $col_order: 10,
       foreignKey: {
-        name: 'possession__achievement_items_key',
+        name: 'possession_achievement_items_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -148,7 +148,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'usage__achievement_items',
+      as: 'usage_achievement_items',
       through: {
         model: models.CurrencyItemHabtmUsageAchievementitem,
         unique: false,

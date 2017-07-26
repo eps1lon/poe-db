@@ -35,10 +35,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_key',
+              attribute: 'npc_key',
             },
           ],
-          name: 'index_n_p_c_key',
+          name: 'index_npc_key',
         },
       ],
       tableName: 'quest_vendor_rewards',
@@ -48,11 +48,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPC, {
-      as: 'n_p_c',
+      as: 'npc',
       $inverse: 'quest_vendor_rewards',
       $col_order: 1,
       foreignKey: {
-        name: 'n_p_c_key',
+        name: 'npc_key',
         $type: 'ulong',
       },
       targetKey: 'row',

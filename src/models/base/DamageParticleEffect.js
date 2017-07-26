@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      p_e_t_file: {
+      pet_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

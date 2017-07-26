@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      active__a_o_files: {
+      active_ao_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      idle__a_o_files: {
+      idle_ao_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

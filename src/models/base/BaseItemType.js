@@ -127,10 +127,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'equip__achievement_items_key',
+              attribute: 'equip_achievement_items_key',
             },
           ],
-          name: 'index_equip__achievement_items_key',
+          name: 'index_equip_achievement_items_key',
         },
       ],
       tableName: 'base_item_types',
@@ -188,11 +188,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'equip__achievement_item',
+      as: 'equip_achievement_item',
       $inverse: 'base_item_types',
       $col_order: 26,
       foreignKey: {
-        name: 'equip__achievement_items_key',
+        name: 'equip_achievement_items_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -200,7 +200,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'implicit__mods',
+      as: 'implicit_mods',
       through: {
         model: models.BaseItemTypeHabtmImplicitMod,
         unique: false,
@@ -212,7 +212,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'normal_purchase__base_item_types',
+      as: 'normal_purchase_base_item_types',
       through: {
         model: models.BaseItemTypeHabtmNormalPurchaseBaseitemtype,
         unique: false,
@@ -224,7 +224,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'magic_purchase__base_item_types',
+      as: 'magic_purchase_base_item_types',
       through: {
         model: models.BaseItemTypeHabtmMagicPurchaseBaseitemtype,
         unique: false,
@@ -248,7 +248,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'vendor_recipe__achievement_items',
+      as: 'vendor_recipe_achievement_items',
       through: {
         model: models.BaseItemTypeHabtmVendorRecipeAchievementitem,
         unique: false,
@@ -260,7 +260,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'rare_purchase__base_item_types',
+      as: 'rare_purchase_base_item_types',
       through: {
         model: models.BaseItemTypeHabtmRarePurchaseBaseitemtype,
         unique: false,
@@ -272,7 +272,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.BaseItemType, {
-      as: 'unique_purchase__base_item_types',
+      as: 'unique_purchase_base_item_types',
       through: {
         model: models.BaseItemTypeHabtmUniquePurchaseBaseitemtype,
         unique: false,

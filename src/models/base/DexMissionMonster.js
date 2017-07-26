@@ -41,10 +41,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'boss__monster_varieties_key',
+              attribute: 'boss_monster_varieties_key',
             },
           ],
-          name: 'index_boss__monster_varieties_key',
+          name: 'index_boss_monster_varieties_key',
         },
       ],
       tableName: 'dex_mission_monsters',
@@ -54,11 +54,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
-      as: 'boss__monster_variety',
+      as: 'boss_monster_variety',
       $inverse: 'dex_mission_monsters',
       $col_order: 6,
       foreignKey: {
-        name: 'boss__monster_varieties_key',
+        name: 'boss_monster_varieties_key',
         $type: 'ulong',
       },
       targetKey: 'row',

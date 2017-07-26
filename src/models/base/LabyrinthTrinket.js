@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      buff__values: {
+      buff_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
@@ -39,10 +39,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'buff__buff_definitions_key',
+              attribute: 'buff_buff_definitions_key',
             },
           ],
-          name: 'index_buff__buff_definitions_key',
+          name: 'index_buff_buff_definitions_key',
         },
       ],
       tableName: 'labyrinth_trinkets',
@@ -76,11 +76,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.BuffDefinition, {
-      as: 'buff__buff_definition',
+      as: 'buff_buff_definition',
       $inverse: 'labyrinth_trinkets',
       $col_order: 2,
       foreignKey: {
-        name: 'buff__buff_definitions_key',
+        name: 'buff_buff_definitions_key',
         $type: 'ulong',
       },
       targetKey: 'row',

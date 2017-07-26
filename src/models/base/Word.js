@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.Tag, {
-      as: 'spawn_weight__tags',
+      as: 'spawn_weight_tags',
       through: {
         model: models.WordHabtmSpawnWeightTag,
         unique: false,

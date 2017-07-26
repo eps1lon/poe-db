@@ -128,7 +128,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'spawn_weight__tags',
+      as: 'spawn_weight_tags',
       through: {
         model: models.BloodlineHabtmSpawnWeightTag,
         unique: false,
@@ -140,7 +140,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'item_weight__tags',
+      as: 'item_weight_tags',
       through: {
         model: models.BloodlineHabtmItemWeightTag,
         unique: false,

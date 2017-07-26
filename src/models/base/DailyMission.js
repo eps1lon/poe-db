@@ -59,18 +59,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_talk_key',
+              attribute: 'npc_talk_key',
             },
           ],
-          name: 'index_n_p_c_talk_key',
+          name: 'index_npc_talk_key',
         },
         {
           fields: [
             {
-              attribute: 'p_v_p_types_key',
+              attribute: 'pvp_types_key',
             },
           ],
-          name: 'index_p_v_p_types_key',
+          name: 'index_pvp_types_key',
         },
       ],
       tableName: 'daily_missions',
@@ -80,11 +80,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCTalk, {
-      as: 'n_p_c_talk',
+      as: 'npc_talk',
       $inverse: 'daily_missions',
       $col_order: 6,
       foreignKey: {
-        name: 'n_p_c_talk_key',
+        name: 'npc_talk_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -92,11 +92,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.PVPType, {
-      as: 'p_v_p_type',
+      as: 'pvp_type',
       $inverse: 'daily_missions',
       $col_order: 9,
       foreignKey: {
-        name: 'p_v_p_types_key',
+        name: 'pvp_types_key',
         $type: 'int',
       },
       targetKey: 'row',

@@ -78,7 +78,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'map_boss__monster_varieties',
+      as: 'map_boss_monster_varieties',
       through: {
         model: models.StrDexIntMissionUniqueMapHabtmMapBossMonstervariety,
         unique: false,

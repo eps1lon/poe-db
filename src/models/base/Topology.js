@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      d_g_r_file: {
+      dgr_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

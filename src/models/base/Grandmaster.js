@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      g_m_file: {
+      gm_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      a_i_s_file: {
+      ais_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

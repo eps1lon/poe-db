@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'marauder__character_text_audio',
+      as: 'marauder_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmMarauderCharactertextaudio,
         unique: false,
@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'ranger__character_text_audio',
+      as: 'ranger_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmRangerCharactertextaudio,
         unique: false,
@@ -75,7 +75,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'witch__character_text_audio',
+      as: 'witch_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmWitchCharactertextaudio,
         unique: false,
@@ -87,7 +87,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'duelist__character_text_audio',
+      as: 'duelist_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmDuelistCharactertextaudio,
         unique: false,
@@ -99,7 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'shadow__character_text_audio',
+      as: 'shadow_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmShadowCharactertextaudio,
         unique: false,
@@ -111,7 +111,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'templar__character_text_audio',
+      as: 'templar_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmTemplarCharactertextaudio,
         unique: false,
@@ -123,7 +123,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'scion__character_text_audio',
+      as: 'scion_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmScionCharactertextaudio,
         unique: false,
@@ -135,7 +135,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'goddess__character_text_audio',
+      as: 'goddess_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmGoddessCharactertextaudio,
         unique: false,
@@ -147,7 +147,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterTextAudio, {
-      as: 'jack_the_axe__character_text_audio',
+      as: 'jack_the_axe_character_text_audio',
       through: {
         model: models.CharacterAudioEventHabtmJackTheAxeCharactertextaudio,
         unique: false,

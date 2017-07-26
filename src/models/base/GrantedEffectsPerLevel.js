@@ -222,7 +222,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Stat, {
-      as: 'quality__stats',
+      as: 'quality_stats',
       through: {
         model: models.GrantedEffectsPerLevelHabtmQualityStat,
         unique: false,

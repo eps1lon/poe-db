@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 14,
       },
-      is_p_v_p_only: {
+      is_pvp_only: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: false,
@@ -95,34 +95,34 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'player__shrine_buffs_key',
+              attribute: 'player_shrine_buffs_key',
             },
           ],
-          name: 'index_player__shrine_buffs_key',
+          name: 'index_player_shrine_buffs_key',
         },
         {
           fields: [
             {
-              attribute: 'monster__shrine_buffs_key',
+              attribute: 'monster_shrine_buffs_key',
             },
           ],
-          name: 'index_monster__shrine_buffs_key',
+          name: 'index_monster_shrine_buffs_key',
         },
         {
           fields: [
             {
-              attribute: 'summon_monster__monster_varieties_key',
+              attribute: 'summon_monster_monster_varieties_key',
             },
           ],
-          name: 'index_summon_monster__monster_varieties_key',
+          name: 'index_summon_monster_monster_varieties_key',
         },
         {
           fields: [
             {
-              attribute: 'summon_player__monster_varieties_key',
+              attribute: 'summon_player_monster_varieties_key',
             },
           ],
-          name: 'index_summon_player__monster_varieties_key',
+          name: 'index_summon_player_monster_varieties_key',
         },
         {
           fields: [
@@ -140,11 +140,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.ShrineBuff, {
-      as: 'player__shrine_buff',
+      as: 'player_shrine_buff',
       $inverse: 'shrines',
       $col_order: 4,
       foreignKey: {
-        name: 'player__shrine_buffs_key',
+        name: 'player_shrine_buffs_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -152,11 +152,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ShrineBuff, {
-      as: 'monster__shrine_buff',
+      as: 'monster_shrine_buff',
       $inverse: 'shrines',
       $col_order: 8,
       foreignKey: {
-        name: 'monster__shrine_buffs_key',
+        name: 'monster_shrine_buffs_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -164,11 +164,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.MonsterVariety, {
-      as: 'summon_monster__monster_variety',
+      as: 'summon_monster_monster_variety',
       $inverse: 'shrines',
       $col_order: 9,
       foreignKey: {
-        name: 'summon_monster__monster_varieties_key',
+        name: 'summon_monster_monster_varieties_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -176,11 +176,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.MonsterVariety, {
-      as: 'summon_player__monster_variety',
+      as: 'summon_player_monster_variety',
       $inverse: 'shrines',
       $col_order: 10,
       foreignKey: {
-        name: 'summon_player__monster_varieties_key',
+        name: 'summon_player_monster_varieties_key',
         $type: 'ulong',
       },
       targetKey: 'row',

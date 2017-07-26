@@ -37,10 +37,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_master_key',
+              attribute: 'npc_master_key',
             },
           ],
-          name: 'index_n_p_c_master_key',
+          name: 'index_npc_master_key',
         },
         {
           fields: [
@@ -78,11 +78,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCMaster, {
-      as: 'n_p_c_master',
+      as: 'npc_master',
       $inverse: 'hideouts',
       $col_order: 2,
       foreignKey: {
-        name: 'n_p_c_master_key',
+        name: 'npc_master_key',
         $type: 'ulong',
       },
       targetKey: 'row',

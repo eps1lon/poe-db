@@ -113,18 +113,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'hostage__monster_varieties_key',
+              attribute: 'hostage_monster_varieties_key',
             },
           ],
-          name: 'index_hostage__monster_varieties_key',
+          name: 'index_hostage_monster_varieties_key',
         },
         {
           fields: [
             {
-              attribute: 'n_p_c_talk_key',
+              attribute: 'npc_talk_key',
             },
           ],
-          name: 'index_n_p_c_talk_key',
+          name: 'index_npc_talk_key',
         },
       ],
       tableName: 'dex_int_missions',
@@ -134,11 +134,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
-      as: 'hostage__monster_variety',
+      as: 'hostage_monster_variety',
       $inverse: 'dex_int_missions',
       $col_order: 7,
       foreignKey: {
-        name: 'hostage__monster_varieties_key',
+        name: 'hostage_monster_varieties_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -146,11 +146,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCTalk, {
-      as: 'n_p_c_talk',
+      as: 'npc_talk',
       $inverse: 'dex_int_missions',
       $col_order: 12,
       foreignKey: {
-        name: 'n_p_c_talk_key',
+        name: 'npc_talk_key',
         $type: 'long',
       },
       targetKey: 'row',

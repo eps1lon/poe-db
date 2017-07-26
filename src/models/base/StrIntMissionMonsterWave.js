@@ -102,7 +102,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'unique__monster_varieties',
+      as: 'unique_monster_varieties',
       through: {
         model: models.StrIntMissionMonsterWaveHabtmUniqueMonstervariety,
         unique: false,

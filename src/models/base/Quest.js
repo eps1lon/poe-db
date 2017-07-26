@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 3,
       },
-      icon__d_d_s_file: {
+      icon_dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

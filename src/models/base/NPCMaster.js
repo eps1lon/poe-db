@@ -65,19 +65,19 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_cs_key',
+              attribute: 'np_cs_key',
               length: 250,
             },
           ],
-          name: 'index_n_p_cs_key',
+          name: 'index_np_cs_key',
         },
         {
           fields: [
             {
-              attribute: 'signature_mod__mods_key',
+              attribute: 'signature_mod_mods_key',
             },
           ],
-          name: 'index_signature_mod__mods_key',
+          name: 'index_signature_mod_mods_key',
         },
         {
           fields: [
@@ -90,10 +90,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'talisman__achievement_items_key',
+              attribute: 'talisman_achievement_items_key',
             },
           ],
-          name: 'index_talisman__achievement_items_key',
+          name: 'index_talisman_achievement_items_key',
         },
       ],
       tableName: 'n_p_c_masters',
@@ -103,11 +103,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPC, {
-      as: 'n_p_c',
-      $inverse: 'n_p_c_masters',
+      as: 'npc',
+      $inverse: 'npc_masters',
       $col_order: 1,
       foreignKey: {
-        name: 'n_p_cs_key',
+        name: 'np_cs_key',
         $type: 'ref|string',
       },
       targetKey: 'id',
@@ -115,11 +115,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'signature_mod__mod',
-      $inverse: 'n_p_c_masters',
+      as: 'signature_mod_mod',
+      $inverse: 'npc_masters',
       $col_order: 4,
       foreignKey: {
-        name: 'signature_mod__mods_key',
+        name: 'signature_mod_mods_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -128,7 +128,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
-      $inverse: 'n_p_c_masters',
+      $inverse: 'npc_masters',
       $col_order: 9,
       foreignKey: {
         name: 'achievement_items_key',
@@ -139,11 +139,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'talisman__achievement_item',
-      $inverse: 'n_p_c_masters',
+      as: 'talisman_achievement_item',
+      $inverse: 'npc_masters',
       $col_order: 15,
       foreignKey: {
-        name: 'talisman__achievement_items_key',
+        name: 'talisman_achievement_items_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -151,36 +151,36 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'signature_mod_spawn_weight__tags',
+      as: 'signature_mod_spawn_weight_tags',
       through: {
         model: models.NPCMasterHabtmSignatureModSpawnWeightTag,
         unique: false,
       },
-      foreignKey: 'n_p_c_master_row',
+      foreignKey: 'npc_master_row',
       otherKey: 'tag_row',
       $col_order: 10,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'unknown_weight__tags',
+      as: 'unknown_weight_tags',
       through: {
         model: models.NPCMasterHabtmUnknownWeightTag,
         unique: false,
       },
-      foreignKey: 'n_p_c_master_row',
+      foreignKey: 'npc_master_row',
       otherKey: 'tag_row',
       $col_order: 12,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'master_level5__achievement_items',
+      as: 'master_level5_achievement_items',
       through: {
         model: models.NPCMasterHabtmMasterLevel5Achievementitem,
         unique: false,
       },
-      foreignKey: 'n_p_c_master_row',
+      foreignKey: 'npc_master_row',
       otherKey: 'achievement_item_row',
       $col_order: 16,
       nullable: true,

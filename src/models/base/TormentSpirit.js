@@ -49,10 +49,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'summoned_monster__monster_varieties_key',
+              attribute: 'summoned_monster_monster_varieties_key',
             },
           ],
-          name: 'index_summoned_monster__monster_varieties_key',
+          name: 'index_summoned_monster_monster_varieties_key',
         },
       ],
       tableName: 'torment_spirits',
@@ -74,11 +74,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.MonsterVariety, {
-      as: 'summoned_monster__monster_variety',
+      as: 'summoned_monster_monster_variety',
       $inverse: 'torment_spirits',
       $col_order: 7,
       foreignKey: {
-        name: 'summoned_monster__monster_varieties_key',
+        name: 'summoned_monster_monster_varieties_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'spirit__mods',
+      as: 'spirit_mods',
       through: {
         model: models.TormentSpiritHabtmSpiritMod,
         unique: false,
@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'touched__mods',
+      as: 'touched_mods',
       through: {
         model: models.TormentSpiritHabtmTouchedMod,
         unique: false,
@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'possessed__mods',
+      as: 'possessed_mods',
       through: {
         model: models.TormentSpiritHabtmPossessedMod,
         unique: false,

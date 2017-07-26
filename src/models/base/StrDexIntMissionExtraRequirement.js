@@ -77,10 +77,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_talk_key',
+              attribute: 'npc_talk_key',
             },
           ],
-          name: 'index_n_p_c_talk_key',
+          name: 'index_npc_talk_key',
         },
       ],
       tableName: 'str_dex_int_mission_extra_requirements',
@@ -90,11 +90,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCTalk, {
-      as: 'n_p_c_talk',
+      as: 'npc_talk',
       $inverse: 'str_dex_int_mission_extra_requirements',
       $col_order: 8,
       foreignKey: {
-        name: 'n_p_c_talk_key',
+        name: 'npc_talk_key',
         $type: 'ulong',
       },
       targetKey: 'row',

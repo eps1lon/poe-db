@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 6,
       },
-      a_o_file: {
+      ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

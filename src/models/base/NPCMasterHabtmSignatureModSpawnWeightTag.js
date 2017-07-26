@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['n_p_c_master_row', 'tag_row'],
+          fields: ['npc_master_row', 'tag_row'],
           name: 'composite primary_alias',
           unique: true,
         },
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPCMaster, {
-      foreignKey: 'n_p_c_master_row',
+      foreignKey: 'npc_master_row',
       targetKey: 'row',
       nullable: true,
       constraints: false,

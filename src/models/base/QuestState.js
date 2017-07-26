@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 11,
       },
-      quest_finished__o_g_g_file: {
+      quest_finished_ogg_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

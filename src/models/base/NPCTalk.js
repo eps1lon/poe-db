@@ -161,10 +161,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'n_p_c_key',
+              attribute: 'npc_key',
             },
           ],
-          name: 'index_n_p_c_key',
+          name: 'index_npc_key',
         },
         {
           fields: [
@@ -182,11 +182,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.NPC, {
-      as: 'n_p_c',
-      $inverse: 'n_p_c_talks',
+      as: 'npc',
+      $inverse: 'npc_talks',
       $col_order: 0,
       foreignKey: {
-        name: 'n_p_c_key',
+        name: 'npc_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -195,7 +195,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     model.belongsTo(models.Quest, {
       as: 'quest',
-      $inverse: 'n_p_c_talks',
+      $inverse: 'npc_talks',
       $col_order: 9,
       foreignKey: {
         name: 'quest_key',
@@ -206,13 +206,13 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.NPCTextAudio, {
-      as: 'n_p_c_text_audio',
+      as: 'npc_text_audio',
       through: {
         model: models.NPCTalkHabtmNPCTextAudio,
         unique: false,
       },
-      foreignKey: 'n_p_c_talk_row',
-      otherKey: 'n_p_c_text_audio_row',
+      foreignKey: 'npc_talk_row',
+      otherKey: 'npc_text_audio_row',
       $col_order: 12,
       nullable: true,
       constraints: false,

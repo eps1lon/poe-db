@@ -67,18 +67,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'default__item_visual_identity_key',
+              attribute: 'default_item_visual_identity_key',
             },
           ],
-          name: 'index_default__item_visual_identity_key',
+          name: 'index_default_item_visual_identity_key',
         },
         {
           fields: [
             {
-              attribute: 'shaped__item_visual_identity_key',
+              attribute: 'shaped_item_visual_identity_key',
             },
           ],
-          name: 'index_shaped__item_visual_identity_key',
+          name: 'index_shaped_item_visual_identity_key',
         },
       ],
       tableName: 'atlas_nodes',
@@ -100,11 +100,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
-      as: 'default__item_visual_identity',
+      as: 'default_item_visual_identity',
       $inverse: 'atlas_nodes',
       $col_order: 7,
       foreignKey: {
-        name: 'default__item_visual_identity_key',
+        name: 'default_item_visual_identity_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -112,11 +112,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
-      as: 'shaped__item_visual_identity',
+      as: 'shaped_item_visual_identity',
       $inverse: 'atlas_nodes',
       $col_order: 8,
       foreignKey: {
-        name: 'shaped__item_visual_identity_key',
+        name: 'shaped_item_visual_identity_key',
         $type: 'ulong',
       },
       targetKey: 'row',

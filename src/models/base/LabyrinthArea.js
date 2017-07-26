@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsToMany(models.WorldArea, {
-      as: 'normal__world_areas',
+      as: 'normal_world_areas',
       through: {
         model: models.LabyrinthAreaHabtmNormalWorldarea,
         unique: false,
@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'cruel__world_areas',
+      as: 'cruel_world_areas',
       through: {
         model: models.LabyrinthAreaHabtmCruelWorldarea,
         unique: false,
@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'merciless__world_areas',
+      as: 'merciless_world_areas',
       through: {
         model: models.LabyrinthAreaHabtmMercilessWorldarea,
         unique: false,
@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.WorldArea, {
-      as: 'endgame__world_areas',
+      as: 'endgame_world_areas',
       through: {
         model: models.LabyrinthAreaHabtmEndgameWorldarea,
         unique: false,

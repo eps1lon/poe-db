@@ -14,19 +14,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 0,
       },
-      buff_d_d_s_file: {
+      buff_dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      e_p_k_file1: {
+      epk_file1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      e_p_k_file2: {
+      epk_file2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

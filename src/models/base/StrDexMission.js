@@ -65,18 +65,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'dummy__monster_varieties_key',
+              attribute: 'dummy_monster_varieties_key',
             },
           ],
-          name: 'index_dummy__monster_varieties_key',
+          name: 'index_dummy_monster_varieties_key',
         },
         {
           fields: [
             {
-              attribute: 'n_p_c_talk_key',
+              attribute: 'npc_talk_key',
             },
           ],
-          name: 'index_n_p_c_talk_key',
+          name: 'index_npc_talk_key',
         },
       ],
       tableName: 'str_dex_missions',
@@ -86,11 +86,11 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.MonsterVariety, {
-      as: 'dummy__monster_variety',
+      as: 'dummy_monster_variety',
       $inverse: 'str_dex_missions',
       $col_order: 5,
       foreignKey: {
-        name: 'dummy__monster_varieties_key',
+        name: 'dummy_monster_varieties_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -98,11 +98,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.NPCTalk, {
-      as: 'n_p_c_talk',
+      as: 'npc_talk',
       $inverse: 'str_dex_missions',
       $col_order: 8,
       foreignKey: {
-        name: 'n_p_c_talk_key',
+        name: 'npc_talk_key',
         $type: 'ulong',
       },
       targetKey: 'row',
@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'allies__monster_varieties',
+      as: 'allies_monster_varieties',
       through: {
         model: models.StrDexMissionHabtmAlliesMonstervariety,
         unique: false,
@@ -134,7 +134,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.MonsterVariety, {
-      as: 'traps__monster_varieties',
+      as: 'traps_monster_varieties',
       through: {
         model: models.StrDexMissionHabtmTrapsMonstervariety,
         unique: false,

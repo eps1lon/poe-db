@@ -364,7 +364,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'spawn_weight__tags',
+      as: 'spawn_weight_tags',
       through: {
         model: models.ModHabtmSpawnWeightTag,
         unique: false,
@@ -388,7 +388,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Tag, {
-      as: 'generation_weight__tags',
+      as: 'generation_weight_tags',
       through: {
         model: models.ModHabtmGenerationWeightTag,
         unique: false,

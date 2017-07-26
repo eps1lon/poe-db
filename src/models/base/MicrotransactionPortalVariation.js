@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      a_o_file: {
+      ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      map_a_o_file: {
+      map_ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

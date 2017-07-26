@@ -1,25 +1,19 @@
-const _ = require('lodash');
+const { NotFoundError } = require('restify-errors');
 
 const { describe } = require('../model/util');
 
-const usage = (req, res) => {
-  res.json({
-    usage: {
-      url: '/:model_name',
-      params: {
-        model_name: 'the name of the model in singular',
-      },
-    },
-  });
-};
-
-module.exports = models => async (req, res) => {
+module.exports = models => async (req, res, next) => {
   const { params: { model_name } } = req;
 
   const description = describe(models, model_name);
   if (description === undefined) {
-    usage(req, res);
+    next(
+      new NotFoundError(
+        `'${model_name}' not found. Be sure to provide the model name as singular.`,
+      ),
+    );
   } else {
     res.json({ description });
+    next();
   }
 };

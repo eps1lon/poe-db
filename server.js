@@ -8,7 +8,7 @@ const orm = orm_creator();
 orm.authenticate().catch(e => console.warn(e));
 
 console.log('building models...');
-const models = require('./src/models').init(orm);
+const models = require('./src/models')({ normalization: 3 }).init(orm);
 console.log('done');
 
 const port = process.env.PORT || 3000;

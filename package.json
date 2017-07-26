@@ -20,7 +20,7 @@
     "dev:server": "nodemon --trace-warnings server.js",
     "dev:models": "node --trace-warnings scripts/generateModels",
     "dev:models:clear": "node scripts/clearModels",
-    "postdev:models": "prettier-eslint --write \"src/models/base/*.js\"",
+    "postdev:models": "prettier-eslint --write \"src/models/nf_3/base/*.js\"",
     "dev:parseContent": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postdev:parseContent": "node scripts/postParseContent",
     "install": "cd pypoe && pip install -e .[cli]",

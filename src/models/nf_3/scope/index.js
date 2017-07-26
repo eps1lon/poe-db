@@ -1,6 +1,6 @@
 const path = require('path');
 
-const { modelFiles } = require('../util');
+const { modelFiles } = require('../../util');
 
 module.exports = models => {
   for (const scope_file of modelFiles(__dirname)) {

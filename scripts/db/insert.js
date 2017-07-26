@@ -25,14 +25,16 @@ const all_records = require('../../data/records.json');
 
 (async () => {
   const orm = orm_creator({ logging: false });
-  const models = require('../../src/models').init(orm);
+  const models = require('../../src/models')({ normalization: 3 }).init(orm);
 
   const start_time = Date.now();
 
   let total_insert_count = 0;
 
   try {
-    for (const [dat_file, records] of Object.entries(all_records)) {
+    for (const [dat_file, records] of Object.entries(all_records).filter(
+      ([dat]) => dat === 'Achievements.dat',
+    )) {
       const model = Object.values(models).find(
         model => model.DAT_FILE === dat_file,
       );

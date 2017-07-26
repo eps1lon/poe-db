@@ -2,19 +2,19 @@
 python 3.4 for PyPoe
 
 # install
-1. `git clone --recursive https://github.com/eps1lon/poe_db.git`
+```bash
+$ git clone --recursive https://github.com/eps1lon/poe_db.git
 
-2. run in a python 3.4 virtualenv for PyPoE:
+# run in a python 3.4 virtualenv for PyPoE:
+$ yarn install --production
 
-   `yarn install --production`
+# you might need to config PyPoE to find the Content.ggpk
+$ yarn run dev:parseContent
 
-3. parse Content.ggpk (you might need to config PyPoE to find the Content.ggpk):
+# Be sure to set the necessary environment variables for the connection
+$ yarn run db:build
+```
 
-   `yarn run dev:parseContent`
-
-4. Be sure to set the necessary environment variables for the connection:
-
-   `yarn run db:build`
 
 ## enironment variables
 The following variables have to be set as environment variables in order to
@@ -31,19 +31,12 @@ The repository should contain the latest models. If they are out of date
 the package contains scripts to generate new ones. To do so run the following
 commands:
 
-1. install devDependencies:
-
-   `yarn install`
-
-2. see install step 3
-
-3. generate the models
-
-   `yarn run dev:models`
-
-4. see install step 4
+```bash
+$ yarn install
+$ yarn run dev:parseContent
+$ yarn run dev:models
+```
 
 ### models
 The models in src/models/base are auto generated. For specific scopes, 
-getters, setters etc create or update the specific files in the corresponding
-folders.
+getters, setters etc create or update the specific files in the corresponding folders.

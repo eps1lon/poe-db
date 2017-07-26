@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'default_monster_stats',
+      underscored: true,
     },
   );
 

@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'labyrinth_secret_effects',
+      underscored: true,
     },
   );
 

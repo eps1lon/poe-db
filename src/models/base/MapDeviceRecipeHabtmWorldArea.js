@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'map_device_recipe_habtm_world_areas',
+      underscored: true,
     },
   );
 

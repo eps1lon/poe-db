@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'currency_stash_tab_layouts',
+      underscored: true,
     },
   );
 

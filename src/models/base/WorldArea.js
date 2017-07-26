@@ -466,6 +466,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'world_areas',
+      underscored: true,
     },
   );
 

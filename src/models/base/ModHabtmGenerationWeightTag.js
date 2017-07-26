@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'mod_habtm_generation_weight_tags',
+      underscored: true,
     },
   );
 

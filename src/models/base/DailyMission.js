@@ -74,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'daily_missions',
+      underscored: true,
     },
   );
 

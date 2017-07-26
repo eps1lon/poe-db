@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_start_state_habtm_cruel_characterstartqueststates',
+      underscored: true,
     },
   );
 

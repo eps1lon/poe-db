@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'invasion_monsters_per_areas',
+      underscored: true,
     },
   );
 

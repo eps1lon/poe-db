@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'item_experience_per_levels',
+      underscored: true,
     },
   );
 

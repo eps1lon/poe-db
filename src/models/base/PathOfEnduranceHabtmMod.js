@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'path_of_endurance_habtm_mods',
+      underscored: true,
     },
   );
 

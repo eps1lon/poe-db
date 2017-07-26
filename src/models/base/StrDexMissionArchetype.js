@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'str_dex_mission_archetypes',
+      underscored: true,
     },
   );
 

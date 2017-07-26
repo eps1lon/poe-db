@@ -192,6 +192,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'granted_effects_per_levels',
+      underscored: true,
     },
   );
 

@@ -81,6 +81,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'warbands_pack_monsters',
+      underscored: true,
     },
   );
 

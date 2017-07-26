@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'labyrinth_section_layout_habtm_labyrinth_section_layouts',
+      underscored: true,
     },
   );
 

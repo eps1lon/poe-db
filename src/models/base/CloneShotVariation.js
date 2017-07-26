@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'clone_shot_variations',
+      underscored: true,
     },
   );
 

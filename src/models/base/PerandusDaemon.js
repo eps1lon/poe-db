@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'perandus_daemons',
+      underscored: true,
     },
   );
 

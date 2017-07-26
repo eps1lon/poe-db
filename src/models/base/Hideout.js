@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'hideouts',
+      underscored: true,
     },
   );
 

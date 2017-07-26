@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'active_skill_habtm_output_stats',
+      underscored: true,
     },
   );
 

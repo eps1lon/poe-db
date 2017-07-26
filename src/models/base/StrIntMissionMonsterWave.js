@@ -84,6 +84,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'str_int_mission_monster_waves',
+      underscored: true,
     },
   );
 

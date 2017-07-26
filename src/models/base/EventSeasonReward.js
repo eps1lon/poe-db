@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'event_season_rewards',
+      underscored: true,
     },
   );
 

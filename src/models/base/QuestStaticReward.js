@@ -64,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'quest_static_rewards',
+      underscored: true,
     },
   );
 

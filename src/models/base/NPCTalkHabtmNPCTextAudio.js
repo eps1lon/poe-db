@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'n_p_c_talk_habtm_n_p_c_text_audios',
+      underscored: true,
     },
   );
 

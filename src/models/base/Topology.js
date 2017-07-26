@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'topologies',
+      underscored: true,
     },
   );
 

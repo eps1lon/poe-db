@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_start_item_habtm_mods',
+      underscored: true,
     },
   );
 

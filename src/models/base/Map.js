@@ -110,6 +110,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'maps',
+      underscored: true,
     },
   );
 

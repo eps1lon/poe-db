@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'display_minion_monster_types',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'essence_habtm_monster_mods',
+      underscored: true,
     },
   );
 

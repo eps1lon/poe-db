@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'bindable_virtual_keys',
+      underscored: true,
     },
   );
 

@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'talisman_monster_mods',
+      underscored: true,
     },
   );
 

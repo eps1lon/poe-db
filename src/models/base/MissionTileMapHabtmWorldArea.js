@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'mission_tile_map_habtm_world_areas',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'torment_spirit_habtm_touched_mods',
+      underscored: true,
     },
   );
 

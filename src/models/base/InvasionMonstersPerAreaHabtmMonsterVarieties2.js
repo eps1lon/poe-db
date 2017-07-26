@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'invasion_monsters_per_area_habtm_monster_varieties2s',
+      underscored: true,
     },
   );
 

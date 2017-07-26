@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'race_areas',
+      underscored: true,
     },
   );
 

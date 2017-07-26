@@ -103,6 +103,7 @@ class SequelizeModel extends SequelizeBaseModel {
       collate: 'utf8mb4_unicode_ci',
       indexes: this.indices(),
       tableName: SequelizeBaseModel.tableCasing(this.name()),
+      underscored: true,
     };
   }
 

@@ -78,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'monster_map_boss_difficulties',
+      underscored: true,
     },
   );
 

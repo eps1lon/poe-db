@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'buff_definition_habtm_stats',
+      underscored: true,
     },
   );
 

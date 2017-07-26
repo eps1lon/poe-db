@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'world_area_habtm_area_type_tags',
+      underscored: true,
     },
   );
 

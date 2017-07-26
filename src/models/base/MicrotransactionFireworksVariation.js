@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'microtransaction_fireworks_variations',
+      underscored: true,
     },
   );
 

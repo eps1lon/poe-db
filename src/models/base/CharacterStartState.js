@@ -68,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_start_states',
+      underscored: true,
     },
   );
 

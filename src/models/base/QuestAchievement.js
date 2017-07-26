@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'quest_achievements',
+      underscored: true,
     },
   );
 

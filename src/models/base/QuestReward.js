@@ -100,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'quest_rewards',
+      underscored: true,
     },
   );
 

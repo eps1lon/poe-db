@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'mod_habtm_tags',
+      underscored: true,
     },
   );
 

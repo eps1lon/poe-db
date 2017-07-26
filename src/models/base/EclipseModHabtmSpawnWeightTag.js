@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'eclipse_mod_habtm_spawn_weight_tags',
+      underscored: true,
     },
   );
 

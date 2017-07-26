@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_start_state_habtm_passive_skills',
+      underscored: true,
     },
   );
 

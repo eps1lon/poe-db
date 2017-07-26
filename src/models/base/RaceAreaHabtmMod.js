@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'race_area_habtm_mods',
+      underscored: true,
     },
   );
 

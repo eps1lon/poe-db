@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'monster_variety_habtm_weapon2_itemvisualidentities',
+      underscored: true,
     },
   );
 

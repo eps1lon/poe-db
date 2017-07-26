@@ -74,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'talisman_packs',
+      underscored: true,
     },
   );
 

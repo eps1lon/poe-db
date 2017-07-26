@@ -92,6 +92,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_start_items',
+      underscored: true,
     },
   );
 

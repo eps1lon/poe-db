@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'chest_cluster_habtm_chests',
+      underscored: true,
     },
   );
 

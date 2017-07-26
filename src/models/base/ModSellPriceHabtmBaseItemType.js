@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'mod_sell_price_habtm_base_item_types',
+      underscored: true,
     },
   );
 

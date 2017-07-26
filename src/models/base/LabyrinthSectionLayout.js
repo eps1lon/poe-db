@@ -74,6 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'labyrinth_section_layouts',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'str_mission_habtm_mods',
+      underscored: true,
     },
   );
 

@@ -106,6 +106,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'currency_items',
+      underscored: true,
     },
   );
 

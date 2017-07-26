@@ -250,6 +250,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'mods',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'currency_item_habtm_usage_achievementitems',
+      underscored: true,
     },
   );
 

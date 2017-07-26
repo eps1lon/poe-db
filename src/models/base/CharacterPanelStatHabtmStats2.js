@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_panel_stat_habtm_stats2s',
+      underscored: true,
     },
   );
 

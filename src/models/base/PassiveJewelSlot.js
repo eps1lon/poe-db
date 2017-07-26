@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'passive_jewel_slots',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'shop_item_habtm_shop_categories',
+      underscored: true,
     },
   );
 

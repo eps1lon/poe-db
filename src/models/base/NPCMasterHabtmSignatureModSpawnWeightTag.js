@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'n_p_c_master_habtm_signature_mod_spawn_weight_tags',
+      underscored: true,
     },
   );
 

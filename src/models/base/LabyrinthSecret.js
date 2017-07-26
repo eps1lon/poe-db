@@ -102,6 +102,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'labyrinth_secrets',
+      underscored: true,
     },
   );
 

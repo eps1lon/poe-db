@@ -160,6 +160,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'passive_skills',
+      underscored: true,
     },
   );
 

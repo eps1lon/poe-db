@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'str_dex_int_mission_habtm_achievement_items',
+      underscored: true,
     },
   );
 

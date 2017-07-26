@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'active_skill_target_types',
+      underscored: true,
     },
   );
 

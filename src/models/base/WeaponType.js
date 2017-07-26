@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'weapon_types',
+      underscored: true,
     },
   );
 

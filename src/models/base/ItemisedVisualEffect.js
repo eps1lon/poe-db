@@ -78,6 +78,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'itemised_visual_effects',
+      underscored: true,
     },
   );
 

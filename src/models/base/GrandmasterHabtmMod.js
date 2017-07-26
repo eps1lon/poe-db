@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'grandmaster_habtm_mods',
+      underscored: true,
     },
   );
 

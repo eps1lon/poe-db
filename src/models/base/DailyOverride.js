@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'daily_overrides',
+      underscored: true,
     },
   );
 

@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'x_p_per_level_for_missions',
+      underscored: true,
     },
   );
 

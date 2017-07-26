@@ -66,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'essence_stash_tab_layouts',
+      underscored: true,
     },
   );
 

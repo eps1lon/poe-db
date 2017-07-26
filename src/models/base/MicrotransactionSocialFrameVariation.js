@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'microtransaction_social_frame_variations',
+      underscored: true,
     },
   );
 

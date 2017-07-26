@@ -51,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'str_mission_map_mod_numbers',
+      underscored: true,
     },
   );
 

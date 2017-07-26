@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'unique_chest_habtm_mods',
+      underscored: true,
     },
   );
 

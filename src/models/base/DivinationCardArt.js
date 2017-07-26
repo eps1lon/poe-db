@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'divination_card_arts',
+      underscored: true,
     },
   );
 

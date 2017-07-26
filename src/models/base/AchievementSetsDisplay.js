@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'achievement_sets_displays',
+      underscored: true,
     },
   );
 

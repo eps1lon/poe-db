@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'skill_gem_habtm_gem_tags',
+      underscored: true,
     },
   );
 

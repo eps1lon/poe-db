@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'essence_types',
+      underscored: true,
     },
   );
 

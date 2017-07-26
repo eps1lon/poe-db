@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'map_pin_habtm_world_areas',
+      underscored: true,
     },
   );
 

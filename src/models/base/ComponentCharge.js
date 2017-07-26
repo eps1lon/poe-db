@@ -37,6 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'component_charges',
+      underscored: true,
     },
   );
 

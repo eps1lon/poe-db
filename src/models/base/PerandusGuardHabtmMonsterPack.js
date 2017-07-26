@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'perandus_guard_habtm_monster_packs',
+      underscored: true,
     },
   );
 

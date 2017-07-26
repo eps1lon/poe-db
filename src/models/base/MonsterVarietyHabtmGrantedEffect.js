@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'monster_variety_habtm_granted_effects',
+      underscored: true,
     },
   );
 

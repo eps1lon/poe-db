@@ -75,6 +75,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'daresso_pit_fights',
+      underscored: true,
     },
   );
 

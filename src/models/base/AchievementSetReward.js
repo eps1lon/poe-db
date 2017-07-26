@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'achievement_set_rewards',
+      underscored: true,
     },
   );
 

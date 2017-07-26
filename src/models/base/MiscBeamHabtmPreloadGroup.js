@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'misc_beam_habtm_preload_groups',
+      underscored: true,
     },
   );
 

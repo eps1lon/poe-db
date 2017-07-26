@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'map_inhabitants',
+      underscored: true,
     },
   );
 

@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'microtransaction_character_portrait_variations',
+      underscored: true,
     },
   );
 

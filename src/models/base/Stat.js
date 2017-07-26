@@ -104,6 +104,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'stats',
+      underscored: true,
     },
   );
 

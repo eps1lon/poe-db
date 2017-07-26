@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'dex_mission_monster_habtm_monster_varieties',
+      underscored: true,
     },
   );
 

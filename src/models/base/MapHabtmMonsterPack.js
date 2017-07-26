@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'map_habtm_monster_packs',
+      underscored: true,
     },
   );
 

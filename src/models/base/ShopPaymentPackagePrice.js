@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'shop_payment_package_prices',
+      underscored: true,
     },
   );
 

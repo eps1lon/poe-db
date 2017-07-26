@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'granted_effects_per_level_habtm_quality_stats',
+      underscored: true,
     },
   );
 

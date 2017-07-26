@@ -152,6 +152,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'int_missions',
+      underscored: true,
     },
   );
 

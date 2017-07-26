@@ -134,6 +134,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'base_item_types',
+      underscored: true,
     },
   );
 

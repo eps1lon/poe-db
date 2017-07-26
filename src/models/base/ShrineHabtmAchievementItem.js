@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'shrine_habtm_achievement_items',
+      underscored: true,
     },
   );
 

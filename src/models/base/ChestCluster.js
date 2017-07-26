@@ -45,6 +45,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'chest_clusters',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'map_habtm_higher_tier_maps_baseitemtypes',
+      underscored: true,
     },
   );
 

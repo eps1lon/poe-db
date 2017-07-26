@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_panel_stats',
+      underscored: true,
     },
   );
 

@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'weapon_damage_scalings',
+      underscored: true,
     },
   );
 

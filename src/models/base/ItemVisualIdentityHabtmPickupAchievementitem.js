@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'item_visual_identity_habtm_pickup_achievementitems',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_audio_event_habtm_ranger_charactertextaudios',
+      underscored: true,
     },
   );
 

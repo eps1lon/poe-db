@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'extra_terrain_feature_families',
+      underscored: true,
     },
   );
 

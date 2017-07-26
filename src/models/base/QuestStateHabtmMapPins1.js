@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'quest_state_habtm_map_pins1s',
+      underscored: true,
     },
   );
 

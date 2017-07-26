@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'daily_mission_habtm_characters',
+      underscored: true,
     },
   );
 

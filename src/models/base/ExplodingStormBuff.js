@@ -144,6 +144,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'exploding_storm_buffs',
+      underscored: true,
     },
   );
 

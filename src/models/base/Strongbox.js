@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'strongboxes',
+      underscored: true,
     },
   );
 

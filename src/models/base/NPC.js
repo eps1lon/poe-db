@@ -90,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'n_p_cs',
+      underscored: true,
     },
   );
 

@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'crafting_bench_custom_actions',
+      underscored: true,
     },
   );
 

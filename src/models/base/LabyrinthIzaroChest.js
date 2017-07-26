@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'labyrinth_izaro_chests',
+      underscored: true,
     },
   );
 

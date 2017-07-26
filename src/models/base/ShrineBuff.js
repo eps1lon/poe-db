@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'shrine_buffs',
+      underscored: true,
     },
   );
 

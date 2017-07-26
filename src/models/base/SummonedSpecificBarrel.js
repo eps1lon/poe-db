@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'summoned_specific_barrels',
+      underscored: true,
     },
   );
 

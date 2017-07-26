@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'bloodline_habtm_mods',
+      underscored: true,
     },
   );
 

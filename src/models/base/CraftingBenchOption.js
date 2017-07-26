@@ -98,6 +98,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'crafting_bench_options',
+      underscored: true,
     },
   );
 

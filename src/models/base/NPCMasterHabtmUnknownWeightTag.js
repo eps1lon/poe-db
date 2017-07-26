@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'n_p_c_master_habtm_unknown_weight_tags',
+      underscored: true,
     },
   );
 

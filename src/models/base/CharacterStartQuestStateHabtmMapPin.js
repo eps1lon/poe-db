@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_start_quest_state_habtm_map_pins',
+      underscored: true,
     },
   );
 

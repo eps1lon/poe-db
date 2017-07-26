@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'monster_variety_habtm_count_kills_achievementitems',
+      underscored: true,
     },
   );
 

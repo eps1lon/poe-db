@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'n_p_c_master_experience_per_levels',
+      underscored: true,
     },
   );
 

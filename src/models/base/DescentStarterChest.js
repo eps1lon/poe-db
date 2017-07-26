@@ -52,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'descent_starter_chests',
+      underscored: true,
     },
   );
 

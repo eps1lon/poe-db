@@ -43,6 +43,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'component_attribute_requirements',
+      underscored: true,
     },
   );
 

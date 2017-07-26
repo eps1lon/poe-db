@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'eclipse_mods',
+      underscored: true,
     },
   );
 

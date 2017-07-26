@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'active_skill_habtm_weapon_restriction_itemclasses',
+      underscored: true,
     },
   );
 

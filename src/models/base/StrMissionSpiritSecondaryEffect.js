@@ -72,6 +72,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'str_mission_spirit_secondary_effects',
+      underscored: true,
     },
   );
 

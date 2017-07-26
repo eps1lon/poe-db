@@ -96,6 +96,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'prophecies',
+      underscored: true,
     },
   );
 

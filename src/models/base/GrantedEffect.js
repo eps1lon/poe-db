@@ -114,6 +114,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'granted_effects',
+      underscored: true,
     },
   );
 

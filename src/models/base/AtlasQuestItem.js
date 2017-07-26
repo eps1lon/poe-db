@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'atlas_quest_items',
+      underscored: true,
     },
   );
 

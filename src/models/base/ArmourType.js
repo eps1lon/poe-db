@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'armour_types',
+      underscored: true,
     },
   );
 

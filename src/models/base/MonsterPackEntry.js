@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'monster_pack_entries',
+      underscored: true,
     },
   );
 

@@ -82,6 +82,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'atlas_nodes',
+      underscored: true,
     },
   );
 

@@ -100,6 +100,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'map_pins',
+      underscored: true,
     },
   );
 

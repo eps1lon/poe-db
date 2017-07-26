@@ -84,6 +84,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'achievements',
+      underscored: true,
     },
   );
 

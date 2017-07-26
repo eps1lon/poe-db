@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'passive_skill_habtm_reminder_clientstrings',
+      underscored: true,
     },
   );
 

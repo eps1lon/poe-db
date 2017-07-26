@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'shop_countries',
+      underscored: true,
     },
   );
 

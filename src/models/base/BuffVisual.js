@@ -68,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'buff_visuals',
+      underscored: true,
     },
   );
 

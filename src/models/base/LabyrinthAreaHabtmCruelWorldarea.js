@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'labyrinth_area_habtm_cruel_worldareas',
+      underscored: true,
     },
   );
 

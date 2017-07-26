@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'skill_totem_variations',
+      underscored: true,
     },
   );
 

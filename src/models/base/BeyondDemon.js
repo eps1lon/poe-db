@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'beyond_demons',
+      underscored: true,
     },
   );
 

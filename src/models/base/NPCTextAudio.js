@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'n_p_c_text_audios',
+      underscored: true,
     },
   );
 

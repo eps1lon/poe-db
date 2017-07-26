@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'bloodline_habtm_spawn_weight_tags',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'buff_visual_habtm_preload_groups',
+      underscored: true,
     },
   );
 

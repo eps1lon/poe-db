@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'character_audio_event_habtm_witch_charactertextaudios',
+      underscored: true,
     },
   );
 

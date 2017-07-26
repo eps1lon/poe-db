@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'crafting_bench_option_habtm_cost_baseitemtypes',
+      underscored: true,
     },
   );
 

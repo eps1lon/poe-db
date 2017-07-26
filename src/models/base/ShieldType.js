@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'shield_types',
+      underscored: true,
     },
   );
 

@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'warbands_map_graphs',
+      underscored: true,
     },
   );
 

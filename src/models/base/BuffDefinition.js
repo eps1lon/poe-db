@@ -172,6 +172,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'buff_definitions',
+      underscored: true,
     },
   );
 

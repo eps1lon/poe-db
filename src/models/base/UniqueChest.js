@@ -86,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'unique_chests',
+      underscored: true,
     },
   );
 

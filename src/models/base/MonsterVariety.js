@@ -360,6 +360,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'monster_varieties',
+      underscored: true,
     },
   );
 

@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'str_map_mods',
+      underscored: true,
     },
   );
 

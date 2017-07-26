@@ -164,6 +164,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'chests',
+      underscored: true,
     },
   );
 

@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       ],
       tableName:
         'monster_variety_habtm_kill_rare_in_merciless_achievementitems',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'descent_reward_chest_habtm_base_item_types5s',
+      underscored: true,
     },
   );
 

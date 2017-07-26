@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'gem_tags',
+      underscored: true,
     },
   );
 

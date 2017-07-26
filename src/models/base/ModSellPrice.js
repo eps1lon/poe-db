@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'mod_sell_prices',
+      underscored: true,
     },
   );
 

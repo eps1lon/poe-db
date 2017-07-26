@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'monster_additional_monster_drops',
+      underscored: true,
     },
   );
 

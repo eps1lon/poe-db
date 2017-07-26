@@ -137,6 +137,7 @@ class SequelizeThroughModel extends SequelizeBaseModel {
       collate: 'utf8mb4_unicode_ci',
       indexes: this.indices(),
       tableName: tableize(this.name()),
+      underscored: true,
     };
   }
 

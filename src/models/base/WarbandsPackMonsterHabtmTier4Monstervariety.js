@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'warbands_pack_monster_habtm_tier4_monstervarieties',
+      underscored: true,
     },
   );
 

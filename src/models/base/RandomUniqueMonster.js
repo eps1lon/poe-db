@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
       tableName: 'random_unique_monsters',
+      underscored: true,
     },
   );
 

@@ -56,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'torment_spirits',
+      underscored: true,
     },
   );
 

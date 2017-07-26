@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'endless_ledge_chest_habtm_base_item_types',
+      underscored: true,
     },
   );
 

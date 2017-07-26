@@ -182,6 +182,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'item_visual_identities',
+      underscored: true,
     },
   );
 

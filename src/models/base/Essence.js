@@ -476,6 +476,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'essences',
+      underscored: true,
     },
   );
 

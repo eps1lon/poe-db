@@ -62,6 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'map_connections',
+      underscored: true,
     },
   );
 

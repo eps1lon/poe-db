@@ -86,6 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'bloodlines',
+      underscored: true,
     },
   );
 

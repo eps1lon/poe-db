@@ -64,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'skill_gems',
+      underscored: true,
     },
   );
 

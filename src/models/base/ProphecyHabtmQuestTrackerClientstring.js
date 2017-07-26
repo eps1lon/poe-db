@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'prophecy_habtm_quest_tracker_clientstrings',
+      underscored: true,
     },
   );
 

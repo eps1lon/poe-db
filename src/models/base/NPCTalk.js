@@ -176,6 +176,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'n_p_c_talks',
+      underscored: true,
     },
   );
 

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'base_item_type_habtm_vendor_recipe_achievementitems',
+      underscored: true,
     },
   );
 

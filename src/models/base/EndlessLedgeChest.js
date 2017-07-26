@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'endless_ledge_chests',
+      underscored: true,
     },
   );
 

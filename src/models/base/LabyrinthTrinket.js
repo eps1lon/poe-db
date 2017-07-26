@@ -46,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'labyrinth_trinkets',
+      underscored: true,
     },
   );
 

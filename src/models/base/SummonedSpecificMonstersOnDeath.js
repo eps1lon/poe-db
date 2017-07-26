@@ -54,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       ],
       tableName: 'summoned_specific_monsters_on_deaths',
+      underscored: true,
     },
   );
 

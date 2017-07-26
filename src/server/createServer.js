@@ -14,7 +14,6 @@ const createServer = () => {
   const server = restify.createServer({
     name: 'mypoedb',
     version: '1.0.0',
-    handleUncaughtExceptions: true,
   });
 
   server.use(restify.plugins.acceptParser(server.acceptable));

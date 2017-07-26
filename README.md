@@ -16,6 +16,16 @@ python 3.4 for PyPoe
 
    `yarn run db:build`
 
+## enironment variables
+The following variables have to be set as environment variables in order to
+authenticate to the database:
+- `POEDB_HOST`
+- `POEDB_USER` needs the following privileges
+  - drop/create host wide for `db:create`, `db:drop`
+  - all read/write privileges for the specified db
+- `POEDB_PW`
+- `POEDB_DB`
+
 ## dev environment
 The repository should contain the latest models. If they are out of date
 the package contains scripts to generate new ones. To do so run the following

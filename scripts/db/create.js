@@ -1,11 +1,11 @@
-const { orm_creator, connection, name } = require('../../src/db');
+const { createOrm, connection, name } = require('../../src/db');
 
 const db = connection({ database: undefined });
 
 db.connect();
 
 db.query('CREATE DATABASE IF NOT EXISTS ??', [name], async () => {
-  const orm = orm_creator();
+  const orm = createOrm();
 
   try {
     await orm.authenticate();

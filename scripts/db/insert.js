@@ -1,6 +1,6 @@
 const _ = require('lodash');
 
-const { orm_creator } = require('../../src/db');
+const { createOrm } = require('../../src/db');
 const { buildAssocKeys, buildAttrObj } = require('../../src/model/util');
 
 // maximum tally of records inserted in one packet
@@ -24,7 +24,7 @@ const affectedRowsInChunks = async chunks => {
 const all_records = require('../../data/records.json');
 
 (async () => {
-  const orm = orm_creator({ logging: false });
+  const orm = createOrm({ logging: false });
   const models = require('../../src/models')({ normalization: 3 }).init(orm);
 
   const start_time = Date.now();

@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 
 const { POEDB_HOST, POEDB_USER, POEDB_PW, POEDB_DB } = process.env;
 
-const orm = options =>
+const createOrm = options =>
   new Sequelize(
     POEDB_DB,
     POEDB_USER,
@@ -32,6 +32,6 @@ const db = options =>
 
 module.exports = {
   connection: db,
-  orm_creator: orm,
+  createOrm,
   name: POEDB_DB,
 };

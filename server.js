@@ -1,12 +1,16 @@
 const createServer = require('./src/server/createServer');
 const useErrorHandlers = require('./src/server/useErrorHandlers');
 const { mountRoutes } = require('./src/server/routes');
-const orm = require('./src/db').orm_creator();
+const { createOrm } = require('./src/db');
 
 const port = process.env.PORT || 3000;
 
+const orm = createOrm({
+  logging: false,
+});
+
 const orm_ready = orm
-  .authenticate({ logging: false })
+  .authenticate()
   .then(() => {
     console.log('db connection authenticated');
   })

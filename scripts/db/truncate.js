@@ -1,7 +1,7 @@
-const { orm_creator } = require('../../src/db');
+const { createOrm } = require('../../src/db');
 
 (async () => {
-  const orm = orm_creator();
+  const orm = createOrm();
 
   try {
     await orm.authenticate();

@@ -39,14 +39,12 @@ const findAll = (where = {}) => ({
   });
 };
 
-const findOne = id => ({ model, attributes, offset, limit }) => {
+const findOne = id => ({ model, attributes }) => {
   return (
     model
       .findById(id, {
         attributes,
         include: prepareAssociationsForInclude(model),
-        offset,
-        limit,
       })
       // imitate the returnval of findAndCountAll
       .then(result => Promise.resolve({ count: 1, rows: result }))

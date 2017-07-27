@@ -23,7 +23,12 @@ const createServer = () => {
   server.use(restify.plugins.acceptParser(server.acceptable));
   server.use(restify.plugins.queryParser());
   server.use(restify.plugins.bodyParser());
-  server.use(restify.plugins.throttle({ burst: 10, rate: 1, ip: true }));
+
+  if (process.env.NODE_ENV === 'production') {
+    require('./enhanceServer.prod')(server);
+  } else {
+    require('./enhanceServer.dev')(server);
+  }
 
   // enable cors, see https://github.com/restify/node-restify/issues/296
   server.use(cors());

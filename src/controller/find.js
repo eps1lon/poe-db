@@ -1,4 +1,5 @@
 const { singularize } = require('inflection');
+const _ = require('lodash');
 const { NotFoundError, InternalServerError } = require('restify-errors');
 
 const {
@@ -9,7 +10,7 @@ const {
 
 const include_types = ['BelongsTo'];
 if (process.env.NODE_ENV !== 'production') {
-  include_types.push('BelongsToMany');
+  //include_types.push('BelongsToMany');
 }
 
 const intOrUndefined = val => {
@@ -67,6 +68,19 @@ const findOne = id => ({ model, attributes }) => {
   );
 };
 
+const cachedToHasMany = model => row => {
+  const values = row.toJSON();
+  // TODO this is not always row!
+  const caches = findAssociations(model, 'BelongsToMany').map(assoc => {
+    const cache_attr = `_${assoc}_cache`;
+    values[assoc] = row[cache_attr].split(',').map(row => ({ row: +row }));
+
+    return cache_attr;
+  });
+
+  return _.omit(values, caches);
+};
+
 module.exports = models => async (req, res, next) => {
   const { params: { model_name, id } } = req;
   const singular = singularize(model_name);
@@ -100,14 +114,25 @@ module.exports = models => async (req, res, next) => {
 
     find(normalized_arguments)
       .then(({ rows, count }) => {
-        res.json({
+        const response = {
           pages: Math.ceil(count / normalized_arguments.limit),
           result: rows,
-        });
+        };
+
+        if (!include_types.includes('BelongsToMany')) {
+          if (Array.isArray(response.result)) {
+            response.result = response.result.map(cachedToHasMany(model));
+          } else {
+            response.result = cachedToHasMany(model)(response.result);
+          }
+        }
+
+        res.json(response);
 
         next();
       })
-      .catch(() => {
+      .catch(e => {
+        console.log(e);
         next(new InternalServerError('sam went into the forbidden library'));
       });
   }

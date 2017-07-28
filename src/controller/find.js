@@ -1,7 +1,16 @@
 const { singularize } = require('inflection');
 const { NotFoundError, InternalServerError } = require('restify-errors');
 
-const { prepareAssociationsForInclude, safeOrder } = require('../model/util');
+const {
+  prepareAssociationsForInclude,
+  findAssociations,
+  safeOrder,
+} = require('../model/util');
+
+const include_types = ['BelongsTo'];
+if (process.env.NODE_ENV !== 'production') {
+  include_types.push('BelongsToMany');
+}
 
 const intOrUndefined = val => {
   const number = parseInt(val, 10);
@@ -22,6 +31,13 @@ const intOrDefault = (val, otherwise) => {
   }
 };
 
+const includes = model => {
+  return prepareAssociationsForInclude(
+    model,
+    findAssociations(model, ...include_types),
+  );
+};
+
 const findAll = (where = {}) => ({
   model,
   attributes,
@@ -32,7 +48,7 @@ const findAll = (where = {}) => ({
   return model.findAndCountAll({
     attributes,
     where,
-    include: prepareAssociationsForInclude(model),
+    include: includes(model),
     offset,
     limit,
     order: safeOrder(order),
@@ -44,7 +60,7 @@ const findOne = id => ({ model, attributes }) => {
     model
       .findById(id, {
         attributes,
-        include: prepareAssociationsForInclude(model),
+        include: includes(model),
       })
       // imitate the returnval of findAndCountAll
       .then(result => Promise.resolve({ count: 1, rows: result }))

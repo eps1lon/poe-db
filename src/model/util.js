@@ -3,8 +3,8 @@ const S = require('string');
 
 const underscore = name => S(name).underscore().s;
 
-const prepareAssociationsForInclude = model => {
-  return nonCircularAssociations(model).map(name => {
+const prepareAssociationsForInclude = (model, associations) => {
+  return associations.map(name => {
     const association = model.associations[name];
     const include = {
       model: association.target,

@@ -91,6 +91,9 @@ const assocDescription = (model, type) => {
   );
 };
 
+// see SequelizeModel#belongsToManyCaches
+const isJoinCache = name => /^_.*?_cache$/.test(name);
+
 const describe = (models, model_name) => {
   if (model_name === undefined || models[model_name] === undefined) {
     return undefined;
@@ -106,12 +109,12 @@ const describe = (models, model_name) => {
 
     // and remove foreignkeys
     const foreign_keys = foreignKeys(model);
-    const attributes_without_foreign_keys = _.omitBy(
+    const attributes_without_foreign_keys_and_caches = _.omitBy(
       attributes,
-      (attribute, name) => foreign_keys.includes(name),
+      (attribute, name) => foreign_keys.includes(name) || isJoinCache(name),
     );
 
-    description.attributes = attributes_without_foreign_keys;
+    description.attributes = attributes_without_foreign_keys_and_caches;
 
     // assoc
     description.belongsTo = assocDescription(model, 'BelongsTo');

@@ -119,7 +119,6 @@ module.exports = (sequelize, DataTypes) => {
       _monster_mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 26,
       },
     },

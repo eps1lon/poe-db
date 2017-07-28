@@ -83,13 +83,11 @@ module.exports = (sequelize, DataTypes) => {
       _map_pins1_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 7,
       },
       _map_pins2_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 10,
       },
     },

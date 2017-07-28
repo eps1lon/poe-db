@@ -29,13 +29,11 @@ module.exports = (sequelize, DataTypes) => {
       _base_item_types_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 1,
       },
       _world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 2,
       },
     },

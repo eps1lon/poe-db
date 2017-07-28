@@ -77,13 +77,11 @@ module.exports = (sequelize, DataTypes) => {
       _relic_mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 13,
       },
       _achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 14,
       },
     },

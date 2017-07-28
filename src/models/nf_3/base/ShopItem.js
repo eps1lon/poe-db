@@ -89,13 +89,11 @@ module.exports = (sequelize, DataTypes) => {
       _package_shop_item_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 3,
       },
       _shop_category_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 5,
       },
     },

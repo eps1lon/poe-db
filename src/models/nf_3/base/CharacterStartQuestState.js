@@ -35,13 +35,11 @@ module.exports = (sequelize, DataTypes) => {
       _quest_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 1,
       },
       _map_pins_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 4,
       },
     },

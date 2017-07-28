@@ -71,7 +71,6 @@ module.exports = (sequelize, DataTypes) => {
       _unique_monster_varieties_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 8,
       },
     },

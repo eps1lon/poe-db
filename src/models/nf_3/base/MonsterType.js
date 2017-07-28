@@ -53,7 +53,6 @@ module.exports = (sequelize, DataTypes) => {
       _tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 7,
       },
     },

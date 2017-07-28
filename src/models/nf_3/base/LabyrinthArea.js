@@ -17,25 +17,21 @@ module.exports = (sequelize, DataTypes) => {
       _normal_world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 1,
       },
       _cruel_world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 2,
       },
       _merciless_world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 3,
       },
       _endgame_world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 4,
       },
     },

@@ -83,7 +83,6 @@ module.exports = (sequelize, DataTypes) => {
       _quest_tracker_client_strings_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 5,
       },
     },

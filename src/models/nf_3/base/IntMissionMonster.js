@@ -35,13 +35,11 @@ module.exports = (sequelize, DataTypes) => {
       _objective_monster_varieties_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 4,
       },
       _achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 5,
       },
     },

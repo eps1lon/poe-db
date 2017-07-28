@@ -59,19 +59,16 @@ module.exports = (sequelize, DataTypes) => {
       _allies_monster_varieties_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 9,
       },
       _mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 10,
       },
       _traps_monster_varieties_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 12,
       },
     },

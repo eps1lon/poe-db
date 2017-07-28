@@ -131,19 +131,16 @@ module.exports = (sequelize, DataTypes) => {
       _stats_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 2,
       },
       _characters_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 9,
       },
       _reminder_client_strings_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 22,
       },
     },

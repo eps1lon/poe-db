@@ -47,13 +47,11 @@ module.exports = (sequelize, DataTypes) => {
       _monster_varieties1_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 4,
       },
       _monster_varieties2_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 5,
       },
     },

@@ -106,7 +106,6 @@ class SequelizeModel extends SequelizeBaseModel {
         {
           type: 'TEXT',
           allowNull: false,
-          defaultValue: '',
           $col_order,
         },
       ];

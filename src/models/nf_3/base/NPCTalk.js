@@ -155,7 +155,6 @@ module.exports = (sequelize, DataTypes) => {
       _npc_text_audio_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 12,
       },
     },

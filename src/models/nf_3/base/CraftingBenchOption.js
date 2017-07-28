@@ -77,13 +77,11 @@ module.exports = (sequelize, DataTypes) => {
       _cost_base_item_types_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 3,
       },
       _item_classes_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 8,
       },
     },

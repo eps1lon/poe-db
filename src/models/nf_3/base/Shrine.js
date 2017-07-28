@@ -89,7 +89,6 @@ module.exports = (sequelize, DataTypes) => {
       _achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 15,
       },
     },

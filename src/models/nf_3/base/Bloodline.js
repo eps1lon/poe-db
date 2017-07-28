@@ -65,19 +65,16 @@ module.exports = (sequelize, DataTypes) => {
       _mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 1,
       },
       _spawn_weight_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 4,
       },
       _item_weight_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 9,
       },
     },

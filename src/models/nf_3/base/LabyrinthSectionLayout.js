@@ -29,7 +29,6 @@ module.exports = (sequelize, DataTypes) => {
       _labyrinth_section_layout_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 2,
       },
     },

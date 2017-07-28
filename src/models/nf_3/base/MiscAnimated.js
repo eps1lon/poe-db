@@ -29,7 +29,6 @@ module.exports = (sequelize, DataTypes) => {
       _preload_groups_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 2,
       },
     },

@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
       _mod_sell_prices_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 1,
       },
     },

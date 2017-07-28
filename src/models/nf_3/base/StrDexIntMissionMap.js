@@ -29,7 +29,6 @@ module.exports = (sequelize, DataTypes) => {
       _map_boss_monster_varieties_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 4,
       },
     },

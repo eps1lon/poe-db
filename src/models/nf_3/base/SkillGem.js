@@ -35,7 +35,6 @@ module.exports = (sequelize, DataTypes) => {
       _gem_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 5,
       },
     },

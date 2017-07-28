@@ -23,7 +23,6 @@ module.exports = (sequelize, DataTypes) => {
       _mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: '',
         $col_order: 2,
       },
     },

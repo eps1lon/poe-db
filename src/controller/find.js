@@ -8,11 +8,6 @@ const {
   safeOrder,
 } = require('../model/util');
 
-const include_types = ['BelongsTo'];
-if (process.env.NODE_ENV !== 'production') {
-  //include_types.push('BelongsToMany');
-}
-
 const intOrUndefined = val => {
   const number = parseInt(val, 10);
 
@@ -32,10 +27,10 @@ const intOrDefault = (val, otherwise) => {
   }
 };
 
-const includes = model => {
+const includes = (model, ...types) => {
   return prepareAssociationsForInclude(
     model,
-    findAssociations(model, ...include_types),
+    findAssociations(model, ...types),
   );
 };
 
@@ -49,7 +44,7 @@ const findAll = (where = {}) => ({
   return model.findAndCountAll({
     attributes,
     where,
-    include: includes(model),
+    include: includes(model, 'BelongsTo'),
     offset,
     limit,
     order: safeOrder(order),
@@ -61,7 +56,7 @@ const findOne = id => ({ model, attributes }) => {
     model
       .findById(id, {
         attributes,
-        include: includes(model),
+        include: includes(model, 'BelongsTo', 'BelongsToMany'),
       })
       // imitate the returnval of findAndCountAll
       .then(result => Promise.resolve({ count: 1, rows: result }))
@@ -119,12 +114,8 @@ module.exports = models => async (req, res, next) => {
           result: rows,
         };
 
-        if (!include_types.includes('BelongsToMany')) {
-          if (Array.isArray(response.result)) {
-            response.result = response.result.map(cachedToHasMany(model));
-          } else {
-            response.result = cachedToHasMany(model)(response.result);
-          }
+        if (Array.isArray(response.result)) {
+          response.result = response.result.map(cachedToHasMany(model));
         }
 
         res.json(response);

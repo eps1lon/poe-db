@@ -68,6 +68,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 13,
       },
+      _socketed_skill_gems_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 4,
+      },
+      _mods_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 5,
+      },
     },
     {
       engine: 'MyISAM',

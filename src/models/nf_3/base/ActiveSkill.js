@@ -98,6 +98,24 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 17,
       },
+      _weapon_restriction_item_classes_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 7,
+      },
+      _input_stat_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 15,
+      },
+      _output_stat_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 16,
+      },
     },
     {
       engine: 'MyISAM',

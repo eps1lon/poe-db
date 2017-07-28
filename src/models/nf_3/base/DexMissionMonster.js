@@ -32,6 +32,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 4,
       },
+      _monster_packs_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 1,
+      },
+      _monster_varieties_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 5,
+      },
     },
     {
       engine: 'MyISAM',

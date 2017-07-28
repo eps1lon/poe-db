@@ -74,6 +74,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 15,
       },
+      _cost_base_item_types_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 3,
+      },
+      _item_classes_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 8,
+      },
     },
     {
       engine: 'MyISAM',

@@ -44,6 +44,30 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 11,
       },
+      _passive_skills_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 4,
+      },
+      _normal_character_start_quest_state_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 8,
+      },
+      _cruel_character_start_quest_state_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 9,
+      },
+      _merciless_character_start_quest_state_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 10,
+      },
     },
     {
       engine: 'MyISAM',

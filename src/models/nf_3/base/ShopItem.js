@@ -86,6 +86,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 15,
       },
+      _package_shop_item_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 3,
+      },
+      _shop_category_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 5,
+      },
     },
     {
       engine: 'MyISAM',

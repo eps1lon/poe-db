@@ -50,6 +50,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 10,
       },
+      _atlas_node_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 6,
+      },
     },
     {
       engine: 'MyISAM',

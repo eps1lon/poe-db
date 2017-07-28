@@ -152,6 +152,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 26,
       },
+      _npc_text_audio_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 12,
+      },
     },
     {
       engine: 'MyISAM',

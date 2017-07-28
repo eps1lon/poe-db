@@ -62,6 +62,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 9,
       },
+      _relic_mods_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 3,
+      },
     },
     {
       engine: 'MyISAM',

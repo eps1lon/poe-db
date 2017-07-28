@@ -32,6 +32,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 4,
       },
+      _preload_groups_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 2,
+      },
     },
     {
       engine: 'MyISAM',

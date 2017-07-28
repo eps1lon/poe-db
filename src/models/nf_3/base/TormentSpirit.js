@@ -32,6 +32,36 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 8,
       },
+      _spirit_mods_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 1,
+      },
+      _touched_mods_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 2,
+      },
+      _possessed_mods_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 3,
+      },
+      _mods0_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 9,
+      },
+      _mods1_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 10,
+      },
     },
     {
       engine: 'MyISAM',

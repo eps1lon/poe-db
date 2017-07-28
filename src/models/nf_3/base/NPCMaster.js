@@ -56,6 +56,24 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 14,
       },
+      _signature_mod_spawn_weight_tags_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 10,
+      },
+      _unknown_weight_tags_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 12,
+      },
+      _master_level5_achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 16,
+      },
     },
     {
       engine: 'MyISAM',

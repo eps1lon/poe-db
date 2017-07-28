@@ -38,6 +38,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 11,
       },
+      _monster_packs_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 4,
+      },
+      _higher_tier_maps_base_item_types_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 8,
+      },
     },
     {
       engine: 'MyISAM',

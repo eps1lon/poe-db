@@ -26,6 +26,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 7,
       },
+      _labyrinth_section_layout_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 2,
+      },
     },
     {
       engine: 'MyISAM',

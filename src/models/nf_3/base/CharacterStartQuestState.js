@@ -32,6 +32,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 5,
       },
+      _quest_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 1,
+      },
+      _map_pins_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 4,
+      },
     },
     {
       engine: 'MyISAM',

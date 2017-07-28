@@ -116,6 +116,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 62,
       },
+      _monster_mods_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 26,
+      },
     },
     {
       engine: 'MyISAM',

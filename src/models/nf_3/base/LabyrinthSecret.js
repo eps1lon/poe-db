@@ -86,6 +86,30 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 16,
       },
+      _labyrinth_secret_effects0_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 5,
+      },
+      _labyrinth_secret_effects1_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 6,
+      },
+      _labyrinth_secret_effects2_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 7,
+      },
+      _labyrinth_secret_effects3_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 9,
+      },
     },
     {
       engine: 'MyISAM',

@@ -32,6 +32,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 6,
       },
+      _spawn_weight_tags_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 1,
+      },
     },
     {
       engine: 'MyISAM',

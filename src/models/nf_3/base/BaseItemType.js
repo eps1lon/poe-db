@@ -86,6 +86,48 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 28,
       },
+      _implicit_mods_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 8,
+      },
+      _normal_purchase_base_item_types_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 11,
+      },
+      _magic_purchase_base_item_types_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 13,
+      },
+      _tags_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 15,
+      },
+      _vendor_recipe_achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 20,
+      },
+      _rare_purchase_base_item_types_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 21,
+      },
+      _unique_purchase_base_item_types_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 23,
+      },
     },
     {
       engine: 'MyISAM',

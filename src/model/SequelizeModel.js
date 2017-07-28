@@ -10,12 +10,13 @@ const PRIMARY = SequelizeBaseModel.PRIMARY;
 
 class SequelizeModel extends SequelizeBaseModel {
   attributes() {
-    return entriesToObj(
-      this.cols().map(col => [
+    return entriesToObj([
+      ...this.cols().map(col => [
         SequelizeBaseModel.colCasing(col),
         this._colProps(col),
       ]),
-    );
+      ...this.belongsToManyCaches(),
+    ]);
   }
 
   ast() {
@@ -96,6 +97,20 @@ class SequelizeModel extends SequelizeBaseModel {
           field_index: this.fields[field].rowid,
         };
       });
+  }
+
+  belongsToManyCaches() {
+    return this.belongsToMany().map(([, { as, $col_order }]) => {
+      return [
+        `_${as}_cache`,
+        {
+          type: 'TEXT',
+          allowNull: false,
+          defaultValue: '',
+          $col_order,
+        },
+      ];
+    });
   }
 
   options() {

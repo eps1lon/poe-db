@@ -44,6 +44,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 7,
       },
+      _sold_item_tags_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: '',
+        $col_order: 2,
+      },
     },
     {
       engine: 'MyISAM',

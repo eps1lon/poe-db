@@ -1,6 +1,6 @@
 {
   "name": "poedb-node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "relational db backend for PoE's content.ggpk",
   "main": "index.js",
   "repository": {
@@ -31,10 +31,7 @@
     "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"

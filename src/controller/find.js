@@ -3,6 +3,7 @@ const _ = require('lodash');
 const { NotFoundError, InternalServerError } = require('restify-errors');
 
 const {
+  describe,
   prepareAssociationsForInclude,
   findAssociations,
   safeOrder,
@@ -85,7 +86,16 @@ module.exports = models => async (req, res, next) => {
   } else {
     const model = models[singular];
 
-    const { attributes, where, page, page_size, order } = req.query;
+    const {
+      attributes,
+      where,
+      page,
+      page_size,
+      order,
+      withDescription,
+    } = req.query;
+
+    console.log(req.query);
 
     let find;
     // /Model/:id
@@ -116,6 +126,10 @@ module.exports = models => async (req, res, next) => {
 
         if (Array.isArray(response.result)) {
           response.result = response.result.map(cachedToHasMany(model));
+        }
+
+        if (withDescription !== undefined) {
+          response.description = describe(models, singular);
         }
 
         res.json(response);

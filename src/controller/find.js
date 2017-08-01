@@ -3,7 +3,7 @@ const _ = require('lodash');
 const { NotFoundError, InternalServerError } = require('restify-errors');
 
 const {
-  describe,
+  describeByName,
   prepareAssociationsForInclude,
   findAssociations,
   safeOrder,
@@ -129,7 +129,7 @@ module.exports = models => async (req, res, next) => {
         }
 
         if (withDescription !== undefined) {
-          response.description = describe(models, singular);
+          response.description = describeByName(models, singular);
         }
 
         res.json(response);

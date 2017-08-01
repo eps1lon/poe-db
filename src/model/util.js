@@ -94,35 +94,37 @@ const assocDescription = (model, type) => {
 // see SequelizeModel#belongsToManyCaches
 const isJoinCache = name => /^_.*?_cache$/.test(name);
 
-const describe = (models, model_name) => {
+const describeByName = (models, model_name) => {
   if (model_name === undefined || models[model_name] === undefined) {
     return undefined;
   } else {
-    const model = models[model_name];
-
-    const description = {};
-
-    // build attribute_name => type
-    const attributes = _.mapValues(model.attributes, ({ type, $col_order }) => {
-      return { type: type.toString(), orig_order: $col_order };
-    });
-
-    // and remove foreignkeys
-    const foreign_keys = foreignKeys(model);
-    const attributes_without_foreign_keys_and_caches = _.omitBy(
-      attributes,
-      (attribute, name) => foreign_keys.includes(name) || isJoinCache(name),
-    );
-
-    description.attributes = attributes_without_foreign_keys_and_caches;
-
-    // assoc
-    description.belongsTo = assocDescription(model, 'BelongsTo');
-    description.hasMany = assocDescription(model, 'HasMany');
-    description.belongsToMany = assocDescription(model, 'BelongsToMany');
-
-    return description;
+    return describe(models[model_name]);
   }
+};
+
+const describe = model => {
+  const description = {};
+
+  // build attribute_name => type
+  const attributes = _.mapValues(model.attributes, ({ type, $col_order }) => {
+    return { type: type.toString(), orig_order: $col_order };
+  });
+
+  // and remove foreignkeys
+  const foreign_keys = foreignKeys(model);
+  const attributes_without_foreign_keys_and_caches = _.omitBy(
+    attributes,
+    (attribute, name) => foreign_keys.includes(name) || isJoinCache(name),
+  );
+
+  description.attributes = attributes_without_foreign_keys_and_caches;
+
+  // assoc
+  description.belongsTo = assocDescription(model, 'BelongsTo');
+  description.hasMany = assocDescription(model, 'HasMany');
+  description.belongsToMany = assocDescription(model, 'BelongsToMany');
+
+  return description;
 };
 
 // see SequelizeThroughModel#name
@@ -157,6 +159,7 @@ module.exports = {
   buildAssocKeys,
   buildAttrObj,
   describe,
+  describeByName,
   findAssociations,
   foreignKeys,
   isJoinModel,

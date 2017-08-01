@@ -1,11 +1,11 @@
 const { NotFoundError } = require('restify-errors');
 
-const { describe } = require('../model/util');
+const { describeByName } = require('../model/util');
 
 module.exports = models => async (req, res, next) => {
   const { params: { model_name } } = req;
 
-  const description = describe(models, model_name);
+  const description = describeByName(models, model_name);
   if (description === undefined) {
     next(
       new NotFoundError(

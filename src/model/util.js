@@ -127,8 +127,15 @@ const describe = model => {
   return description;
 };
 
-// see SequelizeThroughModel#name
-const isJoinModel = name => name.indexOf('Habtm') !== -1;
+const isJoinModel = nameOrModel => {
+  if (typeof nameOrModel === 'string') {
+    // see SequelizeThroughModel#name
+    return nameOrModel.indexOf('Habtm') !== -1;
+  } else {
+    // see SequelizeThroughModel#super call
+    return nameOrModel.DAT_FILE === 'ThroughModelAlias';
+  }
+};
 
 /**
  * prepares a list of order consumeable by sequelize

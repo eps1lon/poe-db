@@ -123,6 +123,7 @@ const describe = model => {
   description.belongsTo = assocDescription(model, 'BelongsTo');
   description.hasMany = assocDescription(model, 'HasMany');
   description.belongsToMany = assocDescription(model, 'BelongsToMany');
+  description.asCollection = model.tableName;
 
   return description;
 };

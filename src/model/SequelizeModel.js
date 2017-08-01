@@ -27,14 +27,14 @@ class SequelizeModel extends SequelizeBaseModel {
     return [
       PRIMARY,
       ...Object.keys(this.fields).filter(
-        field => !this._isForeignKey(field) && !this._isExtendedProp(field),
+        field => !this._isForeignKey(field) && !this.isExtendedProp(field),
       ),
     ];
   }
 
   belongsTo() {
     return Object.keys(this.fields)
-      .filter(field => this._isBelongsTo(field))
+      .filter(field => this.isBelongsTo(field))
       .map(field => {
         const number = field.match(/([0-9]*)$/)[1] || '';
 
@@ -86,7 +86,7 @@ class SequelizeModel extends SequelizeBaseModel {
 
   throughModels() {
     return Object.keys(this.fields)
-      .filter(field => this._isHasMany(field))
+      .filter(field => this.isHasMany(field))
       .map(field => {
         return {
           as: SequelizeModel.colCasing(field.replace(/Keys([0-9]*)$/, '$1')),
@@ -164,51 +164,8 @@ class SequelizeModel extends SequelizeBaseModel {
     if (field === PRIMARY) {
       return false;
     } else {
-      return this._isBelongsTo(field) || this._isHasMany(field);
+      return this.isBelongsTo(field) || this.isHasMany(field);
     }
-  }
-
-  // there exists currently inconsistent naming in several fields
-  // where the fields are named in a hasMany pattern but do not provide a list of keys
-  _isBelongsTo(field) {
-    return (
-      !this._isHasMany(field) &&
-      /Key(s)?[0-9]*$/.test(field) &&
-      this.fields[field].key
-    );
-  }
-
-  _isHasMany(field) {
-    return (
-      /Keys[0-9]*$/.test(field) &&
-      this.fields[field].key &&
-      this.fields[field].type.startsWith('ref|list')
-    );
-  }
-
-  _isExtendedProp(field) {
-    const prefix_length = field.lastIndexOf('_');
-    const prefix = field.substr(0, prefix_length);
-
-    // sometimes the fields are just prefixed but dont have a hasMany relation
-    // we can include those in the schema
-    if (prefix_length !== -1) {
-      if (this._isHasMany(field)) {
-        return true;
-      } else {
-        return (
-          Object.keys(this.fields).find(
-            field => field.startsWith(prefix) && this._isHasMany(field),
-          ) !== undefined
-        );
-      }
-    } else {
-      return false;
-    }
-  }
-
-  _isExtendedHasMany(field) {
-    return this._isHasMany(field) && this._isExtendedProp(field);
   }
 
   _isKeyCandidate(field) {

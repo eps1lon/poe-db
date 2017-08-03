@@ -118,6 +118,20 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    models.WorldArea.hasMany(model, {
+      as: 'descent_reward_chests',
+      $inverse: 'descent_reward_chests',
+      $col_order: 13,
+      foreignKey: {
+        name: 'world_areas_key',
+        $type: 'ulong',
+        $col_order: 13,
+      },
+      targetKey: undefined,
+      nullable: true,
+      constraints: false,
+      sourceKey: 'row',
+    });
     model.belongsToMany(models.BaseItemType, {
       as: 'base_item_types1',
       through: {

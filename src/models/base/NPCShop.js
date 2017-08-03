@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
-      data0_keys0: {
+      unknown_keys0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,
         $col_order: 4,
       },
-      data0_values: {
+      unknown_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: false,

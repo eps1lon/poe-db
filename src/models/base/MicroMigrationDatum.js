@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'AchievementItem',
+    'MicroMigrationDatum',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,41 +8,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      id: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: false,
-        $col_order: 0,
-      },
-      unknown1: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,
         $col_order: 1,
       },
-      unknown2: {
-        type: DataTypes.INTEGER,
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
         $col_order: 2,
       },
-      name: {
-        type: DataTypes.TEXT,
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: false,
         $col_order: 3,
-      },
-      completions_required: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: false,
-        $col_order: 4,
-      },
-      flag0: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: false,
-        $col_order: 6,
       },
     },
     {
@@ -53,26 +35,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'achievements_key',
+              attribute: 'base_item_types_key',
             },
           ],
-          name: 'index_achievements_key',
+          name: 'index_base_item_types_key',
         },
       ],
-      tableName: 'achievement_items',
+      tableName: 'micro_migration_data',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.Achievement, {
-      as: 'achievement',
-      $inverse: 'achievement_items',
-      $col_order: 5,
+    model.belongsTo(models.BaseItemType, {
+      as: 'base_item_type',
+      $inverse: 'micro_migration_data',
+      $col_order: 0,
       foreignKey: {
-        name: 'achievements_key',
+        name: 'base_item_types_key',
         $type: 'ulong',
-        $col_order: 5,
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -80,6 +62,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'AchievementItems.dat';
+  model.DAT_FILE = 'MicroMigrationData.dat';
   return model;
 };

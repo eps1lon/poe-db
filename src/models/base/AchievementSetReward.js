@@ -62,20 +62,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    models.AchievementSetsDisplay.hasMany(model, {
-      as: 'achievement_set_rewards',
-      $inverse: 'achievement_set_rewards',
-      $col_order: 0,
-      foreignKey: {
-        name: 'achievement_sets_display_key',
-        $type: 'int',
-        $col_order: 0,
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'id',
-    });
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
       $inverse: 'achievement_set_rewards',
@@ -88,20 +74,6 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'row',
       nullable: true,
       constraints: false,
-    });
-    models.BaseItemType.hasMany(model, {
-      as: 'achievement_set_rewards',
-      $inverse: 'achievement_set_rewards',
-      $col_order: 2,
-      foreignKey: {
-        name: 'base_item_types_key',
-        $type: 'ulong',
-        $col_order: 2,
-      },
-      targetKey: undefined,
-      nullable: true,
-      constraints: false,
-      sourceKey: 'row',
     });
   };
 

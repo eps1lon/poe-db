@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      type: {
+      wordlists_key: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: false,

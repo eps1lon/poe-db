@@ -38,6 +38,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 8,
       },
+      data4: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: false,
+        $col_order: 9,
+      },
     },
     {
       engine: 'MyISAM',

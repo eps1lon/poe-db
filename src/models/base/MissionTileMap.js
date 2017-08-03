@@ -8,12 +8,6 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      mission_key: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: false,
-        $col_order: 1,
-      },
       _world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -33,6 +27,14 @@ module.exports = (sequelize, DataTypes) => {
           ],
           name: 'index_npc_master_key',
         },
+        {
+          fields: [
+            {
+              attribute: 'mission_transition_tiles_key',
+            },
+          ],
+          name: 'index_mission_transition_tiles_key',
+        },
       ],
       tableName: 'mission_tile_maps',
       underscored: true,
@@ -48,6 +50,19 @@ module.exports = (sequelize, DataTypes) => {
         name: 'npc_master_key',
         $type: 'ulong',
         $col_order: 0,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.MissionTransitionTile, {
+      as: 'mission_transition_tile',
+      $inverse: 'mission_tile_maps',
+      $col_order: 1,
+      foreignKey: {
+        name: 'mission_transition_tiles_key',
+        $type: 'ulong',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,

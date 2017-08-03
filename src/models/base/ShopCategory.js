@@ -49,13 +49,36 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MyISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: [
+            {
+              attribute: 'applied_to_base_item_types_key',
+            },
+          ],
+          name: 'index_applied_to_base_item_types_key',
+        },
+      ],
       tableName: 'shop_categories',
       underscored: true,
     },
   );
 
-  model.associate = models => {};
+  model.associate = models => {
+    model.belongsTo(models.BaseItemType, {
+      as: 'applied_to_base_item_type',
+      $inverse: 'shop_categories',
+      $col_order: 6,
+      foreignKey: {
+        name: 'applied_to_base_item_types_key',
+        $type: 'ulong',
+        $col_order: 6,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+  };
 
   model.DAT_FILE = 'ShopCategory.dat';
   return model;

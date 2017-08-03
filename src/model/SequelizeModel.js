@@ -93,6 +93,7 @@ class SequelizeModel extends SequelizeBaseModel {
           model: new SequelizeThroughModel(
             this,
             Object.assign({ name: field }, this.fields[field]),
+            this.relatedValues(field),
           ),
           field_index: this.fields[field].rowid,
         };

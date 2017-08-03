@@ -7,6 +7,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
+        $col_order: -1,
+      },
+      value: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false,
+        primaryKey: false,
+        autoIncrement: false,
+        $col_order: 3,
       },
     },
     {

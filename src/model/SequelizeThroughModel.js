@@ -14,7 +14,7 @@ class SequelizeThroughModel extends SequelizeBaseModel {
    * @param {Object} from_field field in spec.x.fields
    * @param {Object[]} attributes additional attributes
    */
-  constructor(source, from_field, attributes = []) {
+  constructor(source, from_field, attributes = {}) {
     super('ThroughModelAlias', { fields: [] });
 
     this.source = source;
@@ -158,6 +158,8 @@ class SequelizeThroughModel extends SequelizeBaseModel {
   }
 
   _colProps(col) {
+    const $col_order = this.fields[col] ? this.fields[col].rowid : -1;
+
     return {
       type: this._dataType(col),
       allowNull: false,
@@ -168,6 +170,7 @@ class SequelizeThroughModel extends SequelizeBaseModel {
       // experience with the those in rails 3. seems like there are either not
       // enough use cases or they are an anti pattern
       autoIncrement: col === PRIMARY,
+      $col_order,
     };
   }
 

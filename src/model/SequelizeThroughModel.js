@@ -6,6 +6,8 @@ const SequelizeModelAst = require('./SequelizeModelAst');
 const { entriesToObj } = require('../util');
 
 const PRIMARY = 'Row';
+// saves the original order in which the values were stored
+const PRIORITY = 'Priority';
 
 class SequelizeThroughModel extends SequelizeBaseModel {
   /**
@@ -55,7 +57,7 @@ class SequelizeThroughModel extends SequelizeBaseModel {
   }
 
   cols() {
-    return [PRIMARY, ...Object.keys(this.fields)];
+    return [PRIMARY, PRIORITY, ...Object.keys(this.fields)];
   }
 
   hasMany() {
@@ -176,9 +178,16 @@ class SequelizeThroughModel extends SequelizeBaseModel {
 
   _isKeyCandidate(col) {
     return (
-      col === PRIMARY || col === this.foreignKey() || col === this.targetKey()
+      col === PRIMARY ||
+      col === PRIORITY ||
+      col === this.foreignKey() ||
+      col === this.targetKey()
     );
   }
 }
 
-module.exports = SequelizeThroughModel;
+module.exports = {
+  __esModule: true,
+  default: SequelizeThroughModel,
+  PRIORITY,
+};

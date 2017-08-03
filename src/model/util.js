@@ -1,6 +1,8 @@
 const _ = require('lodash');
 const S = require('string');
 
+const { PRIORITY } = require('./SequelizeThroughModel');
+
 const underscore = name => S(name).underscore().s;
 
 const prepareAssociationsForInclude = (model, associations) => {
@@ -91,6 +93,7 @@ const buildAssocKeys = (model, record, row) =>
         {
           [foreignKey]: row,
           [otherKey]: target,
+          [underscore(PRIORITY)]: i,
         },
         _.mapValues(
           relatedValues(model, assoc_name),

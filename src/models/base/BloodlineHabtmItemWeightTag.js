@@ -9,6 +9,13 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
         $col_order: -1,
       },
+      priority: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        allowNull: false,
+        primaryKey: false,
+        autoIncrement: false,
+        $col_order: -1,
+      },
       value: {
         type: DataTypes.INTEGER,
         allowNull: false,

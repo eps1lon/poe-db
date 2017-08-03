@@ -1,9 +1,9 @@
 const _ = require('lodash');
-const S = require('string');
 
-const { PRIORITY } = require('./SequelizeThroughModel');
+const { underscore } = require('../util');
 
-const underscore = name => S(name).underscore().s;
+const SequelizeThroughModel = require('./SequelizeThroughModel');
+const PRIORITY = SequelizeThroughModel.PRIORITY;
 
 const prepareAssociationsForInclude = (model, associations) => {
   return associations.map(name => {

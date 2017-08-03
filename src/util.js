@@ -1,3 +1,5 @@
+const S = require('string');
+
 // returns a function which is only executed if error is falsy
 // otherwise it throws the value of error
 // used for simple 'void' callbacks since calling functions without
@@ -25,10 +27,13 @@ const filterObj = (obj, filter_fn) =>
 
 const removeProp = (obj, prop) => filterObj(obj, ([other]) => other !== prop);
 
+const underscore = name => S(name).underscore().s;
+
 module.exports = {
   entriesToObj,
   filterObj,
   propChain,
   removeProp,
   throwOnError,
+  underscore,
 };

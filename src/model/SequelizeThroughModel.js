@@ -186,8 +186,6 @@ class SequelizeThroughModel extends SequelizeBaseModel {
   }
 }
 
-module.exports = {
-  __esModule: true,
-  default: SequelizeThroughModel,
-  PRIORITY,
-};
+SequelizeThroughModel.PRIORITY = PRIORITY;
+
+module.exports = SequelizeThroughModel;

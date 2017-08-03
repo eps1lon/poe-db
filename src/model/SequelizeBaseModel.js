@@ -3,7 +3,7 @@ const { tableize } = require('inflection');
 const NotImplemented = require('../errors/NotImplemented');
 const Model = require('./Model');
 const SequelizeModelAst = require('./SequelizeModelAst');
-const { underscore } = require('./util');
+const { underscore } = require('../util');
 
 const PRIMARY = 'Row';
 

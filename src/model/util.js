@@ -57,22 +57,47 @@ const buildAttrObj = (record, model, init = {}) => {
   }, init);
 };
 
+const relatedValues = (model, assoc_name) => {
+  const { through } = model.associations[assoc_name];
+
+  if (through === undefined) {
+    return {};
+  } else {
+    return _.pickBy(
+      through.model.attributes,
+      ({ $col_order }) => $col_order !== undefined && $col_order > 0,
+    );
+  }
+};
+
 const buildAssocKeys = (model, record, row) =>
   findAssociations(model, 'BelongsToMany').reduce((attributes, assoc_name) => {
-    const index = model.associations[assoc_name].options.$col_order;
-    let targets = record[index];
+    const { foreignKey, otherKey, $col_order } = model.associations[
+      assoc_name
+    ].options;
+    let targets = record[$col_order];
 
     // this should not happen but i.e. DailyOverrides says Keys but only
     // provides a single error
     if (!Array.isArray(targets)) {
       console.log(
-        `in model ${model.name} the record ${row} does not provide an array for ${assoc_name} at index ${index}`,
+        `in model ${model.name} the record ${row} does not provide an array for ${assoc_name} at index ${$col_order}`,
       );
       targets = [targets];
     }
 
-    // this is now a list of [foreignKey, targetKey] pairs
-    attributes[assoc_name] = targets.map(target => [row, target]);
+    attributes[assoc_name] = targets.map((target, i) => {
+      return Object.assign(
+        {
+          [foreignKey]: row,
+          [otherKey]: target,
+        },
+        _.mapValues(
+          relatedValues(model, assoc_name),
+          ({ $col_order }) => record[$col_order][i],
+        ),
+      );
+    });
 
     return attributes;
   }, {});

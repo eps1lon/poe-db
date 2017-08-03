@@ -21,7 +21,9 @@ const affectedRowsInChunks = async chunks => {
   return _.sum(inserted.map(chunk => chunk.length));
 };
 
-const all_records = require('../../data/records.json');
+const t = require('../../data/records.json');
+
+const all_records = { 'Mods.dat': t['Mods.dat'] };
 
 (async () => {
   const orm = createOrm({ logging: false });
@@ -50,7 +52,7 @@ const all_records = require('../../data/records.json');
 
       console.log(`inserted ${affected_rows} instances into ${model.name}`);
 
-      const many_to_may_records = records.reduce(
+      const many_to_many_records = records.reduce(
         (associations, record, row) => {
           const assoc_keys = buildAssocKeys(model, record, row);
 
@@ -71,16 +73,9 @@ const all_records = require('../../data/records.json');
       );
 
       // create entries in the Through models
-      for (const assoc in many_to_may_records) {
-        const records = many_to_may_records[assoc];
+      for (const assoc in many_to_many_records) {
+        const assocs_as_obj = many_to_many_records[assoc];
         const assoc_model = model.associations[assoc].through.model;
-
-        const assocs_as_obj = records.map(([source, target]) => {
-          return {
-            [model.associations[assoc].foreignKey]: source,
-            [model.associations[assoc].otherKey]: target,
-          };
-        });
 
         // chunk or we will get packet to large
         const inserts = bulkChunkCreate(

@@ -1,5 +1,4 @@
 const restify = require('restify');
-const morgan = require('morgan');
 
 const cors = () => {
   return (req, res, next) => {
@@ -16,9 +15,6 @@ const createServer = () => {
     name: 'mypoedb',
     version: '1.0.0',
   });
-
-  const logger = morgan('tiny');
-  server.use(logger);
 
   server.use(restify.plugins.acceptParser(server.acceptable));
   server.use(restify.plugins.queryParser());

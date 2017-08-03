@@ -6,7 +6,7 @@ const { createOrm } = require('../../src/db');
   try {
     await orm.authenticate();
 
-    require('../../src/models/')({ normalization: 3 }).init(orm);
+    require('../../src/models/').init(orm);
 
     await orm.truncate();
   } catch (e) {

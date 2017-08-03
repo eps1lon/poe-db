@@ -10,7 +10,7 @@ db.query('CREATE DATABASE IF NOT EXISTS ??', [name], async () => {
   try {
     await orm.authenticate();
 
-    require('../../src/models/')({ normalization: 3 }).init(orm);
+    require('../../src/models/').init(orm);
 
     // use orm.sync instead of the returned models because we also
     // need to create the models defined in 'through' or might miss other

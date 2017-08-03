@@ -25,7 +25,7 @@ const all_records = require('../../data/records.json');
 
 (async () => {
   const orm = createOrm({ logging: false });
-  const models = require('../../src/models')({ normalization: 3 }).init(orm);
+  const models = require('../../src/models').init(orm);
 
   const start_time = Date.now();
 

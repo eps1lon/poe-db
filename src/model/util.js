@@ -72,38 +72,54 @@ const relatedValues = (model, assoc_name) => {
   }
 };
 
-const buildAssocKeys = (model, record, row) =>
-  findAssociations(model, 'BelongsToMany').reduce((attributes, assoc_name) => {
-    const { foreignKey, otherKey, $col_order } = model.associations[
-      assoc_name
-    ].options;
-    let targets = record[$col_order];
+/**
+ * 
+ * @param {SequelizeModel} model 
+ * @param {any[]} record 
+ * @param {number} row primary index
+ * @param {string} assoc_name key in model.associations
+ */
+const zipManyValues = (model, record, row, assoc_name) => {
+  const { foreignKey, otherKey, $col_order } = model.associations[
+    assoc_name
+  ].options;
+  let targets = record[$col_order];
 
-    // this should not happen but i.e. DailyOverrides says Keys but only
-    // provides a single error
-    if (!Array.isArray(targets)) {
-      console.log(
-        `in model ${model.name} the record ${row} does not provide an array for ${assoc_name} at index ${$col_order}`,
-      );
-      targets = [targets];
-    }
+  // this should not happen but i.e. DailyOverrides says Keys but only
+  // provides a single error
+  if (!Array.isArray(targets)) {
+    console.warn(
+      `in model ${model.name} the record ${row} does not provide an array for ${assoc_name} at index ${$col_order}`,
+    );
+    targets = [targets];
+  }
 
-    attributes[assoc_name] = targets.map((target, i) => {
-      return Object.assign(
-        {
-          [foreignKey]: row,
-          [otherKey]: target,
-          [underscore(PRIORITY)]: i,
-        },
-        _.mapValues(
-          relatedValues(model, assoc_name),
-          ({ $col_order }) => record[$col_order][i],
-        ),
-      );
-    });
+  // zip(row*|targets|, targets, relatedValues) as object
+  return targets.map((target, i) => {
+    return Object.assign(
+      {
+        [foreignKey]: row,
+        [otherKey]: target,
+        [underscore(PRIORITY)]: i,
+      },
+      _.mapValues(
+        relatedValues(model, assoc_name),
+        ({ $col_order }) => record[$col_order][i],
+      ),
+    );
+  });
+};
+
+const buildAssocKeys = (model, record, row) => {
+  return findAssociations(
+    model,
+    'BelongsToMany',
+  ).reduce((attributes, assoc_name) => {
+    attributes[assoc_name] = zipManyValues(model, record, row, assoc_name);
 
     return attributes;
   }, {});
+};
 
 const assocDescription = (model, type) => {
   return _.fromPairs(

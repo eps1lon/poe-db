@@ -21,9 +21,7 @@ const affectedRowsInChunks = async chunks => {
   return _.sum(inserted.map(chunk => chunk.length));
 };
 
-const t = require('../../data/records.json');
-
-const all_records = { 'Mods.dat': t['Mods.dat'] };
+const all_records = require('../../data/records.json');
 
 (async () => {
   const orm = createOrm({ logging: false });

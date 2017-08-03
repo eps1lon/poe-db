@@ -95,8 +95,6 @@ module.exports = models => async (req, res, next) => {
       withDescription,
     } = req.query;
 
-    console.log(req.query);
-
     let find;
     // /Model/:id
     if (singular === model_name) {

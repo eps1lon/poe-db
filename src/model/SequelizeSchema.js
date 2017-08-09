@@ -1,4 +1,25 @@
 const _ = require('lodash');
+const DataTypes = require('sequelize/lib/data-types');
+
+// attention: inheritance chain! end with most abstract
+const sequelize_data_types_paths = [
+  'BIGINT',
+  'BOOLEAN',
+  'FLOAT',
+  'DOUBLE',
+  'INTEGER',
+  'TEXT',
+  'DATE',
+];
+
+const serializeType = attribute_type => {
+  const constructor = sequelize_data_types_paths.find(path => {
+    const sequelize_type = _.get(DataTypes, path);
+    return attribute_type instanceof sequelize_type;
+  });
+
+  return { constructor, options: attribute_type.options };
+};
 
 class SequelizeSchema {
   constructor(model) {
@@ -25,7 +46,7 @@ class SequelizeSchema {
       return {
         allowNull,
         primaryKey,
-        type: String(attribute.type),
+        type: serializeType(attribute.type),
       };
     });
   }

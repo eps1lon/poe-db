@@ -58,6 +58,7 @@ class SequelizeBaseModel extends Model {
   }
 
   // protected
+  // adjust SequelizeSchema#serializeType accordingly
   _dataType(col, passed_options) {
     const options = Object.assign(
       {},

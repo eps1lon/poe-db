@@ -5,69 +5,108 @@
       "row": {
         "allowNull": false,
         "primaryKey": true,
-        "type": "BIGINT UNSIGNED"
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
       },
       "id": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "TEXT"
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
       },
       "description": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "TEXT"
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
       },
       "objective": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "TEXT"
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
       },
       "unknown_unique": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "INTEGER"
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
       },
       "flag0": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "TINYINT(1)"
+        "type": {
+          "constructor": "BOOLEAN"
+        }
       },
       "flag1": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "TINYINT(1)"
+        "type": {
+          "constructor": "BOOLEAN"
+        }
       },
       "flag2": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "TINYINT(1)"
+        "type": {
+          "constructor": "BOOLEAN"
+        }
       },
       "flag3": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "TINYINT(1)"
+        "type": {
+          "constructor": "BOOLEAN"
+        }
       },
       "unknown3": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "INTEGER"
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
       },
       "flag4": {
         "allowNull": false,
         "primaryKey": false,
-        "type": "TINYINT(1)"
+        "type": {
+          "constructor": "BOOLEAN"
+        }
       },
       "created_at": {
         "allowNull": false,
-        "type": "DATETIME"
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
       },
       "updated_at": {
         "allowNull": false,
-        "type": "DATETIME"
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
       },
       "achievement_sets_display_key": {
         "allowNull": true,
-        "type": "INTEGER"
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
       }
     },
     "indices": [

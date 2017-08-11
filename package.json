@@ -19,6 +19,7 @@
     "db:schema": "node --trace-warnings scripts/db/schema",
     "db:truncate": "node scripts/db/truncate",
     "db:migration:generate": "node --trace-warnings scripts/db/migration/generate",
+    "db:migration:run": "node --trace-warnings scripts/db/migration/umzug",
     "dev:server": "nodemon --trace-warnings server.js",
     "dev:models": "node --trace-warnings scripts/generateModels",
     "dev:models:clear": "node scripts/clearModels",
@@ -60,6 +61,7 @@
     "restify": "^5.0.1",
     "restify-errors": "^4.3.0",
     "sequelize": "^4.3.1",
-    "string": "^3.3.3"
+    "string": "^3.3.3",
+    "umzug": "^2.0.1"
   }
 }

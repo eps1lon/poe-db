@@ -68,10 +68,16 @@ const createStatement = action => {
   ]);
 };
 
+const dropStatement = action => {
+  return functionStatement('dropTable', [t.stringLiteral(action.name)]);
+};
+
 const actionToStatement = action => {
   switch (action.type) {
     case ACTIONS.CREATE_TABLE:
       return createStatement(action);
+    case ACTIONS.DROP_TABLE:
+      return dropStatement(action);
     default:
       throw new Error(`unrecognized type ${action.type}`);
   }

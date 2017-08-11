@@ -56,19 +56,35 @@ class MigrationAst {
   }
 
   down() {
-    return this.skeletonMethodExpression(this.downBody());
+    return this.skeletonMethodExpression(
+      this.upActions().map(invertAction).map(actionToStatement),
+    );
   }
 
-  downBody() {
-    return [t.emptyStatement()];
+  downActions() {
+    return this.upActions().reverse();
   }
 
   createTableActions() {
     return Object.entries(this.schema)
       .filter(([name]) => this.prev_schema[name] === undefined)
-      .map(([name, model]) => {
+      .map(([, model]) => {
         return {
           type: ACTIONS.CREATE_TABLE,
+          name: model.tableName,
+          attributes: model.attributes,
+          options: model.options,
+        };
+      });
+  }
+
+  dropTableActions() {
+    return Object.entries(this.prev_schema)
+      .filter(([name]) => this.schema[name] === undefined)
+      .map(([model]) => {
+        // add arguments for createTable in order to be able to invert the action
+        return {
+          type: ACTIONS.DROP_TABLE,
           name: model.tableName,
           attributes: model.attributes,
           options: model.options,

@@ -2,27 +2,71 @@ const fs = require('fs');
 const path = require('path');
 const generate = require('babel-core').transformFromAst;
 
-const { throwOnError } = require('../../../src/util');
 const MigrationAst = require('../../../src/model/MigrationAst');
 
 const MIGRATION_PATH = path.join(__dirname, '../../../src/migrations');
 
-const fileNameWithTimestamp = basename => {
-  return `${0}-${basename}`;
-  return `${Date.now()}-${basename}`;
+const migration_name = process.argv[2] || '';
+
+const withUUIDSuffix = (dir, prefix, extension, { pad_length }) => {
+  const delim = '-';
+
+  return new Promise((resolve, reject) => {
+    fs.readdir(dir, (err, files) => {
+      if (err) {
+        reject(err);
+      } else {
+        const versions = files
+          .map(filename => {
+            const basename = path.basename(filename);
+            if (basename.startsWith(prefix) && basename.endsWith(extension)) {
+              return basename
+                .replace(prefix + delim, '')
+                .replace(extension, '')
+                .match(/v(\d+)/)[1];
+            } else {
+              return null;
+            }
+          })
+          .filter(filename => filename !== null && filename !== undefined)
+          // numeric sort
+          .sort((a, b) => a - b);
+
+        const last_version = parseInt(versions[versions.length - 1] || 0, 10);
+
+        const new_version = last_version + 1;
+
+        resolve(
+          [prefix, 'v' + String(new_version).padStart(pad_length, '0')].join(
+            delim,
+          ) + extension,
+        );
+      }
+    });
+  });
+};
+
+const gameVersion = () => {
+  return '3.0.0c';
 };
 
 const writeAst = async migration => {
   const ast = migration.ast();
 
   try {
-    fs.writeFile(
-      path.join(MIGRATION_PATH, fileNameWithTimestamp('init.js')),
-      generate(ast).code,
-      throwOnError(),
-    );
-  } catch (e) {
-    fs.writeFile('./.debug.json', JSON.stringify(ast, null, 2), throwOnError());
+    const prefix = `${gameVersion()}`;
+    const ext = `.js`;
+
+    const filename = await withUUIDSuffix(MIGRATION_PATH, prefix, ext, {
+      pad_length: 3,
+    });
+
+    fs.writeFileSync(path.join(MIGRATION_PATH, filename), generate(ast).code);
+
+    return filename;
+  } catch (err) {
+    fs.writeFileSync('./.debug.json', JSON.stringify(ast, null, 2));
+    throw err;
   }
 };
 

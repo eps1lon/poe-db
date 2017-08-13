@@ -1,0 +1,165 @@
+{
+  "Achievement": {
+    "tableName": "achievements",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "description": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "objective": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown_unique": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag1": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag2": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag3": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "unknown3": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "flag4": {
+        "allowNull": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "achievement_sets_display_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "achievement_sets_display_key"
+          }
+        ],
+        "name": "index_achievement_sets_display_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
+  "AchievementSet": {
+    "tableName": "achievement_sets",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  }
+}

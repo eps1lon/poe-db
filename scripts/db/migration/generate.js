@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const generate = require('babel-core').transformFromAst;
 
-const MigrationAst = require('../../../src/model/MigrationAst');
+const Migration = require('../../../src/model/migration/SequelizeMigration');
+const MigrationAst = require('../../../src/model/migration/MigrationAst');
 
 const MIGRATION_PATH = path.join(__dirname, '../../../src/migrations');
 
@@ -94,7 +95,7 @@ Promise.all([loadSchema('schema'), loadSchema('prev-schema')])
   .then(([schema, prev_schema]) => {
     console.log('loaded schemas, generating ast');
 
-    const migration = new MigrationAst(prev_schema, schema);
+    const migration = new MigrationAst(new Migration(prev_schema, schema));
 
     return writeAst(migration);
   })

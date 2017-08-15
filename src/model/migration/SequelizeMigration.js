@@ -8,7 +8,12 @@ class MigrationAst {
   }
 
   up() {
-    return [...this.createTable(), ...this.addIndex(), ...this.changeColumn()];
+    return [
+      ...this.createTable(),
+      ...this.addIndex(),
+      ...this.changeColumn(),
+      ...this.dropTable(),
+    ];
   }
 
   down() {
@@ -31,7 +36,7 @@ class MigrationAst {
   dropTable() {
     return Object.entries(this.prev_schema)
       .filter(([name]) => this.schema[name] === undefined)
-      .map(([model]) => {
+      .map(([, model]) => {
         // add arguments for createTable in order to be able to invert the action
         return {
           type: ACTIONS.DROP_TABLE,

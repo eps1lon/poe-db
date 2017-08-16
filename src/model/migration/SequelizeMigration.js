@@ -37,6 +37,12 @@ const diffAttribute = (prev, cur) => {
   return _.pick(cur, changes);
 };
 
+/**
+ * 
+ * @param {Object} prev attribute
+ * @param {Object} cur attribute
+ * @return {Boolean} if prev !== cur in a sense of an attribute
+ */
 const isDiffAttr = (prev, cur) => {
   return (
     prev === undefined || Object.values(diffAttribute(prev, cur)).length > 0

@@ -49,7 +49,7 @@ const diffAttribute = (prev, cur) => {
  */
 const isDiffAttr = (prev, cur) => {
   return (
-    prev === undefined || Object.values(diffAttribute(prev, cur)).length > 0
+    prev !== undefined && Object.values(diffAttribute(prev, cur)).length > 0
   );
 };
 

@@ -70,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
       $col_order: 1,
       foreignKey: {
         name: 'labyrinth_secrets_key',
-        $type: 'ulong',
+        $type: 'ref|list|ulong',
         $col_order: 1,
       },
       targetKey: 'row',

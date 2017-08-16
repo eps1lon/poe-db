@@ -8,6 +8,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
+      id: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 0,
+      },
+      multiplier: {
+        type: DataTypes.FLOAT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 1,
+      },
     },
     {
       engine: 'MYISAM',

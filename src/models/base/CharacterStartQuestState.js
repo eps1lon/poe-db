@@ -20,17 +20,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
-      keys1: {
+      keys0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown9: {
+      data0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
+      },
+      keys1: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 6,
       },
       _quest_cache: {
         type: DataTypes.TEXT,

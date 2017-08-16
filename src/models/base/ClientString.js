@@ -20,6 +20,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
+      x_box_text: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 2,
+      },
     },
     {
       engine: 'MYISAM',

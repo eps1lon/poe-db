@@ -14,14 +14,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
-      flags1: {
-        type: DataTypes.INTEGER,
+      float0: {
+        type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      flags2: {
-        type: DataTypes.INTEGER,
+      float1: {
+        type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
@@ -30,6 +30,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 2,
+      },
+      _labyrinth_node_overrides_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 8,
       },
     },
     {
@@ -68,14 +73,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_labyrinth_areas_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'labyrinth_node_overrides_key',
-            },
-          ],
-          name: 'index_labyrinth_node_overrides_key',
         },
       ],
       tableName: 'labyrinth_section_layouts',
@@ -136,19 +133,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.LabyrinthNodeOverride, {
-      as: 'labyrinth_node_override',
-      $inverse: 'labyrinth_section_layouts',
-      $col_order: 8,
-      foreignKey: {
-        name: 'labyrinth_node_overrides_key',
-        $type: 'ulong',
-        $col_order: 8,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
     model.belongsToMany(models.LabyrinthSectionLayout, {
       as: 'labyrinth_section_layout',
       through: {
@@ -158,6 +142,18 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'source_row',
       otherKey: 'target_row',
       $col_order: 2,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.LabyrinthNodeOverride, {
+      as: 'labyrinth_node_overrides',
+      through: {
+        model: models.LabyrinthSectionLayoutHabtmLabyrinthNodeOverride,
+        unique: false,
+      },
+      foreignKey: 'labyrinth_section_layout_row',
+      otherKey: 'labyrinth_node_override_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });

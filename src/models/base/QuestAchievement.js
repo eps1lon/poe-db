@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 5,
+        $col_order: 4,
       },
     },
     {
@@ -45,14 +45,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_achievement_items_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'difficulties_key',
-            },
-          ],
-          name: 'index_difficulties_key',
         },
       ],
       tableName: 'quest_achievements',
@@ -69,19 +61,6 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key',
         $type: 'ulong',
         $col_order: 0,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.Difficulty, {
-      as: 'difficulty',
-      $inverse: 'quest_achievements',
-      $col_order: 4,
-      foreignKey: {
-        name: 'difficulties_key',
-        $type: 'ulong',
-        $col_order: 4,
       },
       targetKey: 'row',
       nullable: true,

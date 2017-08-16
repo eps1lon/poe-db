@@ -56,29 +56,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 9,
       },
-      seal_cost_normal: {
+      seal_cost: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
-      },
-      seal_cost_cruel: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 11,
-      },
-      seal_cost_merciless: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 12,
-      },
-      flag1: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 13,
       },
       _quest_tracker_client_strings_cache: {
         type: DataTypes.TEXT,

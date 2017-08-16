@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         primaryKey: false,
         autoIncrement: false,
-        $col_order: 25,
+        $col_order: 22,
       },
     },
     {

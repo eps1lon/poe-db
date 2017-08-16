@@ -26,65 +26,77 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
-      small_art_jpg_file: {
+      account_upgrade_id_or_base_item_types_key: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 6,
+        $col_order: 5,
       },
-      youtube_video: {
+      small_art_jpg_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
       },
-      unknown11: {
+      youtube_video: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
       },
-      large_art_jpg_file: {
+      unknown0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 9,
       },
-      description2: {
+      large_art_jpg_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
       },
-      daily_deal_art_jpg_file: {
+      description2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 11,
       },
+      daily_deal_art_jpg_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 12,
+      },
       unknown15: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 12,
+        $col_order: 13,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 13,
+        $col_order: 14,
       },
       is_tencent_item: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 14,
+        $col_order: 15,
       },
       is_tradeable: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 15,
+        $col_order: 16,
+      },
+      unknown_art_png_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 17,
       },
       _package_shop_item_cache: {
         type: DataTypes.TEXT,
@@ -94,7 +106,7 @@ module.exports = (sequelize, DataTypes) => {
       _shop_category_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 5,
+        $col_order: 6,
       },
     },
     {
@@ -128,7 +140,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'shop_item_row',
       otherKey: 'shop_category_row',
-      $col_order: 5,
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });

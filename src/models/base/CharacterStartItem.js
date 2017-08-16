@@ -68,6 +68,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 13,
       },
+      data0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 14,
+      },
       _socketed_skill_gems_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

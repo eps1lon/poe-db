@@ -50,14 +50,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 7,
       },
-      flag3: {
-        type: DataTypes.BOOLEAN,
+      unknown3: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
       },
-      unknown3: {
-        type: DataTypes.INTEGER,
+      flag3: {
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 9,
@@ -67,6 +67,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
+      },
+      unknown4: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
       },
     },
     {

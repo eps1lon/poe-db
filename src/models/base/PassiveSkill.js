@@ -128,6 +128,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 25,
       },
+      unknown0: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 26,
+      },
       _stats_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

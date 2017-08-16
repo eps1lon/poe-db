@@ -44,91 +44,85 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 6,
       },
-      has_doodads: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 7,
-      },
       unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 8,
+        $col_order: 7,
       },
       unknown7: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 9,
+        $col_order: 8,
       },
       unknown8: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 10,
-      },
-      unknown9: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 11,
+        $col_order: 9,
       },
       loading_screen_dds_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
+        $col_order: 10,
+      },
+      unknown10: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
+      },
+      data0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
         $col_order: 12,
       },
-      unknown11: {
+      unknown13: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 13,
       },
-      data1: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 14,
-      },
-      unknown15: {
+      unknown17: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 15,
+        $col_order: 16,
       },
-      unknown21: {
+      unknown18: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 19,
+        $col_order: 17,
       },
-      unknown22: {
+      unknown19: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 20,
+        $col_order: 18,
       },
-      unknown23: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 21,
-      },
-      is_map: {
+      is_map_area: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 26,
+        $col_order: 23,
       },
       unknown32: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 28,
+        $col_order: 25,
       },
       unknown33: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 26,
+      },
+      unknown38: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -138,273 +132,261 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 32,
-      },
-      unknown40: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 33,
+        $col_order: 30,
       },
       strongbox_spawn_chance: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 36,
+        $col_order: 33,
       },
       strongbox_max_count: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 37,
+        $col_order: 34,
       },
       strongbox_rarity_weight: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 38,
+        $col_order: 35,
       },
-      is_town_area: {
-        type: DataTypes.BOOLEAN,
+      flag0: {
+        type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: false,
         allowNull: true,
-        $col_order: 39,
+        $col_order: 36,
       },
-      unknown49: {
+      unknown46: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 40,
+        $col_order: 37,
       },
       max_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 41,
+        $col_order: 38,
       },
       unknown50: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 43,
+        $col_order: 40,
       },
-      is_merciless_vaal_area: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 44,
-      },
-      unknown52: {
+      unknown51: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 45,
+        $col_order: 41,
       },
       is_hideout: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 46,
+        $col_order: 42,
+      },
+      unknown52: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 43,
       },
       unknown53: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 47,
+        $col_order: 44,
       },
       unknown54: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 48,
+        $col_order: 45,
       },
       unknown55: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 49,
+        $col_order: 46,
       },
       unknown56: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 50,
+        $col_order: 47,
       },
-      unknown_index: {
-        type: DataTypes.TEXT,
+      unknown57: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 51,
+        $col_order: 48,
+      },
+      unknown58: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 49,
       },
       unknown59: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 52,
-      },
-      unknown60: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 53,
-      },
-      unknown61: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 54,
+        $col_order: 50,
       },
       is_vaal_area: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 56,
+        $col_order: 52,
+      },
+      unknown62: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 53,
+      },
+      unknown63: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 54,
       },
       unknown64: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 57,
-      },
-      unknown65: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 58,
-      },
-      unknown66: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 59,
+        $col_order: 55,
       },
       is_labyrinth_airlock: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 60,
+        $col_order: 56,
       },
       is_labyrinth_area: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
+        $col_order: 57,
+      },
+      unknown69: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 60,
+      },
+      unknown70: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
         $col_order: 61,
       },
-      unknown73: {
+      unknown71: {
         type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 62,
+      },
+      tsi_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 63,
+      },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 64,
-      },
-      unknown74: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 65,
       },
       unknown75: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 66,
+        $col_order: 65,
       },
       unknown76: {
-        type: DataTypes.TEXT,
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 67,
+        $col_order: 66,
       },
       unknown77: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
+        $col_order: 67,
+      },
+      is_unique_map_area: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
         $col_order: 69,
       },
-      unknown78: {
-        type: DataTypes.INTEGER,
+      is_labyrinth_boss_area: {
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 70,
       },
-      unknown79: {
+      unknown80: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 71,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 73,
-      },
-      flag1: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 74,
-      },
-      unknown82: {
+      unknown81: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 75,
-      },
-      unknown83: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 76,
-      },
-      keys2: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 77,
-      },
-      key0a: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 78,
-      },
-      key0b: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 79,
-      },
-      unknown88: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 80,
+        $col_order: 72,
       },
       unknown89: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 81,
+        $col_order: 77,
       },
       unknown90: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 82,
+        $col_order: 78,
       },
       unknown91: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 83,
+        $col_order: 79,
       },
       unknown92: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 84,
+        $col_order: 80,
       },
       unknown93: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 81,
+      },
+      is_master_daily_area: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 82,
+      },
+      harbinger_spawn_chance: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 84,
+      },
+      harbinger_count: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -418,52 +400,57 @@ module.exports = (sequelize, DataTypes) => {
       _topologies_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 16,
+        $col_order: 14,
       },
       _bosses_monster_varieties_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 22,
+        $col_order: 19,
       },
       _monsters_monster_varieties_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 23,
+        $col_order: 20,
       },
       _spawn_weight_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 24,
+        $col_order: 21,
       },
       _full_clear_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 27,
+        $col_order: 24,
       },
       _mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 31,
+        $col_order: 28,
       },
       _vaal_area_world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 34,
+        $col_order: 31,
       },
       _area_type_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 42,
+        $col_order: 39,
       },
       _tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 55,
+        $col_order: 51,
       },
-      _1_cache: {
+      _waypoint_activation_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 72,
+        $col_order: 68,
+      },
+      _completion_achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 73,
       },
     },
     {
@@ -478,14 +465,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_parent_town_world_areas_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'difficulties_key',
-            },
-          ],
-          name: 'index_difficulties_key',
         },
         {
           fields: [
@@ -514,10 +493,35 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: '8_mods_full_clear_achievement_items_key',
+              attribute: 'first_entry_npc_text_audio_key',
             },
           ],
-          name: 'index_8_mods_full_clear_achievement_items_key',
+          name: 'index_first_entry_npc_text_audio_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'first_entry_sound_effects_key',
+            },
+          ],
+          name: 'index_first_entry_sound_effects_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'first_entry_np_cs_key',
+              length: 250,
+            },
+          ],
+          name: 'index_first_entry_np_cs_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'environments_key',
+            },
+          ],
+          name: 'index_environments_key',
         },
       ],
       tableName: 'world_areas',
@@ -529,24 +533,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.WorldArea, {
       as: 'parent_town_world_area',
       $inverse: 'world_areas',
-      $col_order: 17,
+      $col_order: 15,
       foreignKey: {
         name: 'parent_town_world_areas_key',
         $type: 'uint',
-        $col_order: 17,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.Difficulty, {
-      as: 'difficulty',
-      $inverse: 'world_areas',
-      $col_order: 18,
-      foreignKey: {
-        name: 'difficulties_key',
-        $type: 'ulong',
-        $col_order: 18,
+        $col_order: 15,
       },
       targetKey: 'row',
       nullable: true,
@@ -555,11 +546,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'achievement_item',
       $inverse: 'world_areas',
-      $col_order: 30,
+      $col_order: 27,
       foreignKey: {
         name: 'achievement_items_key',
         $type: 'ulong',
-        $col_order: 30,
+        $col_order: 27,
       },
       targetKey: 'row',
       nullable: true,
@@ -568,11 +559,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'twinned_full_clear_achievement_item',
       $inverse: 'world_areas',
-      $col_order: 62,
+      $col_order: 58,
       foreignKey: {
         name: 'twinned_full_clear_achievement_items_key',
         $type: 'ulong',
-        $col_order: 62,
+        $col_order: 58,
       },
       targetKey: 'row',
       nullable: true,
@@ -581,24 +572,63 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.AchievementItem, {
       as: 'enter_achievement_item',
       $inverse: 'world_areas',
-      $col_order: 63,
+      $col_order: 59,
       foreignKey: {
         name: 'enter_achievement_items_key',
         $type: 'ulong',
-        $col_order: 63,
+        $col_order: 59,
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.AchievementItem, {
-      as: '8_mods_full_clear_achievement_item',
+    model.belongsTo(models.NPCTextAudio, {
+      as: 'first_entry_npc_text_audio',
       $inverse: 'world_areas',
-      $col_order: 68,
+      $col_order: 74,
       foreignKey: {
-        name: '8_mods_full_clear_achievement_items_key',
+        name: 'first_entry_npc_text_audio_key',
         $type: 'ulong',
-        $col_order: 68,
+        $col_order: 74,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.SoundEffect, {
+      as: 'first_entry_sound_effect',
+      $inverse: 'world_areas',
+      $col_order: 75,
+      foreignKey: {
+        name: 'first_entry_sound_effects_key',
+        $type: 'ulong',
+        $col_order: 75,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.NPC, {
+      as: 'first_entry_npc',
+      $inverse: 'world_areas',
+      $col_order: 76,
+      foreignKey: {
+        name: 'first_entry_np_cs_key',
+        $type: 'ref|string',
+        $col_order: 76,
+      },
+      targetKey: 'id',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Environment, {
+      as: 'environment',
+      $inverse: 'world_areas',
+      $col_order: 83,
+      foreignKey: {
+        name: 'environments_key',
+        $type: 'ulong',
+        $col_order: 83,
       },
       targetKey: 'row',
       nullable: true,
@@ -624,7 +654,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'topology_row',
-      $col_order: 16,
+      $col_order: 14,
       nullable: true,
       constraints: false,
     });
@@ -636,7 +666,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'monster_variety_row',
-      $col_order: 22,
+      $col_order: 19,
       nullable: true,
       constraints: false,
     });
@@ -648,7 +678,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'monster_variety_row',
-      $col_order: 23,
+      $col_order: 20,
       nullable: true,
       constraints: false,
     });
@@ -660,7 +690,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'tag_row',
-      $col_order: 24,
+      $col_order: 21,
       nullable: true,
       constraints: false,
     });
@@ -672,7 +702,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'achievement_item_row',
-      $col_order: 27,
+      $col_order: 24,
       nullable: true,
       constraints: false,
     });
@@ -684,7 +714,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'mod_row',
-      $col_order: 31,
+      $col_order: 28,
       nullable: true,
       constraints: false,
     });
@@ -696,7 +726,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'source_row',
       otherKey: 'target_row',
-      $col_order: 34,
+      $col_order: 31,
       nullable: true,
       constraints: false,
     });
@@ -708,7 +738,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'tag_row',
-      $col_order: 42,
+      $col_order: 39,
       nullable: true,
       constraints: false,
     });
@@ -720,19 +750,31 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'world_area_row',
       otherKey: 'tag_row',
-      $col_order: 55,
+      $col_order: 51,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: '1',
+      as: 'waypoint_activation_achievement_items',
       through: {
-        model: models.WorldAreaHabtm1,
+        model: models.WorldAreaHabtmWaypointActivationAchievementitem,
         unique: false,
       },
       foreignKey: 'world_area_row',
       otherKey: 'achievement_item_row',
-      $col_order: 72,
+      $col_order: 68,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'completion_achievement_items',
+      through: {
+        model: models.WorldAreaHabtmCompletionAchievementitem,
+        unique: false,
+      },
+      foreignKey: 'world_area_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 73,
       nullable: true,
       constraints: false,
     });

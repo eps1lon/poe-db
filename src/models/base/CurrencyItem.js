@@ -74,6 +74,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 14,
       },
+      x_box_directions: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 15,
+      },
       _usage_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

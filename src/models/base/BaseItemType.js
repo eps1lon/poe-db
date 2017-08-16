@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 19,
       },
-      unknown20: {
+      unknown3: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,

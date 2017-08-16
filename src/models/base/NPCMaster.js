@@ -56,6 +56,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 14,
       },
+      keys1: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 17,
+      },
+      _achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 9,
+      },
       _signature_mod_spawn_weight_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -93,14 +104,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_signature_mod_mods_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'achievement_items_key',
-            },
-          ],
-          name: 'index_achievement_items_key',
         },
         {
           fields: [
@@ -144,19 +147,6 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'achievement_item',
-      $inverse: 'npc_masters',
-      $col_order: 9,
-      foreignKey: {
-        name: 'achievement_items_key',
-        $type: 'ulong',
-        $col_order: 9,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.AchievementItem, {
       as: 'talisman_achievement_item',
       $inverse: 'npc_masters',
       $col_order: 15,
@@ -166,6 +156,18 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 15,
       },
       targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'achievement_items',
+      through: {
+        model: models.NPCMasterHabtmAchievementItem,
+        unique: false,
+      },
+      foreignKey: 'npc_master_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });

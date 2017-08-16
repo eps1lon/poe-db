@@ -32,6 +32,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 7,
       },
+      description: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 8,
+      },
       _gem_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

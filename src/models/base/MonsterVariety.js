@@ -206,71 +206,101 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 43,
       },
-      unknown14: {
+      flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 47,
       },
-      unknown15: {
+      unknown17: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 48,
       },
-      unknown16: {
+      unknown18: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 49,
       },
-      unknown17: {
+      unknown19: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 50,
       },
-      unknown18: {
+      unknown20: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 51,
       },
-      unknown19: {
+      unknown21: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 52,
       },
-      unknown20: {
+      unknown70: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 53,
       },
-      unknown21: {
+      unknown71: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 54,
       },
-      unknown22: {
+      unknown14: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 55,
       },
-      unknown23: {
-        type: DataTypes.TEXT,
+      unknown72: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 56,
       },
-      key3: {
+      unknown87: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 65,
+      },
+      key0: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
+        $col_order: 68,
+      },
+      unknown99: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 70,
+      },
+      unknown100: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
         $col_order: 71,
+      },
+      keys0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 72,
+      },
+      keys1: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 73,
       },
       _mods_cache: {
         type: DataTypes.TEXT,
@@ -302,7 +332,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 37,
       },
-      _achievement_items_cache: {
+      _kill_specific_monster_count_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 44,
@@ -312,60 +342,45 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 45,
       },
-      _achievement_items2_cache: {
+      _kill_rare_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 46,
       },
-      _normal_achievement_items_cache: {
+      _monster_level80_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 57,
+        $col_order: 61,
       },
-      _merciless_achievement_items_cache: {
+      _part1_mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 58,
+        $col_order: 62,
       },
-      _cruel_achievement_items_cache: {
+      _part2_mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 59,
+        $col_order: 63,
       },
-      _normal_mods_cache: {
+      _endgame_mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 65,
+        $col_order: 64,
       },
-      _cruel_mods_cache: {
+      _kill_rare_in_part2_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 66,
       },
-      _merciless_mods_cache: {
+      _kill_rare_in_endgame_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 67,
       },
-      _kill_rare_in_normal_achievement_items_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 68,
-      },
-      _kill_rare_in_cruel_achievement_items_cache: {
+      _kill_specific_monster_count2_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 69,
-      },
-      _kill_rare_in_merciless_achievement_items_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 70,
-      },
-      _count_kills_achievement_items_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 72,
       },
     },
     {
@@ -416,10 +431,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'flashback_achievement_items_key',
+              attribute: 'kill_while_onslaught_is_active_achievement_items_key',
             },
           ],
-          name: 'index_flashback_achievement_items_key',
+          name: 'index_kill_while_onslaught_is_active_achievement_items_key',
         },
         {
           fields: [
@@ -440,18 +455,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'achievement_items_key',
+              attribute: 'kill_while_talisman_is_active_achievement_items_key',
             },
           ],
-          name: 'index_achievement_items_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'achievement_items_key4',
-            },
-          ],
-          name: 'index_achievement_items_key4',
+          name: 'index_kill_while_talisman_is_active_achievement_items_key',
         },
       ],
       tableName: 'monster_varieties',
@@ -526,13 +533,13 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'flashback_achievement_item',
+      as: 'kill_while_onslaught_is_active_achievement_item',
       $inverse: 'monster_varieties',
-      $col_order: 60,
+      $col_order: 57,
       foreignKey: {
-        name: 'flashback_achievement_items_key',
+        name: 'kill_while_onslaught_is_active_achievement_items_key',
         $type: 'ulong',
-        $col_order: 60,
+        $col_order: 57,
       },
       targetKey: 'row',
       nullable: true,
@@ -541,11 +548,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterSegment, {
       as: 'monster_segment',
       $inverse: 'monster_varieties',
-      $col_order: 61,
+      $col_order: 58,
       foreignKey: {
         name: 'monster_segments_key',
         $type: 'ulong',
-        $col_order: 61,
+        $col_order: 58,
       },
       targetKey: 'row',
       nullable: true,
@@ -554,37 +561,24 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MonsterArmour, {
       as: 'monster_armour',
       $inverse: 'monster_varieties',
-      $col_order: 62,
+      $col_order: 59,
       foreignKey: {
         name: 'monster_armours_key',
         $type: 'ulong',
-        $col_order: 62,
+        $col_order: 59,
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
     });
     model.belongsTo(models.AchievementItem, {
-      as: 'achievement_item',
+      as: 'kill_while_talisman_is_active_achievement_item',
       $inverse: 'monster_varieties',
-      $col_order: 63,
+      $col_order: 60,
       foreignKey: {
-        name: 'achievement_items_key',
+        name: 'kill_while_talisman_is_active_achievement_items_key',
         $type: 'ulong',
-        $col_order: 63,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.AchievementItem, {
-      as: 'achievement_items4',
-      $inverse: 'monster_varieties4',
-      $col_order: 64,
-      foreignKey: {
-        name: 'achievement_items_key4',
-        $type: 'ref|list|ulong',
-        $col_order: 64,
+        $col_order: 60,
       },
       targetKey: 'row',
       nullable: true,
@@ -663,9 +657,10 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'achievement_items',
+      as: 'kill_specific_monster_count_achievement_items',
       through: {
-        model: models.MonsterVarietyHabtmAchievementItem,
+        model:
+          models.MonsterVarietyHabtmKillSpecificMonsterCountAchievementitem,
         unique: false,
       },
       foreignKey: 'monster_variety_row',
@@ -687,9 +682,9 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'achievement_items2',
+      as: 'kill_rare_achievement_items',
       through: {
-        model: models.MonsterVarietyHabtmAchievementItems2,
+        model: models.MonsterVarietyHabtmKillRareAchievementitem,
         unique: false,
       },
       foreignKey: 'monster_variety_row',
@@ -699,122 +694,87 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'normal_achievement_items',
+      as: 'monster_level80_achievement_items',
       through: {
-        model: models.MonsterVarietyHabtmNormalAchievementitem,
+        model: models.MonsterVarietyHabtmMonsterLevel80Achievementitem,
         unique: false,
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
-      $col_order: 57,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.AchievementItem, {
-      as: 'merciless_achievement_items',
-      through: {
-        model: models.MonsterVarietyHabtmMercilessAchievementitem,
-        unique: false,
-      },
-      foreignKey: 'monster_variety_row',
-      otherKey: 'achievement_item_row',
-      $col_order: 58,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.AchievementItem, {
-      as: 'cruel_achievement_items',
-      through: {
-        model: models.MonsterVarietyHabtmCruelAchievementitem,
-        unique: false,
-      },
-      foreignKey: 'monster_variety_row',
-      otherKey: 'achievement_item_row',
-      $col_order: 59,
+      $col_order: 61,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'normal_mods',
+      as: 'part1_mods',
       through: {
-        model: models.MonsterVarietyHabtmNormalMod,
+        model: models.MonsterVarietyHabtmPart1Mod,
         unique: false,
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
-      $col_order: 65,
+      $col_order: 62,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'cruel_mods',
+      as: 'part2_mods',
       through: {
-        model: models.MonsterVarietyHabtmCruelMod,
+        model: models.MonsterVarietyHabtmPart2Mod,
         unique: false,
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'mod_row',
+      $col_order: 63,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Mod, {
+      as: 'endgame_mods',
+      through: {
+        model: models.MonsterVarietyHabtmEndgameMod,
+        unique: false,
+      },
+      foreignKey: 'monster_variety_row',
+      otherKey: 'mod_row',
+      $col_order: 64,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'kill_rare_in_part2_achievement_items',
+      through: {
+        model: models.MonsterVarietyHabtmKillRareInPart2Achievementitem,
+        unique: false,
+      },
+      foreignKey: 'monster_variety_row',
+      otherKey: 'achievement_item_row',
       $col_order: 66,
       nullable: true,
       constraints: false,
     });
-    model.belongsToMany(models.Mod, {
-      as: 'merciless_mods',
+    model.belongsToMany(models.AchievementItem, {
+      as: 'kill_rare_in_endgame_achievement_items',
       through: {
-        model: models.MonsterVarietyHabtmMercilessMod,
+        model: models.MonsterVarietyHabtmKillRareInEndgameAchievementitem,
         unique: false,
       },
       foreignKey: 'monster_variety_row',
-      otherKey: 'mod_row',
+      otherKey: 'achievement_item_row',
       $col_order: 67,
       nullable: true,
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'kill_rare_in_normal_achievement_items',
+      as: 'kill_specific_monster_count2_achievement_items',
       through: {
-        model: models.MonsterVarietyHabtmKillRareInNormalAchievementitem,
-        unique: false,
-      },
-      foreignKey: 'monster_variety_row',
-      otherKey: 'achievement_item_row',
-      $col_order: 68,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.AchievementItem, {
-      as: 'kill_rare_in_cruel_achievement_items',
-      through: {
-        model: models.MonsterVarietyHabtmKillRareInCruelAchievementitem,
+        model:
+          models.MonsterVarietyHabtmKillSpecificMonsterCount2Achievementitem,
         unique: false,
       },
       foreignKey: 'monster_variety_row',
       otherKey: 'achievement_item_row',
       $col_order: 69,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.AchievementItem, {
-      as: 'kill_rare_in_merciless_achievement_items',
-      through: {
-        model: models.MonsterVarietyHabtmKillRareInMercilessAchievementitem,
-        unique: false,
-      },
-      foreignKey: 'monster_variety_row',
-      otherKey: 'achievement_item_row',
-      $col_order: 70,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.AchievementItem, {
-      as: 'count_kills_achievement_items',
-      through: {
-        model: models.MonsterVarietyHabtmCountKillsAchievementitem,
-        unique: false,
-      },
-      foreignKey: 'monster_variety_row',
-      otherKey: 'achievement_item_row',
-      $col_order: 72,
       nullable: true,
       constraints: false,
     });

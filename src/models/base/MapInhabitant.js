@@ -8,11 +8,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      id: {
+      _monster_packs_cache: {
         type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 0,
+        allowNull: false,
+        $col_order: 1,
       },
     },
     {
@@ -38,13 +37,25 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Stat, {
       as: 'stat',
       $inverse: 'map_inhabitants',
-      $col_order: 1,
+      $col_order: 0,
       foreignKey: {
         name: 'stats_key',
         $type: 'ulong',
-        $col_order: 1,
+        $col_order: 0,
       },
       targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.MonsterPack, {
+      as: 'monster_packs',
+      through: {
+        model: models.MapInhabitantHabtmMonsterPack,
+        unique: false,
+      },
+      foreignKey: 'map_inhabitant_row',
+      otherKey: 'monster_pack_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

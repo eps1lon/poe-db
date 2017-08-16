@@ -20,20 +20,20 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
-      unknown3: {
+      unknown2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      unknown2: {
-        type: DataTypes.INTEGER,
+      unknown3: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
       unknown4: {
-        type: DataTypes.TEXT,
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,

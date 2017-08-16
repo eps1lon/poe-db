@@ -50,41 +50,36 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 6,
       },
+      unknown0: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 7,
+      },
+      difficulty: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 8,
+      },
+      damage2: {
+        type: DataTypes.FLOAT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
+      },
     },
     {
       engine: 'MYISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [
-        {
-          fields: [
-            {
-              attribute: 'difficulty_key',
-            },
-          ],
-          name: 'index_difficulty_key',
-        },
-      ],
+      indexes: [],
       tableName: 'default_monster_stats',
       underscored: true,
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.Difficulty, {
-      as: 'difficulty',
-      $inverse: 'default_monster_stats',
-      $col_order: 7,
-      foreignKey: {
-        name: 'difficulty_key',
-        $type: 'ulong',
-        $col_order: 7,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
   model.DAT_FILE = 'DefaultMonsterStats.dat';
   return model;

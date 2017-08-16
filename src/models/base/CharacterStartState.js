@@ -38,8 +38,20 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 7,
       },
-      unknown: {
+      bool0: {
         type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
+      },
+      info_text: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
+      },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 11,
@@ -49,20 +61,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 4,
       },
-      _normal_character_start_quest_state_cache: {
+      _character_start_quest_state_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 8,
-      },
-      _cruel_character_start_quest_state_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 9,
-      },
-      _merciless_character_start_quest_state_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 10,
       },
     },
     {
@@ -132,38 +134,14 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'normal_character_start_quest_state',
+      as: 'character_start_quest_state',
       through: {
-        model: models.CharacterStartStateHabtmNormalCharacterstartqueststate,
+        model: models.CharacterStartStateHabtmCharacterStartQuestState,
         unique: false,
       },
       foreignKey: 'character_start_state_row',
       otherKey: 'character_start_quest_state_row',
       $col_order: 8,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'cruel_character_start_quest_state',
-      through: {
-        model: models.CharacterStartStateHabtmCruelCharacterstartqueststate,
-        unique: false,
-      },
-      foreignKey: 'character_start_state_row',
-      otherKey: 'character_start_quest_state_row',
-      $col_order: 9,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.CharacterStartQuestState, {
-      as: 'merciless_character_start_quest_state',
-      through: {
-        model: models.CharacterStartStateHabtmMercilessCharacterstartqueststate,
-        unique: false,
-      },
-      foreignKey: 'character_start_state_row',
-      otherKey: 'character_start_quest_state_row',
-      $col_order: 10,
       nullable: true,
       constraints: false,
     });

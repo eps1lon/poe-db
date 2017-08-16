@@ -43,36 +43,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MYISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [
-        {
-          fields: [
-            {
-              attribute: 'environments_key',
-            },
-          ],
-          name: 'index_environments_key',
-        },
-      ],
+      indexes: [],
       tableName: 'topologies',
       underscored: true,
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.Environment, {
-      as: 'environment',
-      $inverse: 'topologies',
-      $col_order: 5,
-      foreignKey: {
-        name: 'environments_key',
-        $type: 'ulong',
-        $col_order: 5,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
   model.DAT_FILE = 'Topologies.dat';
   return model;

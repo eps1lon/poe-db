@@ -44,59 +44,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 5,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      unknown0: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      unknown6: {
-        type: DataTypes.INTEGER.UNSIGNED,
+      unknown1: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
       },
-      is_quest: {
+      flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
-      },
-      unknown8: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 9,
-      },
-      unknown9: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 10,
-      },
-      flag1: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 11,
-      },
-      unknown11: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 12,
-      },
-      flag2: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 13,
-      },
-      flag3: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 14,
       },
     },
     {

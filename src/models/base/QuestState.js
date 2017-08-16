@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
-      data1: {
+      data0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -74,11 +74,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 13,
       },
-      unknown3: {
+      data1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 14,
+      },
+      data2: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 15,
       },
       _map_pins1_cache: {
         type: DataTypes.TEXT,

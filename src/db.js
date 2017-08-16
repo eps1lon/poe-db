@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 
 const { POEDB_HOST, POEDB_USER, POEDB_PW, POEDB_DB } = process.env;
 
@@ -18,7 +18,7 @@ const createOrm = options =>
   );
 
 const db = options =>
-  mysql.connect(
+  mysql.createConnection(
     Object.assign(
       {
         host: POEDB_HOST,

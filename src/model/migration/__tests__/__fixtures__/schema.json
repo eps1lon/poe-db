@@ -113,10 +113,10 @@
       {
         "fields": [
           {
-            "attribute": "achievement_sets_display_key"
+            "attribute": "unknown_key"
           }
         ],
-        "name": "index_achievement_sets_display_key",
+        "name": "some_new_index",
         "type": "",
         "parser": null
       }

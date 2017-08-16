@@ -207,12 +207,23 @@ const safeOrder = orders => {
   }
 };
 
+const indexId = ({ name, fields }) => {
+  return [name, ...fields.map(({ attribute }) => attribute)].join('-');
+};
+
+const findIndex = (indices, index) => {
+  const index_id = indexId(index);
+
+  return indices.find(other => indexId(other) === index_id);
+};
+
 module.exports = {
   buildAssocKeys,
   buildAttrObj,
   describe,
   describeByName,
   findAssociations,
+  findIndex,
   foreignKeys,
   isJoinModel,
   nonCircularAssociations,

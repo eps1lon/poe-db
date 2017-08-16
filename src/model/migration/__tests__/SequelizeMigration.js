@@ -86,6 +86,7 @@ it('should recognize invert new tables', () => {
     attributes: attributes.achievement_items,
   });
 });
+
 it('should recognize dropped tables', () => {
   const up = migration.dropTable();
 
@@ -95,6 +96,7 @@ it('should recognize dropped tables', () => {
     attributes: attributes.achievement_sets,
   });
 });
+
 it('should recognize invert dropped tables', () => {
   const up = migration.dropTable();
 
@@ -102,5 +104,63 @@ it('should recognize invert dropped tables', () => {
     type: 'create-table',
     name: 'achievement_sets',
     attributes: attributes.achievement_sets,
+  });
+});
+
+it('should recognize new indices', () => {
+  const up = migration.addIndex();
+
+  expect(up[0]).toMatchObject({
+    type: 'add-index',
+    tableName: 'achievements',
+    attributes: ['unknown_key'],
+    indexName: 'some_new_index',
+  });
+
+  expect(up[1]).toMatchObject({
+    type: 'add-index',
+    tableName: 'achievement_items',
+    attributes: ['achievements_key'],
+    indexName: 'index_achievements_key',
+  });
+});
+
+it('should be able to invert add index', () => {
+  const up = migration.addIndex();
+
+  expect(invertAction(up[0])).toMatchObject({
+    type: 'remove-index',
+    tableName: 'achievements',
+    attributes: ['unknown_key'],
+    indexName: 'some_new_index',
+  });
+
+  expect(invertAction(up[1])).toMatchObject({
+    type: 'remove-index',
+    tableName: 'achievement_items',
+    attributes: ['achievements_key'],
+    indexName: 'index_achievements_key',
+  });
+});
+
+it('should recognize removed indices', () => {
+  const up = migration.dropIndex();
+
+  expect(up[0]).toMatchObject({
+    type: 'remove-index',
+    tableName: 'achievements',
+    attributes: ['achievement_sets_display_key'],
+    indexName: 'index_achievement_sets_display_key',
+  });
+});
+
+it('should be able to invert remove indices', () => {
+  const up = migration.dropIndex();
+
+  expect(invertAction(up[0])).toMatchObject({
+    type: 'add-index',
+    tableName: 'achievements',
+    attributes: ['achievement_sets_display_key'],
+    indexName: 'index_achievement_sets_display_key',
   });
 });

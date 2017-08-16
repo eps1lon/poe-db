@@ -1,5 +1,24 @@
+const _ = require('lodash');
+
+const { findIndex } = require('../util');
 const ACTIONS = require('./actions');
 const invertAction = require('./invertAction');
+
+const newIndices = (prev_schema, schema) => {
+  return Object.entries(schema).map(([name, model]) => {
+    return [
+      model,
+      model.indices.filter(index => {
+        if (prev_schema[name] === undefined) {
+          // schema is new so the index must be new
+          return true;
+        } else {
+          return findIndex(prev_schema[name].indices, index) === undefined;
+        }
+      }),
+    ];
+  });
+};
 
 class MigrationAst {
   constructor(prev_schema, schema) {
@@ -12,6 +31,8 @@ class MigrationAst {
       ...this.createTable(),
       ...this.addIndex(),
       ...this.changeColumn(),
+      // drop possible key constraints before dropping tables
+      ...this.dropIndex(),
       ...this.dropTable(),
     ];
   }
@@ -48,7 +69,33 @@ class MigrationAst {
   }
 
   addIndex() {
-    return []; //  TODO
+    return _.flatten(
+      newIndices(this.prev_schema, this.schema).map(([model, indices]) => {
+        return indices.map(index => {
+          return {
+            type: ACTIONS.ADD_INDEX,
+            tableName: model.tableName,
+            attributes: index.fields.map(({ attribute }) => attribute),
+            indexName: index.name,
+          };
+        });
+      }),
+    );
+  }
+
+  dropIndex() {
+    return _.flatten(
+      newIndices(this.schema, this.prev_schema).map(([model, indices]) => {
+        return indices.map(index => {
+          return {
+            type: ACTIONS.REMOVE_INDEX,
+            tableName: model.tableName,
+            attributes: index.fields.map(({ attribute }) => attribute),
+            indexName: index.name,
+          };
+        });
+      }),
+    );
   }
 
   changeColumn() {

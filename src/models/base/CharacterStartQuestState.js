@@ -5,31 +5,31 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       id: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 0,
       },
       quest_states: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 2,
       },
       keys1: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 3,
       },
       unknown9: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 5,
       },
       _quest_cache: {

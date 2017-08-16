@@ -5,25 +5,25 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 1,
       },
       flags1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 6,
       },
       flags2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 7,
       },
       _labyrinth_section_layout_cache: {

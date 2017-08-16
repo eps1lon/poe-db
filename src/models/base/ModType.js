@@ -5,13 +5,13 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       name: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 0,
       },
       _mod_sell_prices_cache: {

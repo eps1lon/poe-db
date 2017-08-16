@@ -5,19 +5,19 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       keys0: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 3,
       },
       keys1: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 4,
       },
       _mods_cache: {

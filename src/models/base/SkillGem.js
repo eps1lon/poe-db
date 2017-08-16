@@ -5,31 +5,31 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       str: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 2,
       },
       dex: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 3,
       },
       int: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 4,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 7,
       },
       _gem_tags_cache: {

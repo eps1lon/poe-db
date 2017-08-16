@@ -5,37 +5,37 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       key2: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 5,
       },
       regular_guild_character: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 6,
       },
       unique_guild_character: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 7,
       },
       tier: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 9,
       },
       shaped_area_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 11,
       },
       _monster_packs_cache: {

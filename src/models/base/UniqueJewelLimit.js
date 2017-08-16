@@ -5,19 +5,19 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       unique_items_key: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 0,
       },
       limit: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 1,
       },
     },

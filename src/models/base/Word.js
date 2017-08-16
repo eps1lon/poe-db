@@ -5,37 +5,37 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       wordlists_key: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 0,
       },
       text: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 1,
       },
       unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 4,
       },
       text2: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 5,
       },
       unknown8: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 6,
       },
       _spawn_weight_tags_cache: {

@@ -5,31 +5,31 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       key: {
         type: DataTypes.TEXT,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 0,
       },
       min_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 4,
       },
       max_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 5,
       },
       is_prefix: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 6,
       },
       _spawn_weight_tags_cache: {

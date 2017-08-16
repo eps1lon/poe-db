@@ -5,25 +5,25 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: false,
+        allowNull: true,
         $col_order: -1,
       },
       id: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 0,
       },
       quest_state: {
         type: DataTypes.INTEGER,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 2,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
-        allowNull: false,
+        allowNull: true,
         $col_order: 5,
       },
       _characters_cache: {

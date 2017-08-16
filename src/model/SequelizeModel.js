@@ -156,7 +156,7 @@ class SequelizeModel extends SequelizeBaseModel {
     return {
       type: this._dataType(col),
       primaryKey: col === PRIMARY,
-      allowNull: false,
+      allowNull: true,
       $col_order,
     };
   }

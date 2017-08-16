@@ -75,7 +75,7 @@ class MigrationAst {
           return {
             type: ACTIONS.ADD_INDEX,
             tableName: model.tableName,
-            attributes: index.fields.map(({ attribute }) => attribute),
+            attributes: index.fields,
             indexName: index.name,
           };
         });
@@ -90,7 +90,7 @@ class MigrationAst {
           return {
             type: ACTIONS.REMOVE_INDEX,
             tableName: model.tableName,
-            attributes: index.fields.map(({ attribute }) => attribute),
+            attributes: index.fields,
             indexName: index.name,
           };
         });

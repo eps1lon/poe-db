@@ -58,11 +58,10 @@ const buildAttrObj = (record, model, init = {}) => {
         : value;
     } else {
       console.warn(
-        'could not find target field for',
-        record,
-        index,
+        `could not find target field ${index} for`,
+        Object.entries(record),
         'in',
-        model,
+        model.name,
       );
     }
 

@@ -41,18 +41,23 @@ const all_records = require('../../data/records.json');
         return buildAttrObj(record, model, { row });
       });
 
-      const fields = Object.keys(records_as_obj[0]);
+      const fields = Object.keys(records_as_obj[0] || {});
 
-      const inserted = await model.bulkCreate(records_as_obj, {
-        fields,
-        ignoreDuplicates: false,
-        updateOnDuplicate: fields,
-      });
-      const affected_rows = inserted.length;
+      try {
+        const inserted = await model.bulkCreate(records_as_obj, {
+          fields,
+          ignoreDuplicates: false,
+          updateOnDuplicate: fields,
+        });
 
-      total_insert_count += affected_rows;
+        const affected_rows = inserted.length;
 
-      console.log(`inserted ${affected_rows} instances into ${model.name}`);
+        total_insert_count += affected_rows;
+
+        console.log(`inserted ${affected_rows} instances into ${model.name}`);
+      } catch (err) {
+        console.warn(String(err), records_as_obj[0]);
+      }
 
       const many_to_many_records = records.reduce(
         (associations, record, row) => {
@@ -73,7 +78,6 @@ const all_records = require('../../data/records.json');
         },
         {},
       );
-      continue;
       // create entries in the Through models
       for (const assoc in many_to_many_records) {
         const assocs_as_obj = many_to_many_records[assoc];

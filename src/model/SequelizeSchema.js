@@ -41,10 +41,11 @@ class SequelizeSchema {
 
   attributes() {
     return _.mapValues(this.model.attributes, attribute => {
-      const { primaryKey, allowNull } = attribute;
+      const { primaryKey, allowNull, autoIncrement } = attribute;
 
       return {
         allowNull,
+        autoIncrement,
         primaryKey,
         type: serializeType(attribute.type),
       };

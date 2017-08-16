@@ -581,6 +581,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -591,6 +592,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -659,6 +661,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -669,6 +672,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -737,6 +741,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -747,6 +752,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -1276,6 +1282,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1286,6 +1293,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -1832,6 +1840,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1842,6 +1851,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -1910,6 +1920,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1920,6 +1931,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -1930,6 +1942,7 @@
       },
       "cost": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -1996,6 +2009,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2006,6 +2020,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -2016,6 +2031,7 @@
       },
       "cost": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -2082,6 +2098,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2092,6 +2109,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -2102,6 +2120,7 @@
       },
       "cost": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -2168,6 +2187,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2178,6 +2198,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -2246,6 +2267,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2256,6 +2278,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -2266,6 +2289,7 @@
       },
       "cost": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -2332,6 +2356,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2342,6 +2367,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -2856,6 +2882,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2866,6 +2893,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -2876,6 +2904,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -2942,6 +2971,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2952,6 +2982,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -3020,6 +3051,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3030,6 +3062,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -3040,6 +3073,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -3403,6 +3437,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3413,6 +3448,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -3679,6 +3715,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3689,6 +3726,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4203,6 +4241,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4213,6 +4252,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4281,6 +4321,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4291,6 +4332,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4359,6 +4401,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4369,6 +4412,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4437,6 +4481,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4447,6 +4492,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4515,6 +4561,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4525,6 +4572,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4593,6 +4641,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4603,6 +4652,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4671,6 +4721,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4681,6 +4732,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4749,6 +4801,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4759,6 +4812,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -4827,6 +4881,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4837,6 +4892,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -5133,6 +5189,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5143,6 +5200,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -5211,6 +5269,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5221,6 +5280,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -5289,6 +5349,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5299,6 +5360,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -5595,6 +5657,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5605,6 +5668,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -5673,6 +5737,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5683,6 +5748,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -5832,6 +5898,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5842,6 +5909,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -5910,6 +5978,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5920,6 +5989,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -6141,6 +6211,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6151,6 +6222,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -6219,6 +6291,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6229,6 +6302,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -6297,6 +6371,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6307,6 +6382,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -6375,6 +6451,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6385,6 +6462,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -6922,6 +7000,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6932,6 +7011,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -7139,6 +7219,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7149,6 +7230,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -7217,6 +7299,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7227,6 +7310,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -7981,6 +8065,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7991,6 +8076,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -8001,6 +8087,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -8069,6 +8156,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8079,6 +8167,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -8334,6 +8423,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8344,6 +8434,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -8687,6 +8778,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8697,6 +8789,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -9483,6 +9576,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9493,6 +9587,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -9561,6 +9656,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9571,6 +9667,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -9639,6 +9736,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9649,6 +9747,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -9717,6 +9816,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9727,6 +9827,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -9795,6 +9896,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9805,6 +9907,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -9873,6 +9976,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9883,6 +9987,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -9951,6 +10056,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9961,6 +10067,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -10029,6 +10136,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10039,6 +10147,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -10107,6 +10216,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10117,6 +10227,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -10185,6 +10296,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10195,6 +10307,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -10263,6 +10376,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10273,6 +10387,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -10341,6 +10456,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10351,6 +10467,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -10419,6 +10536,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10429,6 +10547,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -10497,6 +10616,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10507,6 +10627,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -11060,6 +11181,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11070,6 +11192,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -11533,6 +11656,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11543,6 +11667,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -11611,6 +11736,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11621,6 +11747,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -12229,6 +12356,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12239,6 +12367,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -12249,6 +12378,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -12463,6 +12593,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12473,6 +12604,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -13684,6 +13816,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -13694,6 +13827,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -15127,6 +15261,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15137,6 +15272,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -15711,6 +15847,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15721,6 +15858,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -15731,6 +15869,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -15797,6 +15936,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15807,6 +15947,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -15875,6 +16016,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15885,6 +16027,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -16691,6 +16834,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16701,6 +16845,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -16850,6 +16995,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16860,6 +17006,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -16928,6 +17075,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16938,6 +17086,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -17119,6 +17268,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17129,6 +17279,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -17349,6 +17500,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17359,6 +17511,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -17427,6 +17580,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17437,6 +17591,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -18133,6 +18288,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18143,6 +18299,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -18211,6 +18368,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18221,6 +18379,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -18289,6 +18448,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18299,6 +18459,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -18679,6 +18840,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18689,6 +18851,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -18757,6 +18920,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18767,6 +18931,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -18835,6 +19000,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18845,6 +19011,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -18913,6 +19080,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18923,6 +19091,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -19631,6 +19800,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19641,6 +19811,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -19709,6 +19880,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19719,6 +19891,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -19787,6 +19960,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19797,6 +19971,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -19865,6 +20040,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19875,6 +20051,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -20214,6 +20391,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20224,6 +20402,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -20982,6 +21161,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20992,6 +21172,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -21060,6 +21241,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21070,6 +21252,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -21138,6 +21321,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21148,6 +21332,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -21216,6 +21401,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21226,6 +21412,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -21558,6 +21745,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21568,6 +21756,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -21636,6 +21825,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21646,6 +21836,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -21714,6 +21905,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21724,6 +21916,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -21792,6 +21985,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21802,6 +21996,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -22400,6 +22595,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22410,6 +22606,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -22554,6 +22751,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22564,6 +22762,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -22706,6 +22905,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22716,6 +22916,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -22865,6 +23066,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22875,6 +23077,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -23603,6 +23806,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23613,6 +23817,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -23623,6 +23828,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -23689,6 +23895,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23699,6 +23906,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -23709,6 +23917,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -23777,6 +23986,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23787,6 +23997,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -23917,6 +24128,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23927,6 +24139,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -24088,6 +24301,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24098,6 +24312,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -24984,6 +25199,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24994,6 +25210,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -25062,6 +25279,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25072,6 +25290,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -25140,6 +25359,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25150,6 +25370,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -25595,6 +25816,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25605,6 +25827,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26391,6 +26614,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -26401,6 +26625,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26469,6 +26694,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -26479,6 +26705,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26547,6 +26774,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -26557,6 +26785,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26625,6 +26854,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -26635,6 +26865,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26645,6 +26876,7 @@
       },
       "mods_key": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26713,6 +26945,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -26723,6 +26956,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26733,6 +26967,7 @@
       },
       "achievement_items_key": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26801,6 +27036,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -26811,6 +27047,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26879,6 +27116,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -26889,6 +27127,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -26957,6 +27196,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -26967,6 +27207,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27035,6 +27276,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27045,6 +27287,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27113,6 +27356,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27123,6 +27367,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27133,6 +27378,7 @@
       },
       "mods_key": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27201,6 +27447,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27211,6 +27458,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27221,6 +27469,7 @@
       },
       "achievement_items_key": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27289,6 +27538,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27299,6 +27549,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27367,6 +27618,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27377,6 +27629,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27445,6 +27698,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27455,6 +27709,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27465,6 +27720,7 @@
       },
       "mods_key": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27533,6 +27789,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27543,6 +27800,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27553,6 +27811,7 @@
       },
       "achievement_items_key": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27621,6 +27880,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27631,6 +27891,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27699,6 +27960,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27709,6 +27971,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27777,6 +28040,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27787,6 +28051,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -27855,6 +28120,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -27865,6 +28131,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -28626,6 +28893,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28636,6 +28904,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -28704,6 +28973,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28714,6 +28984,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -28724,6 +28995,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -28792,6 +29064,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28802,6 +29075,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -28812,6 +29086,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -28970,6 +29245,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28980,6 +29256,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -28990,6 +29267,7 @@
       },
       "weight": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -29364,6 +29642,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -29374,6 +29653,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -30135,6 +30415,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30145,6 +30426,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -30213,6 +30495,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30223,6 +30506,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -30291,6 +30575,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30301,6 +30586,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -30467,6 +30753,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30477,6 +30764,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -30954,6 +31242,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30964,6 +31253,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -31603,6 +31893,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31613,6 +31904,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -32366,6 +32658,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32376,6 +32669,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -32444,6 +32738,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32454,6 +32749,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -32739,6 +33035,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32749,6 +33046,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -32817,6 +33115,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32827,6 +33126,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -33090,6 +33390,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33100,6 +33401,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -34049,6 +34351,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34059,6 +34362,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -34069,6 +34373,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -34135,6 +34440,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34145,6 +34451,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -35071,6 +35378,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35081,6 +35389,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -35339,6 +35648,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35349,6 +35659,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -36146,6 +36457,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36156,6 +36468,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -36224,6 +36537,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36234,6 +36548,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -36388,6 +36703,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36398,6 +36714,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -36547,6 +36864,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36557,6 +36875,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -36728,6 +37047,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36738,6 +37058,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -36806,6 +37127,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36816,6 +37138,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -37130,6 +37453,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37140,6 +37464,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -37208,6 +37533,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37218,6 +37544,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -37286,6 +37613,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37296,6 +37624,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -37438,6 +37767,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37448,6 +37778,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -37600,6 +37931,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37610,6 +37942,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -37851,6 +38184,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37861,6 +38195,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -37929,6 +38264,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37939,6 +38275,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -38151,6 +38488,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38161,6 +38499,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -38317,6 +38656,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38327,6 +38667,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -38507,6 +38848,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38517,6 +38859,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -38907,6 +39250,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38917,6 +39261,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -40158,6 +40503,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40168,6 +40514,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -40574,6 +40921,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40584,6 +40932,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -40652,6 +41001,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40662,6 +41012,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -40730,6 +41081,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40740,6 +41092,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -40808,6 +41161,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40818,6 +41172,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -40886,6 +41241,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40896,6 +41252,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -41194,6 +41551,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41204,6 +41562,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -41849,6 +42208,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41859,6 +42219,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -41927,6 +42288,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41937,6 +42299,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -42005,6 +42368,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42015,6 +42379,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -42083,6 +42448,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42093,6 +42459,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -42692,6 +43059,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42702,6 +43070,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -42712,6 +43081,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -43570,6 +43940,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -43580,6 +43951,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -43648,6 +44020,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -43658,6 +44031,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -43726,6 +44100,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -43736,6 +44111,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -43804,6 +44180,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -43814,6 +44191,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -43882,6 +44260,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -43892,6 +44271,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -43960,6 +44340,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -43970,6 +44351,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -44038,6 +44420,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -44048,6 +44431,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -44116,6 +44500,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -44126,6 +44511,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -44136,6 +44522,7 @@
       },
       "value": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
@@ -44204,6 +44591,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -44214,6 +44602,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -44282,6 +44671,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -44292,6 +44682,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -44360,6 +44751,7 @@
     "attributes": {
       "row": {
         "allowNull": false,
+        "autoIncrement": true,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -44370,6 +44762,7 @@
       },
       "priority": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "BIGINT",
@@ -44380,6 +44773,7 @@
       },
       "spawn_chance": {
         "allowNull": false,
+        "autoIncrement": false,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",

@@ -362,6 +362,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -369,6 +370,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -406,6 +408,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -413,6 +416,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -450,6 +454,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -457,6 +462,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -773,6 +779,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -780,6 +787,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1086,6 +1094,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1093,6 +1102,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1130,6 +1140,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1137,6 +1148,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1144,6 +1156,7 @@ module.exports = {
         },
         cost: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -1179,6 +1192,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1186,6 +1200,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1193,6 +1208,7 @@ module.exports = {
         },
         cost: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -1228,6 +1244,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1235,6 +1252,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1242,6 +1260,7 @@ module.exports = {
         },
         cost: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -1277,6 +1296,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1284,6 +1304,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1321,6 +1342,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1328,6 +1350,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1335,6 +1358,7 @@ module.exports = {
         },
         cost: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -1370,6 +1394,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1377,6 +1402,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1690,6 +1716,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1697,6 +1724,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1704,6 +1732,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -1739,6 +1768,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1746,6 +1776,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1783,6 +1814,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1790,6 +1822,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -1797,6 +1830,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -2014,6 +2048,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2021,6 +2056,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2179,6 +2215,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2186,6 +2223,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2496,6 +2534,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2503,6 +2542,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2540,6 +2580,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2547,6 +2588,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2584,6 +2626,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2591,6 +2634,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2628,6 +2672,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2635,6 +2680,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2672,6 +2718,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2679,6 +2726,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2716,6 +2764,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2723,6 +2772,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2760,6 +2810,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2767,6 +2818,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2804,6 +2856,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2811,6 +2864,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2848,6 +2902,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -2855,6 +2910,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3031,6 +3087,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3038,6 +3095,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3075,6 +3133,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3082,6 +3141,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3119,6 +3179,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3126,6 +3187,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3300,6 +3362,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3307,6 +3370,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3344,6 +3408,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3351,6 +3416,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3441,6 +3507,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3448,6 +3515,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3485,6 +3553,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3492,6 +3561,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3616,6 +3686,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3623,6 +3694,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3660,6 +3732,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3667,6 +3740,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3704,6 +3778,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3711,6 +3786,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3748,6 +3824,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -3755,6 +3832,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4071,6 +4149,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4078,6 +4157,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4205,6 +4285,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4212,6 +4293,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4249,6 +4331,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4256,6 +4339,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4711,6 +4795,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4718,6 +4803,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4725,6 +4811,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER({
             unsigned: true,
@@ -4762,6 +4849,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4769,6 +4857,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4908,6 +4997,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -4915,6 +5005,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5114,6 +5205,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5121,6 +5213,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5579,6 +5672,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5586,6 +5680,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5623,6 +5718,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5630,6 +5726,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5667,6 +5764,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5674,6 +5772,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5711,6 +5810,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5718,6 +5818,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5755,6 +5856,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5762,6 +5864,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5799,6 +5902,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5806,6 +5910,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5843,6 +5948,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5850,6 +5956,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5887,6 +5994,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5894,6 +6002,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5931,6 +6040,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5938,6 +6048,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5975,6 +6086,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -5982,6 +6094,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6019,6 +6132,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6026,6 +6140,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6063,6 +6178,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6070,6 +6186,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6107,6 +6224,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6114,6 +6232,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6151,6 +6270,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6158,6 +6278,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6481,6 +6602,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6488,6 +6610,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6766,6 +6889,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6773,6 +6897,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6810,6 +6935,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -6817,6 +6943,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -7183,6 +7310,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -7190,6 +7318,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -7197,6 +7326,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -7327,6 +7457,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -7334,6 +7465,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -7841,6 +7973,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -7848,6 +7981,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -8725,6 +8859,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -8732,6 +8867,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9085,6 +9221,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9092,6 +9229,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9099,6 +9237,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -9134,6 +9273,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9141,6 +9281,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9178,6 +9319,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9185,6 +9327,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9648,6 +9791,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9655,6 +9799,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9745,6 +9890,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9752,6 +9898,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9789,6 +9936,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9796,6 +9944,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9903,6 +10052,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -9910,6 +10060,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10041,6 +10192,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10048,6 +10200,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10085,6 +10238,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10092,6 +10246,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10519,6 +10674,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10526,6 +10682,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10563,6 +10720,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10570,6 +10728,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10607,6 +10766,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10614,6 +10774,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10818,6 +10979,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10825,6 +10987,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10862,6 +11025,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10869,6 +11033,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10906,6 +11071,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10913,6 +11079,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10950,6 +11117,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -10957,6 +11125,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11395,6 +11564,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11402,6 +11572,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11439,6 +11610,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11446,6 +11618,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11483,6 +11656,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11490,6 +11664,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11527,6 +11702,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11534,6 +11710,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11722,6 +11899,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -11729,6 +11907,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12144,6 +12323,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12151,6 +12331,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12188,6 +12369,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12195,6 +12377,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12232,6 +12415,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12239,6 +12423,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12276,6 +12461,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12283,6 +12469,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12465,6 +12652,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12472,6 +12660,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12509,6 +12698,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12516,6 +12706,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12553,6 +12744,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12560,6 +12752,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12597,6 +12790,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12604,6 +12798,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12978,6 +13173,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -12985,6 +13181,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13073,6 +13270,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13080,6 +13278,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13166,6 +13365,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13173,6 +13373,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13251,6 +13452,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13258,6 +13460,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13673,6 +13876,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13680,6 +13884,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13687,6 +13892,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -13722,6 +13928,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13729,6 +13936,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13736,6 +13944,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER({
             unsigned: true,
@@ -13773,6 +13982,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13780,6 +13990,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13852,6 +14063,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13859,6 +14071,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13960,6 +14173,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -13967,6 +14181,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -14473,6 +14688,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -14480,6 +14696,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -14517,6 +14734,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -14524,6 +14742,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -14561,6 +14780,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -14568,6 +14788,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -14850,6 +15071,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -14857,6 +15079,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15283,6 +15506,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15290,6 +15514,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15327,6 +15552,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15334,6 +15560,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15371,6 +15598,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15378,6 +15606,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15415,6 +15644,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15422,6 +15652,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15429,6 +15660,7 @@ module.exports = {
         },
         mods_key: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15466,6 +15698,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15473,6 +15706,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15480,6 +15714,7 @@ module.exports = {
         },
         achievement_items_key: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15517,6 +15752,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15524,6 +15760,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15561,6 +15798,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15568,6 +15806,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15605,6 +15844,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15612,6 +15852,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15649,6 +15890,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15656,6 +15898,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15693,6 +15936,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15700,6 +15944,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15707,6 +15952,7 @@ module.exports = {
         },
         mods_key: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15744,6 +15990,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15751,6 +15998,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15758,6 +16006,7 @@ module.exports = {
         },
         achievement_items_key: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15795,6 +16044,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15802,6 +16052,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15839,6 +16090,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15846,6 +16098,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15883,6 +16136,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15890,6 +16144,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15897,6 +16152,7 @@ module.exports = {
         },
         mods_key: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15934,6 +16190,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15941,6 +16198,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15948,6 +16206,7 @@ module.exports = {
         },
         achievement_items_key: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15985,6 +16244,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -15992,6 +16252,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16029,6 +16290,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16036,6 +16298,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16073,6 +16336,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16080,6 +16344,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16117,6 +16382,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16124,6 +16390,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16558,6 +16825,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16565,6 +16833,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16602,6 +16871,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16609,6 +16879,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16616,6 +16887,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER({
             unsigned: true,
@@ -16653,6 +16925,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16660,6 +16933,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16667,6 +16941,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER({
             unsigned: true,
@@ -16763,6 +17038,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16770,6 +17046,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -16777,6 +17054,7 @@ module.exports = {
         },
         weight: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER({
             unsigned: true,
@@ -17002,6 +17280,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17009,6 +17288,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17480,6 +17760,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17487,6 +17768,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17524,6 +17806,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17531,6 +17814,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17568,6 +17852,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17575,6 +17860,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17676,6 +17962,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17683,6 +17970,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17972,6 +18260,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -17979,6 +18268,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -18378,6 +18668,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -18385,6 +18676,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -18841,6 +19133,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -18848,6 +19141,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -18885,6 +19179,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -18892,6 +19187,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19046,6 +19342,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19053,6 +19350,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19090,6 +19388,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19097,6 +19396,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19250,6 +19550,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19257,6 +19558,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19852,6 +20154,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19859,6 +20162,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19866,6 +20170,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },
@@ -19901,6 +20206,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -19908,6 +20214,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -20427,6 +20734,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -20434,6 +20742,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -20578,6 +20887,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -20585,6 +20895,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21069,6 +21380,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21076,6 +21388,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21113,6 +21426,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21120,6 +21434,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21207,6 +21522,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21214,6 +21530,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21305,6 +21622,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21312,6 +21630,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21410,6 +21729,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21417,6 +21737,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21454,6 +21775,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21461,6 +21783,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21638,6 +21961,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21645,6 +21969,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21682,6 +22007,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21689,6 +22015,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21726,6 +22053,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21733,6 +22061,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21819,6 +22148,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21826,6 +22156,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21919,6 +22250,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -21926,6 +22258,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22063,6 +22396,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22070,6 +22404,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22107,6 +22442,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22114,6 +22450,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22238,6 +22575,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22245,6 +22583,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22341,6 +22680,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22348,6 +22688,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22459,6 +22800,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22466,6 +22808,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22695,6 +23038,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -22702,6 +23046,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23451,6 +23796,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23458,6 +23804,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23698,6 +24045,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23705,6 +24053,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23742,6 +24091,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23749,6 +24099,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23786,6 +24137,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23793,6 +24145,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23830,6 +24183,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23837,6 +24191,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23874,6 +24229,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -23881,6 +24237,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24058,6 +24415,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24065,6 +24423,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24468,6 +24827,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24475,6 +24835,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24512,6 +24873,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24519,6 +24881,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24556,6 +24919,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24563,6 +24927,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24600,6 +24965,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24607,6 +24973,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -24994,6 +25361,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25001,6 +25369,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25008,6 +25377,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER({
             unsigned: true,
@@ -25514,6 +25884,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25521,6 +25892,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25558,6 +25930,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25565,6 +25938,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25602,6 +25976,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25609,6 +25984,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25646,6 +26022,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25653,6 +26030,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25690,6 +26068,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25697,6 +26076,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25734,6 +26114,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25741,6 +26122,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25778,6 +26160,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25785,6 +26168,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25822,6 +26206,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25829,6 +26214,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25836,6 +26222,7 @@ module.exports = {
         },
         value: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER({
             unsigned: true,
@@ -25873,6 +26260,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25880,6 +26268,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25917,6 +26306,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25924,6 +26314,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25961,6 +26352,7 @@ module.exports = {
       {
         row: {
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25968,6 +26360,7 @@ module.exports = {
         },
         priority: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
             unsigned: true,
@@ -25975,6 +26368,7 @@ module.exports = {
         },
         spawn_chance: {
           allowNull: false,
+          autoIncrement: false,
           primaryKey: false,
           type: Sequelize.INTEGER,
         },

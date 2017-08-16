@@ -79,8 +79,14 @@ module.exports = {
         engine: 'MyISAM',
       },
     );
+    queryInterface.addIndex('achievements', ['achievement_sets_display_key'], {
+      indexName: 'index_achievement_sets_display_key',
+    });
   },
   down: (queryInterface, Sequelize) => {
+    queryInterface.removeIndex('achievements', [
+      'achievement_sets_display_key',
+    ]);
     queryInterface.dropTable('achievements');
   },
 };

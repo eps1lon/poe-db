@@ -72,12 +72,30 @@ const dropStatement = action => {
   return functionStatement('dropTable', [t.stringLiteral(action.name)]);
 };
 
+const addIndex = ({ tableName, attributes, indexName }) => {
+  return functionStatement(
+    'addIndex',
+    [tableName, attributes, { indexName }].map(objToAst),
+  );
+};
+
+const removeIndex = ({ tableName, attributes }) => {
+  return functionStatement(
+    'removeIndex',
+    [tableName, attributes].map(objToAst),
+  );
+};
+
 const actionToStatement = action => {
   switch (action.type) {
     case ACTIONS.CREATE_TABLE:
       return createStatement(action);
     case ACTIONS.DROP_TABLE:
       return dropStatement(action);
+    case ACTIONS.ADD_INDEX:
+      return addIndex(action);
+    case ACTIONS.REMOVE_INDEX:
+      return removeIndex(action);
     default:
       throw new Error(`unrecognized type ${action.type}`);
   }

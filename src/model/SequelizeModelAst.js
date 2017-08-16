@@ -31,7 +31,7 @@ const objToAst = obj => {
 
 const default_constructor_options = {
   // useful for intermediate through models
-  skip_has_many: false,
+  skip_has_many: true,
   // through model exists in sequelize.models
   // otherwise use string value to let sequelize auto generate it
   through_models_defined: false,

@@ -76,7 +76,7 @@ module.exports = {
       {
         charset: 'utf8mb4',
         collate: 'utf8mb4_unicode_ci',
-        engine: 'MyISAM',
+        engine: 'MYISAM',
       },
     );
     queryInterface.addIndex('achievements', ['achievement_sets_display_key'], {

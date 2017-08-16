@@ -41,7 +41,6 @@ backupSchema()
       const schema = new SequelizeSchema(model);
 
       full_schema[model_name] = schema.toJSON();
-      break;
     }
 
     fs.writeFileSync(

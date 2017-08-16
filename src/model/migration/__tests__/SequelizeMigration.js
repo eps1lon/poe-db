@@ -218,3 +218,22 @@ it('should be able to invert changeColumns', () => {
     },
   });
 });
+
+it('should recognize new columns', () => {
+  const up = migration.addColumn();
+
+  expect(up.length).toBe(1);
+
+  expect(up[0]).toMatchObject({
+    type: 'add-column',
+    tableName: 'achievements',
+    attributeName: 'some_new_column',
+    options: {
+      allowNull: false,
+      type: {
+        constructor: 'INTEGER',
+        options: {},
+      },
+    },
+  });
+});

@@ -98,6 +98,24 @@ const changeColumn = ({ tableName, attributeName, after }) => {
   );
 };
 
+const addColumn = ({ tableName, attributeName, options }) => {
+  return functionStatement(
+    'addColumn',
+    [
+      tableName,
+      attributeName,
+      Object.assign({}, options, { type: dataTypeProperty(options.type) }),
+    ].map(objToAst),
+  );
+};
+
+const removeColumn = ({ tableName, attributeName }) => {
+  return functionStatement(
+    'addColumn',
+    [tableName, attributeName].map(objToAst),
+  );
+};
+
 const actionToStatement = action => {
   switch (action.type) {
     case ACTIONS.CREATE_TABLE:
@@ -110,6 +128,10 @@ const actionToStatement = action => {
       return removeIndex(action);
     case ACTIONS.CHANGE_COLUMN:
       return changeColumn(action);
+    case ACTIONS.ADD_COLUMN:
+      return addColumn(action);
+    case ACTIONS.REMOVE_COLUMN:
+      return removeColumn(action);
     default:
       throw new Error(`unrecognized type ${action.type}`);
   }

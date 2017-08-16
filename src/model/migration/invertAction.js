@@ -15,6 +15,10 @@ const invertAction = action => {
         before: action.after,
         after: action.before,
       });
+    case ACTIONS.ADD_COLUMN:
+      return Object.assign({}, action, { type: ACTIONS.REMOVE_COLUMN });
+    case ACTIONS.REMOVE_COLUMN:
+      return Object.assign({}, action, { type: ACTIONS.ADD_COLUMN });
     default:
       throw new Error(`unrecognized type ${action.type}`);
   }

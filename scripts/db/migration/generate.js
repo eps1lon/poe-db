@@ -51,8 +51,8 @@ const gameVersion = () => {
   return '3.0.0c';
 };
 
-const writeAst = async migration => {
-  const ast = migration.ast();
+const writeAst = async astable => {
+  const ast = astable.ast();
 
   try {
     const prefix = `${gameVersion()}`;
@@ -95,9 +95,18 @@ Promise.all([loadSchema('schema'), loadSchema('prev-schema')])
   .then(([schema, prev_schema]) => {
     console.log('loaded schemas, generating ast');
 
-    const migration = new MigrationAst(new Migration(prev_schema, schema));
+    const migration = new Migration(prev_schema, schema);
+    const ast = new MigrationAst(migration);
 
-    return writeAst(migration);
+    const removed = migration.removeColumn();
+    if (removed.length > 0) {
+      console.warn(
+        'some columns were removed. Please verify if those were not actually just renamed',
+        removed,
+      );
+    }
+
+    return writeAst(ast);
   })
   .then(() => {
     console.log('wrote ast');

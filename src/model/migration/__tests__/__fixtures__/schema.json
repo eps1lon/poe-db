@@ -107,6 +107,13 @@
           "constructor": "INTEGER",
           "options": {}
         }
+      },
+      "some_new_column": {
+        "allowNull": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
       }
     },
     "indices": [

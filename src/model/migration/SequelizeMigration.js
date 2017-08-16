@@ -24,6 +24,10 @@ const intersectObjectByKeys = (prev, cur) => {
   return _.pickBy(cur, (value, key) => prev[key] !== undefined);
 };
 
+const diffObjectByKeys = (prev, cur) => {
+  return _.pickBy(cur, (value, key) => prev[key] === undefined);
+};
+
 const diffAttribute = (prev, cur) => {
   // simple diff on primitives
   const changes = Object.entries(cur)
@@ -76,6 +80,29 @@ const changedColumns = (prev_schema, schema) => {
   );
 };
 
+const newColumns = (prev_schema, schema) => {
+  return _.flatten(
+    Object.entries(
+      intersectObjectByKeys(prev_schema, schema),
+    ).map(([model_name, model]) => {
+      const prev_model = prev_schema[model_name];
+
+      const new_attributes = Object.entries(
+        diffObjectByKeys(prev_model.attributes, model.attributes),
+      );
+
+      // normalize
+      return Array(new_attributes.length).fill(0).map((_, i) => {
+        return {
+          model_name,
+          attribute_name: new_attributes[i][0],
+          attribute: new_attributes[i][1],
+        };
+      });
+    }),
+  );
+};
+
 class MigrationAst {
   constructor(prev_schema, schema) {
     this.prev_schema = prev_schema;
@@ -86,6 +113,8 @@ class MigrationAst {
     return [
       ...this.createTable(),
       ...this.addIndex(),
+      ...this.removeColumn(),
+      ...this.addColumn(),
       ...this.changeColumn(),
       // drop possible key constraints before dropping tables
       ...this.dropIndex(),
@@ -152,6 +181,34 @@ class MigrationAst {
         });
       }),
     );
+  }
+
+  addColumn() {
+    return newColumns(
+      this.prev_schema,
+      this.schema,
+    ).map(({ model_name, attribute_name, attribute }) => {
+      return {
+        type: ACTIONS.ADD_COLUMN,
+        tableName: this.schema[model_name].tableName,
+        attributeName: attribute_name,
+        options: attribute,
+      };
+    });
+  }
+
+  removeColumn() {
+    return newColumns(
+      this.schema,
+      this.prev_schema,
+    ).map(({ model_name, attribute_name, attribute }) => {
+      return {
+        type: ACTIONS.REMOVE_COLUMN,
+        tableName: this.prev_schema[model_name].tableName,
+        attributeName: attribute_name,
+        options: attribute,
+      };
+    });
   }
 
   changeColumn() {

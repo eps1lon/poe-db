@@ -24,8 +24,12 @@ module.exports = (sequelize, DataTypes) => {
       indexes: [
         {
           fields: [
-            'character_start_state_row',
-            'character_start_quest_state_row',
+            {
+              attribute: 'character_start_state_row',
+            },
+            {
+              attribute: 'character_start_quest_state_row',
+            },
           ],
           name: 'composite primary_alias',
           unique: true,

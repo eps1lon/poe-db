@@ -23,7 +23,14 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['mission_tile_map_row', 'world_area_row'],
+          fields: [
+            {
+              attribute: 'mission_tile_map_row',
+            },
+            {
+              attribute: 'world_area_row',
+            },
+          ],
           name: 'composite primary_alias',
           unique: true,
         },

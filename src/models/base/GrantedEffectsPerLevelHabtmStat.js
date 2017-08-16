@@ -23,7 +23,14 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['granted_effects_per_level_row', 'stat_row'],
+          fields: [
+            {
+              attribute: 'granted_effects_per_level_row',
+            },
+            {
+              attribute: 'stat_row',
+            },
+          ],
           name: 'composite primary_alias',
           unique: true,
         },

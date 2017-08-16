@@ -23,7 +23,14 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['crafting_bench_option_row', 'item_class_row'],
+          fields: [
+            {
+              attribute: 'crafting_bench_option_row',
+            },
+            {
+              attribute: 'item_class_row',
+            },
+          ],
           name: 'composite primary_alias',
           unique: true,
         },

@@ -23,7 +23,14 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['endless_ledge_chest_row', 'base_item_type_row'],
+          fields: [
+            {
+              attribute: 'endless_ledge_chest_row',
+            },
+            {
+              attribute: 'base_item_type_row',
+            },
+          ],
           name: 'composite primary_alias',
           unique: true,
         },

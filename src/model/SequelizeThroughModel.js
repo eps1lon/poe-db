@@ -67,7 +67,9 @@ class SequelizeThroughModel extends SequelizeBaseModel {
   indices() {
     return [
       {
-        fields: [this.foreignKey(), this.targetKey()],
+        fields: [this.foreignKey(), this.targetKey()].map(attribute => ({
+          attribute,
+        })),
         name: 'composite primary_alias',
         unique: true,
       },

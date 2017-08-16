@@ -23,7 +23,14 @@ module.exports = (sequelize, DataTypes) => {
       collate: 'utf8mb4_unicode_ci',
       indexes: [
         {
-          fields: ['buff_visual_row', 'preload_group_row'],
+          fields: [
+            {
+              attribute: 'buff_visual_row',
+            },
+            {
+              attribute: 'preload_group_row',
+            },
+          ],
           name: 'composite primary_alias',
           unique: true,
         },

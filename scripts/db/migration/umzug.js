@@ -97,10 +97,6 @@ const cmdResetMeta = () => {
   return model.sync({ force: true });
 };
 
-const cmdResetHard = () => {
-  return sequelize.drop();
-};
-
 const cmd = process.argv[2].trim().toLowerCase();
 let executedCmd;
 
@@ -132,10 +128,6 @@ switch (cmd) {
 
   case 'reset-meta':
     executedCmd = cmdResetMeta();
-    break;
-
-  case 'reset-hard':
-    executedCmd = cmdResetHard();
     break;
 
   default:

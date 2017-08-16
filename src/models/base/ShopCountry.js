@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
-        allowNull: true,
+        allowNull: false,
         $col_order: -1,
       },
       country_two_letter_code: {

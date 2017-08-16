@@ -37,12 +37,16 @@ const all_records = require('../../data/records.json');
         model => model.DAT_FILE === dat_file,
       );
 
-      const records_as_obj = records.map((record, row) => {
+      const records_as_obj = records.slice(0, 1).map((record, row) => {
         return buildAttrObj(record, model, { row });
       });
 
+      const fields = Object.keys(records_as_obj[0]);
+
       const inserted = await model.bulkCreate(records_as_obj, {
-        ignoreDuplicates: true,
+        fields,
+        ignoreDuplicates: false,
+        updateOnDuplicate: fields,
       });
       const affected_rows = inserted.length;
 
@@ -69,11 +73,13 @@ const all_records = require('../../data/records.json');
         },
         {},
       );
-
+      continue;
       // create entries in the Through models
       for (const assoc in many_to_many_records) {
         const assocs_as_obj = many_to_many_records[assoc];
         const assoc_model = model.associations[assoc].through.model;
+
+        const fields = Object.keys(assocs_as_obj[0]);
 
         // chunk or we will get packet to large
         const inserts = bulkChunkCreate(
@@ -81,7 +87,8 @@ const all_records = require('../../data/records.json');
           assocs_as_obj,
           MAX_PACKET_SIZE,
           {
-            ignoreDuplicates: true,
+            fields,
+            ignoreDuplicates: false,
             // keep this as simple as possible
             // these are just join models so we are cutting it a bit loose to
             // be fast
@@ -90,6 +97,7 @@ const all_records = require('../../data/records.json');
             // not documented but according to stackoverflow this
             // will skip building every single object
             raw: true,
+            updateOnDuplicate: fields,
           },
         );
 

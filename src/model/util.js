@@ -42,17 +42,28 @@ const foreignKeys = model => {
 const nonCircularAssociations = model =>
   findAssociations(model, 'BelongsTo', 'BelongsToMany');
 
-const buildAttrObj = (record, model, init = {}) => {
-  return Object.entries(
-    model.attributes,
-  ).reduce((attributes, [attribute, props]) => {
-    const index = props['$col_order'];
-    // there shouldnt be any index error but for now we will blindly run into one
-    // -1 is only used for primary attr
-    if (index !== undefined && index !== -1) {
-      const value = record[index];
+const findAttrForColOrder = (attributes, col_order) => {
+  return Object.values(attributes).find(
+    attribute => attribute.$col_order === col_order,
+  );
+};
 
-      attributes[attribute] = Array.isArray(value) ? value.join(',') : value;
+const buildAttrObj = (record, model, init = {}) => {
+  return record.reduce((attributes, value, index) => {
+    const attribute = findAttrForColOrder(model.attributes, index);
+
+    if (attribute !== undefined) {
+      attributes[attribute.fieldName] = Array.isArray(value)
+        ? value.join(',')
+        : value;
+    } else {
+      console.warn(
+        'could not find target field for',
+        record,
+        index,
+        'in',
+        model,
+      );
     }
 
     return attributes;

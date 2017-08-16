@@ -14,7 +14,7 @@ const umzug = new Umzug({
       sequelize.constructor, // DataTypes
     ],
     path: path.join(__dirname, '../../../src/migrations'),
-    pattern: /^\d+-.*\.js$/,
+    pattern: /^.*-v\d\d\d\.js$/,
   },
   logging: console.log,
 });
@@ -91,6 +91,12 @@ const cmdResetPrev = () => {
   });
 };
 
+const cmdResetMeta = () => {
+  const model = sequelize.models[umzug.storage.modelName];
+
+  return model.sync({ force: true });
+};
+
 const cmd = process.argv[2].trim().toLowerCase();
 let executedCmd;
 
@@ -118,6 +124,10 @@ switch (cmd) {
   case 'prev':
   case 'reset-prev':
     executedCmd = cmdResetPrev();
+    break;
+
+  case 'reset-meta':
+    executedCmd = cmdResetMeta();
     break;
 
   default:

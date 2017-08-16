@@ -32,6 +32,7 @@ const objToAst = obj => {
   }
 };
 
+// all this calls must return promises
 const functionStatement = (name, args) => {
   return t.expressionStatement(
     t.callExpression(
@@ -86,6 +87,17 @@ const removeIndex = ({ tableName, attributes }) => {
   );
 };
 
+const changeColumn = ({ tableName, attributeName, after }) => {
+  return functionStatement(
+    'changeColumn',
+    [
+      tableName,
+      attributeName,
+      Object.assign({}, after, { type: dataTypeProperty(after.type) }),
+    ].map(objToAst),
+  );
+};
+
 const actionToStatement = action => {
   switch (action.type) {
     case ACTIONS.CREATE_TABLE:
@@ -96,6 +108,8 @@ const actionToStatement = action => {
       return addIndex(action);
     case ACTIONS.REMOVE_INDEX:
       return removeIndex(action);
+    case ACTIONS.CHANGE_COLUMN:
+      return changeColumn(action);
     default:
       throw new Error(`unrecognized type ${action.type}`);
   }

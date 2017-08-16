@@ -13,7 +13,7 @@
         }
       },
       "id": {
-        "allowNull": false,
+        "allowNull": true,
         "primaryKey": false,
         "type": {
           "constructor": "TEXT",

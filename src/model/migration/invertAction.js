@@ -10,6 +10,11 @@ const invertAction = action => {
       return Object.assign({}, action, { type: ACTIONS.REMOVE_INDEX });
     case ACTIONS.REMOVE_INDEX:
       return Object.assign({}, action, { type: ACTIONS.ADD_INDEX });
+    case ACTIONS.CHANGE_COLUMN:
+      return Object.assign({}, action, {
+        before: action.after,
+        after: action.before,
+      });
     default:
       throw new Error(`unrecognized type ${action.type}`);
   }

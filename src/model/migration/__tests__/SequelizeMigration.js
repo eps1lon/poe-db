@@ -164,3 +164,57 @@ it('should be able to invert remove indices', () => {
     indexName: 'index_achievement_sets_display_key',
   });
 });
+
+it('should recognize changed columns', () => {
+  const up = migration.changeColumn();
+
+  expect(up.length).toBe(1);
+
+  expect(up[0]).toMatchObject({
+    type: 'change-column',
+    tableName: 'achievements',
+    attributeName: 'id',
+    before: {
+      allowNull: false,
+      primaryKey: false,
+      type: {
+        constructor: 'TEXT',
+        options: {},
+      },
+    },
+    after: {
+      allowNull: true,
+      primaryKey: false,
+      type: {
+        constructor: 'TEXT',
+        options: {},
+      },
+    },
+  });
+});
+
+it('should be able to invert changeColumns', () => {
+  const up = migration.changeColumn();
+
+  expect(invertAction(up[0])).toMatchObject({
+    type: 'change-column',
+    tableName: 'achievements',
+    attributeName: 'id',
+    after: {
+      allowNull: false,
+      primaryKey: false,
+      type: {
+        constructor: 'TEXT',
+        options: {},
+      },
+    },
+    before: {
+      allowNull: true,
+      primaryKey: false,
+      type: {
+        constructor: 'TEXT',
+        options: {},
+      },
+    },
+  });
+});

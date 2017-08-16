@@ -1,9 +1,27 @@
 const t = require('babel-types');
+const _ = require('lodash');
 
 const actionToStatement = require('./actionToStatement');
 
 const QUERY_INTERFACE = t.identifier('queryInterface');
 const SEQUELIZE = t.identifier('Sequelize');
+
+const promiseAllCall = promise_expressions => {
+  return t.callExpression(
+    t.memberExpression(t.identifier('Promise'), t.identifier('all')),
+    [t.arrayExpression(promise_expressions)],
+  );
+};
+
+const chunkAwaitPromiseCalls = (promise_calls, size) => {
+  return _.chunk(promise_calls, size).map(chunk => {
+    return t.expressionStatement(
+      t.awaitExpression(
+        promiseAllCall(chunk.map(({ expression }) => expression)),
+      ),
+    );
+  });
+};
 
 class MigrationAst {
   constructor(migration) {
@@ -35,18 +53,20 @@ class MigrationAst {
     return t.arrowFunctionExpression(
       [QUERY_INTERFACE, SEQUELIZE],
       t.blockStatement(body),
+      true, // async
     );
   }
 
   up() {
+    // await chunks or migrations like 3.0.0.c-v002 get timed out
     return this.skeletonMethodExpression(
-      this.migration.up().map(actionToStatement),
+      chunkAwaitPromiseCalls(this.migration.up().map(actionToStatement), 500),
     );
   }
 
   down() {
     return this.skeletonMethodExpression(
-      this.migration.down().map(actionToStatement),
+      chunkAwaitPromiseCalls(this.migration.down().map(actionToStatement), 500),
     );
   }
 }

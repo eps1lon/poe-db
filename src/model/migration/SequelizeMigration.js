@@ -20,6 +20,56 @@ const newIndices = (prev_schema, schema) => {
   });
 };
 
+const intersectObjectByKeys = (prev, cur) => {
+  return _.pickBy(cur, (value, key) => prev[key] !== undefined);
+};
+
+const diffAttribute = (prev, cur) => {
+  // simple diff on primitives
+  const changes = Object.entries(cur)
+    .filter(([key, value]) => {
+      return (
+        !_.isObject(value) && !_.isObject(prev[key]) && value !== prev[key]
+      );
+    })
+    .map(([key]) => key);
+
+  return _.pick(cur, changes);
+};
+
+const isDiffAttr = (prev, cur) => {
+  return (
+    prev === undefined || Object.values(diffAttribute(prev, cur)).length > 0
+  );
+};
+
+const changedColumns = (prev_schema, schema) => {
+  const common_schemas = intersectObjectByKeys(prev_schema, schema);
+
+  return _.flatten(
+    Object.entries(common_schemas).map(([model_name, model]) => {
+      const prev_attributes = prev_schema[model_name].attributes;
+
+      // keep hole attribute defintion because sequelize needs it
+      // http://docs.sequelizejs.com/manual/tutorial/migrations.html#changeColumn
+      const attribute_changes = Object.entries(
+        model.attributes,
+      ).filter(([attribute_name, attribute]) =>
+        isDiffAttr(prev_attributes[attribute_name], attribute),
+      );
+
+      // normalize
+      return Array(attribute_changes.length).fill(0).map((_, i) => {
+        return {
+          model_name,
+          attribute_name: attribute_changes[i][0],
+          attribute: attribute_changes[i][1],
+        };
+      });
+    }),
+  );
+};
+
 class MigrationAst {
   constructor(prev_schema, schema) {
     this.prev_schema = prev_schema;
@@ -99,7 +149,18 @@ class MigrationAst {
   }
 
   changeColumn() {
-    return []; // TODO
+    return changedColumns(
+      this.prev_schema,
+      this.schema,
+    ).map(({ model_name, attribute_name, attribute }) => {
+      return {
+        type: ACTIONS.CHANGE_COLUMN,
+        tableName: this.schema[model_name].tableName,
+        attributeName: attribute_name,
+        after: attribute,
+        before: this.prev_schema[model_name].attributes[attribute_name],
+      };
+    });
   }
 }
 

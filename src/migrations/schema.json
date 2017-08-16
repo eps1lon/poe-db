@@ -3,7 +3,7 @@
     "tableName": "achievements",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -131,7 +131,7 @@
     "tableName": "achievement_items",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -233,7 +233,7 @@
     "tableName": "achievement_sets",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -268,7 +268,7 @@
     "tableName": "achievement_set_rewards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -356,7 +356,7 @@
     "tableName": "achievement_sets_displays",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -407,7 +407,7 @@
     "tableName": "active_skills",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -820,7 +820,7 @@
     "tableName": "active_skill_target_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -855,7 +855,7 @@
     "tableName": "active_skill_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -890,7 +890,7 @@
     "tableName": "armour_classes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -925,7 +925,7 @@
     "tableName": "armour_surface_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -960,7 +960,7 @@
     "tableName": "armour_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1015,7 +1015,7 @@
     "tableName": "ascendancies",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1126,7 +1126,7 @@
     "tableName": "atlas_nodes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1361,7 +1361,7 @@
     "tableName": "atlas_quest_items",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1459,7 +1459,7 @@
     "tableName": "attributes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1494,7 +1494,7 @@
     "tableName": "backend_errors",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -1545,7 +1545,7 @@
     "tableName": "base_item_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2435,7 +2435,7 @@
     "tableName": "beyond_demons",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2504,7 +2504,7 @@
     "tableName": "bindable_virtual_keys",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2563,7 +2563,7 @@
     "tableName": "blood_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -2716,7 +2716,7 @@
     "tableName": "bloodlines",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3139,7 +3139,7 @@
     "tableName": "buff_categories",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3174,7 +3174,7 @@
     "tableName": "buff_definitions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3516,7 +3516,7 @@
     "tableName": "buff_groups",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3551,7 +3551,7 @@
     "tableName": "buff_merge_modes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3586,7 +3586,7 @@
     "tableName": "buff_visuals",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3794,7 +3794,7 @@
     "tableName": "buff_visual_orb_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -3829,7 +3829,7 @@
     "tableName": "characters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4103,7 +4103,7 @@
     "tableName": "character_audio_events",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -4960,7 +4960,7 @@
     "tableName": "character_panel_description_modes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5027,7 +5027,7 @@
     "tableName": "character_panel_stats",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5153,7 +5153,7 @@
     "tableName": "character_panel_stat_contexts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5428,7 +5428,7 @@
     "tableName": "character_panel_tabs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5487,7 +5487,7 @@
     "tableName": "character_start_items",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -5816,7 +5816,7 @@
     "tableName": "character_start_quest_states",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6057,7 +6057,7 @@
     "tableName": "character_start_states",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6530,7 +6530,7 @@
     "tableName": "character_start_state_sets",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6573,7 +6573,7 @@
     "tableName": "character_text_audios",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6632,7 +6632,7 @@
     "tableName": "chests",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -6917,7 +6917,7 @@
     "tableName": "chest_clusters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7079,7 +7079,7 @@
     "tableName": "chest_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7378,7 +7378,7 @@
     "tableName": "client_strings",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7429,7 +7429,7 @@
     "tableName": "clone_shot_variations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7492,7 +7492,7 @@
     "tableName": "commands",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7558,7 +7558,7 @@
     "tableName": "component_armours",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7636,7 +7636,7 @@
     "tableName": "component_attribute_requirements",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7714,7 +7714,7 @@
     "tableName": "component_charges",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7784,7 +7784,7 @@
     "tableName": "cooldown_bypass_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7819,7 +7819,7 @@
     "tableName": "cooldown_groups",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7854,7 +7854,7 @@
     "tableName": "crafting_bench_custom_actions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -7889,7 +7889,7 @@
     "tableName": "crafting_bench_options",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8235,7 +8235,7 @@
     "tableName": "currency_items",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8502,7 +8502,7 @@
     "tableName": "currency_stash_tab_layouts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8605,7 +8605,7 @@
     "tableName": "currency_use_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8640,7 +8640,7 @@
     "tableName": "daily_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8857,7 +8857,7 @@
     "tableName": "daily_overrides",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8920,7 +8920,7 @@
     "tableName": "damage_particle_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -8971,7 +8971,7 @@
     "tableName": "dances",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9045,7 +9045,7 @@
     "tableName": "daresso_pit_fights",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9159,7 +9159,7 @@
     "tableName": "defaults",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9194,7 +9194,7 @@
     "tableName": "default_monster_stats",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9305,7 +9305,7 @@
     "tableName": "descent_exiles",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -9414,7 +9414,7 @@
     "tableName": "descent_reward_chests",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10695,7 +10695,7 @@
     "tableName": "descent_starter_chests",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -10804,7 +10804,7 @@
     "tableName": "dex_int_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11009,7 +11009,7 @@
     "tableName": "dex_int_mission_guards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11096,7 +11096,7 @@
     "tableName": "dex_int_mission_guard_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11260,7 +11260,7 @@
     "tableName": "dex_int_mission_targets",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11339,7 +11339,7 @@
     "tableName": "dex_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11446,7 +11446,7 @@
     "tableName": "dex_mission_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11554,7 +11554,7 @@
     "tableName": "dex_mission_monsters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11815,7 +11815,7 @@
     "tableName": "dex_mission_trackings",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -11948,7 +11948,7 @@
     "tableName": "difficulties",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12023,7 +12023,7 @@
     "tableName": "display_minion_monster_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12086,7 +12086,7 @@
     "tableName": "divination_card_arts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12149,7 +12149,7 @@
     "tableName": "divination_card_stash_tab_layouts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12211,7 +12211,7 @@
     "tableName": "drop_pools",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12262,7 +12262,7 @@
     "tableName": "eclipse_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12444,7 +12444,7 @@
     "tableName": "effectivenesses",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12479,7 +12479,7 @@
     "tableName": "effectiveness_cost_constants",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12514,7 +12514,7 @@
     "tableName": "endless_ledge_chests",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12672,7 +12672,7 @@
     "tableName": "environments",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -12771,7 +12771,7 @@
     "tableName": "essences",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -13895,7 +13895,7 @@
     "tableName": "essence_stash_tab_layouts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14005,7 +14005,7 @@
     "tableName": "essence_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14083,7 +14083,7 @@
     "tableName": "event_seasons",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14142,7 +14142,7 @@
     "tableName": "event_season_rewards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14213,7 +14213,7 @@
     "tableName": "experience_levels",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14274,7 +14274,7 @@
     "tableName": "exploding_storm_buffs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14540,7 +14540,7 @@
     "tableName": "extra_terrain_features",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14639,7 +14639,7 @@
     "tableName": "extra_terrain_feature_families",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14674,7 +14674,7 @@
     "tableName": "flasks",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14796,7 +14796,7 @@
     "tableName": "flask_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14831,7 +14831,7 @@
     "tableName": "flavour_texts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14890,7 +14890,7 @@
     "tableName": "footprints",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -14949,7 +14949,7 @@
     "tableName": "game_constants",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15000,7 +15000,7 @@
     "tableName": "gem_tags",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15051,7 +15051,7 @@
     "tableName": "gem_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15086,7 +15086,7 @@
     "tableName": "global_audio_configs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15144,7 +15144,7 @@
     "tableName": "global_quest_flags",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15179,7 +15179,7 @@
     "tableName": "grandmasters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15340,7 +15340,7 @@
     "tableName": "granted_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15512,7 +15512,7 @@
     "tableName": "granted_effect_groups",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -15547,7 +15547,7 @@
     "tableName": "granted_effects_per_levels",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16095,7 +16095,7 @@
     "tableName": "hideouts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16223,7 +16223,7 @@
     "tableName": "hideout_doodads",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16352,7 +16352,7 @@
     "tableName": "hideout_interactables",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16415,7 +16415,7 @@
     "tableName": "impact_sound_data",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16498,7 +16498,7 @@
     "tableName": "int_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16721,7 +16721,7 @@
     "tableName": "int_mission_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -16913,7 +16913,7 @@
     "tableName": "int_mission_monsters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17154,7 +17154,7 @@
     "tableName": "invasion_monster_groups",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17189,7 +17189,7 @@
     "tableName": "invasion_monster_restrictions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17347,7 +17347,7 @@
     "tableName": "invasion_monster_roles",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17382,7 +17382,7 @@
     "tableName": "invasion_monsters_per_areas",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17659,7 +17659,7 @@
     "tableName": "item_classes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17718,7 +17718,7 @@
     "tableName": "item_experience_per_levels",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17789,7 +17789,7 @@
     "tableName": "item_themes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17840,7 +17840,7 @@
     "tableName": "item_visual_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -17994,7 +17994,7 @@
     "tableName": "item_visual_identities",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18527,7 +18527,7 @@
     "tableName": "itemised_visual_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18686,7 +18686,7 @@
     "tableName": "killstreak_thresholds",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -18768,7 +18768,7 @@
     "tableName": "labyrinth_areas",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19159,7 +19159,7 @@
     "tableName": "labyrinth_exclusion_groups",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19202,7 +19202,7 @@
     "tableName": "labyrinth_izaro_chests",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19289,7 +19289,7 @@
     "tableName": "labyrinth_ladder_rewards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19342,7 +19342,7 @@
     "tableName": "labyrinth_node_overrides",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19409,7 +19409,7 @@
     "tableName": "labyrinth_rewards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19504,7 +19504,7 @@
     "tableName": "labyrinth_secrets",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -19701,7 +19701,7 @@
     "tableName": "labyrinth_secret_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20119,7 +20119,7 @@
     "tableName": "labyrinth_secret_locations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20154,7 +20154,7 @@
     "tableName": "labyrinth_sections",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20228,7 +20228,7 @@
     "tableName": "labyrinth_section_layouts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20470,7 +20470,7 @@
     "tableName": "labyrinth_trinkets",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20571,7 +20571,7 @@
     "tableName": "league_categories",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20606,7 +20606,7 @@
     "tableName": "league_flags",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20657,7 +20657,7 @@
     "tableName": "league_quest_flags",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20692,7 +20692,7 @@
     "tableName": "league_trophies",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20727,7 +20727,7 @@
     "tableName": "maps",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -20971,7 +20971,7 @@
     "tableName": "map_connections",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21085,7 +21085,7 @@
     "tableName": "map_device_recipes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21480,7 +21480,7 @@
     "tableName": "map_inhabitants",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -21543,7 +21543,7 @@
     "tableName": "map_pins",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22064,7 +22064,7 @@
     "tableName": "map_stash_tab_layouts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22099,7 +22099,7 @@
     "tableName": "micro_migration_data",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22182,7 +22182,7 @@
     "tableName": "microtransaction_character_portrait_variations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22217,7 +22217,7 @@
     "tableName": "microtransaction_fireworks_variations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22287,7 +22287,7 @@
     "tableName": "microtransaction_portal_variations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22358,7 +22358,7 @@
     "tableName": "microtransaction_slot_ids",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22393,7 +22393,7 @@
     "tableName": "microtransaction_social_frame_variations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22448,7 +22448,7 @@
     "tableName": "minimap_icons",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22528,7 +22528,7 @@
     "tableName": "misc_animateds",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22674,7 +22674,7 @@
     "tableName": "misc_beams",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22830,7 +22830,7 @@
     "tableName": "misc_objects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -22984,7 +22984,7 @@
     "tableName": "mission_tile_maps",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23145,7 +23145,7 @@
     "tableName": "mission_transition_tiles",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23220,7 +23220,7 @@
     "tableName": "mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23665,7 +23665,7 @@
     "tableName": "mod_aura_flags",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23700,7 +23700,7 @@
     "tableName": "mod_domains",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23735,7 +23735,7 @@
     "tableName": "mod_families",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -23770,7 +23770,7 @@
     "tableName": "mod_generation_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24065,7 +24065,7 @@
     "tableName": "mod_sell_prices",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24207,7 +24207,7 @@
     "tableName": "mod_sell_price_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24250,7 +24250,7 @@
     "tableName": "mod_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24380,7 +24380,7 @@
     "tableName": "monster_additional_monster_drops",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24443,7 +24443,7 @@
     "tableName": "monster_armours",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24494,7 +24494,7 @@
     "tableName": "monster_behaviors",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24529,7 +24529,7 @@
     "tableName": "monster_flee_conditions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24564,7 +24564,7 @@
     "tableName": "monster_group_entries",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24635,7 +24635,7 @@
     "tableName": "monster_group_names",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24670,7 +24670,7 @@
     "tableName": "monster_map_boss_difficulties",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24822,7 +24822,7 @@
     "tableName": "monster_map_difficulties",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -24974,7 +24974,7 @@
     "tableName": "monster_packs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25101,7 +25101,7 @@
     "tableName": "monster_pack_entries",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25438,7 +25438,7 @@
     "tableName": "monster_resistances",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25577,7 +25577,7 @@
     "tableName": "monster_scaling_by_levels",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25612,7 +25612,7 @@
     "tableName": "monster_segments",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25663,7 +25663,7 @@
     "tableName": "monster_sizes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25698,7 +25698,7 @@
     "tableName": "monster_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -25895,7 +25895,7 @@
     "tableName": "monster_varieties",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28199,7 +28199,7 @@
     "tableName": "music",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28250,7 +28250,7 @@
     "tableName": "mystery_boxes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28305,7 +28305,7 @@
     "tableName": "mystery_packs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28340,7 +28340,7 @@
     "tableName": "mystery_pack_items",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28375,7 +28375,7 @@
     "tableName": "n_p_cs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28543,7 +28543,7 @@
     "tableName": "n_p_c_audios",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28602,7 +28602,7 @@
     "tableName": "n_p_c_masters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -28797,7 +28797,7 @@
     "tableName": "n_p_c_master_experience_per_levels",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -29154,7 +29154,7 @@
     "tableName": "n_p_c_shops",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -29335,7 +29335,7 @@
     "tableName": "n_p_c_talks",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -29606,7 +29606,7 @@
     "tableName": "n_p_c_talk_categories",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -29721,7 +29721,7 @@
     "tableName": "n_p_c_text_audios",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -29822,7 +29822,7 @@
     "tableName": "normal_difficulty_master_weights",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -29897,7 +29897,7 @@
     "tableName": "notifications",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -29985,7 +29985,7 @@
     "tableName": "old_map_stash_tab_layouts",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30020,7 +30020,7 @@
     "tableName": "orientations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30055,7 +30055,7 @@
     "tableName": "p_v_p_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30090,7 +30090,7 @@
     "tableName": "passive_jewel_slots",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30145,7 +30145,7 @@
     "tableName": "passive_skills",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30654,7 +30654,7 @@
     "tableName": "path_of_endurances",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30832,7 +30832,7 @@
     "tableName": "per_level_values",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30867,7 +30867,7 @@
     "tableName": "perandus_bosses",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -30946,7 +30946,7 @@
     "tableName": "perandus_chests",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31033,7 +31033,7 @@
     "tableName": "perandus_daemons",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31143,7 +31143,7 @@
     "tableName": "perandus_guards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31321,7 +31321,7 @@
     "tableName": "pets",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31408,7 +31408,7 @@
     "tableName": "preload_groups",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31451,7 +31451,7 @@
     "tableName": "preload_priorities",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31486,7 +31486,7 @@
     "tableName": "projectiles",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31598,7 +31598,7 @@
     "tableName": "projectile_variations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31661,7 +31661,7 @@
     "tableName": "prophecies",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31817,7 +31817,7 @@
     "tableName": "prophecy_chains",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -31972,7 +31972,7 @@
     "tableName": "prophecy_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32023,7 +32023,7 @@
     "tableName": "quests",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32179,7 +32179,7 @@
     "tableName": "quest_achievements",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32283,7 +32283,7 @@
     "tableName": "quest_flags",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32318,7 +32318,7 @@
     "tableName": "quest_rewards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32494,7 +32494,7 @@
     "tableName": "quest_states",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32817,7 +32817,7 @@
     "tableName": "quest_static_rewards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -32942,7 +32942,7 @@
     "tableName": "quest_vendor_rewards",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33194,7 +33194,7 @@
     "tableName": "races",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33292,7 +33292,7 @@
     "tableName": "race_areas",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33469,7 +33469,7 @@
     "tableName": "race_times",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33548,7 +33548,7 @@
     "tableName": "random_unique_monsters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33599,7 +33599,7 @@
     "tableName": "rarities",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33634,7 +33634,7 @@
     "tableName": "realms",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33740,7 +33740,7 @@
     "tableName": "relative_importance_constants",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33775,7 +33775,7 @@
     "tableName": "rogue_exiles",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33837,7 +33837,7 @@
     "tableName": "runic_circles",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33912,7 +33912,7 @@
     "tableName": "shield_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -33975,7 +33975,7 @@
     "tableName": "shop_categories",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34078,7 +34078,7 @@
     "tableName": "shop_countries",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34149,7 +34149,7 @@
     "tableName": "shop_currencies",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34200,7 +34200,7 @@
     "tableName": "shop_items",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34519,7 +34519,7 @@
     "tableName": "shop_item_prices",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34601,7 +34601,7 @@
     "tableName": "shop_payment_packages",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34766,7 +34766,7 @@
     "tableName": "shop_payment_package_items",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34875,7 +34875,7 @@
     "tableName": "shop_payment_package_prices",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -34957,7 +34957,7 @@
     "tableName": "shop_regions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35000,7 +35000,7 @@
     "tableName": "shop_tokens",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35059,7 +35059,7 @@
     "tableName": "shrines",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35296,7 +35296,7 @@
     "tableName": "shrine_buffs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35457,7 +35457,7 @@
     "tableName": "shrine_sounds",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35516,7 +35516,7 @@
     "tableName": "skill_gems",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35727,7 +35727,7 @@
     "tableName": "skill_totems",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35762,7 +35762,7 @@
     "tableName": "skill_totem_variations",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35844,7 +35844,7 @@
     "tableName": "sound_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -35910,7 +35910,7 @@
     "tableName": "stats",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36073,7 +36073,7 @@
     "tableName": "stat_description_functions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36108,7 +36108,7 @@
     "tableName": "stat_semantics",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36143,7 +36143,7 @@
     "tableName": "str_dex_int_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36324,7 +36324,7 @@
     "tableName": "str_dex_int_mission_extra_requirements",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36616,7 +36616,7 @@
     "tableName": "str_dex_int_mission_maps",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36782,7 +36782,7 @@
     "tableName": "str_dex_int_mission_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -36943,7 +36943,7 @@
     "tableName": "str_dex_int_mission_unique_maps",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37206,7 +37206,7 @@
     "tableName": "str_dex_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37365,7 +37365,7 @@
     "tableName": "str_dex_mission_archetypes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37692,7 +37692,7 @@
     "tableName": "str_dex_mission_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -37846,7 +37846,7 @@
     "tableName": "str_dex_mission_special_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38010,7 +38010,7 @@
     "tableName": "str_int_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38343,7 +38343,7 @@
     "tableName": "str_int_mission_monster_waves",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38567,7 +38567,7 @@
     "tableName": "str_int_mission_relic_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38735,7 +38735,7 @@
     "tableName": "str_int_mission_relic_patterns",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -38927,7 +38927,7 @@
     "tableName": "str_map_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39014,7 +39014,7 @@
     "tableName": "str_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39162,7 +39162,7 @@
     "tableName": "str_mission_bosses",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39329,7 +39329,7 @@
     "tableName": "str_mission_map_mod_numbers",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39412,7 +39412,7 @@
     "tableName": "str_mission_spirit_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39572,7 +39572,7 @@
     "tableName": "str_mission_spirit_secondary_effects",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39695,7 +39695,7 @@
     "tableName": "strongboxes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39773,7 +39773,7 @@
     "tableName": "summoned_specific_barrels",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39864,7 +39864,7 @@
     "tableName": "summoned_specific_monsters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -39945,7 +39945,7 @@
     "tableName": "summoned_specific_monsters_on_deaths",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40044,7 +40044,7 @@
     "tableName": "supporter_pack_sets",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40119,7 +40119,7 @@
     "tableName": "tags",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40172,7 +40172,7 @@
     "tableName": "talismans",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40304,7 +40304,7 @@
     "tableName": "talisman_monster_mods",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40365,7 +40365,7 @@
     "tableName": "talisman_packs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40582,7 +40582,7 @@
     "tableName": "terrain_plugins",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40633,7 +40633,7 @@
     "tableName": "tips",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40684,7 +40684,7 @@
     "tableName": "topologies",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -40779,7 +40779,7 @@
     "tableName": "torment_spirits",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41320,7 +41320,7 @@
     "tableName": "trigger_spawners",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41394,7 +41394,7 @@
     "tableName": "unique_chests",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41630,7 +41630,7 @@
     "tableName": "unique_jewel_limits",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41683,7 +41683,7 @@
     "tableName": "unique_sets",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41769,7 +41769,7 @@
     "tableName": "unique_set_names",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41804,7 +41804,7 @@
     "tableName": "vote_states",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41855,7 +41855,7 @@
     "tableName": "vote_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41930,7 +41930,7 @@
     "tableName": "warbands_graphs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -41993,7 +41993,7 @@
     "tableName": "warbands_map_graphs",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42056,7 +42056,7 @@
     "tableName": "warbands_pack_monsters",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42527,7 +42527,7 @@
     "tableName": "warbands_pack_numbers",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42650,7 +42650,7 @@
     "tableName": "weapon_armour_commons",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42685,7 +42685,7 @@
     "tableName": "weapon_classes",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42720,7 +42720,7 @@
     "tableName": "weapon_damage_scalings",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42755,7 +42755,7 @@
     "tableName": "weapon_impact_sound_data",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42838,7 +42838,7 @@
     "tableName": "weapon_sound_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42873,7 +42873,7 @@
     "tableName": "weapon_types",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -42976,7 +42976,7 @@
     "tableName": "words",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -43149,7 +43149,7 @@
     "tableName": "wordlists",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -43184,7 +43184,7 @@
     "tableName": "world_areas",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",
@@ -44839,7 +44839,7 @@
     "tableName": "x_p_per_level_for_missions",
     "attributes": {
       "row": {
-        "allowNull": true,
+        "allowNull": false,
         "primaryKey": true,
         "type": {
           "constructor": "BIGINT",

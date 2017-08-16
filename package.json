@@ -10,11 +10,7 @@
   "author": "eps1lon",
   "license": "MIT",
   "scripts": {
-    "db:drop": "node scripts/db/drop",
-    "db:create": "node scripts/db/create",
     "db:insert": "node scripts/db/insert",
-    "db:build": "yarn run db:create && yarn run db:insert",
-    "db:rebuild": "yarn run db:drop && yarn run db:build",
     "db:refill": "yarn run db:truncate && yarn run db:insert",
     "db:schema": "node --trace-warnings scripts/db/schema",
     "db:truncate": "node scripts/db/truncate",

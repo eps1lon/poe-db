@@ -102,7 +102,10 @@ Promise.all([loadSchema('schema'), loadSchema('prev-schema')])
     if (removed.length > 0) {
       console.warn(
         'some columns were removed. Please verify if those were not actually just renamed',
-        removed,
+        removed.map(({ tableName, attributeName }) => ({
+          tableName,
+          attributeName,
+        })),
       );
     }
 

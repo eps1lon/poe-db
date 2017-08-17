@@ -1,13 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+const format = require('prettier-eslint');
 const generate = require('babel-core').transformFromAst;
 
 const Migration = require('../../../src/model/migration/SequelizeMigration');
 const MigrationAst = require('../../../src/model/migration/MigrationAst');
 
 const MIGRATION_PATH = path.join(__dirname, '../../../src/migrations');
-
-const migration_name = process.argv[2] || '';
 
 const withUUIDSuffix = (dir, prefix, extension, { pad_length }) => {
   const delim = '-';
@@ -62,7 +61,12 @@ const writeAst = async astable => {
       pad_length: 3,
     });
 
-    fs.writeFileSync(path.join(MIGRATION_PATH, filename), generate(ast).code);
+    const { code } = generate(ast);
+
+    fs.writeFileSync(
+      path.join(MIGRATION_PATH, filename),
+      format({ text: code }),
+    );
 
     return filename;
   } catch (err) {

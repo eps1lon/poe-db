@@ -112,12 +112,9 @@ class MigrationAst {
   up() {
     return [
       ...this.createTable(),
-      ...this.addIndex(),
-      ...this.removeColumn(),
-      ...this.addColumn(),
-      ...this.changeColumn(),
       // drop possible key constraints before dropping tables
-      ...this.dropIndex(),
+      ...this.indexChanges(),
+      ...this.columnChanges(),
       ...this.dropTable(),
     ];
   }
@@ -153,6 +150,25 @@ class MigrationAst {
       });
   }
 
+  indexChanges() {
+    const added = this.addIndex();
+    const removed = this.dropIndex();
+
+    // ordered merge
+    return [...removed, ...added].sort((a, b) => {
+      // order by tableName, (REMOVED, ADDED), indexName
+      if (a.tableName === b.tableName) {
+        if (a.type === b.type) {
+          return a.indexName.localeCompare(b.indexName);
+        } else {
+          return a.type === ACTIONS.REMOVE_INDEX ? -1 : 1;
+        }
+      } else {
+        return a.tableName.localeCompare(b.tableName);
+      }
+    });
+  }
+
   addIndex() {
     return _.flatten(
       newIndices(this.prev_schema, this.schema).map(([model, indices]) => {
@@ -181,6 +197,31 @@ class MigrationAst {
         });
       }),
     );
+  }
+
+  columnChanges() {
+    const type_order = [
+      ACTIONS.REMOVE_COLUMN,
+      ACTIONS.ADD_COLUMN,
+      ACTIONS.CHANGE_COLUMN,
+    ];
+
+    return [
+      ...this.addColumn(),
+      ...this.removeColumn(),
+      ...this.changeColumn(),
+    ].sort((a, b) => {
+      // order by tableName, (REMOVED, ADDED), indexName
+      if (a.tableName === b.tableName) {
+        if (a.type === b.type) {
+          return a.attributeName.localeCompare(b.attributeName);
+        } else {
+          return type_order.indexOf(a.type) - type_order.indexOf(b.type);
+        }
+      } else {
+        return a.tableName.localeCompare(b.tableName);
+      }
+    });
   }
 
   addColumn() {

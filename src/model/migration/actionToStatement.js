@@ -111,7 +111,7 @@ const addColumn = ({ tableName, attributeName, options }) => {
 
 const removeColumn = ({ tableName, attributeName }) => {
   return functionStatement(
-    'addColumn',
+    'removeColumn',
     [tableName, attributeName].map(objToAst),
   );
 };

@@ -83,7 +83,7 @@ const all_records = require('../../data/records.json');
         const assocs_as_obj = many_to_many_records[assoc];
         const assoc_model = model.associations[assoc].through.model;
 
-        const fields = Object.keys(assocs_as_obj[0]);
+        const fields = Object.keys(assocs_as_obj[0] || {});
 
         // chunk or we will get packet to large
         const inserts = bulkChunkCreate(

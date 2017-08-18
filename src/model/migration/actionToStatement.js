@@ -80,10 +80,10 @@ const addIndex = ({ tableName, attributes, indexName }) => {
   );
 };
 
-const removeIndex = ({ tableName, attributes }) => {
+const removeIndex = ({ tableName, attributes, indexName }) => {
   return functionStatement(
     'removeIndex',
-    [tableName, attributes].map(objToAst),
+    [tableName, attributes, { indexName }].map(objToAst),
   );
 };
 

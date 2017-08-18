@@ -56,13 +56,6 @@ const buildAttrObj = (record, model, init = {}) => {
       attributes[attribute.fieldName] = Array.isArray(value)
         ? value.join(',')
         : value;
-    } else if (!Array.isArray(value)) {
-      console.warn(
-        `could not find primitive target field ${index} for`,
-        Object.entries(record),
-        'in',
-        model.name,
-      );
     }
 
     return attributes;

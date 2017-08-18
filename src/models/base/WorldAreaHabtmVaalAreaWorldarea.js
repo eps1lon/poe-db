@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'world_area_habtm_vaal_area_worldareas',
+      tableName: 'world_area__vaal_area__world_areas',
       underscored: true,
     },
   );

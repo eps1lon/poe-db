@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'quest_static_reward_habtm_stats',
+      tableName: 'quest_static_reward__stats',
       underscored: true,
     },
   );

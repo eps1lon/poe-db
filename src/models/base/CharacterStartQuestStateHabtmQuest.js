@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'character_start_quest_state_habtm_quests',
+      tableName: 'character_start_quest_state__quests',
       underscored: true,
     },
   );

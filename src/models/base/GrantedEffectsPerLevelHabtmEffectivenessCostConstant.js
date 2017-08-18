@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'granted_effects_per_level_habtm_effectiveness_cost_constants',
+      tableName: 'granted_effects_per_level__effectiveness_cost_constants',
       underscored: true,
     },
   );

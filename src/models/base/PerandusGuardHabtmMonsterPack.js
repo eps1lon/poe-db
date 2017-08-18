@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'perandus_guard_habtm_monster_packs',
+      tableName: 'perandus_guard__monster_packs',
       underscored: true,
     },
   );

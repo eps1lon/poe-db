@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'n_p_c_master_habtm_achievement_items',
+      tableName: 'n_p_c_master__achievement_items',
       underscored: true,
     },
   );

@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'mod_habtm_generation_weight_tags',
+      tableName: 'mod__generation_weight__tags',
       underscored: true,
     },
   );

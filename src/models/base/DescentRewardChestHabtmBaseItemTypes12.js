@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'descent_reward_chest_habtm_base_item_types12s',
+      tableName: 'descent_reward_chest__base_item_types12s',
       underscored: true,
     },
   );

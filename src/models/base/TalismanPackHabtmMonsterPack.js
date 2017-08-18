@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'talisman_pack_habtm_monster_packs',
+      tableName: 'talisman_pack__monster_packs',
       underscored: true,
     },
   );

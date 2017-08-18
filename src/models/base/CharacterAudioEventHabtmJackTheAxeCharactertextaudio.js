@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'character_audio_event_habtm_jack_the_axe_charactertextaudios',
+      tableName: 'character_audio_event__jack_the_axe__character_text_audios',
       underscored: true,
     },
   );

@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'monster_pack_habtm_world_areas',
+      tableName: 'monster_pack__world_areas',
       underscored: true,
     },
   );

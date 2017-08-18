@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'character_start_item_habtm_socketed_skillgems',
+      tableName: 'character_start_item__socketed__skill_gems',
       underscored: true,
     },
   );

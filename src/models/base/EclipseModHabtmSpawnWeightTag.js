@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'eclipse_mod_habtm_spawn_weight_tags',
+      tableName: 'eclipse_mod__spawn_weight__tags',
       underscored: true,
     },
   );

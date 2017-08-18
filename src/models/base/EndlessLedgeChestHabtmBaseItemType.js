@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'endless_ledge_chest_habtm_base_item_types',
+      tableName: 'endless_ledge_chest__base_item_types',
       underscored: true,
     },
   );

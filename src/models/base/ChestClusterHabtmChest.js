@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'chest_cluster_habtm_chests',
+      tableName: 'chest_cluster__chests',
       underscored: true,
     },
   );

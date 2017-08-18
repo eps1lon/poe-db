@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'chest_habtm_tags',
+      tableName: 'chest__tags',
       underscored: true,
     },
   );

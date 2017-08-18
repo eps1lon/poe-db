@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'crafting_bench_option_habtm_item_classes',
+      tableName: 'crafting_bench_option__item_classes',
       underscored: true,
     },
   );

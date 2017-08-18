@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'n_p_c_shop_habtm_sold_item_tags',
+      tableName: 'n_p_c_shop__sold_item__tags',
       underscored: true,
     },
   );

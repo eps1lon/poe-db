@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'monster_variety_habtm_endgame_mods',
+      tableName: 'monster_variety__endgame__mods',
       underscored: true,
     },
   );

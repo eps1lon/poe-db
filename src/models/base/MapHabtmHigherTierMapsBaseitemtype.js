@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'map_habtm_higher_tier_maps_baseitemtypes',
+      tableName: 'map__higher_tier_maps__base_item_types',
       underscored: true,
     },
   );

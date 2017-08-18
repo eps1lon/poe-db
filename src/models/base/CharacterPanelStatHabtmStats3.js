@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'character_panel_stat_habtm_stats3s',
+      tableName: 'character_panel_stat__stats3s',
       underscored: true,
     },
   );

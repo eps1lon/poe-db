@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'bloodline_habtm_spawn_weight_tags',
+      tableName: 'bloodline__spawn_weight__tags',
       underscored: true,
     },
   );

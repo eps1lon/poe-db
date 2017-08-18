@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'environment_habtm_corrupted_musics',
+      tableName: 'environment__corrupted__musics',
       underscored: true,
     },
   );

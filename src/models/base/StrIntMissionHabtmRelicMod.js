@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'str_int_mission_habtm_relic_mods',
+      tableName: 'str_int_mission__relic_mods',
       underscored: true,
     },
   );

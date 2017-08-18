@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'base_item_type_habtm_magic_purchase_baseitemtypes',
+      tableName: 'base_item_type__magic_purchase__base_item_types',
       underscored: true,
     },
   );

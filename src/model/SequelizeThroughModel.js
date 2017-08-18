@@ -47,6 +47,17 @@ class SequelizeThroughModel extends SequelizeBaseModel {
     );
   }
 
+  tableName() {
+    // TODO strategy to shorten names to 64 chars
+    return tableize(
+      singularize(
+        this.sourceModelName() +
+          '_' +
+          this.from_field.name.replace(/Keys([0-9]*)$/, '$1'),
+      ),
+    );
+  }
+
   attributes() {
     return entriesToObj(
       this.cols().map(col => [
@@ -140,7 +151,7 @@ class SequelizeThroughModel extends SequelizeBaseModel {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: this.indices(),
-      tableName: tableize(this.name()),
+      tableName: this.tableName(),
       underscored: true,
     };
   }

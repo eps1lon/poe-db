@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'crafting_bench_option_habtm_cost_baseitemtypes',
+      tableName: 'crafting_bench_option__cost__base_item_types',
       underscored: true,
     },
   );

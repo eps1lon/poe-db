@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'map_device_recipe_habtm_base_item_types',
+      tableName: 'map_device_recipe__base_item_types',
       underscored: true,
     },
   );

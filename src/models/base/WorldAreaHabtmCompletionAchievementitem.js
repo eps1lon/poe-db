@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'world_area_habtm_completion_achievementitems',
+      tableName: 'world_area__completion__achievement_items',
       underscored: true,
     },
   );

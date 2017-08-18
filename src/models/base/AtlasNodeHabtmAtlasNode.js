@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'atlas_node_habtm_atlas_nodes',
+      tableName: 'atlas_node__atlas_nodes',
       underscored: true,
     },
   );

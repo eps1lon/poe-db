@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'active_skill_habtm_weapon_restriction_itemclasses',
+      tableName: 'active_skill__weapon_restriction__item_classes',
       underscored: true,
     },
   );

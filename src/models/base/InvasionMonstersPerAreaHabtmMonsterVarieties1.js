@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'invasion_monsters_per_area_habtm_monster_varieties1s',
+      tableName: 'invasion_monsters_per_area__monster_varieties1s',
       underscored: true,
     },
   );

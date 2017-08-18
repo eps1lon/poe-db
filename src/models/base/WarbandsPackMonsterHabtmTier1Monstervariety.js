@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'warbands_pack_monster_habtm_tier1_monstervarieties',
+      tableName: 'warbands_pack_monster__tier1__monster_varieties',
       underscored: true,
     },
   );

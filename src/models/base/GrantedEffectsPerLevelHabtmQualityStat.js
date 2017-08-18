@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'granted_effects_per_level_habtm_quality_stats',
+      tableName: 'granted_effects_per_level__quality__stats',
       underscored: true,
     },
   );

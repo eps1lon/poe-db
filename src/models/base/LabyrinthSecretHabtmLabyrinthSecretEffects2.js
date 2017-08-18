@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'labyrinth_secret_habtm_labyrinth_secret_effects2s',
+      tableName: 'labyrinth_secret__labyrinth_secret_effects2s',
       underscored: true,
     },
   );

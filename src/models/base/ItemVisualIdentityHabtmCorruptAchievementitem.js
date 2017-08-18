@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'item_visual_identity_habtm_corrupt_achievementitems',
+      tableName: 'item_visual_identity__corrupt__achievement_items',
       underscored: true,
     },
   );

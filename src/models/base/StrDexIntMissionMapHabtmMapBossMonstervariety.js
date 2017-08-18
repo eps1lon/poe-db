@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'str_dex_int_mission_map_habtm_map_boss_monstervarieties',
+      tableName: 'str_dex_int_mission_map__map_boss__monster_varieties',
       underscored: true,
     },
   );

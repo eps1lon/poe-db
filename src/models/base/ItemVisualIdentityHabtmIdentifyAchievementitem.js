@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'item_visual_identity_habtm_identify_achievementitems',
+      tableName: 'item_visual_identity__identify__achievement_items',
       underscored: true,
     },
   );

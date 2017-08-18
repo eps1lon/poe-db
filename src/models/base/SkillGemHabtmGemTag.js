@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'skill_gem_habtm_gem_tags',
+      tableName: 'skill_gem__gem_tags',
       underscored: true,
     },
   );

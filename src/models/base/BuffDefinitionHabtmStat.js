@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'buff_definition_habtm_stats',
+      tableName: 'buff_definition__stats',
       underscored: true,
     },
   );

@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'prophecy_habtm_quest_tracker_clientstrings',
+      tableName: 'prophecy__quest_tracker__client_strings',
       underscored: true,
     },
   );

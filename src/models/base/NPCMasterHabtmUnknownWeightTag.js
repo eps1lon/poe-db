@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'n_p_c_master_habtm_unknown_weight_tags',
+      tableName: 'n_p_c_master__unknown_weight__tags',
       underscored: true,
     },
   );

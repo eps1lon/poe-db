@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'misc_object_habtm_preload_groups',
+      tableName: 'misc_object__preload_groups',
       underscored: true,
     },
   );

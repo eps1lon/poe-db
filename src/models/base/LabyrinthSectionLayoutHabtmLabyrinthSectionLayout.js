@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'labyrinth_section_layout_habtm_labyrinth_section_layouts',
+      tableName: 'labyrinth_section_layout__labyrinth_section_layouts',
       underscored: true,
     },
   );

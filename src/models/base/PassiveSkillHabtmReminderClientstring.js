@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'passive_skill_habtm_reminder_clientstrings',
+      tableName: 'passive_skill__reminder__client_strings',
       underscored: true,
     },
   );

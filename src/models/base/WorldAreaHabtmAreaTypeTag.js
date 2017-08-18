@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'world_area_habtm_area_type_tags',
+      tableName: 'world_area__area_type__tags',
       underscored: true,
     },
   );

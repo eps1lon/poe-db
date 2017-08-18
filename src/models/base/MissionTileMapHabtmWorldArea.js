@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'mission_tile_map_habtm_world_areas',
+      tableName: 'mission_tile_map__world_areas',
       underscored: true,
     },
   );

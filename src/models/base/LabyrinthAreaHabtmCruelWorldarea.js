@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'labyrinth_area_habtm_cruel_worldareas',
+      tableName: 'labyrinth_area__cruel__world_areas',
       underscored: true,
     },
   );

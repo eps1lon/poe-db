@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'character_start_state_habtm_passive_skills',
+      tableName: 'character_start_state__passive_skills',
       underscored: true,
     },
   );

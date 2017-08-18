@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'pantheon_panel_layout_habtm_effect4_stats',
+      tableName: 'pantheon_panel_layout__effect4__stats',
       underscored: true,
     },
   );

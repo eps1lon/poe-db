@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'monster_variety_habtm_kill_rare_in_part2_achievementitems',
+      tableName: 'monster_variety__kill_rare_in_part2__achievement_items',
       underscored: true,
     },
   );

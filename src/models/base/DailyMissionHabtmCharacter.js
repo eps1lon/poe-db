@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'daily_mission_habtm_characters',
+      tableName: 'daily_mission__characters',
       underscored: true,
     },
   );

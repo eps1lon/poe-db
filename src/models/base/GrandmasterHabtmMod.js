@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'grandmaster_habtm_mods',
+      tableName: 'grandmaster__mods',
       underscored: true,
     },
   );

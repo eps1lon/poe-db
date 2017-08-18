@@ -585,7 +585,7 @@
     }
   },
   "ActiveSkillHabtmInputStat": {
-    "tableName": "active_skill_habtm_input_stats",
+    "tableName": "active_skill__input__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -665,7 +665,7 @@
     }
   },
   "ActiveSkillHabtmOutputStat": {
-    "tableName": "active_skill_habtm_output_stats",
+    "tableName": "active_skill__output__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -745,7 +745,7 @@
     }
   },
   "ActiveSkillHabtmWeaponRestrictionItemclass": {
-    "tableName": "active_skill_habtm_weapon_restriction_itemclasses",
+    "tableName": "active_skill__weapon_restriction__item_classes",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -1780,7 +1780,7 @@
     }
   },
   "AtlasNodeHabtmAtlasNode": {
-    "tableName": "atlas_node_habtm_atlas_nodes",
+    "tableName": "atlas_node__atlas_nodes",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -2338,7 +2338,7 @@
     }
   },
   "BaseItemTypeHabtmImplicitMod": {
-    "tableName": "base_item_type_habtm_implicit_mods",
+    "tableName": "base_item_type__implicit__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -2418,7 +2418,7 @@
     }
   },
   "BaseItemTypeHabtmMagicPurchaseBaseitemtype": {
-    "tableName": "base_item_type_habtm_magic_purchase_baseitemtypes",
+    "tableName": "base_item_type__magic_purchase__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -2507,7 +2507,7 @@
     }
   },
   "BaseItemTypeHabtmNormalPurchaseBaseitemtype": {
-    "tableName": "base_item_type_habtm_normal_purchase_baseitemtypes",
+    "tableName": "base_item_type__normal_purchase__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -2596,7 +2596,7 @@
     }
   },
   "BaseItemTypeHabtmRarePurchaseBaseitemtype": {
-    "tableName": "base_item_type_habtm_rare_purchase_baseitemtypes",
+    "tableName": "base_item_type__rare_purchase__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -2685,7 +2685,7 @@
     }
   },
   "BaseItemTypeHabtmTag": {
-    "tableName": "base_item_type_habtm_tags",
+    "tableName": "base_item_type__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -2765,7 +2765,7 @@
     }
   },
   "BaseItemTypeHabtmUniquePurchaseBaseitemtype": {
-    "tableName": "base_item_type_habtm_unique_purchase_baseitemtypes",
+    "tableName": "base_item_type__unique_purchase__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -2854,7 +2854,7 @@
     }
   },
   "BaseItemTypeHabtmVendorRecipeAchievementitem": {
-    "tableName": "base_item_type_habtm_vendor_recipe_achievementitems",
+    "tableName": "base_item_type__vendor_recipe__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -3380,7 +3380,7 @@
     }
   },
   "BloodlineHabtmItemWeightTag": {
-    "tableName": "bloodline_habtm_item_weight_tags",
+    "tableName": "bloodline__item_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -3469,7 +3469,7 @@
     }
   },
   "BloodlineHabtmMod": {
-    "tableName": "bloodline_habtm_mods",
+    "tableName": "bloodline__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -3549,7 +3549,7 @@
     }
   },
   "BloodlineHabtmSpawnWeightTag": {
-    "tableName": "bloodline_habtm_spawn_weight_tags",
+    "tableName": "bloodline__spawn_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -3935,7 +3935,7 @@
     }
   },
   "BuffDefinitionHabtmStat": {
-    "tableName": "buff_definition_habtm_stats",
+    "tableName": "buff_definition__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -4249,7 +4249,7 @@
     }
   },
   "BuffVisualHabtmPreloadGroup": {
-    "tableName": "buff_visual_habtm_preload_groups",
+    "tableName": "buff_visual__preload_groups",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -4785,7 +4785,7 @@
     }
   },
   "CharacterAudioEventHabtmDuelistCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_duelist_charactertextaudios",
+    "tableName": "character_audio_event__duelist__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -4865,7 +4865,7 @@
     }
   },
   "CharacterAudioEventHabtmGoddessCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_goddess_charactertextaudios",
+    "tableName": "character_audio_event__goddess__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -4945,7 +4945,7 @@
     }
   },
   "CharacterAudioEventHabtmJackTheAxeCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_jack_the_axe_charactertextaudios",
+    "tableName": "character_audio_event__jack_the_axe__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5025,7 +5025,7 @@
     }
   },
   "CharacterAudioEventHabtmMarauderCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_marauder_charactertextaudios",
+    "tableName": "character_audio_event__marauder__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5105,7 +5105,7 @@
     }
   },
   "CharacterAudioEventHabtmRangerCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_ranger_charactertextaudios",
+    "tableName": "character_audio_event__ranger__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5185,7 +5185,7 @@
     }
   },
   "CharacterAudioEventHabtmScionCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_scion_charactertextaudios",
+    "tableName": "character_audio_event__scion__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5265,7 +5265,7 @@
     }
   },
   "CharacterAudioEventHabtmShadowCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_shadow_charactertextaudios",
+    "tableName": "character_audio_event__shadow__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5345,7 +5345,7 @@
     }
   },
   "CharacterAudioEventHabtmTemplarCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_templar_charactertextaudios",
+    "tableName": "character_audio_event__templar__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5425,7 +5425,7 @@
     }
   },
   "CharacterAudioEventHabtmWitchCharactertextaudio": {
-    "tableName": "character_audio_event_habtm_witch_charactertextaudios",
+    "tableName": "character_audio_event__witch__character_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5733,7 +5733,7 @@
     }
   },
   "CharacterPanelStatHabtmStats1": {
-    "tableName": "character_panel_stat_habtm_stats1s",
+    "tableName": "character_panel_stat__stats1s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5813,7 +5813,7 @@
     }
   },
   "CharacterPanelStatHabtmStats2": {
-    "tableName": "character_panel_stat_habtm_stats2s",
+    "tableName": "character_panel_stat__stats2s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -5893,7 +5893,7 @@
     }
   },
   "CharacterPanelStatHabtmStats3": {
-    "tableName": "character_panel_stat_habtm_stats3s",
+    "tableName": "character_panel_stat__stats3s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -6209,7 +6209,7 @@
     }
   },
   "CharacterStartItemHabtmMod": {
-    "tableName": "character_start_item_habtm_mods",
+    "tableName": "character_start_item__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -6289,7 +6289,7 @@
     }
   },
   "CharacterStartItemHabtmSocketedSkillgem": {
-    "tableName": "character_start_item_habtm_socketed_skillgems",
+    "tableName": "character_start_item__socketed__skill_gems",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -6458,7 +6458,7 @@
     }
   },
   "CharacterStartQuestStateHabtmMapPin": {
-    "tableName": "character_start_quest_state_habtm_map_pins",
+    "tableName": "character_start_quest_state__map_pins",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -6538,7 +6538,7 @@
     }
   },
   "CharacterStartQuestStateHabtmQuest": {
-    "tableName": "character_start_quest_state_habtm_quests",
+    "tableName": "character_start_quest_state__quests",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -6775,247 +6775,7 @@
     }
   },
   "CharacterStartStateHabtmCharacterStartQuestState": {
-    "tableName": "character_start_state_habtm_character_start_quest_states",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "character_start_state_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "character_start_quest_state_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "character_start_state_row"
-          },
-          {
-            "attribute": "character_start_quest_state_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "CharacterStartStateHabtmCruelCharacterstartqueststate": {
-    "tableName": "character_start_state_habtm_cruel_characterstartqueststates",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "character_start_state_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "character_start_quest_state_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "character_start_state_row"
-          },
-          {
-            "attribute": "character_start_quest_state_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "CharacterStartStateHabtmMercilessCharacterstartqueststate": {
-    "tableName": "character_start_state_habtm_merciless_characterstartqueststates",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "character_start_state_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "character_start_quest_state_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "character_start_state_row"
-          },
-          {
-            "attribute": "character_start_quest_state_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "CharacterStartStateHabtmNormalCharacterstartqueststate": {
-    "tableName": "character_start_state_habtm_normal_characterstartqueststates",
+    "tableName": "character_start_state__character_start_quest_states",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -7095,7 +6855,7 @@
     }
   },
   "CharacterStartStateHabtmPassiveSkill": {
-    "tableName": "character_start_state_habtm_passive_skills",
+    "tableName": "character_start_state__passive_skills",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -7644,7 +7404,7 @@
     }
   },
   "ChestClusterHabtmChest": {
-    "tableName": "chest_cluster_habtm_chests",
+    "tableName": "chest_cluster__chests",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -7863,7 +7623,7 @@
     }
   },
   "ChestHabtmMod": {
-    "tableName": "chest_habtm_mods",
+    "tableName": "chest__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -7943,7 +7703,7 @@
     }
   },
   "ChestHabtmTag": {
-    "tableName": "chest_habtm_tags",
+    "tableName": "chest__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -8755,7 +8515,7 @@
     }
   },
   "CraftingBenchOptionHabtmCostBaseitemtype": {
-    "tableName": "crafting_bench_option_habtm_cost_baseitemtypes",
+    "tableName": "crafting_bench_option__cost__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -8846,7 +8606,7 @@
     }
   },
   "CraftingBenchOptionHabtmItemClass": {
-    "tableName": "crafting_bench_option_habtm_item_classes",
+    "tableName": "crafting_bench_option__item_classes",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -9121,7 +8881,7 @@
     }
   },
   "CurrencyItemHabtmUsageAchievementitem": {
-    "tableName": "currency_item_habtm_usage_achievementitems",
+    "tableName": "currency_item__usage__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -9476,7 +9236,7 @@
     }
   },
   "DailyMissionHabtmCharacter": {
-    "tableName": "daily_mission_habtm_characters",
+    "tableName": "daily_mission__characters",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10278,7 +10038,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes1": {
-    "tableName": "descent_reward_chest_habtm_base_item_types1s",
+    "tableName": "descent_reward_chest__base_item_types1s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10358,7 +10118,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes10": {
-    "tableName": "descent_reward_chest_habtm_base_item_types10s",
+    "tableName": "descent_reward_chest__base_item_types10s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10438,7 +10198,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes11": {
-    "tableName": "descent_reward_chest_habtm_base_item_types11s",
+    "tableName": "descent_reward_chest__base_item_types11s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10518,7 +10278,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes12": {
-    "tableName": "descent_reward_chest_habtm_base_item_types12s",
+    "tableName": "descent_reward_chest__base_item_types12s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10598,7 +10358,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes13": {
-    "tableName": "descent_reward_chest_habtm_base_item_types13s",
+    "tableName": "descent_reward_chest__base_item_types13s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10678,7 +10438,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes14": {
-    "tableName": "descent_reward_chest_habtm_base_item_types14s",
+    "tableName": "descent_reward_chest__base_item_types14s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10758,7 +10518,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes2": {
-    "tableName": "descent_reward_chest_habtm_base_item_types2s",
+    "tableName": "descent_reward_chest__base_item_types2s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10838,7 +10598,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes3": {
-    "tableName": "descent_reward_chest_habtm_base_item_types3s",
+    "tableName": "descent_reward_chest__base_item_types3s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10918,7 +10678,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes4": {
-    "tableName": "descent_reward_chest_habtm_base_item_types4s",
+    "tableName": "descent_reward_chest__base_item_types4s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -10998,7 +10758,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes5": {
-    "tableName": "descent_reward_chest_habtm_base_item_types5s",
+    "tableName": "descent_reward_chest__base_item_types5s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -11078,7 +10838,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes6": {
-    "tableName": "descent_reward_chest_habtm_base_item_types6s",
+    "tableName": "descent_reward_chest__base_item_types6s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -11158,7 +10918,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes7": {
-    "tableName": "descent_reward_chest_habtm_base_item_types7s",
+    "tableName": "descent_reward_chest__base_item_types7s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -11238,7 +10998,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes8": {
-    "tableName": "descent_reward_chest_habtm_base_item_types8s",
+    "tableName": "descent_reward_chest__base_item_types8s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -11318,7 +11078,7 @@
     }
   },
   "DescentRewardChestHabtmBaseItemTypes9": {
-    "tableName": "descent_reward_chest_habtm_base_item_types9s",
+    "tableName": "descent_reward_chest__base_item_types9s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -11883,7 +11643,7 @@
     }
   },
   "DexIntMissionHabtmAchievementItem": {
-    "tableName": "dex_int_mission_habtm_achievement_items",
+    "tableName": "dex_int_mission__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -12358,7 +12118,7 @@
     }
   },
   "DexMissionMonsterHabtmMonsterPack": {
-    "tableName": "dex_mission_monster_habtm_monster_packs",
+    "tableName": "dex_mission_monster__monster_packs",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -12438,7 +12198,7 @@
     }
   },
   "DexMissionMonsterHabtmMonsterVariety": {
-    "tableName": "dex_mission_monster_habtm_monster_varieties",
+    "tableName": "dex_mission_monster__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -12644,81 +12404,6 @@
         "parser": null
       }
     ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
-  "Difficulty": {
-    "tableName": "difficulties",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "id": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "resistances": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "minimum_level": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "text": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "prefix": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
@@ -13165,7 +12850,7 @@
     }
   },
   "EclipseModHabtmSpawnWeightTag": {
-    "tableName": "eclipse_mod_habtm_spawn_weight_tags",
+    "tableName": "eclipse_mod__spawn_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -13418,7 +13103,7 @@
     }
   },
   "EndlessLedgeChestHabtmBaseItemType": {
-    "tableName": "endless_ledge_chest_habtm_base_item_types",
+    "tableName": "endless_ledge_chest__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -13631,7 +13316,7 @@
     }
   },
   "EnvironmentHabtmCorruptedMusic": {
-    "tableName": "environment_habtm_corrupted_musics",
+    "tableName": "environment__corrupted__musics",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -13729,7 +13414,7 @@
     }
   },
   "EnvironmentHabtmMusic": {
-    "tableName": "environment_habtm_musics",
+    "tableName": "environment__musics",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -14912,7 +14597,7 @@
     }
   },
   "EssenceHabtmMonsterMod": {
-    "tableName": "essence_habtm_monster_mods",
+    "tableName": "essence__monster__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -16369,41 +16054,6 @@
       "engine": "MYISAM"
     }
   },
-  "GlobalQuestFlag": {
-    "tableName": "global_quest_flags",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
   "Grandmaster": {
     "tableName": "grandmasters",
     "attributes": {
@@ -16486,7 +16136,7 @@
     }
   },
   "GrandmasterHabtmMod": {
-    "tableName": "grandmaster_habtm_mods",
+    "tableName": "grandmaster__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -17175,7 +16825,7 @@
     }
   },
   "GrantedEffectsPerLevelHabtmEffectivenessCostConstant": {
-    "tableName": "granted_effects_per_level_habtm_effectiveness_cost_constants",
+    "tableName": "granted_effects_per_level__effectiveness_cost_constants",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -17255,7 +16905,7 @@
     }
   },
   "GrantedEffectsPerLevelHabtmQualityStat": {
-    "tableName": "granted_effects_per_level_habtm_quality_stats",
+    "tableName": "granted_effects_per_level__quality__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -17344,7 +16994,7 @@
     }
   },
   "GrantedEffectsPerLevelHabtmStat": {
-    "tableName": "granted_effects_per_level_habtm_stats",
+    "tableName": "granted_effects_per_level__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -17424,7 +17074,7 @@
     }
   },
   "GrantedEffectsPerLevelHabtmStats2": {
-    "tableName": "granted_effects_per_level_habtm_stats2s",
+    "tableName": "granted_effects_per_level__stats2s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -17925,69 +17575,6 @@
       "engine": "MYISAM"
     }
   },
-  "HideoutInteractable": {
-    "tableName": "hideout_interactables",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "object": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "base_item_types_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "base_item_types_key"
-          }
-        ],
-        "name": "index_base_item_types_key",
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
   "ImpactSoundDatum": {
     "tableName": "impact_sound_data",
     "attributes": {
@@ -18407,7 +17994,7 @@
     }
   },
   "IntMissionModHabtmMod": {
-    "tableName": "int_mission_mod_habtm_mods",
+    "tableName": "int_mission_mod__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -18568,7 +18155,7 @@
     }
   },
   "IntMissionMonsterHabtmAchievementItem": {
-    "tableName": "int_mission_monster_habtm_achievement_items",
+    "tableName": "int_mission_monster__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -18648,7 +18235,7 @@
     }
   },
   "IntMissionMonsterHabtmObjectiveMonstervariety": {
-    "tableName": "int_mission_monster_habtm_objective_monstervarieties",
+    "tableName": "int_mission_monster__objective__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -18841,7 +18428,7 @@
     }
   },
   "InvasionMonsterRestrictionHabtmMonsterVariety": {
-    "tableName": "invasion_monster_restriction_habtm_monster_varieties",
+    "tableName": "invasion_monster_restriction__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -19073,7 +18660,7 @@
     }
   },
   "InvasionMonstersPerAreaHabtmMonsterVarieties1": {
-    "tableName": "invasion_monsters_per_area_habtm_monster_varieties1s",
+    "tableName": "invasion_monsters_per_area__monster_varieties1s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -19153,7 +18740,7 @@
     }
   },
   "InvasionMonstersPerAreaHabtmMonsterVarieties2": {
-    "tableName": "invasion_monsters_per_area_habtm_monster_varieties2s",
+    "tableName": "invasion_monsters_per_area__monster_varieties2s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -19904,7 +19491,7 @@
     }
   },
   "ItemVisualIdentityHabtmCorruptAchievementitem": {
-    "tableName": "item_visual_identity_habtm_corrupt_achievementitems",
+    "tableName": "item_visual_identity__corrupt__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -19984,7 +19571,7 @@
     }
   },
   "ItemVisualIdentityHabtmIdentifyAchievementitem": {
-    "tableName": "item_visual_identity_habtm_identify_achievementitems",
+    "tableName": "item_visual_identity__identify__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -20064,7 +19651,7 @@
     }
   },
   "ItemVisualIdentityHabtmPickupAchievementitem": {
-    "tableName": "item_visual_identity_habtm_pickup_achievementitems",
+    "tableName": "item_visual_identity__pickup__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -20583,7 +20170,7 @@
     }
   },
   "LabyrinthAreaHabtmCruelWorldarea": {
-    "tableName": "labyrinth_area_habtm_cruel_worldareas",
+    "tableName": "labyrinth_area__cruel__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -20663,7 +20250,7 @@
     }
   },
   "LabyrinthAreaHabtmEndgameWorldarea": {
-    "tableName": "labyrinth_area_habtm_endgame_worldareas",
+    "tableName": "labyrinth_area__endgame__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -20743,7 +20330,7 @@
     }
   },
   "LabyrinthAreaHabtmMercilessWorldarea": {
-    "tableName": "labyrinth_area_habtm_merciless_worldareas",
+    "tableName": "labyrinth_area__merciless__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -20823,7 +20410,7 @@
     }
   },
   "LabyrinthAreaHabtmNormalWorldarea": {
-    "tableName": "labyrinth_area_habtm_normal_worldareas",
+    "tableName": "labyrinth_area__normal__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -21026,59 +20613,6 @@
         "parser": null
       }
     ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
-  "LabyrinthLadderReward": {
-    "tableName": "labyrinth_ladder_rewards",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "unknown0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "key0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
@@ -21638,7 +21172,7 @@
     }
   },
   "LabyrinthSecretHabtmLabyrinthSecretEffects0": {
-    "tableName": "labyrinth_secret_habtm_labyrinth_secret_effects0s",
+    "tableName": "labyrinth_secret__labyrinth_secret_effects0s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -21718,7 +21252,7 @@
     }
   },
   "LabyrinthSecretHabtmLabyrinthSecretEffects1": {
-    "tableName": "labyrinth_secret_habtm_labyrinth_secret_effects1s",
+    "tableName": "labyrinth_secret__labyrinth_secret_effects1s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -21798,7 +21332,7 @@
     }
   },
   "LabyrinthSecretHabtmLabyrinthSecretEffects2": {
-    "tableName": "labyrinth_secret_habtm_labyrinth_secret_effects2s",
+    "tableName": "labyrinth_secret__labyrinth_secret_effects2s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -21878,7 +21412,7 @@
     }
   },
   "LabyrinthSecretHabtmLabyrinthSecretEffects3": {
-    "tableName": "labyrinth_secret_habtm_labyrinth_secret_effects3s",
+    "tableName": "labyrinth_secret__labyrinth_secret_effects3s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -22228,7 +21762,7 @@
     }
   },
   "LabyrinthSectionLayoutHabtmLabyrinthNodeOverride": {
-    "tableName": "labyrinth_section_layout_habtm_labyrinth_node_overrides",
+    "tableName": "labyrinth_section_layout__labyrinth_node_overrides",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -22308,7 +21842,7 @@
     }
   },
   "LabyrinthSectionLayoutHabtmLabyrinthSectionLayout": {
-    "tableName": "labyrinth_section_layout_habtm_labyrinth_section_layouts",
+    "tableName": "labyrinth_section_layout__labyrinth_section_layouts",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -23204,7 +22738,7 @@
     }
   },
   "MapDeviceRecipeHabtmBaseItemType": {
-    "tableName": "map_device_recipe_habtm_base_item_types",
+    "tableName": "map_device_recipe__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -23283,88 +22817,8 @@
       "engine": "MyISAM"
     }
   },
-  "MapDeviceRecipeHabtmWorldArea": {
-    "tableName": "map_device_recipe_habtm_world_areas",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "map_device_recipe_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "world_area_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "map_device_recipe_row"
-          },
-          {
-            "attribute": "world_area_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
   "MapHabtmHigherTierMapsBaseitemtype": {
-    "tableName": "map_habtm_higher_tier_maps_baseitemtypes",
+    "tableName": "map__higher_tier_maps__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -23444,7 +22898,7 @@
     }
   },
   "MapHabtmMonsterPack": {
-    "tableName": "map_habtm_monster_packs",
+    "tableName": "map__monster_packs",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -23586,7 +23040,7 @@
     }
   },
   "MapInhabitantHabtmMonsterPack": {
-    "tableName": "map_inhabitant_habtm_monster_packs",
+    "tableName": "map_inhabitant__monster_packs",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -23815,248 +23269,8 @@
       "engine": "MYISAM"
     }
   },
-  "MapPinHabtmCruelWorldarea": {
-    "tableName": "map_pin_habtm_cruel_worldareas",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "map_pin_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "world_area_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "map_pin_row"
-          },
-          {
-            "attribute": "world_area_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MapPinHabtmMercilessWorldarea": {
-    "tableName": "map_pin_habtm_merciless_worldareas",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "map_pin_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "world_area_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "map_pin_row"
-          },
-          {
-            "attribute": "world_area_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MapPinHabtmNormalWorldarea": {
-    "tableName": "map_pin_habtm_normal_worldareas",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "map_pin_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "world_area_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "map_pin_row"
-          },
-          {
-            "attribute": "world_area_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
   "MapPinHabtmWorldArea": {
-    "tableName": "map_pin_habtm_world_areas",
+    "tableName": "map_pin__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -24811,7 +24025,7 @@
     }
   },
   "MiscAnimatedHabtmPreloadGroup": {
-    "tableName": "misc_animated_habtm_preload_groups",
+    "tableName": "misc_animated__preload_groups",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -24967,7 +24181,7 @@
     }
   },
   "MiscBeamHabtmPreloadGroup": {
-    "tableName": "misc_beam_habtm_preload_groups",
+    "tableName": "misc_beam__preload_groups",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -25121,7 +24335,7 @@
     }
   },
   "MiscObjectHabtmPreloadGroup": {
-    "tableName": "misc_object_habtm_preload_groups",
+    "tableName": "misc_object__preload_groups",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -25282,7 +24496,7 @@
     }
   },
   "MissionTileMapHabtmWorldArea": {
-    "tableName": "mission_tile_map_habtm_world_areas",
+    "tableName": "mission_tile_map__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -26022,7 +25236,7 @@
     }
   },
   "ModHabtmGenerationWeightTag": {
-    "tableName": "mod_habtm_generation_weight_tags",
+    "tableName": "mod__generation_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -26111,7 +25325,7 @@
     }
   },
   "ModHabtmSpawnWeightTag": {
-    "tableName": "mod_habtm_spawn_weight_tags",
+    "tableName": "mod__spawn_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -26202,7 +25416,7 @@
     }
   },
   "ModHabtmTag": {
-    "tableName": "mod_habtm_tags",
+    "tableName": "mod__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -26344,7 +25558,7 @@
     }
   },
   "ModSellPriceHabtmBaseItemType": {
-    "tableName": "mod_sell_price_habtm_base_item_types",
+    "tableName": "mod_sell_price__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -26517,7 +25731,7 @@
     }
   },
   "ModTypeHabtmModSellPrice": {
-    "tableName": "mod_type_habtm_mod_sell_prices",
+    "tableName": "mod_type__mod_sell_prices",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -27415,7 +26629,7 @@
     }
   },
   "MonsterPackHabtmBossMonsterMonstervariety": {
-    "tableName": "monster_pack_habtm_boss_monster_monstervarieties",
+    "tableName": "monster_pack__boss_monster__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -27495,7 +26709,7 @@
     }
   },
   "MonsterPackHabtmTag": {
-    "tableName": "monster_pack_habtm_tags",
+    "tableName": "monster_pack__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -27575,7 +26789,7 @@
     }
   },
   "MonsterPackHabtmWorldArea": {
-    "tableName": "monster_pack_habtm_world_areas",
+    "tableName": "monster_pack__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -28116,7 +27330,7 @@
     }
   },
   "MonsterTypeHabtmTag": {
-    "tableName": "monster_type_habtm_tags",
+    "tableName": "monster_type__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -28913,430 +28127,8 @@
       "engine": "MYISAM"
     }
   },
-  "MonsterVarietyHabtmAchievementItem": {
-    "tableName": "monster_variety_habtm_achievement_items",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmAchievementItems2": {
-    "tableName": "monster_variety_habtm_achievement_items2s",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmCountKillsAchievementitem": {
-    "tableName": "monster_variety_habtm_count_kills_achievementitems",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmCruelAchievementitem": {
-    "tableName": "monster_variety_habtm_cruel_achievementitems",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "mods_key": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmCruelMod": {
-    "tableName": "monster_variety_habtm_cruel_mods",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_items_key": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "mod_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "mod_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
   "MonsterVarietyHabtmEndgameMod": {
-    "tableName": "monster_variety_habtm_endgame_mods",
+    "tableName": "monster_variety__endgame__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -29416,7 +28208,7 @@
     }
   },
   "MonsterVarietyHabtmGrantedEffect": {
-    "tableName": "monster_variety_habtm_granted_effects",
+    "tableName": "monster_variety__granted_effects",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -29496,87 +28288,7 @@
     }
   },
   "MonsterVarietyHabtmKillRareAchievementitem": {
-    "tableName": "monster_variety_habtm_kill_rare_achievementitems",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmKillRareInCruelAchievementitem": {
-    "tableName": "monster_variety_habtm_kill_rare_in_cruel_achievementitems",
+    "tableName": "monster_variety__kill_rare__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -29656,167 +28368,7 @@
     }
   },
   "MonsterVarietyHabtmKillRareInEndgameAchievementitem": {
-    "tableName": "monster_variety_habtm_kill_rare_in_endgame_achievementitems",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmKillRareInMercilessAchievementitem": {
-    "tableName": "monster_variety_habtm_kill_rare_in_merciless_achievementitems",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmKillRareInNormalAchievementitem": {
-    "tableName": "monster_variety_habtm_kill_rare_in_normal_achievementitems",
+    "tableName": "monster_variety__kill_rare_in_endgame__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -29896,7 +28448,7 @@
     }
   },
   "MonsterVarietyHabtmKillRareInPart2Achievementitem": {
-    "tableName": "monster_variety_habtm_kill_rare_in_part2_achievementitems",
+    "tableName": "monster_variety__kill_rare_in_part2__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -29976,7 +28528,7 @@
     }
   },
   "MonsterVarietyHabtmKillSpecificMonsterCount2Achievementitem": {
-    "tableName": "monster_variety_habtm_kill_specific_monster_count2_achievementitems",
+    "tableName": "monster_variety__kill_specific_monster_count2__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -30056,7 +28608,7 @@
     }
   },
   "MonsterVarietyHabtmKillSpecificMonsterCountAchievementitem": {
-    "tableName": "monster_variety_habtm_kill_specific_monster_count_achievementitems",
+    "tableName": "monster_variety__kill_specific_monster_count__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -30121,188 +28673,6 @@
           },
           {
             "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmMercilessAchievementitem": {
-    "tableName": "monster_variety_habtm_merciless_achievementitems",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "mods_key": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmMercilessMod": {
-    "tableName": "monster_variety_habtm_merciless_mods",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_items_key": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "mod_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "mod_row"
           }
         ],
         "name": "composite primary_alias",
@@ -30318,7 +28688,7 @@
     }
   },
   "MonsterVarietyHabtmMod": {
-    "tableName": "monster_variety_habtm_mods",
+    "tableName": "monster_variety__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -30398,7 +28768,7 @@
     }
   },
   "MonsterVarietyHabtmMods2": {
-    "tableName": "monster_variety_habtm_mods2s",
+    "tableName": "monster_variety__mods2s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -30478,7 +28848,7 @@
     }
   },
   "MonsterVarietyHabtmMonsterLevel80Achievementitem": {
-    "tableName": "monster_variety_habtm_monster_level80_achievementitems",
+    "tableName": "monster_variety__monster_level80__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -30543,188 +28913,6 @@
           },
           {
             "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmNormalAchievementitem": {
-    "tableName": "monster_variety_habtm_normal_achievementitems",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "mods_key": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
-  "MonsterVarietyHabtmNormalMod": {
-    "tableName": "monster_variety_habtm_normal_mods",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_items_key": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "monster_variety_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "mod_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "monster_variety_row"
-          },
-          {
-            "attribute": "mod_row"
           }
         ],
         "name": "composite primary_alias",
@@ -30740,7 +28928,7 @@
     }
   },
   "MonsterVarietyHabtmPart1Mod": {
-    "tableName": "monster_variety_habtm_part1_mods",
+    "tableName": "monster_variety__part1__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -30820,7 +29008,7 @@
     }
   },
   "MonsterVarietyHabtmPart2Mod": {
-    "tableName": "monster_variety_habtm_part2_mods",
+    "tableName": "monster_variety__part2__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -30900,7 +29088,7 @@
     }
   },
   "MonsterVarietyHabtmSpecialMod": {
-    "tableName": "monster_variety_habtm_special_mods",
+    "tableName": "monster_variety__special__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -30980,7 +29168,7 @@
     }
   },
   "MonsterVarietyHabtmTag": {
-    "tableName": "monster_variety_habtm_tags",
+    "tableName": "monster_variety__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -31060,7 +29248,7 @@
     }
   },
   "MonsterVarietyHabtmWeapon1Itemvisualidentity": {
-    "tableName": "monster_variety_habtm_weapon1_itemvisualidentities",
+    "tableName": "monster_variety__weapon1__item_visual_identities",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -31140,7 +29328,7 @@
     }
   },
   "MonsterVarietyHabtmWeapon2Itemvisualidentity": {
-    "tableName": "monster_variety_habtm_weapon2_itemvisualidentities",
+    "tableName": "monster_variety__weapon2__item_visual_identities",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -31925,7 +30113,7 @@
     }
   },
   "NPCMasterHabtmAchievementItem": {
-    "tableName": "n_p_c_master_habtm_achievement_items",
+    "tableName": "n_p_c_master__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -32005,7 +30193,7 @@
     }
   },
   "NPCMasterHabtmMasterLevel5Achievementitem": {
-    "tableName": "n_p_c_master_habtm_master_level5_achievementitems",
+    "tableName": "n_p_c_master__master_level5__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -32085,7 +30273,7 @@
     }
   },
   "NPCMasterHabtmSignatureModSpawnWeightTag": {
-    "tableName": "n_p_c_master_habtm_signature_mod_spawn_weight_tags",
+    "tableName": "n_p_c_master__signature_mod_spawn_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -32176,7 +30364,7 @@
     }
   },
   "NPCMasterHabtmUnknownWeightTag": {
-    "tableName": "n_p_c_master_habtm_unknown_weight_tags",
+    "tableName": "n_p_c_master__unknown_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -32357,7 +30545,7 @@
     }
   },
   "NPCShopHabtmSoldItemTag": {
-    "tableName": "n_p_c_shop_habtm_sold_item_tags",
+    "tableName": "n_p_c_shop__sold_item__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -32764,7 +30952,7 @@
     }
   },
   "NPCTalkHabtmNPCTextAudio": {
-    "tableName": "n_p_c_talk_habtm_n_p_c_text_audios",
+    "tableName": "n_p_c_talk__n_p_c_text_audios",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -32844,7 +31032,7 @@
     }
   },
   "NPCTalkHabtmProphecy": {
-    "tableName": "n_p_c_talk_habtm_prophecies",
+    "tableName": "n_p_c_talk__prophecies",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -33026,81 +31214,6 @@
         "parser": null
       }
     ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
-  "NormalDifficultyMasterWeight": {
-    "tableName": "normal_difficulty_master_weights",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "master_id": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "unknown1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "unknown2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "unknown3": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "unknown4": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
@@ -33482,7 +31595,7 @@
     }
   },
   "PantheonPanelLayoutHabtmEffect1Stat": {
-    "tableName": "pantheon_panel_layout_habtm_effect1_stats",
+    "tableName": "pantheon_panel_layout__effect1__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -33571,7 +31684,7 @@
     }
   },
   "PantheonPanelLayoutHabtmEffect2Stat": {
-    "tableName": "pantheon_panel_layout_habtm_effect2_stats",
+    "tableName": "pantheon_panel_layout__effect2__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -33660,7 +31773,7 @@
     }
   },
   "PantheonPanelLayoutHabtmEffect3Stat": {
-    "tableName": "pantheon_panel_layout_habtm_effect3_stats",
+    "tableName": "pantheon_panel_layout__effect3__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -33749,7 +31862,7 @@
     }
   },
   "PantheonPanelLayoutHabtmEffect4Stat": {
-    "tableName": "pantheon_panel_layout_habtm_effect4_stats",
+    "tableName": "pantheon_panel_layout__effect4__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -34243,7 +32356,7 @@
     }
   },
   "PassiveSkillHabtmCharacter": {
-    "tableName": "passive_skill_habtm_characters",
+    "tableName": "passive_skill__characters",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -34323,7 +32436,7 @@
     }
   },
   "PassiveSkillHabtmReminderClientstring": {
-    "tableName": "passive_skill_habtm_reminder_clientstrings",
+    "tableName": "passive_skill__reminder__client_strings",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -34403,7 +32516,7 @@
     }
   },
   "PassiveSkillHabtmStat": {
-    "tableName": "passive_skill_habtm_stats",
+    "tableName": "passive_skill__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -34581,7 +32694,7 @@
     }
   },
   "PathOfEnduranceHabtmMod": {
-    "tableName": "path_of_endurance_habtm_mods",
+    "tableName": "path_of_endurance__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -35070,7 +33183,7 @@
     }
   },
   "PerandusGuardHabtmMonsterPack": {
-    "tableName": "perandus_guard_habtm_monster_packs",
+    "tableName": "perandus_guard__monster_packs",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -35715,7 +33828,7 @@
     }
   },
   "ProphecyHabtmQuestTrackerClientstring": {
-    "tableName": "prophecy_habtm_quest_tracker_clientstrings",
+    "tableName": "prophecy__quest_tracker__client_strings",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -36418,7 +34531,7 @@
     }
   },
   "QuestStateHabtmMapPins1": {
-    "tableName": "quest_state_habtm_map_pins1s",
+    "tableName": "quest_state__map_pins1s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -36498,7 +34611,7 @@
     }
   },
   "QuestStateHabtmMapPins2": {
-    "tableName": "quest_state_habtm_map_pins2s",
+    "tableName": "quest_state__map_pins2s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -36699,7 +34812,7 @@
     }
   },
   "QuestStaticRewardHabtmStat": {
-    "tableName": "quest_static_reward_habtm_stats",
+    "tableName": "quest_static_reward__stats",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -36904,7 +35017,7 @@
     }
   },
   "QuestVendorRewardHabtmBaseItemType": {
-    "tableName": "quest_vendor_reward_habtm_base_item_types",
+    "tableName": "quest_vendor_reward__base_item_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -36984,7 +35097,7 @@
     }
   },
   "QuestVendorRewardHabtmCharacter": {
-    "tableName": "quest_vendor_reward_habtm_characters",
+    "tableName": "quest_vendor_reward__characters",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -37291,7 +35404,7 @@
     }
   },
   "RaceAreaHabtmMod": {
-    "tableName": "race_area_habtm_mods",
+    "tableName": "race_area__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -38275,7 +36388,7 @@
     }
   },
   "ShopItemHabtmPackageShopitem": {
-    "tableName": "shop_item_habtm_package_shopitems",
+    "tableName": "shop_item__package__shop_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -38364,7 +36477,7 @@
     }
   },
   "ShopItemHabtmShopCategory": {
-    "tableName": "shop_item_habtm_shop_categories",
+    "tableName": "shop_item__shop_categories",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -39345,7 +37458,7 @@
     }
   },
   "ShrineHabtmAchievementItem": {
-    "tableName": "shrine_habtm_achievement_items",
+    "tableName": "shrine__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -39623,7 +37736,7 @@
     }
   },
   "SkillGemHabtmGemTag": {
-    "tableName": "skill_gem_habtm_gem_tags",
+    "tableName": "skill_gem__gem_tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -40467,7 +38580,7 @@
     }
   },
   "StrDexIntMissionHabtmAchievementItem": {
-    "tableName": "str_dex_int_mission_habtm_achievement_items",
+    "tableName": "str_dex_int_mission__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -40547,7 +38660,7 @@
     }
   },
   "StrDexIntMissionHabtmExtraMod": {
-    "tableName": "str_dex_int_mission_habtm_extra_mods",
+    "tableName": "str_dex_int_mission__extra__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -40713,7 +38826,7 @@
     }
   },
   "StrDexIntMissionMapHabtmMapBossMonstervariety": {
-    "tableName": "str_dex_int_mission_map_habtm_map_boss_monstervarieties",
+    "tableName": "str_dex_int_mission_map__map_boss__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -40874,7 +38987,7 @@
     }
   },
   "StrDexIntMissionModHabtmMod": {
-    "tableName": "str_dex_int_mission_mod_habtm_mods",
+    "tableName": "str_dex_int_mission_mod__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -41057,7 +39170,7 @@
     }
   },
   "StrDexIntMissionUniqueMapHabtmMapBossMonstervariety": {
-    "tableName": "str_dex_int_mission_unique_map_habtm_map_boss_monstervarieties",
+    "tableName": "str_dex_int_mission_unique_map__map_boss__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -41137,7 +39250,7 @@
     }
   },
   "StrDexIntMissionUniqueMapHabtmMod": {
-    "tableName": "str_dex_int_mission_unique_map_habtm_mods",
+    "tableName": "str_dex_int_mission_unique_map__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -41463,7 +39576,7 @@
     }
   },
   "StrDexMissionHabtmAlliesMonstervariety": {
-    "tableName": "str_dex_mission_habtm_allies_monstervarieties",
+    "tableName": "str_dex_mission__allies__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -41543,7 +39656,7 @@
     }
   },
   "StrDexMissionHabtmMod": {
-    "tableName": "str_dex_mission_habtm_mods",
+    "tableName": "str_dex_mission__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -41623,7 +39736,7 @@
     }
   },
   "StrDexMissionHabtmTrapsMonstervariety": {
-    "tableName": "str_dex_mission_habtm_traps_monstervarieties",
+    "tableName": "str_dex_mission__traps__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -41777,7 +39890,7 @@
     }
   },
   "StrDexMissionModHabtmMod": {
-    "tableName": "str_dex_mission_mod_habtm_mods",
+    "tableName": "str_dex_mission_mod__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -41941,7 +40054,7 @@
     }
   },
   "StrDexMissionSpecialModHabtmMod": {
-    "tableName": "str_dex_mission_special_mod_habtm_mods",
+    "tableName": "str_dex_mission_special_mod__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -42194,7 +40307,7 @@
     }
   },
   "StrIntMissionHabtmAchievementItem": {
-    "tableName": "str_int_mission_habtm_achievement_items",
+    "tableName": "str_int_mission__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -42274,7 +40387,7 @@
     }
   },
   "StrIntMissionHabtmRelicMod": {
-    "tableName": "str_int_mission_habtm_relic_mods",
+    "tableName": "str_int_mission__relic_mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -42498,7 +40611,7 @@
     }
   },
   "StrIntMissionMonsterWaveHabtmUniqueMonstervariety": {
-    "tableName": "str_int_mission_monster_wave_habtm_unique_monstervarieties",
+    "tableName": "str_int_mission_monster_wave__unique__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -42666,7 +40779,7 @@
     }
   },
   "StrIntMissionRelicModHabtmMod": {
-    "tableName": "str_int_mission_relic_mod_habtm_mods",
+    "tableName": "str_int_mission_relic_mod__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -42858,7 +40971,7 @@
     }
   },
   "StrIntMissionRelicPatternHabtmRelicMod": {
-    "tableName": "str_int_mission_relic_pattern_habtm_relic_mods",
+    "tableName": "str_int_mission_relic_pattern__relic__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -42935,93 +41048,6 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MyISAM"
-    }
-  },
-  "StrMapMod": {
-    "tableName": "str_map_mods",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "id": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "spawn_weight": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "min_level": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "max_level": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "mods_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "mods_key"
-          }
-        ],
-        "name": "index_mods_key",
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
     }
   },
   "StrMission": {
@@ -43260,7 +41286,7 @@
     }
   },
   "StrMissionHabtmMod": {
-    "tableName": "str_mission_habtm_mods",
+    "tableName": "str_mission__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -44607,7 +42633,7 @@
     }
   },
   "TalismanPackHabtmMonsterPack": {
-    "tableName": "talisman_pack_habtm_monster_packs",
+    "tableName": "talisman_pack__monster_packs",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -45005,7 +43031,7 @@
     }
   },
   "TormentSpiritHabtmMods0": {
-    "tableName": "torment_spirit_habtm_mods0s",
+    "tableName": "torment_spirit__mods0s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -45085,7 +43111,7 @@
     }
   },
   "TormentSpiritHabtmMods1": {
-    "tableName": "torment_spirit_habtm_mods1s",
+    "tableName": "torment_spirit__mods1s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -45165,7 +43191,7 @@
     }
   },
   "TormentSpiritHabtmPossessedMod": {
-    "tableName": "torment_spirit_habtm_possessed_mods",
+    "tableName": "torment_spirit__possessed__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -45245,7 +43271,7 @@
     }
   },
   "TormentSpiritHabtmSpiritMod": {
-    "tableName": "torment_spirit_habtm_spirit_mods",
+    "tableName": "torment_spirit__spirit__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -45325,7 +43351,7 @@
     }
   },
   "TormentSpiritHabtmTouchedMod": {
-    "tableName": "torment_spirit_habtm_touched_mods",
+    "tableName": "torment_spirit__touched__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -45761,7 +43787,7 @@
     }
   },
   "UniqueChestHabtmMod": {
-    "tableName": "unique_chest_habtm_mods",
+    "tableName": "unique_chest__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -46521,7 +44547,7 @@
     }
   },
   "WarbandsPackMonsterHabtmTier1Monstervariety": {
-    "tableName": "warbands_pack_monster_habtm_tier1_monstervarieties",
+    "tableName": "warbands_pack_monster__tier1__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -46601,7 +44627,7 @@
     }
   },
   "WarbandsPackMonsterHabtmTier2Monstervariety": {
-    "tableName": "warbands_pack_monster_habtm_tier2_monstervarieties",
+    "tableName": "warbands_pack_monster__tier2__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -46681,7 +44707,7 @@
     }
   },
   "WarbandsPackMonsterHabtmTier3Monstervariety": {
-    "tableName": "warbands_pack_monster_habtm_tier3_monstervarieties",
+    "tableName": "warbands_pack_monster__tier3__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -46761,7 +44787,7 @@
     }
   },
   "WarbandsPackMonsterHabtmTier4Monstervariety": {
-    "tableName": "warbands_pack_monster_habtm_tier4_monstervarieties",
+    "tableName": "warbands_pack_monster__tier4__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -47372,7 +45398,7 @@
     }
   },
   "WordHabtmSpawnWeightTag": {
-    "tableName": "word_habtm_spawn_weight_tags",
+    "tableName": "word__spawn_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -48274,88 +46300,8 @@
       "engine": "MYISAM"
     }
   },
-  "WorldAreaHabtm1": {
-    "tableName": "world_area_habtm1s",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "autoIncrement": true,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "world_area_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "achievement_item_row": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "world_area_row"
-          },
-          {
-            "attribute": "achievement_item_row"
-          }
-        ],
-        "name": "composite primary_alias",
-        "unique": true,
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MyISAM"
-    }
-  },
   "WorldAreaHabtmAreaTypeTag": {
-    "tableName": "world_area_habtm_area_type_tags",
+    "tableName": "world_area__area_type__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -48435,7 +46381,7 @@
     }
   },
   "WorldAreaHabtmBossesMonstervariety": {
-    "tableName": "world_area_habtm_bosses_monstervarieties",
+    "tableName": "world_area__bosses__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -48515,7 +46461,7 @@
     }
   },
   "WorldAreaHabtmCompletionAchievementitem": {
-    "tableName": "world_area_habtm_completion_achievementitems",
+    "tableName": "world_area__completion__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -48595,7 +46541,7 @@
     }
   },
   "WorldAreaHabtmConnectionsWorldarea": {
-    "tableName": "world_area_habtm_connections_worldareas",
+    "tableName": "world_area__connections__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -48675,7 +46621,7 @@
     }
   },
   "WorldAreaHabtmFullClearAchievementitem": {
-    "tableName": "world_area_habtm_full_clear_achievementitems",
+    "tableName": "world_area__full_clear__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -48755,7 +46701,7 @@
     }
   },
   "WorldAreaHabtmMod": {
-    "tableName": "world_area_habtm_mods",
+    "tableName": "world_area__mods",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -48835,7 +46781,7 @@
     }
   },
   "WorldAreaHabtmMonstersMonstervariety": {
-    "tableName": "world_area_habtm_monsters_monstervarieties",
+    "tableName": "world_area__monsters__monster_varieties",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -48915,7 +46861,7 @@
     }
   },
   "WorldAreaHabtmSpawnWeightTag": {
-    "tableName": "world_area_habtm_spawn_weight_tags",
+    "tableName": "world_area__spawn_weight__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -49006,7 +46952,7 @@
     }
   },
   "WorldAreaHabtmTag": {
-    "tableName": "world_area_habtm_tags",
+    "tableName": "world_area__tags",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -49086,7 +47032,7 @@
     }
   },
   "WorldAreaHabtmTopology": {
-    "tableName": "world_area_habtm_topologies",
+    "tableName": "world_area__topologies",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -49166,7 +47112,7 @@
     }
   },
   "WorldAreaHabtmVaalAreaWorldarea": {
-    "tableName": "world_area_habtm_vaal_area_worldareas",
+    "tableName": "world_area__vaal_area__world_areas",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -49255,7 +47201,7 @@
     }
   },
   "WorldAreaHabtmWaypointActivationAchievementitem": {
-    "tableName": "world_area_habtm_waypoint_activation_achievementitems",
+    "tableName": "world_area__waypoint_activation__achievement_items",
     "attributes": {
       "row": {
         "allowNull": false,

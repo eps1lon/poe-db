@@ -50,37 +50,32 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 7,
       },
+      _mods_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 2,
+      },
     },
     {
       engine: 'MYISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [
-        {
-          fields: [
-            {
-              attribute: 'mods_key',
-            },
-          ],
-          name: 'index_mods_key',
-        },
-      ],
+      indexes: [],
       tableName: 'dex_mission_mods',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.Mod, {
-      as: 'mod',
-      $inverse: 'dex_mission_mods',
-      $col_order: 2,
-      foreignKey: {
-        name: 'mods_key',
-        $type: 'ref|list|long',
-        $col_order: 2,
+    model.belongsToMany(models.Mod, {
+      as: 'mods',
+      through: {
+        model: models.DexMissionModHabtmMod,
+        unique: false,
       },
-      targetKey: 'row',
+      foreignKey: 'dex_mission_mod_row',
+      otherKey: 'mod_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

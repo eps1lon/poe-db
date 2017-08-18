@@ -11974,6 +11974,60 @@
           "constructor": "BOOLEAN"
         }
       },
+      "_mods_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "DexMissionModHabtmMod": {
+    "tableName": "dex_mission_mod__mods",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
       "created_at": {
         "allowNull": false,
         "type": {
@@ -11988,7 +12042,16 @@
           "options": {}
         }
       },
-      "mods_key": {
+      "dex_mission_mod_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "mod_row": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -12002,10 +12065,14 @@
       {
         "fields": [
           {
-            "attribute": "mods_key"
+            "attribute": "dex_mission_mod_row"
+          },
+          {
+            "attribute": "mod_row"
           }
         ],
-        "name": "index_mods_key",
+        "name": "composite primary_alias",
+        "unique": true,
         "type": "",
         "parser": null
       }
@@ -12013,7 +12080,7 @@
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
+      "engine": "MyISAM"
     }
   },
   "DexMissionMonster": {

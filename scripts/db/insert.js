@@ -56,7 +56,7 @@ const all_records = require('../../data/records.json');
 
         console.log(`inserted ${affected_rows} instances into ${model.name}`);
       } catch (err) {
-        console.warn(String(err), records_as_obj[0]);
+        console.warn(model.name, String(err), records_as_obj[0]);
       }
 
       const many_to_many_records = records.reduce(

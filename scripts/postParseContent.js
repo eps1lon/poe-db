@@ -35,6 +35,10 @@ for (const [name, props] of Object.entries(spec)) {
       console.warn(
         `${field_name} in ${name} might have a missing key information`,
       );
+    } else if (/Key$/.test(field_name) && field.type.startsWith('ref|list|')) {
+      console.warn(
+        `possible violation of naming convention for ${field_name} in ${name}`,
+      );
     }
   }
 }

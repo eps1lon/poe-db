@@ -22,7 +22,7 @@ const mountRoutes = models => server => {
   // model name can be plural => many, or singular => one
   server.get('/find/:model_name/:id?', find);
 
-  server.get('/scoped/:scope_alias', scoped);
+  server.get('/scoped/:model_name/:scope_name', scoped);
 
   return server;
 };

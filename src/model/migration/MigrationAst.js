@@ -6,20 +6,9 @@ const actionToStatement = require('./actionToStatement');
 const QUERY_INTERFACE = t.identifier('queryInterface');
 const SEQUELIZE = t.identifier('Sequelize');
 
-const promiseAllCall = promise_expressions => {
-  return t.callExpression(
-    t.memberExpression(t.identifier('Promise'), t.identifier('all')),
-    [t.arrayExpression(promise_expressions)],
-  );
-};
-
-const chunkAwaitPromiseCalls = (promise_calls, size) => {
-  return _.chunk(promise_calls, size).map(chunk => {
-    return t.expressionStatement(
-      t.awaitExpression(
-        promiseAllCall(chunk.map(({ expression }) => expression)),
-      ),
-    );
+const awaitEach = promise_calls => {
+  return promise_calls.map(({ expression }) => {
+    return t.expressionStatement(t.awaitExpression(expression));
   });
 };
 
@@ -60,13 +49,13 @@ class MigrationAst {
   up() {
     // await chunks or migrations like 3.0.0.c-v002 get timed out
     return this.skeletonMethodExpression(
-      chunkAwaitPromiseCalls(this.migration.up().map(actionToStatement), 500),
+      awaitEach(this.migration.up().map(actionToStatement)),
     );
   }
 
   down() {
     return this.skeletonMethodExpression(
-      chunkAwaitPromiseCalls(this.migration.down().map(actionToStatement), 500),
+      awaitEach(this.migration.down().map(actionToStatement)),
     );
   }
 }

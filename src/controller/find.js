@@ -2,31 +2,13 @@ const { singularize } = require('inflection');
 const _ = require('lodash');
 const { NotFoundError, InternalServerError } = require('restify-errors');
 
+const { intOrDefault } = require('./util');
 const {
   describeByName,
   prepareAssociationsForInclude,
   findAssociations,
   safeOrder,
 } = require('../model/util');
-
-const intOrUndefined = val => {
-  const number = parseInt(val, 10);
-
-  if (Number.isNaN(number)) {
-    return undefined;
-  } else {
-    return number;
-  }
-};
-
-const intOrDefault = (val, otherwise) => {
-  const number = intOrUndefined(val);
-  if (number === undefined) {
-    return otherwise;
-  } else {
-    return number;
-  }
-};
 
 const includes = (model, ...types) => {
   return prepareAssociationsForInclude(

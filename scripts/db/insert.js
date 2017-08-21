@@ -37,7 +37,7 @@ const all_records = require('../../data/records.json');
         model => model.DAT_FILE === dat_file,
       );
 
-      const records_as_obj = records.slice(0, 1).map((record, row) => {
+      const records_as_obj = records.map((record, row) => {
         return buildAttrObj(record, model, { row });
       });
 

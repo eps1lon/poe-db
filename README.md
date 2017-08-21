@@ -9,7 +9,7 @@ $ git clone --recursive https://github.com/eps1lon/poe_db.git
 $ yarn install --production
 
 # you might need to config PyPoE to find the Content.ggpk
-$ yarn run dev:parseContent
+$ yarn run load-content
 
 # Be sure to set the necessary environment variables for the connection
 $ yarn run db:build

@@ -47,7 +47,7 @@ const withUUIDSuffix = (dir, prefix, extension, { pad_length }) => {
 };
 
 const gameVersion = () => {
-  return '3.0.0c';
+  return '3.0.1';
 };
 
 const writeAst = async astable => {

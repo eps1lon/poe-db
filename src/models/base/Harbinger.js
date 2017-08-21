@@ -26,6 +26,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 3,
       },
+      unknown3: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 4,
+      },
     },
     {
       engine: 'MYISAM',

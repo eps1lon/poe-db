@@ -126,6 +126,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 16,
       },
+      _encounter_achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 23,
+      },
     },
     {
       engine: 'MYISAM',
@@ -163,14 +168,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_currency_use_achievement_items_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'encounter_achievement_items_key',
-            },
-          ],
-          name: 'index_encounter_achievement_items_key',
         },
       ],
       tableName: 'chests',
@@ -231,19 +228,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.AchievementItem, {
-      as: 'encounter_achievement_item',
-      $inverse: 'chests',
-      $col_order: 23,
-      foreignKey: {
-        name: 'encounter_achievement_items_key',
-        $type: 'ref|list|ulong',
-        $col_order: 23,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
     model.belongsToMany(models.Mod, {
       as: 'mods',
       through: {
@@ -265,6 +249,18 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'chest_row',
       otherKey: 'tag_row',
       $col_order: 16,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'encounter_achievement_items',
+      through: {
+        model: models.ChestHabtmEncounterAchievementitem,
+        unique: false,
+      },
+      foreignKey: 'chest_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 23,
       nullable: true,
       constraints: false,
     });

@@ -98,6 +98,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 17,
       },
+      flag1: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 18,
+      },
       _package_shop_item_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

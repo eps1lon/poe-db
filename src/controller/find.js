@@ -69,9 +69,14 @@ const cachedToHasMany = model => row => {
   // TODO this is not always row!
   const caches = findAssociations(model, 'BelongsToMany').map(assoc => {
     const cache_attr = `_${assoc}_cache`;
-    values[assoc] = row[cache_attr].split(',').map(row => ({ row: +row }));
+    const keys = row[cache_attr];
 
-    return cache_attr;
+    if (keys) {
+      values[assoc] = row[cache_attr].split(',').map(row => ({ row: +row }));
+      return cache_attr;
+    } else {
+      return null;
+    }
   });
 
   return _.omit(values, caches);

@@ -113,14 +113,22 @@ it('should recognize new indices', () => {
   expect(up[0]).toMatchObject({
     type: 'add-index',
     tableName: 'achievements',
-    attributes: ['unknown_key'],
+    attributes: [
+      {
+        attribute: 'unknown_key',
+      },
+    ],
     indexName: 'some_new_index',
   });
 
   expect(up[1]).toMatchObject({
     type: 'add-index',
     tableName: 'achievement_items',
-    attributes: ['achievements_key'],
+    attributes: [
+      {
+        attribute: 'achievements_key',
+      },
+    ],
     indexName: 'index_achievements_key',
   });
 });
@@ -131,14 +139,22 @@ it('should be able to invert add index', () => {
   expect(invertAction(up[0])).toMatchObject({
     type: 'remove-index',
     tableName: 'achievements',
-    attributes: ['unknown_key'],
+    attributes: [
+      {
+        attribute: 'unknown_key',
+      },
+    ],
     indexName: 'some_new_index',
   });
 
   expect(invertAction(up[1])).toMatchObject({
     type: 'remove-index',
     tableName: 'achievement_items',
-    attributes: ['achievements_key'],
+    attributes: [
+      {
+        attribute: 'achievements_key',
+      },
+    ],
     indexName: 'index_achievements_key',
   });
 });
@@ -149,7 +165,11 @@ it('should recognize removed indices', () => {
   expect(up[0]).toMatchObject({
     type: 'remove-index',
     tableName: 'achievements',
-    attributes: ['achievement_sets_display_key'],
+    attributes: [
+      {
+        attribute: 'achievement_sets_display_key',
+      },
+    ],
     indexName: 'index_achievement_sets_display_key',
   });
 });
@@ -160,7 +180,11 @@ it('should be able to invert remove indices', () => {
   expect(invertAction(up[0])).toMatchObject({
     type: 'add-index',
     tableName: 'achievements',
-    attributes: ['achievement_sets_display_key'],
+    attributes: [
+      {
+        attribute: 'achievement_sets_display_key',
+      },
+    ],
     indexName: 'index_achievement_sets_display_key',
   });
 });

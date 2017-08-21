@@ -85,32 +85,43 @@ const all_records = require('../../data/records.json');
 
         const fields = Object.keys(assocs_as_obj[0] || {});
 
-        // chunk or we will get packet to large
-        const inserts = bulkChunkCreate(
-          assoc_model,
-          assocs_as_obj,
-          MAX_PACKET_SIZE,
-          {
+        try {
+          // chunk or we will get packet to large
+          const inserts = bulkChunkCreate(
+            assoc_model,
+            assocs_as_obj,
+            MAX_PACKET_SIZE,
+            {
+              fields,
+              ignoreDuplicates: false,
+              // keep this as simple as possible
+              // these are just join models so we are cutting it a bit loose to
+              // be fast
+              hooks: false,
+              validate: false,
+              // not documented but according to stackoverflow this
+              // will skip building every single object
+              raw: true,
+              updateOnDuplicate: fields,
+            },
+          );
+
+          const affected_rows = await affectedRowsInChunks(inserts);
+          total_insert_count += affected_rows;
+
+          console.log(
+            `inserted ${affected_rows} associations into ${assoc_model.name}`,
+          );
+        } catch (err) {
+          console.warn(
+            assoc_model.name,
+            Object.entries(records[0]),
+            assocs_as_obj[0],
             fields,
-            ignoreDuplicates: false,
-            // keep this as simple as possible
-            // these are just join models so we are cutting it a bit loose to
-            // be fast
-            hooks: false,
-            validate: false,
-            // not documented but according to stackoverflow this
-            // will skip building every single object
-            raw: true,
-            updateOnDuplicate: fields,
-          },
-        );
+          );
 
-        const affected_rows = await affectedRowsInChunks(inserts);
-        total_insert_count += affected_rows;
-
-        console.log(
-          `inserted ${affected_rows} associations into ${assoc_model.name}`,
-        );
+          throw String(err);
+        }
       }
     }
   } catch (e) {

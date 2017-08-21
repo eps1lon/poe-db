@@ -105,10 +105,15 @@ const zipManyValues = (model, record, row, assoc_name) => {
         [otherKey]: target,
         [underscore(PRIORITY)]: i,
       },
-      _.mapValues(
-        relatedValues(model, assoc_name),
-        ({ $col_order }) => record[$col_order][i],
-      ),
+      _.mapValues(relatedValues(model, assoc_name), ({ $col_order }) => {
+        const values = record[$col_order];
+        if (Array.isArray(values)) {
+          return values[i];
+        } else {
+          // spread single value
+          return values;
+        }
+      }),
     );
   });
 };

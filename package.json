@@ -10,6 +10,7 @@
   "author": "eps1lon",
   "license": "MIT",
   "scripts": {
+    "db:build": "yarn run db:migration:run -- up && yarn run db:insert",
     "db:insert": "node scripts/db/insert",
     "db:refill": "yarn run db:truncate && yarn run db:insert",
     "db:schema": "node --trace-warnings scripts/db/schema",

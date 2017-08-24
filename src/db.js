@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const mysql = require('mysql2/promise');
 
+const { init } = require('./models/');
+
 const { POEDB_HOST, POEDB_USER, POEDB_PW, POEDB_DB } = process.env;
 
 const createOrm = options =>
@@ -16,6 +18,14 @@ const createOrm = options =>
       options,
     ),
   );
+
+const withModels = options => {
+  const sequelize = createOrm(options);
+
+  init(sequelize);
+
+  return sequelize;
+};
 
 const db = options =>
   mysql.createConnection(
@@ -34,4 +44,5 @@ module.exports = {
   connection: db,
   createOrm,
   name: POEDB_DB,
+  withModels,
 };

@@ -2,9 +2,9 @@
   "name": "poedb-node",
   "version": "0.0.2",
   "description": "relational db backend for PoE's content.ggpk",
-  "main": "index.js",
+  "main": "server.js",
   "repository": {
-    "url": "https://github.com:eps1lon/poe_db_node.git",
+    "url": "https://github.com:eps1lon/poedb.git",
     "type": "git"
   },
   "author": "eps1lon",

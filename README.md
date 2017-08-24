@@ -39,6 +39,19 @@ $ yarn run dev:models
 
 Remember to add and run migrations if necessary.
 
+## Patch workflow
+Dev workflow in case the spec in Content.ggpk changes (i.e. a patch hits):
+Wait for spec update in OmegaK2/PyPoE or change submodule and file a PR.
+
+```bash
+$ yarn run dev:parseContent
+$ yarn run dev:models
+$ yarn run db:migration:generate # adjust for renames
+$ yarn run db:insert
+$ yarn run test # mainly for scope tests
+```
+
+
 ### models
 The models in src/models/base are auto generated. For specific scopes, 
 getters, setters etc create or update the specific files in the corresponding folders.

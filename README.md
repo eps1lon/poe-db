@@ -37,6 +37,8 @@ $ yarn run dev:parseContent
 $ yarn run dev:models
 ```
 
+Remember to add and run migrations if necessary.
+
 ### models
 The models in src/models/base are auto generated. For specific scopes, 
 getters, setters etc create or update the specific files in the corresponding folders.

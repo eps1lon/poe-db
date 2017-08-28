@@ -1,6 +1,7 @@
 const { baseModelFiles } = require('./util');
 
 const base = require(`./base`);
+const expand = require(`./expansion`);
 const addScopes = require(`./scope`);
 
 module.exports = {
@@ -10,6 +11,9 @@ module.exports = {
 
     // add scopes
     addScopes(models);
+
+    // expand models
+    expand(models);
 
     return models;
   },

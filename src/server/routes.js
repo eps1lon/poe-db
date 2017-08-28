@@ -11,11 +11,15 @@ const usage = (req, res) =>
 const mountRoutes = models => server => {
   server.get('/', usage);
 
-  const { describe, find, modelsController, scoped } = controller(models);
+  const { custom, describe, find, modelsController, scoped } = controller(
+    models,
+  );
 
   // more like an alias for /describe/ and /find/ which corresponds
   // to the index
   server.get('/models', modelsController);
+
+  server.get('/custom/:model_name/:method', custom);
 
   server.get('/describe/:model_name', describe);
 

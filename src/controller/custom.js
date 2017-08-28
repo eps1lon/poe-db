@@ -3,6 +3,7 @@ const _ = require('lodash');
 const { NotFoundError, InternalServerError } = require('restify-errors');
 
 const whitelist = {
+  CraftingBenchOption: ['for-mod-repository', 'withZippedCosts'],
   Mod: ['withZippedSpawnweights'],
 };
 

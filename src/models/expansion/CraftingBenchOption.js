@@ -4,36 +4,16 @@ module.exports = (CraftingBenchOption, models) => {
    * while restoring original order via priority
    */
   CraftingBenchOption.withZippedCosts = () => {
-    return CraftingBenchOption.scope('for-mod-repository')
-      .findAll()
-      .then(results => {
-        return results.map(result => {
-          const { cost_base_item_types, ...props } = result.toJSON();
+    const results = CraftingBenchOption.scope('for-mod-repository').findAll();
 
-          const costs = cost_base_item_types.sort((a, b) => {
-            return (
-              a.CraftingBenchOptionHabtmCostBaseitemtype.priority -
-              b.CraftingBenchOptionHabtmCostBaseitemtype.priority
-            );
-          });
-
-          return {
-            ...props,
-            Cost_BaseItemTypesKeys: costs
-              .map(({ row }) => {
-                return row;
-              })
-              .join(','),
-            Cost_Values: costs
-              .map(
-                ({ CraftingBenchOptionHabtmCostBaseitemtype: { value } }) => {
-                  return value;
-                },
-              )
-              .join(','),
-          };
-        });
-      });
+    return CraftingBenchOption.denormalizeThrough(
+      'cost_base_item_types',
+      [
+        { attribute: 'row', as: 'Cost_BaseItemTypesKeys', through_prop: false },
+        { attribute: 'value', as: 'Cost_Values', through_prop: true },
+      ],
+      results,
+    );
   };
 
   CraftingBenchOption['for-mod-repository'] = () => {

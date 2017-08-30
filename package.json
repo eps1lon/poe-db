@@ -31,14 +31,12 @@
     "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$",
-    "transform": {}
+    "setupTestFrameworkScriptFile": "./src/__tests__/setupTestFramework.js",
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

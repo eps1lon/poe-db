@@ -1,6 +1,5 @@
 const { createOrm } = require('../../../db');
-const base = require('../../base/');
-const baseExpansion = require('../base');
+const base = require('../index');
 
 const sequelize = createOrm({ logging: false });
 const models = sequelize.models;
@@ -9,7 +8,6 @@ base(sequelize);
 it('should apply the expansion without crash', () => {
   const model = sequelize.models.CraftingBenchOption;
 
-  baseExpansion(model, sequelize.models);
   expect(model.denormalizeThrough).toBeDefined();
 });
 

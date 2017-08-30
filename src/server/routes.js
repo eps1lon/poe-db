@@ -11,9 +11,14 @@ const usage = (req, res) =>
 const mountRoutes = models => server => {
   server.get('/', usage);
 
-  const { custom, describe, find, modelsController, scoped } = controller(
-    models,
-  );
+  const {
+    custom,
+    describe,
+    find,
+    modRepository,
+    modelsController,
+    scoped,
+  } = controller(models);
 
   // more like an alias for /describe/ and /find/ which corresponds
   // to the index
@@ -27,6 +32,8 @@ const mountRoutes = models => server => {
   server.get('/find/:model_name/:id?', find);
 
   server.get('/scoped/:model_name/:scope_name', scoped);
+
+  server.get('/mod-repository/:file', modRepository);
 
   return server;
 };

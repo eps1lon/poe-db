@@ -59,6 +59,19 @@ module.exports = models => async (req, res, next) => {
     tags: models.Tag
       .scope('for-mod-repository')
       .findAll({ order: [['row', 'asc']] }),
+
+    'translations-mod_correct_groups': models.Mod
+      .scope('correct_groups')
+      .findAll({})
+      .then(results => {
+        return results.reduce((results, result) => {
+          const { primary, init } = result.toJSON();
+          return {
+            ...results,
+            [primary]: init,
+          };
+        }, {});
+      }),
   };
 
   if (files[file]) {

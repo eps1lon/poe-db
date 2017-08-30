@@ -3,6 +3,20 @@ const Sequelize = require('sequelize');
 module.exports = models => {
   return {
     // data structure for eps1lon/poe_mod_repository
+    correct_groups: {
+      attributes: [
+        ['correct_group', 'primary'],
+        [Sequelize.literal("''"), 'init'],
+      ],
+      where: {
+        generation_type: {
+          $ne: 3,
+        },
+      },
+      group: ['correct_group'],
+      order: [['correct_group', 'asc']],
+    },
+    // data structure for eps1lon/poe_mod_repository
     'for-mod-repository': {
       attributes: [
         ['row', 'primary'],

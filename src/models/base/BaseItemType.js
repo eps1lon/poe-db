@@ -245,6 +245,29 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    // manual, think of a way to define has_one/has_many TODO
+    // hasOne but sourceKey not supported
+    model.hasMany(models.ComponentArmour, {
+      as: 'component_armour',
+      foreignKey: {
+        name: 'base_item_types_key',
+      },
+      sourceKey: 'id',
+    });
+    // hasOne but sourceKey not supported
+    model.hasMany(models.ComponentAttributeRequirement, {
+      as: 'component_attribute_requirements',
+      foreignKey: {
+        name: 'base_item_types_key',
+      },
+      sourceKey: 'id',
+    });
+    model.hasOne(models.WeaponType, {
+      as: 'weapon_type',
+      foreignKey: {
+        name: 'base_item_types_key',
+      },
+    });
     model.belongsToMany(models.Mod, {
       as: 'implicit_mods',
       through: {

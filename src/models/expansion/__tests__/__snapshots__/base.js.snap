@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should denormalize extended props by joining the in a comma separated list 1`] = `
+Array [
+  Object {
+    "Cost_BaseItemTypesKeys": "10",
+    "Cost_Values": "1",
+    "row": 0,
+  },
+  Object {
+    "Cost_BaseItemTypesKeys": "9",
+    "Cost_Values": "5",
+    "row": 1,
+  },
+  Object {
+    "Cost_BaseItemTypesKeys": "9",
+    "Cost_Values": "10",
+    "row": 2,
+  },
+]
+`;

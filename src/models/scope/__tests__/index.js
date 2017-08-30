@@ -10,7 +10,6 @@ it('should not crash on any scope', async () => {
       // just "ping" the scope and throw if it rejects
       try {
         const count = await model.scope(scope_name).count();
-        console.log(count);
       } catch (err) {
         throw new Error(
           `scope '${scope_name} in '${model_name}' failed because of ${String(

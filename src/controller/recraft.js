@@ -68,7 +68,12 @@ const formatBaseItemType = item => {
 
   const formatted_implicits = implicit_mods
     .filter(filterScopedNull())
-    .map(formatMod);
+    .map(formatMod)
+    .map(({ BaseItemTypeHabtmImplicitMod, ...implicit }) => implicit);
+
+  const formatted_tags = tags
+    .filter(filterScopedNull())
+    .map(({ BaseItemTypeHabtmTag, ...tag }) => tag);
 
   return {
     ...props,
@@ -76,7 +81,7 @@ const formatBaseItemType = item => {
     component_armour,
     implicit_mods: formatted_implicits,
     item_class: item_class.primary === null ? null : item_class,
-    tags: tags.filter(filterScopedNull()),
+    tags: formatted_tags,
   };
 };
 

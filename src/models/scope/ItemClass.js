@@ -6,7 +6,7 @@ module.exports = models => {
     },
     // data structure for eps1lon/recraft
     'for-recraft': {
-      attributes: [['row', 'primary'], ['name', 'Name']],
+      attributes: [['row', 'primary'], 'name'],
     },
   };
 };

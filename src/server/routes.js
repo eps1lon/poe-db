@@ -17,6 +17,7 @@ const mountRoutes = models => server => {
     find,
     modRepository,
     modelsController,
+    recraft,
     scoped,
   } = controller(models);
 
@@ -34,6 +35,8 @@ const mountRoutes = models => server => {
   server.get('/scoped/:model_name/:scope_name', scoped);
 
   server.get('/mod-repository/:file', modRepository);
+
+  server.get('/recraft/:file', recraft);
 
   return server;
 };

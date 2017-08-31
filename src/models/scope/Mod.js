@@ -1,6 +1,12 @@
 const Sequelize = require('sequelize');
 
+const createStatScope = require('./Stat');
+const createTagScope = require('./Tag');
+
 module.exports = models => {
+  const stat_scope = createStatScope(models);
+  const tag_scope = createTagScope(models);
+
   return {
     // data structure for eps1lon/poe_mod_repository
     correct_groups: {
@@ -56,6 +62,79 @@ module.exports = models => {
           model: models.Tag,
           as: 'spawn_weight_tags',
           attributes: ['row'],
+          through: {
+            attributes: ['value', 'priority'],
+          },
+        },
+      ],
+    },
+    // data structure for eps1lon/poe_mod_repository
+    'for-recraft': {
+      attributes: [
+        ['row', 'primary'],
+        'id',
+        'level',
+        'domain',
+        'name',
+        'generation_type',
+        'correct_group',
+        'stat1_min',
+        'stat1_max',
+        'stat2_min',
+        'stat2_max',
+        'stat3_min',
+        'stat3_max',
+        'stat4_min',
+        'stat4_max',
+        'stat5_min',
+        'stat5_max',
+        // for include only
+        'stats_key1',
+        'stats_key2',
+        'stats_key3',
+        'stats_key4',
+        'stats_key5',
+        'mod_type_key',
+      ],
+      include: [
+        {
+          model: models.ModType,
+          as: 'mod_type',
+          attributes: [['row', 'primary']],
+        },
+        {
+          model: models.Stat.scope(stat_scope['for-recraft']),
+          as: 'stats1',
+          //scope: 'for-recraft',
+        },
+        {
+          model: models.Stat.scope(stat_scope['for-recraft']),
+          as: 'stats2',
+          //scope: 'for-recraft',
+        },
+        {
+          model: models.Stat.scope(stat_scope['for-recraft']),
+          as: 'stats3',
+          //scope: 'for-recraft',
+        },
+        {
+          model: models.Stat.scope(stat_scope['for-recraft']),
+          as: 'stats4',
+          //scope: 'for-recraft',
+        },
+        {
+          model: models.Stat.scope(stat_scope['for-recraft']),
+          as: 'stats5',
+          //scope: 'for-recraft',
+        },
+        {
+          model: models.Tag.scope(tag_scope['for-recraft']),
+          as: 'tags',
+          //scope: 'for-recraft',
+        },
+        {
+          model: models.Tag.scope(tag_scope['for-recraft']),
+          as: 'spawn_weight_tags',
           through: {
             attributes: ['value', 'priority'],
           },

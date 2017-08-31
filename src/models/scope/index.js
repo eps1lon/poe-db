@@ -11,7 +11,7 @@ module.exports = models => {
       const scopes = require(scope_file)(models);
 
       for (const [name, scope] of Object.entries(scopes)) {
-        model.addScope(name, scope, { overide: false });
+        model.addScope(name, scope, { override: true });
       }
     }
   }

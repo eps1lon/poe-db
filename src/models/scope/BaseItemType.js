@@ -1,6 +1,14 @@
 const Sequelize = require('sequelize');
 
+const createItemClassScope = require('./ItemClass');
+const createModScope = require('./Mod');
+const createTagScope = require('./Tag');
+
 module.exports = models => {
+  const item_class_scope = createItemClassScope(models);
+  const mod_scope = createModScope(models);
+  const tag_scope = createTagScope(models);
+
   return {
     // data structure for eps1lon/poe_mod_repository
     'for-mod-repository': {
@@ -48,6 +56,63 @@ module.exports = models => {
           ],
         },
       ],
+    },
+    // structure for eps1lon/reacraft
+    'for-recraft': {
+      attributes: [
+        ['row', 'primary'],
+        'name',
+        'width',
+        'height',
+        'drop_level',
+        'inherits_from',
+        // only needed because of join
+        'id',
+        'item_classes_key',
+      ],
+      include: [
+        {
+          model: models.ItemClass.scope(item_class_scope['for-recraft']),
+          as: 'item_class',
+        },
+        {
+          model: models.ComponentArmour,
+          as: 'component_armour',
+          attributes: ['armour', 'evasion', 'energy_shield'],
+        },
+        {
+          model: models.ComponentAttributeRequirement,
+          as: 'component_attribute_requirements',
+          attributes: ['req_str', 'req_dex', 'req_int'],
+        },
+        {
+          model: models.WeaponType,
+          as: 'weapon_type',
+          attributes: [
+            'critical',
+            'speed',
+            'damage_min',
+            'damage_max',
+            'range_max',
+          ],
+        },
+        {
+          model: models.Tag.scope(tag_scope['for-recraft']),
+          as: 'tags',
+          scope: 'for-recraft',
+        },
+        {
+          model: models.Mod.scope(mod_scope['for-recraft']),
+          as: 'implicit_mods',
+          scope: 'for-recraft',
+        },
+      ],
+      where: {
+        item_classes_key: {
+          // mtx
+          $notIn: [40],
+        },
+      },
     },
   };
 };

@@ -1,4 +1,12 @@
+const createBaseItemTypeScope = require('./BaseItemType');
+const createItemClassScope = require('./ItemClass');
+const createModScope = require('./Mod');
+
 module.exports = models => {
+  const base_item_type_scope = createBaseItemTypeScope(models);
+  const item_class_scope = createItemClassScope(models);
+  const mod_scope = createModScope(models);
+
   return {
     // data structure for eps1lon/poe_mod_repository
     'for-mod-repository': {
@@ -38,6 +46,53 @@ module.exports = models => {
               attributes: ['name', 'short_name'],
             },
           ],
+        },
+      ],
+    },
+    // data structure for eps1lon/poe_mod_repository
+    'for-recraft': {
+      attributes: [
+        ['row', 'primary'],
+        'order',
+        'master_level',
+        'name',
+        'crafting_bench_custom_action',
+        'sockets',
+        'socket_colours',
+        'links',
+        'item_quantity',
+        'unknown1',
+        // include only
+        'npc_master_key',
+        'mods_key',
+      ],
+      include: [
+        {
+          model: models.BaseItemType.scope(base_item_type_scope['for-recraft']),
+          as: 'cost_base_item_types',
+          through: {
+            attributes: ['value', 'priority'],
+          },
+        },
+        {
+          model: models.NPCMaster,
+          as: 'npc_master',
+          attributes: ['row'],
+          include: [
+            {
+              model: models.NPC,
+              as: 'npc',
+              attributes: ['name', 'short_name'],
+            },
+          ],
+        },
+        {
+          model: models.ItemClass.scope(item_class_scope['for-recraft']),
+          as: 'item_classes',
+        },
+        {
+          model: models.Mod.scope(mod_scope['for-recraft']),
+          as: 'mod',
         },
       ],
     },

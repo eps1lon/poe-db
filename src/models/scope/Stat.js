@@ -9,5 +9,9 @@ module.exports = models => {
         ['text', 'Text'],
       ],
     },
+    // data structure for eps1lon/recraft
+    'for-recraft': {
+      attributes: [['row', 'primary'], 'id', 'text'],
+    },
   };
 };

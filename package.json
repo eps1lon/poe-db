@@ -34,7 +34,7 @@
     "*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./src/__tests__/setupTestFramework.js",
+    "setupTestFrameworkScriptFile": "./src/setupTestFramework.js",
     "testEnvironment": "node",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"
   },

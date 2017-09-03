@@ -157,6 +157,7 @@ module.exports = models => async (req, res, next) => {
       models.Mod.scope('for-recraft').findAll({}).then(mods => {
         return mods.map(mod => formatMod(mod.toJSON()));
       }),
+    tags: () => models.Tag.scope('for-recraft').findAll({}),
   };
 
   if (files[file]) {

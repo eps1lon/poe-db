@@ -72,7 +72,8 @@ module.exports = models => {
       ],
       include: [
         {
-          model: models.ItemClass.scope(item_class_scope['for-recraft']),
+          model: models.ItemClass,
+          attributes: item_class_scope['for-recraft'].attributes,
           as: 'item_class',
         },
         {
@@ -97,14 +98,14 @@ module.exports = models => {
           ],
         },
         {
-          model: models.Tag.scope(tag_scope['for-recraft']),
+          model: models.Tag,
           as: 'tags',
-          scope: 'for-recraft',
+          attributes: tag_scope['for-recraft'].attributes,
         },
         {
-          model: models.Mod.scope(mod_scope['for-recraft']),
+          model: models.Mod,
           as: 'implicit_mods',
-          scope: 'for-recraft',
+          attributes: mod_scope['for-recraft'].attributes,
         },
       ],
       where: {

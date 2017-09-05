@@ -68,8 +68,9 @@ module.exports = models => {
       ],
       include: [
         {
-          model: models.BaseItemType.scope(base_item_type_scope['for-recraft']),
+          model: models.BaseItemType,
           as: 'cost_base_item_types',
+          attributes: base_item_type_scope['for-recraft'].attributes,
           through: {
             attributes: ['value', 'priority'],
           },
@@ -87,12 +88,14 @@ module.exports = models => {
           ],
         },
         {
-          model: models.ItemClass.scope(item_class_scope['for-recraft']),
+          model: models.ItemClass,
           as: 'item_classes',
+          attributes: item_class_scope['for-recraft'].attributes,
         },
         {
-          model: models.Mod.scope(mod_scope['for-recraft']),
+          model: models.Mod,
           as: 'mod',
+          attributes: mod_scope['for-recraft'].attributes,
         },
       ],
     },

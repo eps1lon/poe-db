@@ -1,17 +1,7 @@
 const { NotFoundError } = require('restify-errors');
 
-const filterScopedNull = (key = 'primary') => ({ [key]: prop }) =>
-  prop !== null;
-
 const formatMod = mod => {
   const {
-    // omit
-    stats_key1,
-    stats_key2,
-    stats_key3,
-    stats_key4,
-    stats_key5,
-    mod_type_key,
     // map
     stats1,
     stats2,
@@ -20,6 +10,13 @@ const formatMod = mod => {
     stats5,
     tags,
     spawn_weight_tags,
+    // omit
+    stats_key1,
+    stats_key2,
+    stats_key3,
+    stats_key4,
+    stats_key5,
+    mod_type_key,
     // keep
     ...props
   } = mod;
@@ -30,7 +27,6 @@ const formatMod = mod => {
         a.ModHabtmSpawnWeightTag.priority - b.ModHabtmSpawnWeightTag.priority
       );
     })
-    .filter(filterScopedNull('ModHabtmSpawnWeightTag'))
     .map(({ ModHabtmSpawnWeightTag: { value }, ...spawn_weight_tag }) => {
       return {
         tag: spawn_weight_tag,
@@ -38,16 +34,13 @@ const formatMod = mod => {
       };
     });
 
-  // applying a scope doesnt set the associated object to null but its values
-  const stats = [stats1, stats2, stats3, stats4, stats5].filter(
-    filterScopedNull(),
-  );
+  const stats = [stats1, stats2, stats3, stats4, stats5].filter(Boolean);
 
   return {
     ...props,
     spawn_weights,
     stats,
-    tags: tags.filter(filterScopedNull()),
+    tags,
   };
 };
 
@@ -67,13 +60,10 @@ const formatBaseItemType = item => {
   } = item;
 
   const formatted_implicits = implicit_mods
-    .filter(filterScopedNull())
     .map(formatMod)
     .map(({ BaseItemTypeHabtmImplicitMod, ...implicit }) => implicit);
 
-  const formatted_tags = tags
-    .filter(filterScopedNull())
-    .map(({ BaseItemTypeHabtmTag, ...tag }) => tag);
+  const formatted_tags = tags.map(({ BaseItemTypeHabtmTag, ...tag }) => tag);
 
   return {
     ...props,
@@ -97,7 +87,6 @@ const formatCraftingBenchOption = option => {
   } = option;
 
   const costs = cost_base_item_types
-    .filter(filterScopedNull())
     .sort((a, b) => {
       return (
         a.CraftingBenchOptionHabtmCostBaseitemtype.priority -
@@ -117,7 +106,6 @@ const formatCraftingBenchOption = option => {
     );
 
   const formatted_item_classes = item_classes
-    .filter(filterScopedNull())
     .sort((a, b) => {
       return (
         a.CraftingBenchOptionHabtmItemClass.priority -
@@ -142,7 +130,7 @@ module.exports = models => async (req, res, next) => {
   const files = {
     baseitemtypes: () =>
       models.BaseItemType.scope('for-recraft').findAll({}).then(items => {
-        return items.map(item => formatBaseItemType(item.toJSON()));
+        return items.map(item => formatBaseItemType(item.get({ plain: true })));
       }),
     craftingbenchoptions: () =>
       models.CraftingBenchOption
@@ -150,12 +138,13 @@ module.exports = models => async (req, res, next) => {
         .findAll({})
         .then(options => {
           return options.map(option => {
-            return formatCraftingBenchOption(option.toJSON());
+            return formatCraftingBenchOption(option.get({ plain: true }));
           });
         }),
     mods: () =>
       models.Mod.scope('for-recraft').findAll({}).then(mods => {
-        return mods.map(mod => formatMod(mod.toJSON()));
+        console.log(mods[0].spawn_weight_tags);
+        return mods.map(mod => formatMod(mod.get({ plain: true })));
       }),
     tags: () => models.Tag.scope('for-recraft').findAll({}),
   };

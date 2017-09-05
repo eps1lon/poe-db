@@ -70,10 +70,10 @@ module.exports = models => {
         {
           model: models.BaseItemType,
           as: 'cost_base_item_types',
-          attributes: base_item_type_scope['for-recraft'].attributes,
           through: {
             attributes: ['value', 'priority'],
           },
+          ...base_item_type_scope['for-recraft'],
         },
         {
           model: models.NPCMaster,
@@ -90,12 +90,12 @@ module.exports = models => {
         {
           model: models.ItemClass,
           as: 'item_classes',
-          attributes: item_class_scope['for-recraft'].attributes,
+          ...item_class_scope['for-recraft'],
         },
         {
           model: models.Mod,
           as: 'mod',
-          attributes: mod_scope['for-recraft'].attributes,
+          ...mod_scope['for-recraft'],
         },
       ],
     },

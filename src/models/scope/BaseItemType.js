@@ -100,12 +100,12 @@ module.exports = models => {
         {
           model: models.Tag,
           as: 'tags',
-          attributes: tag_scope['for-recraft'].attributes,
+          ...tag_scope['for-recraft'],
         },
         {
           model: models.Mod,
           as: 'implicit_mods',
-          attributes: mod_scope['for-recraft'].attributes,
+          ...mod_scope['for-recraft'],
         },
       ],
       where: {

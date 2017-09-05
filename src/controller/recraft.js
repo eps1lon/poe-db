@@ -119,7 +119,7 @@ const formatCraftingBenchOption = option => {
   return {
     ...props,
     costs,
-    mod: mod.primary === null ? null : formatMod(mod),
+    mod: mod === null ? null : formatMod(mod),
     item_classes: formatted_item_classes,
   };
 };
@@ -143,7 +143,6 @@ module.exports = models => async (req, res, next) => {
         }),
     mods: () =>
       models.Mod.scope('for-recraft').findAll({}).then(mods => {
-        console.log(mods[0].spawn_weight_tags);
         return mods.map(mod => formatMod(mod.get({ plain: true })));
       }),
     tags: () => models.Tag.scope('for-recraft').findAll({}),

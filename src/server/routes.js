@@ -8,7 +8,7 @@ const usage = (req, res) =>
     },
   });
 
-const mountRoutes = models => server => {
+const mountRoutes = (server, models) => {
   server.get('/', usage);
 
   const {

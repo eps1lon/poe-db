@@ -1,6 +1,8 @@
 const restify = require('restify');
 
 const exposeGameVersion = require('./exposeGameVersion');
+const { mkdir: createCacheDir } = require('./cache');
+const { mountRoutes } = require('./routes');
 
 const cors = () => {
   return (req, res, next) => {
@@ -12,7 +14,10 @@ const cors = () => {
   };
 };
 
-const createServer = () => {
+const createServer = models => {
+  // mkdirp workaround
+  createCacheDir();
+
   const server = restify.createServer({
     name: 'mypoedb',
     version: '1.0.0',
@@ -37,6 +42,8 @@ const createServer = () => {
 
   // custom middleware
   server.use(exposeGameVersion);
+
+  mountRoutes(server, models);
 
   return server;
 };

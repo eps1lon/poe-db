@@ -3,6 +3,7 @@ const { NotFoundError, InternalServerError } = require('restify-errors');
 
 const { intOrDefault } = require('./util');
 
+// document behavior in README.md
 module.exports = models => async (req, res, next) => {
   const { params: { model_name, scope_name = 'defaultScope' } } = req;
   const { where, page, page_size } = req.query;

@@ -3,6 +3,7 @@ const { NotFoundError } = require('restify-errors');
 
 const { describeByName, describe, isJoinModel } = require('../model/util');
 
+// document behavior in README.md
 module.exports = models => async (req, res, next) => {
   const { params: { model_name } } = req;
 

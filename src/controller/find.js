@@ -64,6 +64,7 @@ const cachedToHasMany = model => row => {
   return _.omit(values, caches);
 };
 
+// document behavior in README.md
 module.exports = models => async (req, res, next) => {
   const { params: { model_name, id } } = req;
   const singular = singularize(model_name);

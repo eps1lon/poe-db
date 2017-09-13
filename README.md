@@ -15,8 +15,78 @@ $ yarn run load-content
 $ yarn run db:build
 ```
 
+# Endpoints
 
-## enironment variables
+## `/describe/:model_name`
+- `:model_name` - in CamelCase singular
+```javascript
+{
+  attributes: Attribute[],
+  belongsTo: Association[],
+  hasMany: Association[],
+  belongsToMany: Association[],
+  asCollection: string, // table name
+}
+```
+## `/find/:model_name`
+<!-- see src/controller/find -->
+- query params:
+  - `page` - type: number, default: 1
+  - `page_size` - type: number, default: 20
+  - `order` - type: ```[AttributeName, 'ASC' | 'DESC'][]```
+  - `withDescription` - includes the `/describe` endpoint type: boolean, default: false
+  - `attributes` - whitelist, type: ```AttributeName[]```
+  - `where` - plain js object, see http://docs.sequelizejs.com/manual/tutorial/querying.html#where
+
+### `/find/:model_name/:id`
+- `:model_name` - in CamelCase singular
+- `:id` - primary key
+- includes belongsTo and belongsToMany associations
+```javascript
+{
+  count: 1,
+  rows: ModelInstance,
+}
+```
+
+### `/find/:model_name`
+- `:model_name` - in CamelCase plural
+- includes belongsTo associations
+```javascript
+// Returns
+{
+  count: number,
+  rows: ModelInstance[],
+}
+```
+
+## `/describe/:model_name`
+- `:model_name` - in CamelCase singular
+```javascript
+// Returns
+{
+  attributes: Attribute[],
+  belongsTo: Association[],
+  hasMany: Association[],
+  belongsToMany: Association[],
+  asCollection: string, // table name
+}
+```
+## `/scoped/:model_name/:scope_name`
+- `:model_name` - in CamelCase singular
+- `:scope_name` - defined scope for this specific model
+<!-- see src/controller/find -->
+- query params:
+  - `page` - type: number, default: 1
+  - `page_size` - type: number, default: 20
+  - `where` - plain js object, see http://docs.sequelizejs.com/manual/tutorial/querying.html#where
+
+```javascript
+// Returns
+ModelInstance[]
+```
+
+# environment variables
 The following variables have to be set as environment variables in order to
 authenticate to the database:
 - `POEDB_HOST`
@@ -26,7 +96,7 @@ authenticate to the database:
 - `POEDB_PW`
 - `POEDB_DB`
 
-## dev environment
+# dev environment
 The repository should contain the latest models. If they are out of date
 the package contains scripts to generate new ones. To do so run the following
 commands:

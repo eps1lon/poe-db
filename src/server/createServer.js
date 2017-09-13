@@ -1,5 +1,7 @@
 const restify = require('restify');
 
+const exposeGameVersion = require('./exposeGameVersion');
+
 const cors = () => {
   return (req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -32,6 +34,9 @@ const createServer = () => {
     res.send(200);
     return next();
   });
+
+  // custom middleware
+  server.use(exposeGameVersion);
 
   return server;
 };

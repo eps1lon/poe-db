@@ -5,6 +5,7 @@ const generate = require('babel-core').transformFromAst;
 
 const Migration = require('../../../src/model/migration/SequelizeMigration');
 const MigrationAst = require('../../../src/model/migration/MigrationAst');
+const game_version = require('../../../src/models/version');
 
 const MIGRATION_PATH = path.join(__dirname, '../../../src/migrations');
 
@@ -46,15 +47,11 @@ const withUUIDSuffix = (dir, prefix, extension, { pad_length }) => {
   });
 };
 
-const gameVersion = () => {
-  return '3.0.1';
-};
-
 const writeAst = async astable => {
   const ast = astable.ast();
 
   try {
-    const prefix = `${gameVersion()}`;
+    const prefix = `${game_version}`;
     const ext = `.js`;
 
     const filename = await withUUIDSuffix(MIGRATION_PATH, prefix, ext, {

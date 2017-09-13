@@ -24,7 +24,6 @@
     "postdev:models": "prettier-eslint --write \"src/models/base/*.js\" \"src/models/version.js\" ",
     "load-content": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postload-content": "node scripts/postLoadContent",
-    "install": "cd pypoe && pip install -e .[cli]",
     "lint": "prettier-eslint",
     "precommit": "lint-staged",
     "start": "node server.js",

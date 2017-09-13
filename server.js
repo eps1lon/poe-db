@@ -2,6 +2,7 @@ const createServer = require('./src/server/createServer');
 const useErrorHandlers = require('./src/server/useErrorHandlers');
 const { createOrm } = require('./src/db');
 
+const host = process.env.HOST || 'localhost';
 const port = process.env.PORT || 3000;
 
 const orm = createOrm({
@@ -24,11 +25,11 @@ const server = createServer(models);
 useErrorHandlers(server);
 
 const listening = new Promise((resolve, reject) => {
-  server.listen(port, error => {
+  server.listen(port, host, error => {
     if (error) {
       reject(error);
     } else {
-      console.log(`listening to ${port}`);
+      console.log(`listening to ${host}:${port}`);
       resolve();
     }
   });

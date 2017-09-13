@@ -1,6 +1,7 @@
 {
   "name": "poedb-node",
   "version": "0.0.2",
+  "engines": { "node": "^8.4" },
   "description": "relational db backend for PoE's content.ggpk",
   "main": "server.js",
   "repository": {
@@ -31,10 +32,7 @@
     "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./src/setupTestFramework.js",

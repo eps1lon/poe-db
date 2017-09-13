@@ -24,6 +24,16 @@ GRANT USAGE ON *.* TO 'poedb'@'localhost';
 GRANT ALL PRIVILEGES ON `poedb`.* TO 'poedb'@'localhost';
 ```
 
+### environment variables
+The following variables have to be set as environment variables in order to
+authenticate to the database:
+- `POEDB_HOST`
+- `POEDB_USER` needs the following privileges
+  - drop/create host wide for `db:create`, `db:drop`
+  - all read/write privileges for the specified db
+- `POEDB_PW`
+- `POEDB_DB`
+
 # Endpoints
 
 ## `/describe/:model_name`
@@ -94,16 +104,6 @@ GRANT ALL PRIVILEGES ON `poedb`.* TO 'poedb'@'localhost';
 // Returns
 ModelInstance[]
 ```
-
-# environment variables
-The following variables have to be set as environment variables in order to
-authenticate to the database:
-- `POEDB_HOST`
-- `POEDB_USER` needs the following privileges
-  - drop/create host wide for `db:create`, `db:drop`
-  - all read/write privileges for the specified db
-- `POEDB_PW`
-- `POEDB_DB`
 
 # dev environment
 The repository should contain the latest models. If they are out of date

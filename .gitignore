@@ -2,11 +2,6 @@
 node_modules
 npm_debug.log
 
-/* content.ggpk data */
-data/content.json
-data/records.json
-data/spec.json
-
 /* debug */
 .debug.json
 yarn-error.log

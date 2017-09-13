@@ -10,3 +10,6 @@ data/spec.json
 /* debug */
 .debug.json
 yarn-error.log
+
+/* production keys */
+src/server/access/keys.prod

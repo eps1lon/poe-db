@@ -15,6 +15,15 @@ $ yarn run load-content
 $ yarn run db:build
 ```
 
+## Database Setup
+```sql
+# just to display what priviliges are needed
+CREATE USER 'poedb'@'localhost' IDENTIFIED BY '***';
+CREATE DATABASE poedb;
+GRANT USAGE ON *.* TO 'poedb'@'localhost';
+GRANT ALL PRIVILEGES ON `poedb`.* TO 'poedb'@'localhost';
+```
+
 # Endpoints
 
 ## `/describe/:model_name`

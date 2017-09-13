@@ -3,7 +3,7 @@ python 3.4 for PyPoe
 
 # install
 ```bash
-$ git clone --recursive https://github.com/eps1lon/poe_db.git
+$ git clone --recursive https://github.com/eps1lon/poedb.git
 
 # run in a python 3.4 virtualenv for PyPoE:
 $ yarn install --production

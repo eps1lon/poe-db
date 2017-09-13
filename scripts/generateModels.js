@@ -1,12 +1,39 @@
+const { ArgumentParser } = require('argparse');
 const fs = require('fs');
 const path = require('path');
 const generate = require('babel-core').transformFromAst;
+const t = require('babel-types');
 
 const { BASE_PATH } = require('../src/models/util');
 const { throwOnError } = require('../src/util');
 const SequelizeModel = require('../src/model/SequelizeModel');
 
 const spec = require('../data/spec.json');
+
+const parser = new ArgumentParser({
+  version: '0.0.1',
+  addHelp: true,
+  description: 'generates base models in src/models/base',
+});
+
+parser.addArgument(['-p', '--poe'], {
+  help: 'the game version from which spec.json was extracted',
+  required: true,
+});
+
+const { poe: poe_version } = parser.parseArgs();
+
+const versionAst = version => {
+  return t.program([
+    t.expressionStatement(
+      t.assignmentExpression(
+        '=',
+        t.memberExpression(t.identifier('module'), t.identifier('exports')),
+        t.stringLiteral(version),
+      ),
+    ),
+  ]);
+};
 
 const writeAst = async model => {
   const ast = model.ast();
@@ -35,3 +62,9 @@ for (const [name, props] of Object.entries(spec).filter(
 
   model.throughModels().map(({ model }) => writeAst(model));
 }
+
+fs.writeFile(
+  path.join(__dirname, '../src/models/version.js'),
+  generate(versionAst(poe_version)).code,
+  throwOnError(),
+);

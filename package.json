@@ -20,7 +20,7 @@
     "dev:server": "nodemon --trace-warnings server.js",
     "dev:models": "node --trace-warnings scripts/generateModels",
     "dev:models:clear": "node scripts/clearModels",
-    "postdev:models": "prettier-eslint --write \"src/models/base/*.js\"",
+    "postdev:models": "prettier-eslint --write \"src/models/base/*.js\" \"src/models/version.js\" ",
     "load-content": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postload-content": "node scripts/postLoadContent",
     "install": "cd pypoe && pip install -e .[cli]",
@@ -39,6 +39,7 @@
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js)$"
   },
   "devDependencies": {
+    "argparse": "^1.0.9",
     "babel-core": "^6.25.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-types": "^6.25.0",

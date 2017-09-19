@@ -1,5 +1,44 @@
 const { NotFoundError } = require('restify-errors');
 
+const formatWorldAreaFromAtlas = world_area => {
+  const {
+    // map
+    area_type_tags,
+    tags,
+    mods,
+    // omit
+    // keep
+    ...props
+  } = world_area;
+
+  return {
+    ...props,
+    area_type_tags: area_type_tags.map(
+      ({ WorldAreaHabtmAreaTypeTag, ...tag }) => tag,
+    ),
+    tags: tags.map(({ WorldAreaHabtmTag, ...tag }) => tag),
+    mods: mods.map(({ WorldAreaHabtmMod, ...mod }) => formatMod(mod)),
+  };
+};
+
+const formatAtlasNode = node => {
+  const {
+    // map
+    atlas_node,
+    world_area,
+    // omit
+    world_areas_key,
+    // keep
+    ...props
+  } = node;
+
+  return {
+    ...props,
+    adjacent: atlas_node.map(({ row }) => row),
+    world_area: formatWorldAreaFromAtlas(world_area),
+  };
+};
+
 const formatMod = mod => {
   const {
     // map
@@ -128,6 +167,10 @@ module.exports = models => async (req, res, next) => {
   const { params: { file } } = req;
 
   const files = {
+    atlas: () =>
+      models.AtlasNode.scope('atlas').findAll({}).then(nodes => {
+        return nodes.map(node => formatAtlasNode(node.get({ plain: true })));
+      }),
     baseitemtypes: () =>
       models.BaseItemType.scope('for-recraft').findAll({}).then(items => {
         return items.map(item => formatBaseItemType(item.get({ plain: true })));

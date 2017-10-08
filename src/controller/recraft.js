@@ -163,18 +163,68 @@ const formatCraftingBenchOption = option => {
   };
 };
 
+const formatLevelEffect = level_effect => {
+  const { level, stats, stats2 } = level_effect;
+
+  return {
+    level,
+    stats: [
+      ...stats.map((stat, i) => ({
+        id: stat.id,
+        value: level_effect[`stat${i + 1}_value`],
+        float: level_effect[`stat${i + 1}float`],
+      })),
+      ...stats2.map((stat, i) => ({
+        id: stat.id,
+        value: level_effect[`stat${i + 5}_value`],
+        float: level_effect[`stat${i + 5}float`],
+      })),
+    ],
+  };
+};
+
+const formatGrantedEffect = effect => {
+  const { id, is_support, cast_time, granted_effects_per_levels } = effect;
+
+  return {
+    id,
+    is_support,
+    cast_time,
+    granted_effects_per_levels: granted_effects_per_levels.map(level_effect =>
+      formatLevelEffect(level_effect),
+    ),
+  };
+};
+
+const formatSkillGem = skill_gem => {
+  const { description, granted_effect } = skill_gem;
+
+  return {
+    description,
+    granted_effect: formatGrantedEffect(granted_effect),
+  };
+};
+
 module.exports = models => async (req, res, next) => {
   const { params: { file } } = req;
 
   const files = {
     atlas: () =>
-      models.AtlasNode.scope('atlas').findAll({}).then(nodes => {
-        return nodes.map(node => formatAtlasNode(node.get({ plain: true })));
-      }),
+      models.AtlasNode
+        .scope('atlas')
+        .findAll({})
+        .then(nodes => {
+          return nodes.map(node => formatAtlasNode(node.get({ plain: true })));
+        }),
     baseitemtypes: () =>
-      models.BaseItemType.scope('for-recraft').findAll({}).then(items => {
-        return items.map(item => formatBaseItemType(item.get({ plain: true })));
-      }),
+      models.BaseItemType
+        .scope('for-recraft')
+        .findAll({})
+        .then(items => {
+          return items.map(item =>
+            formatBaseItemType(item.get({ plain: true })),
+          );
+        }),
     craftingbenchoptions: () =>
       models.CraftingBenchOption
         .scope('for-recraft')
@@ -184,10 +234,20 @@ module.exports = models => async (req, res, next) => {
             return formatCraftingBenchOption(option.get({ plain: true }));
           });
         }),
+    gems: () =>
+      models.SkillGem
+        .scope('for-recraft')
+        .findAll({})
+        .then(gems =>
+          gems.map(gem => formatSkillGem(gem.get({ plain: true }))),
+        ),
     mods: () =>
-      models.Mod.scope('for-recraft').findAll({}).then(mods => {
-        return mods.map(mod => formatMod(mod.get({ plain: true })));
-      }),
+      models.Mod
+        .scope('for-recraft')
+        .findAll({})
+        .then(mods => {
+          return mods.map(mod => formatMod(mod.get({ plain: true })));
+        }),
     tags: () => models.Tag.scope('for-recraft').findAll({}),
   };
 

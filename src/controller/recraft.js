@@ -166,19 +166,24 @@ const formatCraftingBenchOption = option => {
 const formatLevelEffect = level_effect => {
   const { level, stats, stats2 } = level_effect;
 
+  const formatLevelStat = offset => stat => {
+    const join =
+      stat.GrantedEffectsPerLevelHabtmStat ||
+      stat.GrantedEffectsPerLevelHabtmStats2;
+    const index = join.priority;
+
+    return {
+      id: stat.id,
+      value: level_effect[`stat${index + offset}_value`],
+      float: level_effect[`stat${index + offset}float`],
+    };
+  };
+
   return {
     level,
     stats: [
-      ...stats.map((stat, i) => ({
-        id: stat.id,
-        value: level_effect[`stat${i + 1}_value`],
-        float: level_effect[`stat${i + 1}float`],
-      })),
-      ...stats2.map((stat, i) => ({
-        id: stat.id,
-        value: level_effect[`stat${i + 5}_value`],
-        float: level_effect[`stat${i + 5}float`],
-      })),
+      ...stats.map(formatLevelStat(1)),
+      ...stats2.map(formatLevelStat(5)),
     ],
   };
 };

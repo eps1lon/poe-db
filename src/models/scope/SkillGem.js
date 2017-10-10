@@ -38,7 +38,6 @@ module.exports = models => {
           ],
         },
       ],
-      limit: 10,
     },
   };
 };

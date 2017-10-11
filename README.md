@@ -125,7 +125,10 @@ Wait for spec update in OmegaK2/PyPoE or change submodule and file a PR.
 ```bash
 $ yarn run load-content
 $ yarn run dev:models
+$ yarn run db:schema
 $ yarn run db:migration:generate # adjust for renames
+# verify generated migrations use diff between models as a helper
+$ yarn run db:migration:run up
 $ yarn run db:insert
 $ yarn run test # mainly for scope tests
 ```

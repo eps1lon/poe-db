@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 11,
       },
-      version: {
+      map_iteration: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

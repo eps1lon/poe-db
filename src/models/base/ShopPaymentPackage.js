@@ -92,13 +92,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 14,
       },
-      unknown6: {
-        type: DataTypes.INTEGER,
+      x_box_id: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 15,
       },
-      unknown7: {
+      shop_package_platform_key: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

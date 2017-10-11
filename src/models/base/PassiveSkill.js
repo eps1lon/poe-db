@@ -128,7 +128,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 25,
       },
-      unknown0: {
+      stat5_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

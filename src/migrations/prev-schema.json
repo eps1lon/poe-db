@@ -7203,6 +7203,13 @@
           "options": {}
         }
       },
+      "_encounter_achievement_items_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
       "created_at": {
         "allowNull": false,
         "type": {
@@ -7252,15 +7259,6 @@
             "unsigned": true
           }
         }
-      },
-      "encounter_achievement_items_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
       }
     },
     "indices": [
@@ -7301,16 +7299,6 @@
           }
         ],
         "name": "index_currency_use_achievement_items_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "encounter_achievement_items_key"
-          }
-        ],
-        "name": "index_encounter_achievement_items_key",
         "type": "",
         "parser": null
       }
@@ -7620,6 +7608,86 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MYISAM"
+    }
+  },
+  "ChestHabtmEncounterAchievementitem": {
+    "tableName": "chest__encounter__achievement_items",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "chest_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "achievement_item_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "chest_row"
+          },
+          {
+            "attribute": "achievement_item_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
     }
   },
   "ChestHabtmMod": {
@@ -17257,6 +17325,14 @@
           "options": {}
         }
       },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
       "created_at": {
         "allowNull": false,
         "type": {
@@ -22114,6 +22190,13 @@
           "options": {}
         }
       },
+      "_labyrinth_secrets_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
       "created_at": {
         "allowNull": false,
         "type": {
@@ -22129,15 +22212,6 @@
         }
       },
       "base_item_types_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "labyrinth_secrets_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -22170,16 +22244,6 @@
       {
         "fields": [
           {
-            "attribute": "labyrinth_secrets_key"
-          }
-        ],
-        "name": "index_labyrinth_secrets_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
             "attribute": "buff_buff_definitions_key"
           }
         ],
@@ -22192,6 +22256,86 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MYISAM"
+    }
+  },
+  "LabyrinthTrinketHabtmLabyrinthSecret": {
+    "tableName": "labyrinth_trinket__labyrinth_secrets",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "labyrinth_trinket_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "labyrinth_secret_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "labyrinth_trinket_row"
+          },
+          {
+            "attribute": "labyrinth_secret_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
     }
   },
   "LeagueCategory": {
@@ -22398,6 +22542,14 @@
         }
       },
       "shaped_area_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -36418,6 +36570,13 @@
           "options": {}
         }
       },
+      "flag1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
       "_package_shop_item_cache": {
         "allowNull": false,
         "type": {
@@ -36864,6 +37023,14 @@
         }
       },
       "unknown6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown7": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -42291,6 +42458,14 @@
         "primaryKey": false,
         "type": {
           "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
           "options": {}
         }
       },

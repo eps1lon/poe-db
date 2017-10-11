@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 4,
       },
-      unknown0: {
+      shop_package_platform_key: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

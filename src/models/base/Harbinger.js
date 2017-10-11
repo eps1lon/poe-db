@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown2: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 3,
       },
-      unknown3: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

@@ -17301,7 +17301,7 @@
           }
         }
       },
-      "unknown2": {
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -17325,7 +17325,7 @@
           "options": {}
         }
       },
-      "unknown3": {
+      "unknown2": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -22549,7 +22549,7 @@
           "options": {}
         }
       },
-      "unknown0": {
+      "map_iteration": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -32465,7 +32465,7 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown0": {
+      "stat5_value": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -36577,6 +36577,13 @@
           "constructor": "BOOLEAN"
         }
       },
+      "flag2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
       "_package_shop_item_cache": {
         "allowNull": false,
         "type": {
@@ -37022,15 +37029,15 @@
           "options": {}
         }
       },
-      "unknown6": {
+      "x_box_id": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "INTEGER",
+          "constructor": "TEXT",
           "options": {}
         }
       },
-      "unknown7": {
+      "shop_package_platform_key": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -42461,7 +42468,7 @@
           "options": {}
         }
       },
-      "unknown0": {
+      "shop_package_platform_key": {
         "allowNull": true,
         "primaryKey": false,
         "type": {

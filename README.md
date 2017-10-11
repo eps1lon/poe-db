@@ -123,7 +123,7 @@ Dev workflow in case the spec in Content.ggpk changes (i.e. a patch hits):
 Wait for spec update in OmegaK2/PyPoE or change submodule and file a PR.
 
 ```bash
-$ yarn run dev:parseContent
+$ yarn run load-content
 $ yarn run dev:models
 $ yarn run db:migration:generate # adjust for renames
 $ yarn run db:insert

@@ -83,6 +83,10 @@ const all_records = require('../../data/records.json');
         const assocs_as_obj = many_to_many_records[assoc];
         const assoc_model = model.associations[assoc].through.model;
 
+        // TODO smartly delete. not that important atm for associations
+        console.log(`truncated ${assoc_model.name}`);
+        await assoc_model.truncate();
+
         const fields = Object.keys(assocs_as_obj[0] || {});
 
         try {

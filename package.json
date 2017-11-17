@@ -7,7 +7,7 @@
   "description": "relational db backend for PoE's content.ggpk",
   "main": "server.js",
   "repository": {
-    "url": "https://github.com:eps1lon/poedb.git",
+    "url": "https://github.com:eps1lon/poe-db.git",
     "type": "git"
   },
   "author": "eps1lon",

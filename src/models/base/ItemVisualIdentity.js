@@ -158,6 +158,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 28,
       },
+      unknown30: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 30,
+      },
       _pickup_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

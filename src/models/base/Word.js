@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 5,
       },
-      unknown8: {
+      inflection: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,

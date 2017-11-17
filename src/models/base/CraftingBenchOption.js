@@ -74,6 +74,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 15,
       },
+      flag0: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 16,
+      },
       _cost_base_item_types_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

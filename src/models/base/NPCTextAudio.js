@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 6,
       },
-      unknown0: {
+      inflection: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,

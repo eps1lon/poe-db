@@ -1,7 +1,9 @@
-# Requirements
+# poedb [![Build Status](https://travis-ci.org/eps1lon/poedb.svg?branch=master)](https://travis-ci.org/eps1lon/poedb)
+
+## Requirements
 python 3.4 for PyPoe
 
-# install
+## install
 ```bash
 $ git clone --recursive https://github.com/eps1lon/poedb.git
 

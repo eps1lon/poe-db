@@ -153,7 +153,7 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 35,
       },
       flag0: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 36,

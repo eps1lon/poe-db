@@ -103,11 +103,11 @@ class SequelizeBaseModel extends Model {
         case 'bool':
           return 'BOOLEAN';
         case 'byte':
-          return 'INTEGER.UNSIGNED'; // TODO bits in sequelize
+          // TINYINT
+          return 'INTEGER'; // TODO bits in sequelize
         case 'ref|int':
           return 'INTEGER';
         case 'ubyte':
-          // @TODO what actually are unsigned bytes? whats the point?
           return 'INTEGER.UNSIGNED'; // TODO bits in sequelize
         default:
           throw new Error(`unrecognized type '${props.type}'`);

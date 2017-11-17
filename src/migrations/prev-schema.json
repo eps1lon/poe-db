@@ -2137,7 +2137,7 @@
           }
         }
       },
-      "unknown3": {
+      "inflection": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -8501,6 +8501,13 @@
         }
       },
       "is_disabled": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -19549,6 +19556,14 @@
         "primaryKey": false,
         "type": {
           "constructor": "BOOLEAN"
+        }
+      },
+      "unknown30": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
         }
       },
       "_pickup_achievement_items_cache": {
@@ -31389,7 +31404,7 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown0": {
+      "inflection": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -45609,7 +45624,7 @@
           "options": {}
         }
       },
-      "unknown8": {
+      "inflection": {
         "allowNull": true,
         "primaryKey": false,
         "type": {

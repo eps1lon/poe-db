@@ -3,3 +3,10 @@ script:
   - npm run format:check
   - npm run lint
   - npm run test:ci
+  - mv data/records.ci.json data/records.json
+  - npm run db:build
+  - npm run test:ci
+services:
+  - mysql
+before_install:
+  - mysql -e 'CREATE DATABASE poebdb;'

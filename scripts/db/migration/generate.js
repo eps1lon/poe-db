@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const format = require('prettier-eslint');
+const { format } = require('prettier');
 const generate = require('babel-core').transformFromAst;
 
 const Migration = require('../../../src/model/migration/SequelizeMigration');
@@ -60,10 +60,7 @@ const writeAst = async astable => {
 
     const { code } = generate(ast);
 
-    fs.writeFileSync(
-      path.join(MIGRATION_PATH, filename),
-      format({ text: code }),
-    );
+    fs.writeFileSync(path.join(MIGRATION_PATH, filename), format(code));
 
     return filename;
   } catch (err) {

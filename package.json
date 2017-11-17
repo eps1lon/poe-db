@@ -23,15 +23,15 @@
     "dev:server": "nodemon --trace-warnings server.js",
     "dev:models": "node --trace-warnings scripts/generateModels",
     "dev:models:clear": "node scripts/clearModels",
-    "postdev:models": "prettier-eslint --write \"src/models/base/*.js\" \"src/models/version.js\" ",
+    "postdev:models": "prettier --write \"src/models/base/*.js\" \"src/models/version.js\" ",
     "load-content": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postload-content": "node scripts/postLoadContent",
     "lint": "eslint \"src/**/*.js\" \"scripts/**/*.js\" \"src/models/(base|index).js\"",
     "start": "node server.js",
     "test": "jest",
     "test:ci": "jest --runInBand",
-    "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\"",
-    "format:check": "prettier-eslint --list-different \"src/**/*.js\" \"scripts/**/*.js\""
+    "format": "prettier --write \"src/**/*.js\" \"scripts/**/*.js\"",
+    "format:check": "prettier --list-different \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./src/setupTestFramework.js",
@@ -45,12 +45,9 @@
     "babel-types": "^6.25.0",
     "eslint": "^4.0.0",
     "eslint-config-prettier": "^2.2.0",
-    "eslint-plugin-prettier": "^2.1.2",
     "jest": "^20.0.4",
     "nodemon": "^1.11.0",
-    "prettier": "^1.7.3",
-    "prettier-eslint": "^6.4.2",
-    "prettier-eslint-cli": "^4.1.1"
+    "prettier": "^1.7.3"
   },
   "dependencies": {
     "cache-manager": "^2.4.0",

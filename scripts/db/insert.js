@@ -21,9 +21,18 @@ const affectedRowsInChunks = async chunks => {
   return _.sum(inserted.map(chunk => chunk.length));
 };
 
-const all_records = require('../../data/records.json');
+let data_records = [];
+try {
+  data_records = require('../../data/records.json');
+} catch (err) {
+  if (!process.env.CI) {
+    throw err;
+  }
+} finally {
+  insert(data_records);
+}
 
-(async () => {
+async function insert(all_records) {
   const orm = createOrm({ logging: false });
   const models = require('../../src/models').init(orm);
 
@@ -139,4 +148,4 @@ const all_records = require('../../data/records.json');
         runtime} inserts/s)`,
     );
   }
-})();
+}

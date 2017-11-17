@@ -2,3 +2,5 @@
 *
 # Except this file
 !.gitignore
+# and ci fixtures
+!records.ci.json

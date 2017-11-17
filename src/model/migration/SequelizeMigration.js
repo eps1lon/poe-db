@@ -69,13 +69,15 @@ const changedColumns = (prev_schema, schema) => {
       );
 
       // normalize
-      return Array(attribute_changes.length).fill(0).map((_, i) => {
-        return {
-          model_name,
-          attribute_name: attribute_changes[i][0],
-          attribute: attribute_changes[i][1],
-        };
-      });
+      return Array(attribute_changes.length)
+        .fill(0)
+        .map((_, i) => {
+          return {
+            model_name,
+            attribute_name: attribute_changes[i][0],
+            attribute: attribute_changes[i][1],
+          };
+        });
     }),
   );
 };
@@ -92,13 +94,15 @@ const newColumns = (prev_schema, schema) => {
       );
 
       // normalize
-      return Array(new_attributes.length).fill(0).map((_, i) => {
-        return {
-          model_name,
-          attribute_name: new_attributes[i][0],
-          attribute: new_attributes[i][1],
-        };
-      });
+      return Array(new_attributes.length)
+        .fill(0)
+        .map((_, i) => {
+          return {
+            model_name,
+            attribute_name: new_attributes[i][0],
+            attribute: new_attributes[i][1],
+          };
+        });
     }),
   );
 };
@@ -120,7 +124,9 @@ class MigrationAst {
   }
 
   down() {
-    return this.up().reverse().map(invertAction);
+    return this.up()
+      .reverse()
+      .map(invertAction);
   }
 
   createTable() {

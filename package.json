@@ -27,18 +27,11 @@
     "load-content": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postload-content": "node scripts/postLoadContent",
     "lint": "eslint \"src/**/*.js\" \"scripts/**/*.js\" \"src/models/(base|index).js\"",
-    "precommit": "lint-staged",
     "start": "node server.js",
     "test": "jest",
     "test:ci": "jest --runInBand",
     "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\"",
     "format:check": "prettier-eslint --list-different \"src/**/*.js\" \"scripts/**/*.js\""
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./src/setupTestFramework.js",
@@ -53,9 +46,7 @@
     "eslint": "^4.0.0",
     "eslint-config-prettier": "^2.2.0",
     "eslint-plugin-prettier": "^2.1.2",
-    "husky": "^0.14.0",
     "jest": "^20.0.4",
-    "lint-staged": "^4.0.0",
     "nodemon": "^1.11.0",
     "prettier": "^1.7.3",
     "prettier-eslint": "^6.4.2",

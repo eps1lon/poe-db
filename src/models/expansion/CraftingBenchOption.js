@@ -1,4 +1,4 @@
-module.exports = (CraftingBenchOption, models) => {
+module.exports = CraftingBenchOption => {
   /**
    * zips extended HasAndBelongsToMany
    * while restoring original order via priority

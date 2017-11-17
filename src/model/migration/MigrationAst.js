@@ -1,5 +1,4 @@
 const t = require('babel-types');
-const _ = require('lodash');
 
 const actionToStatement = require('./actionToStatement');
 

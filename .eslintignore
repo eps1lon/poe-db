@@ -1,0 +1,3 @@
+# upper case matching not possible
+# include those files explicit
+/src/models/base/*.js

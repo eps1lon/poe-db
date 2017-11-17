@@ -29,7 +29,7 @@ module.exports = {
       type: Sequelize.BOOLEAN,
     });
   },
-  down: async (queryInterface, Sequelize) => {
+  down: async queryInterface => {
     await queryInterface.removeColumn('shop_items', 'flag2');
     await queryInterface.renameColumn(
       'supporter_pack_sets',

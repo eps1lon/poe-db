@@ -1,5 +1,3 @@
-const Sequelize = require('sequelize');
-
 const createItemClassScope = require('./ItemClass');
 const createModScope = require('./Mod');
 const createTagScope = require('./Tag');

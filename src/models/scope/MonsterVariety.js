@@ -1,4 +1,4 @@
-module.exports = models => {
+module.exports = () => {
   return {
     exiles: {},
   };

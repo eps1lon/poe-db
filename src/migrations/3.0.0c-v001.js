@@ -34265,7 +34265,7 @@ module.exports = {
       ),
     ]);
   },
-  down: async (queryInterface, Sequelize) => {
+  down: async queryInterface => {
     await Promise.all([
       queryInterface.removeIndex('zana_quests', 'index_quest_key'),
       queryInterface.removeIndex(

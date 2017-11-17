@@ -1,4 +1,4 @@
 module.exports = {
-  up: async (queryInterface, Sequelize) => {},
-  down: async (queryInterface, Sequelize) => {},
+  up: async () => {},
+  down: async () => {},
 };

@@ -26,7 +26,7 @@
     "postdev:models": "prettier-eslint --write \"src/models/base/*.js\" \"src/models/version.js\" ",
     "load-content": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postload-content": "node scripts/postLoadContent",
-    "lint": "prettier-eslint",
+    "lint": "eslint \"src/**/*.js\" \"scripts/**/*.js\" \"src/models/(base|index).js\"",
     "precommit": "lint-staged",
     "start": "node server.js",
     "test": "jest",

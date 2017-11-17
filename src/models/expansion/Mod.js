@@ -1,4 +1,4 @@
-module.exports = (Mod, models) => {
+module.exports = Mod => {
   /**
    * zips extended HasAndBelongsToMany
    * while restoring original order via priority

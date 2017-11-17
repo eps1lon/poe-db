@@ -1,3 +1,3 @@
-const useErrorHandlers = server => {};
+const useErrorHandlers = () => {};
 
 module.exports = useErrorHandlers;

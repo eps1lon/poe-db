@@ -30,7 +30,9 @@
     "precommit": "lint-staged",
     "start": "node server.js",
     "test": "jest",
-    "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\""
+    "test:ci": "jest --runInBand",
+    "format": "prettier-eslint --write \"src/**/*.js\" \"scripts/**/*.js\"",
+    "format:check": "prettier-eslint --list-different \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "lint-staged": {
     "*.js": [

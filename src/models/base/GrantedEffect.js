@@ -144,6 +144,20 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+
+    // MANUAL
+    model.hasMany(models.GrantedEffectsPerLevel, {
+      as: 'granted_effects_per_levels',
+      $inverse: 'granted_effect',
+      foreignKey: {
+        name: 'granted_effects_key',
+        $type: 'ulong',
+        $col_order: 0,
+      },
+      targetKey: 'granted_effects_key',
+      nullable: true,
+      constraints: false,
+    });
   };
 
   model.DAT_FILE = 'GrantedEffects.dat';

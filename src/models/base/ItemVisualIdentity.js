@@ -122,13 +122,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 19,
       },
-      unknown28: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 20,
       },
-      unknown29: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -158,8 +158,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 28,
       },
-      unknown30: {
-        type: DataTypes.INTEGER,
+      animation_location: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 30,

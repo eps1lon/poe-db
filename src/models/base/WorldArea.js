@@ -392,6 +392,24 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 85,
       },
+      abyss_regular_chance: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 86,
+      },
+      abyss_special_chance: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 87,
+      },
+      unknown98: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 89,
+      },
       _connections_world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -523,6 +541,14 @@ module.exports = (sequelize, DataTypes) => {
           ],
           name: 'index_environments_key',
         },
+        {
+          fields: [
+            {
+              attribute: 'twinned_boss_kill_achievement_items_key',
+            },
+          ],
+          name: 'index_twinned_boss_kill_achievement_items_key',
+        },
       ],
       tableName: 'world_areas',
       underscored: true,
@@ -629,6 +655,19 @@ module.exports = (sequelize, DataTypes) => {
         name: 'environments_key',
         $type: 'ulong',
         $col_order: 83,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.AchievementItem, {
+      as: 'twinned_boss_kill_achievement_item',
+      $inverse: 'world_areas',
+      $col_order: 88,
+      foreignKey: {
+        name: 'twinned_boss_kill_achievement_items_key',
+        $type: 'ulong',
+        $col_order: 88,
       },
       targetKey: 'row',
       nullable: true,

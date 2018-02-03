@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'MonsterType',
+    'FragmentStashTabLayout',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -14,58 +14,35 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      unknown1: {
+      pos_x: {
         type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 1,
-      },
-      is_summoned: {
-        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      armour: {
+      pos_y: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      evasion: {
+      order: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      energy_shield_from_life: {
+      size_x: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      damage_spread: {
+      size_y: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
-      },
-      is_large_abyss_monster: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 9,
-      },
-      is_small_abyss_monster: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 10,
-      },
-      _tags_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 7,
       },
     },
     {
@@ -76,45 +53,33 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'monster_resistances_key',
+              attribute: 'base_item_types_key',
             },
           ],
-          name: 'index_monster_resistances_key',
+          name: 'index_base_item_types_key',
         },
       ],
-      tableName: 'monster_types',
+      tableName: 'fragment_stash_tab_layouts',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.MonsterResistance, {
-      as: 'monster_resistance',
-      $inverse: 'monster_types',
-      $col_order: 8,
+    model.belongsTo(models.BaseItemType, {
+      as: 'base_item_type',
+      $inverse: 'fragment_stash_tab_layouts',
+      $col_order: 1,
       foreignKey: {
-        name: 'monster_resistances_key',
+        name: 'base_item_types_key',
         $type: 'ulong',
-        $col_order: 8,
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
     });
-    model.belongsToMany(models.Tag, {
-      as: 'tags',
-      through: {
-        model: models.MonsterTypeHabtmTag,
-        unique: false,
-      },
-      foreignKey: 'monster_type_row',
-      otherKey: 'tag_row',
-      $col_order: 7,
-      nullable: true,
-      constraints: false,
-    });
   };
 
-  model.DAT_FILE = 'MonsterTypes.dat';
+  model.DAT_FILE = 'FragmentStashTabLayout.dat';
   return model;
 };

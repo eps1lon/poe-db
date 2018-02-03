@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Harbinger',
+    'ShaperMemoryFragment',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,25 +8,31 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 0,
+      },
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      min_level: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      max_level: {
+      unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown1: {
+      unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -37,37 +43,14 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MYISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [
-        {
-          fields: [
-            {
-              attribute: 'monster_varieties_key',
-            },
-          ],
-          name: 'index_monster_varieties_key',
-        },
-      ],
-      tableName: 'harbingers',
+      indexes: [],
+      tableName: 'shaper_memory_fragments',
       underscored: true,
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.MonsterVariety, {
-      as: 'monster_variety',
-      $inverse: 'harbingers',
-      $col_order: 0,
-      foreignKey: {
-        name: 'monster_varieties_key',
-        $type: 'ulong',
-        $col_order: 0,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
-  model.DAT_FILE = 'Harbingers.dat';
+  model.DAT_FILE = 'ShaperMemoryFragments.dat';
   return model;
 };

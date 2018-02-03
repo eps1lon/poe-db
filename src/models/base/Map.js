@@ -38,11 +38,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 11,
       },
-      map_iteration: {
+      flag0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 15,
+        $col_order: 16,
       },
       _monster_packs_cache: {
         type: DataTypes.TEXT,
@@ -103,26 +103,34 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'maps_key1',
+              attribute: 'maps_key',
             },
           ],
-          name: 'index_maps_key1',
+          name: 'index_maps_key',
         },
         {
           fields: [
             {
-              attribute: 'maps_key2',
+              attribute: 'atlas_completion_maps_key',
             },
           ],
-          name: 'index_maps_key2',
+          name: 'index_atlas_completion_maps_key',
         },
         {
           fields: [
             {
-              attribute: 'maps_key3',
+              attribute: 'atlas_completion_unique_maps_key',
             },
           ],
-          name: 'index_maps_key3',
+          name: 'index_atlas_completion_unique_maps_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'map_series_key',
+            },
+          ],
+          name: 'index_map_series_key',
         },
       ],
       tableName: 'maps',
@@ -197,11 +205,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Map, {
-      as: 'maps1',
-      $inverse: 'maps1',
+      as: 'map',
+      $inverse: 'maps',
       $col_order: 12,
       foreignKey: {
-        name: 'maps_key1',
+        name: 'maps_key',
         $type: 'int',
         $col_order: 12,
       },
@@ -210,11 +218,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Map, {
-      as: 'maps2',
-      $inverse: 'maps2',
+      as: 'atlas_completion_map',
+      $inverse: 'maps',
       $col_order: 13,
       foreignKey: {
-        name: 'maps_key2',
+        name: 'atlas_completion_maps_key',
         $type: 'int',
         $col_order: 13,
       },
@@ -223,13 +231,26 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Map, {
-      as: 'maps3',
-      $inverse: 'maps3',
+      as: 'atlas_completion_unique_map',
+      $inverse: 'maps',
       $col_order: 14,
       foreignKey: {
-        name: 'maps_key3',
+        name: 'atlas_completion_unique_maps_key',
         $type: 'int',
         $col_order: 14,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.MapSery, {
+      as: 'map_sery',
+      $inverse: 'maps',
+      $col_order: 15,
+      foreignKey: {
+        name: 'map_series_key',
+        $type: 'int',
+        $col_order: 15,
       },
       targetKey: 'row',
       nullable: true,

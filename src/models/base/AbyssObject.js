@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'DefaultMonsterStat',
+    'AbyssObject',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,89 +8,125 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      display_level: {
+      id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      damage: {
-        type: DataTypes.FLOAT,
+      unknown1: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      evasion: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      accuracy: {
+      unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      life: {
+      unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      experience: {
-        type: DataTypes.INTEGER,
+      metadata_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      ally_life: {
+      unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      unknown0: {
-        type: DataTypes.INTEGER,
+      keys0: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
       },
-      difficulty: {
+      unknown9: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
       },
-      damage2: {
-        type: DataTypes.FLOAT,
+      unknown10: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 9,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
       },
-      unknown2: {
-        type: DataTypes.FLOAT,
+      unknown12: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 11,
       },
-      unknown3: {
-        type: DataTypes.FLOAT,
+      unknown13: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 12,
       },
-      unknown4: {
+      unknown14: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 13,
+      },
+      unknown15: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 14,
+      },
+      unknown16: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 15,
+      },
+      unknown17: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 16,
+      },
+      unknown18: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 17,
+      },
+      unknown19: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 18,
+      },
+      unknown20: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 19,
       },
     },
     {
@@ -98,13 +134,13 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
-      tableName: 'default_monster_stats',
+      tableName: 'abyss_objects',
       underscored: true,
     },
   );
 
   model.associate = models => {};
 
-  model.DAT_FILE = 'DefaultMonsterStats.dat';
+  model.DAT_FILE = 'AbyssObjects.dat';
   return model;
 };

@@ -8,29 +8,35 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      quest_state: {
-        type: DataTypes.INTEGER,
+      quest_states: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      is_hardcore_achievement: {
-        type: DataTypes.BOOLEAN,
+      is_standard_achievement: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      is_standard_achievement: {
-        type: DataTypes.BOOLEAN,
+      is_hardcore_achievement: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
+      data0: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
+      },
+      flag0: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 5,
       },
     },
     {

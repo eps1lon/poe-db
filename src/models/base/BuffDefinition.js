@@ -140,6 +140,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 25,
       },
+      flag11: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 26,
+      },
       _stats_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

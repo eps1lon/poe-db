@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Harbinger',
+    'ElderBossArena',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,29 +8,16 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      min_level: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
+      _achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
         $col_order: 2,
-      },
-      max_level: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
-      },
-      unknown1: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 4,
       },
     },
     {
@@ -41,24 +28,24 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'monster_varieties_key',
+              attribute: 'world_areas_key',
             },
           ],
-          name: 'index_monster_varieties_key',
+          name: 'index_world_areas_key',
         },
       ],
-      tableName: 'harbingers',
+      tableName: 'elder_boss_arenas',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.MonsterVariety, {
-      as: 'monster_variety',
-      $inverse: 'harbingers',
+    model.belongsTo(models.WorldArea, {
+      as: 'world_area',
+      $inverse: 'elder_boss_arenas',
       $col_order: 0,
       foreignKey: {
-        name: 'monster_varieties_key',
+        name: 'world_areas_key',
         $type: 'ulong',
         $col_order: 0,
       },
@@ -66,8 +53,20 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'achievement_items',
+      through: {
+        model: models.ElderBossArenaHabtmAchievementItem,
+        unique: false,
+      },
+      foreignKey: 'elder_boss_arena_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 2,
+      nullable: true,
+      constraints: false,
+    });
   };
 
-  model.DAT_FILE = 'Harbingers.dat';
+  model.DAT_FILE = 'ElderBossArenas.dat';
   return model;
 };

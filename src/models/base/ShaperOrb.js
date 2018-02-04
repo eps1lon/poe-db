@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Harbinger',
+    'ShaperOrb',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,29 +8,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      min_level: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      max_level: {
+      tier: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
-      },
-      unknown1: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 4,
       },
     },
     {
@@ -41,24 +35,24 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'monster_varieties_key',
+              attribute: 'base_item_types_key',
             },
           ],
-          name: 'index_monster_varieties_key',
+          name: 'index_base_item_types_key',
         },
       ],
-      tableName: 'harbingers',
+      tableName: 'shaper_orbs',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.MonsterVariety, {
-      as: 'monster_variety',
-      $inverse: 'harbingers',
+    model.belongsTo(models.BaseItemType, {
+      as: 'base_item_type',
+      $inverse: 'shaper_orbs',
       $col_order: 0,
       foreignKey: {
-        name: 'monster_varieties_key',
+        name: 'base_item_types_key',
         $type: 'ulong',
         $col_order: 0,
       },
@@ -68,6 +62,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'Harbingers.dat';
+  model.DAT_FILE = 'ShaperOrbs.dat';
   return model;
 };

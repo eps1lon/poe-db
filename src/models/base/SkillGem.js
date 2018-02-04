@@ -73,6 +73,14 @@ module.exports = (sequelize, DataTypes) => {
           ],
           name: 'index_vaal_variant_base_item_types_key',
         },
+        {
+          fields: [
+            {
+              attribute: 'consumed_mods_key',
+            },
+          ],
+          name: 'index_consumed_mods_key',
+        },
       ],
       tableName: 'skill_gems',
       underscored: true,
@@ -114,6 +122,19 @@ module.exports = (sequelize, DataTypes) => {
         name: 'vaal_variant_base_item_types_key',
         $type: 'long',
         $col_order: 6,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Mod, {
+      as: 'consumed_mod',
+      $inverse: 'skill_gems',
+      $col_order: 9,
+      foreignKey: {
+        name: 'consumed_mods_key',
+        $type: 'ulong',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,

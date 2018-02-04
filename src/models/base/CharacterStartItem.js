@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown2: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -73,6 +73,18 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 14,
+      },
+      flag1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 15,
+      },
+      flag2: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 16,
       },
       _socketed_skill_gems_cache: {
         type: DataTypes.TEXT,

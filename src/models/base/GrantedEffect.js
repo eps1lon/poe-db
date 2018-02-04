@@ -145,6 +145,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
 
+    // MANUAL
     model.hasMany(models.GrantedEffectsPerLevel, {
       as: 'granted_effects_per_levels',
       $inverse: 'granted_effect',

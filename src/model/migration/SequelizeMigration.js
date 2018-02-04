@@ -117,8 +117,9 @@ class MigrationAst {
     return [
       ...this.createTable(),
       // drop possible key constraints before dropping tables
-      ...this.indexChanges(),
+      ...this.dropIndex(),
       ...this.columnChanges(),
+      ...this.addIndex(),
       ...this.dropTable(),
     ];
   }
@@ -154,25 +155,6 @@ class MigrationAst {
           options: model.options,
         };
       });
-  }
-
-  indexChanges() {
-    const added = this.addIndex();
-    const removed = this.dropIndex();
-
-    // ordered merge
-    return [...removed, ...added].sort((a, b) => {
-      // order by tableName, (REMOVED, ADDED), indexName
-      if (a.tableName === b.tableName) {
-        if (a.type === b.type) {
-          return a.indexName.localeCompare(b.indexName);
-        } else {
-          return a.type === ACTIONS.REMOVE_INDEX ? -1 : 1;
-        }
-      } else {
-        return a.tableName.localeCompare(b.tableName);
-      }
-    });
   }
 
   addIndex() {

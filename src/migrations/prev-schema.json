@@ -6676,9 +6676,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "info_text": {
@@ -21077,9 +21075,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "flag1": {
@@ -21087,9 +21083,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "unknown3": {
@@ -21105,9 +21099,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "flag3": {
@@ -21115,9 +21107,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "flag4": {
@@ -21125,9 +21115,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "name": {
@@ -27992,9 +27980,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "unknown72": {
@@ -30997,9 +30983,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "flag2": {
@@ -42383,9 +42367,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "created_at": {
@@ -45994,9 +45976,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "unknown46": {
@@ -47653,9 +47633,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "unknown9": {
@@ -47663,9 +47641,7 @@
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
-          "options": {
-            "unsigned": true
-          }
+          "options": {}
         }
       },
       "created_at": {

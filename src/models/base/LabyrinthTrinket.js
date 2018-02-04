@@ -14,11 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 3,
       },
-      _labyrinth_secrets_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 1,
-      },
     },
     {
       engine: 'MYISAM',
@@ -32,6 +27,14 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_base_item_types_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'labyrinth_secrets_key',
+            },
+          ],
+          name: 'index_labyrinth_secrets_key',
         },
         {
           fields: [
@@ -61,6 +64,19 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
+    model.belongsTo(models.LabyrinthSecret, {
+      as: 'labyrinth_secret',
+      $inverse: 'labyrinth_trinkets',
+      $col_order: 1,
+      foreignKey: {
+        name: 'labyrinth_secrets_key',
+        $type: 'ulong',
+        $col_order: 1,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
     model.belongsTo(models.BuffDefinition, {
       as: 'buff_buff_definition',
       $inverse: 'labyrinth_trinkets',
@@ -71,18 +87,6 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 2,
       },
       targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.LabyrinthSecret, {
-      as: 'labyrinth_secrets',
-      through: {
-        model: models.LabyrinthTrinketHabtmLabyrinthSecret,
-        unique: false,
-      },
-      foreignKey: 'labyrinth_trinket_row',
-      otherKey: 'labyrinth_secret_row',
-      $col_order: 1,
       nullable: true,
       constraints: false,
     });

@@ -112,7 +112,7 @@ const formatBaseItemType = item => {
     component_attribute_requirement,
     component_armour,
     implicit_mods: formatted_implicits,
-    item_class: item_class.primary === null ? null : item_class,
+    item_class: item_class.id,
     tags: formatted_tags,
   };
 };
@@ -154,9 +154,7 @@ const formatCraftingBenchOption = option => {
         b.CraftingBenchOptionHabtmItemClass.priority
       );
     })
-    .map(({ CraftingBenchOptionHabtmItemClass, ...item_class }) => {
-      return { ...item_class };
-    });
+    .map(({ id }) => id);
 
   return {
     ...props,

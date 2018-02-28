@@ -7,16 +7,15 @@ const formatWorldAreaFromAtlas = world_area => {
     tags,
     mods,
     // omit
+    row,
     // keep
     ...props
   } = world_area;
 
   return {
     ...props,
-    area_type_tags: area_type_tags.map(
-      ({ WorldAreaHabtmAreaTypeTag, ...tag }) => tag,
-    ),
-    tags: tags.map(({ WorldAreaHabtmTag, ...tag }) => tag),
+    area_type_tags: area_type_tags.map(({ id }) => id),
+    tags: tags.map(({ id }) => id),
     mods: mods.map(({ WorldAreaHabtmMod, ...mod }) => formatMod(mod)),
   };
 };
@@ -50,6 +49,7 @@ const formatMod = mod => {
     tags,
     spawn_weight_tags,
     // omit
+    primary,
     stats_key1,
     stats_key2,
     stats_key3,
@@ -66,27 +66,30 @@ const formatMod = mod => {
         a.ModHabtmSpawnWeightTag.priority - b.ModHabtmSpawnWeightTag.priority
       );
     })
-    .map(({ ModHabtmSpawnWeightTag: { value }, ...spawn_weight_tag }) => {
+    .map(({ ModHabtmSpawnWeightTag: { value }, id }) => {
       return {
-        tag: spawn_weight_tag,
+        tag: id,
         value,
       };
     });
 
-  const stats = [stats1, stats2, stats3, stats4, stats5].filter(Boolean);
+  const stats = [stats1, stats2, stats3, stats4, stats5]
+    .filter(Boolean)
+    // omit primary
+    .map(({ primary, ...props }) => props);
 
   return {
     ...props,
     spawn_weights,
     stats,
-    tags,
+    tags: tags.map(({ id }) => id),
   };
 };
 
 const formatBaseItemType = item => {
   const {
     // omit
-    id,
+    primary,
     item_classes_key,
     // map
     item_class,
@@ -98,11 +101,11 @@ const formatBaseItemType = item => {
     ...props
   } = item;
 
-  const formatted_implicits = implicit_mods
-    .map(formatMod)
-    .map(({ BaseItemTypeHabtmImplicitMod, ...implicit }) => implicit);
+  const formatted_implicits = implicit_mods.map(
+    ({ BaseItemTypeHabtmImplicitMod, ...implicit }) => formatMod(implicit),
+  );
 
-  const formatted_tags = tags.map(({ BaseItemTypeHabtmTag, ...tag }) => tag);
+  const formatted_tags = tags.map(({ id }) => id);
 
   return {
     ...props,

@@ -1,7 +1,16 @@
 const path = require('path');
 const Umzug = require('umzug');
 
-const sequelize = require('../../../src/db').createOrm();
+const sequelize = require('../../../src/db').createOrm({
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 5000,
+    acquire: 20000,
+    evict: 30000,
+    handleDisconnects: true,
+  },
+});
 
 const umzug = new Umzug({
   storage: 'sequelize',

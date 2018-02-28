@@ -45,6 +45,9 @@ async function insert(all_records) {
       const model = Object.values(models).find(
         model => model.DAT_FILE === dat_file,
       );
+      if (model === undefined) {
+        throw new Error("could not find model for '" + dat_file + "'");
+      }
 
       const records_as_obj = records.map((record, row) => {
         return buildAttrObj(record, model, { row });

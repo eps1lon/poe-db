@@ -20,19 +20,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
-      unknown4: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown5: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      unknown6: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -49,6 +49,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 9,
+      },
+      unknown3: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
       },
       _atlas_node_cache: {
         type: DataTypes.TEXT,

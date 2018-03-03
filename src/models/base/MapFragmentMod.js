@@ -1,36 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'PantheonSoul',
+    'MapFragmentMod',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         allowNull: false,
         $col_order: -1,
-      },
-      key0: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 0,
-      },
-      unknown0: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 2,
-      },
-      key1: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
-      },
-      key2: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 4,
       },
     },
     {
@@ -46,8 +22,16 @@ module.exports = (sequelize, DataTypes) => {
           ],
           name: 'index_base_item_types_key',
         },
+        {
+          fields: [
+            {
+              attribute: 'mods_key',
+            },
+          ],
+          name: 'index_mods_key',
+        },
       ],
-      tableName: 'pantheon_souls',
+      tableName: 'map_fragment_mods',
       underscored: true,
     },
   );
@@ -55,10 +39,23 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
-      $inverse: 'pantheon_souls',
-      $col_order: 1,
+      $inverse: 'map_fragment_mods',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
+        $type: 'ulong',
+        $col_order: 0,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Mod, {
+      as: 'mod',
+      $inverse: 'map_fragment_mods',
+      $col_order: 1,
+      foreignKey: {
+        name: 'mods_key',
         $type: 'ulong',
         $col_order: 1,
       },
@@ -68,6 +65,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'PantheonSouls.dat';
+  model.DAT_FILE = 'MapFragmentMods.dat';
   return model;
 };

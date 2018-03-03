@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'PantheonSoul',
+    'BestiaryRecipeItemCreation',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -12,25 +12,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
-        $col_order: 0,
+        $col_order: 1,
       },
-      unknown0: {
-        type: DataTypes.INTEGER,
+      command: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
-      },
-      key1: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
-      },
-      key2: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 4,
       },
     },
     {
@@ -41,26 +29,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'base_item_types_key',
+              attribute: 'bestiary_recipes_key',
             },
           ],
-          name: 'index_base_item_types_key',
+          name: 'index_bestiary_recipes_key',
         },
       ],
-      tableName: 'pantheon_souls',
+      tableName: 'bestiary_recipe_item_creations',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.BaseItemType, {
-      as: 'base_item_type',
-      $inverse: 'pantheon_souls',
-      $col_order: 1,
+    model.belongsTo(models.BestiaryRecipe, {
+      as: 'bestiary_recipe',
+      $inverse: 'bestiary_recipe_item_creations',
+      $col_order: 0,
       foreignKey: {
-        name: 'base_item_types_key',
+        name: 'bestiary_recipes_key',
         $type: 'ulong',
-        $col_order: 1,
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -68,6 +56,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'PantheonSouls.dat';
+  model.DAT_FILE = 'BestiaryRecipeItemCreation.dat';
   return model;
 };

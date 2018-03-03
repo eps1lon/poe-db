@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'MiscAnimated',
+    'ArchetypeReward',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -14,28 +14,29 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      ao_file: {
-        type: DataTypes.TEXT,
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      unknown0: {
-        type: DataTypes.INTEGER,
+      keys0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 2,
+      },
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
+      bk2_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
-      },
-      _preload_groups_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 2,
       },
     },
     {
@@ -43,26 +44,13 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
-      tableName: 'misc_animateds',
+      tableName: 'archetype_rewards',
       underscored: true,
     },
   );
 
-  model.associate = models => {
-    model.belongsToMany(models.PreloadGroup, {
-      as: 'preload_groups',
-      through: {
-        model: models.MiscAnimatedHabtmPreloadGroup,
-        unique: false,
-      },
-      foreignKey: 'misc_animated_row',
-      otherKey: 'preload_group_row',
-      $col_order: 2,
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
-  model.DAT_FILE = 'MiscAnimated.dat';
+  model.DAT_FILE = 'ArchetypeRewards.dat';
   return model;
 };

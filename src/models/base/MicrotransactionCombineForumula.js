@@ -8,6 +8,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 2,
+      },
       _ingredients_base_item_types_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

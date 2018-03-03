@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'QuestAchievement',
+    'MicrotransactionPeriodicCharacterEffectVariation',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,35 +8,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
+      id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      quest_states: {
+      ao_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
-      },
-      unknown3: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 2,
-      },
-      achievement_items_keys: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
-      },
-      key0: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 4,
       },
     },
     {
@@ -44,13 +26,13 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
-      tableName: 'quest_achievements',
+      tableName: 'microtransaction_periodic_character_effect_variations',
       underscored: true,
     },
   );
 
   model.associate = models => {};
 
-  model.DAT_FILE = 'QuestAchievements.dat';
+  model.DAT_FILE = 'MicrotransactionPeriodicCharacterEffectVariations.dat';
   return model;
 };

@@ -80,6 +80,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 27,
       },
+      is_blessing: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 32,
+      },
       _implicit_mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -115,7 +121,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 23,
       },
-      _identify_rare_achievement_items_cache: {
+      _identify_achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 28,
@@ -370,9 +376,9 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.AchievementItem, {
-      as: 'identify_rare_achievement_items',
+      as: 'identify_achievement_items',
       through: {
-        model: models.BaseItemTypeHabtmIdentifyRareAchievementitem,
+        model: models.BaseItemTypeHabtmIdentifyAchievementitem,
         unique: false,
       },
       foreignKey: 'base_item_type_row',

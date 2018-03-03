@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Archetype',
+    'BestiaryGroup',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,65 +8,46 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      id: {
+      name: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      passive_skill_tree_url: {
+      description: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 1,
+      },
+      illustraiton: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      ascendancy_class_name: {
+      group_name: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      description: {
+      icon: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      ui_image_file: {
+      icon_small: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      tutorial_video_bk_file: {
+      _achievement_items_cache: {
         type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 6,
-      },
-      unknown0: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
+        allowNull: false,
         $col_order: 7,
-      },
-      unknown1: {
-        type: DataTypes.FLOAT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 8,
-      },
-      unknown2: {
-        type: DataTypes.FLOAT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 9,
-      },
-      background_image_file: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 10,
       },
     },
     {
@@ -77,33 +58,45 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'characters_key',
+              attribute: 'bestiary_families_key',
             },
           ],
-          name: 'index_characters_key',
+          name: 'index_bestiary_families_key',
         },
       ],
-      tableName: 'archetypes',
+      tableName: 'bestiary_groups',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.Character, {
-      as: 'character',
-      $inverse: 'archetypes',
-      $col_order: 1,
+    model.belongsTo(models.BestiaryFamily, {
+      as: 'bestiary_family',
+      $inverse: 'bestiary_groups',
+      $col_order: 6,
       foreignKey: {
-        name: 'characters_key',
+        name: 'bestiary_families_key',
         $type: 'ulong',
-        $col_order: 1,
+        $col_order: 6,
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
     });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'achievement_items',
+      through: {
+        model: models.BestiaryGroupHabtmAchievementItem,
+        unique: false,
+      },
+      foreignKey: 'bestiary_group_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 7,
+      nullable: true,
+      constraints: false,
+    });
   };
 
-  model.DAT_FILE = 'Archetypes.dat';
+  model.DAT_FILE = 'BestiaryGroups.dat';
   return model;
 };

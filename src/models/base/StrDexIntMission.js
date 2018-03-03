@@ -14,137 +14,113 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      spawn_weight: {
-        type: DataTypes.INTEGER,
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      has_objective_boss_kill: {
-        type: DataTypes.BOOLEAN,
+      spawn_weight: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      has_objective_full_clear: {
-        type: DataTypes.BOOLEAN,
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown4: {
-        type: DataTypes.INTEGER,
+      key2: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
-        $col_order: 5,
+        $col_order: 4,
       },
-      unknown5: {
+      flag0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      has_objective_kill_exiles: {
-        type: DataTypes.BOOLEAN,
+      flag1: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
       },
-      has_objective_find_unique: {
-        type: DataTypes.BOOLEAN,
+      flag2: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
       },
-      key0: {
+      key3: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 9,
       },
-      has_objective_complete_master_mission: {
-        type: DataTypes.BOOLEAN,
+      unknown12: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
       },
-      object_count_required: {
+      unknown13: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
+      },
+      unknown14: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 12,
+      },
+      unknown15: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 13,
       },
-      object_count_total: {
-        type: DataTypes.INTEGER,
+      key4: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 14,
       },
+      key5: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 15,
+      },
+      key6: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 16,
+      },
       _extra_mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 4,
-      },
-      _achievement_items_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 15,
+        $col_order: 5,
       },
     },
     {
       engine: 'MYISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [
-        {
-          fields: [
-            {
-              attribute: 'npc_talk_key',
-            },
-          ],
-          name: 'index_npc_talk_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'monster_packs_key',
-            },
-          ],
-          name: 'index_monster_packs_key',
-        },
-      ],
+      indexes: [],
       tableName: 'str_dex_int_missions',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.NPCTalk, {
-      as: 'npc_talk',
-      $inverse: 'str_dex_int_missions',
-      $col_order: 11,
-      foreignKey: {
-        name: 'npc_talk_key',
-        $type: 'ulong',
-        $col_order: 11,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.MonsterPack, {
-      as: 'monster_pack',
-      $inverse: 'str_dex_int_missions',
-      $col_order: 12,
-      foreignKey: {
-        name: 'monster_packs_key',
-        $type: 'ulong',
-        $col_order: 12,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
     model.belongsToMany(models.Mod, {
       as: 'extra_mods',
       through: {
@@ -153,19 +129,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'str_dex_int_mission_row',
       otherKey: 'mod_row',
-      $col_order: 4,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.AchievementItem, {
-      as: 'achievement_items',
-      through: {
-        model: models.StrDexIntMissionHabtmAchievementItem,
-        unique: false,
-      },
-      foreignKey: 'str_dex_int_mission_row',
-      otherKey: 'achievement_item_row',
-      $col_order: 15,
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

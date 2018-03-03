@@ -418,6 +418,12 @@ module.exports = (sequelize, DataTypes) => {
         name: 'base_item_types_key',
       },
     });
+    model.hasOne(models.ShieldType, {
+      as: 'shield_type',
+      foreignKey: {
+        name: 'base_item_types_key',
+      },
+    });
   };
 
   model.DAT_FILE = 'BaseItemTypes.dat';

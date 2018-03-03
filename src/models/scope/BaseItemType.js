@@ -105,6 +105,11 @@ module.exports = models => {
           as: 'implicit_mods',
           ...mod_scope['for-recraft'],
         },
+        {
+          model: models.ShieldType,
+          as: 'shield_type',
+          attributes: ['block'],
+        },
       ],
       where: {
         item_classes_key: {

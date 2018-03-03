@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'PantheonSoul',
+    'BonusMasterExp',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,29 +8,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      key0: {
-        type: DataTypes.BIGINT.UNSIGNED,
+      quest_state: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      unknown0: {
+      bonus_experience: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
-      },
-      key1: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
-      },
-      key2: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 4,
       },
     },
     {
@@ -41,24 +29,24 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'base_item_types_key',
+              attribute: 'npc_master_key',
             },
           ],
-          name: 'index_base_item_types_key',
+          name: 'index_npc_master_key',
         },
       ],
-      tableName: 'pantheon_souls',
+      tableName: 'bonus_master_exps',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.BaseItemType, {
-      as: 'base_item_type',
-      $inverse: 'pantheon_souls',
+    model.belongsTo(models.NPCMaster, {
+      as: 'npc_master',
+      $inverse: 'bonus_master_exps',
       $col_order: 1,
       foreignKey: {
-        name: 'base_item_types_key',
+        name: 'npc_master_key',
         $type: 'ulong',
         $col_order: 1,
       },
@@ -68,6 +56,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'PantheonSouls.dat';
+  model.DAT_FILE = 'BonusMasterExp.dat';
   return model;
 };

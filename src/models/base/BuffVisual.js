@@ -39,10 +39,16 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 6,
       },
       flag0: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
+      },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
       },
       _misc_animated1_cache: {
         type: DataTypes.TEXT,

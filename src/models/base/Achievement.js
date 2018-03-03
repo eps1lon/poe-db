@@ -69,10 +69,28 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 10,
       },
       unknown4: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 11,
+      },
+      flag5: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 12,
+      },
+      flag6: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 13,
+      },
+      flag7: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 14,
       },
     },
     {

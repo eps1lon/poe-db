@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'PantheonSoul',
+    'BestiaryNet',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,29 +8,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      key0: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 0,
-      },
-      unknown0: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 2,
-      },
-      key1: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
-      },
-      key2: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 4,
+        $col_order: 1,
       },
     },
     {
@@ -47,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
           name: 'index_base_item_types_key',
         },
       ],
-      tableName: 'pantheon_souls',
+      tableName: 'bestiary_nets',
       underscored: true,
     },
   );
@@ -55,12 +37,12 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
-      $inverse: 'pantheon_souls',
-      $col_order: 1,
+      $inverse: 'bestiary_nets',
+      $col_order: 0,
       foreignKey: {
         name: 'base_item_types_key',
         $type: 'ulong',
-        $col_order: 1,
+        $col_order: 0,
       },
       targetKey: 'row',
       nullable: true,
@@ -68,6 +50,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'PantheonSouls.dat';
+  model.DAT_FILE = 'BestiaryNets.dat';
   return model;
 };

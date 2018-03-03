@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'NPCShop',
+    'BestiaryRecipe',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -14,46 +14,51 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      unknown0: {
-        type: DataTypes.INTEGER,
+      description: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      unknown_keys0: {
+      notes: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 3,
+      },
+      hint_text: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      unknown_values: {
-        type: DataTypes.TEXT,
+      flag0: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
+      data0: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      keys1: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 7,
-      },
-      unknown3: {
-        type: DataTypes.TEXT,
+      data1: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
       },
-      _sold_item_tags_cache: {
+      _bestiary_recipe_component_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 2,
+      },
+      _achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 7,
       },
     },
     {
@@ -61,26 +66,38 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
-      tableName: 'n_p_c_shops',
+      tableName: 'bestiary_recipes',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsToMany(models.Tag, {
-      as: 'sold_item_tags',
+    model.belongsToMany(models.BestiaryRecipeComponent, {
+      as: 'bestiary_recipe_component',
       through: {
-        model: models.NPCShopHabtmSoldItemTag,
+        model: models.BestiaryRecipeHabtmBestiaryRecipeComponent,
         unique: false,
       },
-      foreignKey: 'npc_shop_row',
-      otherKey: 'tag_row',
+      foreignKey: 'bestiary_recipe_row',
+      otherKey: 'bestiary_recipe_component_row',
       $col_order: 2,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'achievement_items',
+      through: {
+        model: models.BestiaryRecipeHabtmAchievementItem,
+        unique: false,
+      },
+      foreignKey: 'bestiary_recipe_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 7,
       nullable: true,
       constraints: false,
     });
   };
 
-  model.DAT_FILE = 'NPCShop.dat';
+  model.DAT_FILE = 'BestiaryRecipes.dat';
   return model;
 };

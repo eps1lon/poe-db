@@ -2800,7 +2800,7 @@
           }
         }
       },
-      "unknown3": {
+      "inflection": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -35296,7 +35296,7 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown0": {
+      "inflection": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -50000,7 +50000,7 @@
           "options": {}
         }
       },
-      "unknown8": {
+      "inflection": {
         "allowNull": true,
         "primaryKey": false,
         "type": {

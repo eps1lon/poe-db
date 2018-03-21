@@ -4572,12 +4572,59 @@
           }
         }
       },
-      "unknown2": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
           "options": {}
+        }
+      },
+      "capture_min_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "capture_max_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "drop_min_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "drop_max_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "is_enabled": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
         }
       },
       "created_at": {
@@ -4671,8 +4718,7 @@
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "INTEGER",
-          "options": {}
+          "constructor": "BOOLEAN"
         }
       },
       "data0": {
@@ -4683,7 +4729,14 @@
           "options": {}
         }
       },
-      "data1": {
+      "flag1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -4756,17 +4809,7 @@
           "options": {}
         }
       },
-      "key3": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "unknown9": {
+      "rarity_key": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -4815,6 +4858,15 @@
           }
         }
       },
+      "bestiary_capturable_monsters_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
       "bestiary_genus_key": {
         "allowNull": true,
         "type": {
@@ -4853,6 +4905,16 @@
           }
         ],
         "name": "index_mods_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_capturable_monsters_key"
+          }
+        ],
+        "name": "index_bestiary_capturable_monsters_key",
         "type": "",
         "parser": null
       },
@@ -11210,7 +11272,7 @@
           "options": {}
         }
       },
-      "unknown17": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -11239,6 +11301,14 @@
         "primaryKey": false,
         "type": {
           "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
           "options": {}
         }
       },
@@ -16608,7 +16678,7 @@
           }
         }
       },
-      "mods_key1": {
+      "display_wand_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16617,7 +16687,7 @@
           }
         }
       },
-      "mods_key2": {
+      "display_bow_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16635,7 +16705,7 @@
           }
         }
       },
-      "amulet1_mods_key": {
+      "display_amulet_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16644,7 +16714,7 @@
           }
         }
       },
-      "belt1_mods_key": {
+      "display_ring_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16653,7 +16723,7 @@
           }
         }
       },
-      "belt3_mods_key": {
+      "display_belt_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16662,7 +16732,7 @@
           }
         }
       },
-      "gloves1_mods_key": {
+      "display_gloves_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16671,7 +16741,7 @@
           }
         }
       },
-      "boots1_mods_key": {
+      "display_boots_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16680,7 +16750,7 @@
           }
         }
       },
-      "body_armour1_mods_key": {
+      "display_body_armour_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16689,7 +16759,7 @@
           }
         }
       },
-      "helmet1_mods_key": {
+      "display_helmet_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16698,7 +16768,7 @@
           }
         }
       },
-      "shield1_mods_key": {
+      "display_shield_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16716,7 +16786,7 @@
           }
         }
       },
-      "1_hand_mods_key1": {
+      "display_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16725,7 +16795,7 @@
           }
         }
       },
-      "mods_key13": {
+      "display_melee_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16734,7 +16804,7 @@
           }
         }
       },
-      "mods_key14": {
+      "display_1_hand_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16743,7 +16813,7 @@
           }
         }
       },
-      "mods_key15": {
+      "display_2_hand_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16752,7 +16822,7 @@
           }
         }
       },
-      "2_hand_mods_key1": {
+      "display_2_hand_melee_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16761,7 +16831,7 @@
           }
         }
       },
-      "boots3_mods_key": {
+      "display_armour_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16770,7 +16840,7 @@
           }
         }
       },
-      "ranged_mods_key": {
+      "display_ranged_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16779,7 +16849,7 @@
           }
         }
       },
-      "helmet2_mods_key": {
+      "helmet_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16788,7 +16858,7 @@
           }
         }
       },
-      "body_armour2_mods_key": {
+      "body_armour_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16797,7 +16867,7 @@
           }
         }
       },
-      "boots2_mods_key": {
+      "boots_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16806,7 +16876,7 @@
           }
         }
       },
-      "gloves2_mods_key": {
+      "gloves_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16833,7 +16903,7 @@
           }
         }
       },
-      "2_hand_mods_key2": {
+      "staff_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16842,7 +16912,7 @@
           }
         }
       },
-      "2_hand_mods_key3": {
+      "2_hand_sword_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16851,7 +16921,7 @@
           }
         }
       },
-      "2_hand_mods_key4": {
+      "2_hand_axe_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16860,7 +16930,7 @@
           }
         }
       },
-      "2_hand_mods_key5": {
+      "2_hand_mace_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16869,7 +16939,7 @@
           }
         }
       },
-      "1_hand_mods_key2": {
+      "claw_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16878,7 +16948,7 @@
           }
         }
       },
-      "1_hand_mods_key3": {
+      "dagger_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16887,7 +16957,7 @@
           }
         }
       },
-      "1_hand_mods_key4": {
+      "1_hand_sword_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16896,7 +16966,7 @@
           }
         }
       },
-      "1_hand_mods_key5": {
+      "1_hand_thrusting_sword_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16905,7 +16975,7 @@
           }
         }
       },
-      "1_hand_mods_key6": {
+      "1_hand_axe_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16914,7 +16984,7 @@
           }
         }
       },
-      "1_hand_mods_key7": {
+      "1_hand_mace_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16923,7 +16993,7 @@
           }
         }
       },
-      "1_hand_mods_key8": {
+      "sceptre_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16932,7 +17002,7 @@
           }
         }
       },
-      "1_hand_mods_key9": {
+      "display_monster_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16941,7 +17011,7 @@
           }
         }
       },
-      "belt2_mods_key": {
+      "belt_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16950,7 +17020,7 @@
           }
         }
       },
-      "amulet2_mods_key": {
+      "amulet_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16968,7 +17038,7 @@
           }
         }
       },
-      "mods_key41": {
+      "display_jewellry_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16977,7 +17047,7 @@
           }
         }
       },
-      "shield2_mods_key": {
+      "shield_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -16986,7 +17056,7 @@
           }
         }
       },
-      "mods_key43": {
+      "display_item_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -17010,20 +17080,20 @@
       {
         "fields": [
           {
-            "attribute": "mods_key1"
+            "attribute": "display_wand_mods_key"
           }
         ],
-        "name": "index_mods_key1",
+        "name": "index_display_wand_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key2"
+            "attribute": "display_bow_mods_key"
           }
         ],
-        "name": "index_mods_key2",
+        "name": "index_display_bow_mods_key",
         "type": "",
         "parser": null
       },
@@ -17040,80 +17110,80 @@
       {
         "fields": [
           {
-            "attribute": "amulet1_mods_key"
+            "attribute": "display_amulet_mods_key"
           }
         ],
-        "name": "index_amulet1_mods_key",
+        "name": "index_display_amulet_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "belt1_mods_key"
+            "attribute": "display_ring_mods_key"
           }
         ],
-        "name": "index_belt1_mods_key",
+        "name": "index_display_ring_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "belt3_mods_key"
+            "attribute": "display_belt_mods_key"
           }
         ],
-        "name": "index_belt3_mods_key",
+        "name": "index_display_belt_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "gloves1_mods_key"
+            "attribute": "display_gloves_mods_key"
           }
         ],
-        "name": "index_gloves1_mods_key",
+        "name": "index_display_gloves_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "boots1_mods_key"
+            "attribute": "display_boots_mods_key"
           }
         ],
-        "name": "index_boots1_mods_key",
+        "name": "index_display_boots_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "body_armour1_mods_key"
+            "attribute": "display_body_armour_mods_key"
           }
         ],
-        "name": "index_body_armour1_mods_key",
+        "name": "index_display_body_armour_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "helmet1_mods_key"
+            "attribute": "display_helmet_mods_key"
           }
         ],
-        "name": "index_helmet1_mods_key",
+        "name": "index_display_helmet_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "shield1_mods_key"
+            "attribute": "display_shield_mods_key"
           }
         ],
-        "name": "index_shield1_mods_key",
+        "name": "index_display_shield_mods_key",
         "type": "",
         "parser": null
       },
@@ -17130,110 +17200,110 @@
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key1"
+            "attribute": "display_weapon_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key1",
+        "name": "index_display_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key13"
+            "attribute": "display_melee_weapon_mods_key"
           }
         ],
-        "name": "index_mods_key13",
+        "name": "index_display_melee_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key14"
+            "attribute": "display_1_hand_weapon_mods_key"
           }
         ],
-        "name": "index_mods_key14",
+        "name": "index_display_1_hand_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key15"
+            "attribute": "display_2_hand_weapon_mods_key"
           }
         ],
-        "name": "index_mods_key15",
+        "name": "index_display_2_hand_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key1"
+            "attribute": "display_2_hand_melee_weapon_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key1",
+        "name": "index_display_2_hand_melee_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "boots3_mods_key"
+            "attribute": "display_armour_mods_key"
           }
         ],
-        "name": "index_boots3_mods_key",
+        "name": "index_display_armour_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "ranged_mods_key"
+            "attribute": "display_ranged_mods_key"
           }
         ],
-        "name": "index_ranged_mods_key",
+        "name": "index_display_ranged_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "helmet2_mods_key"
+            "attribute": "helmet_mods_key"
           }
         ],
-        "name": "index_helmet2_mods_key",
+        "name": "index_helmet_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "body_armour2_mods_key"
+            "attribute": "body_armour_mods_key"
           }
         ],
-        "name": "index_body_armour2_mods_key",
+        "name": "index_body_armour_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "boots2_mods_key"
+            "attribute": "boots_mods_key"
           }
         ],
-        "name": "index_boots2_mods_key",
+        "name": "index_boots_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "gloves2_mods_key"
+            "attribute": "gloves_mods_key"
           }
         ],
-        "name": "index_gloves2_mods_key",
+        "name": "index_gloves_mods_key",
         "type": "",
         "parser": null
       },
@@ -17260,140 +17330,140 @@
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key2"
+            "attribute": "staff_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key2",
+        "name": "index_staff_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key3"
+            "attribute": "2_hand_sword_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key3",
+        "name": "index_2_hand_sword_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key4"
+            "attribute": "2_hand_axe_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key4",
+        "name": "index_2_hand_axe_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key5"
+            "attribute": "2_hand_mace_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key5",
+        "name": "index_2_hand_mace_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key2"
+            "attribute": "claw_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key2",
+        "name": "index_claw_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key3"
+            "attribute": "dagger_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key3",
+        "name": "index_dagger_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key4"
+            "attribute": "1_hand_sword_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key4",
+        "name": "index_1_hand_sword_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key5"
+            "attribute": "1_hand_thrusting_sword_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key5",
+        "name": "index_1_hand_thrusting_sword_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key6"
+            "attribute": "1_hand_axe_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key6",
+        "name": "index_1_hand_axe_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key7"
+            "attribute": "1_hand_mace_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key7",
+        "name": "index_1_hand_mace_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key8"
+            "attribute": "sceptre_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key8",
+        "name": "index_sceptre_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key9"
+            "attribute": "display_monster_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key9",
+        "name": "index_display_monster_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "belt2_mods_key"
+            "attribute": "belt_mods_key"
           }
         ],
-        "name": "index_belt2_mods_key",
+        "name": "index_belt_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "amulet2_mods_key"
+            "attribute": "amulet_mods_key"
           }
         ],
-        "name": "index_amulet2_mods_key",
+        "name": "index_amulet_mods_key",
         "type": "",
         "parser": null
       },
@@ -17410,30 +17480,30 @@
       {
         "fields": [
           {
-            "attribute": "mods_key41"
+            "attribute": "display_jewellry_mods_key"
           }
         ],
-        "name": "index_mods_key41",
+        "name": "index_display_jewellry_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "shield2_mods_key"
+            "attribute": "shield_mods_key"
           }
         ],
-        "name": "index_shield2_mods_key",
+        "name": "index_shield_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key43"
+            "attribute": "display_item_mods_key"
           }
         ],
-        "name": "index_mods_key43",
+        "name": "index_display_item_mods_key",
         "type": "",
         "parser": null
       }
@@ -38456,7 +38526,7 @@
           "options": {}
         }
       },
-      "rarity": {
+      "rarity_key": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -48145,6 +48215,13 @@
         "type": {
           "constructor": "TEXT",
           "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
         }
       },
       "created_at": {

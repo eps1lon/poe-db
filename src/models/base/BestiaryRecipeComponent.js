@@ -20,13 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
-      key3: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 5,
-      },
-      unknown9: {
+      rarity_key: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -61,6 +55,14 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_mods_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'bestiary_capturable_monsters_key',
+            },
+          ],
+          name: 'index_bestiary_capturable_monsters_key',
         },
         {
           fields: [
@@ -111,6 +113,19 @@ module.exports = (sequelize, DataTypes) => {
         name: 'mods_key',
         $type: 'ulong',
         $col_order: 4,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.BestiaryCapturableMonster, {
+      as: 'bestiary_capturable_monster',
+      $inverse: 'bestiary_recipe_components',
+      $col_order: 5,
+      foreignKey: {
+        name: 'bestiary_capturable_monsters_key',
+        $type: 'ulong',
+        $col_order: 5,
       },
       targetKey: 'row',
       nullable: true,

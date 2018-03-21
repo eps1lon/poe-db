@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 4,
       },
-      rarity: {
+      rarity_key: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

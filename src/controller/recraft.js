@@ -189,6 +189,21 @@ const formatLevelEffect = level_effect => {
   };
 };
 
+const formatEssence = essence => {
+  const {
+    // map none
+    // omit
+    base_item_types_key,
+    essence_type_key,
+    // include
+    ...rest
+  } = essence;
+
+  return {
+    ...rest,
+  };
+};
+
 const formatGrantedEffect = effect => {
   const { id, is_support, cast_time, granted_effects_per_levels } = effect;
 
@@ -239,6 +254,33 @@ module.exports = models => async (req, res, next) => {
           return options.map(option => {
             return formatCraftingBenchOption(option.get({ plain: true }));
           });
+        }),
+    essences: () =>
+      models.Essence
+        .scope('for-recraft')
+        .findAll({})
+        .then(essences =>
+          models.Essence.withMods(essences, models.Mod, formatMod),
+        )
+        .then(essences => {
+          return essences.map(essence => {
+            return formatEssence(essence);
+          });
+        }),
+    essenceMods: () =>
+      models.Essence
+        .scope('for-recraft')
+        .findAll({})
+        .then(essences => {
+          return models.Essence.essenceMods(essences, models.Mod);
+        })
+        .then(mods => {
+          return mods
+            .map(mod => formatMod(mod.get({ plain: true })))
+            .reduce((map, mod) => {
+              map[mod.id] = mod;
+              return map;
+            }, {});
         }),
     gems: () =>
       models.SkillGem

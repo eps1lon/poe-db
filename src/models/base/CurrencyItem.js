@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 11,
       },
-      unknown17: {
+      unknown0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -79,6 +79,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 15,
+      },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 16,
       },
       _usage_achievement_items_cache: {
         type: DataTypes.TEXT,

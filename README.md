@@ -1,4 +1,7 @@
-# poedb [![Build Status](https://travis-ci.org/eps1lon/poedb.svg?branch=master)](https://travis-ci.org/eps1lon/poedb)
+# poe-db
+[![Build Status](https://travis-ci.org/eps1lon/poe-db.svg?branch=master)](https://travis-ci.org/eps1lon/poe-db)
+
+Relational database for `Content.ggpk` from Path of Exile@3.2.1-hotfix.2.
 
 ## Requirements
 python 3.4 for PyPoe

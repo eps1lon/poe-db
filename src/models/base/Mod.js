@@ -170,6 +170,24 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 40,
       },
+      stat6_min: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 41,
+      },
+      stat6_max: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 42,
+      },
+      tier_text: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 44,
+      },
       _spawn_weight_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -262,6 +280,14 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_achievement_items_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'stats_key6',
+            },
+          ],
+          name: 'index_stats_key6',
         },
       ],
       tableName: 'mods',
@@ -382,6 +408,19 @@ module.exports = (sequelize, DataTypes) => {
         name: 'achievement_items_key',
         $type: 'ulong',
         $col_order: 36,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.Stat, {
+      as: 'stats6',
+      $inverse: 'mods6',
+      $col_order: 43,
+      foreignKey: {
+        name: 'stats_key6',
+        $type: 'ulong',
+        $col_order: 43,
       },
       targetKey: 'row',
       nullable: true,

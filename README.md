@@ -28,7 +28,7 @@ GRANT ALL PRIVILEGES ON `poedb`.* TO 'poedb'@'localhost';
 
 ### environment variables
 The following variables have to be set as environment variables in order to
-authenticate to the database:
+authenticate to the database (alternatively follow the instructions in `.env.example`):
 - `POEDB_HOST`
 - `POEDB_USER` needs the following privileges
   - drop/create host wide for `db:create`, `db:drop`

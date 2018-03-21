@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown3: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 4,
       },
-      rarity: {
+      rarity_key: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      unknown9: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -50,23 +50,35 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 9,
       },
-      unknown1: {
+      unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
       },
-      unknown2: {
+      flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 11,
       },
-      unknown5: {
+      flag2: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 12,
+      },
+      keys0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 13,
+      },
+      unknown6: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 14,
       },
     },
     {

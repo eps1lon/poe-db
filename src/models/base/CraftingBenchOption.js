@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 15,
       },
-      flag0: {
+      is_area_option: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,

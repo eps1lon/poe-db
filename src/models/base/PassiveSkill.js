@@ -128,11 +128,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 25,
       },
-      stat5_value: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 26,
+      },
+      buff_related_unknown2: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 27,
       },
       _stats_cache: {
         type: DataTypes.TEXT,

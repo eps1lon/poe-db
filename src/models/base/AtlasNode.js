@@ -20,19 +20,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
-      unknown4: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown5: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      unknown6: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -42,10 +42,16 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 9,
+        $col_order: 8,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
+      },
+      unknown3: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
@@ -72,18 +78,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'default_item_visual_identity_key',
+              attribute: 'item_visual_identity_key',
             },
           ],
-          name: 'index_default_item_visual_identity_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'shaped_item_visual_identity_key',
-            },
-          ],
-          name: 'index_shaped_item_visual_identity_key',
+          name: 'index_item_visual_identity_key',
         },
       ],
       tableName: 'atlas_nodes',
@@ -106,26 +104,13 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.ItemVisualIdentity, {
-      as: 'default_item_visual_identity',
+      as: 'item_visual_identity',
       $inverse: 'atlas_nodes',
       $col_order: 7,
       foreignKey: {
-        name: 'default_item_visual_identity_key',
+        name: 'item_visual_identity_key',
         $type: 'ulong',
         $col_order: 7,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.ItemVisualIdentity, {
-      as: 'shaped_item_visual_identity',
-      $inverse: 'atlas_nodes',
-      $col_order: 8,
-      foreignKey: {
-        name: 'shaped_item_visual_identity_key',
-        $type: 'ulong',
-        $col_order: 8,
       },
       targetKey: 'row',
       nullable: true,

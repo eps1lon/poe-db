@@ -50,6 +50,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 6,
       },
+      is_large_abyss_monster: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
+      },
+      is_small_abyss_monster: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
+      },
       _tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

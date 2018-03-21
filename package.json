@@ -1,6 +1,6 @@
 {
   "name": "poedb-node",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "node": "^8.4"
   },
@@ -14,13 +14,13 @@
   "license": "MIT",
   "scripts": {
     "db:build": "yarn run db:migration:run -- up && yarn run db:insert",
-    "db:insert": "node scripts/db/insert",
+    "db:insert": "node -r dotenv/config scripts/db/insert",
     "db:refill": "yarn run db:truncate && yarn run db:insert",
     "db:schema": "node --trace-warnings scripts/db/schema",
-    "db:truncate": "node scripts/db/truncate",
+    "db:truncate": "node -r dotenv/config scripts/db/truncate",
     "db:migration:generate": "node --trace-warnings scripts/db/migration/generate",
-    "db:migration:run": "node --trace-warnings scripts/db/migration/umzug",
-    "dev:server": "nodemon --trace-warnings server.js",
+    "db:migration:run": "node --trace-warnings -r dotenv/config scripts/db/migration/umzug",
+    "dev:server": "nodemon --trace-warnings -r dotenv/config server.js",
     "dev:models": "node --trace-warnings scripts/generateModels",
     "dev:models:clear": "node scripts/clearModels",
     "postdev:models": "prettier --write \"src/models/base/*.js\" \"src/models/version.js\" ",
@@ -52,6 +52,7 @@
   "dependencies": {
     "cache-manager": "^2.4.0",
     "cache-manager-fs": "^1.0.6",
+    "dotenv": "^5.0.1",
     "inflection": "^1.12.0",
     "lodash": "^4.17.4",
     "morgan": "^1.8.2",

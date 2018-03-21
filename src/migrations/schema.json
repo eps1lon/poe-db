@@ -1,4 +1,271 @@
 {
+  "AbyssObject": {
+    "tableName": "abyss_objects",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "metadata_file": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "keys0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown9": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown10": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown12": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown13": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown14": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown15": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown16": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown17": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown18": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown19": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown20": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "AbyssRegion": {
+    "tableName": "abyss_regions",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "AbyssTheme": {
+    "tableName": "abyss_themes",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "Achievement": {
     "tableName": "achievements",
     "attributes": {
@@ -91,8 +358,29 @@
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "INTEGER",
+          "constructor": "TEXT",
           "options": {}
+        }
+      },
+      "flag5": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag7": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
         }
       },
       "created_at": {
@@ -894,6 +1182,220 @@
       "engine": "MYISAM"
     }
   },
+  "Archetype": {
+    "tableName": "archetypes",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "passive_skill_tree_url": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "ascendancy_class_name": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "description": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "ui_image_file": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "tutorial_video_bk_file": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "FLOAT",
+          "options": {}
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "FLOAT",
+          "options": {}
+        }
+      },
+      "background_image_file": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "characters_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "characters_key"
+          }
+        ],
+        "name": "index_characters_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "ArchetypeReward": {
+    "tableName": "archetype_rewards",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "keys0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "bk2_file": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "AreaTransitionAnimation": {
     "tableName": "area_transition_animations",
     "attributes": {
@@ -1624,6 +2126,178 @@
       "engine": "MYISAM"
     }
   },
+  "AtlasInfluenceOutcome": {
+    "tableName": "atlas_influence_outcomes",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "_mods_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "AtlasInfluenceOutcomeHabtmMod": {
+    "tableName": "atlas_influence_outcome__mods",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "atlas_influence_outcome_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "mod_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "atlas_influence_outcome_row"
+          },
+          {
+            "attribute": "mod_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
   "AtlasNode": {
     "tableName": "atlas_nodes",
     "attributes": {
@@ -1653,7 +2327,7 @@
           "options": {}
         }
       },
-      "unknown4": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -1661,7 +2335,7 @@
           "options": {}
         }
       },
-      "unknown5": {
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -1669,7 +2343,7 @@
           "options": {}
         }
       },
-      "unknown6": {
+      "unknown2": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -1690,6 +2364,14 @@
         "primaryKey": false,
         "type": {
           "constructor": "BOOLEAN"
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
         }
       },
       "_atlas_node_cache": {
@@ -1722,16 +2404,7 @@
           }
         }
       },
-      "default_item_visual_identity_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "shaped_item_visual_identity_key": {
+      "item_visual_identity_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -1755,20 +2428,10 @@
       {
         "fields": [
           {
-            "attribute": "default_item_visual_identity_key"
+            "attribute": "item_visual_identity_key"
           }
         ],
-        "name": "index_default_item_visual_identity_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "shaped_item_visual_identity_key"
-          }
-        ],
-        "name": "index_shaped_item_visual_identity_key",
+        "name": "index_item_visual_identity_key",
         "type": "",
         "parser": null
       }
@@ -2152,22 +2815,11 @@
           "constructor": "BOOLEAN"
         }
       },
-      "data11": {
+      "is_blessing": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "key0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
+          "constructor": "BOOLEAN"
         }
       },
       "_implicit_mods_cache": {
@@ -2213,6 +2865,20 @@
         }
       },
       "_unique_purchase_base_item_types_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "_identify_achievement_items_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "_identify_magic_achievement_items_cache": {
         "allowNull": false,
         "type": {
           "constructor": "TEXT",
@@ -2277,6 +2943,24 @@
             "unsigned": true
           }
         }
+      },
+      "item_themes_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "fragment_base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
       }
     },
     "indices": [
@@ -2329,12 +3013,272 @@
         "name": "index_equip_achievement_items_key",
         "type": "",
         "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "item_themes_key"
+          }
+        ],
+        "name": "index_item_themes_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "fragment_base_item_types_key"
+          }
+        ],
+        "name": "index_fragment_base_item_types_key",
+        "type": "",
+        "parser": null
       }
     ],
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MYISAM"
+    }
+  },
+  "BaseItemTypeHabtmIdentifyAchievementitem": {
+    "tableName": "base_item_type__identify__achievement_items",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_type_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "achievement_item_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_type_row"
+          },
+          {
+            "attribute": "achievement_item_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
+  "BaseItemTypeHabtmIdentifyMagicAchievementitem": {
+    "tableName": "base_item_type__identify_magic__achievement_items",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_type_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "achievement_item_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_type_row"
+          },
+          {
+            "attribute": "achievement_item_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
+  "BaseItemTypeHabtmIdentifyRareAchievementitem": {
+    "tableName": "base_item_type__identify_rare__achievement_items",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_type_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "achievement_item_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_type_row"
+          },
+          {
+            "attribute": "achievement_item_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
     }
   },
   "BaseItemTypeHabtmImplicitMod": {
@@ -2933,6 +3877,1297 @@
       "engine": "MyISAM"
     }
   },
+  "BestiaryCapturableMonster": {
+    "tableName": "bestiary_capturable_monsters",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "name": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "icon_small": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "icon": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "flag1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "monster_varieties_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "bestiary_groups_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "boss_monster_varieties_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "bestiary_genus_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "bestiary_capturable_monsters_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "monster_varieties_key"
+          }
+        ],
+        "name": "index_monster_varieties_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_groups_key"
+          }
+        ],
+        "name": "index_bestiary_groups_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "boss_monster_varieties_key"
+          }
+        ],
+        "name": "index_boss_monster_varieties_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_genus_key"
+          }
+        ],
+        "name": "index_bestiary_genus_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_capturable_monsters_key"
+          }
+        ],
+        "name": "index_bestiary_capturable_monsters_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BestiaryEncounter": {
+    "tableName": "bestiary_encounters",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "min_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "max_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "spawn_weight": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "monster_spawner_id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "monster_packs_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "monster_packs_key"
+          }
+        ],
+        "name": "index_monster_packs_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BestiaryFamily": {
+    "tableName": "bestiary_families",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "name": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "icon": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "icon_small": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "illustration": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "page_art": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "flavour_text": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown9": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BestiaryGenu": {
+    "tableName": "bestiary_genus",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "name": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "name2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "icon": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "bestiary_groups_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_groups_key"
+          }
+        ],
+        "name": "index_bestiary_groups_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BestiaryGroup": {
+    "tableName": "bestiary_groups",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "name": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "description": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "illustraiton": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "group_name": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "icon": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "icon_small": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "_achievement_items_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "bestiary_families_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_families_key"
+          }
+        ],
+        "name": "index_bestiary_families_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BestiaryGroupHabtmAchievementItem": {
+    "tableName": "bestiary_group__achievement_items",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "bestiary_group_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "achievement_item_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_group_row"
+          },
+          {
+            "attribute": "achievement_item_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
+  "BestiaryNet": {
+    "tableName": "bestiary_nets",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "capture_min_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "capture_max_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "drop_min_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "drop_max_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "is_enabled": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_types_key"
+          }
+        ],
+        "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BestiaryRecipe": {
+    "tableName": "bestiary_recipes",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "description": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "notes": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "hint_text": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "data0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "flag1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "_bestiary_recipe_component_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "_achievement_items_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BestiaryRecipeComponent": {
+    "tableName": "bestiary_recipe_components",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "min_level": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "rarity_key": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "bestiary_families_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "bestiary_groups_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "mods_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "bestiary_capturable_monsters_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "bestiary_genus_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_families_key"
+          }
+        ],
+        "name": "index_bestiary_families_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_groups_key"
+          }
+        ],
+        "name": "index_bestiary_groups_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "mods_key"
+          }
+        ],
+        "name": "index_mods_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_capturable_monsters_key"
+          }
+        ],
+        "name": "index_bestiary_capturable_monsters_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_genus_key"
+          }
+        ],
+        "name": "index_bestiary_genus_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BestiaryRecipeHabtmAchievementItem": {
+    "tableName": "bestiary_recipe__achievement_items",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "bestiary_recipe_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "achievement_item_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_recipe_row"
+          },
+          {
+            "attribute": "achievement_item_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
+  "BestiaryRecipeHabtmBestiaryRecipeComponent": {
+    "tableName": "bestiary_recipe__bestiary_recipe_components",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "bestiary_recipe_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "bestiary_recipe_component_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_recipe_row"
+          },
+          {
+            "attribute": "bestiary_recipe_component_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
+  "BestiaryRecipeItemCreation": {
+    "tableName": "bestiary_recipe_item_creations",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "command": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "bestiary_recipes_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "bestiary_recipes_key"
+          }
+        ],
+        "name": "index_bestiary_recipes_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "BeyondDemon": {
     "tableName": "beyond_demons",
     "attributes": {
@@ -3032,159 +5267,6 @@
         }
       },
       "id": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
-  "BloodType": {
-    "tableName": "blood_types",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "id": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file3": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "key0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "pet_file4": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file5": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file6": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "key1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "keys0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "key2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "pet_file7": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file8": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file9": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -3637,6 +5719,230 @@
       "engine": "MyISAM"
     }
   },
+  "BloodType": {
+    "tableName": "blood_types",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "pet_file4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file5": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "keys0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "pet_file7": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file8": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file9": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BonusMasterExp": {
+    "tableName": "bonus_master_exps",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "quest_state": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "bonus_experience": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "npc_master_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "npc_master_key"
+          }
+        ],
+        "name": "index_npc_master_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "BuffCategory": {
     "tableName": "buff_categories",
     "attributes": {
@@ -3841,6 +6147,13 @@
         }
       },
       "is_recovery": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag11": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -4113,7 +6426,7 @@
           "options": {}
         }
       },
-      "epk_file1": {
+      "epk_files1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -4121,7 +6434,7 @@
           "options": {}
         }
       },
-      "epk_file2": {
+      "epk_files2": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -4129,7 +6442,7 @@
           "options": {}
         }
       },
-      "unknown6": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -4144,22 +6457,6 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "unknown1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
       "key0": {
         "allowNull": true,
         "primaryKey": false,
@@ -4170,14 +6467,18 @@
           }
         }
       },
-      "key1": {
-        "allowNull": true,
-        "primaryKey": false,
+      "_misc_animated1_cache": {
+        "allowNull": false,
         "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "_misc_animated2_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
         }
       },
       "_preload_groups_cache": {
@@ -4200,8 +6501,55 @@
           "constructor": "DATE",
           "options": {}
         }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "BuffVisualHabtmMiscAnimated1": {
+    "tableName": "buff_visual__misc_animated1s",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
       },
-      "misc_animated_key": {
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "buff_visual_row": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -4210,7 +6558,7 @@
           }
         }
       },
-      "misc_animated_key2": {
+      "misc_animated_row": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -4224,20 +6572,14 @@
       {
         "fields": [
           {
-            "attribute": "misc_animated_key"
-          }
-        ],
-        "name": "index_misc_animated_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
+            "attribute": "buff_visual_row"
+          },
           {
-            "attribute": "misc_animated_key2"
+            "attribute": "misc_animated_row"
           }
         ],
-        "name": "index_misc_animated_key2",
+        "name": "composite primary_alias",
+        "unique": true,
         "type": "",
         "parser": null
       }
@@ -4245,7 +6587,87 @@
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
+      "engine": "MyISAM"
+    }
+  },
+  "BuffVisualHabtmMiscAnimated2": {
+    "tableName": "buff_visual__misc_animated2s",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "buff_visual_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "misc_animated_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "buff_visual_row"
+          },
+          {
+            "attribute": "misc_animated_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
     }
   },
   "BuffVisualHabtmPreloadGroup": {
@@ -6044,7 +8466,7 @@
           }
         }
       },
-      "unknown2": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -6130,6 +8552,22 @@
         "primaryKey": false,
         "type": {
           "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "flag1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "flag2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
           "options": {}
         }
       },
@@ -8505,7 +10943,7 @@
           "constructor": "BOOLEAN"
         }
       },
-      "flag0": {
+      "is_area_option": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -8834,7 +11272,7 @@
           "options": {}
         }
       },
-      "unknown17": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -8863,6 +11301,14 @@
         "primaryKey": false,
         "type": {
           "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
           "options": {}
         }
       },
@@ -9815,6 +12261,38 @@
         "primaryKey": false,
         "type": {
           "constructor": "FLOAT",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "FLOAT",
+          "options": {}
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "FLOAT",
+          "options": {}
+        }
+      },
+      "unknown4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
           "options": {}
         }
       },
@@ -13164,6 +15642,306 @@
       "engine": "MYISAM"
     }
   },
+  "ElderBossArena": {
+    "tableName": "elder_boss_arenas",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "_achievement_items_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "world_areas_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "world_areas_key"
+          }
+        ],
+        "name": "index_world_areas_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "ElderBossArenaHabtmAchievementItem": {
+    "tableName": "elder_boss_arena__achievement_items",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "elder_boss_arena_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "achievement_item_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "elder_boss_arena_row"
+          },
+          {
+            "attribute": "achievement_item_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
+  "ElderMapBossOverride": {
+    "tableName": "elder_map_boss_overrides",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "terrain_metadata": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "_monster_varieties_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "world_areas_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "world_areas_key"
+          }
+        ],
+        "name": "index_world_areas_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "ElderMapBossOverrideHabtmMonsterVariety": {
+    "tableName": "elder_map_boss_override__monster_varieties",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "elder_map_boss_override_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "monster_variety_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "elder_map_boss_override_row"
+          },
+          {
+            "attribute": "monster_variety_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
   "EndlessLedgeChest": {
     "tableName": "endless_ledge_chests",
     "attributes": {
@@ -13900,7 +16678,7 @@
           }
         }
       },
-      "mods_key1": {
+      "display_wand_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13909,7 +16687,7 @@
           }
         }
       },
-      "mods_key2": {
+      "display_bow_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13927,7 +16705,7 @@
           }
         }
       },
-      "amulet1_mods_key": {
+      "display_amulet_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13936,7 +16714,7 @@
           }
         }
       },
-      "belt1_mods_key": {
+      "display_ring_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13945,7 +16723,7 @@
           }
         }
       },
-      "belt3_mods_key": {
+      "display_belt_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13954,7 +16732,7 @@
           }
         }
       },
-      "gloves1_mods_key": {
+      "display_gloves_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13963,7 +16741,7 @@
           }
         }
       },
-      "boots1_mods_key": {
+      "display_boots_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13972,7 +16750,7 @@
           }
         }
       },
-      "body_armour1_mods_key": {
+      "display_body_armour_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13981,7 +16759,7 @@
           }
         }
       },
-      "helmet1_mods_key": {
+      "display_helmet_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -13990,7 +16768,7 @@
           }
         }
       },
-      "shield1_mods_key": {
+      "display_shield_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14008,7 +16786,7 @@
           }
         }
       },
-      "1_hand_mods_key1": {
+      "display_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14017,7 +16795,7 @@
           }
         }
       },
-      "mods_key13": {
+      "display_melee_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14026,7 +16804,7 @@
           }
         }
       },
-      "mods_key14": {
+      "display_1_hand_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14035,7 +16813,7 @@
           }
         }
       },
-      "mods_key15": {
+      "display_2_hand_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14044,7 +16822,7 @@
           }
         }
       },
-      "2_hand_mods_key1": {
+      "display_2_hand_melee_weapon_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14053,7 +16831,7 @@
           }
         }
       },
-      "boots3_mods_key": {
+      "display_armour_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14062,7 +16840,7 @@
           }
         }
       },
-      "ranged_mods_key": {
+      "display_ranged_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14071,7 +16849,7 @@
           }
         }
       },
-      "helmet2_mods_key": {
+      "helmet_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14080,7 +16858,7 @@
           }
         }
       },
-      "body_armour2_mods_key": {
+      "body_armour_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14089,7 +16867,7 @@
           }
         }
       },
-      "boots2_mods_key": {
+      "boots_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14098,7 +16876,7 @@
           }
         }
       },
-      "gloves2_mods_key": {
+      "gloves_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14125,7 +16903,7 @@
           }
         }
       },
-      "2_hand_mods_key2": {
+      "staff_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14134,7 +16912,7 @@
           }
         }
       },
-      "2_hand_mods_key3": {
+      "2_hand_sword_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14143,7 +16921,7 @@
           }
         }
       },
-      "2_hand_mods_key4": {
+      "2_hand_axe_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14152,7 +16930,7 @@
           }
         }
       },
-      "2_hand_mods_key5": {
+      "2_hand_mace_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14161,7 +16939,7 @@
           }
         }
       },
-      "1_hand_mods_key2": {
+      "claw_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14170,7 +16948,7 @@
           }
         }
       },
-      "1_hand_mods_key3": {
+      "dagger_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14179,7 +16957,7 @@
           }
         }
       },
-      "1_hand_mods_key4": {
+      "1_hand_sword_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14188,7 +16966,7 @@
           }
         }
       },
-      "1_hand_mods_key5": {
+      "1_hand_thrusting_sword_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14197,7 +16975,7 @@
           }
         }
       },
-      "1_hand_mods_key6": {
+      "1_hand_axe_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14206,7 +16984,7 @@
           }
         }
       },
-      "1_hand_mods_key7": {
+      "1_hand_mace_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14215,7 +16993,7 @@
           }
         }
       },
-      "1_hand_mods_key8": {
+      "sceptre_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14224,7 +17002,7 @@
           }
         }
       },
-      "1_hand_mods_key9": {
+      "display_monster_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14233,7 +17011,7 @@
           }
         }
       },
-      "belt2_mods_key": {
+      "belt_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14242,7 +17020,7 @@
           }
         }
       },
-      "amulet2_mods_key": {
+      "amulet_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14260,7 +17038,7 @@
           }
         }
       },
-      "mods_key41": {
+      "display_jewellry_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14269,7 +17047,7 @@
           }
         }
       },
-      "shield2_mods_key": {
+      "shield_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14278,7 +17056,7 @@
           }
         }
       },
-      "mods_key43": {
+      "display_item_mods_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -14302,20 +17080,20 @@
       {
         "fields": [
           {
-            "attribute": "mods_key1"
+            "attribute": "display_wand_mods_key"
           }
         ],
-        "name": "index_mods_key1",
+        "name": "index_display_wand_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key2"
+            "attribute": "display_bow_mods_key"
           }
         ],
-        "name": "index_mods_key2",
+        "name": "index_display_bow_mods_key",
         "type": "",
         "parser": null
       },
@@ -14332,80 +17110,80 @@
       {
         "fields": [
           {
-            "attribute": "amulet1_mods_key"
+            "attribute": "display_amulet_mods_key"
           }
         ],
-        "name": "index_amulet1_mods_key",
+        "name": "index_display_amulet_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "belt1_mods_key"
+            "attribute": "display_ring_mods_key"
           }
         ],
-        "name": "index_belt1_mods_key",
+        "name": "index_display_ring_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "belt3_mods_key"
+            "attribute": "display_belt_mods_key"
           }
         ],
-        "name": "index_belt3_mods_key",
+        "name": "index_display_belt_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "gloves1_mods_key"
+            "attribute": "display_gloves_mods_key"
           }
         ],
-        "name": "index_gloves1_mods_key",
+        "name": "index_display_gloves_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "boots1_mods_key"
+            "attribute": "display_boots_mods_key"
           }
         ],
-        "name": "index_boots1_mods_key",
+        "name": "index_display_boots_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "body_armour1_mods_key"
+            "attribute": "display_body_armour_mods_key"
           }
         ],
-        "name": "index_body_armour1_mods_key",
+        "name": "index_display_body_armour_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "helmet1_mods_key"
+            "attribute": "display_helmet_mods_key"
           }
         ],
-        "name": "index_helmet1_mods_key",
+        "name": "index_display_helmet_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "shield1_mods_key"
+            "attribute": "display_shield_mods_key"
           }
         ],
-        "name": "index_shield1_mods_key",
+        "name": "index_display_shield_mods_key",
         "type": "",
         "parser": null
       },
@@ -14422,110 +17200,110 @@
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key1"
+            "attribute": "display_weapon_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key1",
+        "name": "index_display_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key13"
+            "attribute": "display_melee_weapon_mods_key"
           }
         ],
-        "name": "index_mods_key13",
+        "name": "index_display_melee_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key14"
+            "attribute": "display_1_hand_weapon_mods_key"
           }
         ],
-        "name": "index_mods_key14",
+        "name": "index_display_1_hand_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key15"
+            "attribute": "display_2_hand_weapon_mods_key"
           }
         ],
-        "name": "index_mods_key15",
+        "name": "index_display_2_hand_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key1"
+            "attribute": "display_2_hand_melee_weapon_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key1",
+        "name": "index_display_2_hand_melee_weapon_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "boots3_mods_key"
+            "attribute": "display_armour_mods_key"
           }
         ],
-        "name": "index_boots3_mods_key",
+        "name": "index_display_armour_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "ranged_mods_key"
+            "attribute": "display_ranged_mods_key"
           }
         ],
-        "name": "index_ranged_mods_key",
+        "name": "index_display_ranged_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "helmet2_mods_key"
+            "attribute": "helmet_mods_key"
           }
         ],
-        "name": "index_helmet2_mods_key",
+        "name": "index_helmet_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "body_armour2_mods_key"
+            "attribute": "body_armour_mods_key"
           }
         ],
-        "name": "index_body_armour2_mods_key",
+        "name": "index_body_armour_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "boots2_mods_key"
+            "attribute": "boots_mods_key"
           }
         ],
-        "name": "index_boots2_mods_key",
+        "name": "index_boots_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "gloves2_mods_key"
+            "attribute": "gloves_mods_key"
           }
         ],
-        "name": "index_gloves2_mods_key",
+        "name": "index_gloves_mods_key",
         "type": "",
         "parser": null
       },
@@ -14552,140 +17330,140 @@
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key2"
+            "attribute": "staff_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key2",
+        "name": "index_staff_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key3"
+            "attribute": "2_hand_sword_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key3",
+        "name": "index_2_hand_sword_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key4"
+            "attribute": "2_hand_axe_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key4",
+        "name": "index_2_hand_axe_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "2_hand_mods_key5"
+            "attribute": "2_hand_mace_mods_key"
           }
         ],
-        "name": "index_2_hand_mods_key5",
+        "name": "index_2_hand_mace_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key2"
+            "attribute": "claw_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key2",
+        "name": "index_claw_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key3"
+            "attribute": "dagger_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key3",
+        "name": "index_dagger_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key4"
+            "attribute": "1_hand_sword_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key4",
+        "name": "index_1_hand_sword_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key5"
+            "attribute": "1_hand_thrusting_sword_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key5",
+        "name": "index_1_hand_thrusting_sword_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key6"
+            "attribute": "1_hand_axe_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key6",
+        "name": "index_1_hand_axe_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key7"
+            "attribute": "1_hand_mace_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key7",
+        "name": "index_1_hand_mace_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key8"
+            "attribute": "sceptre_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key8",
+        "name": "index_sceptre_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "1_hand_mods_key9"
+            "attribute": "display_monster_mods_key"
           }
         ],
-        "name": "index_1_hand_mods_key9",
+        "name": "index_display_monster_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "belt2_mods_key"
+            "attribute": "belt_mods_key"
           }
         ],
-        "name": "index_belt2_mods_key",
+        "name": "index_belt_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "amulet2_mods_key"
+            "attribute": "amulet_mods_key"
           }
         ],
-        "name": "index_amulet2_mods_key",
+        "name": "index_amulet_mods_key",
         "type": "",
         "parser": null
       },
@@ -14702,30 +17480,30 @@
       {
         "fields": [
           {
-            "attribute": "mods_key41"
+            "attribute": "display_jewellry_mods_key"
           }
         ],
-        "name": "index_mods_key41",
+        "name": "index_display_jewellry_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "shield2_mods_key"
+            "attribute": "shield_mods_key"
           }
         ],
-        "name": "index_shield2_mods_key",
+        "name": "index_shield_mods_key",
         "type": "",
         "parser": null
       },
       {
         "fields": [
           {
-            "attribute": "mods_key43"
+            "attribute": "display_item_mods_key"
           }
         ],
-        "name": "index_mods_key43",
+        "name": "index_display_item_mods_key",
         "type": "",
         "parser": null
       }
@@ -15999,6 +18777,109 @@
       "engine": "MYISAM"
     }
   },
+  "FragmentStashTabLayout": {
+    "tableName": "fragment_stash_tab_layouts",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pos_x": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "pos_y": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "order": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "size_x": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "size_y": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_types_key"
+          }
+        ],
+        "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "GameConstant": {
     "tableName": "game_constants",
     "attributes": {
@@ -16112,6 +18993,207 @@
           "options": {
             "unsigned": true
           }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "GeometryAttackShape": {
+    "tableName": "geometry_attack_shapes",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "GeometryAttackTargetType": {
+    "tableName": "geometry_attack_target_types",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "GeometryAttackVariation": {
+    "tableName": "geometry_attack_variations",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown5": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown7": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "unknown8": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown9": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown10": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
         }
       },
       "created_at": {
@@ -16456,7 +19538,7 @@
           }
         }
       },
-      "unknown2": {
+      "data3": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -16499,6 +19581,14 @@
         "primaryKey": false,
         "type": {
           "constructor": "BOOLEAN"
+        }
+      },
+      "data4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
         }
       },
       "created_at": {
@@ -17306,7 +20396,7 @@
           }
         }
       },
-      "unknown1": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -17330,7 +20420,7 @@
           "options": {}
         }
       },
-      "unknown2": {
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -19025,9 +22115,48 @@
           "constructor": "DATE",
           "options": {}
         }
+      },
+      "elder_tags_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "shaper_tags_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
       }
     },
-    "indices": [],
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "elder_tags_key"
+          }
+        ],
+        "name": "index_elder_tags_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "shaper_tags_key"
+          }
+        ],
+        "name": "index_shaper_tags_key",
+        "type": "",
+        "parser": null
+      }
+    ],
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
@@ -19130,6 +22259,165 @@
           }
         ],
         "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "ItemisedVisualEffect": {
+    "tableName": "itemised_visual_effects",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "keys0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "data1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "keys2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "data3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "data4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "item_visual_effect_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "item_visual_identity_key1": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "item_visual_identity_key2": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_types_key"
+          }
+        ],
+        "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "item_visual_effect_key"
+          }
+        ],
+        "name": "index_item_visual_effect_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "item_visual_identity_key1"
+          }
+        ],
+        "name": "index_item_visual_identity_key1",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "item_visual_identity_key2"
+          }
+        ],
+        "name": "index_item_visual_identity_key2",
         "type": "",
         "parser": null
       }
@@ -19510,7 +22798,7 @@
           "options": {}
         }
       },
-      "unknown28": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -19518,7 +22806,7 @@
           "options": {}
         }
       },
-      "unknown29": {
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -19556,11 +22844,11 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown30": {
+      "animation_location": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "INTEGER",
+          "constructor": "TEXT",
           "options": {}
         }
       },
@@ -19884,165 +23172,6 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MyISAM"
-    }
-  },
-  "ItemisedVisualEffect": {
-    "tableName": "itemised_visual_effects",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "keys0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "data1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "keys2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "flag0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "data3": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "data4": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "base_item_types_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "item_visual_effect_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "item_visual_identity_key1": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "item_visual_identity_key2": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "base_item_types_key"
-          }
-        ],
-        "name": "index_base_item_types_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "item_visual_effect_key"
-          }
-        ],
-        "name": "index_item_visual_effect_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "item_visual_identity_key1"
-          }
-        ],
-        "name": "index_item_visual_identity_key1",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "item_visual_identity_key2"
-          }
-        ],
-        "name": "index_item_visual_identity_key2",
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
     }
   },
   "KillstreakThreshold": {
@@ -22193,13 +25322,6 @@
           "options": {}
         }
       },
-      "_labyrinth_secrets_cache": {
-        "allowNull": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
       "created_at": {
         "allowNull": false,
         "type": {
@@ -22215,6 +25337,15 @@
         }
       },
       "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "labyrinth_secrets_key": {
         "allowNull": true,
         "type": {
           "constructor": "BIGINT",
@@ -22241,6 +25372,16 @@
           }
         ],
         "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "labyrinth_secrets_key"
+          }
+        ],
+        "name": "index_labyrinth_secrets_key",
         "type": "",
         "parser": null
       },
@@ -22552,7 +25693,15 @@
           "options": {}
         }
       },
-      "map_iteration": {
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "flag0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -23037,6 +26186,80 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MyISAM"
+    }
+  },
+  "MapFragmentMod": {
+    "tableName": "map_fragment_mods",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "mods_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_types_key"
+          }
+        ],
+        "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "mods_key"
+          }
+        ],
+        "name": "index_mods_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
     }
   },
   "MapHabtmHigherTierMapsBaseitemtype": {
@@ -23571,6 +26794,57 @@
       "engine": "MyISAM"
     }
   },
+  "MapSery": {
+    "tableName": "map_series",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "name": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "MapStashTabLayout": {
     "tableName": "map_stash_tab_layouts",
     "attributes": {
@@ -23869,6 +27143,156 @@
       "engine": "MYISAM"
     }
   },
+  "MicrotransactionCombineForumula": {
+    "tableName": "microtransaction_combine_forumulas",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "_ingredients_base_item_types_cache": {
+        "allowNull": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "result_base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "result_base_item_types_key"
+          }
+        ],
+        "name": "index_result_base_item_types_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "MicrotransactionCombineForumulaHabtmIngredientsBaseitemtype": {
+    "tableName": "microtransaction_combine_forumula__ingredients__base_item_types",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "autoIncrement": true,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "priority": {
+        "allowNull": false,
+        "autoIncrement": false,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "microtransaction_combine_forumula_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "base_item_type_row": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "microtransaction_combine_forumula_row"
+          },
+          {
+            "attribute": "base_item_type_row"
+          }
+        ],
+        "name": "composite primary_alias",
+        "unique": true,
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MyISAM"
+    }
+  },
   "MicrotransactionFireworksVariation": {
     "tableName": "microtransaction_fireworks_variations",
     "attributes": {
@@ -23933,6 +27357,57 @@
         "parser": null
       }
     ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "MicrotransactionPeriodicCharacterEffectVariation": {
+    "tableName": "microtransaction_periodic_character_effect_variations",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "ao_file": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
@@ -24206,6 +27681,14 @@
         "primaryKey": false,
         "type": {
           "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
           "options": {}
         }
       },
@@ -25102,6 +28585,30 @@
           "constructor": "BOOLEAN"
         }
       },
+      "stat6_min": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "stat6_max": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "tier_text": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
       "_spawn_weight_tags_cache": {
         "allowNull": false,
         "type": {
@@ -25217,6 +28724,15 @@
             "unsigned": true
           }
         }
+      },
+      "stats_key6": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
       }
     },
     "indices": [
@@ -25307,6 +28823,16 @@
           }
         ],
         "name": "index_achievement_items_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "stats_key6"
+          }
+        ],
+        "name": "index_stats_key6",
         "type": "",
         "parser": null
       }
@@ -26626,6 +30152,85 @@
       "engine": "MYISAM"
     }
   },
+  "MonsterMortar": {
+    "tableName": "monster_mortars",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "MonsterPack": {
     "tableName": "monster_packs",
     "attributes": {
@@ -27090,6 +30695,120 @@
       "engine": "MyISAM"
     }
   },
+  "MonsterProjectileAttack": {
+    "tableName": "monster_projectile_attacks",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "MonsterProjectileSpell": {
+    "tableName": "monster_projectile_spells",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "MonsterResistance": {
     "tableName": "monster_resistances",
     "attributes": {
@@ -27500,6 +31219,20 @@
         "type": {
           "constructor": "INTEGER",
           "options": {}
+        }
+      },
+      "is_large_abyss_monster": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "is_small_abyss_monster": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
         }
       },
       "_tags_cache": {
@@ -29627,6 +33360,92 @@
       "engine": "MyISAM"
     }
   },
+  "MultiPartAchievement": {
+    "tableName": "multi_part_achievements",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "achievement_items_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "achievement_items_key"
+          }
+        ],
+        "name": "index_achievement_items_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "Music": {
     "tableName": "music",
     "attributes": {
@@ -29787,6 +33606,157 @@
           "options": {
             "unsigned": true
           }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "NetTier": {
+    "tableName": "net_tiers",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "tier": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_types_key"
+          }
+        ],
+        "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "Notification": {
+    "tableName": "notifications",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "message": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "unknown4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
         }
       },
       "created_at": {
@@ -30695,7 +34665,7 @@
           "options": {}
         }
       },
-      "unknown1": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -30719,7 +34689,7 @@
           "options": {}
         }
       },
-      "unknown10": {
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -30727,7 +34697,15 @@
           "options": {}
         }
       },
-      "unknown11": {
+      "keys1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown3": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -31438,94 +35416,6 @@
       "engine": "MYISAM"
     }
   },
-  "Notification": {
-    "tableName": "notifications",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "id": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "unknown0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "unknown1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "message": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "unknown2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "unknown3": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "unknown4": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
   "OldMapStashTabLayout": {
     "tableName": "old_map_stash_tab_layouts",
     "attributes": {
@@ -31563,41 +35453,6 @@
   },
   "Orientation": {
     "tableName": "orientations",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
-  "PVPType": {
-    "tableName": "p_v_p_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -32191,12 +36046,32 @@
           }
         }
       },
-      "unknown2": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
           "options": {}
+        }
+      },
+      "key1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "key2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
         }
       },
       "created_at": {
@@ -32464,11 +36339,19 @@
           "constructor": "BOOLEAN"
         }
       },
-      "stat5_value": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "buff_related_unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
           "options": {}
         }
       },
@@ -32813,6 +36696,192 @@
       "engine": "MyISAM"
     }
   },
+  "PassiveSkillStatCategory": {
+    "tableName": "passive_skill_stat_categories",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "name": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "PassiveSkillTreeTutorial": {
+    "tableName": "passive_skill_tree_tutorials",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "choice_a_description": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "choice_b_description": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "choice_a_passive_tree_url": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "choice_b_passive_tree_url": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "key3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "characters_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "characters_key"
+          }
+        ],
+        "name": "index_characters_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "PathOfEndurance": {
     "tableName": "path_of_endurances",
     "attributes": {
@@ -32989,41 +37058,6 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MyISAM"
-    }
-  },
-  "PerLevelValue": {
-    "tableName": "per_level_values",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
     }
   },
   "PerandusBoss": {
@@ -33478,6 +37512,41 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MyISAM"
+    }
+  },
+  "PerLevelValue": {
+    "tableName": "per_level_values",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
     }
   },
   "Pet": {
@@ -34176,6 +38245,41 @@
       "engine": "MYISAM"
     }
   },
+  "PVPType": {
+    "tableName": "p_v_p_types",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "Quest": {
     "tableName": "quests",
     "attributes": {
@@ -34245,15 +38349,14 @@
           "options": {}
         }
       },
-      "unknown1": {
+      "flag0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "INTEGER",
-          "options": {}
+          "constructor": "BOOLEAN"
         }
       },
-      "flag0": {
+      "flag1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -34295,34 +38398,46 @@
           }
         }
       },
-      "quest_state": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "INTEGER",
+          "constructor": "TEXT",
           "options": {}
         }
       },
-      "is_hardcore_achievement": {
+      "quest_states": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "is_standard_achievement": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "unknown1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
+          "constructor": "TEXT",
           "options": {}
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "achievement_items_keys": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
         }
       },
       "created_at": {
@@ -34338,29 +38453,9 @@
           "constructor": "DATE",
           "options": {}
         }
-      },
-      "achievement_items_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
       }
     },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "achievement_items_key"
-          }
-        ],
-        "name": "index_achievement_items_key",
-        "type": "",
-        "parser": null
-      }
-    ],
+    "indices": [],
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
@@ -34415,7 +38510,7 @@
           }
         }
       },
-      "unknown3": {
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -34431,7 +38526,7 @@
           "options": {}
         }
       },
-      "rarity": {
+      "rarity_key": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -34439,7 +38534,7 @@
           "options": {}
         }
       },
-      "unknown9": {
+      "unknown2": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -34475,7 +38570,7 @@
           }
         }
       },
-      "unknown1": {
+      "unknown3": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -34483,18 +38578,34 @@
           "options": {}
         }
       },
-      "unknown2": {
+      "flag1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
           "constructor": "BOOLEAN"
         }
       },
-      "unknown5": {
+      "flag2": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
           "constructor": "BOOLEAN"
+        }
+      },
+      "keys0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
         }
       },
       "created_at": {
@@ -36151,6 +40262,162 @@
       "engine": "MYISAM"
     }
   },
+  "ShaperMemoryFragment": {
+    "tableName": "shaper_memory_fragments",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "ShaperOrb": {
+    "tableName": "shaper_orbs",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "tier": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_types_key"
+          }
+        ],
+        "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "ShieldType": {
     "tableName": "shield_types",
     "attributes": {
@@ -36500,7 +40767,7 @@
           "options": {}
         }
       },
-      "unknown0": {
+      "string0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -36532,7 +40799,7 @@
           "options": {}
         }
       },
-      "unknown15": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -37028,11 +41295,11 @@
           "options": {}
         }
       },
-      "x_box_id": {
+      "unknown6": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "TEXT",
+          "constructor": "INTEGER",
           "options": {}
         }
       },
@@ -37935,6 +42202,15 @@
             "unsigned": true
           }
         }
+      },
+      "consumed_mods_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
       }
     },
     "indices": [
@@ -37965,6 +42241,16 @@
           }
         ],
         "name": "index_vaal_variant_base_item_types_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "consumed_mods_key"
+          }
+        ],
+        "name": "index_consumed_mods_key",
         "type": "",
         "parser": null
       }
@@ -38238,6 +42524,57 @@
       "engine": "MYISAM"
     }
   },
+  "StartingPassiveSkill": {
+    "tableName": "starting_passive_skills",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "passive_skills": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "Stat": {
     "tableName": "stats",
     "attributes": {
@@ -38280,7 +42617,7 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown2": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -38324,7 +42661,7 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown3": {
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -38332,11 +42669,29 @@
           "options": {}
         }
       },
-      "unknown0": {
+      "unknown2": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
           "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "flag8": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
           "options": {}
         }
       },
@@ -38527,58 +42882,6 @@
           "options": {}
         }
       },
-      "spawn_weight": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "has_objective_boss_kill": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "has_objective_full_clear": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "unknown4": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "unknown5": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "has_objective_kill_exiles": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "has_objective_find_unique": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
       "key0": {
         "allowNull": true,
         "primaryKey": false,
@@ -38589,14 +42892,7 @@
           }
         }
       },
-      "has_objective_complete_master_mission": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "object_count_required": {
+      "spawn_weight": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -38604,22 +42900,123 @@
           "options": {}
         }
       },
-      "object_count_total": {
+      "key1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "key2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "flag0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
           "constructor": "INTEGER",
           "options": {}
+        }
+      },
+      "flag1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "flag2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown12": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown13": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown14": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown15": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "key5": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "key6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
         }
       },
       "_extra_mods_cache": {
-        "allowNull": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "_achievement_items_cache": {
         "allowNull": false,
         "type": {
           "constructor": "TEXT",
@@ -38639,48 +43036,9 @@
           "constructor": "DATE",
           "options": {}
         }
-      },
-      "npc_talk_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "monster_packs_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
       }
     },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "npc_talk_key"
-          }
-        ],
-        "name": "index_npc_talk_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "monster_packs_key"
-          }
-        ],
-        "name": "index_monster_packs_key",
-        "type": "",
-        "parser": null
-      }
-    ],
+    "indices": [],
     "options": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
@@ -38775,6 +43133,29 @@
         "type": {
           "constructor": "INTEGER",
           "options": {}
+        }
+      },
+      "data0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
         }
       },
       "created_at": {
@@ -43836,6 +48217,13 @@
           "options": {}
         }
       },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
       "created_at": {
         "allowNull": false,
         "type": {
@@ -44239,6 +48627,89 @@
         }
       },
       "limit": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "UniqueMapInfo": {
+    "tableName": "unique_map_infos",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "unknown8": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -46263,14 +50734,7 @@
           "options": {}
         }
       },
-      "is_master_daily_area": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "harbinger_spawn_chance": {
+      "unknown94": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -46278,7 +50742,71 @@
           "options": {}
         }
       },
-      "harbinger_count": {
+      "is_master_daily_area": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown95": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown96": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "abyss_regular_chance": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "abyss_special_chance": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown98": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "bestiary_unknown99": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "bestiary_unknown100": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "bestiary_unknown101": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -46453,6 +50981,15 @@
             "unsigned": true
           }
         }
+      },
+      "twinned_boss_kill_achievement_items_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
       }
     },
     "indices": [
@@ -46534,6 +51071,16 @@
           }
         ],
         "name": "index_environments_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "twinned_boss_kill_achievement_items_key"
+          }
+        ],
+        "name": "index_twinned_boss_kill_achievement_items_key",
         "type": "",
         "parser": null
       }
@@ -47620,28 +52167,18 @@
           "options": {}
         }
       },
-      "unknown7": {
+      "flag1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "INTEGER",
-          "options": {}
+          "constructor": "BOOLEAN"
         }
       },
-      "unknown8": {
+      "flag2": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "unknown9": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
+          "constructor": "BOOLEAN"
         }
       },
       "created_at": {

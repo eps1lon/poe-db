@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 10,
       },
-      unknown2: {
+      data3: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -109,6 +109,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 17,
+      },
+      data4: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 18,
       },
     },
     {
@@ -145,6 +151,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
 
+    // MANUAL
     model.hasMany(models.GrantedEffectsPerLevel, {
       as: 'granted_effects_per_levels',
       $inverse: 'granted_effect',

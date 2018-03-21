@@ -8,26 +8,32 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      quest_state: {
-        type: DataTypes.INTEGER,
+      unknown0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 0,
+      },
+      quest_states: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      is_hardcore_achievement: {
-        type: DataTypes.BOOLEAN,
+      unknown3: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      is_standard_achievement: {
-        type: DataTypes.BOOLEAN,
+      achievement_items_keys: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
@@ -37,36 +43,13 @@ module.exports = (sequelize, DataTypes) => {
       engine: 'MYISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [
-        {
-          fields: [
-            {
-              attribute: 'achievement_items_key',
-            },
-          ],
-          name: 'index_achievement_items_key',
-        },
-      ],
+      indexes: [],
       tableName: 'quest_achievements',
       underscored: true,
     },
   );
 
-  model.associate = models => {
-    model.belongsTo(models.AchievementItem, {
-      as: 'achievement_item',
-      $inverse: 'quest_achievements',
-      $col_order: 0,
-      foreignKey: {
-        name: 'achievement_items_key',
-        $type: 'ulong',
-        $col_order: 0,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-  };
+  model.associate = models => {};
 
   model.DAT_FILE = 'QuestAchievements.dat';
   return model;

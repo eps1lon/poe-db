@@ -8,3 +8,5 @@ yarn-error.log
 
 /* production keys */
 src/server/access/keys.prod
+
+.env

@@ -80,17 +80,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 27,
       },
-      data11: {
-        type: DataTypes.TEXT,
+      is_blessing: {
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 28,
-      },
-      key0: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 29,
+        $col_order: 32,
       },
       _implicit_mods_cache: {
         type: DataTypes.TEXT,
@@ -126,6 +120,16 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 23,
+      },
+      _identify_achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 28,
+      },
+      _identify_magic_achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 30,
       },
     },
     {
@@ -172,6 +176,22 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_equip_achievement_items_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'item_themes_key',
+            },
+          ],
+          name: 'index_item_themes_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'fragment_base_item_types_key',
+            },
+          ],
+          name: 'index_fragment_base_item_types_key',
         },
       ],
       tableName: 'base_item_types',
@@ -245,28 +265,31 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    // manual, think of a way to define has_one/has_many TODO
-    // hasOne but sourceKey not supported
-    model.hasMany(models.ComponentArmour, {
-      as: 'component_armour',
+    model.belongsTo(models.ItemTheme, {
+      as: 'item_theme',
+      $inverse: 'base_item_types',
+      $col_order: 29,
       foreignKey: {
-        name: 'base_item_types_key',
+        name: 'item_themes_key',
+        $type: 'ulong',
+        $col_order: 29,
       },
-      sourceKey: 'id',
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
     });
-    // hasOne but sourceKey not supported
-    model.hasMany(models.ComponentAttributeRequirement, {
-      as: 'component_attribute_requirements',
+    model.belongsTo(models.BaseItemType, {
+      as: 'fragment_base_item_type',
+      $inverse: 'base_item_types',
+      $col_order: 31,
       foreignKey: {
-        name: 'base_item_types_key',
+        name: 'fragment_base_item_types_key',
+        $type: 'uint',
+        $col_order: 31,
       },
-      sourceKey: 'id',
-    });
-    model.hasOne(models.WeaponType, {
-      as: 'weapon_type',
-      foreignKey: {
-        name: 'base_item_types_key',
-      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
     });
     model.belongsToMany(models.Mod, {
       as: 'implicit_mods',
@@ -351,6 +374,61 @@ module.exports = (sequelize, DataTypes) => {
       $col_order: 23,
       nullable: true,
       constraints: false,
+    });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'identify_achievement_items',
+      through: {
+        model: models.BaseItemTypeHabtmIdentifyAchievementitem,
+        unique: false,
+      },
+      foreignKey: 'base_item_type_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 28,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'identify_magic_achievement_items',
+      through: {
+        model: models.BaseItemTypeHabtmIdentifyMagicAchievementitem,
+        unique: false,
+      },
+      foreignKey: 'base_item_type_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 30,
+      nullable: true,
+      constraints: false,
+    });
+
+    // MANUAL: think of a way to define has_one/has_many TODO
+    // hasOne but sourceKey not supported
+    model.hasMany(models.ComponentArmour, {
+      as: 'component_armour',
+      foreignKey: {
+        name: 'base_item_types_key',
+      },
+      sourceKey: 'id',
+    });
+    // MANUAL: hasOne but sourceKey not supported
+    model.hasMany(models.ComponentAttributeRequirement, {
+      as: 'component_attribute_requirements',
+      foreignKey: {
+        name: 'base_item_types_key',
+      },
+      sourceKey: 'id',
+    });
+    // MANUAL
+    model.hasOne(models.WeaponType, {
+      as: 'weapon_type',
+      foreignKey: {
+        name: 'base_item_types_key',
+      },
+    });
+    model.hasOne(models.ShieldType, {
+      as: 'shield_type',
+      foreignKey: {
+        name: 'base_item_types_key',
+      },
     });
   };
 

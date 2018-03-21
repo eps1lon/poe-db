@@ -9,7 +9,7 @@ module.exports = models => {
     atlas: {
       attributes: [
         // actual
-        'row',
+        ['row', 'primary'],
         'x',
         'y',
         // for join

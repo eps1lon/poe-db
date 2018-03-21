@@ -7,16 +7,15 @@ const formatWorldAreaFromAtlas = world_area => {
     tags,
     mods,
     // omit
+    row,
     // keep
     ...props
   } = world_area;
 
   return {
     ...props,
-    area_type_tags: area_type_tags.map(
-      ({ WorldAreaHabtmAreaTypeTag, ...tag }) => tag,
-    ),
-    tags: tags.map(({ WorldAreaHabtmTag, ...tag }) => tag),
+    area_type_tags: area_type_tags.map(({ id }) => id),
+    tags: tags.map(({ id }) => id),
     mods: mods.map(({ WorldAreaHabtmMod, ...mod }) => formatMod(mod)),
   };
 };
@@ -50,6 +49,7 @@ const formatMod = mod => {
     tags,
     spawn_weight_tags,
     // omit
+    primary,
     stats_key1,
     stats_key2,
     stats_key3,
@@ -66,27 +66,30 @@ const formatMod = mod => {
         a.ModHabtmSpawnWeightTag.priority - b.ModHabtmSpawnWeightTag.priority
       );
     })
-    .map(({ ModHabtmSpawnWeightTag: { value }, ...spawn_weight_tag }) => {
+    .map(({ ModHabtmSpawnWeightTag: { value }, id }) => {
       return {
-        tag: spawn_weight_tag,
+        tag: id,
         value,
       };
     });
 
-  const stats = [stats1, stats2, stats3, stats4, stats5].filter(Boolean);
+  const stats = [stats1, stats2, stats3, stats4, stats5]
+    .filter(Boolean)
+    // omit primary
+    .map(({ primary, ...props }) => props);
 
   return {
     ...props,
     spawn_weights,
     stats,
-    tags,
+    tags: tags.map(({ id }) => id),
   };
 };
 
 const formatBaseItemType = item => {
   const {
     // omit
-    id,
+    primary,
     item_classes_key,
     // map
     item_class,
@@ -98,18 +101,18 @@ const formatBaseItemType = item => {
     ...props
   } = item;
 
-  const formatted_implicits = implicit_mods
-    .map(formatMod)
-    .map(({ BaseItemTypeHabtmImplicitMod, ...implicit }) => implicit);
+  const formatted_implicits = implicit_mods.map(
+    ({ BaseItemTypeHabtmImplicitMod, ...implicit }) => formatMod(implicit),
+  );
 
-  const formatted_tags = tags.map(({ BaseItemTypeHabtmTag, ...tag }) => tag);
+  const formatted_tags = tags.map(({ id }) => id);
 
   return {
     ...props,
     component_attribute_requirement,
     component_armour,
     implicit_mods: formatted_implicits,
-    item_class: item_class.primary === null ? null : item_class,
+    item_class: item_class.id,
     tags: formatted_tags,
   };
 };
@@ -151,9 +154,7 @@ const formatCraftingBenchOption = option => {
         b.CraftingBenchOptionHabtmItemClass.priority
       );
     })
-    .map(({ CraftingBenchOptionHabtmItemClass, ...item_class }) => {
-      return { ...item_class };
-    });
+    .map(({ id }) => id);
 
   return {
     ...props,
@@ -185,6 +186,21 @@ const formatLevelEffect = level_effect => {
       ...stats.map(formatLevelStat(1)),
       ...stats2.map(formatLevelStat(5)),
     ],
+  };
+};
+
+const formatEssence = essence => {
+  const {
+    // map none
+    // omit
+    base_item_types_key,
+    essence_type_key,
+    // include
+    ...rest
+  } = essence;
+
+  return {
+    ...rest,
   };
 };
 
@@ -238,6 +254,33 @@ module.exports = models => async (req, res, next) => {
           return options.map(option => {
             return formatCraftingBenchOption(option.get({ plain: true }));
           });
+        }),
+    essences: () =>
+      models.Essence
+        .scope('for-recraft')
+        .findAll({})
+        .then(essences =>
+          models.Essence.withMods(essences, models.Mod, formatMod),
+        )
+        .then(essences => {
+          return essences.map(essence => {
+            return formatEssence(essence);
+          });
+        }),
+    essenceMods: () =>
+      models.Essence
+        .scope('for-recraft')
+        .findAll({})
+        .then(essences => {
+          return models.Essence.essenceMods(essences, models.Mod);
+        })
+        .then(mods => {
+          return mods
+            .map(mod => formatMod(mod.get({ plain: true })))
+            .reduce((map, mod) => {
+              map[mod.id] = mod;
+              return map;
+            }, {});
         }),
     gems: () =>
       models.SkillGem

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      unknown1: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -32,17 +32,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 5,
       },
-      unknown10: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      unknown11: {
+      keys1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
+      },
+      unknown3: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 8,
       },
       _sold_item_tags_cache: {
         type: DataTypes.TEXT,

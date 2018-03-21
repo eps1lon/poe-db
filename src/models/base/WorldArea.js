@@ -374,23 +374,65 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 81,
       },
-      is_master_daily_area: {
-        type: DataTypes.BOOLEAN,
+      unknown94: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 82,
       },
-      harbinger_spawn_chance: {
+      is_master_daily_area: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 84,
+        $col_order: 83,
       },
-      harbinger_count: {
+      unknown95: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 85,
+      },
+      unknown96: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 86,
+      },
+      abyss_regular_chance: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 87,
+      },
+      abyss_special_chance: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 88,
+      },
+      unknown98: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 90,
+      },
+      bestiary_unknown99: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 91,
+      },
+      bestiary_unknown100: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 92,
+      },
+      bestiary_unknown101: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 93,
       },
       _connections_world_areas_cache: {
         type: DataTypes.TEXT,
@@ -523,6 +565,14 @@ module.exports = (sequelize, DataTypes) => {
           ],
           name: 'index_environments_key',
         },
+        {
+          fields: [
+            {
+              attribute: 'twinned_boss_kill_achievement_items_key',
+            },
+          ],
+          name: 'index_twinned_boss_kill_achievement_items_key',
+        },
       ],
       tableName: 'world_areas',
       underscored: true,
@@ -624,11 +674,24 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Environment, {
       as: 'environment',
       $inverse: 'world_areas',
-      $col_order: 83,
+      $col_order: 84,
       foreignKey: {
         name: 'environments_key',
         $type: 'ulong',
-        $col_order: 83,
+        $col_order: 84,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.AchievementItem, {
+      as: 'twinned_boss_kill_achievement_item',
+      $inverse: 'world_areas',
+      $col_order: 89,
+      foreignKey: {
+        name: 'twinned_boss_kill_achievement_items_key',
+        $type: 'ulong',
+        $col_order: 89,
       },
       targetKey: 'row',
       nullable: true,

@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 4,
       },
       flag0: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
@@ -44,11 +44,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 6,
       },
-      data1: {
-        type: DataTypes.INTEGER,
+      flag1: {
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
+      },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
       },
       _bestiary_recipe_component_cache: {
         type: DataTypes.TEXT,

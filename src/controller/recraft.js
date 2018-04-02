@@ -204,6 +204,8 @@ const formatEssence = essence => {
   };
 };
 
+const formatEssenceForMods = formatEssence;
+
 const formatGrantedEffect = effect => {
   const { id, is_support, cast_time, granted_effects_per_levels } = effect;
 
@@ -260,27 +262,31 @@ module.exports = models => async (req, res, next) => {
         .scope('for-recraft')
         .findAll({})
         .then(essences =>
-          models.Essence.withMods(essences, models.Mod, formatMod),
+          models.Essence.withMods(
+            essences,
+            models.Mod,
+            props => props.id,
+            attribute => attribute,
+          ),
         )
         .then(essences => {
           return essences.map(essence => {
             return formatEssence(essence);
           });
         }),
-    essenceMods: () =>
+    essencesForMods: () =>
       models.Essence
-        .scope('for-recraft')
+        .scope('for-mods')
         .findAll({})
+        .then(essences =>
+          models.Essence.withMods(essences, models.Mod, formatMod, attribute =>
+            attribute.replace('_mods_key', '_mod'),
+          ),
+        )
         .then(essences => {
-          return models.Essence.essenceMods(essences, models.Mod);
-        })
-        .then(mods => {
-          return mods
-            .map(mod => formatMod(mod.get({ plain: true })))
-            .reduce((map, mod) => {
-              map[mod.id] = mod;
-              return map;
-            }, {});
+          return essences.map(essence => {
+            return formatEssenceForMods(essence);
+          });
         }),
     gems: () =>
       models.SkillGem

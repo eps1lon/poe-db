@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/eps1lon/poe-db.svg?branch=master)](https://travis-ci.org/eps1lon/poe-db)
 
-Relational database for `Content.ggpk` from Path of Exile@3.2.1-hotfix.2.
+Relational database for `Content.ggpk` from Path of Exile@3.2.4c.
 
 ## Requirements
 

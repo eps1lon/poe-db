@@ -118,5 +118,66 @@ module.exports = models => {
         },
       },
     },
+    // structure for eps1lon/reacraft
+    'for-poe-mods': {
+      attributes: [
+        'id',
+        'inherits_from',
+        'name',
+        'width',
+        'height',
+        'drop_level',
+        'item_classes_key',
+      ],
+      include: [
+        {
+          model: models.ItemClass,
+          attributes: ['id'],
+          as: 'item_class',
+        },
+        {
+          model: models.ComponentArmour,
+          as: 'component_armour',
+          attributes: ['armour', 'evasion', 'energy_shield'],
+        },
+        {
+          model: models.ComponentAttributeRequirement,
+          as: 'component_attribute_requirements',
+          attributes: ['req_str', 'req_dex', 'req_int'],
+        },
+        {
+          model: models.WeaponType,
+          as: 'weapon_type',
+          attributes: [
+            'critical',
+            'speed',
+            'damage_min',
+            'damage_max',
+            'range_max',
+          ],
+        },
+        {
+          model: models.Tag,
+          as: 'tags',
+          attributes: ['id'],
+        },
+        {
+          model: models.Mod,
+          as: 'implicit_mods',
+          ...mod_scope['for-poe-mods'],
+        },
+        {
+          model: models.ShieldType,
+          as: 'shield_type',
+          attributes: ['block'],
+        },
+      ],
+      where: {
+        item_classes_key: {
+          // mtx
+          $notIn: [40],
+        },
+      },
+    },
   };
 };

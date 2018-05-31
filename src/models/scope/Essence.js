@@ -98,7 +98,7 @@ module.exports = models => {
         {
           model: models.BaseItemType,
           as: 'base_item_type',
-          ...base_item_type_scope['for-recraft'],
+          ...base_item_type_scope['for-poe-mods'],
         },
         {
           model: models.EssenceType,

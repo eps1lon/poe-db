@@ -68,7 +68,7 @@ module.exports = models => {
         },
       ],
     },
-    // data structure for eps1lon/poe_mod_repository
+    // data structure for eps1lon/recraft
     'for-recraft': {
       attributes: [
         ['row', 'primary'],
@@ -137,6 +137,79 @@ module.exports = models => {
           as: 'tags',
           //scope: 'for-recraft',
           ...tag_scope['for-recraft'],
+        },
+        {
+          model: models.Tag,
+          as: 'spawn_weight_tags',
+          ...tag_scope['for-recraft'],
+          through: {
+            attributes: ['value', 'priority'],
+          },
+        },
+      ],
+    },
+    // data structure for eps1lon/poe-mods
+    'for-poe-mods': {
+      attributes: [
+        'id',
+        'level',
+        'domain',
+        'name',
+        'generation_type',
+        'correct_group',
+        'stat1_min',
+        'stat1_max',
+        'stat2_min',
+        'stat2_max',
+        'stat3_min',
+        'stat3_max',
+        'stat4_min',
+        'stat4_max',
+        'stat5_min',
+        'stat5_max',
+        // for include only
+        'stats_key1',
+        'stats_key2',
+        'stats_key3',
+        'stats_key4',
+        'stats_key5',
+        'mod_type_key',
+      ],
+      include: [
+        {
+          model: models.ModType,
+          as: 'mod_type',
+          attributes: [['row', 'primary']],
+        },
+        {
+          model: models.Stat,
+          as: 'stats1',
+          attributes: ['id', 'text'],
+        },
+        {
+          model: models.Stat,
+          as: 'stats2',
+          attributes: ['id', 'text'],
+        },
+        {
+          model: models.Stat,
+          as: 'stats3',
+          attributes: ['id', 'text'],
+        },
+        {
+          model: models.Stat,
+          as: 'stats4',
+          attributes: ['id', 'text'],
+        },
+        {
+          model: models.Stat,
+          as: 'stats5',
+          attributes: ['id', 'text'],
+        },
+        {
+          model: models.Tag,
+          as: 'tags',
+          attributes: ['id'],
         },
         {
           model: models.Tag,

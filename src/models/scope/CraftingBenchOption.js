@@ -99,5 +99,54 @@ module.exports = models => {
         },
       ],
     },
+    // data structure for eps1lon/poe_mod_repository
+    'for-poe-mods': {
+      attributes: [
+        ['row', 'primary'],
+        'order',
+        'master_level',
+        'name',
+        'crafting_bench_custom_action',
+        'sockets',
+        'socket_colours',
+        'links',
+        'item_quantity',
+        // include only
+        'npc_master_key',
+        'mods_key',
+      ],
+      include: [
+        {
+          model: models.BaseItemType,
+          as: 'cost_base_item_types',
+          through: {
+            attributes: ['value', 'priority'],
+          },
+          ...base_item_type_scope['for-poe-mods'],
+        },
+        {
+          model: models.NPCMaster,
+          as: 'npc_master',
+          attributes: ['row'],
+          include: [
+            {
+              model: models.NPC,
+              as: 'npc',
+              attributes: ['name', 'short_name'],
+            },
+          ],
+        },
+        {
+          model: models.ItemClass,
+          as: 'item_classes',
+          attributes: ['id'],
+        },
+        {
+          model: models.Mod,
+          as: 'mod',
+          ...mod_scope['for-poe-mods'],
+        },
+      ],
+    },
   };
 };

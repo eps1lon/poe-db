@@ -188,6 +188,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 44,
       },
+      flag0: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 45,
+      },
       _spawn_weight_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

@@ -86,6 +86,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 32,
       },
+      unknown3: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 33,
+      },
       _implicit_mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

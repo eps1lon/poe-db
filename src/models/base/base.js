@@ -6,7 +6,7 @@ module.exports = (Model, models) => {
 
   /**
    * denormalize zipped values into a flat object
-   * 
+   *
    * @param {string} alias for the belongsToManyAssoc
    * @param {Object[]} attributes
    *  attribute: attribute name in select

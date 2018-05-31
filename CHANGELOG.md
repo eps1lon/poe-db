@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 ## [Unreleased](https://github.com/eps1lon/poe-db/compare/v1.1.0...HEAD)
 ### Added
 - custom scopes for eps1lon/poe-mods. ([#8](https://github.com/eps1lon/poe-db/pull/8))
+- data for `Path Of Exile@3.2.4c` ([#7](https://github.com/eps1lon/poe-db/pull/7)).
 
 ## 1.1.0
 ### Added

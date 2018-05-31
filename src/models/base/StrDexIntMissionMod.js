@@ -38,6 +38,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 5,
       },
+      flag0: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 6,
+      },
       _mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

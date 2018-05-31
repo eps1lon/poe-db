@@ -260,28 +260,27 @@ module.exports = models => async (req, res, next) => {
         .scope('for-recraft')
         .findAll({})
         .then(essences =>
-          models.Essence.withMods(essences, models.Mod, formatMod),
+          models.Essence.withMods(
+            essences,
+            models.Mod,
+            props => props.id,
+            attribute => attribute,
+          ),
         )
         .then(essences => {
           return essences.map(essence => {
             return formatEssence(essence);
           });
         }),
-    essenceMods: () =>
+    essencesForMods: () =>
       models.Essence
-        .scope('for-recraft')
+        .scope('for-mods')
         .findAll({})
-        .then(essences => {
-          return models.Essence.essenceMods(essences, models.Mod);
-        })
-        .then(mods => {
-          return mods
-            .map(mod => formatMod(mod.get({ plain: true })))
-            .reduce((map, mod) => {
-              map[mod.id] = mod;
-              return map;
-            }, {});
-        }),
+        .then(essences =>
+          models.Essence.withMods(essences, models.Mod, formatMod, attribute =>
+            attribute.replace('_mods_key', '_mod'),
+          ),
+        ),
     gems: () =>
       models.SkillGem
         .scope('for-recraft')

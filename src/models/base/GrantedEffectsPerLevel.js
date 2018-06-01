@@ -236,6 +236,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 43,
       },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 44,
+      },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 45,
+      },
       _stats_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

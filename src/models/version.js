@@ -1,1 +1,1 @@
-module.exports = '3.2.4-hotfix.3';
+module.exports = '3.3.0-torrent';

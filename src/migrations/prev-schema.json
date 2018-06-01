@@ -2822,7 +2822,7 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown3": {
+      "unknown0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -17010,15 +17010,6 @@
           }
         }
       },
-      "display_monster_mods_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
       "belt_mods_key": {
         "allowNull": true,
         "type": {
@@ -19992,6 +19983,24 @@
           "options": {}
         }
       },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
       "_stats_cache": {
         "allowNull": false,
         "type": {
@@ -22108,6 +22117,13 @@
         "type": {
           "constructor": "INTEGER",
           "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
         }
       },
       "created_at": {
@@ -28617,11 +28633,20 @@
           "options": {}
         }
       },
-      "flag0": {
+      "unknown1": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
-          "constructor": "BOOLEAN"
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown67": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
         }
       },
       "_spawn_weight_tags_cache": {
@@ -42168,6 +42193,16 @@
         "type": {
           "constructor": "TEXT",
           "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
         }
       },
       "_gem_tags_cache": {

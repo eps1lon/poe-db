@@ -1,1 +1,1 @@
-module.exports = '3.3.0-torrent';
+module.exports = '3.3.0';

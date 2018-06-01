@@ -8,37 +8,37 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 2,
-      },
       data0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 3,
+        $col_order: 2,
       },
-      unknown2: {
+      unknown9: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 5,
+      },
+      unknown10: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      unknown3: {
+      unknown11: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
       },
-      unknown4: {
+      unknown12: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -47,12 +47,12 @@ module.exports = (sequelize, DataTypes) => {
       _monster_varieties1_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 4,
+        $col_order: 3,
       },
       _monster_varieties2_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 5,
+        $col_order: 4,
       },
     },
     {
@@ -96,7 +96,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'invasion_monsters_per_area_row',
       otherKey: 'monster_variety_row',
-      $col_order: 4,
+      $col_order: 3,
       nullable: true,
       constraints: false,
     });
@@ -108,7 +108,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'invasion_monsters_per_area_row',
       otherKey: 'monster_variety_row',
-      $col_order: 5,
+      $col_order: 4,
       nullable: true,
       constraints: false,
     });

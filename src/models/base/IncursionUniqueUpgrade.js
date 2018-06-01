@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'DivinationCardArt',
+    'IncursionUniqueUpgrade',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,23 +8,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      virtual_file: {
-        type: DataTypes.TEXT,
+      unique_items_key: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
-      },
-      unknown0: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 2,
-      },
-      unknown1: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
       },
     },
     {
@@ -35,24 +23,24 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'base_item_types_key',
+              attribute: 'incursion_unique_upgrade_components_key',
             },
           ],
-          name: 'index_base_item_types_key',
+          name: 'index_incursion_unique_upgrade_components_key',
         },
       ],
-      tableName: 'divination_card_arts',
+      tableName: 'incursion_unique_upgrades',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.BaseItemType, {
-      as: 'base_item_type',
-      $inverse: 'divination_card_arts',
+    model.belongsTo(models.IncursionUniqueUpgradeComponent, {
+      as: 'incursion_unique_upgrade_component',
+      $inverse: 'incursion_unique_upgrades',
       $col_order: 0,
       foreignKey: {
-        name: 'base_item_types_key',
+        name: 'incursion_unique_upgrade_components_key',
         $type: 'ulong',
         $col_order: 0,
       },
@@ -62,6 +50,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'DivinationCardArt.dat';
+  model.DAT_FILE = 'IncursionUniqueUpgrades.dat';
   return model;
 };

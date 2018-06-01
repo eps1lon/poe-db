@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'ShopPaymentPackageItem',
+    'IncursionBracket',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,23 +8,29 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      id: {
+      min_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      shop_item_key: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 2,
-      },
-      unknown0: {
+      data0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
+      },
+      unknown0: {
+        type: DataTypes.FLOAT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 4,
+      },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 5,
       },
     },
     {
@@ -35,32 +41,32 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'shop_payment_package_key',
+              attribute: 'incursion_world_areas_key',
             },
           ],
-          name: 'index_shop_payment_package_key',
+          name: 'index_incursion_world_areas_key',
         },
         {
           fields: [
             {
-              attribute: 'shop_token_key',
+              attribute: 'template_world_areas_key',
             },
           ],
-          name: 'index_shop_token_key',
+          name: 'index_template_world_areas_key',
         },
       ],
-      tableName: 'shop_payment_package_items',
+      tableName: 'incursion_brackets',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.ShopPaymentPackage, {
-      as: 'shop_payment_package',
-      $inverse: 'shop_payment_package_items',
+    model.belongsTo(models.WorldArea, {
+      as: 'incursion_world_area',
+      $inverse: 'incursion_brackets',
       $col_order: 1,
       foreignKey: {
-        name: 'shop_payment_package_key',
+        name: 'incursion_world_areas_key',
         $type: 'ulong',
         $col_order: 1,
       },
@@ -68,14 +74,14 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.ShopToken, {
-      as: 'shop_token',
-      $inverse: 'shop_payment_package_items',
-      $col_order: 4,
+    model.belongsTo(models.WorldArea, {
+      as: 'template_world_area',
+      $inverse: 'incursion_brackets',
+      $col_order: 2,
       foreignKey: {
-        name: 'shop_token_key',
+        name: 'template_world_areas_key',
         $type: 'ulong',
-        $col_order: 4,
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -83,6 +89,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'ShopPaymentPackageItems.dat';
+  model.DAT_FILE = 'IncursionBrackets.dat';
   return model;
 };

@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'DivinationCardArt',
+    'IncursionUniqueUpgradeComponent',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,23 +8,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      virtual_file: {
-        type: DataTypes.TEXT,
+      unique_items_key: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
-        $col_order: 1,
-      },
-      unknown0: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 2,
-      },
-      unknown1: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
+        $col_order: 0,
       },
     },
     {
@@ -41,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
           name: 'index_base_item_types_key',
         },
       ],
-      tableName: 'divination_card_arts',
+      tableName: 'incursion_unique_upgrade_components',
       underscored: true,
     },
   );
@@ -49,12 +37,12 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.BaseItemType, {
       as: 'base_item_type',
-      $inverse: 'divination_card_arts',
-      $col_order: 0,
+      $inverse: 'incursion_unique_upgrade_components',
+      $col_order: 1,
       foreignKey: {
         name: 'base_item_types_key',
         $type: 'ulong',
-        $col_order: 0,
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -62,6 +50,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'DivinationCardArt.dat';
+  model.DAT_FILE = 'IncursionUniqueUpgradeComponents.dat';
   return model;
 };

@@ -17010,6 +17010,15 @@
           }
         }
       },
+      "display_monster_mods_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
       "belt_mods_key": {
         "allowNull": true,
         "type": {

@@ -14,6 +14,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
+      shop_item_key: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 2,
+      },
       unknown0: {
         type: DataTypes.TEXT,
         primaryKey: false,
@@ -33,14 +39,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_shop_payment_package_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'shop_item_key',
-            },
-          ],
-          name: 'index_shop_item_key',
         },
         {
           fields: [
@@ -65,19 +63,6 @@ module.exports = (sequelize, DataTypes) => {
         name: 'shop_payment_package_key',
         $type: 'ulong',
         $col_order: 1,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.ShopItem, {
-      as: 'shop_item',
-      $inverse: 'shop_payment_package_items',
-      $col_order: 2,
-      foreignKey: {
-        name: 'shop_item_key',
-        $type: 'ulong',
-        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,

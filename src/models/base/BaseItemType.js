@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 32,
       },
-      unknown3: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

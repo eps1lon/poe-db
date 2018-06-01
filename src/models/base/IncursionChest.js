@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'DivinationCardArt',
+    'IncursionChest',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,23 +8,41 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      virtual_file: {
+      id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 1,
+        $col_order: 0,
       },
-      unknown0: {
-        type: DataTypes.BOOLEAN,
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      unknown1: {
-        type: DataTypes.BOOLEAN,
+      min_level: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
+      },
+      max_level: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 4,
+      },
+      weight: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 5,
+      },
+      unknown8: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 6,
       },
     },
     {
@@ -35,26 +53,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'base_item_types_key',
+              attribute: 'chests_key',
             },
           ],
-          name: 'index_base_item_types_key',
+          name: 'index_chests_key',
         },
       ],
-      tableName: 'divination_card_arts',
+      tableName: 'incursion_chests',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.BaseItemType, {
-      as: 'base_item_type',
-      $inverse: 'divination_card_arts',
-      $col_order: 0,
+    model.belongsTo(models.Chest, {
+      as: 'chest',
+      $inverse: 'incursion_chests',
+      $col_order: 1,
       foreignKey: {
-        name: 'base_item_types_key',
+        name: 'chests_key',
         $type: 'ulong',
-        $col_order: 0,
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -62,6 +80,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'DivinationCardArt.dat';
+  model.DAT_FILE = 'IncursionChests.dat';
   return model;
 };

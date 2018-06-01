@@ -2822,6 +2822,14 @@
           "constructor": "BOOLEAN"
         }
       },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
       "_implicit_mods_cache": {
         "allowNull": false,
         "type": {
@@ -5296,6 +5304,159 @@
       "engine": "MYISAM"
     }
   },
+  "BloodType": {
+    "tableName": "blood_types",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "pet_file4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file5": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file6": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "keys0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "key2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "pet_file7": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file8": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "pet_file9": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "Bloodline": {
     "tableName": "bloodlines",
     "attributes": {
@@ -5717,159 +5878,6 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MyISAM"
-    }
-  },
-  "BloodType": {
-    "tableName": "blood_types",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "id": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file3": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "key0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "pet_file4": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file5": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file6": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "key1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "keys0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "key2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "pet_file7": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file8": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "pet_file9": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
     }
   },
   "BonusMasterExp": {
@@ -19984,6 +19992,24 @@
           "options": {}
         }
       },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
       "_stats_cache": {
         "allowNull": false,
         "type": {
@@ -22102,6 +22128,13 @@
           "options": {}
         }
       },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
       "created_at": {
         "allowNull": false,
         "type": {
@@ -22259,165 +22292,6 @@
           }
         ],
         "name": "index_base_item_types_key",
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
-  "ItemisedVisualEffect": {
-    "tableName": "itemised_visual_effects",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "keys0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "data1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "keys2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "flag0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "data3": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "data4": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "base_item_types_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "item_visual_effect_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "item_visual_identity_key1": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "item_visual_identity_key2": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "base_item_types_key"
-          }
-        ],
-        "name": "index_base_item_types_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "item_visual_effect_key"
-          }
-        ],
-        "name": "index_item_visual_effect_key",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "item_visual_identity_key1"
-          }
-        ],
-        "name": "index_item_visual_identity_key1",
-        "type": "",
-        "parser": null
-      },
-      {
-        "fields": [
-          {
-            "attribute": "item_visual_identity_key2"
-          }
-        ],
-        "name": "index_item_visual_identity_key2",
         "type": "",
         "parser": null
       }
@@ -23172,6 +23046,165 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MyISAM"
+    }
+  },
+  "ItemisedVisualEffect": {
+    "tableName": "itemised_visual_effects",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "keys0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "data1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "keys2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "flag0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "data3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "data4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "item_visual_effect_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "item_visual_identity_key1": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "item_visual_identity_key2": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_types_key"
+          }
+        ],
+        "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "item_visual_effect_key"
+          }
+        ],
+        "name": "index_item_visual_effect_key",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "item_visual_identity_key1"
+          }
+        ],
+        "name": "index_item_visual_identity_key1",
+        "type": "",
+        "parser": null
+      },
+      {
+        "fields": [
+          {
+            "attribute": "item_visual_identity_key2"
+          }
+        ],
+        "name": "index_item_visual_identity_key2",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
     }
   },
   "KillstreakThreshold": {
@@ -28609,6 +28642,22 @@
           "options": {}
         }
       },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "unknown67": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
       "_spawn_weight_tags_cache": {
         "allowNull": false,
         "type": {
@@ -33630,157 +33679,6 @@
       "engine": "MYISAM"
     }
   },
-  "NetTier": {
-    "tableName": "net_tiers",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "tier": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "base_item_types_key": {
-        "allowNull": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      }
-    },
-    "indices": [
-      {
-        "fields": [
-          {
-            "attribute": "base_item_types_key"
-          }
-        ],
-        "name": "index_base_item_types_key",
-        "type": "",
-        "parser": null
-      }
-    ],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
-  "Notification": {
-    "tableName": "notifications",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "id": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "unknown0": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "unknown1": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "message": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "unknown2": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "TEXT",
-          "options": {}
-        }
-      },
-      "unknown3": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BOOLEAN"
-        }
-      },
-      "unknown4": {
-        "allowNull": true,
-        "primaryKey": false,
-        "type": {
-          "constructor": "INTEGER",
-          "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
   "NPC": {
     "tableName": "n_p_cs",
     "attributes": {
@@ -35416,6 +35314,157 @@
       "engine": "MYISAM"
     }
   },
+  "NetTier": {
+    "tableName": "net_tiers",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "tier": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "base_item_types_key": {
+        "allowNull": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      }
+    },
+    "indices": [
+      {
+        "fields": [
+          {
+            "attribute": "base_item_types_key"
+          }
+        ],
+        "name": "index_base_item_types_key",
+        "type": "",
+        "parser": null
+      }
+    ],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "Notification": {
+    "tableName": "notifications",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "id": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "unknown1": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "message": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown2": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "TEXT",
+          "options": {}
+        }
+      },
+      "unknown3": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "unknown4": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "INTEGER",
+          "options": {}
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "OldMapStashTabLayout": {
     "tableName": "old_map_stash_tab_layouts",
     "attributes": {
@@ -35453,6 +35502,41 @@
   },
   "Orientation": {
     "tableName": "orientations",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
+  "PVPType": {
+    "tableName": "p_v_p_types",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -36339,7 +36423,7 @@
           "constructor": "BOOLEAN"
         }
       },
-      "unknown0": {
+      "stat5_value": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -37060,6 +37144,41 @@
       "engine": "MyISAM"
     }
   },
+  "PerLevelValue": {
+    "tableName": "per_level_values",
+    "attributes": {
+      "row": {
+        "allowNull": false,
+        "primaryKey": true,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
+      "created_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      },
+      "updated_at": {
+        "allowNull": false,
+        "type": {
+          "constructor": "DATE",
+          "options": {}
+        }
+      }
+    },
+    "indices": [],
+    "options": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci",
+      "engine": "MYISAM"
+    }
+  },
   "PerandusBoss": {
     "tableName": "perandus_bosses",
     "attributes": {
@@ -37512,41 +37631,6 @@
       "charset": "utf8mb4",
       "collate": "utf8mb4_unicode_ci",
       "engine": "MyISAM"
-    }
-  },
-  "PerLevelValue": {
-    "tableName": "per_level_values",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
     }
   },
   "Pet": {
@@ -38221,41 +38305,6 @@
         "type": {
           "constructor": "INTEGER",
           "options": {}
-        }
-      },
-      "created_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      },
-      "updated_at": {
-        "allowNull": false,
-        "type": {
-          "constructor": "DATE",
-          "options": {}
-        }
-      }
-    },
-    "indices": [],
-    "options": {
-      "charset": "utf8mb4",
-      "collate": "utf8mb4_unicode_ci",
-      "engine": "MYISAM"
-    }
-  },
-  "PVPType": {
-    "tableName": "p_v_p_types",
-    "attributes": {
-      "row": {
-        "allowNull": false,
-        "primaryKey": true,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
         }
       },
       "created_at": {
@@ -42155,6 +42204,16 @@
           "options": {}
         }
       },
+      "key0": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BIGINT",
+          "options": {
+            "unsigned": true
+          }
+        }
+      },
       "_gem_tags_cache": {
         "allowNull": false,
         "type": {
@@ -43572,6 +43631,13 @@
         }
       },
       "is_unique_map": {
+        "allowNull": true,
+        "primaryKey": false,
+        "type": {
+          "constructor": "BOOLEAN"
+        }
+      },
+      "flag0": {
         "allowNull": true,
         "primaryKey": false,
         "type": {

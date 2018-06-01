@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'ExtraTerrainFeature',
+    'TreasureHunterMission',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,65 +8,95 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      id: {
+      unknown0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      data0: {
-        type: DataTypes.TEXT,
+      unknown1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      data1: {
-        type: DataTypes.TEXT,
+      unknown3: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      flag0: {
-        type: DataTypes.INTEGER,
+      unknown5: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      flag1: {
-        type: DataTypes.INTEGER,
+      unknown7: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      flag2: {
-        type: DataTypes.INTEGER,
+      unknown9: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      data2: {
-        type: DataTypes.TEXT,
+      unknown11: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      data3: {
-        type: DataTypes.TEXT,
+      unknown12: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
       },
-      unknown0: {
+      unknown13: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
       },
-      unknown1: {
+      unknown14: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 9,
+      },
+      unknown15: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
+      },
+      unknown19: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
+      },
+      unknown16: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 12,
+      },
+      unknown17: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 13,
+      },
+      unknown18: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 14,
       },
     },
     {
@@ -74,13 +104,13 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
-      tableName: 'extra_terrain_features',
+      tableName: 'treasure_hunter_missions',
       underscored: true,
     },
   );
 
   model.associate = models => {};
 
-  model.DAT_FILE = 'ExtraTerrainFeatures.dat';
+  model.DAT_FILE = 'TreasureHunterMissions.dat';
   return model;
 };

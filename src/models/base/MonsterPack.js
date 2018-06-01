@@ -14,53 +14,47 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      unknown3: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      unknown4: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown5: {
+      boss_monster_spawn_chance: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      boss_monster_spawn_chance: {
+      boss_monster_count: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      boss_monster_count: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 6,
-      },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 8,
+        $col_order: 7,
       },
-      unknown11: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 9,
+        $col_order: 8,
       },
       data1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 10,
+        $col_order: 9,
       },
       _world_areas_cache: {
         type: DataTypes.TEXT,
@@ -70,12 +64,12 @@ module.exports = (sequelize, DataTypes) => {
       _boss_monster_monster_varieties_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 7,
+        $col_order: 6,
       },
       _tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 11,
+        $col_order: 10,
       },
     },
     {
@@ -109,7 +103,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_pack_row',
       otherKey: 'monster_variety_row',
-      $col_order: 7,
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });
@@ -121,7 +115,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'monster_pack_row',
       otherKey: 'tag_row',
-      $col_order: 11,
+      $col_order: 10,
       nullable: true,
       constraints: false,
     });

@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/eps1lon/poe-db.svg?branch=master)](https://travis-ci.org/eps1lon/poe-db)
 
-Relational database for `Content.ggpk` from Path of Exile@3.2.4c.
+Relational database for `Content.ggpk` from Path of Exile@3.3.0.
 
 ## Requirements
 
@@ -11,7 +11,7 @@ python 3.4 for PyPoe
 ## install
 
 ```bash
-$ git clone --recursive https://github.com/eps1lon/poedb.git@1.2.0
+$ git clone --recursive https://github.com/eps1lon/poedb.git@1.3.0
 
 # run in a python 3.4 virtualenv for PyPoE:
 $ yarn install --production

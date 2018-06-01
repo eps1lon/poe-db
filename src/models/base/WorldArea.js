@@ -434,6 +434,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 93,
       },
+      incursion_chance: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 94,
+      },
       _connections_world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

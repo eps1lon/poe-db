@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'ItemClass',
+    'IncursionBracket',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,35 +8,29 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      id: {
-        type: DataTypes.TEXT,
+      min_level: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      name: {
+      data0: {
         type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 1,
-      },
-      category: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 2,
-      },
-      unknown0: {
-        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      flag0: {
-        type: DataTypes.BOOLEAN,
+      unknown0: {
+        type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 6,
+        $col_order: 4,
+      },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 5,
       },
     },
     {
@@ -47,47 +41,47 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'elder_tags_key',
+              attribute: 'incursion_world_areas_key',
             },
           ],
-          name: 'index_elder_tags_key',
+          name: 'index_incursion_world_areas_key',
         },
         {
           fields: [
             {
-              attribute: 'shaper_tags_key',
+              attribute: 'template_world_areas_key',
             },
           ],
-          name: 'index_shaper_tags_key',
+          name: 'index_template_world_areas_key',
         },
       ],
-      tableName: 'item_classes',
+      tableName: 'incursion_brackets',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.Tag, {
-      as: 'elder_tag',
-      $inverse: 'item_classes',
-      $col_order: 4,
+    model.belongsTo(models.WorldArea, {
+      as: 'incursion_world_area',
+      $inverse: 'incursion_brackets',
+      $col_order: 1,
       foreignKey: {
-        name: 'elder_tags_key',
+        name: 'incursion_world_areas_key',
         $type: 'ulong',
-        $col_order: 4,
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.Tag, {
-      as: 'shaper_tag',
-      $inverse: 'item_classes',
-      $col_order: 5,
+    model.belongsTo(models.WorldArea, {
+      as: 'template_world_area',
+      $inverse: 'incursion_brackets',
+      $col_order: 2,
       foreignKey: {
-        name: 'shaper_tags_key',
+        name: 'template_world_areas_key',
         $type: 'ulong',
-        $col_order: 5,
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -95,6 +89,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'ItemClasses.dat';
+  model.DAT_FILE = 'IncursionBrackets.dat';
   return model;
 };

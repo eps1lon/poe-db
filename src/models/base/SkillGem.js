@@ -81,6 +81,14 @@ module.exports = (sequelize, DataTypes) => {
           ],
           name: 'index_consumed_mods_key',
         },
+        {
+          fields: [
+            {
+              attribute: 'granted_effects_key2',
+            },
+          ],
+          name: 'index_granted_effects_key2',
+        },
       ],
       tableName: 'skill_gems',
       underscored: true,
@@ -135,6 +143,19 @@ module.exports = (sequelize, DataTypes) => {
         name: 'consumed_mods_key',
         $type: 'ulong',
         $col_order: 9,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.GrantedEffect, {
+      as: 'granted_effects2',
+      $inverse: 'skill_gems2',
+      $col_order: 10,
+      foreignKey: {
+        name: 'granted_effects_key2',
+        $type: 'ulong',
+        $col_order: 10,
       },
       targetKey: 'row',
       nullable: true,

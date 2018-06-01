@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'Projectile',
+    'GeometryAttack',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,95 +8,131 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      id: {
-        type: DataTypes.TEXT,
+      unknown0: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      ao_file: {
+      unknown1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      loop_animation_id: {
-        type: DataTypes.TEXT,
+      unknown3: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      impact_animation_id: {
-        type: DataTypes.TEXT,
+      unknown4: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      projectile_speed: {
+      unknown5: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      index4: {
-        type: DataTypes.TEXT,
+      unknown6: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
+      },
+      unknown7: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 6,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 6,
+        $col_order: 7,
       },
-      unknown0: {
+      unknown8: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 7,
+        $col_order: 8,
+      },
+      unknown9: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
+      },
+      unknown10: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
       },
       flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 8,
+        $col_order: 11,
       },
       flag2: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 9,
+        $col_order: 12,
+      },
+      unknown11: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 13,
+      },
+      unknown12: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 14,
       },
       key0: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
-        $col_order: 10,
+        $col_order: 15,
+      },
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 16,
+      },
+      unknown17: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 17,
+      },
+      unknown18: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 18,
       },
       flag3: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 11,
+        $col_order: 19,
       },
       flag4: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 12,
-      },
-      flag5: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 13,
-      },
-      flag6: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 14,
+        $col_order: 20,
       },
     },
     {
@@ -104,13 +140,13 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
       indexes: [],
-      tableName: 'projectiles',
+      tableName: 'geometry_attacks',
       underscored: true,
     },
   );
 
   model.associate = models => {};
 
-  model.DAT_FILE = 'Projectiles.dat';
+  model.DAT_FILE = 'GeometryAttack.dat';
   return model;
 };

@@ -68,6 +68,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 10,
       },
+      is_temporary: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
+      },
+      flag0: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 12,
+      },
     },
     {
       engine: 'MYISAM',

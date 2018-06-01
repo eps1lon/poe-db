@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'DivinationCardArt',
+    'UITalkText',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,23 +8,29 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      virtual_file: {
+      id: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 1,
+        $col_order: 0,
       },
-      unknown0: {
-        type: DataTypes.BOOLEAN,
+      ogg_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      unknown1: {
-        type: DataTypes.BOOLEAN,
+      text: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
+      },
+      flag0: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 4,
       },
     },
     {
@@ -35,26 +41,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'base_item_types_key',
+              attribute: 'ui_talk_categories_key',
             },
           ],
-          name: 'index_base_item_types_key',
+          name: 'index_ui_talk_categories_key',
         },
       ],
-      tableName: 'divination_card_arts',
+      tableName: 'u_i_talk_texts',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.BaseItemType, {
-      as: 'base_item_type',
-      $inverse: 'divination_card_arts',
-      $col_order: 0,
+    model.belongsTo(models.UITalkCategory, {
+      as: 'ui_talk_category',
+      $inverse: 'ui_talk_texts',
+      $col_order: 1,
       foreignKey: {
-        name: 'base_item_types_key',
-        $type: 'ulong',
-        $col_order: 0,
+        name: 'ui_talk_categories_key',
+        $type: 'int',
+        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,
@@ -62,6 +68,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'DivinationCardArt.dat';
+  model.DAT_FILE = 'UITalkText.dat';
   return model;
 };

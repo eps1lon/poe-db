@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define(
-    'DivinationCardArt',
+    'ArchitectMapDifficulty',
     {
       row: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -8,23 +8,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      virtual_file: {
-        type: DataTypes.TEXT,
+      area_level: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 0,
+      },
+      stat1_value: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
-      },
-      unknown0: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 2,
-      },
-      unknown1: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 3,
       },
     },
     {
@@ -35,26 +29,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'base_item_types_key',
+              attribute: 'stats_key1',
             },
           ],
-          name: 'index_base_item_types_key',
+          name: 'index_stats_key1',
         },
       ],
-      tableName: 'divination_card_arts',
+      tableName: 'architect_map_difficulties',
       underscored: true,
     },
   );
 
   model.associate = models => {
-    model.belongsTo(models.BaseItemType, {
-      as: 'base_item_type',
-      $inverse: 'divination_card_arts',
-      $col_order: 0,
+    model.belongsTo(models.Stat, {
+      as: 'stats1',
+      $inverse: 'architect_map_difficulties1',
+      $col_order: 2,
       foreignKey: {
-        name: 'base_item_types_key',
+        name: 'stats_key1',
         $type: 'ulong',
-        $col_order: 0,
+        $col_order: 2,
       },
       targetKey: 'row',
       nullable: true,
@@ -62,6 +56,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  model.DAT_FILE = 'DivinationCardArt.dat';
+  model.DAT_FILE = 'ArchitectMapDifficulty.dat';
   return model;
 };

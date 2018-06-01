@@ -4,9 +4,9 @@ module.exports = () => {
     'for-mod-repository': {
       attributes: [['row', 'primary'], ['row', 'Rows'], ['id', 'Id']],
     },
-    // data structure for eps1lon/poe_mod_repository
+    // data structure for eps1lon/poe-recraft
     'for-recraft': {
-      attributes: [['row', 'primary'], 'id'],
+      attributes: ['id'],
     },
   };
 };

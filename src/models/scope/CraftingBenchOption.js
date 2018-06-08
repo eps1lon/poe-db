@@ -103,7 +103,6 @@ module.exports = models => {
     'for-poe-mods': {
       attributes: [
         ['row', 'primary'],
-        'order',
         'master_level',
         'name',
         'crafting_bench_custom_action',

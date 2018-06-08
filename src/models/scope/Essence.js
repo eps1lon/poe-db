@@ -103,7 +103,7 @@ module.exports = models => {
         {
           model: models.EssenceType,
           as: 'essence_type',
-          attributes: ['id', 'essence_type'],
+          attributes: ['id', 'essence_type', 'is_corrupted_essence'],
         },
       ],
     },

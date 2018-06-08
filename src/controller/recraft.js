@@ -120,6 +120,7 @@ const formatBaseItemType = item => {
 const formatCraftingBenchOption = option => {
   const {
     // omit
+    mods_key,
     // map
     cost_base_item_types,
     item_classes,
@@ -191,7 +192,8 @@ const formatLevelEffect = level_effect => {
 
 const formatEssence = essence => {
   const {
-    // map none
+    // map
+    base_item_type,
     // omit
     base_item_types_key,
     essence_type_key,
@@ -201,6 +203,7 @@ const formatEssence = essence => {
 
   return {
     ...rest,
+    base_item_type: formatBaseItemType(base_item_type),
   };
 };
 
@@ -295,7 +298,11 @@ module.exports = models => async (req, res, next) => {
         .then(mods => {
           return mods.map(mod => formatMod(mod.get({ plain: true })));
         }),
-    tags: () => models.Tag.scope('for-recraft').findAll({}),
+    tags: () =>
+      models.Tag
+        .scope('for-recraft')
+        .findAll({})
+        .then(tags => tags.map(tag => tag.get({ plain: true }).id)),
   };
 
   if (files[file]) {

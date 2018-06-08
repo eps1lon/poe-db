@@ -11,7 +11,7 @@ module.exports = () => {
     },
     // data structure for eps1lon/recraft
     'for-recraft': {
-      attributes: [['row', 'primary'], 'id', 'text'],
+      attributes: [['row', 'primary'], 'id'],
     },
   };
 };

@@ -184,27 +184,27 @@ module.exports = models => {
         {
           model: models.Stat,
           as: 'stats1',
-          attributes: ['id', 'text'],
+          attributes: ['id'],
         },
         {
           model: models.Stat,
           as: 'stats2',
-          attributes: ['id', 'text'],
+          attributes: ['id'],
         },
         {
           model: models.Stat,
           as: 'stats3',
-          attributes: ['id', 'text'],
+          attributes: ['id'],
         },
         {
           model: models.Stat,
           as: 'stats4',
-          attributes: ['id', 'text'],
+          attributes: ['id'],
         },
         {
           model: models.Stat,
           as: 'stats5',
-          attributes: ['id', 'text'],
+          attributes: ['id'],
         },
         {
           model: models.Tag,

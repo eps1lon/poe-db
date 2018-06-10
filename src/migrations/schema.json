@@ -11179,7 +11179,7 @@
           "options": {}
         }
       },
-      "sockets": {
+      "links": {
         "allowNull": true,
         "primaryKey": false,
         "type": {
@@ -11195,7 +11195,7 @@
           "options": {}
         }
       },
-      "links": {
+      "sockets": {
         "allowNull": true,
         "primaryKey": false,
         "type": {

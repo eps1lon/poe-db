@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 7,
       },
-      sockets: {
+      links: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 10,
       },
-      links: {
+      sockets: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

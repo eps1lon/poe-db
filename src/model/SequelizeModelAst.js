@@ -103,7 +103,7 @@ class SequelizeModelAst {
 
   attributeExpression(name, attribute) {
     return t.objectProperty(
-      t.identifier(name),
+      t.stringLiteral(name),
       t.objectExpression([
         // serialized type is an identifier, objToAst cant deserialize identifiers
         t.objectProperty(

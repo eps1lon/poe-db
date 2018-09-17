@@ -236,7 +236,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 43,
       },
-      unknown1: {
+      vaal_soul_gain_prevention_time: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -247,6 +247,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 45,
+      },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 46,
       },
       _stats_cache: {
         type: DataTypes.TEXT,

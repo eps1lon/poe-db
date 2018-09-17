@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
-      data0: {
+      allowed_active_skill_types: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -50,19 +50,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 6,
       },
-      data1: {
+      added_active_skill_types: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
       },
-      data2: {
+      excluded_active_skill_types: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
       },
-      flag0: {
+      supports_gems_only: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
@@ -116,6 +116,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 18,
       },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 19,
+      },
     },
     {
       engine: 'MYISAM',
@@ -147,20 +153,6 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 15,
       },
       targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-
-    // MANUAL
-    model.hasMany(models.GrantedEffectsPerLevel, {
-      as: 'granted_effects_per_levels',
-      $inverse: 'granted_effect',
-      foreignKey: {
-        name: 'granted_effects_key',
-        $type: 'ulong',
-        $col_order: 0,
-      },
-      targetKey: 'granted_effects_key',
       nullable: true,
       constraints: false,
     });

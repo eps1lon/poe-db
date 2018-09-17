@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 12,
       },
-      unknown2: {
+      flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
@@ -85,6 +85,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 15,
+      },
+      quest_state_calcuation_key: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 16,
       },
       _map_pins1_cache: {
         type: DataTypes.TEXT,

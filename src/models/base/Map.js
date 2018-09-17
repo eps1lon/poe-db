@@ -38,12 +38,6 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 11,
       },
-      unknown0: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 15,
-      },
       flag0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
@@ -109,10 +103,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'maps_key1',
+              attribute: 'upgraded_from_maps_key',
             },
           ],
-          name: 'index_maps_key1',
+          name: 'index_upgraded_from_maps_key',
         },
         {
           fields: [
@@ -129,6 +123,14 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_maps_key3',
+        },
+        {
+          fields: [
+            {
+              attribute: 'map_series_key',
+            },
+          ],
+          name: 'index_map_series_key',
         },
       ],
       tableName: 'maps',
@@ -203,11 +205,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Map, {
-      as: 'maps1',
-      $inverse: 'maps1',
+      as: 'upgraded_from_map',
+      $inverse: 'maps',
       $col_order: 12,
       foreignKey: {
-        name: 'maps_key1',
+        name: 'upgraded_from_maps_key',
         $type: 'int',
         $col_order: 12,
       },
@@ -236,6 +238,19 @@ module.exports = (sequelize, DataTypes) => {
         name: 'maps_key3',
         $type: 'int',
         $col_order: 14,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.MapSery, {
+      as: 'map_sery',
+      $inverse: 'maps',
+      $col_order: 15,
+      foreignKey: {
+        name: 'map_series_key',
+        $type: 'int',
+        $col_order: 15,
       },
       targetKey: 'row',
       nullable: true,

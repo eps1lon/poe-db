@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      unknown1: {
+      data0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      unknown2: {
+      data1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -31,6 +31,18 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
+      },
+      unknown0: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 4,
+      },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 5,
       },
     },
     {

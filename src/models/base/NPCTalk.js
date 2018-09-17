@@ -146,6 +146,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 27,
       },
+      flag5: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 28,
+      },
       _npc_text_audio_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

@@ -20,29 +20,59 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
-      unknown0: {
-        type: DataTypes.INTEGER,
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      key1: {
+      key2: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown1: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      unknown2: {
+      flag0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
+      },
+      flag1: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 6,
+      },
+      flag2: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 7,
+      },
+      flag3: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 8,
+      },
+      unknown2: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
+      },
+      flag4: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
       },
     },
     {

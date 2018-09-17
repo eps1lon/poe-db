@@ -92,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 25,
       },
-      tier: {
+      level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -154,10 +154,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'quiver_mods_key',
+              attribute: 'display_quiver_mods_key',
             },
           ],
-          name: 'index_quiver_mods_key',
+          name: 'index_display_quiver_mods_key',
         },
         {
           fields: [
@@ -250,26 +250,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'display_1_hand_weapon_mods_key',
+              attribute: 'display_one_hand_weapon_mods_key',
             },
           ],
-          name: 'index_display_1_hand_weapon_mods_key',
+          name: 'index_display_one_hand_weapon_mods_key',
         },
         {
           fields: [
             {
-              attribute: 'display_2_hand_weapon_mods_key',
+              attribute: 'display_two_hand_weapon_mods_key',
             },
           ],
-          name: 'index_display_2_hand_weapon_mods_key',
+          name: 'index_display_two_hand_weapon_mods_key',
         },
         {
           fields: [
             {
-              attribute: 'display_2_hand_melee_weapon_mods_key',
+              attribute: 'display_two_hand_melee_weapon_mods_key',
             },
           ],
-          name: 'index_display_2_hand_melee_weapon_mods_key',
+          name: 'index_display_two_hand_melee_weapon_mods_key',
         },
         {
           fields: [
@@ -282,10 +282,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'display_ranged_mods_key',
+              attribute: 'display_ranged_weapon_mods_key',
             },
           ],
-          name: 'index_display_ranged_mods_key',
+          name: 'index_display_ranged_weapon_mods_key',
         },
         {
           fields: [
@@ -346,26 +346,26 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: '2_hand_sword_mods_key',
+              attribute: 'two_hand_sword_mods_key',
             },
           ],
-          name: 'index_2_hand_sword_mods_key',
+          name: 'index_two_hand_sword_mods_key',
         },
         {
           fields: [
             {
-              attribute: '2_hand_axe_mods_key',
+              attribute: 'two_hand_axe_mods_key',
             },
           ],
-          name: 'index_2_hand_axe_mods_key',
+          name: 'index_two_hand_axe_mods_key',
         },
         {
           fields: [
             {
-              attribute: '2_hand_mace_mods_key',
+              attribute: 'two_hand_mace_mods_key',
             },
           ],
-          name: 'index_2_hand_mace_mods_key',
+          name: 'index_two_hand_mace_mods_key',
         },
         {
           fields: [
@@ -386,34 +386,34 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: '1_hand_sword_mods_key',
+              attribute: 'one_hand_sword_mods_key',
             },
           ],
-          name: 'index_1_hand_sword_mods_key',
+          name: 'index_one_hand_sword_mods_key',
         },
         {
           fields: [
             {
-              attribute: '1_hand_thrusting_sword_mods_key',
+              attribute: 'one_hand_thrusting_sword_mods_key',
             },
           ],
-          name: 'index_1_hand_thrusting_sword_mods_key',
+          name: 'index_one_hand_thrusting_sword_mods_key',
         },
         {
           fields: [
             {
-              attribute: '1_hand_axe_mods_key',
+              attribute: 'one_hand_axe_mods_key',
             },
           ],
-          name: 'index_1_hand_axe_mods_key',
+          name: 'index_one_hand_axe_mods_key',
         },
         {
           fields: [
             {
-              attribute: '1_hand_mace_mods_key',
+              attribute: 'one_hand_mace_mods_key',
             },
           ],
-          name: 'index_1_hand_mace_mods_key',
+          name: 'index_one_hand_mace_mods_key',
         },
         {
           fields: [
@@ -442,10 +442,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'amulet_mods_key',
+              attribute: 'amulets_mods_key',
             },
           ],
-          name: 'index_amulet_mods_key',
+          name: 'index_amulets_mods_key',
         },
         {
           fields: [
@@ -458,10 +458,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'display_jewellry_mods_key',
+              attribute: 'display_jewellery_mods_key',
             },
           ],
-          name: 'index_display_jewellry_mods_key',
+          name: 'index_display_jewellery_mods_key',
         },
         {
           fields: [
@@ -474,10 +474,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'display_item_mods_key',
+              attribute: 'display_items_mods_key',
             },
           ],
-          name: 'index_display_item_mods_key',
+          name: 'index_display_items_mods_key',
         },
       ],
       tableName: 'essences',
@@ -526,11 +526,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'quiver_mod',
+      as: 'display_quiver_mod',
       $inverse: 'essences',
       $col_order: 14,
       foreignKey: {
-        name: 'quiver_mods_key',
+        name: 'display_quiver_mods_key',
         $type: 'ulong',
         $col_order: 14,
       },
@@ -682,11 +682,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'display_1_hand_weapon_mod',
+      as: 'display_one_hand_weapon_mod',
       $inverse: 'essences',
       $col_order: 32,
       foreignKey: {
-        name: 'display_1_hand_weapon_mods_key',
+        name: 'display_one_hand_weapon_mods_key',
         $type: 'ulong',
         $col_order: 32,
       },
@@ -695,11 +695,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'display_2_hand_weapon_mod',
+      as: 'display_two_hand_weapon_mod',
       $inverse: 'essences',
       $col_order: 33,
       foreignKey: {
-        name: 'display_2_hand_weapon_mods_key',
+        name: 'display_two_hand_weapon_mods_key',
         $type: 'ulong',
         $col_order: 33,
       },
@@ -708,11 +708,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'display_2_hand_melee_weapon_mod',
+      as: 'display_two_hand_melee_weapon_mod',
       $inverse: 'essences',
       $col_order: 34,
       foreignKey: {
-        name: 'display_2_hand_melee_weapon_mods_key',
+        name: 'display_two_hand_melee_weapon_mods_key',
         $type: 'ulong',
         $col_order: 34,
       },
@@ -734,11 +734,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'display_ranged_mod',
+      as: 'display_ranged_weapon_mod',
       $inverse: 'essences',
       $col_order: 36,
       foreignKey: {
-        name: 'display_ranged_mods_key',
+        name: 'display_ranged_weapon_mods_key',
         $type: 'ulong',
         $col_order: 36,
       },
@@ -838,11 +838,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: '2_hand_sword_mod',
+      as: 'two_hand_sword_mod',
       $inverse: 'essences',
       $col_order: 44,
       foreignKey: {
-        name: '2_hand_sword_mods_key',
+        name: 'two_hand_sword_mods_key',
         $type: 'ulong',
         $col_order: 44,
       },
@@ -851,11 +851,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: '2_hand_axe_mod',
+      as: 'two_hand_axe_mod',
       $inverse: 'essences',
       $col_order: 45,
       foreignKey: {
-        name: '2_hand_axe_mods_key',
+        name: 'two_hand_axe_mods_key',
         $type: 'ulong',
         $col_order: 45,
       },
@@ -864,11 +864,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: '2_hand_mace_mod',
+      as: 'two_hand_mace_mod',
       $inverse: 'essences',
       $col_order: 46,
       foreignKey: {
-        name: '2_hand_mace_mods_key',
+        name: 'two_hand_mace_mods_key',
         $type: 'ulong',
         $col_order: 46,
       },
@@ -903,11 +903,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: '1_hand_sword_mod',
+      as: 'one_hand_sword_mod',
       $inverse: 'essences',
       $col_order: 49,
       foreignKey: {
-        name: '1_hand_sword_mods_key',
+        name: 'one_hand_sword_mods_key',
         $type: 'ulong',
         $col_order: 49,
       },
@@ -916,11 +916,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: '1_hand_thrusting_sword_mod',
+      as: 'one_hand_thrusting_sword_mod',
       $inverse: 'essences',
       $col_order: 50,
       foreignKey: {
-        name: '1_hand_thrusting_sword_mods_key',
+        name: 'one_hand_thrusting_sword_mods_key',
         $type: 'ulong',
         $col_order: 50,
       },
@@ -929,11 +929,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: '1_hand_axe_mod',
+      as: 'one_hand_axe_mod',
       $inverse: 'essences',
       $col_order: 51,
       foreignKey: {
-        name: '1_hand_axe_mods_key',
+        name: 'one_hand_axe_mods_key',
         $type: 'ulong',
         $col_order: 51,
       },
@@ -942,11 +942,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: '1_hand_mace_mod',
+      as: 'one_hand_mace_mod',
       $inverse: 'essences',
       $col_order: 52,
       foreignKey: {
-        name: '1_hand_mace_mods_key',
+        name: 'one_hand_mace_mods_key',
         $type: 'ulong',
         $col_order: 52,
       },
@@ -994,11 +994,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'amulet_mod',
+      as: 'amulets_mod',
       $inverse: 'essences',
       $col_order: 57,
       foreignKey: {
-        name: 'amulet_mods_key',
+        name: 'amulets_mods_key',
         $type: 'ulong',
         $col_order: 57,
       },
@@ -1020,11 +1020,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'display_jewellry_mod',
+      as: 'display_jewellery_mod',
       $inverse: 'essences',
       $col_order: 59,
       foreignKey: {
-        name: 'display_jewellry_mods_key',
+        name: 'display_jewellery_mods_key',
         $type: 'ulong',
         $col_order: 59,
       },
@@ -1046,11 +1046,11 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsTo(models.Mod, {
-      as: 'display_item_mod',
+      as: 'display_items_mod',
       $inverse: 'essences',
       $col_order: 61,
       foreignKey: {
-        name: 'display_item_mods_key',
+        name: 'display_items_mods_key',
         $type: 'ulong',
         $col_order: 61,
       },

@@ -80,6 +80,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 12,
       },
+      archetype_image: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 13,
+      },
     },
     {
       engine: 'MYISAM',

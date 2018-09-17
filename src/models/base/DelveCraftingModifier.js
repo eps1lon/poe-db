@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 17,
       },
-      _mods_0_cache: {
+      _mods0_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 1,
@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 2,
       },
-      _mods_1_cache: {
+      _mods1_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 4,
@@ -125,7 +125,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'mods_0',
+      as: 'mods0',
       through: {
         model: models.DelveCraftingModifierHabtmMods0,
         unique: false,
@@ -149,7 +149,7 @@ module.exports = (sequelize, DataTypes) => {
       constraints: false,
     });
     model.belongsToMany(models.Mod, {
-      as: 'mods_1',
+      as: 'mods1',
       through: {
         model: models.DelveCraftingModifierHabtmMods1,
         unique: false,

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { transformFileSync } = require('babel-core');
+const { transformFileSync } = require('@babel/core');
 
 // create a scaffold ast object that can be used as a reference in
 // SequelizeModelAst

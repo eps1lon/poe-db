@@ -1,8 +1,8 @@
 const { ArgumentParser } = require('argparse');
 const fs = require('fs');
 const path = require('path');
-const generate = require('babel-core').transformFromAst;
-const t = require('babel-types');
+const generate = require('@babel/core').transformFromAstSync;
+const t = require('@babel/types');
 
 const { BASE_PATH } = require('../src/models/util');
 const { throwOnError } = require('../src/util');

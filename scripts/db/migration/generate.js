@@ -99,11 +99,12 @@ Promise.all([loadSchema('schema'), loadSchema('prev-schema')])
     const removed = migration.removeColumn();
     if (removed.length > 0) {
       console.warn(
-        'some columns were removed. Please verify if those were not actually just renamed',
-        removed.map(({ tableName, attributeName }) => ({
-          tableName,
-          attributeName,
-        })),
+        'Some columns were removed. Please verify if those were not actually just renamed:\n %s',
+        removed
+          .map(
+            ({ tableName, attributeName }) => `${tableName}: ${attributeName}`,
+          )
+          .join('\n'),
       );
     }
 

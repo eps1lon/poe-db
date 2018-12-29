@@ -224,7 +224,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 41,
       },
-      stat_data: {
+      stat_interpolation_types_keys: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,

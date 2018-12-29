@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 1,
       },
       spawn_weight: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 7,
       },
       min_depth: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
@@ -61,6 +61,18 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
+      },
+      unknown12: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
+      },
+      unknown13: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 12,
       },
       _achievement_items_cache: {
         type: DataTypes.TEXT,

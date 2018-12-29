@@ -16,6 +16,13 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: false,
         $col_order: -1,
       },
+      keys1: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        allowNull: false,
+        primaryKey: false,
+        autoIncrement: false,
+        $col_order: 4,
+      },
     },
     {
       engine: 'MyISAM',
@@ -35,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
           unique: true,
         },
       ],
-      tableName: 'delve_crafting_modifier__mods0s',
+      tableName: 'delve_crafting_modifier__mods_0s',
       underscored: true,
     },
   );

@@ -62,6 +62,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 10,
       },
+      flag0: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
+      },
     },
     {
       engine: 'MYISAM',
@@ -79,10 +85,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_master_key',
+              attribute: 'hideout_np_cs_key',
             },
           ],
-          name: 'index_npc_master_key',
+          name: 'index_hideout_np_cs_key',
         },
       ],
       tableName: 'hideout_doodads',
@@ -104,12 +110,12 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.NPCMaster, {
-      as: 'npc_master',
+    model.belongsTo(models.HideoutNPC, {
+      as: 'hideout_npc',
       $inverse: 'hideout_doodads',
       $col_order: 4,
       foreignKey: {
-        name: 'npc_master_key',
+        name: 'hideout_np_cs_key',
         $type: 'ulong',
         $col_order: 4,
       },

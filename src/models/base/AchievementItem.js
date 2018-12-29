@@ -44,6 +44,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 6,
       },
+      flag1: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 7,
+      },
+      flag2: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 8,
+      },
     },
     {
       engine: 'MYISAM',

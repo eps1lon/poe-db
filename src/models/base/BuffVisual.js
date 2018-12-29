@@ -44,8 +44,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 8,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
+      buff_name: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 9,
@@ -62,11 +62,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 11,
       },
-      unknown2: {
-        type: DataTypes.INTEGER,
+      buff_description: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 12,
+      },
+      epk_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 13,
       },
       _misc_animated1_cache: {
         type: DataTypes.TEXT,

@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
-      unknown2: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      unknown3: {
+      sulphite_cost: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -38,13 +38,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 4,
       },
-      unknown5: {
+      more_monster_life: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      unknown6: {
+      more_monster_damage: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -62,31 +62,31 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 8,
       },
-      unknown9: {
+      unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 9,
       },
-      unknown10: {
+      unknown5: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 10,
       },
-      unknown11: {
+      unknown6: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 11,
       },
-      unknown12: {
+      unknown7: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 12,
       },
-      unknown13: {
+      unknown8: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

@@ -62,6 +62,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 10,
       },
+      prediction_text2: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
+      },
       _quest_tracker_client_strings_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

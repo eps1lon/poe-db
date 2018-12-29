@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
+      key0: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,

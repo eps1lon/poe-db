@@ -26,13 +26,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
-      multiplier1: {
+      base_effectiveness: {
         type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      multiplier2: {
+      incremental_effectiveness: {
         type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: true,

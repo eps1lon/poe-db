@@ -38,24 +38,47 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 4,
       },
-      shop_package_platform_key: {
-        type: DataTypes.INTEGER,
+      unknown0: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 5,
+        $col_order: 6,
       },
     },
     {
       engine: 'MYISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: [
+            {
+              attribute: 'shop_package_platform_key',
+            },
+          ],
+          name: 'index_shop_package_platform_key',
+        },
+      ],
       tableName: 'supporter_pack_sets',
       underscored: true,
     },
   );
 
-  model.associate = models => {};
+  model.associate = models => {
+    model.belongsTo(models.ShopPackagePlatform, {
+      as: 'shop_package_platform',
+      $inverse: 'supporter_pack_sets',
+      $col_order: 5,
+      foreignKey: {
+        name: 'shop_package_platform_key',
+        $type: 'ref|list|int',
+        $col_order: 5,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+  };
 
   model.DAT_FILE = 'SupporterPackSets.dat';
   return model;

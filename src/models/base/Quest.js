@@ -62,6 +62,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 8,
       },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 9,
+      },
+      unknown1: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
+      },
     },
     {
       engine: 'MYISAM',

@@ -38,23 +38,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 5,
       },
-      data0: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 6,
-      },
       flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 8,
+        $col_order: 7,
       },
       unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 9,
+        $col_order: 8,
       },
       _bestiary_recipe_component_cache: {
         type: DataTypes.TEXT,
@@ -64,7 +58,7 @@ module.exports = (sequelize, DataTypes) => {
       _achievement_items_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 7,
+        $col_order: 6,
       },
     },
     {
@@ -98,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'bestiary_recipe_row',
       otherKey: 'achievement_item_row',
-      $col_order: 7,
+      $col_order: 6,
       nullable: true,
       constraints: false,
     });

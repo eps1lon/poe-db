@@ -74,17 +74,22 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 13,
       },
-      key0: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 14,
-      },
       unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 15,
+      },
+      unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 16,
+      },
+      _achievement_items_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 14,
       },
     },
     {
@@ -115,6 +120,14 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_incursion_architect_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'room_upgrade_from_incursion_rooms_key',
+            },
+          ],
+          name: 'index_room_upgrade_from_incursion_rooms_key',
         },
       ],
       tableName: 'incursion_rooms',
@@ -159,6 +172,31 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 8,
       },
       targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.IncursionRoom, {
+      as: 'room_upgrade_from_incursion_room',
+      $inverse: 'incursion_rooms',
+      $col_order: 17,
+      foreignKey: {
+        name: 'room_upgrade_from_incursion_rooms_key',
+        $type: 'uint',
+        $col_order: 17,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.AchievementItem, {
+      as: 'achievement_items',
+      through: {
+        model: models.IncursionRoomHabtmAchievementItem,
+        unique: false,
+      },
+      foreignKey: 'incursion_room_row',
+      otherKey: 'achievement_item_row',
+      $col_order: 14,
       nullable: true,
       constraints: false,
     });

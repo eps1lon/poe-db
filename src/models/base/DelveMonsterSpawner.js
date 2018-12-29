@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
+      base_metadata: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,

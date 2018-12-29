@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 6,
       },
-      unknown2: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 11,
       },
-      unknown5: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -80,7 +80,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 15,
       },
-      unknown7: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -110,47 +110,71 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 20,
       },
-      flag9: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 21,
-      },
       buff_limit: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 22,
+        $col_order: 21,
       },
       flag10: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 23,
+        $col_order: 22,
       },
-      unknown0: {
+      id2: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 24,
+        $col_order: 23,
       },
       is_recovery: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 25,
+        $col_order: 24,
       },
       flag11: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 26,
+        $col_order: 25,
       },
       flag12: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
+        $col_order: 26,
+      },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
         $col_order: 27,
+      },
+      flag13: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 28,
+      },
+      unknown6: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 29,
+      },
+      flag14: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 30,
+      },
+      flag15: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 31,
       },
       _stats_cache: {
         type: DataTypes.TEXT,

@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      buff_values: {
+      buff_stat_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -70,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
       $col_order: 1,
       foreignKey: {
         name: 'labyrinth_secrets_key',
-        $type: 'ulong',
+        $type: 'ref|list|ulong',
         $col_order: 1,
       },
       targetKey: 'row',

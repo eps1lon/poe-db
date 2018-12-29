@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      _mod_sell_prices_cache: {
+      _mod_sell_price_types_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 1,
@@ -36,14 +36,14 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsToMany(models.ModSellPrice, {
-      as: 'mod_sell_prices',
+    model.belongsToMany(models.ModSellPriceType, {
+      as: 'mod_sell_price_types',
       through: {
-        model: models.ModTypeHabtmModSellPrice,
+        model: models.ModTypeHabtmModSellPriceType,
         unique: false,
       },
       foreignKey: 'mod_type_row',
-      otherKey: 'mod_sell_price_row',
+      otherKey: 'mod_sell_price_type_row',
       $col_order: 1,
       nullable: true,
       constraints: false,

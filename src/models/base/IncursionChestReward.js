@@ -8,25 +8,25 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown4: {
+      unknown0: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      unknown5: {
+      unknown1: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown6: {
+      unknown2: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      unknown7: {
+      unknown3: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

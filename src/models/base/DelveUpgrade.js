@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
-      stats_values: {
+      stat_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,

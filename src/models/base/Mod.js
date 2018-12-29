@@ -301,6 +301,14 @@ module.exports = (sequelize, DataTypes) => {
           ],
           name: 'index_stats_key6',
         },
+        {
+          fields: [
+            {
+              attribute: 'unveil_achievement_items_key',
+            },
+          ],
+          name: 'index_unveil_achievement_items_key',
+        },
       ],
       tableName: 'mods',
       underscored: true,
@@ -433,6 +441,19 @@ module.exports = (sequelize, DataTypes) => {
         name: 'stats_key6',
         $type: 'ulong',
         $col_order: 43,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.AchievementItem, {
+      as: 'unveil_achievement_item',
+      $inverse: 'mods',
+      $col_order: 47,
+      foreignKey: {
+        name: 'unveil_achievement_items_key',
+        $type: 'ulong',
+        $col_order: 47,
       },
       targetKey: 'row',
       nullable: true,

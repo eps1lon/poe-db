@@ -26,13 +26,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 3,
       },
-      data0: {
+      spawn_weight_depth: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      data1: {
+      spawn_weight_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -55,6 +55,18 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
+      },
+      flag0: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
+      },
+      unknown0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 11,
       },
       _world_areas_cache: {
         type: DataTypes.TEXT,

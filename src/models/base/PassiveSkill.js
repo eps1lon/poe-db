@@ -86,59 +86,35 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 15,
       },
-      key2: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 17,
-      },
-      buff_related_unknown0: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 18,
-      },
-      buff_related_unknown1: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 19,
-      },
       is_ascendancy_starting_node: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 21,
+        $col_order: 17,
       },
       skill_points_granted: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 23,
+        $col_order: 19,
       },
       is_multiple_choice: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 24,
+        $col_order: 20,
       },
       is_multiple_choice_option: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 25,
+        $col_order: 21,
       },
       stat5_value: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 26,
-      },
-      granted_buff_stat_values: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 27,
+        $col_order: 22,
       },
       _stats_cache: {
         type: DataTypes.TEXT,
@@ -153,7 +129,12 @@ module.exports = (sequelize, DataTypes) => {
       _reminder_client_strings_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 22,
+        $col_order: 18,
+      },
+      _passive_skill_buffs_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 23,
       },
     },
     {
@@ -168,14 +149,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_achievement_items_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'granted_buff_buff_definitions_key',
-            },
-          ],
-          name: 'index_granted_buff_buff_definitions_key',
         },
         {
           fields: [
@@ -205,27 +178,14 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.BuffDefinition, {
-      as: 'granted_buff_buff_definition',
-      $inverse: 'passive_skills',
-      $col_order: 16,
-      foreignKey: {
-        name: 'granted_buff_buff_definitions_key',
-        $type: 'ulong',
-        $col_order: 16,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
     model.belongsTo(models.Ascendancy, {
       as: 'ascendancy',
       $inverse: 'passive_skills',
-      $col_order: 20,
+      $col_order: 16,
       foreignKey: {
         name: 'ascendancy_key',
         $type: 'ulong',
-        $col_order: 20,
+        $col_order: 16,
       },
       targetKey: 'row',
       nullable: true,
@@ -263,7 +223,19 @@ module.exports = (sequelize, DataTypes) => {
       },
       foreignKey: 'passive_skill_row',
       otherKey: 'client_string_row',
-      $col_order: 22,
+      $col_order: 18,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.PassiveSkillBuff, {
+      as: 'passive_skill_buffs',
+      through: {
+        model: models.PassiveSkillHabtmPassiveSkillBuff,
+        unique: false,
+      },
+      foreignKey: 'passive_skill_row',
+      otherKey: 'passive_skill_buff_row',
+      $col_order: 23,
       nullable: true,
       constraints: false,
     });

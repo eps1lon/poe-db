@@ -26,6 +26,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
+      unknown0: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 3,
+      },
+      playstation_text: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 4,
+      },
     },
     {
       engine: 'MYISAM',

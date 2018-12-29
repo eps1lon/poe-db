@@ -7,7 +7,15 @@ const pypoe_content = path.join(__dirname, '../data/content.json');
 const spec_out = path.join(__dirname, '../data/spec.json');
 const records_out = path.join(__dirname, '../data/records.json');
 
-const content = require(pypoe_content);
+const ignoreDatFiles = new Set([
+  // creates name collision since there exists LeagueFlags.dat and LeagueFlag.dat
+  // the 1st one has no cols though so we ignore it
+  'LeagueFlags.dat',
+]);
+
+const content = require(pypoe_content).filter(
+  ({ filename }) => !ignoreDatFiles.has(filename),
+);
 
 const entriesToObjWithNameAsKey = entries =>
   entriesToObj(

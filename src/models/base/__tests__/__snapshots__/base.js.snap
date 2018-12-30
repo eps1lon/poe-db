@@ -3,17 +3,17 @@
 exports[`should denormalize extended props by joining the in a comma separated list 1`] = `
 Array [
   Object {
-    "Cost_BaseItemTypesKeys": "10",
+    "Cost_BaseItemTypesKeys": "19",
     "Cost_Values": "1",
     "row": 0,
   },
   Object {
-    "Cost_BaseItemTypesKeys": "9",
-    "Cost_Values": "5",
+    "Cost_BaseItemTypesKeys": "19",
+    "Cost_Values": "3",
     "row": 1,
   },
   Object {
-    "Cost_BaseItemTypesKeys": "9",
+    "Cost_BaseItemTypesKeys": "19",
     "Cost_Values": "10",
     "row": 2,
   },

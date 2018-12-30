@@ -1,8 +1,8 @@
 const { ArgumentParser } = require('argparse');
 const fs = require('fs');
 const path = require('path');
-const generate = require('babel-core').transformFromAst;
-const t = require('babel-types');
+const generate = require('@babel/core').transformFromAstSync;
+const t = require('@babel/types');
 
 const { BASE_PATH } = require('../src/models/util');
 const { throwOnError } = require('../src/util');
@@ -49,12 +49,14 @@ const writeAst = async model => {
   }
 };
 
-// TODO remove example
-// remeber to provide all associations in the example
-const example = Object.keys(spec); //*/
+const whitelist = Object.keys(spec);
+const blacklist = [
+  // cause name collision with LeagueFlag.dat and holds not data
+  'LeagueFlags.dat',
+];
 
 for (const [name, props] of Object.entries(spec).filter(
-  ([name]) => example.indexOf(name) !== -1,
+  ([name]) => whitelist.indexOf(name) !== -1 && blacklist.indexOf(name) === -1,
 )) {
   const model = new SequelizeModel(name, props);
 

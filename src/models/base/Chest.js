@@ -116,6 +116,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 24,
       },
+      inherits_from: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 25,
+      },
       _mods_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

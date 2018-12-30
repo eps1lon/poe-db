@@ -440,6 +440,24 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 94,
       },
+      delve_unknown0: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 95,
+      },
+      delve_unknown1: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 96,
+      },
+      delve_key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 97,
+      },
       _connections_world_areas_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

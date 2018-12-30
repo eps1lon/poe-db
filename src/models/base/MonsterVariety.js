@@ -254,7 +254,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 54,
       },
-      unknown14: {
+      flag1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -301,6 +301,24 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 73,
+      },
+      unknown101: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 74,
+      },
+      sink_animation_ao_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 75,
+      },
+      flag2: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 76,
       },
       _mods_cache: {
         type: DataTypes.TEXT,

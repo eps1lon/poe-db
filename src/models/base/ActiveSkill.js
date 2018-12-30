@@ -92,11 +92,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 14,
       },
-      unknown19: {
+      minion_active_skill_types: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 17,
+      },
+      flag2: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 18,
+      },
+      flag3: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 19,
       },
       _weapon_restriction_item_classes_cache: {
         type: DataTypes.TEXT,

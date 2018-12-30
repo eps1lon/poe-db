@@ -134,7 +134,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 26,
       },
-      buff_related_unknown2: {
+      granted_buff_stat_values: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,

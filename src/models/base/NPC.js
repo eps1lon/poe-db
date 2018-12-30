@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
-      unknown5: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -38,17 +38,21 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 5,
       },
-      unknown7: {
+      unknown1: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      unknown8: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 7,
+      _npc_audio1_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 8,
+      },
+      _npc_audio2_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 9,
       },
     },
     {
@@ -71,22 +75,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_npc_shop_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'npc_audio_key1',
-            },
-          ],
-          name: 'index_npc_audio_key1',
-        },
-        {
-          fields: [
-            {
-              attribute: 'npc_audio_key2',
-            },
-          ],
-          name: 'index_npc_audio_key2',
         },
       ],
       tableName: 'n_p_cs',
@@ -111,39 +99,37 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.NPCShop, {
       as: 'npc_shop',
       $inverse: 'np_cs',
-      $col_order: 8,
+      $col_order: 7,
       foreignKey: {
         name: 'npc_shop_key',
         $type: 'ulong',
-        $col_order: 8,
+        $col_order: 7,
       },
       targetKey: 'row',
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.NPCAudio, {
+    model.belongsToMany(models.NPCAudio, {
       as: 'npc_audio1',
-      $inverse: 'np_cs1',
-      $col_order: 9,
-      foreignKey: {
-        name: 'npc_audio_key1',
-        $type: 'ulong',
-        $col_order: 9,
+      through: {
+        model: models.NPCHabtmNPCAudio1,
+        unique: false,
       },
-      targetKey: 'row',
+      foreignKey: 'npc_row',
+      otherKey: 'npc_audio_row',
+      $col_order: 8,
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.NPCAudio, {
+    model.belongsToMany(models.NPCAudio, {
       as: 'npc_audio2',
-      $inverse: 'np_cs2',
-      $col_order: 10,
-      foreignKey: {
-        name: 'npc_audio_key2',
-        $type: 'ulong',
-        $col_order: 10,
+      through: {
+        model: models.NPCHabtmNPCAudio2,
+        unique: false,
       },
-      targetKey: 'row',
+      foreignKey: 'npc_row',
+      otherKey: 'npc_audio_row',
+      $col_order: 9,
       nullable: true,
       constraints: false,
     });

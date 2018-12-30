@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { format } = require('prettier');
-const generate = require('babel-core').transformFromAst;
+const generate = require('@babel/core').transformFromAst;
 
 const Migration = require('../../../src/model/migration/SequelizeMigration');
 const MigrationAst = require('../../../src/model/migration/MigrationAst');

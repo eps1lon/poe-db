@@ -19,6 +19,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: 1,
       },
+      _tags_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 2,
+      },
     },
     {
       engine: 'MYISAM',
@@ -40,6 +45,18 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'mod_type_row',
       otherKey: 'mod_sell_price_row',
       $col_order: 1,
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Tag, {
+      as: 'tags',
+      through: {
+        model: models.ModTypeHabtmTag,
+        unique: false,
+      },
+      foreignKey: 'mod_type_row',
+      otherKey: 'tag_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

@@ -1,4512 +1,4524 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /* await queryInterface.createTable(
-      "account_quest_flags",
+    await queryInterface.createTable(
+      'account_quest_flags',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "achievement_set_reward__base_item_types",
+      'achievement_set_reward__base_item_types',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         achievement_set_reward_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         base_item_type_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "additional_life_scalings",
+      'additional_life_scalings',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         int_id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         dat_file: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "additional_life_scaling_per_levels",
+      'additional_life_scaling_per_levels',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "architect_life_scaling_per_levels",
+      'architect_life_scaling_per_levels',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         more_life: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "atlas_node_definitions",
+      'atlas_node_definitions',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         flag0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         tier: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         world_areas_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         item_visual_identity_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "atlas_node__atlas_sectors",
+      'atlas_node__atlas_sectors',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         atlas_node_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         atlas_sector_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "atlas_quadrants",
+      'atlas_quadrants',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "atlas_sectors",
+      'atlas_sectors',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         _spawn_weight_tags_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "atlas_sector__spawn_weight__tags",
+      'atlas_sector__spawn_weight__tags',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         value: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         atlas_sector_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         tag_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_choices",
+      'betrayal_choices',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         text: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_choice_actions",
+      'betrayal_choice_actions',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         betrayal_choices_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         client_strings_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_dialogues",
+      'betrayal_dialogues',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         key2: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         keys1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         flag0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         keys0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         flag1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         unknown6: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         betrayal_dialogue_cue_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_targets_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_upgrades_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         npc_text_audio_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_dialogue_cues",
+      'betrayal_dialogue_cues',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_flags",
+      'betrayal_flags',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_forts",
+      'betrayal_forts',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_jobs",
+      'betrayal_jobs',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         text: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         art: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         key1: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         completion_achievement_items_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         open_chests_achievement_items_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         mission_completion_acheivement_items_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_ranks",
+      'betrayal_ranks',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         text: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         rank_image: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_relationship_states",
+      'betrayal_relationship_states',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         text: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_targets",
+      'betrayal_targets',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         art: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         flag0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         key3: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         full_name: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         safehouse_arm_file: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         short_name: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         betrayal_relationship_state_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         monster_varieties_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_jobs_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         safehouse_leader_acheivement_items_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         level3_achievement_items_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_target_flags",
+      'betrayal_target_flags',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_target_job_achievements",
+      'betrayal_target_job_achievements',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         betrayal_targets_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_jobs_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         achievement_items_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_target_life_scaling_per_levels",
+      'betrayal_target_life_scaling_per_levels',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         more_life: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_traitor_rewards",
+      'betrayal_traitor_rewards',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         description: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         betrayal_jobs_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_targets_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_ranks_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_upgrades",
+      'betrayal_upgrades',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         name: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         description: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         art_file: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         key2: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown11: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         key3: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         mods_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_upgrade_slots_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         item_visual_identity_key0: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         item_visual_identity_key1: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_upgrade_slots",
+      'betrayal_upgrade_slots',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "betrayal_wall_life_scaling_per_levels",
+      'betrayal_wall_life_scaling_per_levels',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         more_life: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "breachstone_upgrades",
+      'breachstone_upgrades',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         base_item_types_key0: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         base_item_types_key1: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         base_item_types_key2: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         base_item_types_key3: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "buff_stack_u_i_modes",
+      'buff_stack_u_i_modes',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "crafting_bench_option__crafting_item_class_categories",
+      'crafting_bench_option__crafting_item_class_categories',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         crafting_bench_option_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         crafting_item_class_category_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "crafting_bench_unlock_categories",
+      'crafting_bench_unlock_categories',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         description: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         _crafting_item_class_categories_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "crafting_bench_unlock_category__crafting_item_class_categories",
+      'crafting_bench_unlock_category__crafting_item_class_categories',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         crafting_bench_unlock_category_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         crafting_item_class_category_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "crafting_item_class_categories",
+      'crafting_item_class_categories',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown_text: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         text: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         _item_classes_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "crafting_item_class_category__item_classes",
+      'crafting_item_class_category__item_classes',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         crafting_item_class_category_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         item_class_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "einhar_missions",
+      'einhar_missions',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown6: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "einhar_pack_fallbacks",
+      'einhar_pack_fallbacks',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         keys0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "fixed_hideout_doodads",
+      'fixed_hideout_doodads',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "fixed_missions",
+      'fixed_missions',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         key1: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown6: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown8: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown9: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "geometry_projectiles",
+      'geometry_projectiles',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown6: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown8: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "hideout_n_p_c__regular__n_p_cs",
+      'hideout_n_p_c__regular__n_p_cs',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         hideout_npc_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         npc_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "hideout_rarities",
+      'hideout_rarities',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         text: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "incursion_room__achievement_items",
+      'incursion_room__achievement_items',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         incursion_room_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         achievement_item_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "job_assassination_spawner_groups",
+      'job_assassination_spawner_groups',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "job_raid_brackets",
+      'job_raid_brackets',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         min_level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown6: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "map_creation_informations",
+      'map_creation_informations',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         tier: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         maps_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "map_devices",
+      'map_devices',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         inherits_from: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         command: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         command_data: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "map_fragment_families",
+      'map_fragment_families',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "map_purchase_costs",
+      'map_purchase_costs',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         tier: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         _normal_purchase_base_item_types_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         _magic_purchase_base_item_types_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         _rare_purchase_base_item_types_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         _unique_purchase_base_item_types_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "map_purchase_cost__magic_purchase__base_item_types",
+      'map_purchase_cost__magic_purchase__base_item_types',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         cost: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         map_purchase_cost_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         base_item_type_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "map_purchase_cost__normal_purchase__base_item_types",
+      'map_purchase_cost__normal_purchase__base_item_types',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         cost: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         map_purchase_cost_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         base_item_type_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "map_purchase_cost__rare_purchase__base_item_types",
+      'map_purchase_cost__rare_purchase__base_item_types',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         cost: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         map_purchase_cost_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         base_item_type_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "map_purchase_cost__unique_purchase__base_item_types",
+      'map_purchase_cost__unique_purchase__base_item_types',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         cost: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         map_purchase_cost_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         base_item_type_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "master_hideout_levels",
+      'master_hideout_levels',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         missions_required: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         npc_master_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "mission_favour_per_levels",
+      'mission_favour_per_levels',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         favour: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "mod_type__mod_sell_price_types",
+      'mod_type__mod_sell_price_types',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         mod_type_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         mod_sell_price_type_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "monster_spawner_groups",
+      'monster_spawner_groups',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "monster_spawner_groups_per_levels",
+      'monster_spawner_groups_per_levels',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         min_level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         monster_spawner_groups_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "multi_part_achievement_areas",
+      'multi_part_achievement_areas',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "n_p_c_additional_vendor_items",
+      'n_p_c_additional_vendor_items',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         keys0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown8: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         key0: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "n_p_c_follower_variations",
+      'n_p_c_follower_variations',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         flag0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         flag1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown6: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         flag3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         monster_varieties_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         misc_animated_key0: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         misc_animated_key1: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "n_p_c_master__spawn_weight__tags",
+      'n_p_c_master__spawn_weight__tags',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         value: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         npc_master_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         tag_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "n_p_c_master_levels",
+      'n_p_c_master_levels',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         level: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         npc_master_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "n_p_c_shop_additional_items",
+      'n_p_c_shop_additional_items',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         _item_classes_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         npc_shop_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "n_p_c_shop_additional_item__item_classes",
+      'n_p_c_shop_additional_item__item_classes',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         npc_shop_additional_item_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         item_class_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "n_p_c_talk_console_quick_actions",
+      'n_p_c_talk_console_quick_actions',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         controller: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "passive_skill_buffs",
+      'passive_skill_buffs',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         buff_stat_values: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         key1: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         buff_definitions_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "passive_skill__passive_skill_buffs",
+      'passive_skill__passive_skill_buffs',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         passive_skill_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         passive_skill_buff_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "quest_achievement__achievement_items",
+      'quest_achievement__achievement_items',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         quest_achievement_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         achievement_item_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "quest_types",
+      'quest_types',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "recipe_unlock_displays",
+      'recipe_unlock_displays',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         recipe_id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         description: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         _crafting_item_class_categories_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "recipe_unlock_display__crafting_item_class_categories",
+      'recipe_unlock_display__crafting_item_class_categories',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         recipe_unlock_display_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         crafting_item_class_category_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "recipe_unlock_objects",
+      'recipe_unlock_objects',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         inherits_from: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         recipe_id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         world_areas_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "safehouse_b_y_o_craftings",
+      'safehouse_b_y_o_craftings',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         description: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         server_command: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         betrayal_jobs_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_targets_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_ranks_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "safehouse_crafting_sprees",
+      'safehouse_crafting_sprees',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         chance: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         data0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         _currency_safehouse_crafting_spree_currencies_cache: {
           allowNull: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         betrayal_jobs_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         betrayal_ranks_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "safehouse_crafting_spree_currencies",
+      'safehouse_crafting_spree_currencies',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         has_specific_base_item: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         base_item_types_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
-    ); */
-    /* await queryInterface.createTable(
-      "safeho_craft_spree__curre__safeh_craft_spree_curre",
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
+    );
+    await queryInterface.createTable(
+      'safeho_craft_spree__curre__safeh_craft_spree_curre',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         value: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         safehouse_crafting_spree_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         safehouse_crafting_spree_currency_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "shop_forum_badges",
+      'shop_forum_badges',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "shop_payment_package__shop_package_platforms",
+      'shop_payment_package__shop_package_platforms',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         shop_payment_package_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         shop_package_platform_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "sigil_displays",
+      'sigil_displays',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         dds_file: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         inactive_art_file: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         active_art_file: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         frame_art_file: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         active_stats_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         inactive_stats_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "skill_gem_info__characters",
+      'skill_gem_info__characters',
       {
         row: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         priority: {
           allowNull: false,
           autoIncrement: false,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         skill_gem_info_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         character_row: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MyISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MyISAM',
+      },
     );
     await queryInterface.createTable(
-      "surge_types",
+      'surge_types',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         keys0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "table_monster_spawners",
+      'table_monster_spawners',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         metadata: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown6: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown8: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown9: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown10: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown11: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown12: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown13: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown14: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown15: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown16: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown17: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag3: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown18: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown19: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag6: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "unique_maps",
+      'unique_maps',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         has_guild_character: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         guild_character: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         item_visual_identity_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         world_areas_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         words_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         flavour_text_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "unique_stash_layouts",
+      'unique_stash_layouts',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unique_items_key: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         key3: {
           allowNull: true,
           primaryKey: false,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unknown1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown2: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         flag0: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         flag1: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         item_visual_identity_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         unique_stash_types_key: {
           allowNull: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
-        }
+            unsigned: true,
+          }),
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.createTable(
-      "unique_stash_types",
+      'unique_stash_types',
       {
         row: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.BIGINT({
-            unsigned: true
-          })
+            unsigned: true,
+          }),
         },
         id: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         order: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         width: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         height: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown4: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         unknown5: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         name: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown7: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         image: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
         },
         unknown9: {
           allowNull: true,
           primaryKey: false,
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
         },
         created_at: {
           allowNull: false,
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
         },
         updated_at: {
           allowNull: false,
-          type: Sequelize.DATE
-        }
+          type: Sequelize.DATE,
+        },
       },
       {
-        charset: "utf8mb4",
-        collate: "utf8mb4_unicode_ci",
-        engine: "MYISAM"
-      }
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci',
+        engine: 'MYISAM',
+      },
     );
     await queryInterface.removeIndex(
-      "achievement_set_rewards",
-      "index_base_item_types_key"
+      'achievement_set_rewards',
+      'index_base_item_types_key',
     );
     await queryInterface.removeIndex(
-      "crafting_bench_options",
-      "index_npc_master_key"
+      'crafting_bench_options',
+      'index_npc_master_key',
     );
-    await queryInterface.removeIndex("hideouts", "index_npc_master_key");
+    await queryInterface.removeIndex('hideouts', 'index_npc_master_key');
     await queryInterface.removeIndex(
-      "hideouts",
-      "index_medium_world_areas_key"
+      'hideouts',
+      'index_medium_world_areas_key',
     );
-    await queryInterface.removeIndex("hideout_doodads", "index_npc_master_key");
+    await queryInterface.removeIndex('hideout_doodads', 'index_npc_master_key');
     await queryInterface.removeIndex(
-      "hideout_n_p_cs",
-      "index_regular_np_cs_key"
-    );
-    await queryInterface.removeIndex(
-      "mission_tile_maps",
-      "index_npc_master_key"
+      'hideout_n_p_cs',
+      'index_regular_np_cs_key',
     );
     await queryInterface.removeIndex(
-      "mission_tile_maps",
-      "index_mission_transition_tiles_key"
-    );
-    await queryInterface.removeIndex("n_p_c_masters", "index_np_cs_key");
-    await queryInterface.removeIndex(
-      "n_p_c_masters",
-      "index_signature_mod_mods_key"
+      'mission_tile_maps',
+      'index_npc_master_key',
     );
     await queryInterface.removeIndex(
-      "n_p_c_masters",
-      "index_talisman_achievement_items_key"
+      'mission_tile_maps',
+      'index_mission_transition_tiles_key',
+    );
+    await queryInterface.removeIndex('n_p_c_masters', 'index_np_cs_key');
+    await queryInterface.removeIndex(
+      'n_p_c_masters',
+      'index_signature_mod_mods_key',
     );
     await queryInterface.removeIndex(
-      "n_p_c_talks",
-      "index_base_item_types_key"
+      'n_p_c_masters',
+      'index_talisman_achievement_items_key',
     );
     await queryInterface.removeIndex(
-      "passive_skills",
-      "index_granted_buff_buff_definitions_key"
+      'n_p_c_talks',
+      'index_base_item_types_key',
     );
     await queryInterface.removeIndex(
-      "skill_surge_effects",
-      "index_misc_animated_key"
+      'passive_skills',
+      'index_granted_buff_buff_definitions_key',
     );
-    await queryInterface.addColumn("achievement_items", "flag1", {
+    await queryInterface.removeIndex(
+      'skill_surge_effects',
+      'index_misc_animated_key',
+    );
+    await queryInterface.addColumn('achievement_items', 'flag1', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.BOOLEAN
+      type: Sequelize.BOOLEAN,
     });
-    await queryInterface.addColumn("achievement_items", "flag2", {
+    await queryInterface.addColumn('achievement_items', 'flag2', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.BOOLEAN
+      type: Sequelize.BOOLEAN,
     });
     await queryInterface.removeColumn(
-      "achievement_set_rewards",
-      "base_item_types_key"
+      'achievement_set_rewards',
+      'base_item_types_key',
     );
     await queryInterface.addColumn(
-      "achievement_set_rewards",
-      "_base_item_types_cache",
+      'achievement_set_rewards',
+      '_base_item_types_cache',
       {
         allowNull: false,
-        type: Sequelize.TEXT
-      }
+        type: Sequelize.TEXT,
+      },
     );
-    await queryInterface.renameColumn("achievements", "unknown4", "unknown1");
-    await queryInterface.addColumn("achievements", "unknown2", {
+    await queryInterface.renameColumn('achievements', 'unknown4', 'unknown1');
+    await queryInterface.addColumn('achievements', 'unknown2', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown0");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown1");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown2");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown3");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown4");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown5");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown6");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown7");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown8");
-    await queryInterface.removeColumn("advanced_skills_tutorials", "unknown9");
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown0');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown1');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown2');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown3');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown4');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown5');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown6');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown7');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown8');
+    await queryInterface.removeColumn('advanced_skills_tutorials', 'unknown9');
     await queryInterface.addColumn(
-      "advanced_skills_tutorials",
-      "characters_key",
+      'advanced_skills_tutorials',
+      'characters_key',
       {
         allowNull: true,
         type: Sequelize.BIGINT({
-          unsigned: true
-        })
-      }
+          unsigned: true,
+        }),
+      },
     );
     await queryInterface.addColumn(
-      "advanced_skills_tutorials",
-      "china_bk2_file",
+      'advanced_skills_tutorials',
+      'china_bk2_file',
       {
         allowNull: true,
         primaryKey: false,
-        type: Sequelize.TEXT
-      }
+        type: Sequelize.TEXT,
+      },
     );
-    await queryInterface.addColumn("advanced_skills_tutorials", "description", {
+    await queryInterface.addColumn('advanced_skills_tutorials', 'description', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("advanced_skills_tutorials", "id", {
+    await queryInterface.addColumn('advanced_skills_tutorials', 'id', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
     await queryInterface.addColumn(
-      "advanced_skills_tutorials",
-      "international_bk2_file",
+      'advanced_skills_tutorials',
+      'international_bk2_file',
       {
         allowNull: true,
         primaryKey: false,
-        type: Sequelize.TEXT
-      }
+        type: Sequelize.TEXT,
+      },
     );
-    await queryInterface.addColumn("advanced_skills_tutorials", "key0", {
+    await queryInterface.addColumn('advanced_skills_tutorials', 'key0', {
       allowNull: true,
       primaryKey: false,
       type: Sequelize.BIGINT({
-        unsigned: true
-      })
+        unsigned: true,
+      }),
     });
-    await queryInterface.addColumn("advanced_skills_tutorials", "key2", {
+    await queryInterface.addColumn('advanced_skills_tutorials', 'key2', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("advanced_skills_tutorials", "keys1", {
+    await queryInterface.addColumn('advanced_skills_tutorials', 'keys1', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.removeColumn("atlas_nodes", "flavour_text");
-    await queryInterface.removeColumn("atlas_nodes", "unknown3");
-    await queryInterface.addColumn("atlas_nodes", "_atlas_sector_cache", {
+    await queryInterface.removeColumn('atlas_nodes', 'flavour_text');
+    await queryInterface.removeColumn('atlas_nodes', 'unknown3');
+    await queryInterface.addColumn('atlas_nodes', '_atlas_sector_cache', {
       allowNull: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("atlas_nodes", "flavour_text_key", {
+    await queryInterface.addColumn('atlas_nodes', 'flavour_text_key', {
       allowNull: true,
       type: Sequelize.BIGINT({
-        unsigned: true
-      })
+        unsigned: true,
+      }),
     });
-    await queryInterface.addColumn("atlas_nodes", "maps_key", {
+    await queryInterface.addColumn('atlas_nodes', 'maps_key', {
       allowNull: true,
       type: Sequelize.BIGINT({
-        unsigned: true
-      })
+        unsigned: true,
+      }),
     });
-    await queryInterface.addColumn("atlas_nodes", "tier", {
+    await queryInterface.addColumn('atlas_nodes', 'tier', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("atlas_nodes", "unknown4", {
+    await queryInterface.addColumn('atlas_nodes', 'unknown4', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("bestiary_capturable_monsters", "flag3", {
+    await queryInterface.addColumn('bestiary_capturable_monsters', 'flag3', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.BOOLEAN
+      type: Sequelize.BOOLEAN,
     });
-    await queryInterface.addColumn("bestiary_capturable_monsters", "unknown0", {
+    await queryInterface.addColumn('bestiary_capturable_monsters', 'unknown0', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.removeColumn("bestiary_genus", "unknown6");
-    await queryInterface.renameColumn("bestiary_groups", "name", "id");
-    await queryInterface.renameColumn("bestiary_groups", "group_name", "name");
+    await queryInterface.removeColumn('bestiary_genus', 'unknown6');
+    await queryInterface.renameColumn('bestiary_groups', 'name', 'id');
+    await queryInterface.renameColumn('bestiary_groups', 'group_name', 'name');
     await queryInterface.renameColumn(
-      "bestiary_recipe_components",
-      "rarity_key",
-      "rarity"
+      'bestiary_recipe_components',
+      'rarity_key',
+      'rarity',
     );
-    await queryInterface.removeColumn("bestiary_recipes", "data0");
-    await queryInterface.removeColumn("buff_definitions", "flag9");
-    await queryInterface.removeColumn("buff_definitions", "unknown5");
-    await queryInterface.removeColumn("buff_definitions", "unknown7");
-    await queryInterface.addColumn("buff_definitions", "flag13", {
+    await queryInterface.removeColumn('bestiary_recipes', 'data0');
+    await queryInterface.removeColumn('buff_definitions', 'flag9');
+    await queryInterface.removeColumn('buff_definitions', 'unknown5');
+    await queryInterface.removeColumn('buff_definitions', 'unknown7');
+    await queryInterface.addColumn('buff_definitions', 'flag13', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("buff_definitions", "flag14", {
+    await queryInterface.addColumn('buff_definitions', 'flag14', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("buff_definitions", "flag15", {
+    await queryInterface.addColumn('buff_definitions', 'flag15', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("buff_definitions", "id2", {
+    await queryInterface.addColumn('buff_definitions', 'id2', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("buff_definitions", "key0", {
+    await queryInterface.addColumn('buff_definitions', 'key0', {
       allowNull: true,
       primaryKey: false,
       type: Sequelize.BIGINT({
-        unsigned: true
-      })
+        unsigned: true,
+      }),
     });
-    await queryInterface.addColumn("buff_definitions", "unknown1", {
+    await queryInterface.addColumn('buff_definitions', 'unknown1', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("buff_definitions", "unknown6", {
+    await queryInterface.addColumn('buff_definitions', 'unknown6', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.removeColumn("buff_visuals", "unknown1");
-    await queryInterface.removeColumn("buff_visuals", "unknown2");
-    await queryInterface.addColumn("buff_visuals", "buff_description", {
+    await queryInterface.removeColumn('buff_visuals', 'unknown1');
+    await queryInterface.removeColumn('buff_visuals', 'unknown2');
+    await queryInterface.addColumn('buff_visuals', 'buff_description', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("buff_visuals", "buff_name", {
+    await queryInterface.addColumn('buff_visuals', 'buff_name', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("buff_visuals", "epk_file", {
+    await queryInterface.addColumn('buff_visuals', 'epk_file', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.removeColumn("chest_item_templates", "key0");
-    await queryInterface.addColumn("chest_item_templates", "chests_key", {
+    await queryInterface.removeColumn('chest_item_templates', 'key0');
+    await queryInterface.addColumn('chest_item_templates', 'chests_key', {
       allowNull: true,
       type: Sequelize.BIGINT({
-        unsigned: true
-      })
+        unsigned: true,
+      }),
     });
-    await queryInterface.addColumn("chest_item_templates", "unknown4", {
+    await queryInterface.addColumn('chest_item_templates', 'unknown4', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("chest_item_templates", "unknown5", {
+    await queryInterface.addColumn('chest_item_templates', 'unknown5', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("client_strings", "playstation_text", {
+    await queryInterface.addColumn('client_strings', 'playstation_text', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("client_strings", "unknown0", {
+    await queryInterface.addColumn('client_strings', 'unknown0', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.renameColumn("crafting_bench_options", "master_level", "required_level");
+    await queryInterface.renameColumn(
+      'crafting_bench_options',
+      'master_level',
+      'required_level',
+    );
     await queryInterface.removeColumn(
-      "crafting_bench_options",
-      "npc_master_key"
+      'crafting_bench_options',
+      'npc_master_key',
     );
-    await queryInterface.removeColumn("crafting_bench_options", "unknown0");
+    await queryInterface.removeColumn('crafting_bench_options', 'unknown0');
     await queryInterface.addColumn(
-      "crafting_bench_options",
-      "_crafting_item_class_categories_cache",
+      'crafting_bench_options',
+      '_crafting_item_class_categories_cache',
       {
         allowNull: false,
-        type: Sequelize.TEXT
-      }
+        type: Sequelize.TEXT,
+      },
     );
-    await queryInterface.addColumn("crafting_bench_options", "affix_type", {
+    await queryInterface.addColumn('crafting_bench_options', 'affix_type', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
     await queryInterface.addColumn(
-      "crafting_bench_options",
-      "crafting_bench_unlock_categories_key",
+      'crafting_bench_options',
+      'crafting_bench_unlock_categories_key',
       {
         allowNull: true,
         type: Sequelize.BIGINT({
-          unsigned: true
-        })
-      }
+          unsigned: true,
+        }),
+      },
     );
     await queryInterface.addColumn(
-      "crafting_bench_options",
-      "hideout_np_cs_key",
+      'crafting_bench_options',
+      'hideout_np_cs_key',
       {
         allowNull: true,
         type: Sequelize.BIGINT({
-          unsigned: true
-        })
-      }
+          unsigned: true,
+        }),
+      },
     );
-    await queryInterface.addColumn("crafting_bench_options", "keys1", {
+    await queryInterface.addColumn('crafting_bench_options', 'keys1', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
     await queryInterface.addColumn(
-      "crafting_bench_options",
-      "maximum_map_tier",
+      'crafting_bench_options',
+      'maximum_map_tier',
       {
         allowNull: true,
         primaryKey: false,
-        type: Sequelize.INTEGER
-      }
+        type: Sequelize.INTEGER,
+      },
     );
-    await queryInterface.addColumn("crafting_bench_options", "mod_family", {
+    await queryInterface.addColumn('crafting_bench_options', 'mod_family', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("crafting_bench_options", "recipe_ids", {
+    await queryInterface.addColumn('crafting_bench_options', 'recipe_ids', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     });
-    await queryInterface.addColumn("crafting_bench_options", "tier", {
+    await queryInterface.addColumn('crafting_bench_options', 'tier', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
     await queryInterface.addColumn(
-      "crafting_bench_options",
-      "unveils_required",
+      'crafting_bench_options',
+      'unveils_required',
       {
         allowNull: true,
         primaryKey: false,
-        type: Sequelize.INTEGER
-      }
+        type: Sequelize.INTEGER,
+      },
     );
     await queryInterface.addColumn(
-      "crafting_bench_options",
-      "unveils_required2",
+      'crafting_bench_options',
+      'unveils_required2',
       {
         allowNull: true,
         primaryKey: false,
-        type: Sequelize.INTEGER
-      }
+        type: Sequelize.INTEGER,
+      },
     );
-    await queryInterface.addColumn("custom_league_mods", "unknown2", {
+    await queryInterface.addColumn('custom_league_mods', 'unknown2', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     });
-    await queryInterface.renameColumn("delve_biomes", "data0", "spawn_weight_depth");
-    await queryInterface.renameColumn("delve_biomes", "data1", "spawn_weight_values");
-    await queryInterface.addColumn("delve_biomes", "flag0", {
+    await queryInterface.renameColumn(
+      'delve_biomes',
+      'data0',
+      'spawn_weight_depth',
+    );
+    await queryInterface.renameColumn(
+      'delve_biomes',
+      'data1',
+      'spawn_weight_values',
+    );
+    await queryInterface.addColumn('delve_biomes', 'flag0', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.BOOLEAN
+      type: Sequelize.BOOLEAN,
     });
-    await queryInterface.addColumn("delve_biomes", "unknown0", {
+    await queryInterface.addColumn('delve_biomes', 'unknown0', {
       allowNull: true,
       primaryKey: false,
-      type: Sequelize.TEXT
-    }); */
+      type: Sequelize.TEXT,
+    });
     await queryInterface.renameTable(
       'delve_crafting_modifier__mods0s',
       'delve_crafting_modifier__mods_0s',

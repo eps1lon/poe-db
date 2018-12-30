@@ -16364,7 +16364,7 @@
           "options": {}
         }
       },
-      "_mods_0_cache": {
+      "_mods0_cache": {
         "allowNull": false,
         "type": {
           "constructor": "TEXT",
@@ -16378,7 +16378,7 @@
           "options": {}
         }
       },
-      "_mods_1_cache": {
+      "_mods1_cache": {
         "allowNull": false,
         "type": {
           "constructor": "TEXT",
@@ -16754,7 +16754,7 @@
     }
   },
   "DelveCraftingModifierHabtmMods0": {
-    "tableName": "delve_crafting_modifier__mods_0s",
+    "tableName": "delve_crafting_modifier__mods0s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -16768,17 +16768,6 @@
         }
       },
       "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "keys1": {
         "allowNull": false,
         "autoIncrement": false,
         "primaryKey": false,
@@ -16845,7 +16834,7 @@
     }
   },
   "DelveCraftingModifierHabtmMods1": {
-    "tableName": "delve_crafting_modifier__mods_1s",
+    "tableName": "delve_crafting_modifier__mods1s",
     "attributes": {
       "row": {
         "allowNull": false,
@@ -16859,17 +16848,6 @@
         }
       },
       "priority": {
-        "allowNull": false,
-        "autoIncrement": false,
-        "primaryKey": false,
-        "type": {
-          "constructor": "BIGINT",
-          "options": {
-            "unsigned": true
-          }
-        }
-      },
-      "keys0": {
         "allowNull": false,
         "autoIncrement": false,
         "primaryKey": false,

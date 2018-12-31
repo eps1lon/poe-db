@@ -70,9 +70,11 @@ module.exports = models => {
           ...base_item_type_scope['for-poe-mods'],
         },
         {
-          model: models.ItemClass,
-          as: 'item_classes',
-          attributes: ['id'],
+          model: models.CraftingItemClassCategory,
+          as: 'crafting_item_class_categories',
+          include: [
+            { model: models.ItemClass, as: 'item_classes', attributes: ['id'] },
+          ],
         },
         {
           model: models.Mod,

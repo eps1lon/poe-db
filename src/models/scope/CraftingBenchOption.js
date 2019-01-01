@@ -59,6 +59,8 @@ module.exports = models => {
         'links',
         'item_quantity',
         'mods_key',
+        // include only
+        'hideout_np_cs_key',
       ],
       include: [
         {
@@ -80,6 +82,11 @@ module.exports = models => {
           model: models.Mod,
           as: 'mod',
           ...mod_scope['for-poe-mods'],
+        },
+        {
+          model: models.HideoutNPC,
+          as: 'hideout_npc',
+          attributes: ['npc_master_key'],
         },
       ],
     },

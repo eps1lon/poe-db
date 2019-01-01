@@ -27,7 +27,7 @@
     "load-content": "pypoe_exporter dat json --include-virtual-fields data/content.json",
     "postload-content": "node scripts/postLoadContent",
     "lint": "eslint \"src/**/*.js\" \"scripts/**/*.js\" \"src/models/(base|index).js\"",
-    "start": "node server.js",
+    "start": "node -r dotenv/config server.js",
     "test": "jest",
     "test:ci": "jest --runInBand",
     "format": "prettier --write \"src/**/*.js\" \"scripts/**/*.js\"",

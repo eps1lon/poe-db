@@ -92,75 +92,76 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 16,
       },
-      unknown25: {
+      unknown19: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 17,
       },
-      flag2: {
-        type: DataTypes.BOOLEAN,
+      unknown20: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 18,
       },
-      unknown25c: {
+      unknown21: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 19,
       },
-      unknown26: {
-        type: DataTypes.INTEGER,
+      flag2: {
+        type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
         $col_order: 20,
       },
-      unknown27: {
-        type: DataTypes.INTEGER,
+      keys0: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 21,
       },
-      data7: {
-        type: DataTypes.TEXT,
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 22,
-      },
-      unknown30: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 23,
       },
       flag3: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 24,
+        $col_order: 23,
       },
       flag4: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 27,
+        $col_order: 24,
       },
-      flag5: {
-        type: DataTypes.BOOLEAN,
+      dialogue_option2: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 28,
+        $col_order: 25,
+      },
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 26,
+      },
+      key2: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 27,
       },
       _npc_text_audio_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 11,
-      },
-      _prophecies_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 25,
       },
     },
     {
@@ -183,14 +184,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_quest_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'base_item_types_key',
-            },
-          ],
-          name: 'index_base_item_types_key',
         },
       ],
       tableName: 'n_p_c_talks',
@@ -225,19 +218,6 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.BaseItemType, {
-      as: 'base_item_type',
-      $inverse: 'npc_talks',
-      $col_order: 26,
-      foreignKey: {
-        name: 'base_item_types_key',
-        $type: 'ulong',
-        $col_order: 26,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
     model.belongsToMany(models.NPCTextAudio, {
       as: 'npc_text_audio',
       through: {
@@ -247,18 +227,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'npc_talk_row',
       otherKey: 'npc_text_audio_row',
       $col_order: 11,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.Prophecy, {
-      as: 'prophecies',
-      through: {
-        model: models.NPCTalkHabtmProphecy,
-        unique: false,
-      },
-      foreignKey: 'npc_talk_row',
-      otherKey: 'prophecy_row',
-      $col_order: 25,
       nullable: true,
       constraints: false,
     });

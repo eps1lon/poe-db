@@ -8,12 +8,6 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 0,
-      },
       arm_file: {
         type: DataTypes.TEXT,
         primaryKey: false,
@@ -29,6 +23,14 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
+              attribute: 'delve_biomes_key',
+            },
+          ],
+          name: 'index_delve_biomes_key',
+        },
+        {
+          fields: [
+            {
               attribute: 'delve_features_key',
             },
           ],
@@ -41,6 +43,19 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
+    model.belongsTo(models.DelveBiome, {
+      as: 'delve_biome',
+      $inverse: 'delve_rooms',
+      $col_order: 0,
+      foreignKey: {
+        name: 'delve_biomes_key',
+        $type: 'ulong',
+        $col_order: 0,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
     model.belongsTo(models.DelveFeature, {
       as: 'delve_feature',
       $inverse: 'delve_rooms',

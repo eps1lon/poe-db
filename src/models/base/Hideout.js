@@ -14,11 +14,47 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      unknown9: {
+      unknown0: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 5,
+        $col_order: 2,
+      },
+      hideout_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 3,
+      },
+      keys0: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 4,
+      },
+      hideout_image: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 6,
+      },
+      is_enabled: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 7,
+      },
+      weight: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 8,
+      },
+      flag1: {
+        type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
       },
     },
     {
@@ -37,26 +73,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'npc_master_key',
-            },
-          ],
-          name: 'index_npc_master_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'medium_world_areas_key',
-            },
-          ],
-          name: 'index_medium_world_areas_key',
-        },
-        {
-          fields: [
-            {
               attribute: 'large_world_areas_key',
             },
           ],
           name: 'index_large_world_areas_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'key0',
+            },
+          ],
+          name: 'index_key0',
         },
       ],
       tableName: 'hideouts',
@@ -78,40 +106,27 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.NPCMaster, {
-      as: 'npc_master',
-      $inverse: 'hideouts',
-      $col_order: 2,
-      foreignKey: {
-        name: 'npc_master_key',
-        $type: 'ulong',
-        $col_order: 2,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.WorldArea, {
-      as: 'medium_world_area',
-      $inverse: 'hideouts',
-      $col_order: 3,
-      foreignKey: {
-        name: 'medium_world_areas_key',
-        $type: 'ulong',
-        $col_order: 3,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
     model.belongsTo(models.WorldArea, {
       as: 'large_world_area',
       $inverse: 'hideouts',
-      $col_order: 4,
+      $col_order: 5,
       foreignKey: {
         name: 'large_world_areas_key',
         $type: 'ulong',
-        $col_order: 4,
+        $col_order: 5,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.HideoutRarity, {
+      as: '0',
+      $inverse: 'hideouts0',
+      $col_order: 9,
+      foreignKey: {
+        name: 'key0',
+        $type: 'ulong',
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,

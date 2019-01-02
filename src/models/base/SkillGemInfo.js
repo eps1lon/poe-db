@@ -32,6 +32,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 4,
       },
+      _characters_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 5,
+      },
     },
     {
       engine: 'MYISAM',
@@ -63,6 +68,18 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 3,
       },
       targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Character, {
+      as: 'characters',
+      through: {
+        model: models.SkillGemInfoHabtmCharacter,
+        unique: false,
+      },
+      foreignKey: 'skill_gem_info_row',
+      otherKey: 'character_row',
+      $col_order: 5,
       nullable: true,
       constraints: false,
     });

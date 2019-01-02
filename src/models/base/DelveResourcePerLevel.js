@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      level: {
+      area_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      resources: {
+      sulphite: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,

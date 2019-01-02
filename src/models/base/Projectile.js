@@ -14,19 +14,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      ao_file: {
+      ao_files: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      loop_animation_id: {
+      loop_animation_ids: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      impact_animation_id: {
+      impact_animation_ids: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -38,65 +38,47 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 4,
       },
-      index4: {
-        type: DataTypes.TEXT,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 5,
-      },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 6,
+        $col_order: 5,
       },
-      unknown0: {
+      unknown5: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 7,
+        $col_order: 6,
       },
       flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 8,
+        $col_order: 7,
       },
       flag2: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
+        $col_order: 8,
+      },
+      inherits_from: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
         $col_order: 9,
+      },
+      unknown7: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 10,
       },
       key0: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
-        $col_order: 10,
-      },
-      flag3: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
         $col_order: 11,
-      },
-      flag4: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 12,
-      },
-      flag5: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 13,
-      },
-      flag6: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 14,
       },
     },
     {

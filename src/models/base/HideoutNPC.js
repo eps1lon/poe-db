@@ -8,6 +8,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
+      _regular_np_cs_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 1,
+      },
     },
     {
       engine: 'MYISAM',
@@ -25,10 +30,18 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'regular_np_cs_key',
+              attribute: 'hideout_doodads_key',
             },
           ],
-          name: 'index_regular_np_cs_key',
+          name: 'index_hideout_doodads_key',
+        },
+        {
+          fields: [
+            {
+              attribute: 'npc_master_key',
+            },
+          ],
+          name: 'index_npc_master_key',
         },
       ],
       tableName: 'hideout_n_p_cs',
@@ -50,16 +63,41 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.NPC, {
-      as: 'regular_npc',
+    model.belongsTo(models.HideoutDoodad, {
+      as: 'hideout_doodad',
       $inverse: 'hideout_np_cs',
-      $col_order: 1,
+      $col_order: 2,
       foreignKey: {
-        name: 'regular_np_cs_key',
+        name: 'hideout_doodads_key',
         $type: 'ulong',
-        $col_order: 1,
+        $col_order: 2,
       },
       targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsTo(models.NPCMaster, {
+      as: 'npc_master',
+      $inverse: 'hideout_np_cs',
+      $col_order: 3,
+      foreignKey: {
+        name: 'npc_master_key',
+        $type: 'int',
+        $col_order: 3,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.NPC, {
+      as: 'regular_np_cs',
+      through: {
+        model: models.HideoutNPCHabtmRegularNpc,
+        unique: false,
+      },
+      foreignKey: 'hideout_npc_row',
+      otherKey: 'npc_row',
+      $col_order: 1,
       nullable: true,
       constraints: false,
     });

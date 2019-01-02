@@ -26,13 +26,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 2,
       },
-      multiplier1: {
+      base_effectiveness: {
         type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      multiplier2: {
+      incremental_effectiveness: {
         type: DataTypes.FLOAT,
         primaryKey: false,
         allowNull: true,
@@ -153,6 +153,20 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 15,
       },
       targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+
+    // MANUAL
+    model.hasMany(models.GrantedEffectsPerLevel, {
+      as: 'granted_effects_per_levels',
+      $inverse: 'granted_effect',
+      foreignKey: {
+        name: 'granted_effects_key',
+        $type: 'ulong',
+        $col_order: 0,
+      },
+      targetKey: 'granted_effects_key',
       nullable: true,
       constraints: false,
     });

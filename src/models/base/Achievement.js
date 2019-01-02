@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 10,
       },
-      unknown4: {
+      unknown1: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
@@ -91,6 +91,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: false,
         allowNull: true,
         $col_order: 14,
+      },
+      unknown2: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 15,
       },
     },
     {

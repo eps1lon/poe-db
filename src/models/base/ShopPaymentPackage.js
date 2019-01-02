@@ -98,10 +98,15 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 15,
       },
-      shop_package_platform_key: {
-        type: DataTypes.INTEGER,
+      unknown8: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
+        $col_order: 17,
+      },
+      _shop_package_platform_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
         $col_order: 16,
       },
     },
@@ -135,6 +140,18 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: 13,
       },
       targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.ShopPackagePlatform, {
+      as: 'shop_package_platform',
+      through: {
+        model: models.ShopPaymentPackageHabtmShopPackagePlatform,
+        unique: false,
+      },
+      foreignKey: 'shop_payment_package_row',
+      otherKey: 'shop_package_platform_row',
+      $col_order: 16,
       nullable: true,
       constraints: false,
     });

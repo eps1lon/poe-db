@@ -20,6 +20,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 1,
       },
+      base_icon_dds_file: {
+        type: DataTypes.TEXT,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 2,
+      },
     },
     {
       engine: 'MYISAM',

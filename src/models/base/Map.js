@@ -30,29 +30,18 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 9,
+        $col_order: 8,
       },
       shaped_area_level: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 11,
-      },
-      flag0: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 16,
+        $col_order: 10,
       },
       _monster_packs_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
         $col_order: 4,
-      },
-      _higher_tier_maps_base_item_types_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 8,
       },
     },
     {
@@ -194,11 +183,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Map, {
       as: 'shaped_base_map',
       $inverse: 'maps',
-      $col_order: 10,
+      $col_order: 9,
       foreignKey: {
         name: 'shaped_base_maps_key',
         $type: 'int',
-        $col_order: 10,
+        $col_order: 9,
       },
       targetKey: 'row',
       nullable: true,
@@ -207,11 +196,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Map, {
       as: 'upgraded_from_map',
       $inverse: 'maps',
-      $col_order: 12,
+      $col_order: 11,
       foreignKey: {
         name: 'upgraded_from_maps_key',
         $type: 'int',
-        $col_order: 12,
+        $col_order: 11,
       },
       targetKey: 'row',
       nullable: true,
@@ -220,11 +209,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Map, {
       as: 'maps2',
       $inverse: 'maps2',
-      $col_order: 13,
+      $col_order: 12,
       foreignKey: {
         name: 'maps_key2',
         $type: 'int',
-        $col_order: 13,
+        $col_order: 12,
       },
       targetKey: 'row',
       nullable: true,
@@ -233,11 +222,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.Map, {
       as: 'maps3',
       $inverse: 'maps3',
-      $col_order: 14,
+      $col_order: 13,
       foreignKey: {
         name: 'maps_key3',
         $type: 'int',
-        $col_order: 14,
+        $col_order: 13,
       },
       targetKey: 'row',
       nullable: true,
@@ -246,11 +235,11 @@ module.exports = (sequelize, DataTypes) => {
     model.belongsTo(models.MapSery, {
       as: 'map_sery',
       $inverse: 'maps',
-      $col_order: 15,
+      $col_order: 14,
       foreignKey: {
         name: 'map_series_key',
         $type: 'int',
-        $col_order: 15,
+        $col_order: 14,
       },
       targetKey: 'row',
       nullable: true,
@@ -265,18 +254,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'map_row',
       otherKey: 'monster_pack_row',
       $col_order: 4,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.BaseItemType, {
-      as: 'higher_tier_maps_base_item_types',
-      through: {
-        model: models.MapHabtmHigherTierMapsBaseitemtype,
-        unique: false,
-      },
-      foreignKey: 'map_row',
-      otherKey: 'base_item_type_row',
-      $col_order: 8,
       nullable: true,
       constraints: false,
     });

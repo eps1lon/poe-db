@@ -1,3 +1,5 @@
+const { underscore } = require('../util');
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable(
@@ -3110,38 +3112,28 @@ module.exports = {
       },
     );
     await queryInterface.removeIndex('essences', 'index_quiver_mods_key');
-    await queryInterface.removeIndex(
-      'essences',
-      'index_display_1_hand_weapon_mods_key',
-    );
-    await queryInterface.removeIndex(
-      'essences',
-      'index_display_2_hand_weapon_mods_key',
-    );
-    await queryInterface.removeIndex(
-      'essences',
-      'index_display_2_hand_melee_weapon_mods_key',
-    );
-    await queryInterface.removeIndex(
-      'essences',
-      'index_display_ranged_mods_key',
-    );
-    await queryInterface.removeIndex('essences', 'index_2_hand_sword_mods_key');
-    await queryInterface.removeIndex('essences', 'index_2_hand_axe_mods_key');
-    await queryInterface.removeIndex('essences', 'index_2_hand_mace_mods_key');
-    await queryInterface.removeIndex('essences', 'index_1_hand_sword_mods_key');
-    await queryInterface.removeIndex(
-      'essences',
-      'index_1_hand_thrusting_sword_mods_key',
-    );
-    await queryInterface.removeIndex('essences', 'index_1_hand_axe_mods_key');
-    await queryInterface.removeIndex('essences', 'index_1_hand_mace_mods_key');
-    await queryInterface.removeIndex('essences', 'index_amulet_mods_key');
-    await queryInterface.removeIndex(
-      'essences',
-      'index_display_jewellry_mods_key',
-    );
-    await queryInterface.removeIndex('essences', 'index_display_item_mods_key');
+    await queryInterface.removeIndex('essences', [
+      'display_1_hand_weapon_mods_key',
+    ]);
+    await queryInterface.removeIndex('essences', [
+      'display_2_hand_weapon_mods_key',
+    ]);
+    await queryInterface.removeIndex('essences', [
+      'display_2_hand_melee_weapon_mods_key',
+    ]);
+    await queryInterface.removeIndex('essences', ['display_ranged_mods_key']);
+    await queryInterface.removeIndex('essences', ['2_hand_sword_mods_key']);
+    await queryInterface.removeIndex('essences', ['2_hand_axe_mods_key']);
+    await queryInterface.removeIndex('essences', ['2_hand_mace_mods_key']);
+    await queryInterface.removeIndex('essences', ['1_hand_sword_mods_key']);
+    await queryInterface.removeIndex('essences', [
+      '1_hand_thrusting_sword_mods_key',
+    ]);
+    await queryInterface.removeIndex('essences', ['1_hand_axe_mods_key']);
+    await queryInterface.removeIndex('essences', ['1_hand_mace_mods_key']);
+    await queryInterface.removeIndex('essences', ['amulet_mods_key']);
+    await queryInterface.removeIndex('essences', ['display_jewellry_mods_key']);
+    await queryInterface.removeIndex('essences', ['display_item_mods_key']);
     await queryInterface.removeIndex('maps', 'index_maps_key1');
     await queryInterface.removeIndex('n_p_cs', 'index_npc_audio_key1');
     await queryInterface.removeIndex('n_p_cs', 'index_npc_audio_key2');
@@ -4806,160 +4798,48 @@ module.exports = {
         indexName: 'index_maps_key1',
       },
     );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: 'display_item_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_display_item_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: 'display_jewellry_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_display_jewellry_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: 'amulet_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_amulet_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: '1_hand_mace_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_1_hand_mace_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: '1_hand_axe_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_1_hand_axe_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: '1_hand_thrusting_sword_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_1_hand_thrusting_sword_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: '1_hand_sword_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_1_hand_sword_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: '2_hand_mace_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_2_hand_mace_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: '2_hand_axe_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_2_hand_axe_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: '2_hand_sword_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_2_hand_sword_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: 'display_ranged_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_display_ranged_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: 'display_2_hand_melee_weapon_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_display_2_hand_melee_weapon_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: 'display_2_hand_weapon_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_display_2_hand_weapon_mods_key',
-      },
-    );
-    await queryInterface.addIndex(
-      'essences',
-      [
-        {
-          attribute: 'display_1_hand_weapon_mods_key',
-        },
-      ],
-      {
-        indexName: 'index_display_1_hand_weapon_mods_key',
-      },
-    );
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('Display_Item_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('Display_Jewellry_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('Amulet_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('1HandMace_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('1HandAxe_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('1HandThrustingSword_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('1HandSword_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('2HandMace_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('2HandAxe_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('2HandSword_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('Display_Ranged_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('Display_2HandMeleeWeapon_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('Display_2HandWeapon_ModsKey')],
+    });
+    await queryInterface.addIndex('essences', {
+      fields: [underscore('Display_1HandWeapon_ModsKey')],
+    });
     await queryInterface.addIndex(
       'essences',
       [

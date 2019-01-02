@@ -9,25 +9,31 @@ module.exports = (sequelize, DataTypes) => {
         $col_order: -1,
       },
       unknown0: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 2,
+        $col_order: 1,
       },
       flag0: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 3,
+        $col_order: 2,
       },
       flag1: {
         type: DataTypes.BOOLEAN,
         primaryKey: false,
         allowNull: true,
-        $col_order: 4,
+        $col_order: 3,
       },
       flag2: {
         type: DataTypes.BOOLEAN,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 4,
+      },
+      misc_animated: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
@@ -46,14 +52,6 @@ module.exports = (sequelize, DataTypes) => {
           ],
           name: 'index_granted_effects_key',
         },
-        {
-          fields: [
-            {
-              attribute: 'misc_animated_key',
-            },
-          ],
-          name: 'index_misc_animated_key',
-        },
       ],
       tableName: 'skill_surge_effects',
       underscored: true,
@@ -69,19 +67,6 @@ module.exports = (sequelize, DataTypes) => {
         name: 'granted_effects_key',
         $type: 'ulong',
         $col_order: 0,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.MiscAnimated, {
-      as: 'misc_animated',
-      $inverse: 'skill_surge_effects',
-      $col_order: 1,
-      foreignKey: {
-        name: 'misc_animated_key',
-        $type: 'ulong',
-        $col_order: 1,
       },
       targetKey: 'row',
       nullable: true,

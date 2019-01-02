@@ -9,6 +9,39 @@ const PRIMARY = 'Row';
 // saves the original order in which the values were stored
 const PRIORITY = 'Priority';
 
+/**
+ * Returns a new string in camel case that is not longer than {length} chars
+ * This is achieved by truncating each individual word.
+ * snakeCasedLength("snake_case", 4) -> "s_ca"
+ * snakeCasedLength("snake_case", 5) -> "s_ca"
+ * snakeCasedLength("snake_case", 6) -> "sn_cas"
+ * @param {string} s 
+ * @param {string} length
+ * @returns {string} a string with no more than {length} chars 
+ */
+function snakeCasedLength(s, length) {
+  if (s.length <= length) {
+    return s;
+  }
+  // https://stackoverflow.com/a/7888303/3406963
+  const words = s.split(/(?=_)/);
+
+  if (words.length < 1) {
+    throw new Error(
+      'Expected a string in snake case but found no underscore char.',
+    );
+  }
+
+  const chunk_length = Math.floor(length / words.length);
+  if (chunk_length < 1) {
+    throw new Error(
+      `string has more words than the allowed length. Dont know how to shorten this string below ${length} characters.`,
+    );
+  }
+
+  return words.map(word => word.substring(0, chunk_length)).join('');
+}
+
 class SequelizeThroughModel extends SequelizeBaseModel {
   /**
    * 
@@ -47,14 +80,16 @@ class SequelizeThroughModel extends SequelizeBaseModel {
     );
   }
 
-  tableName() {
-    // TODO strategy to shorten names to 64 chars
-    return tableize(
-      singularize(
-        this.sourceModelName() +
-          '_' +
-          this.from_field.name.replace(/Keys([0-9]*)$/, '$1'),
+  tableName(max_length = 64) {
+    return snakeCasedLength(
+      tableize(
+        singularize(
+          this.sourceModelName() +
+            '_' +
+            this.from_field.name.replace(/Keys([0-9]*)$/, '$1'),
+        ),
       ),
+      max_length,
     );
   }
 

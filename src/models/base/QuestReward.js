@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 4,
       },
-      rarity_key: {
+      rarity: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
@@ -74,11 +74,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 13,
       },
-      unknown6: {
+      unknown4: {
         type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 14,
+      },
+      unknown5: {
+        type: DataTypes.INTEGER,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 15,
       },
     },
     {

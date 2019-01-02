@@ -20,6 +20,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 3,
       },
+      _base_item_types_cache: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        $col_order: 2,
+      },
     },
     {
       engine: 'MYISAM',
@@ -33,14 +38,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           ],
           name: 'index_achievement_sets_display_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'base_item_types_key',
-            },
-          ],
-          name: 'index_base_item_types_key',
         },
       ],
       tableName: 'achievement_set_rewards',
@@ -62,16 +59,15 @@ module.exports = (sequelize, DataTypes) => {
       nullable: true,
       constraints: false,
     });
-    model.belongsTo(models.BaseItemType, {
-      as: 'base_item_type',
-      $inverse: 'achievement_set_rewards',
-      $col_order: 2,
-      foreignKey: {
-        name: 'base_item_types_key',
-        $type: 'ulong',
-        $col_order: 2,
+    model.belongsToMany(models.BaseItemType, {
+      as: 'base_item_types',
+      through: {
+        model: models.AchievementSetRewardHabtmBaseItemType,
+        unique: false,
       },
-      targetKey: 'row',
+      foreignKey: 'achievement_set_reward_row',
+      otherKey: 'base_item_type_row',
+      $col_order: 2,
       nullable: true,
       constraints: false,
     });

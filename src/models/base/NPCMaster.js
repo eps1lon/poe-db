@@ -14,73 +14,46 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 0,
       },
-      is_str_master: {
-        type: DataTypes.BOOLEAN,
+      unknown14: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
-        $col_order: 2,
+        $col_order: 1,
       },
-      is_dex_master: {
-        type: DataTypes.BOOLEAN,
+      unknown15: {
+        type: DataTypes.INTEGER,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      is_int_master: {
-        type: DataTypes.BOOLEAN,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 5,
-      },
-      hideout: {
+      unknown5: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
       },
-      keys0: {
+      unknown6: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 7,
       },
-      unknown7: {
-        type: DataTypes.INTEGER,
+      key1: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 8,
       },
-      key2: {
-        type: DataTypes.BIGINT.UNSIGNED,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 14,
-      },
-      keys1: {
+      help_text: {
         type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
-        $col_order: 17,
-      },
-      _achievement_items_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
         $col_order: 9,
       },
-      _signature_mod_spawn_weight_tags_cache: {
+      _spawn_weight_tags_cache: {
         type: DataTypes.TEXT,
         allowNull: false,
-        $col_order: 10,
-      },
-      _unknown_weight_tags_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 12,
-      },
-      _master_level5_achievement_items_cache: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        $col_order: 16,
+        $col_order: 4,
       },
     },
     {
@@ -91,27 +64,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           fields: [
             {
-              attribute: 'np_cs_key',
-              length: 250,
+              attribute: 'signature_mods_key',
             },
           ],
-          name: 'index_np_cs_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'signature_mod_mods_key',
-            },
-          ],
-          name: 'index_signature_mod_mods_key',
-        },
-        {
-          fields: [
-            {
-              attribute: 'talisman_achievement_items_key',
-            },
-          ],
-          name: 'index_talisman_achievement_items_key',
+          name: 'index_signature_mods_key',
         },
       ],
       tableName: 'n_p_c_masters',
@@ -120,90 +76,28 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   model.associate = models => {
-    model.belongsTo(models.NPC, {
-      as: 'npc',
-      $inverse: 'npc_masters',
-      $col_order: 1,
-      foreignKey: {
-        name: 'np_cs_key',
-        $type: 'ref|string',
-        $col_order: 1,
-      },
-      targetKey: 'id',
-      nullable: true,
-      constraints: false,
-    });
     model.belongsTo(models.Mod, {
-      as: 'signature_mod_mod',
+      as: 'signature_mod',
       $inverse: 'npc_masters',
+      $col_order: 2,
+      foreignKey: {
+        name: 'signature_mods_key',
+        $type: 'ulong',
+        $col_order: 2,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+    model.belongsToMany(models.Tag, {
+      as: 'spawn_weight_tags',
+      through: {
+        model: models.NPCMasterHabtmSpawnWeightTag,
+        unique: false,
+      },
+      foreignKey: 'npc_master_row',
+      otherKey: 'tag_row',
       $col_order: 4,
-      foreignKey: {
-        name: 'signature_mod_mods_key',
-        $type: 'ulong',
-        $col_order: 4,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsTo(models.AchievementItem, {
-      as: 'talisman_achievement_item',
-      $inverse: 'npc_masters',
-      $col_order: 15,
-      foreignKey: {
-        name: 'talisman_achievement_items_key',
-        $type: 'ulong',
-        $col_order: 15,
-      },
-      targetKey: 'row',
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.AchievementItem, {
-      as: 'achievement_items',
-      through: {
-        model: models.NPCMasterHabtmAchievementItem,
-        unique: false,
-      },
-      foreignKey: 'npc_master_row',
-      otherKey: 'achievement_item_row',
-      $col_order: 9,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.Tag, {
-      as: 'signature_mod_spawn_weight_tags',
-      through: {
-        model: models.NPCMasterHabtmSignatureModSpawnWeightTag,
-        unique: false,
-      },
-      foreignKey: 'npc_master_row',
-      otherKey: 'tag_row',
-      $col_order: 10,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.Tag, {
-      as: 'unknown_weight_tags',
-      through: {
-        model: models.NPCMasterHabtmUnknownWeightTag,
-        unique: false,
-      },
-      foreignKey: 'npc_master_row',
-      otherKey: 'tag_row',
-      $col_order: 12,
-      nullable: true,
-      constraints: false,
-    });
-    model.belongsToMany(models.AchievementItem, {
-      as: 'master_level5_achievement_items',
-      through: {
-        model: models.NPCMasterHabtmMasterLevel5Achievementitem,
-        unique: false,
-      },
-      foreignKey: 'npc_master_row',
-      otherKey: 'achievement_item_row',
-      $col_order: 16,
       nullable: true,
       constraints: false,
     });

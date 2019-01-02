@@ -8,78 +8,83 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         $col_order: -1,
       },
-      unknown0: {
-        type: DataTypes.INTEGER,
+      id: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 0,
       },
-      unknown1: {
-        type: DataTypes.INTEGER,
+      keys1: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 1,
       },
-      unknown2: {
-        type: DataTypes.INTEGER,
+      key2: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 2,
       },
-      unknown3: {
-        type: DataTypes.INTEGER,
+      description: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 3,
       },
-      unknown4: {
-        type: DataTypes.INTEGER,
+      international_bk2_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 4,
       },
-      unknown5: {
-        type: DataTypes.INTEGER,
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: false,
         allowNull: true,
         $col_order: 5,
       },
-      unknown6: {
-        type: DataTypes.INTEGER,
+      china_bk2_file: {
+        type: DataTypes.TEXT,
         primaryKey: false,
         allowNull: true,
         $col_order: 6,
-      },
-      unknown7: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 7,
-      },
-      unknown8: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 8,
-      },
-      unknown9: {
-        type: DataTypes.INTEGER,
-        primaryKey: false,
-        allowNull: true,
-        $col_order: 9,
       },
     },
     {
       engine: 'MYISAM',
       charset: 'utf8mb4',
       collate: 'utf8mb4_unicode_ci',
-      indexes: [],
+      indexes: [
+        {
+          fields: [
+            {
+              attribute: 'characters_key',
+            },
+          ],
+          name: 'index_characters_key',
+        },
+      ],
       tableName: 'advanced_skills_tutorials',
       underscored: true,
     },
   );
 
-  model.associate = models => {};
+  model.associate = models => {
+    model.belongsTo(models.Character, {
+      as: 'character',
+      $inverse: 'advanced_skills_tutorials',
+      $col_order: 7,
+      foreignKey: {
+        name: 'characters_key',
+        $type: 'ref|list|ulong',
+        $col_order: 7,
+      },
+      targetKey: 'row',
+      nullable: true,
+      constraints: false,
+    });
+  };
 
   model.DAT_FILE = 'AdvancedSkillsTutorial.dat';
   return model;

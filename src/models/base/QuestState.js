@@ -92,6 +92,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         $col_order: 16,
       },
+      key0: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        primaryKey: false,
+        allowNull: true,
+        $col_order: 17,
+      },
       _map_pins1_cache: {
         type: DataTypes.TEXT,
         allowNull: false,

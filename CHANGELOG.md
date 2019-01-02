@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased](https://github.com/eps1lon/poe-db/compare/v1.3.0...dev)
 
+### Breaking
+
+- Removed craftingbenchoptions scope `for-mod-repository` ([#17](https://github.com/eps1lon/poe-db/pull/17)).
+
+### Added
+
+- data for `Path Of Exile@3.5.0` ([#17](https://github.com/eps1lon/poe-db/pull/17)).
+
 ### Changed
 
 - scopes for poe-mods which did not match the expected schema.
